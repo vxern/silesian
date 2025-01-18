@@ -18,7 +18,7 @@ Orthography Guide:
   - [Videos](#videos)
 - [Tools](#tools)
   - [Dictionaries](#dictionaries)
-- [Media](#media)
+- [Popular culture](#popular-culture)
   - [YouTube](#youtube)
   - [News](#news)
   - [Radio](#radio)
@@ -89,7 +89,7 @@ This section contains information about the Silesian language.
   - `śla/F` [Wiktionary](https://wiktionary.org)
   - `pol` [Śląski słownik techniczny ('Technical Silesian Dictionary')](https://euro-met.pl/informator/slaski-slownik)
 
-## Media
+## Popular culture
 
 <!--This section needs a description.-->
 
@@ -112,3 +112,10 @@ This section contains information about the Silesian language.
   <!--This section needs a description.-->
 
   - [Radio Piekary](https://radiopiekary.pl/)
+ 
+- ### Games
+
+  The following is a list of games translated to Silesian.
+
+  - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
+  - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/) (No Community Translations)
