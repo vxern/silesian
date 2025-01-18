@@ -118,4 +118,4 @@ This section contains information about the Silesian language.
   The following is a list of games translated to Silesian.
 
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
-  - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/) (No Community Translations)
+  - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
