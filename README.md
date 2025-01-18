@@ -7,7 +7,7 @@ Orthography Guide:
   - `śla/F` - Full
   - `śla/S` - Simplified
 - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-- `non` - No specific orthography; Custom orthography based on Polish.
+- `pol` - Approximation of Silesian using Polish orthography.
 
 ## Table of Contents
 
@@ -16,6 +16,8 @@ Orthography Guide:
 - [Information](#information)
 - [Introduction](#introduction)
   - [Videos](#videos)
+- [Tools](#tools)
+  - [Dictionaries](#dictionaries)
 - [Media](#media)
   - [YouTube](#youtube)
   - [News](#news)
@@ -66,13 +68,26 @@ This section contains information about the Silesian language.
 
 <!--This section needs a description.-->
 
-  - ### Videos
+- ### Videos
 
   <!--This section needs a description.-->
 
   - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
   - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
   - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
+
+## Tools
+
+<!--This section needs a description.-->
+
+- ### Dictionaries
+  
+  <!--This section needs a description.-->
+
+  - `śla/F` [SileSłownik](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
+  - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu)
+  - `śla/F` [Wiktionary](https://wiktionary.org)
+  - `pol` [Śląski słownik techniczny ('Technical Silesian Dictionary')](https://euro-met.pl/informator/slaski-slownik)
 
 ## Media
 
@@ -84,7 +99,7 @@ This section contains information about the Silesian language.
   
   - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
   - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
-  - `non` [gryfnie](https://www.youtube.com/@gryfnie)
+  - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
  
 - ### News
 
