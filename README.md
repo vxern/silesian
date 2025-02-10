@@ -7,7 +7,8 @@ Orthography Guide:
   - `śla/F` - Full
   - `śla/S` - Simplified
 - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-- `pol` - Approximation of Silesian using Polish orthography.
+- `pol` - Approximation of Silesian using Polish orthography
+- `oth` - Other
 
 ## Table of Contents
 
@@ -84,10 +85,11 @@ This section contains information about the Silesian language.
   
   <!--This section needs a description.-->
 
-  - `śla/F` [SileSłownik](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
-  - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu)
-  - `śla/F` [Wiktionary](https://wiktionary.org)
+  - `śla/F` [SileSłownik (~25,400 entries)](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
+  - `śla/S` [Dykcjōnorz (~4,500 entries)](https://dykcjonorz.eu)
+  - `śla/F` [Wiktionary (~2,100 entries](https://wiktionary.org)
   - `pol` [Śląski słownik techniczny ('Technical Silesian Dictionary')](https://euro-met.pl/informator/slaski-slownik)
+  - `oth` [Dykcjōnôrz Polsko-Ślonskiy](https://sbc.org.pl/dlibra/publication/648390)
 
 ## Popular culture
 
