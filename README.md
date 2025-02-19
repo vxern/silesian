@@ -23,6 +23,7 @@ Orthography Guide:
   - [YouTube](#youtube)
   - [News](#news)
   - [Radio](#radio)
+- [Personal websites](#personal-websites)
 
 ## Information
 
@@ -121,3 +122,11 @@ This section contains information about the Silesian language.
 
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
+
+## Personal websites
+
+<!--This section needs a description.-->
+
+- `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
+- `śla/S` [Rafał Szyma](https://szyma.art/)
+- `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
