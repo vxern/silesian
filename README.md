@@ -86,9 +86,13 @@ This section contains information about the Silesian language.
   
   <!--This section needs a description.-->
 
-  - `śla/F` [SileSłownik (~25,400 entries)](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
-  - `śla/S` [Dykcjōnorz (~4,500 entries)](https://dykcjonorz.eu)
-  - `śla/F` [Wiktionary (~2,100 entries](https://wiktionary.org)
+  <!-- Instructions on how to get the number of entries: -->
+  <!-- - The front page lets you know. -->
+  - `śla/F` [SileSłownik (25,300+ entries)](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
+  <!-- - You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
+  - `śla/S` [Dykcjōnorz (4,300+ entries)](https://dykcjonorz.eu)
+  <!-- - You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
+  - `śla/F` [Wiktionary (2,150+ entries](https://wiktionary.org)
   - `pol` [Śląski słownik techniczny ('Technical Silesian Dictionary')](https://euro-met.pl/informator/slaski-slownik)
   - `oth` [Dykcjōnôrz Polsko-Ślonskiy](https://sbc.org.pl/dlibra/publication/648390)
 
