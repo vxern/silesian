@@ -1,14 +1,23 @@
 # The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
 
-## Foreword
+## Key
 
-Orthography Guide:
+To make finding certain resources easier, resources have labels indicating, for example,
+which orthography they employ, or whether they're paid or free.  
+
+<details>
+<summary>Orthographies</summary>
 - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
   - `śla/F` - Full
   - `śla/S` - Simplified
 - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
 - `pol` - Approximation of Silesian using Polish orthography
 - `oth` - Other
+</details>
+<details>
+<summary>Other</summary>
+- 💵 - Paid resource
+</details>
 
 ## Table of Contents
 
