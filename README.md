@@ -110,6 +110,8 @@ This section contains information about the Silesian language.
 
     - Cieszyn
 
+      <!-- The format makes it difficult to check easily, one would have to manually go through it all. -->
+      - `ces` [Slovník po našimu (several hundred entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
 
