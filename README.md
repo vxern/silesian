@@ -19,6 +19,10 @@ which orthography they employ, or whether they're paid or free.
 <summary>Other</summary>
 - 💵 - Paid resource
 </details>
+<details>
+<summary>Requests</summary>
+- `missing` - The resource is missing a link. Please help in finding a link for it.
+</details>
 
 ## Table of Contents
 
@@ -105,7 +109,7 @@ This section contains information about the Silesian language.
     - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html)
     <!-- Checked by hand. -->
     - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
- 
+
   - #### Regional
 
     - Cieszyn
@@ -116,6 +120,16 @@ This section contains information about the Silesian language.
       - `ces` [Slovník po našimu (several hundred entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
+
+  - #### Polish dialects
+ 
+    - 'Słownik gwar polskich' by Jan Karłowicz
+      - [Volume 1 (A-E)](https://bbc.mbp.org.pl/dlibra/publication/13165/edition/11947)
+      - [Volume 2 (F-K)](https://bbc.mbp.org.pl/dlibra/publication/11844/edition/10731)
+      - `missing` Volume 3 (???)
+      - `missing` Volume 4 (???)
+      - [Volume 5 (R, S, Ś, T)](https://bbc.mbp.org.pl/dlibra/publication/11845/edition/10732)
+      - [Volume 6 (U-Ż](https://bbc.mbp.org.pl/dlibra/publication/10215/edition/9238)
 
 ## Popular culture
 
