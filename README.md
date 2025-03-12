@@ -11,8 +11,9 @@ which orthography they employ, or whether they're paid or free.
   - `śla/F` - Full
   - `śla/S` - Simplified
 - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-- `adh` - Ad-hoc, custom orthography
-- `pol` - Approximation of Silesian using Polish orthography
+- `oth` - Custom, ad-hoc orthography
+- `pol` - Approximation using Polish orthography
+- `ces` - Approximation using Czech orthography
 </details>
 <details>
 <summary>Other</summary>
@@ -77,11 +78,7 @@ This section contains information about the Silesian language.
 
 ## Introduction
 
-<!--This section needs a description.-->
-
 - ### Videos
-
-  <!--This section needs a description.-->
 
   - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
   - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
@@ -89,35 +86,35 @@ This section contains information about the Silesian language.
 
 ## Tools
 
-<!--This section needs a description.-->
-
 - ### Dictionaries
-  
-  <!--This section needs a description.-->
 
-  <!-- Instructions on how to get the number of entries: -->
-  <!-- The front page lets you know. -->
-  - `śla/F` [SileSłownik (25,300+ entries) @ silling.org](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
-  <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
-  - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu)
-  <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
-  - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
-  <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-  - `adh` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390)
-  <!-- Checked the number of lines from start to end. -->
-  - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl ](https://euro-met.pl/informator/slaski-slownik)
-  <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
-  - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html)
-  <!-- Checked by hand. -->
-  - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
+  - #### Collective
+
+    <!-- Instructions on how to get the number of entries: -->
+    <!-- The front page lets you know. -->
+    - `śla/F` [SileSłownik (25,300+ entries) @ silling.org](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
+    <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
+    - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu)
+    <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
+    - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
+    <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
+    - `oth` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390)
+    <!-- Checked the number of lines from start to end. -->
+    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl ](https://euro-met.pl/informator/slaski-slownik)
+    <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
+    - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html)
+    <!-- Checked by hand. -->
+    - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
+ 
+  - #### Regional
+
+    - Cieszyn
+
+      - `ces` [Slovník po našemu (1,000 entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
 
 ## Popular culture
 
-<!--This section needs a description.-->
-
 - ### YouTube
-  
-  <!--This section needs a description.-->
   
   - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
   - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
@@ -129,13 +126,9 @@ This section contains information about the Silesian language.
  
 - ### News
 
-  <!--This section needs a description.-->
-
   - `śla/F` [Wachtyrz](https://wachtyrz.eu/)
 
 - ### Radio
-
-  <!--This section needs a description.-->
 
   - [Radio Piekary](https://radiopiekary.pl/)
  
@@ -147,8 +140,6 @@ This section contains information about the Silesian language.
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
 
 ## Personal websites
-
-<!--This section needs a description.-->
 
 - `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
 - `śla/S` [Rafał Szyma](https://szyma.art/)
