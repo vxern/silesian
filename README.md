@@ -110,6 +110,8 @@ This section contains information about the Silesian language.
 
     - Cieszyn
 
+      <!-- Stated on the page. -->
+      - `pol` [Slovník po naszi(y)mu (5,000 entries) @ blaf.cz](http://www.blaf.cz/index.php?body=slovnik) (Polish-Czech-Slovak tri-border)
       <!-- The format makes it difficult to check easily, one would have to manually go through it all. -->
       - `ces` [Slovník po našimu (several hundred entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
