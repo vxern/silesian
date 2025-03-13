@@ -7,6 +7,7 @@ which orthography they employ, or whether they're paid or free.
 
 <details>
 <summary>Orthographies</summary>
+
 - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
   - `śla/F` - Full
   - `śla/S` - Simplified
@@ -17,10 +18,12 @@ which orthography they employ, or whether they're paid or free.
 </details>
 <details>
 <summary>Other</summary>
+
 - 💵 - Paid resource
 </details>
 <details>
 <summary>Requests</summary>
+
 - `missing` - The resource is missing a link. Please help in finding a link for it.
 </details>
 
