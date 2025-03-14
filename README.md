@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/68ca108e-6141-4f18-9823-e1082725425d)# The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
+# The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
 
 ## Table of Contents
 
