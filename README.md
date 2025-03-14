@@ -106,7 +106,7 @@ This section contains information about the Silesian language.
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
     - `etc` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- Checked the number of lines from start to end. -->
-    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl ](https://euro-met.pl/informator/slaski-slownik)
+    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
     - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html) by Ania Lerch-Wójcik
     <!-- Checked by hand. -->
@@ -114,11 +114,11 @@ This section contains information about the Silesian language.
     <!-- Checked by hand. -->
     - `pol` [Słownik (800+ entries) @ antryj.pl](https://www.antryj.pl/category/slownik/)
     <!-- Checked by hand. -->
-    - `pol` [Słownik gwarowy (~85 entries)](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
+    - `pol` [Słownik gwarowy (~85 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
     <!-- Checked by hand. -->
-    - `pol` [Słownik wyrazów gwarowych (~275 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
+    - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- ❌ Not checked. -->
-    - `pol` [Narzecza śląskie (? entries)](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    - `pol` [Narzecza śląskie (? entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
 
   - #### Dialectal
 
@@ -133,7 +133,8 @@ This section contains information about the Silesian language.
      
     - Lower Silesian
    
-      - `pol` [Zbiór wyrazów śląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
+      <!-- ❌ Not checked. -->
+      - `pol` [Zbiór wyrazów śląsko-polskich (? entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
   - #### Polish dialects
  
