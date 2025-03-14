@@ -63,20 +63,19 @@ This section contains information about the Silesian language.
   - Native speakers: [500,000](https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/6494/10/1/1/wstepne_wyniki_nsp_2021_w_zakresie_struktury_narodowo-etnicznej_oraz_jezyka_kontaktow_domowych.pdf)
   - Dialects:
     - Upper Silesia
-      - [Kluczborek](https://en.wikipedia.org/wiki/Kluczbork_Silesian_dialect)
-      - [Ôpole](https://en.wikipedia.org/wiki/Opole_Silesian_dialect)
-      - [Niymodlin](https://en.wikipedia.org/wiki/Niemodlin_dialect)
+      - [Kluczbork](https://en.wikipedia.org/wiki/Kluczbork_Silesian_dialect)
+      - [Opole](https://en.wikipedia.org/wiki/Opole_Silesian_dialect)
+      - [Niemodlin](https://en.wikipedia.org/wiki/Niemodlin_dialect)
       - [Prudnik](https://en.wikipedia.org/wiki/Prudnik_Silesian_dialect)
-      - [Glywice](https://en.wikipedia.org/wiki/Gliwice_dialect)
+      - [Gliwice](https://en.wikipedia.org/wiki/Gliwice_dialect)
       - [Sułkowice](https://en.wikipedia.org/wiki/Sulkovian_dialect)
       - [Borderland Silesian-Lesser Polish](https://en.wikipedia.org/wiki/Borderland_Silesian-Lesser_Polish_dialect)
       - [Borderland Silesian-Lach](https://en.wikipedia.org/wiki/Borderland_Silesian-Lach_dialect)
-    - Upper Silesia + Czechia
       - [Cieszyn](https://en.wikipedia.org/wiki/Cieszyn_Silesian_dialect)
-      - [Jabłōnkōw](https://en.wikipedia.org/wiki/Jabłonków_dialect)
+      - [Jabłonków](https://en.wikipedia.org/wiki/Jabłonków_dialect)
     - Lower Silesia
       - [Chwalim](https://en.wikipedia.org/wiki/Chwalim_dialect)
-    - Elsewhere
+    - Outside Silesia
       - [Texan](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
      
 - ### About the language
@@ -118,6 +117,8 @@ This section contains information about the Silesian language.
     - `pol` [Słownik gwarowy (~85 entries)](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
     <!-- Checked by hand. -->
     - `pol` [Słownik wyrazów gwarowych (~275 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
+    <!-- ❌ Not checked. -->
+    - `pol` [Narzecza śląskie (? entries)](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
 
   - #### Dialectal
 
@@ -129,6 +130,10 @@ This section contains information about the Silesian language.
       - `ces` [Slovník po našimu (several hundred entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
+     
+    - Lower Silesian
+   
+      - `pol` [Zbiór wyrazów śląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
   - #### Polish dialects
  
