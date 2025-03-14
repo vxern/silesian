@@ -12,19 +12,23 @@ which orthography they employ, or whether they're paid or free.
   - `śla/F` - Full
   - `śla/S` - Simplified
 - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-- `oth` - Custom, ad-hoc orthography
+- `oth` - Other orthography
 - `pol` - Approximation using Polish orthography
 - `ces` - Approximation using Czech orthography
+- `mix` - Various orthographies
+
 </details>
 <details>
 <summary>Other</summary>
 
 - 💵 - Paid resource
+
 </details>
 <details>
 <summary>Requests</summary>
 
 - `missing` - The resource is missing a link. Please help in finding a link for it.
+
 </details>
 
 ## Table of Contents
@@ -157,7 +161,9 @@ This section contains information about the Silesian language.
 
 - ### Blogs
 
+  - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
+  - `mix` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
 
