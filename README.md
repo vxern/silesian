@@ -32,14 +32,21 @@ which orthography they employ, or whether they're paid or free.
 <!--This section needs a description.-->
 
 - [Information](#information)
+  - [Briefing](#briefing)
+  - [About the language](#about-the-language)
 - [Introduction](#introduction)
   - [Videos](#videos)
 - [Tools](#tools)
   - [Dictionaries](#dictionaries)
+    - [Collective](#collective)
+    - [Regional](#regional)
+    - [Polish dialects](#polish-dialects)
 - [Popular culture](#popular-culture)
   - [YouTube](#youtube)
+  - [Blogs](#blogs)
   - [News](#news)
   - [Radio](#radio)
+  - [Games](#games)
 - [Personal websites](#personal-websites)
 
 ## Information
@@ -47,8 +54,6 @@ which orthography they employ, or whether they're paid or free.
 This section contains information about the Silesian language.
 
 - ### Briefing
-
-  <!--This section needs a description.-->
 
   - Name: **Silesian**, occasionally also called **Upper Silesian**.
   - Codes:
@@ -82,6 +87,10 @@ This section contains information about the Silesian language.
       - [Chwalim](https://en.wikipedia.org/wiki/Chwalim_dialect)
     - Elsewhere
       - [Texan](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
+     
+- ### About the language
+
+  - [Śląsko godka @ sjikp.us.edu.pl](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
 
 ## Introduction
 
