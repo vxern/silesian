@@ -2,25 +2,6 @@
 
 ## Table of Contents
 
-### Labels
-
-To make finding certain resources easier, resources have labels indicating, for example,
-which orthography they employ, or whether they're paid or free.  
-
-- Orthographies
-  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
-    - `śla/F` - Full
-    - `śla/S` - Simplified
-  - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-  - `oth` - Other orthography
-  - `pol` - Approximation using Polish orthography
-  - `ces` - Approximation using Czech orthography
-  - `mix` - Various orthographies
-- Requests
-  - `missing` - The resource is missing a link. Please help in finding a link for it.
-- Other
-  - 💵 - Paid resource
-
 - [Information](#information)
   - [Briefing](#briefing)
   - [About the language](#about-the-language)
@@ -38,6 +19,25 @@ which orthography they employ, or whether they're paid or free.
   - [Radio](#radio)
   - [Games](#games)
 - [Personal websites](#personal-websites)
+
+## Labels
+
+To make finding certain resources easier, resources have labels indicating, for example,
+which orthography they employ, or whether they're paid or free.  
+
+- Orthographies
+  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
+    - `śla/F` - Full
+    - `śla/S` - Simplified
+  - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
+  - `oth` - Other orthography
+  - `pol` - Approximation using Polish orthography
+  - `ces` - Approximation using Czech orthography
+  - `mix` - Various orthographies
+- Requests
+  - `missing` - The resource is missing a link. Please help in finding a link for it.
+- Other
+  - 💵 - Paid resource
 
 ## Information
 
