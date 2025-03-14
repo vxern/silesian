@@ -105,6 +105,8 @@ This section contains information about the Silesian language.
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
     - `etc` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
+    <!-- The book lets you know. -->
+    - `etc` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
