@@ -167,6 +167,7 @@ This section contains information about the Silesian language.
 - ### Radio
 
   - [Radio Piekary](https://radiopiekary.pl/)
+  - `pol` [Slonsky Radio](https://slonskyradio.eu/)
  
 - ### Games
 
