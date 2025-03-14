@@ -126,9 +126,11 @@ This section contains information about the Silesian language.
     <!-- Checked by hand. -->
     - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
     <!-- Checked by hand. -->
-    - `pol` [Słownik gwarowy (80-90 entries)](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
+    - `pol` [Słownik (800+ entries) @ antryj.pl](https://www.antryj.pl/category/slownik/)
     <!-- Checked by hand. -->
-    - `pol` [Słownik wyrazów gwarowych (250-300 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
+    - `pol` [Słownik gwarowy (~85 entries)](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
+    <!-- Checked by hand. -->
+    - `pol` [Słownik wyrazów gwarowych (~275 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
 
   - #### Dialectal
 
@@ -176,8 +178,22 @@ This section contains information about the Silesian language.
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
 
+## Guides
+
+- `pol` [antryj.pl](https://www.antryj.pl/)
+
 ## Personal websites
 
 - `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
 - `śla/S` [Rafał Szyma](https://szyma.art/)
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
+
+## Immersion
+
+- ### Tourist guides
+
+  - [Poznaj Śląsk](https://www.poznaj-slask.pl/)
+ 
+- ### Food
+
+  - [Kuchnia Śląska](https://www.kuchnia-slaska.pl/)
