@@ -76,7 +76,7 @@ This section contains information about the Silesian language.
     - Lower Silesia
       - [Chwalim](https://en.wikipedia.org/wiki/Chwalim_dialect)
     - Outside Silesia
-      - [Texan](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
+      - [Texas](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
      
 - ### About the language
 
