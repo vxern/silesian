@@ -32,10 +32,9 @@ which orthography they employ, or whether they're paid or free.
     - `śla/F` - Full
     - `śla/S` - Simplified
   - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-  - `oth` - Other orthography
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
-  - `mix` - Various orthographies
+  - `etc` - Custom, ad-hoc orthography not used anywhere else
 - Requests
   - `missing` - The resource is missing a link. Please help in finding a link for it.
 - Other
@@ -106,7 +105,7 @@ This section contains information about the Silesian language.
     <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-    - `oth` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
+    - `etc` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl ](https://euro-met.pl/informator/slaski-slownik)
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
@@ -148,7 +147,7 @@ This section contains information about the Silesian language.
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
-  - `mix` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
+  - `etc`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
 
