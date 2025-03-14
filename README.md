@@ -43,7 +43,7 @@ which orthography they employ, or whether they're paid or free.
 - [Tools](#tools)
   - [Dictionaries](#dictionaries)
     - [Collective](#collective)
-    - [Regional](#regional)
+    - [Dialectal](#dialectal)
     - [Polish dialects](#polish-dialects)
 - [Popular culture](#popular-culture)
   - [YouTube](#youtube)
@@ -130,7 +130,7 @@ This section contains information about the Silesian language.
     <!-- Checked by hand. -->
     - `pol` [Słownik wyrazów gwarowych (250-300 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
 
-  - #### Regional
+  - #### Dialectal
 
     - Cieszyn
 
