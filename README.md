@@ -138,8 +138,9 @@ This section contains information about the Silesian language.
 
   - #### Polish dialects
  
-    - [Słownik gwar polskich]() by Jan Karłowicz
+    - [Słownik gwar polskich @ zbc.uz.zgora.pl]() by Jan Karłowicz
       - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866) / [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867) / [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868) / [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886) / [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887) / [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+    - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
 
 ## Popular culture
 
