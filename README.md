@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
+- [Labels](#labels)
 - [Information](#information)
   - [Briefing](#briefing)
   - [About the language](#about-the-language)
