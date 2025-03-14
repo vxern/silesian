@@ -1,39 +1,25 @@
 # The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
 
-## Key
+## Table of Contents
+
+### Labels
 
 To make finding certain resources easier, resources have labels indicating, for example,
 which orthography they employ, or whether they're paid or free.  
 
-<details>
-<summary>Orthographies</summary>
-
-- `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
-  - `śla/F` - Full
-  - `śla/S` - Simplified
-- `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-- `oth` - Other orthography
-- `pol` - Approximation using Polish orthography
-- `ces` - Approximation using Czech orthography
-- `mix` - Various orthographies
-
-</details>
-<details>
-<summary>Other</summary>
-
-- 💵 - Paid resource
-
-</details>
-<details>
-<summary>Requests</summary>
-
-- `missing` - The resource is missing a link. Please help in finding a link for it.
-
-</details>
-
-## Table of Contents
-
-<!--This section needs a description.-->
+- Orthographies
+  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
+    - `śla/F` - Full
+    - `śla/S` - Simplified
+  - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
+  - `oth` - Other orthography
+  - `pol` - Approximation using Polish orthography
+  - `ces` - Approximation using Czech orthography
+  - `mix` - Various orthographies
+- Requests
+  - `missing` - The resource is missing a link. Please help in finding a link for it.
+- Other
+  - 💵 - Paid resource
 
 - [Information](#information)
   - [Briefing](#briefing)
