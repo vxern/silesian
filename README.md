@@ -1,4 +1,4 @@
-# The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
+![image](https://github.com/user-attachments/assets/68ca108e-6141-4f18-9823-e1082725425d)# The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
 
 ## Table of Contents
 
@@ -104,15 +104,13 @@ This section contains information about the Silesian language.
     <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-    - `etc` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
+    - `etc` [Dykcjōnôrz polsko-ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- The book lets you know. -->
     - `etc` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
-    <!-- Checked the number of lines from start to end. -->
-    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
     - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html) by Ania Lerch-Wójcik
     <!-- Checked by hand. -->
-    - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
+    - `pol` [Słownik śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
     <!-- Checked by hand. -->
     - `pol` [Słownik (800+ entries) @ antryj.pl](https://www.antryj.pl/category/slownik/)
     <!-- Checked by hand. -->
@@ -121,6 +119,15 @@ This section contains information about the Silesian language.
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- ❌ Not checked. -->
     - `pol` [Narzecza śląskie (? entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+
+  - #### Technical
+
+    <!-- Checked by hand. -->
+    - `etc` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    <!-- Checked by hand. -->
+    - `etc` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    <!-- Checked the number of lines from start to end. -->
+    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
 
   - #### Dialectal
 
