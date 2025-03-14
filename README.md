@@ -99,19 +99,23 @@ This section contains information about the Silesian language.
 
     <!-- Instructions on how to get the number of entries: -->
     <!-- The front page lets you know. -->
-    - `śla/F` [SileSłownik (25,300+ entries) @ silling.org](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna)
+    - `śla/F` [SileSłownik (25,300+ entries) @ silling.org](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna) by Grzegorz Kulik
     <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
-    - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu)
+    - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu) by Stanisław Neblik & Wojciech Orliński
     <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-    - `oth` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390)
+    - `oth` [Dykcjōnôrz Polsko-Ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl ](https://euro-met.pl/informator/slaski-slownik)
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
-    - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html)
+    - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html) by Ania Lerch-Wójcik
     <!-- Checked by hand. -->
     - `pol` [Słownik Śląski (2,500+ entries) @ slownikslaski.pl](https://www.slownikslaski.pl/)
+    <!-- Checked by hand. -->
+    - `pol` [Słownik gwarowy (80-90 entries)](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
+    <!-- Checked by hand. -->
+    - `pol` [Słownik wyrazów gwarowych (250-300 entries)](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
 
   - #### Regional
 
