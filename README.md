@@ -137,8 +137,8 @@
     - `pol` [Słownik gwarowy (~85 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
     <!-- Checked by hand. -->
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
-    <!-- ❌ Not checked. -->
-    - `pol` [Narzecza śląskie (? entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` [Narzecza śląskie (`missing` entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
 
   - #### Technical
 
@@ -152,31 +152,34 @@
   - #### Dialectal
 
     - Prudnik
-   
-      - `śla/E` [Gĕdka.eu](https://geudka.eu/slownik/)
+ 
+      <!-- Checked by hand. -->
+      - `śla/E` [Gĕdka.eu (750+ entries)](https://geudka.eu/slownik/)
 
     - Cieszyn
 
       <!-- Stated on the page. -->
       - `pol` [Slovník po naszi(y)mu (5,000 entries) @ blaf.cz](http://www.blaf.cz/index.php?body=slovnik) (Polish-Czech-Slovak tri-border)
-      <!-- The format makes it difficult to check easily, one would have to manually go through it all. -->
-      - `ces` [Slovník po našimu (several hundred entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
+      <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
+      - `ces` [Slovník po našimu (`missing` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
      
     - Lower Silesian
    
-      <!-- ❌ Not checked. -->
-      - `pol` [Zbiór wyrazów śląsko-polskich (? entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
+      <!-- ❌ Not checked the number of entries. -->
+      - `pol` [Zbiór wyrazów śląsko-polskich (`missing` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
   - #### Old Polish
  
-    - [Słownik staropolski IJP PAN](https://pjs.ijp.pan.pl/sstp.html)
+    <!-- ❌ Not checked the number of entries. -->
+    - [Słownik staropolski IJP PAN (`missing` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
       - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf) / [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf) / [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf) / [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf) / [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf) / [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf) / [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf) / [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf) / [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf) / [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf) / [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
 
   - #### Polish dialects
  
-    - [Słownik gwar polskich @ zbc.uz.zgora.pl]() by Jan Karłowicz
+    <!-- ❌ Not checked the number of entries. -->
+    - [Słownik gwar polskich (`missing` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
       - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866) / [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867) / [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868) / [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886) / [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887) / [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
     - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
 
