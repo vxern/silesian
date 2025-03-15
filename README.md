@@ -58,7 +58,7 @@
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
 - Requests
-  - `missing` - The resource is missing a link. Please help in finding a link for it.
+  - `missing` - The given piece of information is missing, please add it.
 - Other
   - 💵 - Paid resource
 
