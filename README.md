@@ -224,6 +224,7 @@ This section contains information about the Silesian language.
 - `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
 - `śla/S` [Rafał Szyma](https://szyma.art/)
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
+- `pol` [Adalbertus](http://www.adalbertus.katowice.opoka.org.pl/slonsk.html)
 
 ## Diaspora
 
