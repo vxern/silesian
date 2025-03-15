@@ -1,5 +1,7 @@
 # Ślōnskŏ Gŏdka (`śla`) / Ślůnsko Godka (`ste`)
 
+###### Links in the repository are checked to be working every day at midnight.
+
 ## Table of Contents
 
 <details>
