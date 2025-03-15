@@ -19,6 +19,7 @@
   - [Blogs](#blogs)
   - [News](#news)
   - [Magazines](#magazines)
+  - [Portals](#portals)
   - [Radio](#radio)
   - [Games](#games)
 - [Guides](#guides)
@@ -185,6 +186,10 @@ This section contains information about the Silesian language.
 - ### Magazines
 
   - `pol` [Tramwaj Cieszyński](https://tramwajcieszynski.pl/?s=Lato%C5%9B)
+ 
+- ### Portals
+
+  - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
 
 - ### Radio
 
