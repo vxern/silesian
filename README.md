@@ -8,7 +8,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Labels](#labels)
-- [Information](#information)
+- [About Silesian](#information)
   - [Briefing](#briefing)
   - [About the language](#about-the-language)
   - [Videos](#videos)
@@ -62,7 +62,7 @@
 
 </details>
 
-## Information
+## About Silesian
 
 <details>
 
