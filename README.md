@@ -169,6 +169,11 @@
       <!-- ❌ Not checked. -->
       - `pol` [Zbiór wyrazów śląsko-polskich (? entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
+  - #### Old Polish
+ 
+    - [Słownik staropolski IJP PAN](https://pjs.ijp.pan.pl/sstp.html)
+      - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf) / [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf) / [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf) / [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf) / [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf) / [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf) / [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf) / [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf) / [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf) / [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf) / [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+
   - #### Polish dialects
  
     - [Słownik gwar polskich @ zbc.uz.zgora.pl]() by Jan Karłowicz
