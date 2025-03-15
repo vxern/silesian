@@ -28,7 +28,7 @@ To make finding certain resources easier, resources have labels indicating, for 
 which orthography they employ, or whether they're paid or free.  
 
 - Orthographies
-  - `śla` - [Ślabikŏrzowy Szrajbōnek]() ('The Elementary Orthography')
+  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
     - `śla/F` - Full
     - `śla/S` - Simplified
     - `śla/~` - Ślabikŏrz-based orthography
