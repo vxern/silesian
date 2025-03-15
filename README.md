@@ -49,9 +49,10 @@ which orthography they employ, or whether they're paid or free.
   - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
     - `śla/F` - Full
     - `śla/S` - Simplified
-    - `śla/~` - Ślabikŏrz-based orthography
+    - `śla/E` - Extended version of the base orthography
+    - `śla/~` - Ślabikŏrz-esque
   - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-    - `ste/~` - Steuer-based orthography
+    - `ste/~` - Steuer-esque
   - `kos` - Kosmała
   - `wen` - Wencel
   - `etc` - Et cetera, i.e. custom, ad-hoc orthography
@@ -152,6 +153,10 @@ This section contains information about the Silesian language.
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
 
   - #### Dialectal
+
+    - Prudnik
+   
+      - `śla/E` [Gĕdka.eu](https://geudka.eu/slownik/)
 
     - Cieszyn
 
