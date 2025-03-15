@@ -18,6 +18,7 @@
   - [YouTube](#youtube)
   - [Blogs](#blogs)
   - [News](#news)
+  - [Magazines](#magazines)
   - [Radio](#radio)
   - [Games](#games)
 - [Guides](#guides)
@@ -180,6 +181,10 @@ This section contains information about the Silesian language.
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
   - `ste/~` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
+ 
+- ### Magazines
+
+  - `pol` [Tramwaj Cieszyński](https://tramwajcieszynski.pl/?s=Lato%C5%9B)
 
 - ### Radio
 
