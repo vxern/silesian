@@ -1,4 +1,4 @@
-# The Silesian Language / Ślōnskŏ Gōdka ~ Ślůnsko Godka
+# Ślōnskŏ Gŏdka (`śla`) / Ślůnsko Godka (`ste`)
 
 ## Table of Contents
 
@@ -38,9 +38,6 @@
 
 ## Labels
 
-To make finding certain resources easier, resources have labels indicating, for example,
-which orthography they employ, or whether they're paid or free.  
-
 <details>
 
 <summary>Show</summary>
@@ -66,8 +63,6 @@ which orthography they employ, or whether they're paid or free.
 </details>
 
 ## Information
-
-This section contains information about the Silesian language.
 
 <details>
 
