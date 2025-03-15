@@ -28,13 +28,17 @@ To make finding certain resources easier, resources have labels indicating, for 
 which orthography they employ, or whether they're paid or free.  
 
 - Orthographies
-  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
+  - `śla` - [Ślabikŏrzowy Szrajbōnek]() ('The Elementary Orthography')
     - `śla/F` - Full
     - `śla/S` - Simplified
+    - `śla/~` - Ślabikŏrz-based orthography
   - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
+    - `ste/~` - Steuer-based orthography
+  - `kos` - Kosmała
+  - `wen` - Wencel
+  - `etc` - Et cetera, i.e. custom, ad-hoc orthography
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
-  - `etc` - Custom, ad-hoc orthography not used anywhere else
 - Requests
   - `missing` - The resource is missing a link. Please help in finding a link for it.
 - Other
@@ -104,9 +108,9 @@ This section contains information about the Silesian language.
     <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-    - `etc` [Dykcjōnôrz polsko-ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
+    - `kos` [Dykcjōnôrz polsko-ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- The book lets you know. -->
-    - `etc` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
+    - `wnc` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
     - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html) by Ania Lerch-Wójcik
     <!-- Checked by hand. -->
@@ -123,9 +127,9 @@ This section contains information about the Silesian language.
   - #### Technical
 
     <!-- Checked by hand. -->
-    - `etc` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    - `wnc` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
     <!-- Checked by hand. -->
-    - `etc` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    - `wnc` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
 
@@ -162,8 +166,9 @@ This section contains information about the Silesian language.
 - ### Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
+  - `śla/~` [Chop w kuchni](https://chopwkuchni.pl/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
-  - `etc`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
+  - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
 
