@@ -2,6 +2,10 @@
 
 ## Table of Contents
 
+<details>
+
+<summary>Show</summary>
+
 - [Table of Contents](#table-of-contents)
 - [Labels](#labels)
 - [Information](#information)
@@ -30,10 +34,16 @@
   - [Tourist guides](#tourist-guides)
   - [Food](#food)
 
+</details>
+
 ## Labels
 
 To make finding certain resources easier, resources have labels indicating, for example,
 which orthography they employ, or whether they're paid or free.  
+
+<details>
+
+<summary>Show</summary>
 
 - Orthographies
   - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
@@ -51,6 +61,8 @@ which orthography they employ, or whether they're paid or free.
   - `missing` - The resource is missing a link. Please help in finding a link for it.
 - Other
   - 💵 - Paid resource
+
+</details>
 
 ## Information
 
@@ -213,7 +225,7 @@ This section contains information about the Silesian language.
 - `śla/S` [Rafał Szyma](https://szyma.art/)
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
 
-## Connect
+## Diaspora
 
 - ### United States
 
