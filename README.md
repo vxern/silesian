@@ -20,7 +20,13 @@
   - [News](#news)
   - [Radio](#radio)
   - [Games](#games)
+- [Guides](#guides)
 - [Personal websites](#personal-websites)
+- [Diaspora](#diaspora)
+  - [United States](#united-states)
+- [Immersion](#immersion)
+  - [Tourist guides](#tourist-guides)
+  - [Food](#food)
 
 ## Labels
 
@@ -172,7 +178,8 @@ This section contains information about the Silesian language.
  
 - ### News
 
-  - `śla/F` [Wachtyrz](https://wachtyrz.eu/)
+  - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
+  - `ste/~` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
 
 - ### Radio
 
@@ -195,6 +202,12 @@ This section contains information about the Silesian language.
 - `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
 - `śla/S` [Rafał Szyma](https://szyma.art/)
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
+
+## Connect
+
+- ### United States
+
+  - [Śląscy Teksańczycy](https://slask-texas.org/pl/)
 
 ## Immersion
 
