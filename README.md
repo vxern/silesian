@@ -11,7 +11,6 @@
 - [Information](#information)
   - [Briefing](#briefing)
   - [About the language](#about-the-language)
-- [Introduction](#introduction)
   - [Videos](#videos)
 - [Tools](#tools)
   - [Dictionaries](#dictionaries)
@@ -20,6 +19,7 @@
     - [Polish dialects](#polish-dialects)
 - [Popular culture](#popular-culture)
   - [YouTube](#youtube)
+    - [Videos](#videos)
   - [Blogs](#blogs)
   - [News](#news)
   - [Magazines](#magazines)
@@ -68,6 +68,10 @@ which orthography they employ, or whether they're paid or free.
 
 This section contains information about the Silesian language.
 
+<details>
+
+<summary>Show</summary>
+
 - ### Briefing
 
   - Name: **Silesian**, occasionally also called **Upper Silesian**.
@@ -106,13 +110,7 @@ This section contains information about the Silesian language.
 
   - [Śląsko godka @ sjikp.us.edu.pl](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
 
-## Introduction
-
-- ### Videos
-
-  - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
-  - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
-  - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
+</details>
 
 ## Tools
 
@@ -182,6 +180,12 @@ This section contains information about the Silesian language.
   - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
   - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
   - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
+ 
+  - #### Videos
+  
+    - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
+    - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
+    - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
 
 - ### Blogs
 
