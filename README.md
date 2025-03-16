@@ -52,19 +52,21 @@
   - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
     - `śla/F` - Full
     - `śla/S` - Simplified
-    - `śla/E` - Extended version of the base orthography
+    - `śla/E` - With extensions on top of the base orthography
     - `śla/~` - Ślabikŏrz-esque
   - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
+    - `śla/E` - With extensions on top of the base orthography
     - `ste/~` - Steuer-esque
   - `kos` - Kosmała
-  - `wen` - Wencel
   - `etc` - Et cetera, i.e. custom, ad-hoc orthography
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
 - Requests
-  - `missing` - The given piece of information is missing, please add it.
+  - `missing` - A given piece of information is missing. (Please help out in locating it)
+  - `unknown` - A given piece of information is unknown. (Please help out in finding it out)
 - Other
   - 💵 - Paid resource
+  - 🧩 - Physical item
 
 </details>
 
@@ -123,14 +125,14 @@
     <!-- Instructions on how to get the number of entries: -->
     <!-- The front page lets you know. -->
     - `śla/F` [SileSłownik (25,300+ entries) @ silling.org](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna) by Grzegorz Kulik
-    <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
-    - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu) by Stanisław Neblik & Wojciech Orliński
     <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
     - `śla/F` [Wiktionary (2,150+ entries) @ wiktionary.org](https://wiktionary.org)
+    <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
+    - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu) by Stanisław Neblik & Wojciech Orliński
+    <!-- The book lets you know. -->
+    - `ste/E` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
     - `kos` [Dykcjōnôrz polsko-ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
-    <!-- The book lets you know. -->
-    - `wnc` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
     - `pol` [Słowniczek wyrazów śląskich (1750+ entries) @ bonclok.pl](https://bonclok.pl/slowniczek-wyrazow-slaskich.html) by Ania Lerch-Wójcik
     <!-- Checked by hand. -->
@@ -143,13 +145,41 @@
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Narzecza śląskie (`missing` entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    <!-- Found in descriptions of the product. -->
+    - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki (16,500+ entries)](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki) by Bogdan Kallus - ISBN: `9788362349029`
+    <!-- ❌ Not checked the number of entries. -->
+    - 🧩 `pol` [Słownik gwar śląskich (`missing` entries)](https://instytutslaski.pl/slownik-gwar-slaskich/) by Instytut Śląski
+      <details>
+      
+      <summary>Volumes</summary>
+
+      - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/) - ISBN: `9788371264474`
+      - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/) - ISBN: `8371261500`
+      - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/) - ISBN: `8371261640`
+      - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/) - ISBN: `8371261896`
+      - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/) - ISBN: `8371261918`
+      - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/) - ISBN: `8371262043`
+      - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/) - ISBN: `8371262051`
+      - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/) - ISBN: `8371262140`
+      - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/) - ISBN: `9788371262296`
+      - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/) - ISBN: `9788371262395`
+      - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/) - ISBN: `9788371262586`
+      - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/) - ISBN: `9788371262791`
+      - `missing` Volume 13 (Hyro-Juzyneczki) - ISBN: `9788371262876`
+      - `missing` Volume 14 (K-Klacz) - ISBN: `9788371263101`
+      - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/) - ISBN: `9788371263217`
+      - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/) - ISBN: `9788371263347`
+      - [Volume 17 (La-̵̵Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
+      - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/) - ISBN: `9788371264405`
+
+      </details>
 
   - #### Technical
 
     <!-- Checked by hand. -->
-    - `wnc` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    - `ste/E` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
     <!-- Checked by hand. -->
-    - `wnc` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    - `ste/E` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
 
@@ -180,13 +210,40 @@
 
       <!-- ❌ Not checked the number of entries. -->
       - [Słownik staropolski IJP PAN (`missing` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
-        - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf) / [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf) / [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf) / [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf) / [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf) / [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf) / [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf) / [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf) / [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf) / [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf) / [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+        <details>
+          
+        <summary>Volumes</summary>
+      
+        - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf)
+        - [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf)
+        - [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf)
+        - [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf)
+        - [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf)
+        - [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf)
+        - [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf)
+        - [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf)
+        - [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf)
+        - [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf)
+        - [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+
+        </details>
 
     - ##### Polish dialects
    
       <!-- ❌ Not checked the number of entries. -->
       - [Słownik gwar polskich (`missing` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
-        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866) / [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867) / [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868) / [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886) / [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887) / [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+        <details>
+          
+        <summary>Volumes</summary>
+      
+        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866)
+        - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867)
+        - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868)
+        - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886)
+        - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887)
+        - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+
+        </details>
       - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
      
     - ##### Moravian
@@ -237,11 +294,13 @@
  
 - ### Games
 
-  The following is a list of games translated to Silesian.
-
-  - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
+  - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Contribute here](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
   - `śla/S` [Ślōnski Gothic](https://slaskigothic.pl/) - A professional mod for [Gothic](https://en.wikipedia.org/wiki/Gothic_(video_game)), fully translating the game to Silesian with immersive audio.
+
+- ### Board games
+
+  - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
 
 ## Guides
 
