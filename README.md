@@ -32,6 +32,7 @@
   - [Portals](#portals)
   - [Radio](#radio)
   - [Games](#games)
+- [Courses](#courses)
 - [Guides](#guides)
 - [Personal websites](#personal-websites)
 - [Diaspora](#diaspora)
@@ -301,6 +302,10 @@
 - ### Board games
 
   - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
+
+## Courses
+
+- 💵 `śla/S` [KursGodki.pl](https://www.kursgodki.pl/)
 
 ## Guides
 
