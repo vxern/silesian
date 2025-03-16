@@ -143,8 +143,8 @@
     - `pol` [Słownik gwarowy (~85 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420) by Adolf Dygacz
     <!-- Checked by hand. -->
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
-    <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Narzecza śląskie (`unknown` entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    <!-- Imported into GoldenDict and checked the number of articles. -->
+    - `pol` [Narzecza śląskie (8,000+ entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
     <!-- Found in descriptions of the product. -->
     - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki (16,500+ entries)](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki) by Bogdan Kallus - ISBN: `9788362349029`
     <!-- ❌ Not checked the number of entries. -->
