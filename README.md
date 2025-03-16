@@ -150,30 +150,30 @@
     - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki (16,500+ entries)](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki) by Bogdan Kallus - ISBN: `9788362349029`
     <!-- ❌ Not checked the number of entries. -->
     - 🧩 `pol` [Słownik gwar śląskich (`unknown` entries)](https://instytutslaski.pl/slownik-gwar-slaskich/) by Instytut Śląski
-      <details>
-      
-      <summary>Volumes</summary>
+      - <details>
 
-      - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/) - ISBN: `9788371264474`
-      - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/) - ISBN: `8371261500`
-      - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/) - ISBN: `8371261640`
-      - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/) - ISBN: `8371261896`
-      - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/) - ISBN: `8371261918`
-      - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/) - ISBN: `8371262043`
-      - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/) - ISBN: `8371262051`
-      - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/) - ISBN: `8371262140`
-      - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/) - ISBN: `9788371262296`
-      - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/) - ISBN: `9788371262395`
-      - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/) - ISBN: `9788371262586`
-      - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/) - ISBN: `9788371262791`
-      - `missing` Volume 13 (Hyro-Juzyneczki) - ISBN: `9788371262876`
-      - `missing` Volume 14 (K-Klacz) - ISBN: `9788371263101`
-      - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/) - ISBN: `9788371263217`
-      - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/) - ISBN: `9788371263347`
-      - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
-      - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/) - ISBN: `9788371264405`
+        <summary>Volumes</summary>
 
-      </details>
+        - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/) - ISBN: `9788371264474`
+        - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/) - ISBN: `8371261500`
+        - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/) - ISBN: `8371261640`
+        - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/) - ISBN: `8371261896`
+        - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/) - ISBN: `8371261918`
+        - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/) - ISBN: `8371262043`
+        - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/) - ISBN: `8371262051`
+        - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/) - ISBN: `8371262140`
+        - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/) - ISBN: `9788371262296`
+        - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/) - ISBN: `9788371262395`
+        - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/) - ISBN: `9788371262586`
+        - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/) - ISBN: `9788371262791`
+        - `missing` Volume 13 (Hyro-Juzyneczki) - ISBN: `9788371262876`
+        - `missing` Volume 14 (K-Klacz) - ISBN: `9788371263101`
+        - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/) - ISBN: `9788371263217`
+        - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/) - ISBN: `9788371263347`
+        - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
+        - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/) - ISBN: `9788371264405`
+
+        </details>
 
   - #### Technical
 
@@ -189,7 +189,7 @@
     - ##### Prudnik
  
       <!-- Checked by hand. -->
-      - `śla/E` [Gĕdka.eu (750+ entries)](https://geudka.eu/slownik/)
+      - `śla/E` [Słownik śląsko-polski (750+ entries) @ geudka.eu](https://geudka.eu/slownik/)
 
     - ##### Cieszyn
 
@@ -211,40 +211,40 @@
 
       <!-- ❌ Not checked the number of entries. -->
       - [Słownik staropolski IJP PAN (`unknown` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
-        <details>
-          
-        <summary>Volumes</summary>
-      
-        - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf)
-        - [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf)
-        - [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf)
-        - [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf)
-        - [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf)
-        - [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf)
-        - [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf)
-        - [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf)
-        - [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf)
-        - [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf)
-        - [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+        - <details>
 
-        </details>
+          <summary>Volumes</summary>
+
+          - [Volume 1 (A-Ćwirtnia)](https://pjs.ijp.pan.pl/Sstp/t1.pdf)
+          - [Volume 2 (Da-Hynszta)](https://pjs.ijp.pan.pl/Sstp/t2.pdf)
+          - [Volume 3 (I-Kwitować)](https://pjs.ijp.pan.pl/Sstp/t3.pdf)
+          - [Volume 4 (La-Mżyć)](https://pjs.ijp.pan.pl/Sstp/t4.pdf)
+          - [Volume 5 (Na-Ówdzie)](https://pjs.ijp.pan.pl/Sstp/t5.pdf)
+          - [Volume 6 (Pacha-Pożżenie)](https://pjs.ijp.pan.pl/Sstp/t6.pdf)
+          - [Volume 7 (Póć-Rozproszyć)](https://pjs.ijp.pan.pl/Sstp/t7.pdf)
+          - [Volume 8 (Rozpróchnieć-Szyszki)](https://pjs.ijp.pan.pl/Sstp/t8.pdf)
+          - [Volume 9 (Ściadły-Używowanie)](https://pjs.ijp.pan.pl/Sstp/t9.pdf)
+          - [Volume 10 (W-Wżgim)](https://pjs.ijp.pan.pl/Sstp/t10.pdf)
+          - [Volume 11 (Z-Żżenie)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+
+          </details>
 
     - ##### Polish dialects
    
       <!-- ❌ Not checked the number of entries. -->
-      - [Słownik gwar polskich (`unknown` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
-        <details>
-          
-        <summary>Volumes</summary>
-      
-        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866)
-        - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867)
-        - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868)
-        - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886)
-        - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887)
-        - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+      - [Słownik gwar polskich (`unknown` entries) @ zbc.uz.zgora.pl](https://zbc.uz.zgora.pl/dlibra/publication/9017) by Jan Karłowicz
+        - <details>
 
-        </details>
+          <summary>Volumes</summary>
+
+          - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866)
+          - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867)
+          - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868)
+          - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886)
+          - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887)
+          - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+
+          </details>
       - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
      
     - ##### Moravian
