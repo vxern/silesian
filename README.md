@@ -145,11 +145,11 @@
     <!-- Checked by hand. -->
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Narzecza śląskie (`missing` entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    - `pol` [Narzecza śląskie (`unknown` entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
     <!-- Found in descriptions of the product. -->
     - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki (16,500+ entries)](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki) by Bogdan Kallus - ISBN: `9788362349029`
     <!-- ❌ Not checked the number of entries. -->
-    - 🧩 `pol` [Słownik gwar śląskich (`missing` entries)](https://instytutslaski.pl/slownik-gwar-slaskich/) by Instytut Śląski
+    - 🧩 `pol` [Słownik gwar śląskich (`unknown` entries)](https://instytutslaski.pl/slownik-gwar-slaskich/) by Instytut Śląski
       <details>
       
       <summary>Volumes</summary>
@@ -196,21 +196,21 @@
       <!-- Stated on the page. -->
       - `pol` [Slovník po naszi(y)mu (5,000 entries) @ blaf.cz](http://www.blaf.cz/index.php?body=slovnik) (Polish-Czech-Slovak tri-border)
       <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
-      - `ces` [Slovník po našimu (`missing` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
+      - `ces` [Slovník po našimu (`unknown` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
      
     - ##### Lower Silesian
    
       <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Zbiór wyrazów śląsko-polskich (`missing` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
+      - `pol` [Zbiór wyrazów śląsko-polskich (`unknown` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
   - #### Related
 
     - ##### Old Polish  
 
       <!-- ❌ Not checked the number of entries. -->
-      - [Słownik staropolski IJP PAN (`missing` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
+      - [Słownik staropolski IJP PAN (`unknown` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
         <details>
           
         <summary>Volumes</summary>
@@ -232,7 +232,7 @@
     - ##### Polish dialects
    
       <!-- ❌ Not checked the number of entries. -->
-      - [Słownik gwar polskich (`missing` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
+      - [Słownik gwar polskich (`unknown` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
         <details>
           
         <summary>Volumes</summary>
@@ -250,7 +250,7 @@
     - ##### Moravian
  
       <!-- ❌ Not checked the number of entries. -->
-      - [Dialektický slovník moravský (`missing` entries) @ kramerius.lib.cas.cz](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7) by František Bartoš
+      - [Dialektický slovník moravský (`unknown` entries) @ kramerius.lib.cas.cz](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7) by František Bartoš
 
 ## Popular culture
 
