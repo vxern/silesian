@@ -241,6 +241,7 @@
 
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Translations](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
+  - `śla/S` [Ślōnski Gothic](https://slaskigothic.pl/) - A professional mod for [Gothic](https://en.wikipedia.org/wiki/Gothic_(video_game)), fully translating the game to Silesian with immersive audio.
 
 ## Guides
 
