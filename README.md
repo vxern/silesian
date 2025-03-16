@@ -50,15 +50,15 @@
 <summary>Show</summary>
 
 - Orthographies
-  - `śla` - Ślabikŏrzowy Szrajbōnek ('The Elementary Orthography')
+  - `śla` - Ślabikŏrz
     - `śla/F` - Full
     - `śla/S` - Simplified
-    - `śla/E` - With extensions on top of the base orthography
+    - `śla/E` - Extended by custom characters or rules
     - `śla/~` - Ślabikŏrz-esque
-  - `ste` - Steuerowy Szrajbůnek ('The Steuer Orthography')
-    - `śla/E` - With extensions on top of the base orthography
+  - `ste` - Steuer
     - `ste/~` - Steuer-esque
   - `kos` - Kosmała
+  - `wen` - Wencel
   - `etc` - Et cetera, i.e. custom, ad-hoc orthography
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
@@ -131,7 +131,7 @@
     <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
     - `śla/S` [Dykcjōnorz (4,300+ entries) @ dykcjonorz.eu](https://dykcjonorz.eu) by Stanisław Neblik & Wojciech Orliński
     <!-- The book lets you know. -->
-    - `ste/E` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
+    - `wen` [Dykcjůnôrz ślų̊sko-polski (21,510 entries @ math.uni.wroc.pl)](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf) by Aleksandra Wencel
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
     - `kos` [Dykcjōnôrz polsko-ślonskiy (54,000+ entries) @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/648390) by Eugeniusz Kosmała
     <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
@@ -178,9 +178,9 @@
   - #### Technical
 
     <!-- Checked by hand. -->
-    - `ste/E` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    - `wen` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
     <!-- Checked by hand. -->
-    - `ste/E` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    - `wen` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
     <!-- Checked the number of lines from start to end. -->
     - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
 
