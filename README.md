@@ -209,8 +209,8 @@
 
     - ##### Old Polish  
 
-      <!-- ❌ Not checked the number of entries. -->
-      - [Słownik staropolski IJP PAN (`unknown` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
+      <!-- Found at: https://www.jezyk-polski.pl/index.php/jp/article/view/556 -->
+      - [Słownik staropolski IJP PAN (54,000+ entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
         - <details>
 
           <summary>Volumes</summary>
