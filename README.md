@@ -169,7 +169,7 @@
       - `missing` Volume 14 (K-Klacz) - ISBN: `9788371263101`
       - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/) - ISBN: `9788371263217`
       - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/) - ISBN: `9788371263347`
-      - [Volume 17 (La-̵̵Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
+      - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
       - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/) - ISBN: `9788371264405`
 
       </details>
