@@ -18,9 +18,13 @@
   - [Dictionaries](#dictionaries)
     - [Collective](#collective)
     - [Dialectal](#dialectal)
-    - [Polish dialects](#polish-dialects)
+    - [Related](#related)
+      - [Old Polish](#old-polish)
+      - [Polish](#polish)
+      - [Moravian](#moravian)
 - [Popular culture](#popular-culture)
   - [YouTube](#youtube)
+    - [Channels](#channels)
     - [Videos](#videos)
   - [Blogs](#blogs)
   - [News](#news)
@@ -151,12 +155,12 @@
 
   - #### Dialectal
 
-    - Prudnik
+    - ##### Prudnik
  
       <!-- Checked by hand. -->
       - `śla/E` [Gĕdka.eu (750+ entries)](https://geudka.eu/slownik/)
 
-    - Cieszyn
+    - ##### Cieszyn
 
       <!-- Stated on the page. -->
       - `pol` [Slovník po naszi(y)mu (5,000 entries) @ blaf.cz](http://www.blaf.cz/index.php?body=slovnik) (Polish-Czech-Slovak tri-border)
@@ -165,31 +169,40 @@
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
      
-    - Lower Silesian
+    - ##### Lower Silesian
    
       <!-- ❌ Not checked the number of entries. -->
       - `pol` [Zbiór wyrazów śląsko-polskich (`missing` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
-  - #### Old Polish
- 
-    <!-- ❌ Not checked the number of entries. -->
-    - [Słownik staropolski IJP PAN (`missing` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
-      - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf) / [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf) / [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf) / [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf) / [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf) / [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf) / [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf) / [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf) / [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf) / [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf) / [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+  - #### Related
 
-  - #### Polish dialects
+    - ##### Old Polish  
+
+      <!-- ❌ Not checked the number of entries. -->
+      - [Słownik staropolski IJP PAN (`missing` entries) @ spjs.ijp.pan.pl](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original @ pjs.ijp.pan.pl](https://pjs.ijp.pan.pl/sstp.html))
+        - [Volume 1 (A-Ć)](https://pjs.ijp.pan.pl/Sstp/t1.pdf) / [Volume 2 (D-H)](https://pjs.ijp.pan.pl/Sstp/t2.pdf) / [Volume 3 (I-K)](https://pjs.ijp.pan.pl/Sstp/t3.pdf) / [Volume 4 (L-M)](https://pjs.ijp.pan.pl/Sstp/t4.pdf) / [Volume 5 (N-Ó)](https://pjs.ijp.pan.pl/Sstp/t5.pdf) / [Volume 6 (Pa-Po)](https://pjs.ijp.pan.pl/Sstp/t6.pdf) / [Volume 7 (Pó-Rozpro)](https://pjs.ijp.pan.pl/Sstp/t7.pdf) / [Volume 8 (Rozpró-S)](https://pjs.ijp.pan.pl/Sstp/t8.pdf) / [Volume 9 (Ś-U)](https://pjs.ijp.pan.pl/Sstp/t9.pdf) / [Volume 10 (W)](https://pjs.ijp.pan.pl/Sstp/t10.pdf) / [Volume 11 (Z-Ż)](https://pjs.ijp.pan.pl/Sstp/t11.pdf)
+
+    - ##### Polish dialects
+   
+      <!-- ❌ Not checked the number of entries. -->
+      - [Słownik gwar polskich (`missing` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
+        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866) / [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867) / [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868) / [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886) / [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887) / [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
+      - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
+     
+    - ##### Moravian
  
-    <!-- ❌ Not checked the number of entries. -->
-    - [Słownik gwar polskich (`missing` entries) @ zbc.uz.zgora.pl]() by Jan Karłowicz
-      - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866) / [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867) / [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868) / [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886) / [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887) / [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
-    - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
+      <!-- ❌ Not checked the number of entries. -->
+      - [Dialektický slovník moravský (`missing` entries) @ kramerius.lib.cas.cz](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7) by František Bartoš
 
 ## Popular culture
 
 - ### YouTube
-  
-  - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
-  - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
-  - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
+
+  - #### Channels
+
+    - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
+    - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
+    - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
  
   - #### Videos
   
