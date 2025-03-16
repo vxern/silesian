@@ -244,7 +244,8 @@
           - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888)
 
           </details>
-      - [O niektórych wyrazach ludowych polskich @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
+      <!-- ❌ Not checked the number of entries. -->
+      - [O niektórych wyrazach ludowych polskich (`unknown` entries) @ sbc.org.pl](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf) by Lucyjan Malinowski
      
     - ##### Moravian
  
