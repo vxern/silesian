@@ -59,7 +59,6 @@
     - `ste/~` - Steuer-esque
   - `kos` - Kosmała
   - `wen` - Wencel
-  - `etc` - Et cetera, i.e. custom, ad-hoc orthography
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
 - Requests
