@@ -56,21 +56,24 @@
     - `śla/F` - Full
     - `śla/S` - Simplified
     - `śla/E` - Extended by custom characters or rules
-    - `śla/~` - Ślabikŏrz-esque
   - `ste` - Steuer
-    - `ste/~` - Steuer-esque
   - `kos` - Kosmała
   - `wen` - Wencel
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
+  - `mix` - Mixed orthography, perhaps using more than one standard; do not use for learning to write
+- Notes about writing
+  - ✍️ - Hand-written; might be difficult to read and/or parse
+  - Spelling mistakes
+    - 🟢 - Contains minor spelling mistakes
+    - 🟡 - Contains major spelling mistakes
+    - 🔴 - Contains serious spelling mistakes - DO NOT use for learning the orthography
 - Categories
   - 🌿 - Botany (Plants)
   - 🍄 - Mycology (Mushrooms)
   - 🐴 - Zoology (Animals)
   - ✝️ - Theology (Religion, belief, etc)
   - ⚙️ - Technical (broadly)
-- Miscellaneous
-  - ✍️ - Hand-written; might be difficult to read and/or parse
 - Availability
   - 💵 - Paid resource
   - 🧩 - Physical item
@@ -282,14 +285,14 @@
 - ### Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
-  - `śla/~` [Chop w kuchni](https://chopwkuchni.pl/)
+  - 🟢 `śla` [Chop w kuchni](https://chopwkuchni.pl/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
-  - `ste/~` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
+  - `mix` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
  
 - ### Magazines
 
@@ -313,6 +316,12 @@
 - ### Board games
 
   - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
+
+## Literature
+
+- ### Books
+
+  - 🟢 `śla/F` [Czytej bajtlōm kożdy dziyń](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
 
 ## Courses
 
