@@ -34,6 +34,8 @@
   - [Portals](#portals)
   - [Radio](#radio)
   - [Games](#games)
+- [Literature](#literature)
+  - [Books](#books)
 - [Courses](#courses)
 - [Guides](#guides)
 - [Personal websites](#personal-websites)
@@ -61,7 +63,7 @@
   - `wen` - Wencel
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
-  - `mix` - Mixed orthography, perhaps using more than one standard; do not use for learning to write
+  - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <u>not</u> use for learning to write
 - Notes about writing
   - ✍️ - Hand-written; might be difficult to read and/or parse
   - Spelling mistakes
@@ -292,7 +294,7 @@
 - ### News
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
-  - `mix` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
+  - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
  
 - ### Magazines
 
@@ -321,7 +323,7 @@
 
 - ### Books
 
-  - 🟢 `śla/F` [Czytej bajtlōm kożdy dziyń](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
+  - 🟢 `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń @ instytutkorfantego.pl](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
 
 ## Courses
 
