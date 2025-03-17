@@ -208,14 +208,16 @@
 
       <!-- Stated on the page. -->
       - `pol` [Slovník po naszi(y)mu (5,000 entries) @ blaf.cz](http://www.blaf.cz/index.php?body=slovnik) (Polish-Czech-Slovak tri-border)
+      <!-- ❌ Not checked the number of entries. -->
+      - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia (`unknown` entries) @ bibliotekanauki.pl](https://bibliotekanauki.pl/articles/3150548.pdf) by Irena Bogocz
       <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
-      - `ces` [Slovník po našimu (`unknown` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
+      - `ces` [Slovník po našimu (`unknown` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
-      <!-- ❌ Not checked. -->
+      <!-- ❌ Not checked the number of entries. -->
       - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego (`unknown` entries)](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia) by Zbigniew Greń
      
-    - ##### Lower Silesian
+    - ##### Lower Silesia
    
       <!-- ❌ Not checked the number of entries. -->
       - ✍️ `pol` [Zbiór wyrazów szląsko-polskich (`unknown` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
