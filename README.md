@@ -156,9 +156,11 @@
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie (8,000+ entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
     <!-- Checked by hand. -->
-    - 🌿 `wen` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    - 🌿 `wen` [Rojśliny po ślų̊sku (2,700+ entries) @ math.uni.wroc.pl](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    <!-- ❌ Not checked the number of entries. -->
+    - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej (`unknown` entries) @ instytutkorfantego.pl](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf)
     <!-- Checked by hand. -->
-    - 🍄 `wen` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    - 🍄 `wen` [Grziby po ślų̊sku (390+ entries) @ math.uni.wroc.pl](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
     <!-- Checked the number of lines from start to end. -->
     - ⚙️ `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
     <!-- Found in descriptions of the product. -->
