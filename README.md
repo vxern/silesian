@@ -63,12 +63,20 @@
   - `wen` - Wencel
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
+- Categories
+  - 🌿 - Botany (Plants)
+  - 🍄 - Mycology (Mushrooms)
+  - 🐴 - Zoology (Animals)
+  - ✝️ - Theology (Religion, belief, etc)
+  - ⚙️ - Technical (broadly)
+- Miscellaneous
+  - ✍️ - Hand-written; might be difficult to read and/or parse
+- Availability
+  - 💵 - Paid resource
+  - 🧩 - Physical item
 - Requests
   - `missing` - A given piece of information is missing. (Please help out in locating it)
   - `unknown` - A given piece of information is unknown. (Please help out in finding it out)
-- Other
-  - 💵 - Paid resource
-  - 🧩 - Physical item
 
 </details>
 
@@ -147,6 +155,12 @@
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie (8,000+ entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    <!-- Checked by hand. -->
+    - 🌿 `wen` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
+    <!-- Checked by hand. -->
+    - 🍄 `wen` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
+    <!-- Checked the number of lines from start to end. -->
+    - ⚙️ `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
     <!-- Found in descriptions of the product. -->
     - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki (16,500+ entries)](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki) by Bogdan Kallus - ISBN: `9788362349029`
     <!-- ❌ Not checked the number of entries. -->
@@ -176,15 +190,6 @@
 
         </details>
 
-  - #### Technical
-
-    <!-- Checked by hand. -->
-    - `wen` [Rojśliny po ślų̊sku (2,700+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
-    <!-- Checked by hand. -->
-    - `wen` [Grziby po ślų̊sku (390+ entries)](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf) by Aleksandra Wencel
-    <!-- Checked the number of lines from start to end. -->
-    - `pol` [Śląski słownik techniczny (500+ entries) @ euro-met.pl](https://euro-met.pl/informator/slaski-slownik)
-
   - #### Dialectal
 
     - ##### Prudnik
@@ -200,11 +205,13 @@
       - `ces` [Slovník po našimu (`unknown` entries) @ ponasimu.cz](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/) (Cieszyn)
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu (1,500+ entries) @ nalucine.cz](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm) (Domaslavice, Moravian-Silesian region)
+      <!-- ❌ Not checked. -->
+      - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego (`unknown` entries)](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia) by Zbigniew Greń
      
     - ##### Lower Silesian
    
       <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Zbiór wyrazów śląsko-polskich (`unknown` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
+      - ✍️ `pol` [Zbiór wyrazów szląsko-polskich (`unknown` entries) @ jbc.bj.uj.edu.pl](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579) by Baltazar Działas
 
   - #### Related
 
