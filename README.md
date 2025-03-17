@@ -1,4 +1,4 @@
-# Ślōnskŏ Gŏdka (`śla`) / Ślůnsko Godka (`ste`)
+# <p align="left"><img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="40" /></p><p align="center">Ślōnskŏ Gŏdka</br><sup><sub>The Silesian Language</sub></sup></p><p align="right"><img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="40" /></p>
 
 ###### Links in the repository are checked to be working every day at midnight.
 
