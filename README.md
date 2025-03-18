@@ -35,7 +35,7 @@
   - [Radio](#radio)
   - [Games](#games)
 - [Literature](#literature)
-  - [Books](#books)
+  - [Pseudo-books](#pseudo-books)
 - [Courses](#courses)
 - [Guides](#guides)
 - [Personal websites](#personal-websites)
@@ -79,6 +79,7 @@
 - Availability
   - 💵 - Paid resource
   - 🧩 - Physical item
+  - 🗄️ - Archived
 - Requests
   - `missing` - A given piece of information is missing. (Please help out in locating it)
   - `unknown` - A given piece of information is unknown. (Please help out in finding it out)
@@ -301,6 +302,7 @@
 - ### Magazines
 
   - `pol` [Tramwaj Cieszyński](https://tramwajcieszynski.pl/?s=Lato%C5%9B)
+  - `pol` 🗄️ [Nowa Gazeta Śląska](https://web.archive.org/web/20130501110218/http://nowagazetaslaska.eu/)
  
 - ### Portals
 
@@ -310,6 +312,8 @@
 
   - [Radio Piekary](https://radiopiekary.pl/)
   - `pol` [Slonsky Radio](https://slonskyradio.eu/)
+  - `pol` [Radio Bercik](https://www.radiobercik.eu/)
+  - `pol` [Radio Silesia](https://silesia.fm/)
  
 - ### Games
 
@@ -323,9 +327,10 @@
 
 ## Literature
 
-- ### Books
+- ### Pseudo-books
 
   - 🟢 `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń @ instytutkorfantego.pl](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
+  - `pol` [Po naszymu, czyli o polszczyźnie małych ojczyzn](https://ore.edu.pl/wp-content/uploads/2025/02/po-naszymu-czyli-o-polszczyznie-malych-ojczyzn.-wybor-tekstow-do-edukacji-regionalnej.-teksty-slaskie-1.pdf)
 
 ## Courses
 
@@ -340,6 +345,7 @@
 - `śla/S` [Grzegorz Kulik](https://grzegorzkulik.pl/)
 - `śla/S` [Rafał Szyma](https://szyma.art/)
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
+- `pol` [Glywicke S'loonzoki](http://schlesien.nwgw.de/)
 - `pol` [Adalbertus](http://www.adalbertus.katowice.opoka.org.pl/slonsk.html)
 
 ## Diaspora
