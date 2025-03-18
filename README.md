@@ -310,6 +310,7 @@
 
 - ### Radio
 
+  - `pol` [Radio na Śląskiej Fali Chicago](https://redcircle.com/shows/radio-na-slskiej-fali-chicago)
   - `pol` [Radio Piekary](https://radiopiekary.pl/)
   - `pol` [Slonsky Radio](https://slonskyradio.eu/)
   - `pol` [Radio Bercik](https://www.radiobercik.eu/)
@@ -326,10 +327,6 @@
   - 🗄️ `pol` [Radio Lucjana](https://web.archive.org/web/20180529020633/http://www.radiolucjana.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/radiolucjana/?lang=en))
   - 🗄️ `pol` [Radio Hajer](https://web.archive.org/web/20201229210352/http://radio-hajer.eu/) ([Online Radio Box](https://onlineradiobox.com/de/hajer/))
   - 🗄️ `pol` [Radio Magian](https://web.archive.org/web/20160220035325/http://radiomagian.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/slaskieradiomagian))
- 
-  - #### United States
- 
-    - [Radio na Śląskiej Fali Chicago](https://redcircle.com/shows/radio-na-slskiej-fali-chicago)
  
 - ### Games
 
