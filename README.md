@@ -161,6 +161,8 @@
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie (8,000+ entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` [Wörterbuch der Oberschlesischen Sprache (`unknown` entries) @ dr-lazik.de](http://www.dr-lazik.de/) by Wolfgang Theodor Lazik
     <!-- Checked by hand. -->
     - 🌿 `wen` [Rojśliny po ślų̊sku (2,700+ entries) @ math.uni.wroc.pl](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf) by Aleksandra Wencel
     <!-- ❌ Not checked the number of entries. -->
