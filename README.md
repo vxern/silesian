@@ -35,6 +35,7 @@
   - [Radio](#radio)
   - [Games](#games)
 - [Literature](#literature)
+  - [Libraries](#libraries)
   - [Pseudo-books](#pseudo-books)
 - [Courses](#courses)
 - [Guides](#guides)
@@ -341,6 +342,10 @@
   - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
 
 ## Literature
+
+- ### Libraries
+
+  - [Silling](https://silling.org/ksionzki/)
 
 - ### Pseudo-books
 
