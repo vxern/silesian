@@ -83,9 +83,9 @@
   - 💵 - Paid resource
   - 🧩 - Physical item
   - 🗄️ - Archived
-- Requests
-  - `missing` - A given piece of information is missing. (Please help out in locating it)
-  - `unknown` - A given piece of information is unknown. (Please help out in finding it out)
+- Help
+  - `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <u>please help in finding information on it.</u>
+  - `unknown` - A given piece of information is unknown, <u>please help in finding information on it.</u>
 
 </details>
 
@@ -194,8 +194,8 @@
         - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/) - ISBN: `9788371262395`
         - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/) - ISBN: `9788371262586`
         - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/) - ISBN: `9788371262791`
-        - `missing` Volume 13 (Hyro-Juzyneczki) - ISBN: `9788371262876`
-        - `missing` Volume 14 (K-Klacz) - ISBN: `9788371263101`
+        - ❔ Volume 13 (Hyro-Juzyneczki) - ISBN: `9788371262876`
+        - ❔ Volume 14 (K-Klacz) - ISBN: `9788371263101`
         - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/) - ISBN: `9788371263217`
         - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/) - ISBN: `9788371263347`
         - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/) - ISBN: `9788371263712`
@@ -209,6 +209,7 @@
  
       <!-- Checked by hand. -->
       - `śla/E` [Słownik śląsko-polski (750+ entries) @ geudka.eu](https://geudka.eu/slownik/)
+      - 🧩 `pol` Słownictwo Dzierżysławic w powiecie Prudnickim @ `missing`
 
     - ##### Cieszyn
 
