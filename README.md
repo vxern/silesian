@@ -40,11 +40,12 @@
 - [Courses](#courses)
 - [Guides](#guides)
 - [Personal websites](#personal-websites)
-- [Diaspora](#diaspora)
-  - [United States](#united-states)
 - [Immersion](#immersion)
   - [Tourist guides](#tourist-guides)
   - [Food](#food)
+- [Diaspora](#diaspora)
+  - [United States](#united-states)
+- [History](#history)
 
 </details>
 
@@ -162,8 +163,6 @@
     - `pol` [Słownik wyrazów gwarowych (~275 entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851) by Adolf Dygacz
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie (8,000+ entries) @ silling.org](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original @ sbc.org.pl](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)) by Michał Przywara
-    <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach (`unknown` entries) @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110)
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Wörterbuch der Oberschlesischen Sprache (`unknown` entries) @ dr-lazik.de](http://www.dr-lazik.de/) by Wolfgang Theodor Lazik
     <!-- Checked by hand. -->
@@ -386,3 +385,9 @@
 - ### Food
 
   - [Kuchnia Śląska](https://www.kuchnia-slaska.pl/)
+
+## History
+
+- ### Mentions
+
+  - `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110) by Jerzy Samuel Bandtkie
