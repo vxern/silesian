@@ -165,6 +165,8 @@
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
     <!-- ❌ Not checked the number of entries. -->
+    - `missing` `pol` `Atlas językowy Śląska`, author: `Alfred Zaręba`, entries: `unknown`
+    <!-- ❌ Not checked the number of entries. -->
     - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `unknown`
     <!-- Checked by hand. -->
     - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
@@ -209,7 +211,8 @@
  
       <!-- Checked by hand. -->
       - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
-      - 🧩 `missing` `pol` Słownictwo Dzierżysławic w powiecie Prudnickim, author: `Feliks Pluta`, 
+      <!-- ❌ Not checked the number of entries. -->
+      - 🧩 `missing` `pol` `Słownictwo Dzierżysławic w powiecie Prudnickim`, author: `Feliks Pluta`, entries: `unknown`
 
     - ##### Cieszyn
 
@@ -217,6 +220,7 @@
       - `pol` [Slovník po naszi(y)mu](http://www.blaf.cz/index.php?body=slovnik), author: `unknown`, entries: `5,000`
       <!-- ❌ Not checked the number of entries. -->
       - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `unknown`
+      - `missing` `pol` `Słownik dialektyczny Księstwa Cieszyńskiego`, author: `Andrzej Cinciała`, entries: `unknown`
       <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
       - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `unknown`
       <!-- Checked by hand, not an exact number by any means. -->
