@@ -345,7 +345,8 @@
 
 - ### Libraries
 
-  - [Silling](https://silling.org/ksionzki/)
+  - `śla/F` [Silling](https://silling.org/ksionzki/)
+  - 🧩 [Silesia Progress](https://www.silesiaprogress.com/)
 
 - ### Pseudo-books
 
