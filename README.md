@@ -33,6 +33,8 @@
   - [Portals](#portals)
   - [Radio](#radio)
   - [Games](#games)
+  - [Board games](#board-games)
+  - [Podcasts](#podcasts)
 - [Reading](#reading)
   - [Libraries](#libraries)
   - [Pseudo-books](#pseudo-books)
@@ -365,6 +367,16 @@
 - ### Board games
 
   - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
+
+- ### Podcasts
+
+  - `śla/F` [Uniwersytet śląski](https://open.spotify.com/show/2s9oesEbRIkuTpMvfTdusK)
+  - `śla/F` [Ślōnski podcast](https://open.spotify.com/show/2q2DGtDXEwFGPAbesWJ2BX)
+  - `śla/F` [Podcast po ślōnsku. O bele czym.](https://open.spotify.com/show/4kwjdx76z1xYwizT2FL5Yc)
+  - `śla/F` [MikoGŏdka](https://open.spotify.com/show/1bzEzdoI4Nb6dy9Te43yC8)
+  - `śla/F` [SilNN Podcast](https://open.spotify.com/show/5YsBifuETLApQlqtYt65XK?si=9fb830cc60b94054)
+  - `pol` [Po naszymu, czyli po śląsku](https://open.spotify.com/show/7v1iXB1MGAEukQDEV8c9Po)
+  - `pol` [Rączka gotuje... po śląsku!](https://open.spotify.com/show/3akbZUu3LeIUKPdsg48xRD)
 
 ## Reading
 
