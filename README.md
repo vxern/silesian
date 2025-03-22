@@ -210,8 +210,6 @@
       - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
 
       </details>
-  <!-- Mentioned on the page. -->
-  - 🗄️ `pol` [Słownik Jaguliny](https://web.archive.org/web/20230206001656/https://lingvasos.pl/pl/4919/0/ksiazki-autorskie.html), author: `unknown`, entries: `1,300`
   <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
 
@@ -231,6 +229,11 @@
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
 
+  - #### Borderlands Silesian-Lesser Polish
+ 
+    <!-- Mentioned on the page. -->
+    - 🗄️ `pol` [Słownik Jaguliny](https://web.archive.org/web/20230206001656/https://lingvasos.pl/pl/4919/0/ksiazki-autorskie.html), author: `unknown`, entries: `1,300`
+
   - #### Cieszyn
 
     <!-- Stated on the page. -->
@@ -241,7 +244,7 @@
     - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
     <!-- Checked by hand, not an exact number by any means. -->
     - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
-   
+
   - #### Lower Silesia
  
     <!-- ❌ Not checked the number of entries. -->
