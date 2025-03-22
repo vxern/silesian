@@ -86,8 +86,9 @@
   - 🧩 - Physical item
   - 🗄️ - Archived
 - Help
-  - `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <u>please help in finding information on it.</u>
-  - `unknown` - A given piece of information is unknown, <u>please help in finding information on it.</u>
+  - `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <u>please help in finding information on it</u>.
+  - `unknown` - A given piece of information is unknown, <u>please help in finding information on it</u>.
+  - `uncounted` - The number of entries has not been counted, <u>please help in counting it</u>.
 
 </details>
 
@@ -151,7 +152,7 @@
     <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
     - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
     <!-- ❌ Not checked the number of entries. -->
-    - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `unknown`, entries: `unknown`
+    - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `unknown`, entries: `uncounted`
     <!-- The book lets you know. -->
     - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
@@ -169,11 +170,11 @@
     <!-- Imported into GoldenDict and checked the number of articles. -->
     - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
     <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `unknown`
+    - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
     <!-- Checked by hand. -->
     - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
     <!-- ❌ Not checked the number of entries. -->
-    - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `unknown`
+    - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
     <!-- Checked by hand. -->
     - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
     <!-- Checked the number of lines from start to end. -->
@@ -213,29 +214,33 @@
  
       <!-- Checked by hand. -->
       - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
+ 
+    - ##### Opole
+   
+      - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
      
     - ##### Gliwice
    
       <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `unknown`
+      - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
 
     - ##### Cieszyn
 
       <!-- Stated on the page. -->
       - `pol` [Slovník po naszi(y)mu](http://www.blaf.cz/index.php?body=slovnik), author: `unknown`, entries: `5,000`
       <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `unknown`
+      - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `uncounted`
       <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
-      - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `unknown`
+      - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
       <!-- Checked by hand, not an exact number by any means. -->
       - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
       <!-- ❌ Not checked the number of entries. -->
-      - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia), author: `Zbigniew Greń`, entries: `unknown`
+      - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia), author: `Zbigniew Greń`, entries: `uncounted`
      
     - ##### Lower Silesia
    
       <!-- ❌ Not checked the number of entries. -->
-      - ✍️ `pol` [Zbiór wyrazów szląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579), author: `Baltazar Działas`, entries: `unknown`
+      - ✍️ `pol` [Zbiór wyrazów szląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579), author: `Baltazar Działas`, entries: `uncounted`
 
   - #### Related
 
@@ -264,7 +269,7 @@
     - ##### Polish dialects
    
       <!-- ❌ Not checked the number of entries. -->
-      - [Słownik gwar polskich](https://zbc.uz.zgora.pl/dlibra/publication/9017), author: `Jan Karłowicz`, entries: `unknown`
+      - [Słownik gwar polskich](https://zbc.uz.zgora.pl/dlibra/publication/9017), author: `Jan Karłowicz`, entries: `uncounted`
         - <details>
 
           <summary>Volumes</summary>
@@ -278,12 +283,12 @@
 
           </details>
       <!-- ❌ Not checked the number of entries. -->
-      - [O niektórych wyrazach ludowych polskich](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf), author: `Lucyjan Malinowski`, entries: `unknown`
+      - [O niektórych wyrazach ludowych polskich](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf), author: `Lucyjan Malinowski`, entries: `uncounted`
      
     - ##### Moravian
  
       <!-- ❌ Not checked the number of entries. -->
-      - [Dialektický slovník moravský](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7), author: `František Bartoš`, entries: `unknown`
+      - [Dialektický slovník moravský](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7), author: `František Bartoš`, entries: `uncounted`
 
 ## Popular culture
 
@@ -406,6 +411,6 @@
 
 ## Unsorted
 
-- `missing` `pol` <u>Atlas językowy Śląska</u>, author: `Alfred Zaręba`, entries: `unknown`
-- `missing` `pol` <u>Słownictwo Dzierżysławic w powiecie Prudnickim</u>, author: `Feliks Pluta`, entries: `unknown`
-- `missing` `pol` <u>Słownik dialektyczny Księstwa Cieszyńskiego</u>, author: `Andrzej Cinciała`, entries: `unknown`
+- `missing` `pol` <u>Atlas językowy Śląska</u>, author: `Alfred Zaręba`, entries: `uncounted`
+- `missing` `pol` <u>Słownictwo Dzierżysławic w powiecie Prudnickim</u>, author: `Feliks Pluta`, entries: `uncounted`
+- `missing` `pol` <u>Słownik dialektyczny Księstwa Cieszyńskiego</u>, author: `Andrzej Cinciała`, entries: `uncounted`
