@@ -16,14 +16,13 @@
   - [Briefing](#briefing)
   - [About the language](#about-the-language)
   - [Videos](#videos)
-- [Tools](#tools)
-  - [Dictionaries](#dictionaries)
-    - [Collective](#collective)
-    - [Dialectal](#dialectal)
-    - [Related](#related)
-      - [Old Polish](#old-polish)
-      - [Polish](#polish)
-      - [Moravian](#moravian)
+- [Dictionaries](#dictionaries)
+  - [Collective](#collective)
+  - [Dialectal](#dialectal)
+  - [Related](#related)
+    - [Old Polish](#old-polish)
+    - [Polish](#polish)
+    - [Moravian](#moravian)
 - [Popular culture](#popular-culture)
   - [YouTube](#youtube)
     - [Channels](#channels)
@@ -34,9 +33,10 @@
   - [Portals](#portals)
   - [Radio](#radio)
   - [Games](#games)
-- [Literature](#literature)
+- [Reading](#reading)
   - [Libraries](#libraries)
   - [Pseudo-books](#pseudo-books)
+  - [Publications](#publications)
 - [Courses](#courses)
 - [Guides](#guides)
 - [Personal websites](#personal-websites)
@@ -139,157 +139,153 @@
 
 </details>
 
-## Tools
+## Dictionaries
 
-- ### Dictionaries
+- ### Collective
 
-  - #### Collective
+  <!-- Instructions on how to get the number of entries: -->
+  <!-- The front page lets you know. -->
+  - `śla/F` [SileSłownik](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna), author: `Grzegorz Kulik`, entries: `>25,300`
+  <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
+  - `śla/F` [Wiktionary](https://wiktionary.org), author: `various`, entries: `>2,150`
+  <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
+  - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
+  <!-- ❌ Not checked the number of entries. -->
+  - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `unknown`, entries: `uncounted`
+  <!-- The book lets you know. -->
+  - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
+  <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
+  - `kos` [Dykcjōnôrz polsko-ślonskiy](https://sbc.org.pl/dlibra/publication/648390), author: `Eugeniusz Kosmała`, entries: `>54,500`
+  <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
+  - `pol` [Słowniczek wyrazów śląskich](https://bonclok.pl/slowniczek-wyrazow-slaskich.html), author: `Ania Lerch-Wójcik`, entries: `>1,750`
+  <!-- Checked by hand. -->
+  - `pol` [Słownik śląski](https://www.slownikslaski.pl/), author: `unknown`, entries: `>2,500`
+  <!-- Checked by hand. -->
+  - `pol` [Słownik](https://www.antryj.pl/category/slownik/), author: `unknown`, entries: `>800`
+  <!-- Checked by hand. -->
+  - `pol` [Słownik gwarowy](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420), author: `Adolf Dygacz`, entries: `~85`
+  <!-- Checked by hand. -->
+  - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), `Adolf Dygacz`, entries: `~275`
+  <!-- Imported into GoldenDict and checked the number of articles. -->
+  - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
+  <!-- Checked by hand. -->
+  - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
+  <!-- Checked by hand. -->
+  - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
+  <!-- Checked the number of lines from start to end. -->
+  - ⚙️ `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
+  <!-- Found in descriptions of the product. -->
+  - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
+  <!-- Found in descriptions of the product. -->
+  - 🧩 `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich/), author: `various`, entries: `>1,000,000`, ISBN: `unknown`
+    - <details>
 
-    <!-- Instructions on how to get the number of entries: -->
-    <!-- The front page lets you know. -->
-    - `śla/F` [SileSłownik](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna), author: `Grzegorz Kulik`, entries: `>25,300`
-    <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
-    - `śla/F` [Wiktionary](https://wiktionary.org), author: `various`, entries: `>2,150`
-    <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
-    - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
+      <summary>Volumes</summary>
+
+      - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/), ISBN: `9788371264474`
+      - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/), ISBN: `8371261500`
+      - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/), ISBN: `8371261640`
+      - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/), ISBN: `8371261896`
+      - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/), ISBN: `8371261918`
+      - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/), ISBN: `8371262043`
+      - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/), ISBN: `8371262051`
+      - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/), ISBN: `8371262140`
+      - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/), ISBN: `9788371262296`
+      - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/), ISBN: `9788371262395`
+      - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/), ISBN: `9788371262586`
+      - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/), ISBN: `9788371262791`
+      - `missing` Volume 13 (Hyro-Juzyneczki), ISBN: `9788371262876`
+      - `missing` Volume 14 (K-Klacz), ISBN: `9788371263101`
+      - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/), ISBN: `9788371263217`
+      - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/), ISBN: `9788371263347`
+      - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/), ISBN: `9788371263712`
+      - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
+
+      </details>
+
+- ### Dialectal
+
+  - #### Prudnik
+
+    <!-- Checked by hand. -->
+    - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
+
+  - #### Opole
+ 
+    - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
+   
+  - #### Gliwice
+ 
     <!-- ❌ Not checked the number of entries. -->
-    - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `unknown`, entries: `uncounted`
-    <!-- The book lets you know. -->
-    - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
-    <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
-    - `kos` [Dykcjōnôrz polsko-ślonskiy](https://sbc.org.pl/dlibra/publication/648390), author: `Eugeniusz Kosmała`, entries: `>54,500`
-    <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
-    - `pol` [Słowniczek wyrazów śląskich](https://bonclok.pl/slowniczek-wyrazow-slaskich.html), author: `Ania Lerch-Wójcik`, entries: `>1,750`
-    <!-- Checked by hand. -->
-    - `pol` [Słownik śląski](https://www.slownikslaski.pl/), author: `unknown`, entries: `>2,500`
-    <!-- Checked by hand. -->
-    - `pol` [Słownik](https://www.antryj.pl/category/slownik/), author: `unknown`, entries: `>800`
-    <!-- Checked by hand. -->
-    - `pol` [Słownik gwarowy](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420), author: `Adolf Dygacz`, entries: `~85`
-    <!-- Checked by hand. -->
-    - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), `Adolf Dygacz`, entries: `~275`
-    <!-- Imported into GoldenDict and checked the number of articles. -->
-    - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
+    - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
+
+  - #### Cieszyn
+
+    <!-- Stated on the page. -->
+    - `pol` [Slovník po naszi(y)mu](http://www.blaf.cz/index.php?body=slovnik), author: `unknown`, entries: `5,000`
     <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
-    <!-- Checked by hand. -->
-    - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
+    - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
+    - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
+    <!-- Checked by hand, not an exact number by any means. -->
+    - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
+   
+  - #### Lower Silesia
+ 
     <!-- ❌ Not checked the number of entries. -->
-    - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
-    <!-- Checked by hand. -->
-    - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
-    <!-- Checked the number of lines from start to end. -->
-    - ⚙️ `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
-    <!-- Found in descriptions of the product. -->
-    - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
-    <!-- Found in descriptions of the product. -->
-    - 🧩 `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich/), author: `various`, entries: `>1,000,000`, ISBN: `unknown`
+    - ✍️ `pol` [Zbiór wyrazów szląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579), author: `Baltazar Działas`, entries: `uncounted`
+
+- ### Related
+
+  - #### Old Polish  
+
+    <!-- Found at: https://www.jezyk-polski.pl/index.php/jp/article/view/556 -->
+    - [Słownik staropolski IJP PAN](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original](https://pjs.ijp.pan.pl/sstp.html)), author: `unknown`, entries: `>54,000`
       - <details>
 
         <summary>Volumes</summary>
 
-        - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/), ISBN: `9788371264474`
-        - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/), ISBN: `8371261500`
-        - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/), ISBN: `8371261640`
-        - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/), ISBN: `8371261896`
-        - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/), ISBN: `8371261918`
-        - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/), ISBN: `8371262043`
-        - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/), ISBN: `8371262051`
-        - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/), ISBN: `8371262140`
-        - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/), ISBN: `9788371262296`
-        - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/), ISBN: `9788371262395`
-        - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/), ISBN: `9788371262586`
-        - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/), ISBN: `9788371262791`
-        - `missing` Volume 13 (Hyro-Juzyneczki), ISBN: `9788371262876`
-        - `missing` Volume 14 (K-Klacz), ISBN: `9788371263101`
-        - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/), ISBN: `9788371263217`
-        - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/), ISBN: `9788371263347`
-        - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/), ISBN: `9788371263712`
-        - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
+        - [Volume 1 (A-Ćwirtnia)](https://pjs.ijp.pan.pl/Sstp/t1.pdf), ISBN: `missing`
+        - [Volume 2 (Da-Hynszta)](https://pjs.ijp.pan.pl/Sstp/t2.pdf), ISBN: `missing`
+        - [Volume 3 (I-Kwitować)](https://pjs.ijp.pan.pl/Sstp/t3.pdf), ISBN: `missing`
+        - [Volume 4 (La-Mżyć)](https://pjs.ijp.pan.pl/Sstp/t4.pdf), ISBN: `missing`
+        - [Volume 5 (Na-Ówdzie)](https://pjs.ijp.pan.pl/Sstp/t5.pdf), ISBN: `missing`
+        - [Volume 6 (Pacha-Pożżenie)](https://pjs.ijp.pan.pl/Sstp/t6.pdf), ISBN: `missing`
+        - [Volume 7 (Póć-Rozproszyć)](https://pjs.ijp.pan.pl/Sstp/t7.pdf), ISBN: `missing`
+        - [Volume 8 (Rozpróchnieć-Szyszki)](https://pjs.ijp.pan.pl/Sstp/t8.pdf), ISBN: `missing`
+        - [Volume 9 (Ściadły-Używowanie)](https://pjs.ijp.pan.pl/Sstp/t9.pdf), ISBN: `missing`
+        - [Volume 10 (W-Wżgim)](https://pjs.ijp.pan.pl/Sstp/t10.pdf), ISBN: `missing`
+        - [Volume 11 (Z-Żżenie)](https://pjs.ijp.pan.pl/Sstp/t11.pdf), ISBN: `missing`
 
         </details>
 
-  - #### Dialectal
-
-    - ##### Prudnik
+  - #### Polish dialects
  
-      <!-- Checked by hand. -->
-      - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
- 
-    - ##### Opole
+    <!-- ❌ Not checked the number of entries. -->
+    - [Słownik gwar polskich](https://zbc.uz.zgora.pl/dlibra/publication/9017), author: `Jan Karłowicz`, entries: `uncounted`
+      - <details>
+
+        <summary>Volumes</summary>
+
+        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866), ISBN: `missing`
+        - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867), ISBN: `missing`
+        - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868), ISBN: `missing`
+        - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886), ISBN: `missing`
+        - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887), ISBN: `missing`
+        - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888), ISBN: `missing`
+
+        </details>
+    <!-- ❌ Not checked the number of entries. -->
+    - [O niektórych wyrazach ludowych polskich](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf), author: `Lucyjan Malinowski`, entries: `uncounted`
    
-      - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
-     
-    - ##### Gliwice
-   
-      <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
+  - #### Moravian
 
-    - ##### Cieszyn
-
-      <!-- Stated on the page. -->
-      - `pol` [Slovník po naszi(y)mu](http://www.blaf.cz/index.php?body=slovnik), author: `unknown`, entries: `5,000`
-      <!-- ❌ Not checked the number of entries. -->
-      - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `uncounted`
-      <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
-      - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
-      <!-- Checked by hand, not an exact number by any means. -->
-      - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
-      <!-- ❌ Not checked the number of entries. -->
-      - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia), author: `Zbigniew Greń`, entries: `uncounted`
-     
-    - ##### Lower Silesia
-   
-      <!-- ❌ Not checked the number of entries. -->
-      - ✍️ `pol` [Zbiór wyrazów szląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579), author: `Baltazar Działas`, entries: `uncounted`
-
-  - #### Related
-
-    - ##### Old Polish  
-
-      <!-- Found at: https://www.jezyk-polski.pl/index.php/jp/article/view/556 -->
-      - [Słownik staropolski IJP PAN](https://spjs.ijp.pan.pl/ukladSlownik/index) ([Original](https://pjs.ijp.pan.pl/sstp.html)), author: `unknown`, entries: `>54,000`
-        - <details>
-
-          <summary>Volumes</summary>
-
-          - [Volume 1 (A-Ćwirtnia)](https://pjs.ijp.pan.pl/Sstp/t1.pdf), ISBN: `missing`
-          - [Volume 2 (Da-Hynszta)](https://pjs.ijp.pan.pl/Sstp/t2.pdf), ISBN: `missing`
-          - [Volume 3 (I-Kwitować)](https://pjs.ijp.pan.pl/Sstp/t3.pdf), ISBN: `missing`
-          - [Volume 4 (La-Mżyć)](https://pjs.ijp.pan.pl/Sstp/t4.pdf), ISBN: `missing`
-          - [Volume 5 (Na-Ówdzie)](https://pjs.ijp.pan.pl/Sstp/t5.pdf), ISBN: `missing`
-          - [Volume 6 (Pacha-Pożżenie)](https://pjs.ijp.pan.pl/Sstp/t6.pdf), ISBN: `missing`
-          - [Volume 7 (Póć-Rozproszyć)](https://pjs.ijp.pan.pl/Sstp/t7.pdf), ISBN: `missing`
-          - [Volume 8 (Rozpróchnieć-Szyszki)](https://pjs.ijp.pan.pl/Sstp/t8.pdf), ISBN: `missing`
-          - [Volume 9 (Ściadły-Używowanie)](https://pjs.ijp.pan.pl/Sstp/t9.pdf), ISBN: `missing`
-          - [Volume 10 (W-Wżgim)](https://pjs.ijp.pan.pl/Sstp/t10.pdf), ISBN: `missing`
-          - [Volume 11 (Z-Żżenie)](https://pjs.ijp.pan.pl/Sstp/t11.pdf), ISBN: `missing`
-
-          </details>
-
-    - ##### Polish dialects
-   
-      <!-- ❌ Not checked the number of entries. -->
-      - [Słownik gwar polskich](https://zbc.uz.zgora.pl/dlibra/publication/9017), author: `Jan Karłowicz`, entries: `uncounted`
-        - <details>
-
-          <summary>Volumes</summary>
-
-          - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866), ISBN: `missing`
-          - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867), ISBN: `missing`
-          - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868), ISBN: `missing`
-          - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886), ISBN: `missing`
-          - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887), ISBN: `missing`
-          - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888), ISBN: `missing`
-
-          </details>
-      <!-- ❌ Not checked the number of entries. -->
-      - [O niektórych wyrazach ludowych polskich](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf), author: `Lucyjan Malinowski`, entries: `uncounted`
-     
-    - ##### Moravian
- 
-      <!-- ❌ Not checked the number of entries. -->
-      - [Dialektický slovník moravský](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7), author: `František Bartoš`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - [Dialektický slovník moravský](https://kramerius.lib.cas.cz/view/uuid:6dc77a44-b675-4767-a183-d2e0a66b05b7), author: `František Bartoš`, entries: `uncounted`
 
 ## Popular culture
 
@@ -363,7 +359,7 @@
 
   - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
 
-## Literature
+## Reading
 
 - ### Libraries
 
@@ -374,6 +370,11 @@
 
   - 🟢 `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń @ instytutkorfantego.pl](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
   - `pol` [Po naszymu, czyli o polszczyźnie małych ojczyzn](https://ore.edu.pl/wp-content/uploads/2025/02/po-naszymu-czyli-o-polszczyznie-malych-ojczyzn.-wybor-tekstow-do-edukacji-regionalnej.-teksty-slaskie-1.pdf)
+ 
+- ### Publications
+
+  - `pol` [Gwara w górnośląskiej przestrzeni miejskiej](https://journals.akademicka.pl/lv/article/view/279/4015)
+  - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia), author: `Zbigniew Greń`, entries: `uncounted`
 
 ## Courses
 
