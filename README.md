@@ -295,7 +295,7 @@
 
     - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
     - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
-    - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
+    - `pol` [Gryfnie](https://www.youtube.com/@gryfnie)
     - `pol` [GazetaCodzienna_PL](https://www.youtube.com/@gazetacodzienna_pl4894)
  
   - #### Videos
@@ -386,7 +386,11 @@
 
 ## Guides
 
-- `pol` [antryj.pl](https://www.antryj.pl/)
+- `pol` [Antryj.pl](https://www.antryj.pl/)
+
+- ### Writing
+
+  - `śla/F` [Zasady pisowni języka śląskiego](https://radaslonskigojynzyka.org/zasady-pisowni-jezyka-slaskiego/)
 
 ## Personal websites
 
