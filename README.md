@@ -47,7 +47,7 @@
   - [United States](#united-states)
 - [History](#history)
   - [Mentions](#mentions)
-- [Help Needed](#help-needed)
+- [Unsorted](#unsorted)
 
 </details>
 
@@ -210,6 +210,11 @@
  
       <!-- Checked by hand. -->
       - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
+     
+    - ##### Gliwice
+   
+      <!-- ❌ Not checked the number of entries. -->
+      - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `unknown`
 
     - ##### Cieszyn
 
@@ -313,6 +318,8 @@
 - ### Portals
 
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
+  - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
+  - 🗄️ `ste` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
 
 - ### Radio
 
@@ -394,7 +401,7 @@
 
   - `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110) by Jerzy Samuel Bandtkie
 
-## Help Needed
+## Unsorted
 
 - `missing` `pol` <u>Atlas językowy Śląska</u>, author: `Alfred Zaręba`, entries: `unknown`
 - `missing` `pol` <u>Słownictwo Dzierżysławic w powiecie Prudnickim</u>, author: `Feliks Pluta`, entries: `unknown`
