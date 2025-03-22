@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-###### Links in the repository are checked to be working every day at midnight.
+###### Links in the repository are verified weekly.
 
 <details>
 
