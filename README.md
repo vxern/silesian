@@ -212,6 +212,8 @@
       </details>
   <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🗄️ `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
 
 - ### Dialectal
 
