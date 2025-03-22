@@ -322,6 +322,7 @@
 - ### Magazines
 
   - `pol` [Tramwaj Cieszyński](https://tramwajcieszynski.pl/?s=Lato%C5%9B)
+  - `pol` [Gazeta Codzienna](https://gazetacodzienna.pl/search/node/tydziy%C5%84)
   - `pol` 🗄️ [Nowa Gazeta Śląska](https://web.archive.org/web/20130501110218/http://nowagazetaslaska.eu/)
  
 - ### Portals
