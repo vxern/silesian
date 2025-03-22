@@ -347,6 +347,8 @@
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
   - 🗄️ `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
   - 🗄️ `spa` [Gůrny Ślůnsk](https://web.archive.org/web/20080424082304fw_/http://www.gornyslonsk.republika.pl/slgaus.html)
+  - 🗄️ `spa` [Pů Našymu](https://web.archive.org/web/20090127035536/http://punasymu.com/_indexs.php)
+  - 🗄️ `adh` [Po Našymu](https://web.archive.org/web/20081206014702/http://sweb.cz/ls78/ponaszymu.htm)
 
 - ### Radio
 
