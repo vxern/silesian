@@ -229,11 +229,6 @@
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
 
-  - #### Borderlands Silesian-Lesser Polish
- 
-    <!-- Mentioned on the page. -->
-    - 🗄️ `pol` [Słownik Jaguliny](https://web.archive.org/web/20230206001656/https://lingvasos.pl/pl/4919/0/ksiazki-autorskie.html), author: `unknown`, entries: `1,300`
-
   - #### Cieszyn
 
     <!-- Stated on the page. -->
@@ -292,6 +287,8 @@
         </details>
     <!-- ❌ Not checked the number of entries. -->
     - [O niektórych wyrazach ludowych polskich](https://sbc.org.pl/Content/608888/PDF/ii18929-0000-00-0001.pdf), author: `Lucyjan Malinowski`, entries: `uncounted`
+    <!-- Mentioned on the page. -->
+    - 🗄️ `pol` [Słownik Jaguliny](https://web.archive.org/web/20230206001656/https://lingvasos.pl/pl/4919/0/ksiazki-autorskie.html), author: `unknown`, entries: `1,300`
    
   - #### Moravian
 
