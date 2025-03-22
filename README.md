@@ -313,11 +313,12 @@
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
   - 🟢 `śla` [Chop w kuchni](https://chopwkuchni.pl/)
+  - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
   - `pol` [Andrzej Cichoń](https://andrzej-aci.blogspot.com/search/label/po%20%C5%9Blonsku)
   - `pol` [Gwaromania](https://gwaromania.blogspot.com/)
-  - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
+  - `pol` [Slonskogodka](https://web.archive.org/web/20160309042314/http://slonskogodka.com/)
   - 🗄️ `pol` [Ajnfart.blog.onet.pl](https://web.archive.org/web/20160821105339/http://ajnfart.blog.onet.pl/)
  
 - ### News
