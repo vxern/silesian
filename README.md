@@ -206,6 +206,7 @@
       - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
 
       </details>
+  - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm)
 
 - ### Dialectal
 
@@ -331,7 +332,7 @@
 
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
-  - 🗄️ `ste` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
+  - 🗄️ `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
 
 - ### Radio
 
