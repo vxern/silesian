@@ -236,7 +236,7 @@
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia](https://bibliotekanauki.pl/articles/3150548.pdf), author: `Irena Bogocz`, entries: `uncounted`
     <!-- Stated on the front page. -->
-    - `pol` [Słownik gwarowy czechowicki](https://nowrotek.hoste.pl/files/slownikstela.pdf), author: `unknown`, entries: `>3,000`
+    - `pol` [Słownik gwarowy czechowicki](https://nowrotek.hoste.pl/files/slownikstela.pdf), author: `Zdzisław Nowrotek et al.`, entries: `>3,000`
     <!-- ❌ Not checked the number of entries: The format makes it difficult to check easily, one would have to manually go through it all. -->
     - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
     <!-- Checked by hand, not an exact number by any means. -->
