@@ -46,7 +46,8 @@
 - [Diaspora](#diaspora)
   - [United States](#united-states)
 - [History](#history)
-  - [Mentions](#mentions)
+  - [Language](#language)
+  - [Region](#region)
 - [Unsorted](#unsorted)
 
 </details>
@@ -405,9 +406,13 @@
 
 ## History
 
-- ### Mentions
+- ### Language
 
   - `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110) by Jerzy Samuel Bandtkie
+ 
+- ### Region
+
+  - `pol` [Szymiszów & Strzelce Opolskie](http://moreantiqua.com/)
 
 ## Unsorted
 
