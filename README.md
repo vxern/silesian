@@ -325,8 +325,9 @@
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
-  - `pol` [Dej pozór](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
+  - `pol` [Katowice.tvp.pl](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
+  - 🗄️ `śla` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
  
 - ### Magazines
 
