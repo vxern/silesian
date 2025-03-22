@@ -63,8 +63,9 @@
     - `śla/S` - Simplified
     - `śla/E` - Extended by custom characters or rules
   - `ste` - Steuer
+    - `spa` - Silesian Phonetic Alphabet
+    - `wen` - Wencel
   - `kos` - Kosmała
-  - `wen` - Wencel
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
   - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <u>not</u> use for learning to write
@@ -149,6 +150,8 @@
     - `śla/F` [Wiktionary](https://wiktionary.org), author: `various`, entries: `>2,150`
     <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
     - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
+    <!-- ❌ Not checked the number of entries. -->
+    - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `unknown`, entries: `unknown`
     <!-- The book lets you know. -->
     - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
     <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
