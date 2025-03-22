@@ -168,9 +168,11 @@
   <!-- Checked by hand. -->
   - `pol` [Słownik gwarowy](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420), author: `Adolf Dygacz`, entries: `~85`
   <!-- Checked by hand. -->
-  - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), `Adolf Dygacz`, entries: `~275`
+  - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), author: `Adolf Dygacz`, entries: `~275`
   <!-- Imported into GoldenDict and checked the number of articles. -->
   - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
+  <!-- Mentioned on the page. -->
+  - `pol` [Słownik Jaguliny](https://web.archive.org/web/20230206001656/https://lingvasos.pl/pl/4919/0/ksiazki-autorskie.html), author: `unknown`, entries: `1,300`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
   <!-- Checked by hand. -->
