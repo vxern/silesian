@@ -296,6 +296,7 @@
     - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
     - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
     - `pol` [gryfnie](https://www.youtube.com/@gryfnie)
+    - `pol` [GazetaCodzienna_PL](https://www.youtube.com/@gazetacodzienna_pl4894)
  
   - #### Videos
   
@@ -309,12 +310,14 @@
   - 🟢 `śla` [Chop w kuchni](https://chopwkuchni.pl/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
+  - `pol` [Andrzej Cichoń](https://andrzej-aci.blogspot.com/search/label/po%20%C5%9Blonsku)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
+  - `pol` [Dej pozór](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
  
 - ### Magazines
