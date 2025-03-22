@@ -380,8 +380,9 @@
  
 - ### Publications
 
+  - `pol` [Głoski śląskie](https://slaskiportal.us.edu.pl/wp-content/uploads/2025/03/Gloski-slaskie-Jolanta-Tambor-Marcin-Maciolek.pdf)
   - `pol` [Gwara w górnośląskiej przestrzeni miejskiej](https://journals.akademicka.pl/lv/article/view/279/4015)
-  - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia), author: `Zbigniew Greń`, entries: `uncounted`
+  - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia)
 
 ## Courses
 
