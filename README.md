@@ -311,6 +311,7 @@
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
   - `pol` [Andrzej Cichoń](https://andrzej-aci.blogspot.com/search/label/po%20%C5%9Blonsku)
+  - `pol` [Gwaromania](https://gwaromania.blogspot.com/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
@@ -394,6 +395,7 @@
 - `ste` [Karol Gwóźdź](https://karolgwozdz.com/bio.php)
 - `pol` [Glywicke S'loonzoki](http://schlesien.nwgw.de/)
 - `pol` [Adalbertus](http://www.adalbertus.katowice.opoka.org.pl/slonsk.html)
+- `pol` [Stanisław Neblik - Fojerman](http://www.fojerman.pl/)
 
 ## Diaspora
 
