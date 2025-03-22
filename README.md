@@ -80,6 +80,7 @@
   - 🌿 - Botany (Plants)
   - 🍄 - Mycology (Mushrooms)
   - 🐴 - Zoology (Animals)
+  - 🧪 - Chemistry (Matter)
   - ✝️ - Theology (Religion, belief, etc)
   - ⚙️ - Technical (broadly)
 - Availability
@@ -178,6 +179,7 @@
   - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
   <!-- Checked the number of lines from start to end. -->
   - ⚙️ `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
+  - 🧪 `śla/F`, `ste` [Ukłŏd ôkresowy elymyntōw](https://canov.jergym.cz/vyhledav/varian33/slez/slp.htm), author: `unknown`, entries: `N/A`
   <!-- Found in descriptions of the product. -->
   - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
   <!-- Found in descriptions of the product. -->
