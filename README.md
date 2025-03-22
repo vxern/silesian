@@ -312,6 +312,7 @@
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
   - 🟢 `śla` [Chop w kuchni](https://chopwkuchni.pl/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
+  - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
  
 - ### News
