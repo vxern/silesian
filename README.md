@@ -317,6 +317,7 @@
 - ### News
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
+  - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
  
 - ### Magazines
