@@ -231,7 +231,7 @@
   - 🧩 `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Z badań nad przeszłością dialektu śląskiego. 2, Zbiór polskich słów i wyrażeń na górnośląski język przetłumaczonych 1821](https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887), authors: `Józef Mayer`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->˛
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
