@@ -211,7 +211,7 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `missing` `pol` <ins>Zbornik polsko-ślůnski</ins>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
+  - 🧩 `missing` `pol` <ins>Zbornik polsko-ślůnski</ins>, author: `Andrzej Roczniok`, entries: `uncounted`
     - <details>
 
       <summary>Volumes</summary>
@@ -222,12 +222,18 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Mały słownik gwary Górnego Śląska](https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155), authors: `Bożena Cząstka-Szymon`, `Jerzy Ludwig`, `Helena Synowiec`, entries: `uncounted`, ISBN: `9788391377703`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Z badań nad przeszłością dialektu śląskiego. 2, Zbiór polskich słów i wyrażeń na górnośląski język przetłumaczonych 1821](https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887), authors: `Józef Mayer`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) [Original](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->˛
+  - 
+  <!-- ❌ Not checked the number of entries. -->˛
   - 🧩 `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
@@ -260,6 +266,8 @@
  
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` [Kilka wyrażeń ludowych z Małych Kończyc koło Zebrzydowic na Śląsku](https://silling.org/slownik/Aneks:Koczwara_-_Kilka_wyra%C5%BCe%C5%84_ludowych_z_Ma%C5%82ych_Ko%C5%84czyc_ko%C5%82o_Zebrzydowic_na_%C5%9Al%C4%85sku), author: `Jan Koczwarty`, entries: `uncounted`
 
   - #### Sułkowice
  
@@ -271,7 +279,7 @@
   - #### Borderlands Silesian-Lach
  
     <!-- ❌ Not checked the number of entries. -->
-    - 🧩 `missing` `pol` <ins>Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)</ins>, author: `Jan Bystroń`, entries: `uncounted`
+    - 🧩 `pol` [Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)](https://silling.org/slownik/Aneks:Bystro%C5%84_-_Przyczynek_do_dialektologii_polskiej_(z_narzecza_Lach%C3%B3w_szl%C4%85skich)) (`missing` <ins>Original</ins>), author: `Jan Bystroń`, entries: `uncounted`
 
   - #### Cieszyn
 
@@ -491,9 +499,8 @@
 
 ## Studies
 
-- `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
-<!-- ❌ Not checked the number of entries. -->
-- `ces` 1885, [O mowie polskiéj w dorzeczu Stonawki i Łucyny w Księstwie Cieszyńskim](https://sbc.org.pl/dlibra/publication/13457/edition/12118/o-mowie-polskiej-w-dorzeczu-stonawki-i-lucyny-w-ksiestwie-cieszynskim-bystron-jan), author: `unknown`, entries: `uncounted`
+- `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`
+- `ces` 1885, [O mowie polskiéj w dorzeczu Stonawki i Łucyny w Księstwie Cieszyńskim](https://sbc.org.pl/dlibra/publication/13457/edition/12118/o-mowie-polskiej-w-dorzeczu-stonawki-i-lucyny-w-ksiestwie-cieszynskim-bystron-jan), author: `unknown`
 
 ## History
 
