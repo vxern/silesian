@@ -210,9 +210,20 @@
       - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
 
       </details>
-  <!-- ❌ Not checked the number of entries-->
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` <u>Zbornik polsko-ślůnski</u>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
+    - <details>
+
+      <summary>Volumes</summary>
+
+      - [Volume 1 (A-K)](https://integro.bs.katowice.pl/32102244267/ksiazka/zbornik-polsko-slunski), ISBN: `9788360540572`
+      - [Volume 2 (L-P)](https://integro.bs.katowice.pl/32102244268/ksiazka/zbornik-polsko-slunski), ISBN: `9788360540589`
+      - [Volume 3 (R-Z)](https://integro.bs.katowice.pl/32202530810/ksiazka/zbornik-polsko-slonski), ISBN: `9788360540596`
+
+      </details>
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Mały słownik gwary Górnego Śląska](https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155), authors: `Bożena Cząstka-Szymon`, `Jerzy Ludwig`, `Helena Synowiec`, entries: `uncounted`, ISBN: `9788391377703`
-  <!-- ❌ Not checked the number of entries-->
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Z badań nad przeszłością dialektu śląskiego. 2, Zbiór polskich słów i wyrażeń na górnośląski język przetłumaczonych 1821](https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887), authors: `Józef Mayer`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
