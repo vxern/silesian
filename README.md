@@ -47,9 +47,8 @@
   - [Food](#food)
 - [Diaspora](#diaspora)
   - [United States](#united-states)
+- [Studies](#studies)
 - [History](#history)
-  - [Language](#language)
-  - [Region](#region)
 - [Unsorted](#unsorted)
 
 </details>
@@ -219,7 +218,7 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `unknown`
+  - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
   <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
@@ -240,6 +239,10 @@
  
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
+
+  - #### Borderlands Silesian-Lach
+ 
+    - 🧩 `missing` `pol` <u>Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)</u>, author: `Jan Bystroń`, entries: `uncounted`
 
   - #### Cieszyn
 
@@ -457,15 +460,15 @@
 
   - [Kuchnia Śląska](https://www.kuchnia-slaska.pl/)
 
+## Studies
+
+- `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
+<!-- ❌ Not checked the number of entries. -->
+- `ces` 1885, [O mowie polskiéj w dorzeczu Stonawki i Łucyny w Księstwie Cieszyńskim](https://sbc.org.pl/dlibra/publication/13457/edition/12118/o-mowie-polskiej-w-dorzeczu-stonawki-i-lucyny-w-ksiestwie-cieszynskim-bystron-jan), author: `unknown`, entries: `uncounted`
+
 ## History
 
-- ### Language
-
-  - `pol` 1821, [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach @ sbc.org.pl](https://www.sbc.org.pl/dlibra/publication/edition/64110) by Jerzy Samuel Bandtkie
- 
-- ### Region
-
-  - `pol` [Szymiszów & Strzelce Opolskie](http://moreantiqua.com/)
+- `pol` [Szymiszów & Strzelce Opolskie](http://moreantiqua.com/)
 
 ## Unsorted
 
