@@ -175,7 +175,7 @@
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
   <!-- ❌ Not checked the number of entries. -->
-  - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) [Original](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
+  - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) ([Original](https://www.sbc.org.pl/dlibra/publication/edition/64110)), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
   <!-- Checked by hand. -->
   - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
