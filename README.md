@@ -211,7 +211,7 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` <u>Zbornik polsko-ślůnski</u>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
+  - 🧩 `missing` `pol` <u>Zbornik polsko-ślůnski</u>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
     - <details>
 
       <summary>Volumes</summary>
