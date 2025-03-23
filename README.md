@@ -70,7 +70,7 @@
   - `kos` - Kosmała
   - `pol` - Approximation using Polish orthography
   - `ces` - Approximation using Czech orthography
-  - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <u>not</u> use for learning to write
+  - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <ins>not</ins> use for learning to write
 - Notes about writing
   - ✍️ - Hand-written; might be difficult to read and/or parse
   - Spelling mistakes
@@ -89,9 +89,9 @@
   - 🧩 - Physical item
   - 🗄️ - Archived
 - Help
-  - `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <u>please help in finding information on it</u>.
-  - `unknown` - A given piece of information is unknown, <u>please help in finding information on it</u>.
-  - `uncounted` - The number of entries has not been counted, <u>please help in counting it</u>.
+  - `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <ins>please help in finding information on it</ins>.
+  - `unknown` - A given piece of information is unknown, <ins>please help in finding information on it</ins>.
+  - `uncounted` - The number of entries has not been counted, <ins>please help in counting it</ins>.
 
 </details>
 
@@ -211,7 +211,7 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `missing` `pol` <u>Zbornik polsko-ślůnski</u>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
+  - 🧩 `missing` `pol` <ins>Zbornik polsko-ślůnski</ins>, author: `Andrzyj Roczniŏk`, entries: `uncounted`
     - <details>
 
       <summary>Volumes</summary>
@@ -271,7 +271,7 @@
   - #### Borderlands Silesian-Lach
  
     <!-- ❌ Not checked the number of entries. -->
-    - 🧩 `missing` `pol` <u>Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)</u>, author: `Jan Bystroń`, entries: `uncounted`
+    - 🧩 `missing` `pol` <ins>Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)</ins>, author: `Jan Bystroń`, entries: `uncounted`
 
   - #### Cieszyn
 
