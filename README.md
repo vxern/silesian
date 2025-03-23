@@ -172,6 +172,10 @@
   - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) [Original](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
   <!-- Checked by hand. -->
   - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
@@ -222,15 +226,11 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
-  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Mały słownik gwary Górnego Śląska](https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155), authors: `Bożena Cząstka-Szymon`, `Jerzy Ludwig`, `Helena Synowiec`, entries: `uncounted`, ISBN: `9788391377703`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Z badań nad przeszłością dialektu śląskiego. 2, Zbiór polskich słów i wyrażeń na górnośląski język przetłumaczonych 1821](https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887), authors: `Józef Mayer`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) [Original](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->˛
   - 🧩 `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
