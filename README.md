@@ -176,6 +176,18 @@
   - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) ([Original](https://www.sbc.org.pl/dlibra/publication/edition/64110)), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
+  - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
+    - <details>
+
+      <summary>Releases</summary>
+
+      - [1/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1929) (`missing` <ins>Original</ins>)
+      - [2/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1929) (`missing` <ins>Original</ins>)
+      - [3/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_3/1929) (`missing` <ins>Original</ins>)
+      - [1/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1930) (`missing` <ins>Original</ins>)
+      - [2/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930) (`missing` <ins>Original</ins>)
+
+      </details>
   <!-- Checked by hand. -->
   - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
