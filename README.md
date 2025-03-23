@@ -180,6 +180,7 @@
   - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
   <!-- Checked the number of lines from start to end. -->
   - ⚙️ `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
+  <!-- ❌ Not checked the number of entries. -->
   - 🧪 `śla/F`, `ste` [Ukłŏd ôkresowy elymyntōw](https://canov.jergym.cz/vyhledav/varian33/slez/slp.htm), author: `unknown`, entries: `N/A`
   <!-- Found in descriptions of the product. -->
   - 🧩 `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
@@ -220,6 +221,12 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Słownik gwarowy Śląska](https://integro.bs.katowice.pl/ici/recorddetail?id=33105819214), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Słownik gwarowy Śląska : (zeszyt próbny)](https://integro.bs.katowice.pl/ici/recorddetail?id=33105686496), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Nieznany śląski słownik gwarowy](https://integro.bs.katowice.pl/ici/recorddetail?id=32302787230), author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
@@ -233,15 +240,26 @@
 
   - #### Opole
  
+    <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - 🧩 `pol` [Słownik starych Siołkowic w powiecie opolskim](https://www.opole-wbp.sowa.pl/index.php?KatID=0&typ=record&001=Op2006059002), author: `Alfred Zaręba`, entries: `uncounted`
    
   - #### Gliwice
  
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
 
+  - #### Sułkowice
+ 
+    <!-- ❌ Not checked the number of entries. -->
+    - 🧩 `pol` [Dialekt sulkowski](https://books.google.co.uk/books/about/Dialekt_Sulkowski.html?id=ub_aXQ0f4BAC), author: `Feliks Steuer`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - 🧩 `pol` [Narzecze baborowskie](https://sbc.org.pl/dlibra/publication/447886/edition/420224), author: `Feliks Steuer`, entries: `uncounted`
+
   - #### Borderlands Silesian-Lach
  
+    <!-- ❌ Not checked the number of entries. -->
     - 🧩 `missing` `pol` <u>Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)</u>, author: `Jan Bystroń`, entries: `uncounted`
 
   - #### Cieszyn
