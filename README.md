@@ -232,8 +232,6 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) [Original](https://www.sbc.org.pl/dlibra/publication/edition/64110), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->˛
-  - 
-  <!-- ❌ Not checked the number of entries. -->˛
   - 🧩 `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
