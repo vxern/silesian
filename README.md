@@ -254,6 +254,12 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Nieznany śląski słownik gwarowy](https://integro.bs.katowice.pl/ici/recorddetail?id=32302787230), author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted` 
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - 🗄️ `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
@@ -459,9 +465,10 @@
   - `śla/F` [Silling](https://silling.org/ksionzki/)
   - 🧩 `śla/F` [Silesia Progress](https://www.silesiaprogress.com/)
 
-- ### Pseudo-books
+- ### Stories
 
-  - 🟢 `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń @ instytutkorfantego.pl](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
+  - 🟢 `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
+  - `pol` [Jednoaktówki po śląsku — Bysuch s reichu](https://www.mbpsiemianowice.pl/static/upload/store/Jednoaktowki_po_slasku/2012_-_Jednoaktowki_po_slasku_-_Bysuch_s_Reichu.pdf)
   - `pol` [Po naszymu, czyli o polszczyźnie małych ojczyzn](https://ore.edu.pl/wp-content/uploads/2025/02/po-naszymu-czyli-o-polszczyznie-malych-ojczyzn.-wybor-tekstow-do-edukacji-regionalnej.-teksty-slaskie-1.pdf)
  
 - ### Publications
