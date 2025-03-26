@@ -2,9 +2,10 @@
 
 ![pexels-bruno-krajski-518872760-20685089](https://github.com/user-attachments/assets/b4e47a8c-1c62-4ee9-a27f-726e39957abb)
 
-## Table of Contents
-
 ###### Links in the repository are verified weekly.
+###### Help us improve the repository by [posting an issue](https://github.com/vxern/silesian/issues/new) with the requested resource. 
+
+## Table of Contents
 
 <details>
 
