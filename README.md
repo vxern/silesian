@@ -12,10 +12,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Labels](#labels)
-- [About Silesian](#information)
-  - [Briefing](#briefing)
-  - [About the language](#about-the-language)
-  - [Videos](#videos)
+- [About Silesian](#about-information)
 - [Dictionaries](#dictionaries)
   - [Collective](#collective)
   - [Dialectal](#dialectal)
@@ -104,43 +101,37 @@
 
 <summary>Show</summary>
 
-- ### Briefing
-
-  - Name: **Silesian**, occasionally also called **Upper Silesian**.
-  - Codes:
-    - ISO 639-3: [`szl`](https://iso639-3.sil.org/code/szl)
-    - Glottolog: [`sile1253`](https://glottolog.org/resource/languoid/id/sile1253)
-    - ELP: [Upper Silesian](https://www.endangeredlanguages.com/lang/8349)
-    - Linguasphere: `53-AAA-cck`, `53-AAA-dam`
-  - Family:
-    [Lechitic](https://en.wikipedia.org/wiki/Lechitic_languages) <
-    [West Slavic](https://en.wikipedia.org/wiki/West_Slavic_languages) <
-    [Slavic](https://en.wikipedia.org/wiki/Slavic_languages) <
-    [Balto-Slavic](https://en.wikipedia.org/wiki/Balto-Slavic_languages) <
-    [Indo-European](https://en.wikipedia.org/wiki/Indo-European_languages)
-  - Region: [Silesia](https://en.wikipedia.org/wiki/Silesia)
-  - Ethnicity: [Silesians](https://en.wikipedia.org/wiki/Silesians)
-  - Native speakers: [500,000](https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/6494/10/1/1/wstepne_wyniki_nsp_2021_w_zakresie_struktury_narodowo-etnicznej_oraz_jezyka_kontaktow_domowych.pdf)
-  - Dialects:
-    - Upper Silesia
-      - Kluczbork <!-- https://en.wikipedia.org/wiki/Kluczbork_Silesian_dialect does not exist yet. -->
-      - Opole <!-- https://en.wikipedia.org/wiki/Opole_Silesian_dialect does not exist yet. -->
-      - [Niemodlin](https://en.wikipedia.org/wiki/Niemodlin_dialect)
-      - [Prudnik](https://en.wikipedia.org/wiki/Prudnik_Silesian_dialect)
-      - Gliwice <!-- https://en.wikipedia.org/wiki/Gliwice_dialect does not exist yet. -->
-      - [Sułkowice](https://en.wikipedia.org/wiki/Sulkovian_dialect)
-      - Borderland Silesian-Lesser Polish <!-- https://en.wikipedia.org/wiki/Borderland_Silesian-Lesser_Polish_dialect does not exist yet. -->
-      - Borderland Silesian-Lach <!-- https://en.wikipedia.org/wiki/Borderland_Silesian-Lach_dialect does not exist yet. -->
-      - [Cieszyn](https://en.wikipedia.org/wiki/Cieszyn_Silesian_dialect)
-      - Jabłonków <!-- https://en.wikipedia.org/wiki/Jabłonków_dialect does not exist yet. -->
-    - Lower Silesia
-      - [Chwalim](https://en.wikipedia.org/wiki/Chwalim_dialect)
-    - Outside Silesia
-      - [Texas](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
-
-- ### About the language
-
-  - [Śląsko godka](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
+- Name: **Silesian**, occasionally also called **Upper Silesian**.
+- Codes:
+  - ISO 639-3: [`szl`](https://iso639-3.sil.org/code/szl)
+  - Glottolog: [`sile1253`](https://glottolog.org/resource/languoid/id/sile1253)
+  - ELP: [Upper Silesian](https://www.endangeredlanguages.com/lang/8349)
+  - Linguasphere: `53-AAA-cck`, `53-AAA-dam`
+- Family:
+  [Lechitic](https://en.wikipedia.org/wiki/Lechitic_languages) <
+  [West Slavic](https://en.wikipedia.org/wiki/West_Slavic_languages) <
+  [Slavic](https://en.wikipedia.org/wiki/Slavic_languages) <
+  [Balto-Slavic](https://en.wikipedia.org/wiki/Balto-Slavic_languages) <
+  [Indo-European](https://en.wikipedia.org/wiki/Indo-European_languages)
+- Region: [Silesia](https://en.wikipedia.org/wiki/Silesia)
+- Ethnicity: [Silesians](https://en.wikipedia.org/wiki/Silesians)
+- Native speakers: [500,000](https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/6494/10/1/1/wstepne_wyniki_nsp_2021_w_zakresie_struktury_narodowo-etnicznej_oraz_jezyka_kontaktow_domowych.pdf)
+- Dialects:
+  - Upper Silesia
+    - Kluczbork <!-- https://en.wikipedia.org/wiki/Kluczbork_Silesian_dialect does not exist yet. -->
+    - Opole <!-- https://en.wikipedia.org/wiki/Opole_Silesian_dialect does not exist yet. -->
+    - [Niemodlin](https://en.wikipedia.org/wiki/Niemodlin_dialect)
+    - [Prudnik](https://en.wikipedia.org/wiki/Prudnik_Silesian_dialect)
+    - Gliwice <!-- https://en.wikipedia.org/wiki/Gliwice_dialect does not exist yet. -->
+    - [Sułkowice](https://en.wikipedia.org/wiki/Sulkovian_dialect)
+    - Borderland Silesian-Lesser Polish <!-- https://en.wikipedia.org/wiki/Borderland_Silesian-Lesser_Polish_dialect does not exist yet. -->
+    - Borderland Silesian-Lach <!-- https://en.wikipedia.org/wiki/Borderland_Silesian-Lach_dialect does not exist yet. -->
+    - [Cieszyn](https://en.wikipedia.org/wiki/Cieszyn_Silesian_dialect)
+    - Jabłonków <!-- https://en.wikipedia.org/wiki/Jabłonków_dialect does not exist yet. -->
+  - Lower Silesia
+    - [Chwalim](https://en.wikipedia.org/wiki/Chwalim_dialect)
+  - Outside Silesia
+    - [Texas](https://en.wikipedia.org/wiki/Texan_Silesian) (United States)
 
 </details>
 
@@ -495,6 +486,7 @@
  
 - ### Publications
 
+  - `pol` [Śląsko godka](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
   - `pol` [Głoski śląskie](https://slaskiportal.us.edu.pl/wp-content/uploads/2025/03/Gloski-slaskie-Jolanta-Tambor-Marcin-Maciolek.pdf)
   - `pol` [Gwara w górnośląskiej przestrzeni miejskiej](https://journals.akademicka.pl/lv/article/view/279/4015)
   - ✝️ `pol` [Słownictwo religijne w gwarach Śląska Cieszyńskiego](https://www.researchgate.net/publication/291724143_Slownictwo_religijne_w_gwarach_Slaska_Cieszynskiego_Religious_vocabulary_in_the_sub-dialects_of_Cieszyn_Silesia)
