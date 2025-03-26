@@ -191,6 +191,15 @@
       - [2/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930) (`missing` <ins>Original</ins>)
 
       </details>
+  - `deu` [Der Wortschatz der polnischen Mundart von Sankt Annaberg](https://sbc.org.pl/dlibra/publication/958232), author: `Reinhold Olesch`, entries: `uncounted`
+    - <details>
+
+      <summary>Volumes</summary>
+
+      - [Volume 1](https://sbc.org.pl/dlibra/publication/958233)
+      - [Volume 2](https://sbc.org.pl/dlibra/publication/958234)
+
+      </details>
   <!-- Checked by hand. -->
   - 🌿 `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
