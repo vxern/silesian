@@ -83,6 +83,7 @@
   - 🐴 - Zoology (Animals)
   - 🧪 - Chemistry (Matter)
   - ✝️ - Theology (Religion, belief, etc)
+  - ⛏️ - Mining (broadly)
   - ⚙️ - Technical (broadly)
 - Availability
   - 💵 - Paid resource
@@ -196,6 +197,8 @@
   - 🌿 `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
   <!-- Checked by hand. -->
   - 🍄 `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
+  <!-- ❌ Not checked the number of entries. -->
+  - ⛏️ `pol` [Zdobnictwo metalowe na Śląsku](https://pbc.gda.pl/dlibra/publication/1165/edition/8684), author: `unknown`, entries: `uncounted`
   <!-- Checked the number of lines from start to end. -->
   - ⚙️ `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
   <!-- ❌ Not checked the number of entries. -->
@@ -254,7 +257,13 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik gwarowy Śląska : (zeszyt próbny)](https://integro.bs.katowice.pl/ici/recorddetail?id=33105686496), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Słownik gwar śląskich](https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769), authors: `Adam Podgórski`, `Barbara Podgórska`, entries: `uncounted`, ISBN: `9788376491769`
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Nieznany śląski słownik gwarowy](https://integro.bs.katowice.pl/ici/recorddetail?id=32302787230), author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Ślónsko Godka](https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732), author: `unknown`, entries: `uncounted,` ISBN: `9788301213596`
+  <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Słownik gwary śląskiej](https://m6122.lib.mol.pl/description/13122308/slownik-gwary-slaskiej-13122308), authors: `Andrzej Czajkowski`, `Ilona Czajkowska`, `Andrzej Klukowski`, `Dorota Klukowska`, entries: `uncounted`, ISBN: `8390284510`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
