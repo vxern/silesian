@@ -140,7 +140,7 @@
 
 - ### About the language
 
-  - [Śląsko godka @ sjikp.us.edu.pl](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
+  - [Śląsko godka](https://www.sjikp.us.edu.pl/wp-content/uploads/2021/03/e-Godka.pdf)
 
 </details>
 
