@@ -274,6 +274,8 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik gwary śląskiej](https://m6122.lib.mol.pl/description/13122308/slownik-gwary-slaskiej-13122308), authors: `Andrzej Czajkowski`, `Ilona Czajkowska`, `Andrzej Klukowski`, `Dorota Klukowska`, entries: `uncounted`, ISBN: `8390284510`
   <!-- ❌ Not checked the number of entries. -->
+  - 🧩 `pol` [Ilustrowany słownik gwary śląskiej](https://integro.bs.katowice.pl/ici/recorddetail?id=0033507219298), author: `Marek Szołtysek`, entries: `uncounted`, ISBN: `8390928647`
+  <!-- ❌ Not checked the number of entries. -->
   - 🧩 `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
