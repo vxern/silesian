@@ -49,7 +49,9 @@
   - [United States](#united-states)
 - [Studies](#studies)
 - [History](#history)
-- [Unsorted](#unsorted)
+- [Repository](#repository)
+  - [Unextracted](#unextracted)
+  - [Unsorted](#unsorted)
 
 </details>
 
@@ -543,6 +545,14 @@
 
 - `pol` [Szymiszów & Strzelce Opolskie](http://moreantiqua.com/)
 
-## Unsorted
+## Repository
 
-There is nothing here.
+- ### Unextracted
+
+  - http://www.dialektologia.uw.edu.pl/index.php?l1=opis-dialektow&l2=dialekt-slaski&l3=slask-poludniowy&l4=slask-poludniowy-slowniki
+  - http://www.dialektologia.uw.edu.pl/index.php?l1=opis-dialektow&l2=dialekt-slaski&l3=slask-srodkowy&l4=slask-srodkowy-slowniki
+  - http://www.dialektologia.uw.edu.pl/index.php?l1=mapa-serwisu&l2=&l3=&l4=slask-polnocny-slowniki
+
+- ### Unsorted resources
+
+  - There is nothing here.
