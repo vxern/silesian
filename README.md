@@ -176,6 +176,8 @@
   - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`, ISBN: `missing`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Wiadomości o języku polskim w Szląsku i o polskich Szlązakach](https://silling.org/slownik/Aneks:Bandtkie_-_Wiadomo%C5%9Bci_o_i%C4%99zyku_polskim_w_Szl%C4%85sku_i_o_Polskich_Szl%C4%85zakach) ([Original](https://www.sbc.org.pl/dlibra/publication/edition/64110)), author: `Jerzy Samuel Bandtkie`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted` 
   - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
     - <details>
 
@@ -253,8 +255,6 @@
   - 🧩 `pol` [Słownik gwarowy Śląska : (zeszyt próbny)](https://integro.bs.katowice.pl/ici/recorddetail?id=33105686496), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Nieznany śląski słownik gwarowy](https://integro.bs.katowice.pl/ici/recorddetail?id=32302787230), author: `unknown`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted` 
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
