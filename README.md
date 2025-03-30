@@ -391,6 +391,7 @@
     - `ste` [Bartłůmjej Wanot](https://www.youtube.com/@bartumjejwanot3910)
     - `pol` [Gryfnie](https://www.youtube.com/@gryfnie)
     - `pol` [GazetaCodzienna_PL](https://www.youtube.com/@gazetacodzienna_pl4894)
+    - `pol` [Dubbing Po Naszymu](https://www.youtube.com/watch?v=sJAtwpo99LM)
  
   - #### Videos
   
