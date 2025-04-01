@@ -256,13 +256,13 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Słownik gwarowy Śląska](https://integro.bs.katowice.pl/ici/recorddetail?id=33105819214), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
+  - 🧩 `pol` [Słownik gwarowy Śląska](https://www.bu.umk.pl/wymiana/index.php?10503,slownik-gwarowy-slaska-stanislaw-bak-stanislaw-rospond.-opole-instytut-slaski-1962.-26-2014-140.), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Słownik gwarowy Śląska : (zeszyt próbny)](https://integro.bs.katowice.pl/ici/recorddetail?id=33105686496), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
+  - 🧩 `pol` [Słownik gwarowy Śląska : (zeszyt próbny)](https://integro.bs.katowice.pl/site/recorddetail/0032102035731), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik gwar śląskich](https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769), authors: `Adam Podgórski`, `Barbara Podgórska`, entries: `uncounted`, ISBN: `9788376491769`
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` [Nieznany śląski słownik gwarowy](https://integro.bs.katowice.pl/ici/recorddetail?id=32302787230), author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  - 🧩 `pol` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Ślónsko Godka](https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732), author: `unknown`, entries: `uncounted,` ISBN: `9788301213596`
   <!-- ❌ Not checked the number of entries. -->
