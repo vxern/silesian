@@ -262,7 +262,7 @@
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Słownik gwar śląskich](https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769), authors: `Adam Podgórski`, `Barbara Podgórska`, entries: `uncounted`, ISBN: `9788376491769`
   <!-- ❌ Not checked the number of entries. -->
-  - 🧩 `pol` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  - 🧩 `missing` `pol` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - 🧩 `pol` [Ślónsko Godka](https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732), author: `unknown`, entries: `uncounted,` ISBN: `9788301213596`
   <!-- ❌ Not checked the number of entries. -->
