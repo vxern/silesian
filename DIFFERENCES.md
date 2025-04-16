@@ -1,4 +1,4 @@
-# <p align="left"><img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="40" /></p><p align="center">Rōżnice miyndzy ślōnskim a polskim</br><sup><sub><sup>Differences between Silesian and Polish</sup></sub></sup></p><p align="right"><img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="40" /></p>
+# <p align="left"><img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="40" /></p><p align="center">Rōżnice miyndzy ślōnskim a polskim</br><sup><sub><sup>Differences between Silesian and Polish</sup></sub></sup></p><p align="right"><img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="40" /></p>
 
 | Difference | Silesian | Polish |
 | ---------- | -------- | ------ |
