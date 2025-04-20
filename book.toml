@@ -1,0 +1,11 @@
+[book]
+title = "The Silesian Language"
+authors = ["Dorian Oszczęda"]
+description = "Resources to learn the Silesian language and its dialects"
+language = "en"
+
+[output.html]
+default-theme = "Ayu"
+smart-punctuation = true
+git-repository-url = "https://github.com/vxern/silesian"
+edit-url-template = "https://github.com/vxern/silesian/edit/main/{path}"
