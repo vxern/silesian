@@ -4,8 +4,12 @@ authors = ["Dorian Oszczęda"]
 description = "Resources to learn the Silesian language and its dialects"
 language = "en"
 
+[preprocessor.pagetoc]
+
 [output.html]
 default-theme = "Ayu"
 smart-punctuation = true
 git-repository-url = "https://github.com/vxern/silesian"
 edit-url-template = "https://github.com/vxern/silesian/edit/main/{path}"
+additional-js = ["theme/pagetoc.js"]
+additional-css = ["theme/pagetoc.css"]
