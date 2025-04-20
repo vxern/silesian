@@ -75,7 +75,11 @@
   - `🗄️` `pol` [Radio Lucjana](https://web.archive.org/web/20180529020633/http://www.radiolucjana.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/radiolucjana/?lang=en))
   - `🗄️` `pol` [Radio Hajer](https://web.archive.org/web/20201229210352/http://radio-hajer.eu/) ([Online Radio Box](https://onlineradiobox.com/de/hajer/))
   - `🗄️` `pol` [Radio Magian](https://web.archive.org/web/20160220035325/http://radiomagian.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/slaskieradiomagian))
- 
+
+- ## Music
+
+  - `pol` [Frele](https://www.youtube.com/channel/UC90cU42g6mmIJzleg_qI4HA)
+
 - ## Games
 
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Contribute here](https://crowdin.com/project/minecraft))
