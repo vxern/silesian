@@ -15,8 +15,8 @@
   - ### Videos
 
     - `śla/F` [SILESIAN LANGUAGE, PEOPLE & CULTURE (GLIWICE DIALECT)](https://www.youtube.com/watch?v=hi3kNm9tl-Y)
-    - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
-    - `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
+    - `🟢` `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
+    - `🟢` `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
     - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
 
 - ## Blogs
