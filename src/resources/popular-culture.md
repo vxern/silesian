@@ -22,14 +22,14 @@
 - ## Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
-  - 🟢 `śla` [Chop w kuchni](https://chopwkuchni.pl/)
+  - `🟢` `śla` [Chop w kuchni](https://chopwkuchni.pl/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
   - `pol` [Andrzej Cichoń](https://andrzej-aci.blogspot.com/search/label/po%20%C5%9Blonsku)
   - `pol` [Gwaromania](https://gwaromania.blogspot.com/)
-  - 🗄️ `pol` [Slonskogodka](https://web.archive.org/web/20160309042314/http://slonskogodka.com/)
-  - 🗄️ `pol` [Ajnfart.blog.onet.pl](https://web.archive.org/web/20160821105339/http://ajnfart.blog.onet.pl/)
+  - `🗄️` `pol` [Slonskogodka](https://web.archive.org/web/20160309042314/http://slonskogodka.com/)
+  - `🗄️` `pol` [Ajnfart.blog.onet.pl](https://web.archive.org/web/20160821105339/http://ajnfart.blog.onet.pl/)
  
 - ## News
 
@@ -37,8 +37,8 @@
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
   - `pol` [Katowice.tvp.pl](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
-  - 🗄️ `śla` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
-  - 🗄️ `pol` [Nowiny.rybnik.pl](https://web.archive.org/web/20180831175004/http://nowiny.rybnik.pl/dzial,6,po-naszymu.html)
+  - `🗄️` `śla` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
+  - `🗄️` `pol` [Nowiny.rybnik.pl](https://web.archive.org/web/20180831175004/http://nowiny.rybnik.pl/dzial,6,po-naszymu.html)
  
 - ## Magazines
 
@@ -50,10 +50,10 @@
 
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
-  - 🗄️ `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
-  - 🗄️ `spa` [Gůrny Ślůnsk](https://web.archive.org/web/20080424082304fw_/http://www.gornyslonsk.republika.pl/slgaus.html)
-  - 🗄️ `spa` [Pů Našymu](https://web.archive.org/web/20090127035536/http://punasymu.com/_indexs.php)
-  - 🗄️ `adh` [Po Našymu](https://web.archive.org/web/20081206014702/http://sweb.cz/ls78/ponaszymu.htm)
+  - `🗄️` `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
+  - `🗄️` `spa` [Gůrny Ślůnsk](https://web.archive.org/web/20080424082304fw_/http://www.gornyslonsk.republika.pl/slgaus.html)
+  - `🗄️` `spa` [Pů Našymu](https://web.archive.org/web/20090127035536/http://punasymu.com/_indexs.php)
+  - `🗄️` `adh` [Po Našymu](https://web.archive.org/web/20081206014702/http://sweb.cz/ls78/ponaszymu.htm)
 
 - ## Radio
 
@@ -70,21 +70,21 @@
   - `pol` [Radio Kangurek](https://radioly.app/radio/radio-kangurek/)
   - `pol` [Slonski MusikBox](https://www.slonski-musikbox.de/)
   - `pol` [Śląski Mix](https://biesiadne-radio.pl.tl/Strona-startowa.htm)
-  - 🗄️ `pol` [Radio Porwolik](https://web.archive.org/web/20160323192820/http://www.radioporwolik.de/) ([Online Radio Box](https://onlineradiobox.com/de/porwolik/?lang=pl))
-  - 🗄️ `pol` [Radio Lucjana](https://web.archive.org/web/20180529020633/http://www.radiolucjana.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/radiolucjana/?lang=en))
-  - 🗄️ `pol` [Radio Hajer](https://web.archive.org/web/20201229210352/http://radio-hajer.eu/) ([Online Radio Box](https://onlineradiobox.com/de/hajer/))
-  - 🗄️ `pol` [Radio Magian](https://web.archive.org/web/20160220035325/http://radiomagian.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/slaskieradiomagian))
+  - `🗄️` `pol` [Radio Porwolik](https://web.archive.org/web/20160323192820/http://www.radioporwolik.de/) ([Online Radio Box](https://onlineradiobox.com/de/porwolik/?lang=pl))
+  - `🗄️` `pol` [Radio Lucjana](https://web.archive.org/web/20180529020633/http://www.radiolucjana.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/radiolucjana/?lang=en))
+  - `🗄️` `pol` [Radio Hajer](https://web.archive.org/web/20201229210352/http://radio-hajer.eu/) ([Online Radio Box](https://onlineradiobox.com/de/hajer/))
+  - `🗄️` `pol` [Radio Magian](https://web.archive.org/web/20160220035325/http://radiomagian.eu/) ([Online Radio Box](https://onlineradiobox.com/pl/slaskieradiomagian))
  
 - ## Games
 
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Contribute here](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
   - `śla/S` [Ślōnski Gothic](https://slaskigothic.pl/) - A professional mod for [Gothic](https://en.wikipedia.org/wiki/Gothic_(video_game)), fully translating the game to Silesian with immersive audio.
-  - 🧩 `pol` [Jump Heroes](https://store.steampowered.com/app/2850330/Jump_Heroes/)
+  - `🧩` `pol` [Jump Heroes](https://store.steampowered.com/app/2850330/Jump_Heroes/)
 
 - ## Board games
 
-  - 🧩 `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
+  - `🧩` `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
 
 - ## Podcasts
 
