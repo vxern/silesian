@@ -12,4 +12,4 @@ smart-punctuation = true
 git-repository-url = "https://github.com/vxern/silesian"
 edit-url-template = "https://github.com/vxern/silesian/edit/main/{path}"
 additional-js = ["theme/pagetoc.js"]
-additional-css = ["theme/pagetoc.css"]
+additional-css = ["theme/pagetoc.css", "theme/width-override.css"]
