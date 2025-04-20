@@ -21,5 +21,5 @@
 
 ---
 
-[Infosheet](infosheet.md)
+[Factsheet](factsheet.md)
 [Labels](labels.md)
