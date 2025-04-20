@@ -1,4 +1,4 @@
-# Infosheet
+# Fact Sheet
 
 - Name: **Silesian**, occasionally also called **Upper Silesian**.
 - Codes:
