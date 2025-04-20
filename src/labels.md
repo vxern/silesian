@@ -1,0 +1,45 @@
+# Labels
+
+## Orthographies
+
+- `śla` - Ślabikŏrz
+  - `śla/F` - Full
+  - `śla/S` - Simplified
+  - `śla/E` - Extended by custom characters or rules
+- `ste` - Steuer
+  - `spa` - Silesian Phonetic Alphabet
+  - `wen` - Wencel
+- `kos` - Kosmała
+- `pol` - Approximation using Polish orthography
+- `ces` - Approximation using Czech orthography
+- `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <ins>not</ins> use for learning to write
+
+## Categories
+
+- `🌿` - Botany (Plants)
+- `🍄` - Mycology (Mushrooms)
+- `🐴` - Zoology (Animals)
+- `🧪` - Chemistry (Matter)
+- `✝️` - Theology (Religion, belief, etc)
+- `⛏️` - Mining (broadly)
+- `⚙️` - Technical (broadly)
+
+## Availability
+
+- `💵` - Paid resource
+- `🧩` - Physical item
+- `🗄️` - Archived
+
+## Notes
+
+- `✍️` - Hand-written; might be difficult to read and/or parse
+- Spelling mistakes
+  - `🟢` - Contains minor spelling mistakes
+  - `🟡` - Contains major spelling mistakes
+  - `🔴` - Contains serious spelling mistakes - DO NOT use for learning the orthography
+
+## Help Needed
+
+- `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <ins>please help in finding information on it</ins>.
+- `unknown` - A given piece of information is unknown, <ins>please help in finding information on it</ins>.
+- `uncounted` - The number of entries has not been counted, <ins>please help in counting it</ins>.
