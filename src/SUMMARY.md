@@ -7,10 +7,10 @@
 - [Reading](resources/reading.md)
 - [Structured Learning](resources/structured-learning.md)
 - [Studies](resources/studies.md)
-- [History](resources/history.md)
 
 # Silesia & Silesians
 
+- [History](silesia-and-silesians/history.md)
 - [Immersion](silesia-and-silesians/immersion.md)
 - [Diaspora](silesia-and-silesians/diaspora.md)
 
