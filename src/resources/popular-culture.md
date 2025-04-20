@@ -11,6 +11,7 @@
     - `pol` [Gryfnie](https://www.youtube.com/@gryfnie)
     - `pol` [GazetaCodzienna_PL](https://www.youtube.com/@gazetacodzienna_pl4894)
     - `pol` [Dubbing Po Naszymu](https://www.youtube.com/watch?v=sJAtwpo99LM)
+    - `pol` [Synek ze Śląska](https://www.youtube.com/@synekze%C5%9Bl%C4%85ska)
  
   - ### Videos
 
