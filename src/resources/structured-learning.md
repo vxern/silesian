@@ -2,7 +2,7 @@
 
 - ## Courses
 
-  - 💵 `śla/S` [KursGodki.pl](https://www.kursgodki.pl/)
+  - `💵` `śla/S` [KursGodki.pl](https://www.kursgodki.pl/)
 
 - ## Guides
 
