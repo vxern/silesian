@@ -10,7 +10,7 @@
 | Continuation of Proto-Slavic `ě` | `-iŏ` (regional)<br><li><i>świŏt, kwiŏt, miŏno</i></li><br>`-ia` (regional)<br><li><i>świat, kwiat, miano</i></li> | `-ia`<br><li><i>świat, kwiat, miano</i></li> |
 | Continuation of Old Polish `-ać`/`-áć` | `-ŏć` (regional)<br><li><i>stŏć, spŏć, dŏć</i></li><br>`-ać` (regional)<br><li><i>stać, spać, dać</i></li> | `-ać`<br><li><i>stać, spać, dać</i></li> |
 | Continuation of Old Polish `á` | `ŏ`<br><li><i>mŏ, wioło, tŏrg</i></li> | `a`<br><li><i>ma, wiało, targ</i></li> |
-| `z-` | `z-`<br><li><i>zmiynić, zjyś, zwalić</i></li><br>`s-`<br><li><i>srywać, sjyżdżać, swijać</i></li><br>`ś-`<br><li><i>ślatować, śmiatać, `example needed`</i></li> | `z-`<br><li><i>zmienić, zjeść, zwalić</i></li><li><i>zrywać, zjeżdżać, zwijać</i></li><li><i>zlatywać, zmiatać, `example needed`</i></li> |
+| `z-` | `z-`<br><li><i>zmiynić, zjyś, zwalić</i></li><br>`s-`<br><li><i>srywać, sjyżdżać, swijać</i></li><br>`ś-`<br><li><i>ślatować, śmiatać, ślywać</i></li> | `z-`<br><li><i>zmienić, zjeść, zwalić</i></li><li><i>zrywać, zjeżdżać, zwijać</i></li><li><i>zlatywać, zmiatać, zlewać</i></li> |
 | `ze-` | `ze-`<br><li><i>zebrać, zerwać, `example needed`</i></li><br>`se-`<br><li><i>sebuć, `examples needed`</i></li><br>`sy-`<br><li><i>symnyć, `examples needed`</i></li> | `ze-`<br><li><i>zebrać, zerwać, `example needed`</i></li><li><i>`examples needed`</i></li><li><i>`examples needed`</i></li> |
 | `za-` | `za-` (regional)<br><li><i>`examples needed`</i></li><br>`zŏ-` (regional)<br><li><i>`examples needed`</i></li> | `za-`<br><li><i>`examples needed`</i></li> |
 | `na-` | `na-` (regional)<br><li><i>`examples needed`</i></li><br>`nŏ-` (regional)<br><li><i>`examples needed`</i></li> | `na-`<br><li><i>`examples needed`</i></li> |
