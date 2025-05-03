@@ -8,6 +8,7 @@
     - `śla/F` [Ślōnskŏ Rajza](https://www.youtube.com/c/%C5%9AL%C5%8CNSK%C5%8ERAJZA)
     - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
     - `ste` [Bartłůmjej Wanot](https://www.youtube.com/@bartumjejwanot3910)
+    - `pol` [Ojgyn z Pnioków](https://www.youtube.com/@Ojgyn)
     - `pol` [Gryfnie](https://www.youtube.com/@gryfnie)
     - `pol` [GazetaCodzienna_PL](https://www.youtube.com/@gazetacodzienna_pl4894)
     - `pol` [Dubbing Po Naszymu](https://www.youtube.com/watch?v=sJAtwpo99LM)
