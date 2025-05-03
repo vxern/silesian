@@ -79,7 +79,48 @@
 
 - ## Music
 
-  - `pol` [Frele](https://www.youtube.com/channel/UC90cU42g6mmIJzleg_qI4HA)
+  - ### Anthems
+ 
+    - `pol` [Oberschlesien — Hymn Górnego Śląska](https://www.youtube.com/watch?v=lQHiQEjiP8M)
+
+  - ### Choir
+
+    - `śla/F`, `ste`, `pol` [Concentus ex Animo](https://youtube.com/@Concentus.exAnimo)
+
+  - ### Disco
+ 
+    - `pol` [Roszak Show](https://youtube.com/@RoszakShow)
+   
+  - ### Folk
+ 
+    - `pol` [Krzikopa](https://youtube.com/@KapelaKrzikopa)
+
+  - ### Pop
+
+    - ### Modern
+
+      - `pol` [Frele](https://youtube.com/channel/UC90cU42g6mmIJzleg_qI4HA)
+
+    - ### Schlager
+   
+      - `pol` [Stach Kittel](https://youtube.com/@xStach)
+      - `pol` [Kafliki](https://www.youtube.com/@kafliki)
+   
+  - ### Rock
+ 
+    - `pol` [032 / Eichendorff](https://youtube.com/@032band)
+   
+  - ### Metal
+ 
+    - `pol` [Oberschlesien](https://youtube.com/channel/UC-KxrPjQ3M6PaKKyiMsAQQQ)
+   
+  - ### Rap
+ 
+    - `pol` [Dohtor Miód](https://youtube.com/@MiodDohtor)
+
+  - ### Covers
+ 
+    - `pol` [Valyen Songbird](https://youtube.com/@valyensongbird)
 
 - ## Games
 
