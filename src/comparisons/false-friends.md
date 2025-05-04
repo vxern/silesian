@@ -4,6 +4,7 @@
 | ---------- | -------- | ------ |
 | `skory` | <ol><li>early</li></ol> | <ol><li>(literary) eager</li><li>(literary) inclined, predisposed</li><li>(obsolete) fast, rapid</li></ol> |
 | `przitōmny` | <ol><li>pragmatic</li></ol> | <ol><li>conscious</li><li>rational</li></ol> |
+| `czyrstwy` | <ol><li>fresh</li></ol> | <ol><li>stale</li></ol> |
 | `gruba` | <ol><li>mine, pit</li></ol> | <ol><li>fat</li></ol> |
 | `koło` | <ol><li>bike</li><li>wheel, circle</li><li>around</li></ol> | <ol><li>wheel, circle</li><li>around</li></ol> |
 | `bez` | <ol><li>without</li><li>through</li></ol> | <ol><li>without</li></ol> |
