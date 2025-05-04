@@ -2,13 +2,12 @@
 
 ## Orthographies
 
-- `śla` - Ślabikŏrz
-  - `śla/F` - Full
-  - `śla/S` - Simplified
-  - `śla/E` - Extended by custom characters or rules
+- `śla/F` - Ślabikŏrz (Full)
+- `śla/S` - Ślabikŏrz (Simplified)
+- `śla/E` - Ślabikŏrz (Extended — custom characters or rules)
 - `ste` - Steuer
-  - `spa` - Silesian Phonetic Alphabet
-  - `wen` - Wencel
+- `spa` - Steuer (Silesian Phonetic Alphabet)
+- `wen` - Steuer (Wencel)
 - `kos` - Kosmała
 - `pol` - Approximation using Polish orthography
 - `ces` - Approximation using Czech orthography
