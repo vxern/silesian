@@ -23,4 +23,4 @@
 
 [Fact Sheet](fact-sheet.md)
 [Labels](labels.md)
-[Graphs](comparisons/graphs.md)
+[Graphs](graphs.md)
