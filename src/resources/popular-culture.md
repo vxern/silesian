@@ -24,7 +24,7 @@
 - ## Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
-  - `🟢` `śla` [Chop w kuchni](https://chopwkuchni.pl/)
+  - `🟢` `śla/F` [Chop w kuchni](https://chopwkuchni.pl/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
@@ -39,7 +39,7 @@
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
   - `pol` [Katowice.tvp.pl](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
-  - `🗄️` `śla` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
+  - `🗄️` `śla/S` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
   - `🗄️` `pol` [Nowiny.rybnik.pl](https://web.archive.org/web/20180831175004/http://nowiny.rybnik.pl/dzial,6,po-naszymu.html)
  
 - ## Magazines
