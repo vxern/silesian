@@ -7,11 +7,11 @@
   - ELP: [Upper Silesian](https://www.endangeredlanguages.com/lang/8349)
   - Linguasphere: `53-AAA-cck`, `53-AAA-dam`
 - Family:
-  [Lechitic](https://en.wikipedia.org/wiki/Lechitic_languages) <
-  [West Slavic](https://en.wikipedia.org/wiki/West_Slavic_languages) <
-  [Slavic](https://en.wikipedia.org/wiki/Slavic_languages) <
-  [Balto-Slavic](https://en.wikipedia.org/wiki/Balto-Slavic_languages) <
-  [Indo-European](https://en.wikipedia.org/wiki/Indo-European_languages)
+  - [Indo-European](https://en.wikipedia.org/wiki/Indo-European_languages)
+    - [Balto-Slavic](https://en.wikipedia.org/wiki/Balto-Slavic_languages)
+      - [Slavic](https://en.wikipedia.org/wiki/Slavic_languages)
+        - [West Slavic](https://en.wikipedia.org/wiki/West_Slavic_languages)
+          - [Lechitic](https://en.wikipedia.org/wiki/Lechitic_languages)
 - Region: [Silesia](https://en.wikipedia.org/wiki/Silesia)
 - Ethnicity: [Silesians](https://en.wikipedia.org/wiki/Silesians)
 - Native speakers: [500,000](https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/6494/10/1/1/wstepne_wyniki_nsp_2021_w_zakresie_struktury_narodowo-etnicznej_oraz_jezyka_kontaktow_domowych.pdf)
