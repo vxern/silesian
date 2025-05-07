@@ -36,6 +36,7 @@
 - ## News
 
   - `śla/F` [Wachtyrz.eu](https://wachtyrz.eu/)
+  - `pol` [Tuudi.net](https://tuudi.net/)
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
   - `pol` [Katowice.tvp.pl](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
