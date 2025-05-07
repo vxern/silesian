@@ -4,11 +4,12 @@
 
 - `śla/F` - Ślabikŏrz (Full)
 - `śla/S` - Ślabikŏrz (Simplified)
-- `śla/E` - Ślabikŏrz (Extended — custom characters or rules)
+- `śla/E` - Ślabikŏrz (Extended [with custom characters or rules])
 - `ste` - Steuer
 - `spa` - Steuer (Silesian Phonetic Alphabet)
 - `wen` - Steuer (Wencel)
 - `kos` - Kosmała
+- `wio` - Wióra
 - `pol` - Approximation using Polish orthography
 - `ces` - Approximation using Czech orthography
 - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <ins>not</ins> use for learning to write
