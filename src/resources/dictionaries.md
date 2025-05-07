@@ -148,7 +148,7 @@
   - ### Opole
 
     <!-- ❌ Not checked the number of entries. -->
-    - `wio` [Słownik](https://jozef.wiora.pl/szl/slownik.pdf), author: `Józef Wiora`, entries: `uncounted`
+    - `wió` [Słownik](https://jozef.wiora.pl/szl/slownik.pdf), author: `Józef Wiora`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
