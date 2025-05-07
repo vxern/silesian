@@ -128,6 +128,7 @@
   - `śla/F` [Minecraft](https://www.minecraft.net/en-us) ([Contribute here](https://crowdin.com/project/minecraft))
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
   - `śla/S` [Ślōnski Gothic](https://slaskigothic.pl/)
+  - `śla/S` [Literōwka](https://literowka.silling.org/)
   - `🧩` `pol` [Jump Heroes](https://store.steampowered.com/app/2850330/Jump_Heroes/)
 
 - ## Board games
