@@ -9,7 +9,7 @@
 - `spa` - Steuer (Silesian Phonetic Alphabet)
 - `wen` - Steuer (Wencel)
 - `kos` - Kosmała
-- `wio` - Wióra
+- `wió` - Wióra
 - `pol` - Approximation using Polish orthography
 - `ces` - Approximation using Czech orthography
 - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <ins>not</ins> use for learning to write
