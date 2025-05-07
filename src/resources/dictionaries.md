@@ -153,7 +153,6 @@
     - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `🧩` `pol` [Słownik starych Siołkowic w powiecie opolskim](https://www.opole-wbp.sowa.pl/index.php?KatID=0&typ=record&001=Op2006059002), author: `Alfred Zaręba`, entries: `uncounted`
-    - 
     
   - ### Gliwice
 
