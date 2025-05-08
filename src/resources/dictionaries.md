@@ -10,7 +10,7 @@
   <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
   - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
   <!-- ❌ Not checked the number of entries. -->
-  - `spa` [Dykcjůnoř polsko-ślůnski](/hosted/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
+  - `spa` [Dykcjůnoř polsko-ślůnski](../hosted/files/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
   <!-- The book lets you know. -->
   - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
   <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
