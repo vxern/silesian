@@ -39,6 +39,7 @@
   - `pol` [Tuudi.net](https://tuudi.net/)
   - `pol` [Onet.pl](https://wiadomosci.onet.pl/marek-szoltysek)
   - `pol` [Katowice.tvp.pl](https://katowice.tvp.pl/szukaj?query=dej%20poz%C3%B3r)
+  - `pol` [Ślązag.pl](https://www.slazag.pl/wyszukiwarka?q=po+%C5%9Bl%C5%8Dnsku)
   - `adh` [Sferatv.pl](https://sferatv.pl/informacje-po-slasku)
   - `🗄️` `śla/S` [Enowiny.pl](https://web.archive.org/web/20250116180618/https://enowiny.pl/tag/Po%20naszymu)
   - `🗄️` `pol` [Nowiny.rybnik.pl](https://web.archive.org/web/20180831175004/http://nowiny.rybnik.pl/dzial,6,po-naszymu.html)
