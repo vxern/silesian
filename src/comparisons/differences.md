@@ -4,8 +4,9 @@
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
-| Gerund | `-`<br><li><i>kejch szoł</i></li><li><i>przi kupowaniu</i></li><li><i>kejś sprŏwdzoł</i></li><br>The concept is expressed analytically, using words like 'kej' or 'przi'. | `-ąc`<br><li><i>idąc</i></li><li><i>kupując</i></li><li><i>sprawdzając</i></li> |
-| Perfect participle | `-`<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li><br>The concept is expressed analytically, using words like 'kej', 'przi', 'po', etc. | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
+| Contemporary adverbial participle ('walking') | Expressed analytically, using words like 'kej' or 'przi'.<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
+| Active adjectival participle ('a grieving man') | Expressed analytically, using words like 'kery' or 'co'.<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
+| Anterior adverbial participle ('having done') | Expressed analytically, using words like 'kej', 'przi', 'po', etc.<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
 
 ## Inflections
 
