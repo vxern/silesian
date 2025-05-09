@@ -4,9 +4,9 @@
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
-| Contemporary adverbial participle ('walking') | Expressed analytically, using words like 'kej' or 'przi'.<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
-| Active adjectival participle ('a grieving man') | Expressed analytically, using words like 'kery' or 'co'.<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
-| Anterior adverbial participle ('having done') | Expressed analytically, using words like 'kej', 'przi', 'po', etc.<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
+| Contemporary adverbial participle ('walking') | `[none]` (expressed analytically using words like 'kej' or 'przi')<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
+| Active adjectival participle ('a grieving man') | `[none]` (expressed analytically using words like 'kery' or 'co')<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
+| Anterior adverbial participle ('having done') | `[none]` (expressed analytically using words like 'kej', 'przi', 'po', etc.)<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
 
 ## Cases
 
@@ -31,10 +31,11 @@
 | `-nąć` | `-nōńć`<br><li><i>spadnōńć, gnōńć, kopnōńć</i></li><br>`-nyć` (southern)<br><li><i>spadnyć, gnyć, kopnyć</i></li><br>`-nuć` (Zaolzie)<br><li><i>spadnuć, gnuć, kopnuć</i></li> | `-nąć`<br><li><i>ciągnąć, biegnąć, kopnąć</i></li> |
 | `-ść`, `-źć` | `-ś`<br><li><i>iś, jyś, smiyś</i></li><br>`-ź`<br><li><i>lyź, gryź, wiyź</i></li> | `-ść`<br><li><i>iść, jeść, zmieść</i></li><br>`-źć`<br><li><i>leźć, gryźć, wieźć</i></li> |
 
-## Idiosyncrasies
+## Grammatical features
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
+| Question particle | `[none]` (accentuation is used)<br><li><i>Chcesz dzisio wylyź?</i></li><li><i>Sōmeście Ślōnzŏk?</i></li><li><i>Widzōm ônego?</i></li> | `czy`<br><li><i>Czy chcesz dzisiaj wyjść?</i></li><li><i>Czy jest Pan Polakiem?</i></li><li><i>Czy mama go widzi?</i></li> |
 | Word used in forming passive constructions | `ôd`<br><li><i>Bal ôstoł kopnyty ôd synka.</i></li> | `przez`<br><li><i>Piłka została kopnięta przez chłopaka.</i></li> |
 | Position of adjective | `[before]`<br><li><i>Czŏrne Morze</i></li><li><i>Brōnŏtny niydźwiydź</i></li><li><i>Ślōnskŏ gŏdka</i></li><li><i>Zielōnŏ trŏwa</i></li><li><i>Modre ôczy</i></li><li><i>Czŏrnŏ tera</i></li> | `[after]` (used in categorisation)<br><li><i>Morze Czarne</i></li><li><i>Niedźwiedź brunatny</i></li><li><i>Język śląski</i></li><br>`[before]` (otherwise)<br><li><i>Zielona trawa</i></li><li><i>Niebieskie oczy</i></li><li><i>Czarna smoła</i></li> |
 | Who, anyone, someone, nobody | `kery`, `lecy kery`, `kery(ś)`, `żŏdyn`<br><li><i>Kery chce dzisiej wylyź na plac?</i></li><li><i>Lecy kery widzioł, lecy kery wiy…</i></li><li><i>Widzisz kerego?</i></li><li><i>Żŏdnego sam niy ma.</i></li><br>`fto`\*, `lecy fto`, `fto(ś)`, `nifto`<br><li><i>Fto chce dzisiej wylyź na plac?</i></li><li><i>Lecy fto widzioł, lecy fto wiy…</i></li><li><i>Widzisz kogo?</i></li><li><i>Nikogo sam niy ma.</i></li><br>\* Or `gdo`, `chto`, `wto`, `kto`. | `kto`, `ktokolwiek`, `ktoś`, `nikt`<br><li><i>Kto chce dzisiaj wyjść na dwór?</i></li><li><i>Ktokolwiek widział, ktokolwiek wie…</i></li><li><i>Widzisz kogoś?</i></li><li><i>Nikogo tutaj nie ma.</i></li> |
