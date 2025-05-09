@@ -8,10 +8,13 @@
 | Active adjectival participle ('a grieving man') | Expressed analytically, using words like 'kery' or 'co'.<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
 | Anterior adverbial participle ('having done') | Expressed analytically, using words like 'kej', 'przi', 'po', etc.<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
 
-## Inflections
+## Cases
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
+| Showing possession | `ôd` + `[genitive]`<br><li><i>Taszka ôd mamy</i></li><li><i>Blajsztyft ôd szkolŏrza</i></li><li><i>Pyndzel ôd malŏrza</i></li> | `[genitive]`<br><li><i>Torebka mamy</i></li><li><i>Ołówek ucznia</i></li><li><i>Pędzel malarza</i></li> |
+| Case used with `być` | `[nominative]`<br><li><i>Ziga je elektrykŏrz.</i></li><li><i>Tyś je doś wysoki.</i></li> | `[instrumental]`<br><li><i>Michał jest elektrykiem.</i></li><br>`[nominative]`<br><li><i>Jesteś dość wysoki.</i></li> |
+| Accusative in feminine nouns | `[same as genitive]`<br><li><i>Widzã Anny.</i></li><li><i>Chcã tyj tasze.</i></li><li><i>Mōm rŏd tyj ksiōnżki.</i></li>OR<br>`[distinct]`<br><li><i>Widzã Annã.</i></li><li><i>Chcã tã taszã.</i></li><li><i>Mōm rŏd tã ksiōnżkã.</i></li> | `[distinct]`<br><li><i>Widzę Annę.</i></li><li><i>Chcę tę torebkę.</i></li><li><i>Lubię tę książkę.</i></li> |
 | Plural instrumental inflection | `-ami`<br><li><i>rynkami, kōniami, stołkami</i></li>OR<br>`-ōma`<br><li><i>rynkōma, kōniōma, stołkōma</i></li> | `-ami`, `-mi`<br><li><i>rękami, końmi, krzesłami</i></li><br>💀 `-oma`<br><li><i>rękoma, oboma, dwoma</i></li><br>`-oma` is a remnant of the dual number and is no longer productive. |
 
 ## Morphemes
@@ -27,13 +30,6 @@
 | `-ować` | `-ować`<br><li><i>chodować, nocować, korować</i></li><li><i>włamować, zgadować, ôdczytować</i></li><li><i>ôszukować, ôczekiwać, uzyskować</i></li> | `-ować`<br><li><i>chodować, nocować, korować</i></li><br>`-ywać`<br><li><i>włamywać, zgadywać, odczytywać</i></li><br>`-iwać`<br><li><i>oszukiwać, oczekiwać, uzyskiwać</i></li> |
 | `-nąć` | `-nōńć`<br><li><i>spadnōńć, gnōńć, kopnōńć</i></li><br>`-nyć` (southern)<br><li><i>spadnyć, gnyć, kopnyć</i></li><br>`-nuć` (Zaolzie)<br><li><i>spadnuć, gnuć, kopnuć</i></li> | `-nąć`<br><li><i>ciągnąć, biegnąć, kopnąć</i></li> |
 | `-ść`, `-źć` | `-ś`<br><li><i>iś, jyś, smiyś</i></li><br>`-ź`<br><li><i>lyź, gryź, wiyź</i></li> | `-ść`<br><li><i>iść, jeść, zmieść</i></li><br>`-źć`<br><li><i>leźć, gryźć, wieźć</i></li> |
-
-## Cases
-
-| Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
-| ---------- | -------- | ------ |
-| Showing possession | `ôd` + `[genitive]`<br><li><i>Taszka ôd mamy</i></li><li><i>Blajsztyft ôd szkolŏrza</i></li><li><i>Pyndzel ôd malŏrza</i></li> | `[genitive]`<br><li><i>Torebka mamy</i></li><li><i>Ołówek ucznia</i></li><li><i>Pędzel malarza</i></li> |
-| Case used with `być` | `[nominative]`<br><li><i>Ziga je elektrykŏrz.</i></li><li><i>Tyś je doś wysoki.</i></li> | `[instrumental]`<br><li><i>Michał jest elektrykiem.</i></li><br>`[nominative]`<br><li><i>Jesteś dość wysoki.</i></li> |
 
 ## Idiosyncrasies
 
