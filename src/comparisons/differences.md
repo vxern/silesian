@@ -45,5 +45,17 @@
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
 | Continuation of Proto-Slavic `ě` | `-iŏ` (regional)<br><li><i>świŏt, kwiŏt, miōno</i></li><br>`-ia` (regional)<br><li><i>świat, kwiat, miano</i></li> | `-ia`<br><li><i>świat, kwiat, miano</i></li> |
-| Continuation of Old Polish `á` | `ŏ`<br><li><i>mŏ, wioło, tŏrg</i></li> | `a`<br><li><i>ma, wiało, targ</i></li> |
+| Continuation of Old Polish `án`, `ám` | `ōn`, `ōm`<br><li><i>Pōn, zōmek, mōm</i></li> | `an`, `am`<br><li><i>Pan, zamek, mam</i></li> |
+| Continuation of Old Polish `á` | `ŏ`<br><li><i>mŏ, wioło, tŏrg</i></li><br>`dialectal pronunciations needed` | `a`<br><li><i>ma, wiało, targ</i></li> |
+| Continuation of Old Polish `é` | `y`<br><li><i>palcym, chcymy, tyn</i></li><br>`dialectal pronunciations needed` | `e`<br><li><i>palcem, chcemy, ten</i></li> |
+| Continuation of Old Polish `ó` | `ō`<br><li><i>dōm, kōń, `example needed`</i></li><br>`dialectal pronunciations needed` | `ó`<br><li><i>dom, koń, `example needed`</i></li> |
+| Continuation of Old Polish `-ę` | `-ã`<br><li><i>piszã, widzã, łyżkã</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>piszę, widzę, łyżkę</i></li> |
+| Continuation of Old Polish `ę` | `yn`<br><li><i>rynka, mynka, stynkŏ</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>ręka, męka, stęka</i></li> |
+| Continuation of Old Polish `-ą` | `-ōm`<br><li><i>gowōm, chodzōm, prōbujōm</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>głową, chodzą, próbują</i></li> |
+| Continuation of Old Polish `ą` | `ōn`, `ōm`<br><li><i>mōndry, kōnsek, dōmb</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>mądry, kąsek, dąb</i></li> |
+| Continuation of Old Polish `o-` | `ô-`<br><li><i>ôko, ôd, ôpuścić</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>oko, od, opuścić</i></li> |
+| Continuation of Old Polish `on`, `oń`, `om` | `ōn`, `ōń`, `ōm`<br><li><i>myszōm, dōniczka, tōm</i></li><br>`dialectal pronunciations needed` | `[same as Old Polish]`<br><li><i>myszom, doniczka, tom</i></li> |
+| Continuation of Old Polish `źr` | `zdrz`<br><li><i>zdrzōdło, pozdrzić, zdrzybiã</i></li>`dialectal pronunciations needed`| `źr`, `jrz`<br><li><i>źródło, pojrzeć, źrebię</i></li> |
+| Continuation of Old Polish `śr` | `strz`<br><li><i>strzoda, postrzedni, `example needed`</i></li>`dialectal pronunciations needed`| `[same as Old Polish]`<br><li><i>środa, pośredni, `example needed`</i></li> |
+| Continuation of Old Polish `cztw` | `sztw`<br><li><i>sztwŏrty, sztwierć, `example needed`</i></li>`dialectal pronunciations needed`| `czw`, `ćw`<br><li><i>czwarty, ćwierć, `example needed`</i></li> |
 
