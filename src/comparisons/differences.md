@@ -25,7 +25,7 @@
 | `ze-` | `ze-`<br><li><i>zebrać, zerwać, `example needed`</i></li><br>`se-`<br><li><i>sebuć, seblyc, `example needed`</i></li><br>`sy-`<br><li><i>symnyć, `examples needed`</i></li> | `ze-`<br><li><i>zebrać, zerwać, `example needed`</i></li><li><i>`examples needed`</i></li><li><i>`examples needed`</i></li> |
 | `za-` | `za-` (regional)<br><li><i>`examples needed`</i></li><br>`zŏ-` (regional)<br><li><i>`examples needed`</i></li> | `za-`<br><li><i>`examples needed`</i></li> |
 | `na-` | `na-` (regional)<br><li><i>`examples needed`</i></li><br>`nŏ-` (regional)<br><li><i>`examples needed`</i></li> | `na-`<br><li><i>`examples needed`</i></li> |
-| `ws-` | `s-`<br><li><i>stŏć, schōd, spinać</i></li> | `ws-`<br><li><i>wstać, wschód, wspinać</i></li> |
+| `ws-`, `wz-` | `s-`, `z-`<br><li><i>stŏć, schōd, zglōnd</i></li> | `ws-`, `wz-`<br><li><i>wstać, wschód, wzgląd</i></li> |
 | `roz-` | `roz-`<br><li><i>rozłazić, rozszyrzać, rozpŏdać</i></li><br>`ôz-` (Opole)<br><li><i>ôzłazić, ôzszyrzać, ôzpŏdać</i></li> | `roz-`<br><li><i>rozchodzić, rozszerzać, rozpadać</i></li> |
 | `-ować` | `-ować`<br><li><i>chodować, nocować, korować</i></li><li><i>włamować, zgadować, ôdczytować</i></li><li><i>ôszukować, ôczekiwać, uzyskować</i></li> | `-ować`<br><li><i>chodować, nocować, korować</i></li><br>`-ywać`<br><li><i>włamywać, zgadywać, odczytywać</i></li><br>`-iwać`<br><li><i>oszukiwać, oczekiwać, uzyskiwać</i></li> |
 | `-nąć` | `-nōńć`<br><li><i>spadnōńć, gnōńć, kopnōńć</i></li><br>`-nyć` (southern)<br><li><i>spadnyć, gnyć, kopnyć</i></li><br>`-nuć` (Zaolzie)<br><li><i>spadnuć, gnuć, kopnuć</i></li> | `-nąć`<br><li><i>ciągnąć, biegnąć, kopnąć</i></li> |
