@@ -16,6 +16,7 @@
 | Contemporary adverbial participle ('walking') | `[none]` (expressed analytically using words like 'kej' or 'przi')<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
 | Active adjectival participle ('a grieving man') | `[none]` (expressed analytically using words like 'kery' or 'co')<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
 | Anterior adverbial participle ('having done') | `[none]` (expressed analytically using words like 'kej', 'przi', 'po', etc.)<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
+| Conjugations of `-eć` | `-ã`, `-ysz`/`-isz`, `-y`/`-i`, `...`<br><li><i>drożã, drożysz, droży</i></li><li><i>bielã, bielisz, bieli</i></li> | `-eję`, `-ejesz`, `-eje`, `...`<br><li><i>drożeję, drożejesz, drożeje</i></li><li><i>bieleję, bielejesz, bieleje</i></li> |
 
 ## Affixes
 
@@ -29,7 +30,6 @@
 | `roz-` | `roz-`<br><li><i>rozłazić, rozszyrzać, rozpŏdać</i></li><br>`ôz-` (Opole)<br><li><i>ôzłazić, ôzszyrzać, ôzpŏdać</i></li> | `roz-`<br><li><i>rozchodzić, rozszerzać, rozpadać</i></li> |
 | `-ować` | `-ować`<br><li><i>chodować, nocować, korować</i></li><li><i>włamować, zgadować, ôdczytować</i></li><li><i>ôszukować, ôczekiwać, uzyskować</i></li> | `-ować`<br><li><i>chodować, nocować, korować</i></li><br>`-ywać`<br><li><i>włamywać, zgadywać, odczytywać</i></li><br>`-iwać`<br><li><i>oszukiwać, oczekiwać, uzyskiwać</i></li> |
 | `-nąć` | `-nōńć`<br><li><i>spadnōńć, gnōńć, kopnōńć</i></li><br>`-nyć` (southern)<br><li><i>spadnyć, gnyć, kopnyć</i></li><br>`-nuć` (Zaolzie)<br><li><i>spadnuć, gnuć, kopnuć</i></li> | `-nąć`<br><li><i>ciągnąć, biegnąć, kopnąć</i></li> |
-| `-eć` | `-ã`, `-ysz`, `-y`, `...`<br><li><i>drożã, drożysz, droży</i></li> | `-eję`, `-ejesz`, `-eje`, `...`<br><li><i>drożeję, drożejesz, drożeje</i></li> |
 | `-ść`, `-źć` | `-ś`<br><li><i>iś, jyś, smiyś</i></li><br>`-ź`<br><li><i>lyź, gryź, wiyź</i></li> | `-ść`<br><li><i>iść, jeść, zmieść</i></li><br>`-źć`<br><li><i>leźć, gryźć, wieźć</i></li> |
 
 ## Grammatical features
