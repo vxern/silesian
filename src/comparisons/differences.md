@@ -1,13 +1,5 @@
 # Differences
 
-## Verbs
-
-| Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
-| ---------- | -------- | ------ |
-| Contemporary adverbial participle ('walking') | `[none]` (expressed analytically using words like 'kej' or 'przi')<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
-| Active adjectival participle ('a grieving man') | `[none]` (expressed analytically using words like 'kery' or 'co')<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
-| Anterior adverbial participle ('having done') | `[none]` (expressed analytically using words like 'kej', 'przi', 'po', etc.)<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
-
 ## Cases
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
@@ -17,7 +9,15 @@
 | Case used with `być` | `[nominative]`<br><li><i>Ziga je elektrykŏrz.</i></li><li><i>Tyś je doś wysoki.</i></li> | `[instrumental]`<br><li><i>Michał jest elektrykiem.</i></li><br>`[nominative]`<br><li><i>Jesteś dość wysoki.</i></li> |
 | Plural instrumental inflection | `-ami`<br><li><i>rynkami, kōniami, stołkami</i></li>OR<br>`-ōma`<br><li><i>rynkōma, kōniōma, stołkōma</i></li> | `-ami`, `-mi`<br><li><i>rękami, końmi, krzesłami</i></li><br>💀 `-oma`<br><li><i>rękoma, oboma, dwoma</i></li><br>`-oma` is a remnant of the dual number and is no longer productive. |
 
-## Morphemes
+## Verbs
+
+| Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
+| ---------- | -------- | ------ |
+| Contemporary adverbial participle ('walking') | `[none]` (expressed analytically using words like 'kej' or 'przi')<br><li><i>kejch szoł</i></li><li><i>przi sprzōntaniu</i></li><li><i>kejś sprŏwdzoł</i></li> | `-ąc`<br><li><i>idąc</i></li><li><i>sprzątając</i></li><li><i>sprawdzając</i></li> |
+| Active adjectival participle ('a grieving man') | `[none]` (expressed analytically using words like 'kery' or 'co')<br><li><i>co idzie</i></li><li><i>kery sprzōntŏ</i></li><li><i>kery sprŏwdzŏ</i></li> | `-ący`<br><li><i>idący</i></li><li><i>sprzątający</i></li><li><i>sprawdzający</i></li> |
+| Anterior adverbial participle ('having done') | `[none]` (expressed analytically using words like 'kej', 'przi', 'po', etc.)<br><li><i>kejch zrobiōł</i></li><li><i>przi zōńściu</i></li><li><i>po wykōnaniu</i></li> | `-szy`<br><li><i>zrobiwszy</i></li><li><i>zaszedłszy</i></li><li><i>wykonawszy</i></li> |
+
+## Affixes
 
 | Difference | <img src="https://github.com/user-attachments/assets/2fa8fccb-92f7-4af2-8f83-3e14124518ad" width="20" /> Silesian | <img src="https://github.com/user-attachments/assets/a3ae44c4-2a03-4ab3-ad17-0df3accb5d82" width="20" /> Polish |
 | ---------- | -------- | ------ |
