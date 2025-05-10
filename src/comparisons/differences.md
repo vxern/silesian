@@ -29,6 +29,7 @@
 | `roz-` | `roz-`<br><li><i>rozłazić, rozszyrzać, rozpŏdać</i></li><br>`ôz-` (Opole)<br><li><i>ôzłazić, ôzszyrzać, ôzpŏdać</i></li> | `roz-`<br><li><i>rozchodzić, rozszerzać, rozpadać</i></li> |
 | `-ować` | `-ować`<br><li><i>chodować, nocować, korować</i></li><li><i>włamować, zgadować, ôdczytować</i></li><li><i>ôszukować, ôczekiwać, uzyskować</i></li> | `-ować`<br><li><i>chodować, nocować, korować</i></li><br>`-ywać`<br><li><i>włamywać, zgadywać, odczytywać</i></li><br>`-iwać`<br><li><i>oszukiwać, oczekiwać, uzyskiwać</i></li> |
 | `-nąć` | `-nōńć`<br><li><i>spadnōńć, gnōńć, kopnōńć</i></li><br>`-nyć` (southern)<br><li><i>spadnyć, gnyć, kopnyć</i></li><br>`-nuć` (Zaolzie)<br><li><i>spadnuć, gnuć, kopnuć</i></li> | `-nąć`<br><li><i>ciągnąć, biegnąć, kopnąć</i></li> |
+| `-eć` | `-ã`, `-ysz`, `-y`, `...`<br><li><i>drożã, drożysz, droży</i></li> | `-eję`, `-ejesz`, `-eje`, `...`<br><li><i>drożeję, drożejesz, drożeje</i></li> |
 | `-ść`, `-źć` | `-ś`<br><li><i>iś, jyś, smiyś</i></li><br>`-ź`<br><li><i>lyź, gryź, wiyź</i></li> | `-ść`<br><li><i>iść, jeść, zmieść</i></li><br>`-źć`<br><li><i>leźć, gryźć, wieźć</i></li> |
 
 ## Grammatical features
