@@ -34,7 +34,8 @@
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
-  - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted` 
+  - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
     - <details>
 
@@ -47,6 +48,7 @@
       - [2/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930) (`missing` <ins>Original</ins>)
 
       </details>
+  <!-- ❌ Not checked the number of entries. -->
   - `deu` [Der Wortschatz der polnischen Mundart von Sankt Annaberg](https://sbc.org.pl/dlibra/publication/958232), author: `Reinhold Olesch`, entries: `uncounted`
     - <details>
 
@@ -70,6 +72,10 @@
   - `🧪` `śla/F`, `ste` [Ukłŏd ôkresowy elymyntōw](https://canov.jergym.cz/vyhledav/varian33/slez/slp.htm), author: `unknown`, entries: `N/A`
   <!-- Found in descriptions of the product. -->
   - `🧩` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🧩` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🧩` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- Found in descriptions of the product. -->
   - `🧩` `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich/), author: `various`, entries: `>1,000,000`
     - <details>
@@ -135,6 +141,8 @@
   - `🧩` `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🧩` `adh` [Czasowniki ślõski](https://opac.r-sl.pl/953601047942/szczeponek-andrzej/czasowniki-slaskie?internalNav=1&bibFilter=95), author: `Andrzej Szczepōnek`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `🗄️` `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
