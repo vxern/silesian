@@ -74,8 +74,6 @@
   - `🧩` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- Found in descriptions of the product. -->
   - `🧩` `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich/), author: `various`, entries: `>1,000,000`
     - <details>
@@ -113,6 +111,8 @@
       - [Volume 3 (R-Z)](https://integro.bs.katowice.pl/32202530810/ksiazka/zbornik-polsko-slonski), ISBN: `9788360540596`
 
       </details>
+  <!-- ❌ Not checked the number of entries. -->
+  - `🧩` `pol` [Wyrazy staropolskie w dialekcie śląskim — Śląski minisłownik etymologiczny](https://ruj.uj.edu.pl/entities/publication/54f2c875-75b3-442f-8825-be4ed6d7d143), author: `Mirela Rubin-Lorek`, entries: `uncounted`, ISBN: `9788361255574`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Mały słownik gwary Górnego Śląska](https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155), authors: `Bożena Cząstka-Szymon`, `Jerzy Ludwig`, `Helena Synowiec`, entries: `uncounted`, ISBN: `9788391377703`
   <!-- ❌ Not checked the number of entries. -->
