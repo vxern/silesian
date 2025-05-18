@@ -6,11 +6,13 @@
   <!-- The front page lets you know. -->
   - `śla/F` [SileSłownik](https://silling.org/slownik/Przodni%C5%8F_str%C5%8Dna), author: `Grzegorz Kulik`, entries: `>25,300`
   <!-- You can find out here: https://en.wiktionary.org/wiki/Category:Silesian_lemmas -->
-  - `śla/F` [Wiktionary](https://wiktionary.org), author: `various`, entries: `>2,150`
+  - `śla/F` [Wiktionary](https://en.wiktionary.org), author: `various`, entries: `>2,150`
   <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
   - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
   <!-- ❌ Not checked the number of entries. -->
-  - `spa` [Dykcjůnoř polsko-ślůnski](../hosted/files/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
+  - `ste` [Dykcjůnorz polsko-ślůnski](../hosted/files/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `spa` [Basic Silesian (ślůnski)](https://mylittlewordland.com/course/391323/basic-silesian-%C5%9Bl%C5%AFnski), author: `unknown`, entries: `uncounted`
   <!-- The book lets you know. -->
   - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
   <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
