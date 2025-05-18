@@ -21,6 +21,10 @@
     - `🟢` `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
     - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
 
+- ## Films
+
+  - `pol` [Mianujōm mie Hanka](https://vod.tvp.pl/teatr-telewizji,202/mianujom-mie-hanka,1867758)
+
 - ## Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
