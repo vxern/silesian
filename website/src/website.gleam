@@ -4,7 +4,6 @@ import gleam/uri
 import lustre
 import lustre/effect
 import lustre/element
-import lustre/element/html
 import modem
 import routes/dictionary
 import routes/home
@@ -64,10 +63,8 @@ fn update(_, msg: Msg) -> #(Route, effect.Effect(Msg)) {
 }
 
 fn view(route: Route) -> element.Element(Msg) {
-  html.div([], [
-    case route {
-      Dictionary -> dictionary.route()
-      _ -> home.route()
-    },
-  ])
+  case route {
+    Dictionary -> dictionary.route()
+    _ -> home.route()
+  }
 }

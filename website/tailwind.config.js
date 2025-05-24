@@ -1,7 +1,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{gleam,mjs}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      bitter: ["Bitter", "sans-serif"],
+    },
   },
   plugins: [],
 };
