@@ -10,7 +10,7 @@
   <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
   - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
   <!-- ❌ Not checked the number of entries. -->
-  - `ste` [Dykcjůnorz polsko-ślůnski](../hosted/files/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
+  - `ste` [Dykcjůnorz polsko-ślůnski](./hosted/files/dykcjůnoř%20polsko-ślůnski%2C%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `spa` [Basic Silesian (ślůnski)](https://mylittlewordland.com/course/391323/basic-silesian-%C5%9Bl%C5%AFnski), author: `unknown`, entries: `uncounted`
   <!-- The book lets you know. -->
