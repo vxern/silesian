@@ -1,0 +1,23 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "subtitle": {
+    "variants": {
+      "1": "Dykcjōnŏrze ślōnskij gŏdki",
+      "2": "Dykcjōnŏrze ślōnskigo jynzyka",
+      "3": "Dykcjōnŏrze ślōnskij mŏwy",
+      "4": "Dykcjōnŏrze ślōnskij szprachy",
+      "5": "Dykcjōnŏrze ślōnskij rzeczy",
+      "6": "Dykcjōnŏrze ślōnskich narzeczy",
+      "7": "Dykcjōnŏrze ślōnskigo etnolektu",
+      "8": "Dykcjōnŏrze ślōnskich dyjalektōw",
+      "9": "Dykcjōnŏrze pō naszymu"
+    }
+  },
+  "search": {
+    "placeholder": "Ftōrego słowa szukŏcie?"
+  },
+  "help": {
+    "want_to_help": "Chcecie pōmōc?",
+    "find_out_how": "Przewiydzcie sie jako to mogecie zrobić."
+  }
+}
