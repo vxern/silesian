@@ -1,20 +1,6 @@
 <script lang="ts">
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages.js";
-
-  const specialLetters = [
-    "ã",
-    "ć",
-    "ł",
-    "ŏ",
-    "ō",
-    "ô",
-    "õ",
-    "ń",
-    "ś",
-    "ź",
-    "ż",
-  ];
 </script>
 
 <section
@@ -34,7 +20,7 @@
         class="rounded-md w-full text-lg p-4 bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
       />
       <section class="flex-1 flex gap-x-4 w-full">
-        {#each specialLetters as letter}
+        {#each constants.specialLetters as letter}
           <button
             class="rounded-md size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
           >
