@@ -1,6 +1,6 @@
 <script>
   import constants from "$lib/constants";
-  import { m } from "$lib/paraglide/messages.js";
+  import { m } from "$lib/paraglide/messages";
   import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
 
   let capsLockEnabled = $state(false);
@@ -50,7 +50,7 @@
       <h1 class="text-8xl text-yellow-400 font-bold">
         {constants.projectName}
       </h1>
-      <h1 class="text-2xl text-blue-500">{m["subtitle.variants.1"]()}</h1>
+      <h1 class="text-2xl text-blue-500">{m["splash"]()}</h1>
     </article>
     <article class="flex flex-col gap-y-4 items-center w-[40%]">
       <section class="w-full flex flex-row gap-x-4 items-center">
