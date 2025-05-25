@@ -48,7 +48,6 @@
         <span class="italic text-md text-zinc-600 hover:cursor-text">
           {m["help.want_to_help"]()}
         </span>
-        &nbsp;
         <span
           class="italic text-md text-green-600 hover:text-green-500 hover:cursor-pointer"
         >
