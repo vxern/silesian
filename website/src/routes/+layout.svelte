@@ -1,4 +1,7 @@
 <script>
+  import constants from "$lib/constants";
+  import { m } from "$lib/paraglide/messages";
+
   let { children } = $props();
   import "../app.css";
 </script>
@@ -10,7 +13,7 @@
   />
   <meta
     name="description"
-    content="silesian.eu je zajta stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy."
+    content="{constants.projectName} je zajta stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy."
   />
   <meta name="subject" content="ślōnski słownik" />
   <meta name="copyright" content="silesian.eu" />
@@ -19,7 +22,7 @@
   <meta name="author" content="Dorian Oszczęda" />
   <meta name="url" content="https://silesian.eu" />
 
-  <title>silesian.eu — Dykcjōnŏrz</title>
+  <title>silesian.eu — {m.title()}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
