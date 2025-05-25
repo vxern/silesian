@@ -28,4 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 </svelte:head>
 
-{@render children()}
+<section
+  class="min-h-screen min-w-screen flex bg-zinc-900 font-bitter items-center text-center"
+>
+  {@render children()}
+</section>

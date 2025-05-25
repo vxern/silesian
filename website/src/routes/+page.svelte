@@ -42,52 +42,48 @@
 
 <svelte:window onkeydown={handleKeypress} onkeyup={handleKeypress} />
 
-<section
-  class="min-h-screen min-w-screen flex bg-zinc-900 font-bitter items-center text-center"
->
-  <section class="flex-1 flex flex-col gap-y-16 items-center">
-    <article>
-      <h1 class="text-8xl text-yellow-400 font-bold">
-        {constants.projectName}
-      </h1>
-      <h1 class="text-2xl text-blue-500">{m["splash"]()}</h1>
-    </article>
-    <article class="flex flex-col gap-y-4 items-center w-[40%]">
-      <section class="w-full flex flex-row gap-x-4 items-center">
-        <input
-          class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
-          type="text"
-          placeholder={m["search.placeholder"]()}
-          bind:this={input}
-        />
+<section class="flex-1 flex flex-col gap-y-16 items-center">
+  <article>
+    <h1 class="text-8xl text-yellow-400 font-bold">
+      {constants.projectName}
+    </h1>
+    <h1 class="text-2xl text-blue-500">{m["splash"]()}</h1>
+  </article>
+  <article class="flex flex-col gap-y-4 items-center w-[40%]">
+    <section class="w-full flex flex-row gap-x-4 items-center">
+      <input
+        class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
+        type="text"
+        placeholder={m["search.placeholder"]()}
+        bind:this={input}
+      />
+      <button
+        class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+      >
+        <IconArrowRightFill />
+      </button>
+    </section>
+    <section class="flex gap-x-4 w-full">
+      {#each specialLetters() as letter}
         <button
-          class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+          class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
+          onclick={() => insertLetter(letter)}
         >
-          <IconArrowRightFill />
+          {letter}
         </button>
-      </section>
-      <section class="flex gap-x-4 w-full">
-        {#each specialLetters() as letter}
-          <button
-            class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
-            onclick={() => insertLetter(letter)}
-          >
-            {letter}
-          </button>
-        {/each}
-      </section>
-    </article>
-    <article>
-      <span class="cursor-default text-sm">
-        <span class="italic text-zinc-600 hover:cursor-text">
-          {m["help.want_to_help"]()}
-        </span>
-        <span
-          class="italic text-green-600 hover:text-green-500 hover:cursor-pointer"
-        >
-          {m["help.find_out_how"]()}
-        </span>
+      {/each}
+    </section>
+  </article>
+  <article>
+    <span class="cursor-default text-sm">
+      <span class="italic text-zinc-600 hover:cursor-text">
+        {m["help.want_to_help"]()}
       </span>
-    </article>
-  </section>
+      <span
+        class="italic text-green-600 hover:text-green-500 hover:cursor-pointer"
+      >
+        {m["help.find_out_how"]()}
+      </span>
+    </span>
+  </article>
 </section>
