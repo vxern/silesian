@@ -3,7 +3,8 @@
   "dictionary": "Dykcjōnŏrz",
   "splash": "Dykcjōnŏrze pō naszymu",
   "search": {
-    "placeholder": "Ftōrego słowa szukŏcie?"
+    "placeholder": "Ftōrego słowa szukŏcie?",
+    "missing_word": "Wkludźcie słowo, coby go wyszukać."
   },
   "help": {
     "want_to_help": "Chcecie pōmōc?",

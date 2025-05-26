@@ -4,6 +4,8 @@
   import IconSettings from "~icons/mingcute/settings-6-line";
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
+  import tippy from "tippy.js";
+  import "tippy.js/themes/material.css";
 
   let capsLockEnabled = $state(false);
   let shiftEnabled = $state(false);
@@ -41,6 +43,26 @@
     input.setSelectionRange(selectionStart + 1, selectionStart + 1);
   }
 
+  function searchTermProvided() {
+    return input.value.trim().length > 0;
+  }
+
+  let submit;
+  let searchTooltip;
+
+  $effect(() => {
+    searchTooltip = tippy(input, {
+      content: m["search.missing_word"](),
+      trigger: "mouseenter focus",
+      triggerTarget: submit,
+      onShow: () => {
+        if (searchTermProvided()) {
+          return false;
+        }
+      },
+    });
+  });
+
   function onInputKeyPress(event) {
     if (event.key !== "Enter") {
       return;
@@ -50,9 +72,9 @@
   }
 
   function search() {
-    const value = input.value.trim();
-    if (value.length === 0) {
-      // TODO(vxern): If empty, show a tooltip instead of redirecting.
+    if (!searchTermProvided()) {
+      searchTooltip.hide();
+      searchTooltip.show();
       return;
     }
 
@@ -83,11 +105,13 @@
         type="text"
         placeholder={m["search.placeholder"]()}
         onkeydown={onInputKeyPress}
+        oninput={onInputChange}
         bind:this={input}
       />
       <button
         class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
         type="submit"
+        bind:this={submit}
         onclick={search}
       >
         <IconArrowRightFill />

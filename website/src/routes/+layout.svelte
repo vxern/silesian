@@ -1,9 +1,17 @@
 <script>
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
+  import tippy from "tippy.js";
+  import "tippy.js/animations/scale.css";
+  import "tippy.js/dist/tippy.css";
 
   let { children } = $props();
   import "../app.css";
+
+  tippy.setDefaultProps({
+    animation: "scale",
+    hideOnClick: true,
+  });
 </script>
 
 <svelte:head>
@@ -22,7 +30,7 @@
   <meta name="author" content="Dorian Oszczęda" />
   <meta name="url" content="https://silesian.eu" />
 
-  <title>silesian.eu — {m.dictionary()}</title>
+  <title>silesian.eu — {m["dictionary"]()}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
