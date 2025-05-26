@@ -29,7 +29,7 @@
 </svelte:head>
 
 <section
-  class="min-h-screen min-w-screen flex bg-zinc-900 font-bitter items-center text-center"
+  class="min-h-screen min-w-screen flex bg-zinc-900 font-bitter items-center justify-center text-center px-16"
 >
   {@render children()}
 </section>

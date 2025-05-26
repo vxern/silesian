@@ -1,13 +1,14 @@
 <script>
+  import { goto } from "$app/navigation";
+  import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
-  import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
 
   let capsLockEnabled = $state(false);
   let shiftEnabled = $state(false);
   let upperCaseEnabled = $derived(capsLockEnabled || shiftEnabled);
 
-  function handleKeypress(event) {
+  function onWindowKeyPress(event) {
     switch (event.key) {
       case "Shift":
         shiftEnabled = !shiftEnabled;
@@ -38,16 +39,34 @@
     input.focus();
     input.setSelectionRange(selectionStart + 1, selectionStart + 1);
   }
+
+  function onInputKeyPress(event) {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    search();
+  }
+
+  function search() {
+    const value = input.value.trim();
+    if (value.length === 0) {
+      // TODO(vxern): If empty, show a tooltip instead of redirecting.
+      return;
+    }
+
+    goto(encodeURI(`/word/${value}`));
+  }
 </script>
 
-<svelte:window onkeydown={handleKeypress} onkeyup={handleKeypress} />
+<svelte:window onkeydown={onWindowKeyPress} onkeyup={onWindowKeyPress} />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>
     <h1 class="text-8xl text-yellow-400 font-bold">
       {constants.projectName}
     </h1>
-    <h1 class="text-2xl text-blue-500">{m["splash"]()}</h1>
+    <h2 class="text-2xl text-blue-500">{m["splash"]()}</h2>
   </article>
   <article class="flex flex-col gap-y-4 items-center w-[40%]">
     <section class="w-full flex flex-row gap-x-4 items-center">
@@ -55,10 +74,13 @@
         class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
         type="text"
         placeholder={m["search.placeholder"]()}
+        onkeydown={onInputKeyPress}
         bind:this={input}
       />
       <button
         class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+        type="submit"
+        onclick={search}
       >
         <IconArrowRightFill />
       </button>
@@ -75,7 +97,7 @@
     </section>
   </article>
   <article>
-    <span class="cursor-default text-sm">
+    <h6 class="cursor-default text-sm">
       <span class="italic text-zinc-600 hover:cursor-text">
         {m["help.want_to_help"]()}
       </span>
@@ -84,6 +106,6 @@
       >
         {m["help.find_out_how"]()}
       </span>
-    </span>
+    </h6>
   </article>
 </section>
