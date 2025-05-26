@@ -5,10 +5,18 @@
   --font-bitter: "Bitter", sans-serif;
 }
 
-.tippy-box[data-theme~='silesian.eu'] {
-  @apply bg-zinc-700 text-zinc-400
+.tippy-box[data-theme~='info'] {
+  @apply bg-zinc-700 text-green-500 text-center
 }
 
-.tippy-box[data-theme~='silesian.eu']>.tippy-arrow::before {
+.tippy-box[data-theme~='info']>.tippy-arrow::before {
+  @apply text-zinc-700
+}
+
+.tippy-box[data-theme~='warning'] {
+  @apply bg-zinc-700 text-yellow-500 text-center
+}
+
+.tippy-box[data-theme~='warning']>.tippy-arrow::before {
   @apply text-zinc-700
 }

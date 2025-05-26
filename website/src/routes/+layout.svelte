@@ -2,16 +2,15 @@
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
-  import "tippy.js/animations/scale.css";
+  import "tippy.js/animations/shift-toward.css";
   import "tippy.js/dist/tippy.css";
 
   let { children } = $props();
   import "../app.css";
 
   tippy.setDefaultProps({
-    animation: "scale",
+    animation: "shift-toward",
     hideOnClick: true,
-    theme: "silesian.eu",
   });
 </script>
 

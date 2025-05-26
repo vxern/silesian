@@ -7,17 +7,18 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
 
-  let capsLockEnabled = $state(false);
-  let shiftEnabled = $state(false);
-  let upperCaseEnabled = $derived(capsLockEnabled || shiftEnabled);
+  let shiftEnabled = $state(undefined);
+  let capsLockEnabled = $state(undefined);
 
   function onWindowKeyDown(event) {
     switch (event.key) {
       case "Shift":
         shiftEnabled = true;
+        shiftReset = true;
         break;
       case "CapsLock":
         capsLockEnabled = true;
+        capsLockReset = true;
         break;
     }
   }
@@ -26,9 +27,11 @@
     switch (event.key) {
       case "Shift":
         shiftEnabled = false;
+        shiftReset = true;
         break;
       case "CapsLock":
         capsLockEnabled = false;
+        capsLockReset = true;
         break;
     }
   }
@@ -36,7 +39,7 @@
   let input;
 
   function specialLetters() {
-    if (upperCaseEnabled) {
+    if (shiftEnabled || capsLockEnabled) {
       return constants.specialLetters.map((letter) => letter.toUpperCase());
     }
 
@@ -67,7 +70,8 @@
       content: m["search.missing_word"](),
       trigger: "mouseenter focus",
       triggerTarget: submit,
-      placement: "left",
+      placement: "top-start",
+      theme: "info",
       onShow: () => {
         if (searchTermProvided()) {
           return false;
@@ -100,12 +104,64 @@
     goto(encodeURI(`/word/${input.value}`));
   }
 
+  let letters;
+  let lettersTooltip;
+
+  let shiftReset = $state(undefined);
+  let capsLockReset = $state(undefined);
+
+  function onBlurWindow() {
+    shiftReset = !shiftEnabled;
+    capsLockReset = !capsLockEnabled;
+
+    if (shiftReset && capsLockReset) {
+      return;
+    }
+
+    lettersTooltip.show();
+  }
+
+  $effect(() => {
+    if (shiftReset && capsLockReset) {
+      lettersTooltip?.hide();
+      return;
+    }
+
+    const content =
+      !shiftReset && !capsLockReset
+        ? m["search.reset_caps.both"]()
+        : !shiftReset
+          ? m["search.reset_caps.shift"]()
+          : m["search.reset_caps.caps_lock"]();
+    if (lettersTooltip) {
+      lettersTooltip.setContent(content);
+      return;
+    }
+
+    lettersTooltip = tippy(letters, {
+      content,
+      placement: "bottom",
+      trigger: "manual",
+      theme: "warning",
+      hideOnClick: false,
+      onShow: () => {
+        if (searchTermProvided()) {
+          return false;
+        }
+      },
+    });
+  });
+
   function openSettings() {
     goto("/settings");
   }
 </script>
 
-<svelte:window onkeydown={onWindowKeyDown} onkeyup={onWindowKeyUp} />
+<svelte:window
+  onkeydown={onWindowKeyDown}
+  onkeyup={onWindowKeyUp}
+  onblur={onBlurWindow}
+/>
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <button class="absolute top-8 right-8" onclick={openSettings}>
@@ -135,15 +191,17 @@
         <IconArrowRightFill />
       </button>
     </section>
-    <section class="flex gap-x-4 w-full">
-      {#each specialLetters() as letter}
-        <button
-          class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
-          onclick={() => insertSpecialLetter(letter)}
-        >
-          {letter}
-        </button>
-      {/each}
+    <section>
+      <article class="flex gap-x-4 w-full" bind:this={letters}>
+        {#each specialLetters() as letter}
+          <button
+            class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
+            onclick={() => insertSpecialLetter(letter)}
+          >
+            {letter}
+          </button>
+        {/each}
+      </article>
     </section>
   </article>
   <article>
