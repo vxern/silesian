@@ -1,6 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
+  import IconSettings from "~icons/mingcute/settings-6-line";
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
 
@@ -29,7 +30,7 @@
     return constants.specialLetters;
   }
 
-  function insertLetter(letter) {
+  function insertSpecialLetter(letter) {
     const { selectionStart, selectionEnd } = input;
 
     input.value =
@@ -57,11 +58,18 @@
 
     goto(encodeURI(`/word/${value}`));
   }
+
+  function openSettings() {
+    goto("/settings");
+  }
 </script>
 
 <svelte:window onkeydown={onWindowKeyPress} onkeyup={onWindowKeyPress} />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
+  <button class="absolute top-8 right-8" onclick={openSettings}>
+    <IconSettings class="size-8 text-zinc-500 hover:text-zinc-400" />
+  </button>
   <article>
     <h1 class="text-8xl text-yellow-400 font-bold">
       {constants.projectName}
@@ -89,7 +97,7 @@
       {#each specialLetters() as letter}
         <button
           class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
-          onclick={() => insertLetter(letter)}
+          onclick={() => insertSpecialLetter(letter)}
         >
           {letter}
         </button>
