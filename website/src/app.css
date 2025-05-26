@@ -4,3 +4,11 @@
 @theme {
   --font-bitter: "Bitter", sans-serif;
 }
+
+.tippy-box[data-theme~='silesian.eu'] {
+  @apply bg-zinc-700 text-zinc-400
+}
+
+.tippy-box[data-theme~='silesian.eu']>.tippy-arrow::before {
+  @apply text-zinc-700
+}

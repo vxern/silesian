@@ -55,6 +55,7 @@
       content: m["search.missing_word"](),
       trigger: "mouseenter focus",
       triggerTarget: submit,
+      placement: "left",
       onShow: () => {
         if (searchTermProvided()) {
           return false;

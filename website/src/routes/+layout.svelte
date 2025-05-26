@@ -11,6 +11,7 @@
   tippy.setDefaultProps({
     animation: "scale",
     hideOnClick: true,
+    theme: "silesian.eu",
   });
 </script>
 
