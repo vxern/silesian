@@ -7,6 +7,12 @@
   },
   "help": {
     "want_to_help": "Chcecie pōmōc?",
-    "find_out_how": "Przewiydzcie sie jako to mogecie zrobić."
+    "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
+  },
+  "word": {
+    "results": {
+      "exact": "Słowo",
+      "approximate": "Wyniki lŏ słowa"
+    }
   }
 }
