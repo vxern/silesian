@@ -1,7 +1,17 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "dictionary": "Dykcjōnŏrz",
-  "splash": "Dykcjōnŏrze pō naszymu",
+  "splashes": {
+    "one": "Dykcjōnŏrze ślōnskij gŏdki",
+    "two": "Dykcjōnŏrze ślōnskigo jynzyka",
+    "three": "Dykcjōnŏrze ślōnskij szprachy",
+    "four": "Dykcjōnŏrze ślōnskij mŏwy",
+    "five": "Dykcjōnŏrze ślōnskij rzeczy",
+    "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
+    "seven": "Dykcjōnŏrze ślōnskich narzeczy",
+    "eight": "Dykcjōnŏrze ślōnskigo etnolektu",
+    "nine": "Dykcjōnŏrze pō naszymu"
+  },
   "search": {
     "placeholder": "Ftōrego słowa szukŏcie?",
     "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",

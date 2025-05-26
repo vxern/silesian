@@ -7,6 +7,19 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
 
+  const splashKeys = [
+    "splashes.one",
+    "splashes.two",
+    "splashes.three",
+    "splashes.four",
+    "splashes.five",
+    "splashes.six",
+    "splashes.seven",
+    "splashes.eight",
+    "splashes.nine",
+  ];
+  const splash = m[splashKeys[Math.floor(Math.random() * splashKeys.length)]]();
+
   let shiftEnabled = $state(undefined);
   let capsLockEnabled = $state(undefined);
 
@@ -171,7 +184,7 @@
     <h1 class="text-8xl text-yellow-400 font-bold">
       {constants.projectName}
     </h1>
-    <h2 class="text-2xl text-blue-500">{m["splash"]()}</h2>
+    <h2 class="text-2xl text-blue-500">{splash}</h2>
   </article>
   <article class="flex flex-col gap-y-4 items-center w-[40%]">
     <section class="w-full flex flex-row gap-x-4 items-center">
