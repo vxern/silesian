@@ -44,7 +44,8 @@
   }
 
   function searchTermProvided() {
-    return input.value.trim().length > 0;
+    input.value = input.value.trim();
+    return input.value.length > 0;
   }
 
   let submit;
@@ -79,7 +80,7 @@
       return;
     }
 
-    goto(encodeURI(`/word/${value}`));
+    goto(encodeURI(`/word/${input.value}`));
   }
 
   function openSettings() {
@@ -106,7 +107,6 @@
         type="text"
         placeholder={m["search.placeholder"]()}
         onkeydown={onInputKeyPress}
-        oninput={onInputChange}
         bind:this={input}
       />
       <button
