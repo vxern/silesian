@@ -11,13 +11,24 @@
   let shiftEnabled = $state(false);
   let upperCaseEnabled = $derived(capsLockEnabled || shiftEnabled);
 
-  function onWindowKeyPress(event) {
+  function onWindowKeyDown(event) {
     switch (event.key) {
       case "Shift":
-        shiftEnabled = !shiftEnabled;
+        shiftEnabled = true;
         break;
       case "CapsLock":
-        capsLockEnabled = !capsLockEnabled;
+        capsLockEnabled = true;
+        break;
+    }
+  }
+
+  function onWindowKeyUp(event) {
+    switch (event.key) {
+      case "Shift":
+        shiftEnabled = false;
+        break;
+      case "CapsLock":
+        capsLockEnabled = false;
         break;
     }
   }
@@ -66,6 +77,12 @@
   });
 
   function onInputKeyPress(event) {
+    if (event.getModifierState("Shift")) {
+      shiftEnabled = true;
+    } else if (event.getModifierState("CapsLock")) {
+      capsLockEnabled = true;
+    }
+
     if (event.key !== "Enter") {
       return;
     }
@@ -88,7 +105,7 @@
   }
 </script>
 
-<svelte:window onkeydown={onWindowKeyPress} onkeyup={onWindowKeyPress} />
+<svelte:window onkeydown={onWindowKeyDown} onkeyup={onWindowKeyUp} />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <button class="absolute top-8 right-8" onclick={openSettings}>
