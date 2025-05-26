@@ -186,7 +186,7 @@
     </h1>
     <h2 class="text-2xl text-blue-500">{splash}</h2>
   </article>
-  <article class="flex flex-col gap-y-4 items-center w-[40%]">
+  <article class="flex flex-col gap-y-4 items-center w-[66%]">
     <section class="w-full flex flex-row gap-x-4 items-center">
       <input
         class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
