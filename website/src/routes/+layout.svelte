@@ -30,7 +30,7 @@
   <meta name="author" content="Dorian Oszczęda" />
   <meta name="url" content="https://silesian.eu" />
 
-  <title>silesian.eu — {m["dictionary"]()}</title>
+  <title>silesian.eu</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />

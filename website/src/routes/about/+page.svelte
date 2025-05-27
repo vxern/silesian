@@ -1,17 +1,14 @@
 <script>
   import { m } from "$lib/paraglide/messages";
-  import { page } from "$app/state";
   import Page from "../../components/page/index.js";
-
-  const { word } = page.params;
 </script>
 
 <svelte:head>
-  <title>silesian.eu — {m["routes.settings.title"]()}</title>
+  <title>silesian.eu — {m["routes.about.title"]()}</title>
 </svelte:head>
 
 <Page.Root>
   <Page.Header>
-    <Page.Title title={m["routes.settings.title"]()} />
+    <Page.Title title={m["routes.about.title"]()} />
   </Page.Header>
 </Page.Root>
