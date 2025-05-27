@@ -171,7 +171,7 @@
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+      class="rounded-lg h-fit p-2 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
       type="submit"
       bind:this={submitElement}
       onclick={search}
