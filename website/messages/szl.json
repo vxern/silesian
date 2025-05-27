@@ -1,34 +1,43 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "dictionary": "Dykcjōnŏrz",
-  "splashes": {
-    "one": "Dykcjōnŏrze ślōnskij gŏdki",
-    "two": "Dykcjōnŏrze ślōnskigo jynzyka",
-    "three": "Dykcjōnŏrze ślōnskij szprachy",
-    "four": "Dykcjōnŏrze ślōnskij mŏwy",
-    "five": "Dykcjōnŏrze ślōnskij rzeczy",
-    "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
-    "seven": "Dykcjōnŏrze ślōnskich narzeczy",
-    "eight": "Dykcjōnŏrze ślōnskigo etnolektu",
-    "nine": "Dykcjōnŏrze pō naszymu"
-  },
-  "search": {
-    "placeholder": "Ftōrego słowa szukŏcie?",
-    "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
-    "reset_caps": {
-      "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
-      "caps_lock": "Proszymy jeszcze rŏz naciś tasty CapsLock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
-      "both": "Proszymy jeszcze rŏz naciś tastōw Shift a CapsLock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
+  "components": {
+    "search_bar": {
+      "placeholder": "Ftōrego słowa szukŏcie?",
+      "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
+      "reset_caps": {
+        "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
+        "caps_lock": "Proszymy jeszcze rŏz naciś tasty CapsLock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
+        "both": "Proszymy jeszcze rŏz naciś tastōw Shift a CapsLock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
+      }
     }
   },
-  "help": {
-    "want_to_help": "Chcecie pōmōc?",
-    "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
-  },
-  "word": {
-    "results": {
-      "exact": "Słowo",
-      "approximate": "Wyniki lŏ słowa"
+  "routes": {
+    "home": {
+      "title": "Dykcjōnŏrz",
+      "splashes": {
+        "one": "Dykcjōnŏrze ślōnskij gŏdki",
+        "two": "Dykcjōnŏrze ślōnskigo jynzyka",
+        "three": "Dykcjōnŏrze ślōnskij szprachy",
+        "four": "Dykcjōnŏrze ślōnskij mŏwy",
+        "five": "Dykcjōnŏrze ślōnskij rzeczy",
+        "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
+        "seven": "Dykcjōnŏrze ślōnskich narzeczy",
+        "eight": "Dykcjōnŏrze ślōnskigo etnolektu",
+        "nine": "Dykcjōnŏrze pō naszymu"
+      },
+      "help": {
+        "want_to_help": "Chcecie pōmōc?",
+        "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
+      }
+    },
+    "word": {
+      "title": "Wyniki lŏ wyszukowaniŏ"
+    },
+    "settings": {
+      "title": "Nasztalowania"
+    },
+    "about": {
+      "title": "Ô zajcie"
     }
   }
 }
