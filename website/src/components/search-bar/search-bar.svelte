@@ -105,7 +105,7 @@
   }
 
   $effect(() => {
-    inputElement.value = word;
+    inputElement.value = word ?? "";
   });
 
   $effect(() => {
