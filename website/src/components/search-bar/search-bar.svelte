@@ -7,7 +7,7 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
 
-  const { word } = page.params;
+  const { word, compact } = page.params;
 
   let shiftEnabled = $state(undefined);
   let capsLockEnabled = $state(undefined);
@@ -164,7 +164,7 @@
 <article class="flex flex-col gap-y-4 items-center w-[66%]">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
-      class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
+      class="rounded-lg w-full p-3 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
       type="text"
       placeholder={m["components.search_bar.placeholder"]()}
       onkeydown={onInputKeyPress}
