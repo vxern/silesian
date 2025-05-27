@@ -1,0 +1,194 @@
+<script>
+  import { goto } from "$app/navigation";
+  import { page } from "$app/state";
+  import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
+  import constants from "$lib/constants";
+  import { m } from "$lib/paraglide/messages";
+  import tippy from "tippy.js";
+  import "tippy.js/themes/material.css";
+
+  const { word } = page.params;
+
+  let shiftEnabled = $state(undefined);
+  let capsLockEnabled = $state(undefined);
+  let shiftReset = $state(undefined);
+  let capsLockReset = $state(undefined);
+  let inputElement;
+  let submitElement;
+  let lettersElement;
+  let missingWordTooltip;
+  let needToResetCapsTooltip;
+
+  function onWindowKeyDown(event) {
+    switch (event.key) {
+      case "Shift":
+        shiftEnabled = true;
+        shiftReset = true;
+        break;
+      case "CapsLock":
+        capsLockEnabled = true;
+        capsLockReset = true;
+        break;
+    }
+  }
+
+  function onWindowKeyUp(event) {
+    switch (event.key) {
+      case "Shift":
+        shiftEnabled = false;
+        shiftReset = true;
+        break;
+      case "CapsLock":
+        capsLockEnabled = false;
+        capsLockReset = true;
+        break;
+    }
+  }
+
+  function specialLetters() {
+    if (shiftEnabled || capsLockEnabled) {
+      return constants.specialLetters.map((letter) => letter.toUpperCase());
+    }
+
+    return constants.specialLetters;
+  }
+
+  function insertSpecialLetter(letter) {
+    const { selectionStart, selectionEnd } = inputElement;
+
+    inputElement.value =
+      inputElement.value.substring(0, selectionStart) +
+      letter +
+      inputElement.value.substring(selectionEnd);
+    inputElement.focus();
+    inputElement.setSelectionRange(selectionStart + 1, selectionStart + 1);
+  }
+
+  function searchTermProvided() {
+    inputElement.value = inputElement.value.trim();
+    return inputElement.value.length > 0;
+  }
+
+  function onInputKeyPress(event) {
+    if (event.getModifierState("Shift")) {
+      shiftEnabled = true;
+    } else if (event.getModifierState("CapsLock")) {
+      capsLockEnabled = true;
+    }
+
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    search();
+  }
+
+  function search() {
+    if (!searchTermProvided()) {
+      missingWordTooltip.hide();
+      missingWordTooltip.show();
+      return;
+    }
+
+    goto(encodeURI(`/word/${inputElement.value}`));
+  }
+
+  function onBlurWindow() {
+    shiftReset = !shiftEnabled;
+    capsLockReset = !capsLockEnabled;
+
+    if (shiftReset && capsLockReset) {
+      return;
+    }
+
+    needToResetCapsTooltip.show();
+  }
+
+  $effect(() => {
+    inputElement.value = word;
+  });
+
+  $effect(() => {
+    missingWordTooltip = tippy(inputElement, {
+      content: m["components.search_bar.missing_word"](),
+      trigger: "mouseenter focus",
+      triggerTarget: submitElement,
+      placement: "top-start",
+      theme: "info",
+      onShow: () => {
+        if (searchTermProvided()) {
+          return false;
+        }
+      },
+    });
+  });
+
+  $effect(() => {
+    if (shiftReset && capsLockReset) {
+      needToResetCapsTooltip?.hide();
+      return;
+    }
+
+    const content =
+      !shiftReset && !capsLockReset
+        ? m["components.search_bar.reset_caps.both"]()
+        : !shiftReset
+          ? m["components.search_bar.reset_caps.shift"]()
+          : m["components.search_bar.reset_caps.caps_lock"]();
+    if (needToResetCapsTooltip) {
+      needToResetCapsTooltip.setContent(content);
+      return;
+    }
+
+    needToResetCapsTooltip = tippy(lettersElement, {
+      content,
+      placement: "bottom",
+      trigger: "manual",
+      theme: "warning",
+      hideOnClick: false,
+      onShow: () => {
+        if (searchTermProvided()) {
+          return false;
+        }
+      },
+    });
+  });
+</script>
+
+<svelte:window
+  onkeydown={onWindowKeyDown}
+  onkeyup={onWindowKeyUp}
+  onblur={onBlurWindow}
+/>
+
+<article class="flex flex-col gap-y-4 items-center w-[66%]">
+  <section class="w-full flex flex-row gap-x-4 items-center">
+    <input
+      class="rounded-lg w-full p-4 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
+      type="text"
+      placeholder={m["components.search_bar.placeholder"]()}
+      onkeydown={onInputKeyPress}
+      bind:this={inputElement}
+    />
+    <button
+      class="rounded-lg h-fit p-4 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+      type="submit"
+      bind:this={submitElement}
+      onclick={search}
+    >
+      <IconArrowRightFill />
+    </button>
+  </section>
+  <section>
+    <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
+      {#each specialLetters() as letter}
+        <button
+          class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
+          onclick={() => insertSpecialLetter(letter)}
+        >
+          {letter}
+        </button>
+      {/each}
+    </article>
+  </section>
+</article>
