@@ -2,7 +2,7 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "components": {
     "search_bar": {
-      "placeholder": "Ftōrego słowa szukŏcie?",
+      "placeholder": "Jakigo słowa szukŏcie?",
       "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
       "reset_caps": {
         "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
