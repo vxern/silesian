@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter&display=swap");
 @import "tailwindcss";
 
+@plugin "tailwind-scrollbar";
+
 @theme {
   --font-bitter: "Bitter", sans-serif;
 }
