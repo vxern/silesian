@@ -1,7 +1,7 @@
-import Root from "./page.svelte";
-import Card from "./page-card.svelte";
 import Contents from "./page-contents.svelte";
+import Divider from "./page-divider.svelte";
 import Header from "./page-header.svelte";
 import Title from "./page-title.svelte";
+import Root from "./page.svelte";
 
-export default { Root, Card, Contents, Header, Title };
+export default { Contents, Divider, Header, Title, Root };

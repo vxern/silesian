@@ -1,6 +1,4 @@
 <script>
-  import { goto } from "$app/navigation";
-  import IconSettings from "~icons/mingcute/settings-6-line";
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
   import "tippy.js/themes/material.css";
@@ -18,16 +16,9 @@
     "routes.home.splashes.nine",
   ];
   const splash = m[splashKeys[Math.floor(Math.random() * splashKeys.length)]]();
-
-  function openSettings() {
-    goto("/settings");
-  }
 </script>
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
-  <button class="absolute top-8 right-8" onclick={openSettings}>
-    <IconSettings class="size-8 text-zinc-500 hover:text-zinc-400" />
-  </button>
   <article>
     <h1 class="text-8xl text-yellow-400 font-bold">
       {constants.projectName}

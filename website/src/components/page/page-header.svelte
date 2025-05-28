@@ -2,6 +2,6 @@
   const { children } = $props();
 </script>
 
-<article class="flex justify-center">
+<article class="flex flex-col items-center">
   {@render children?.()}
 </article>

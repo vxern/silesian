@@ -7,7 +7,7 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
 
-  const { word, compact } = page.params;
+  const { word } = page.params;
 
   let shiftEnabled = $state(undefined);
   let capsLockEnabled = $state(undefined);
@@ -161,17 +161,17 @@
   onblur={onBlurWindow}
 />
 
-<article class="flex flex-col gap-y-4 items-center w-[66%]">
+<article class="flex flex-col gap-y-4 items-center w-full">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
-      class="rounded-lg w-full p-3 text-lg bg-zinc-700 text-zinc-300 placeholder:text-zinc-400"
+      class="rounded-lg w-full p-3 text-lg bg-zinc-800 text-zinc-300 placeholder:text-zinc-400"
       type="text"
       placeholder={m["components.search_bar.placeholder"]()}
       onkeydown={onInputKeyPress}
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg h-fit p-2 text-lg font-bold bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+      class="rounded-lg h-fit p-2 text-lg font-bold cursor-pointer bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
       type="submit"
       bind:this={submitElement}
       onclick={search}
@@ -183,7 +183,7 @@
     <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
       {#each specialLetters() as letter}
         <button
-          class="rounded-lg size-8 text-lg font-bold bg-zinc-700 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
+          class="rounded-lg size-8 text-lg font-bold cursor-pointer bg-zinc-800 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
           onclick={() => insertSpecialLetter(letter)}
         >
           {letter}

@@ -2,6 +2,6 @@
   const { children } = $props();
 </script>
 
-<section class="w-full flex flex-col gap-y-12">
+<section class="top-0 flex flex-col gap-y-6 w-full">
   {@render children?.()}
 </section>
