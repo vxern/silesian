@@ -90,6 +90,9 @@
       return;
     }
 
+    missingWordTooltip.destroy();
+    needToResetCapsTooltip.destroy();
+
     goto(encodeURI(`/word/${inputElement.value}`));
   }
 
@@ -173,6 +176,7 @@
     <button
       class="rounded-lg h-fit p-2 text-lg font-bold cursor-pointer bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
       type="submit"
+      data-sveltekit-reload
       bind:this={submitElement}
       onclick={search}
     >
