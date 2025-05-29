@@ -22,7 +22,7 @@
   <!-- Checked by hand. -->
   - `pol` [Słownik śląski](https://www.slownikslaski.pl/), author: `unknown`, entries: `>2,500`
   <!-- Checked by hand. -->
-  - `pol` [Słownik](https://www.antryj.pl/category/slownik/), author: `unknown`, entries: `>800`
+  - `pol` [Słownik](https://www.antryj.pl/category/slownik/), author: `Zbigniew Markowski`, entries: `>800`
   <!-- Checked by hand. -->
   - `pol` [Słownik gwarowy](https://www.sbc.org.pl/dlibra/publication/880766/edition/802420), author: `Adolf Dygacz`, entries: `~85`
   <!-- Checked by hand. -->
