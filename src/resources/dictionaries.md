@@ -30,8 +30,6 @@
   <!-- Imported into GoldenDict and checked the number of articles. -->
   - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
   <!-- ❌ Not checked the number of entries. -->
-  - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
-  <!-- ❌ Not checked the number of entries. -->
   - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
@@ -157,6 +155,8 @@
     - `wio` [Słownik](https://jozef.wiora.pl/szl/slownik.pdf), author: `Józef Wiora`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownik gwary strzeleckiej](http://moreantiqua.com/slownik-gwary-strzeleckiej-2), author: `unknown`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` [Wörterbuch der Oberschlesischen Sprache](http://www.dr-lazik.de/), author: `Wolfgang Theodor Lazik`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `🧩` `pol` [Słownik starych Siołkowic w powiecie opolskim](https://www.opole-wbp.sowa.pl/index.php?KatID=0&typ=record&001=Op2006059002), author: `Alfred Zaręba`, entries: `uncounted`
     
