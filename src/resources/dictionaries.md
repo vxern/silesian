@@ -116,13 +116,9 @@
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Mały słownik gwary Górnego Śląska](https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155), authors: `Bożena Cząstka-Szymon`, `Jerzy Ludwig`, `Helena Synowiec`, entries: `uncounted`, ISBN: `9788391377703`
   <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
-  <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Z badań nad przeszłością dialektu śląskiego. 2, Zbiór polskich słów i wyrażeń na górnośląski język przetłumaczonych 1821](https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887), authors: `Józef Mayer`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Atlas językowy Śląska](https://rcin.org.pl/dlibra/publication/43411), author: `Alfred Zaręba`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Słownik gwarowy Śląska](https://www.bu.umk.pl/wymiana/index.php?10503,slownik-gwarowy-slaska-stanislaw-bak-stanislaw-rospond.-opole-instytut-slaski-1962.-26-2014-140.), authors: `Stanisław Bąk`, `Stanisław Rospond`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
@@ -138,11 +134,7 @@
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `pol` [Ilustrowany słownik gwary śląskiej](https://integro.bs.katowice.pl/ici/recorddetail?id=0033507219298), author: `Marek Szołtysek`, entries: `uncounted`, ISBN: `8390928647`
   <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🧩` `adh` [Czasowniki ślõski](https://opac.r-sl.pl/953601047942/szczeponek-andrzej/czasowniki-slaskie?internalNav=1&bibFilter=95), author: `Andrzej Szczepōnek`, entries: `uncounted`
+  - `🧩` `adh` [Czasowniki ślõski](https://opac.r-sl.pl/953601047942/szczeponek-andrzej/czasowniki-slaskie?internalNav=1&bibFilter=95), author: `Andrzej Szczeponek`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `🧩` `adh` [Rýchtig gryfno godka](https://lubimyczytac.pl/ksiazka/4031580/rychtig-gryfno-godka), author: `Dariusz Dyrda`, entries: `uncounted`, ISBN: `9788392786542`
   <!-- ❌ Not checked the number of entries. -->
@@ -155,7 +147,9 @@
   - ### Prudnik
 
     <!-- Checked by hand. -->
-    - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `unknown`, entries: `>750`
+    - `śla/E` [Słownik śląsko-polski](https://geudka.eu/slownik/), author: `Robert Hellfeier`, entries: `>750`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🧩` `pol` [Słownictwo Dzierżysławic w powiecie prudnickim](https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ), author: `Feliks Pluta`, entries: `uncounted`, TIN: `T06134962`
 
   - ### Opole
 
@@ -185,6 +179,13 @@
     <!-- ❌ Not checked the number of entries. -->
     - `🧩` `pol` [Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)](https://silling.org/slownik/Aneks:Bystro%C5%84_-_Przyczynek_do_dialektologii_polskiej_(z_narzecza_Lach%C3%B3w_szl%C4%85skich)) (`missing` <ins>Original</ins>), author: `Jan Bystroń`, entries: `uncounted`
 
+  - ### Borderlands Silesian-Lesser Polish
+   
+    <!-- ❌ Not checked the number of entries. -->
+    - `🧩` `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🧩` `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
+
   - ### Cieszyn
 
     <!-- Stated on the page. -->
@@ -197,6 +198,8 @@
     - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
     <!-- Checked by hand, not an exact number by any means. -->
     - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🧩` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
 
   - ### Lower Silesia
 
