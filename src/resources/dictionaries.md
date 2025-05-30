@@ -206,6 +206,8 @@
     - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
     <!-- ❌ Not checked the number of entries. -->
     - `🧩` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🧩` `pol` [2675 wyrażeń gwarowych, używanych w potocznej mowie przez rdzenną ludność wsi Zebrzydowice k/ Cieszyna](https://sbc.org.pl/dlibra/publication/820194/edition/754268), author: `Karol Klocek`, entries: `uncounted`, ISBN: `unknown`
 
   - ### Lower Silesia
 
