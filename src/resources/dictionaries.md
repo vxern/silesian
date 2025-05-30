@@ -34,6 +34,8 @@
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
     - <details>
 
@@ -56,6 +58,10 @@
       - [Volume 2](https://sbc.org.pl/dlibra/publication/958234)
 
       </details>
+  <!-- ❌ Not checked the number of entries. -->
+  - `deu` [Sprachmischung in Oberschlesien](https://sbc.org.pl/dlibra/publication/381621/edition/359601), author: `Reinhold Olesch`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `deu` [Die slavischen Dialekte Oberschlesiens](https://sbc.org.pl/dlibra/publication/960723/edition/870378), author: `Reinhold Olesch`, entries: `uncounted`
   <!-- Checked by hand. -->
   - `🌿` `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
