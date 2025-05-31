@@ -43,8 +43,7 @@
         "work": "Werk",
         "authors": {
           "authors": "Autorzi",
-          "community": "Społeczność",
-          "unknown": "?"
+          "community": "Społeczność"
         },
         "licence": {
           "licence": "Licyncyjŏ",
@@ -57,8 +56,14 @@
           "limited": "ôgraniczōny",
           "open": "dostympny"
         },
-        "progress": "Fōrtszrit"
+        "progress": {
+          "progress": "Fōrtszrit",
+          "numbers": "{imported}/{total}",
+          "percentage": "{percentage}%"
+        }
       }
     }
-  }
+  },
+  "unknown": "?",
+  "none": "—"
 }
