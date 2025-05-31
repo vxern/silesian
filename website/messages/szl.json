@@ -41,7 +41,11 @@
       "title": "Zdrzōdła",
       "table": {
         "work": "Werk",
-        "authors": "Autorzi",
+        "authors": {
+          "authors": "Autorzi",
+          "community": "Społeczność",
+          "unknown": "?"
+        },
         "licence": {
           "licence": "Licyncyjŏ",
           "proprietary": "zastrzyżōnŏ",

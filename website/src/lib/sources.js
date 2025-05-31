@@ -24,7 +24,7 @@ export default {
     link: "https://en.wiktionary.org",
     licence: "CC BY-SA 4.0",
     access: "open",
-    authors: [],
+    authors: "community",
   },
   "neblik+orliński": {
     name: "Dykcjōnorz",

@@ -19,17 +19,27 @@
     <table class="border-separate border-spacing-1 text-zinc-300 text-left">
       <thead class="text-blue-400">
         <tr>
-          <th scope="col">{m["routes.sources.table.work"]()}</th>
-          <th scope="col">{m["routes.sources.table.authors"]()}</th>
-          <th scope="col">{m["routes.sources.table.access.access"]()}</th>
-          <th scope="col">{m["routes.sources.table.licence.licence"]()}</th>
-          <th scope="col">{m["routes.sources.table.progress"]()}</th>
+          <th scope="col" class="border-b-1 border-b-zinc-700">
+            {m["routes.sources.table.work"]()}
+          </th>
+          <th scope="col" class="border-b-1 border-b-zinc-700">
+            {m["routes.sources.table.authors.authors"]()}
+          </th>
+          <th scope="col" class="border-b-1 border-b-zinc-700">
+            {m["routes.sources.table.access.access"]()}
+          </th>
+          <th scope="col" class="border-b-1 border-b-zinc-700">
+            {m["routes.sources.table.licence.licence"]()}
+          </th>
+          <th scope="col" class="border-b-1 border-b-zinc-700">
+            {m["routes.sources.table.progress"]()}
+          </th>
         </tr>
       </thead>
       <tbody>
         {#each Object.values(sources) as dictionary}
           <tr>
-            <th scope="row" class="w-[30%]">
+            <th scope="row" class="w-[30%] border-b-1 border-b-zinc-800">
               {#if dictionary.link}
                 <a href={dictionary.link} class="underline underline-offset-3">
                   {dictionary.name}
@@ -38,32 +48,42 @@
                 {dictionary.name}
               {/if}
             </th>
-            <td class="w-[30%]">
-              {dictionary.authors.join(" · ")}
+            <td class="w-[30%] border-b-1 border-b-zinc-800">
+              {#if dictionary.authors === "community"}
+                <i>
+                  {m["routes.sources.table.authors.community"]()}
+                </i>
+              {:else if dictionary.authors.length > 0}
+                {dictionary.authors.join(" · ")}
+              {:else}
+                <i>
+                  {m["routes.sources.table.authors.unknown"]()}
+                </i>
+              {/if}
             </td>
-            <td class="w-[10%]">
+            <td class="w-[10%] border-b-1 border-b-zinc-800">
               {#if dictionary.access === "closed"}
                 <span class="text-red-400">
-                  {m[`routes.sources.table.access.closed`]()}
+                  {m["routes.sources.table.access.closed"]()}
                 </span>
               {:else if dictionary.access === "limited"}
                 <span class="text-yellow-400">
-                  {m[`routes.sources.table.access.limited`]()}
+                  {m["routes.sources.table.access.limited"]()}
                 </span>
-              {:else}
+              {:else if dictionary.access === "open"}
                 <span class="text-green-400">
-                  {m[`routes.sources.table.access.open`]()}
+                  {m["routes.sources.table.access.open"]()}
                 </span>
               {/if}
             </td>
-            <td class="w-[15%]">
+            <td class="w-[15%] border-b-1 border-b-zinc-800">
               {#if dictionary.licence === "proprietary"}
                 <span class="text-red-400">
-                  {m[`routes.sources.table.licence.proprietary`]()}
+                  {m["routes.sources.table.licence.proprietary"]()}
                 </span>
               {:else if dictionary.licence === "public"}
                 <span class="text-green-400">
-                  {m[`routes.sources.table.licence.public`]()}
+                  {m["routes.sources.table.licence.public"]()}
                 </span>
               {:else}
                 <span class="text-green-400">
@@ -71,7 +91,7 @@
                 </span>
               {/if}
             </td>
-            <td class="w-[5%]">0%</td>
+            <td class="w-[5%] border-b-1 border-b-zinc-800">0%</td>
           </tr>
         {/each}
       </tbody>
