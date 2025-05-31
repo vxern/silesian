@@ -224,7 +224,7 @@
         </article>
         <article class="flex gap-x-1 items-center justify-end">
           {#each ["silling.org"] as label}
-            <span class="text-zinc-600">Zdrzōdło:</span>
+            <span class="text-zinc-600">{m["routes.word.source"]()}:</span>
             <span class="rounded-md text-blue-400 font-bold text-end">
               {label}
             </span>

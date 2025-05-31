@@ -16,49 +16,57 @@ export default {
     name: "SileSłownik",
     link: "https://silling.org/slownik",
     licence: "CC BY-NC-SA 4.0",
+    access: "open",
     authors: ["Grzegorz Kulik"],
   },
   "en.wiktionary.org": {
     name: "Wiktionary",
     link: "https://en.wiktionary.org",
     licence: "CC BY-SA 4.0",
-    authors: ["various"], 
+    access: "open",
+    authors: [],
   },
   "neblik+orliński": {
     name: "Dykcjōnorz",
     link: "https://dykcjonorz.eu",
     licence: "proprietary",
+    access: "open",
     authors: ["Stanisław Neblik", "Wojciech Orliński"]
-  }
+  },
   "syniawa": {
     name: "Dykcjůnorz polsko-ślůnski",
     // TODO(vxern): Link?
     link: null,
     licence: "proprietary",
+    access: "open",
     authors: ["Mirosław Syniawa"],
   },
   "wencel": {
     name: "Dykcjůnôrz ślų̊sko-polski",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Aleksandra Wencel"],
   },
   "kosmała/DPŚ": {
     name: "Dykcjōnôrz polsko-ślonskiy",
     link: "https://sbc.org.pl/dlibra/publication/648390",
     licence: "proprietary",
+    access: "open",
     authors: ["Eugeniusz Kosmała"],
   },
   "kosmała/DŚP": {
     name: "Dykcjōnôrz ślonsko-polski",
     link: "https://sbc.org.pl/dlibra/publication/648393",
     licence: "proprietary",
+    access: "open",
     authors: ["Eugeniusz Kosmała"],
   },
   "lerch-wójcik": {
     name: "Słowniczek wyrazów śląskich",
     link: "https://bonclok.pl/slowniczek-wyrazow-slaskich.html",
     licence: "proprietary",
+    access: "open",
     authors: ["Anna Lerch-Wójcik"],
   },
   // TODO(vxern): What's this guy's real name?
@@ -66,48 +74,56 @@ export default {
     name: "Słownik śl𝑜nski",
     link: "https://www.slownikslaski.pl",
     licence: "proprietary",
+    access: "open",
     authors: [],
   },
   "markowski": {
     name: "Słownik",
     link: "https://www.antryj.pl/category/slownik/",
     licence: "proprietary",
+    access: "open",
     authors: ["Zbigniew Markowski"],
   },
   "dygacz/słownik": {
     name: "Słownik gwarowy",
     link: "https://www.sbc.org.pl/dlibra/publication/880766/edition/802420",
     licence: "public",
+    access: "open",
     authors: ["Adolf Dygacz"],
   },
   "dygacz/wyrazy": {
     name: "Słownik wyrazów gwarowych i technicznych",
     link: "https://www.sbc.org.pl/dlibra/publication/861664/edition/788851",
     licence: "public",
+    access: "open",
     authors: ["Adolf Dygacz"],
   },
   "przywara": {
     name: "Narzecza śląskie",
     link: "https://sbc.org.pl/dlibra/publication/68791/edition/64871",
     licence: "public",
+    access: "open",
     authors: ["Michał Przywara"],
   },
   "lazik": {
     name: "Kleines phraseologisches Wörterbuch der oberschlesischen Sprache im Bezirk Oppeln und Umgebung",
     link: "http://www.dr-lazik.de/",
     licence: "proprietary",
+    access: "open",
     authors: ["Wolfgang Lazik"],
   },
   "parczewska": {
     name: "Przyczynki do słownika gwary śląskiej",
     link: "https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej",
     licence: "proprietary",
+    access: "open",
     authors: ["Melania Parczewska"],
   },
   "nasza.trzynastka": {
     name: "Mały słownik gwary śląskiej",
     link: "https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern): Who's the author?
     authors: [],
   },
@@ -115,18 +131,21 @@ export default {
     name: "Dialekty polskie Śląska",
     link: "https://sbc.org.pl/dlibra/publication/600216/edition/564609",
     licence: "proprietary",
+    access: "limited",
     authors: ["Kazimierz Nitsch"],
   },
   "olesch": {
     name: "Der Wortschatz der polnischen Mundart von Sankt Annaberg",
     link: "https://sbc.org.pl/dlibra/publication/958232",
     licence: "proprietary",
+    access: "limited",
     authors: ["Reinhold Olesch"],
   },
   "wencel:rojśliny": {
     name: "Rojśliny po ślų̊sku",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Aleksandra Wencel"],
   },
   "zaranie:1/1929": {
@@ -134,6 +153,7 @@ export default {
     // TODO(vxern): Add the original link.
     link: "https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1929",
     licence: "public",
+    access: "open",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -142,6 +162,7 @@ export default {
     // TODO(vxern): Add the original link.
     link: "https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1929",
     licence: "public",
+    access: "open",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -150,6 +171,7 @@ export default {
     // TODO(vxern): Add the original link.
     link: "https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_3/1929",
     licence: "public",
+    access: "open",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -158,6 +180,7 @@ export default {
     // TODO(vxern): Add the original link.
     link: "https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1930",
     licence: "public",
+    access: "open",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -166,13 +189,15 @@ export default {
     // TODO(vxern): Add the original link.
     link: "https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930",
     licence: "public",
+    access: "open",
     authors: [],
   },
-  // TODO(vxern): Who made this?
-  "zestawienie.gatunków.roślin": {
+  // TODO(vxern): Who made this? Is this even accessible anymore?
+  "zestawienie.gatunków": {
     name: "Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej",
     link: "https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -180,98 +205,112 @@ export default {
     name: "Grziby po ślų̊sku",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Aleksandra Wencel"],
   },
   "gładysz": {
     name: "Zdobnictwo metalowe na Śląsku",
     link: "https://pbc.gda.pl/dlibra/publication/1165/edition/8684",
     licence: "proprietary",
+    access: "open",
     authors: ["Mieczysław Gładysz"],
   },
   "euro-met.pl/techniczny": {
     name: "Śląski Słownik Techniczny i Narzędzi",
     link: "https://euro-met.pl/informator/slaski-slownik/item/slaski-slownik-narzedzi",
     licence: "proprietary",
-    // TODO(vxern): Who wrote this?
-    authors: [],
+    access: "open",
+    authors: ["euro-met.pl"],
   },
-  "euro-met.pl/techniczny": {
+  "euro-met.pl/zawody": {
     name: "Śląskie zawody i zakłady pracy",
     link: "https://euro-met.pl/informator/slaski-slownik/item/narzedzia-wg-kategorii",
     licence: "proprietary",
-    // TODO(vxern): Who wrote this?
-    authors: [],
+    access: "open",
+    authors: ["euro-met.pl"],
   },
   "kallus": {
     name: "Słownik Górnoślōnskij Gŏdki",
     link: "https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki",
     licence: "proprietary",
+    access: "open",
     authors: ["Bogdan Kallus"],
   },
   "słaboń": {
     name: "Słownik gwar śląskich",
     link: "https://sbc.org.pl/dlibra/publication/edition/912987",
     licence: "proprietary",
+    access: "limited",
     authors: ["Manfred Słaboń"],
   },
   "wyderka": {
     name: "Słownik gwar śląskich",
     link: "https://instytutslaski.pl/slownik-gwar-slaskich/",
     licence: "proprietary",
+    access: "limited",
     authors: ["Bogusław Wyderka", "Małgorzata Iżykowska", "Beata Jahołkowska", "Krzysztof Kleszcz", "Lidia Przymuszała", "Danuta Lech-Kirstein", "Anna Jedynak", "Marzena Muszyńska", "Kamila Nowak", "Agata Haas"],
   },
   "roczniok/zbornik": {
     name: "Zbornik polsko-ślůnski",
     link: null,
     licence: "proprietary",
+    access: "limited",
     authors: ["Andrzej Roczniok"],
   },
   "rubin-lorek/minisłownik": {
     name: "Wyrazy staropolskie w dialekcie śląskim — Śląski minisłownik etymologiczny",
     link: "https://ruj.uj.edu.pl/entities/publication/54f2c875-75b3-442f-8825-be4ed6d7d143",
     licence: "proprietary",
+    access: "limited",
     authors: ["Mirela Rubin-Lorek"],
   },
   "cząstka-szymon+ludwig+synowiec/słownik": {
     name: "Mały słownik gwary Górnego Śląska",
     link: "https://katalog.ijp.pan.pl/index.php?KatID=0&typ=record&001=KR%20IJPPAN14000155",
     licence: "proprietary",
+    access: "limited",
     authors: ["Bożena Cząstka-Szymon", "Jerzy Ludwig", "Helena Synowiec"],
   },
   "pluta/dzierżysławice": {
     name: "Słownictwo Dzierżysławic w powiecie prudnickim",
     link: "https://books.google.co.uk/books/about/S%C5%82ownictwo_Dzier%C5%BCys%C5%82awic_w_powiecie_p.html?id=Gf0CAAAAMAAJ",
     licence: "proprietary",
+    access: "limited",
     authors: ["Feliks Pluta"],
   },
   "mayer+rospond/przeszłość": {
     name: "Z badań nad przeszłością dialektu śląskiego",
     link: "https://www.czestochowa-wom.sowa.pl/index.php?KatID=0&typ=record&001=CST%20WOM16058887",
     licence: "proprietary",
+    access: "limited",
     authors: ["Józef Mayer", "Stanisław Rospond"],
   },
   "zaręba/AJŚ": {
     name: "Atlas językowy Śląska",
     link: "https://rcin.org.pl/dlibra/publication/43411",
     licence: "proprietary",
+    access: "limited",
     authors: ["Alfred Zaręba"],
   },
   "cinciała": {
     name: "Słownik dialektyczny Księstwa Cieszyńskiego",
     link: "https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii",
     licence: "proprietary",
+    access: "limited",
     authors: ["Andrzej Cinciała"],
   },
   "bąk+rospond": {
     name: "Słownik gwarowy Śląska",
     link: "https://www.bu.umk.pl/wymiana/index.php?10503,slownik-gwarowy-slaska-stanislaw-bak-stanislaw-rospond.-opole-instytut-slaski-1962.-26-2014-140.",
     licence: "proprietary",
+    access: "limited",
     authors: ["Stanisław Bąk", "Stanisław Rospond"],
   },
   "podgórscy": {
     name: "Słownik gwar śląskich",
     link: "https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769",
     licence: "proprietary",
+    access: "limited",
     authors: ["Adam Podgórski", "Barbara Podgórska"],
   },
   // TODO(vxern): Who wrote this?
@@ -280,6 +319,7 @@ export default {
     // TODO(vxern): Link?
     link: null,
     licence: "proprietary",
+    access: "limited",
     // TODO(vxern): Author?
     authors: [],
   },
@@ -287,30 +327,35 @@ export default {
     name: "Ślónsko Godka",
     link: "https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732",
     licence: "proprietary",
+    access: "limited",
     authors: ["Joanna Furgalińska"],
   },
   "czajkowscy+klukowscy": {
     name: "Słownik gwary śląskiej",
     link: "https://m6122.lib.mol.pl/description/13122308/slownik-gwary-slaskiej-13122308",
     licence: "proprietary",
+    access: "limited",
     authors: ["Andrzej Czajkowski", "Ilona Czajkowska", "Andrzej Klukowski", "Dorota Klukowska"],
   },
   "szołtysek/ilustrowany": {
     name: "Ilustrowany słownik gwary śląskiej",
     link: "https://integro.bs.katowice.pl/ici/recorddetail?id=0033507219298",
     licence: "proprietary",
+    access: "limited",
     authors: ["Marek Szołtysek"],
   },
   "szczeponek/czasowniki": {
     name: "Czasowniki ślõski",
     link: "https://opac.r-sl.pl/953601047942/szczeponek-andrzej/czasowniki-slaskie?internalNav=1&bibFilter=95",
     licence: "proprietary",
+    access: "limited",
     authors: ["Andrzej Szczeponek"],
   },
   "dyrda/godka": {
     name: "Rýchtig Gryfno Godka",
     link: "https://lubimyczytac.pl/ksiazka/4031580/rychtig-gryfno-godka",
     licence: "proprietary",
+    access: "limited",
     authors: ["Dariusz Dyrda"],
   },
   // TODO(vxern:): Who wrote this?
@@ -318,6 +363,7 @@ export default {
     name: "Internetowy Słownik Języka Śląskiego",
     link: "https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern:): Who wrote this?
     authors: [],
   },
@@ -325,6 +371,7 @@ export default {
     name: "Słownik",
     link: "https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern:): Who wrote this?
     authors: [],
   },
@@ -332,18 +379,21 @@ export default {
     name: "Słownik śląsko-polski",
     link: "https://geudka.eu/slownik/",
     licence: "proprietary",
+    access: "open",
     authors: ["Robert Hellfeier"],
   },
   "wiora/słownik": {
     name: "Słownik śląsko-polski",
     link: "https://jozef.wiora.pl/szl/slownik.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Józef Wiora"],
   },
   "słownik.gwary.strzeleckiej": {
     name: "Słownik gwary strzeleckiej",
     link: "http://moreantiqua.com/slownik-gwary-strzeleckiej-2/",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern:): Who wrote this?
     authors: [],
   },
@@ -351,6 +401,7 @@ export default {
     name: "Słownik starych Siołkowic w powiecie opolskim",
     link: "https://www.opole-wbp.sowa.pl/index.php?KatID=0&typ=record&001=Op2006059002",
     licence: "proprietary",
+    access: "limited",
     authors: ["Alfred Zaręba"],
   },
   // TODO(vxern:): Who wrote this?
@@ -358,43 +409,51 @@ export default {
     name: "Słownik gwary w Zborowskiem",
     link: "https://www.zborowskie.info/articles/gwara-slaska",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern:): Who wrote this?
     authors: [],
   },
   "koczwarty/wyrażenia": {
     name: "Kilka wyrażeń ludowych z Małych Kończyc koło Zebrzydowic na Śląsku",
+    // TODO(vxern:): Original link?
     link: "https://silling.org/slownik/Aneks:Koczwara_-_Kilka_wyra%C5%BCe%C5%84_ludowych_z_Ma%C5%82ych_Ko%C5%84czyc_ko%C5%82o_Zebrzydowic_na_%C5%9Al%C4%85sku",
-    licence: "proprietary",
+    licence: "public",
+    access: "open",
     authors: ["Jan Koczwarty"],
   },
   "klocek/wyrażenia": {
     name: "2675 wyrażeń gwarowych, używanych w potocznej mowie przez rdzenną ludność wsi Zebrzydowice k/ Cieszyna",
     link: "https://sbc.org.pl/dlibra/publication/820194/edition/754268",
     licence: "proprietary",
+    access: "limited",
     authors: ["Karol Klocek"],
   },
   "olesch/sprachmischung": {
     name: "Sprachmischung in Oberschlesien",
     link: "https://sbc.org.pl/dlibra/publication/381621/edition/359601",
-    licence: "proprietary",
+    licence: "public",
+    access: "open",
     authors: ["Reinhold Olesch"],
   },
   "olesch/dialekte": {
     name: "Die slavischen Dialekte Oberschlesiens",
     link: "https://sbc.org.pl/dlibra/publication/960723/edition/870378",
     licence: "proprietary",
+    access: "limited",
     authors: ["Reinhold Olesch"],
   },
   "steuer/sulkowski": {
     name: "Dialekt sulkowski",
     link: "https://books.google.co.uk/books/about/Dialekt_Sulkowski.html?id=ub_aXQ0f4BAC",
     licence: "proprietary",
+    access: "limited",
     authors: ["Feliks Steuer"],
   },
   "steuer/baborów": {
     name: "Narzecze baborowskie",
     link: "https://sbc.org.pl/dlibra/publication/447886/edition/420224",
-    licence: "proprietary",
+    licence: "public",
+    access: "open",
     authors: ["Feliks Steuer"],
   },
   "bystroń/przyczynek": {
@@ -402,6 +461,7 @@ export default {
     // TODO(vxern): Original link.
     link: "https://silling.org/slownik/Aneks:Bystro%C5%84_-_Przyczynek_do_dialektologii_polskiej_(z_narzecza_Lach%C3%B3w_szl%C4%85skich)",
     licence: "proprietary",
+    access: "limited",
     authors: ["Jan Bystroń"],
   },
   // TODO(vxern): Who wrote this?
@@ -410,6 +470,7 @@ export default {
     // TODO(vxern): Link?
     link: null,
     licence: "proprietary",
+    access: "limited",
     // TODO(vxern): Authors?
     authors: [],
   },
@@ -419,6 +480,7 @@ export default {
     // TODO(vxern): Link?
     link: null,
     licence: "proprietary",
+    access: "limited",
     authors: ["Marian Cieśla"],
   },
   // TODO(vxern): Who wrote this?
@@ -426,6 +488,7 @@ export default {
     name: "Slovník po naszimu",
     link: "http://www.blaf.cz/index.php?body=slovnik",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern): Who wrote this?
     authors: [],
   },
@@ -433,12 +496,14 @@ export default {
     name: "Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia",
     link: "https://bibliotekanauki.pl/articles/3150548.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Irena Bogocz"],
   },
   "nowrotek/słownik": {
     name: "Słownik gwarowy czechowicki",
     link: "https://nowrotek.hoste.pl/files/slownikstela.pdf",
     licence: "proprietary",
+    access: "open",
     authors: ["Zdzisław Nowrotek"],
   },
   // TODO(vxern): Who wrote this?
@@ -446,6 +511,7 @@ export default {
     name: "Slovník z oblasti Domaslavic",
     link: "https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/",
     licence: "proprietary",
+    access: "open",
     // TODO(vxern): Who wrote this?
     authors: [],
   },
@@ -453,6 +519,7 @@ export default {
     name: "Zbiór wyrazów szląsko-polskich",
     link: "https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579",
     licence: "public",
+    access: "open",
     authors: ["Baltazar Działas"],
   },
 }

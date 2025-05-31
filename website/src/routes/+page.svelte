@@ -1,6 +1,6 @@
 <script>
   import constants from "$lib/constants";
-  import { m } from "$lib/paraglide/messages";
+  import { m } from "$lib/paraglide/messages.js";
   import "tippy.js/themes/material.css";
   import SearchBar from "../components/search-bar/search-bar.svelte";
 

@@ -30,14 +30,31 @@
         "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
       }
     },
-    "word": {
-      "title": "Wyniki lŏ wyszukowaniŏ"
-    },
-    "settings": {
-      "title": "Nasztalowania"
-    },
     "about": {
       "title": "Ô zajcie"
+    },
+    "word": {
+      "title": "Wyniki lŏ wyszukowaniŏ",
+      "source": "Zdrzōdło"
+    },
+    "sources": {
+      "title": "Zdrzōdła",
+      "table": {
+        "work": "Werk",
+        "authors": "Autorzi",
+        "licence": {
+          "licence": "Licyncyjŏ",
+          "proprietary": "zastrzyżōnŏ",
+          "public": "publicznŏ włŏsność"
+        },
+        "access": {
+          "access": "Dostymp",
+          "closed": "zawrzity",
+          "limited": "ôgraniczōny",
+          "open": "dostympny"
+        },
+        "progress": "Fōrtszrit"
+      }
     }
   }
 }
