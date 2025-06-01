@@ -2,6 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
   import { onMount } from "svelte";
+  import HomeButton from "../../components/home-button/home-button.svelte";
 
   let sources = $state();
   async function fetchSources() {
@@ -139,6 +140,8 @@
 <svelte:head>
   <title>silesian.eu — {m["routes.sources.title"]()}</title>
 </svelte:head>
+
+<HomeButton />
 
 <Page.Root>
   <Page.Header>
