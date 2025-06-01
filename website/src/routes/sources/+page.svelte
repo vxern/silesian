@@ -13,7 +13,7 @@
         (a, b) =>
           compareLicence(a.licence, b.licence) ||
           compareAccess(a.access, b.access) ||
-          compareProgress(a.entries, b.entries) ||
+          compareProgress(a.progress, b.progress) ||
           compareName(a.name, b.name) ||
           compareAuthors(a, b)
       )
@@ -87,9 +87,9 @@
     if (Number.isNaN(completionA) && Number.isNaN(completionB)) {
       return 0;
     } else if (Number.isNaN(completionA)) {
-      return 1;
-    } else if (Number.isNaN(completionB)) {
       return -1;
+    } else if (Number.isNaN(completionB)) {
+      return 1;
     }
 
     if (completionA > completionB) {
@@ -123,12 +123,12 @@
     return a.length > b.length ? 1 : -1;
   }
 
-  function completion(entries) {
-    if (entries.total === 0) {
+  function completion(progress) {
+    if (progress.total === 0) {
       return 1;
     }
 
-    return entries.imported / entries.total;
+    return progress.imported / progress.total;
   }
 
   onMount(() => {
@@ -235,28 +235,30 @@
               <td class="w-[5%] border-b-1 border-b-zinc-800">
                 {#if !source.redistributable}
                   {m["none"]()}
-                {:else if !source.entries}
+                {:else if !source.progress}
                   {m["unknown"]()}
                 {:else}
                   {m["routes.sources.table.progress.numbers"]({
-                    imported: source.entries.imported ?? m["unknown"](),
-                    total: source.entries.total ?? m["unknown"](),
+                    imported: source.progress.imported ?? m["unknown"](),
+                    total: source.progress.total ?? m["unknown"](),
                   })}
                   <br />
                   {#snippet percentage()}
                     {m["routes.sources.table.progress.percentage"]({
-                      percentage: (completion(source.entries) * 100).toFixed(1),
+                      percentage: (completion(source.progress) * 100).toFixed(
+                        1
+                      ),
                     })}
                   {/snippet}
-                  {#if source.entries.imported === undefined || source.entries.total === undefined}
+                  {#if source.progress.imported === undefined || source.progress.total === undefined}
                     {m["routes.sources.table.progress.percentage"]({
                       percentage: m["unknown"](),
                     })}
-                  {:else if completion(source.entries) > 0.95}
+                  {:else if completion(source.progress) > 0.95}
                     <span class="text-green-400">
                       {@render percentage()}
                     </span>
-                  {:else if completion(source.entries) > 0.5}
+                  {:else if completion(source.progress) > 0.5}
                     <span class="text-yellow-400">
                       {@render percentage()}
                     </span>

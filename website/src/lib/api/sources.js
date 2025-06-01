@@ -19,7 +19,7 @@ export default Object.freeze({
     licence: "CC BY-NC-SA 4.0",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       total: 25340,
     },
@@ -31,7 +31,7 @@ export default Object.freeze({
     licence: "CC BY-SA 4.0",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       total: 2227,
     },
@@ -109,7 +109,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       // TODO(vxern): Should be right around this number, but this needs double-checking.
       total: 93,
@@ -122,7 +122,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       // TODO(vxern): Should be right around this number, but this needs double-checking.
       total: 290,
@@ -135,7 +135,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       // TODO(vxern): It's at least 8,000, not sure how many exactly.
       total: 8000,
@@ -190,7 +190,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
     },
   },
@@ -450,7 +450,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
       // TODO(vxern:): Needs checking against the original.
       total: 198,
@@ -471,7 +471,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
     },
   },
@@ -498,7 +498,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
     },
   },
@@ -570,7 +570,7 @@ export default Object.freeze({
     licence: "public",
     access: "open",
     redistributable: true,
-    entries: {
+    progress: {
       imported: 0,
     },
   },
