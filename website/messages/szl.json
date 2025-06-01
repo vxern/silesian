@@ -65,5 +65,6 @@
     }
   },
   "unknown": "?",
-  "none": "—"
+  "none": "—",
+  "loading": "Ladowanie…"
 }
