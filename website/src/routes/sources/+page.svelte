@@ -108,7 +108,7 @@
   }
 
   function compareName(a, b) {
-    return a.localeCompare(b, "pl", { sensitivity: "base" });
+    return b.localeCompare(a, "pl", { sensitivity: "base" });
   }
 
   function compareAuthors(a, b) {
