@@ -13,6 +13,7 @@
         (a, b) =>
           compareLicence(a.licence, b.licence) ||
           compareAccess(a.access, b.access) ||
+          compareProgress(a.entries, b.entries) ||
           compareName(a.name, b.name) ||
           compareAuthors(a, b)
       )
@@ -69,6 +70,43 @@
     return 0;
   }
 
+  function compareProgress(a, b) {
+    if (a === b) {
+      return 0;
+    }
+
+    if (!a) {
+      return -1;
+    } else if (!b) {
+      return 1;
+    }
+
+    const completionA = completion(a);
+    const completionB = completion(b);
+
+    if (Number.isNaN(completionA) && Number.isNaN(completionB)) {
+      return 0;
+    } else if (Number.isNaN(completionA)) {
+      return 1;
+    } else if (Number.isNaN(completionB)) {
+      return -1;
+    }
+
+    if (completionA > completionB) {
+      return 1;
+    } else if (completionA < completionB) {
+      return -1;
+    }
+
+    if (a.total < b.total) {
+      return 1;
+    } else if (a.total > b.total) {
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+
   function compareName(a, b) {
     return a.localeCompare(b, "pl", { sensitivity: "base" });
   }
@@ -92,30 +130,6 @@
 
     return entries.imported / entries.total;
   }
-
-  // function compareProgress(a, b) {
-  //   a ??= {};
-  //   b ??= {};
-
-  //   const completionA = completion(a);
-  //   const completionB = completion(b);
-
-  //   if (Number.isNaN(completionA) && Number.isNaN(completionB)) {
-  //     return 0;
-  //   } else if (Number.isNaN(completionA)) {
-  //     return 1;
-  //   } else if (Number.isNaN(completionB)) {
-  //     return -1;
-  //   }
-
-  //   if (completionA > completionB) {
-  //     return 1;
-  //   } else if (completionA < completionB) {
-  //     return -1;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
 
   onMount(() => {
     fetchSources();
