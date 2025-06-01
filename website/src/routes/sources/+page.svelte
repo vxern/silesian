@@ -3,17 +3,87 @@
   import Page from "../../components/page/index.js";
   import { onMount } from "svelte";
 
-  // TODO(vxern): Sources should be sorted by progress > licence > access > work > authors
-
   let sources = $state();
   async function fetchSources() {
     const response = await fetch("/api/sources");
-    sources = Object.values(await response.json());
+    const entries = await response.json();
+
+    sources = Object.values(entries)
+      .sort(
+        (a, b) =>
+          compareLicence(a.licence, b.licence) ||
+          compareAccess(a.access, b.access) ||
+          compareName(a.name, b.name) ||
+          compareAuthors(a, b)
+      )
+      .reverse();
   }
 
-  onMount(() => {
-    fetchSources();
-  });
+  function compareLicence(a, b) {
+    if (a === b) {
+      return 0;
+    }
+
+    if (!a) {
+      return -1;
+    } else if (!b) {
+      return 1;
+    }
+
+    if (a === "proprietary") {
+      return -1;
+    } else if (b === "proprietary") {
+      return 1;
+    }
+
+    if (a === "public") {
+      return -1;
+    }
+
+    return compareName(a, b);
+  }
+
+  function compareAccess(a, b) {
+    if (a === b) {
+      return 0;
+    }
+
+    if (!a) {
+      return -1;
+    } else if (!b) {
+      return 1;
+    }
+
+    if (a === "closed") {
+      return -1;
+    } else if (b === "closed") {
+      return 1;
+    }
+
+    if (a === "limited") {
+      return -1;
+    } else if (b === "limited") {
+      return 1;
+    }
+
+    return 0;
+  }
+
+  function compareName(a, b) {
+    return a.localeCompare(b, "pl", { sensitivity: "base" });
+  }
+
+  function compareAuthors(a, b) {
+    if (!a && !b) {
+      return 0;
+    } else if (!a) {
+      return -1;
+    } else if (!b) {
+      return 1;
+    }
+
+    return a.length > b.length ? 1 : -1;
+  }
 
   function completion(entries) {
     if (entries.total === 0) {
@@ -22,6 +92,34 @@
 
     return entries.imported / entries.total;
   }
+
+  // function compareProgress(a, b) {
+  //   a ??= {};
+  //   b ??= {};
+
+  //   const completionA = completion(a);
+  //   const completionB = completion(b);
+
+  //   if (Number.isNaN(completionA) && Number.isNaN(completionB)) {
+  //     return 0;
+  //   } else if (Number.isNaN(completionA)) {
+  //     return 1;
+  //   } else if (Number.isNaN(completionB)) {
+  //     return -1;
+  //   }
+
+  //   if (completionA > completionB) {
+  //     return 1;
+  //   } else if (completionA < completionB) {
+  //     return -1;
+  //   } else {
+  //     return 0;
+  //   }
+  // }
+
+  onMount(() => {
+    fetchSources();
+  });
 </script>
 
 <svelte:head>
@@ -79,7 +177,9 @@
                     {m["routes.sources.table.authors.community"]()}
                   </i>
                 {:else if source.authors.length > 0}
-                  {source.authors.join(" · ")}
+                  {source.authors
+                    .toSorted((a, b) => compareName(a, b))
+                    .join(" · ")}
                 {:else}
                   {m["unknown"]()}
                 {/if}
