@@ -11,7 +11,7 @@
 // Eźli niy ma jednego autora, jak u przikładu Wikcjōnŏrza, stŏwiŏ sie ôdnośnik ku zajcie.
 // - en.wiktionary.org
 //
-export default {
+export default Object.freeze({
   "kulik": {
     name: "SileSłownik",
     link: "https://silling.org/slownik",
@@ -190,6 +190,9 @@ export default {
     licence: "public",
     access: "open",
     redistributable: true,
+    entries: {
+      imported: 0,
+    },
   },
   // TODO(vxern): Who made this? Is this even accessible anymore?
   "zestawienie.gatunków": {
@@ -571,4 +574,4 @@ export default {
       imported: 0,
     },
   },
-}
+});

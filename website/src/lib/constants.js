@@ -1,4 +1,4 @@
-export default {
+export default Object.freeze({
   projectName: "silesian.eu",
   specialLetters: [
     "ã",
@@ -13,4 +13,4 @@ export default {
     "ź",
     "ż",
   ],
-};
+});

@@ -1,9 +1,11 @@
 <script>
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
-  import sources from "$lib/sources.js";
+  import sources_ from "$lib/sources.js";
 
-  // TODO(vxern): Dictionaries should be served over the API.
+  // TODO(vxern): Sources should be served over the API.
+  // TODO(vxern): Sources should be sorted by progress > licence > access > work > authors
+  const sources = Object.values(sources_);
 
   function completion(entries) {
     if (entries.total === 0) {
@@ -45,91 +47,89 @@
         </tr>
       </thead>
       <tbody>
-        {#each Object.values(sources) as dictionary}
+        {#each sources as source}
           <tr>
             <th scope="row" class="w-[35%] border-b-1 border-b-zinc-800">
-              {#if !dictionary.name}
+              {#if !source.name}
                 {m["unknown"]()}
-              {:else if dictionary.link}
-                <a href={dictionary.link} class="underline underline-offset-3">
-                  {dictionary.name}
+              {:else if source.link}
+                <a href={source.link} class="underline underline-offset-3">
+                  {source.name}
                 </a>
               {:else}
-                {dictionary.name}
+                {source.name}
               {/if}
             </th>
             <td class="w-[35%] border-b-1 border-b-zinc-800">
-              {#if !dictionary.authors}
+              {#if !source.authors}
                 {m["unknown"]()}
-              {:else if dictionary.authors === "community"}
+              {:else if source.authors === "community"}
                 <i>
                   {m["routes.sources.table.authors.community"]()}
                 </i>
-              {:else if dictionary.authors.length > 0}
-                {dictionary.authors.join(" · ")}
+              {:else if source.authors.length > 0}
+                {source.authors.join(" · ")}
               {/if}
             </td>
             <td class="w-[10%] border-b-1 border-b-zinc-800">
-              {#if !dictionary.access}
+              {#if !source.access}
                 {m["unknown"]()}
-              {:else if dictionary.access === "closed"}
+              {:else if source.access === "closed"}
                 <span class="text-red-400">
                   {m["routes.sources.table.access.closed"]()}
                 </span>
-              {:else if dictionary.access === "limited"}
+              {:else if source.access === "limited"}
                 <span class="text-yellow-400">
                   {m["routes.sources.table.access.limited"]()}
                 </span>
-              {:else if dictionary.access === "open"}
+              {:else if source.access === "open"}
                 <span class="text-green-400">
                   {m["routes.sources.table.access.open"]()}
                 </span>
               {/if}
             </td>
             <td class="w-[15%] border-b-1 border-b-zinc-800">
-              {#if !dictionary.licence}
+              {#if !source.licence}
                 {m["unknown"]()}
-              {:else if dictionary.licence === "proprietary"}
+              {:else if source.licence === "proprietary"}
                 <span class="text-red-400">
                   {m["routes.sources.table.licence.proprietary"]()}
                 </span>
-              {:else if dictionary.licence === "public"}
+              {:else if source.licence === "public"}
                 <span class="text-green-400">
                   {m["routes.sources.table.licence.public"]()}
                 </span>
               {:else}
                 <span class="text-green-400">
-                  {dictionary.licence}
+                  {source.licence}
                 </span>
               {/if}
             </td>
             <td class="w-[5%] border-b-1 border-b-zinc-800">
-              {#if !dictionary.redistributable}
+              {#if !source.redistributable}
                 {m["none"]()}
-              {:else if !dictionary.entries}
+              {:else if !source.entries}
                 {m["unknown"]()}
               {:else}
                 {m["routes.sources.table.progress.numbers"]({
-                  imported: dictionary.entries.imported ?? m["unknown"](),
-                  total: dictionary.entries.total ?? m["unknown"](),
+                  imported: source.entries.imported ?? m["unknown"](),
+                  total: source.entries.total ?? m["unknown"](),
                 })}
                 <br />
                 {#snippet percentage()}
                   {m["routes.sources.table.progress.percentage"]({
-                    percentage: (completion(dictionary.entries) * 100).toFixed(
-                      1
-                    ),
+                    percentage: (completion(source.entries) * 100).toFixed(1),
                   })}
                 {/snippet}
-                {#if dictionary.entries.imported === undefined || dictionary.entries.total === undefined}
+                {#if source.entries.imported === undefined || source.entries.total === undefined}
                   {m["routes.sources.table.progress.percentage"]({
                     percentage: m["unknown"](),
                   })}
-                {:else if completion(dictionary.entries) > 0.95}
+                {:else if completion(source.entries) > 0.95}
                   <span class="text-green-400">
                     {@render percentage()}
                   </span>
-                {:else if completion(dictionary.entries) > 0.5}
+                {:else if completion(source.entries) > 0.5}
                   <span class="text-yellow-400">
                     {@render percentage()}
                   </span>
