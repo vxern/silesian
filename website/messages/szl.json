@@ -26,6 +26,40 @@
         "nine": "Dykcjōnŏrze pō naszymu"
       },
       "help": {
+        "imported": {
+          "total": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "Społym mōmy jedno znaczynie,",
+                "countPlural=few": "Społym mōmy {count} znaczynia,",
+                "countPlural=many": "Społym mōmy {count} znaczyń,"
+              }
+            }
+          ],
+          "this_month": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "s czego w tym miesiōncu dodali my jedno ś'nich.",
+                "countPlural=few": "s czego w tym miesiōncu dodali my {count} ś'nich.",
+                "countPlural=many": " s czego w tym miesiōncu dodali my {count} ś nich."
+              }
+            }
+          ]
+        },
         "want_to_help": "Chcecie pōmōc?",
         "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
       }

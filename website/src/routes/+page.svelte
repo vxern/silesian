@@ -3,6 +3,7 @@
   import { m } from "$lib/paraglide/messages.js";
   import "tippy.js/themes/material.css";
   import SearchBar from "../components/search-bar/search-bar.svelte";
+  import { onMount } from "svelte";
 
   const splashKeys = [
     "routes.home.splashes.one",
@@ -16,6 +17,16 @@
     "routes.home.splashes.nine",
   ];
   const splash = m[splashKeys[Math.floor(Math.random() * splashKeys.length)]]();
+
+  let statistics = $state();
+  async function fetchStatistics() {
+    const response = await fetch("/api/statistics");
+    statistics = await response.json();
+  }
+
+  onMount(() => {
+    fetchStatistics();
+  });
 </script>
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
@@ -27,13 +38,23 @@
   </article>
   <SearchBar />
   <article>
-    <h6 class="cursor-default text-sm">
-      <span class="italic text-zinc-600 hover:cursor-text">
+    <h6 class="cursor-default text-sm italic">
+      <span class="text-zinc-600">
+        {#if statistics}
+          {m["routes.home.help.imported.total"]({
+            count: statistics.imported.total,
+          })}
+          {m["routes.home.help.imported.this_month"]({
+            count: statistics.imported.this_month,
+          })}
+        {:else}
+          {m["loading"]()}
+        {/if}
+      </span><br />
+      <span class="text-zinc-600 hover:cursor-text">
         {m["routes.home.help.want_to_help"]()}
       </span>
-      <span
-        class="italic text-green-600 hover:text-green-500 hover:cursor-pointer"
-      >
+      <span class="text-green-600 hover:text-green-500 hover:cursor-pointer">
         {m["routes.home.help.find_out_how"]()}
       </span>
     </h6>
