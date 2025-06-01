@@ -153,7 +153,7 @@
       {m["loading"]()}
     {:else}
       <table class="border-separate border-spacing-1 text-left">
-        <thead class="text-blue-400">
+        <thead class="text-blue-500">
           <tr>
             <th scope="col" class="border-b-1 border-b-zinc-700">
               {m["routes.sources.table.work"]()}
@@ -205,15 +205,15 @@
                 {#if !source.access}
                   {m["unknown"]()}
                 {:else if source.access === "closed"}
-                  <span class="text-red-400">
+                  <span class="text-red-500">
                     {m["routes.sources.table.access.closed"]()}
                   </span>
                 {:else if source.access === "limited"}
-                  <span class="text-yellow-400">
+                  <span class="text-yellow-500">
                     {m["routes.sources.table.access.limited"]()}
                   </span>
                 {:else if source.access === "open"}
-                  <span class="text-green-400">
+                  <span class="text-green-500">
                     {m["routes.sources.table.access.open"]()}
                   </span>
                 {/if}
@@ -222,15 +222,15 @@
                 {#if !source.licence}
                   {m["unknown"]()}
                 {:else if source.licence === "proprietary"}
-                  <span class="text-red-400">
+                  <span class="text-red-500">
                     {m["routes.sources.table.licence.proprietary"]()}
                   </span>
                 {:else if source.licence === "public"}
-                  <span class="text-green-400">
+                  <span class="text-green-500">
                     {m["routes.sources.table.licence.public"]()}
                   </span>
                 {:else}
-                  <span class="text-green-400">
+                  <span class="text-green-500">
                     {source.licence}
                   </span>
                 {/if}
@@ -258,15 +258,15 @@
                       percentage: m["unknown"](),
                     })}
                   {:else if completion(source.progress) > 0.95}
-                    <span class="text-green-400">
+                    <span class="text-green-500">
                       {@render percentage()}
                     </span>
                   {:else if completion(source.progress) > 0.5}
-                    <span class="text-yellow-400">
+                    <span class="text-yellow-500">
                       {@render percentage()}
                     </span>
                   {:else}
-                    <span class="text-red-400">
+                    <span class="text-red-500">
                       {@render percentage()}
                     </span>
                   {/if}

@@ -22,7 +22,7 @@
         <article
           class="flex-1 flex flex-col items-start justify-start w-full text-start text-zinc-300"
         >
-          <i class="text-blue-400">Zamianek</i>
+          <i class="text-blue-500">Zamianek</i>
           <ol
             class="list-decimal list-inside w-full decoration-2 underline-offset-2"
           >
@@ -97,7 +97,7 @@
             </li>
           </ol>
           <br />
-          <i class="text-blue-400">Spōjnik</i>
+          <i class="text-blue-500">Spōjnik</i>
           <ol
             class="list-decimal list-inside w-full decoration-2 underline-offset-2"
           >
@@ -219,13 +219,13 @@
             </li>
           </ol>
           <br />
-          <i class="text-green-400">Pochodzynie</i>
+          <i class="text-green-500">Pochodzynie</i>
           <span>Zamianek i spōjnik ze prasłowiańskigo *jako.</span>
         </article>
         <article class="flex gap-x-1 items-center justify-end">
           {#each ["silling.org"] as label}
             <span class="text-zinc-600">{m["routes.word.source"]()}:</span>
-            <span class="rounded-md text-blue-400 font-bold text-end">
+            <span class="rounded-md text-blue-500 font-bold text-end">
               {label}
             </span>
           {/each}
