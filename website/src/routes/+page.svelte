@@ -4,7 +4,9 @@
   import "tippy.js/themes/material.css";
   import SearchBar from "../components/search-bar/search-bar.svelte";
   import { onMount } from "svelte";
+  import NavigationSection from "../components/navigation/navigation-section.svelte";
 
+  // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
     "routes.home.splashes.one",
     "routes.home.splashes.two",
@@ -14,7 +16,6 @@
     "routes.home.splashes.six",
     "routes.home.splashes.seven",
     "routes.home.splashes.eight",
-    "routes.home.splashes.nine",
   ];
   const splash = m[splashKeys[Math.floor(Math.random() * splashKeys.length)]]();
 
@@ -28,6 +29,8 @@
     fetchStatistics();
   });
 </script>
+
+<NavigationSection />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>

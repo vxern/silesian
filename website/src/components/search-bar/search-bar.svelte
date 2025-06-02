@@ -164,7 +164,7 @@
   onblur={onBlurWindow}
 />
 
-<article class="flex flex-col gap-y-4 items-center w-full">
+<article class="flex flex-col gap-y-4 items-center w-full h-fit">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
       class="rounded-lg w-full p-3 text-lg bg-zinc-800 text-zinc-300 placeholder:text-zinc-400"
@@ -173,8 +173,9 @@
       onkeydown={onInputKeyPress}
       bind:this={inputElement}
     />
+    <!-- TODO(vxern): Make this the same size as the search bar. -->
     <button
-      class="rounded-lg h-fit p-2 text-lg font-bold cursor-pointer bg-green-700 text-green-300 hover:bg-green-600 hover:text-green-200"
+      class="rounded-lg h-fit p-2 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-200"
       type="submit"
       data-sveltekit-reload
       bind:this={submitElement}
@@ -187,7 +188,7 @@
     <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
       {#each specialLetters() as letter}
         <button
-          class="rounded-lg size-8 text-lg font-bold cursor-pointer bg-zinc-800 text-zinc-300 hover:bg-zinc-600 hover:text-zinc-200"
+          class="rounded-lg size-8 text-lg font-bold cursor-pointer bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-zinc-200"
           onclick={() => insertSpecialLetter(letter)}
         >
           {letter}

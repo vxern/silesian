@@ -2,14 +2,10 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../../components/page/index.js";
   import SearchBar from "../../../components/search-bar/search-bar.svelte";
-  import HomeButton from "../../../components/home-button/home-button.svelte";
+  import NavigationSection from "../../../components/navigation/navigation-section.svelte";
 </script>
 
-<svelte:head>
-  <title>silesian.eu — {m["routes.word.title"]()}</title>
-</svelte:head>
-
-<HomeButton />
+<NavigationSection />
 
 <Page.Root>
   <Page.Header>

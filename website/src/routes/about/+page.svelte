@@ -3,9 +3,7 @@
   import Page from "../../components/page/index.js";
 </script>
 
-<svelte:head>
-  <title>silesian.eu — {m["routes.about.title"]()}</title>
-</svelte:head>
+<NavigationSection />
 
 <Page.Root>
   <Page.Header>
