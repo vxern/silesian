@@ -1,8 +1,12 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "title": {
+    "without_page": "{project_name}",
+    "with_page": "{project_name} — {page_title}"
+  },
   "components": {
     "search_bar": {
-      "placeholder": "Jakigo słowa szukŏcie?",
+      "placeholder": "Ftōrego słowa szukŏcie?",
       "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
       "reset_caps": {
         "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
@@ -13,7 +17,7 @@
   },
   "routes": {
     "home": {
-      "title": "Dykcjōnŏrz",
+      "title": "Sztart",
       "splashes": {
         "one": "Dykcjōnŏrze ślōnskij gŏdki",
         "two": "Dykcjōnŏrze ślōnskigo jynzyka",
@@ -22,8 +26,7 @@
         "five": "Dykcjōnŏrze ślōnskij rzeczy",
         "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
         "seven": "Dykcjōnŏrze ślōnskich narzeczy",
-        "eight": "Dykcjōnŏrze ślōnskigo etnolektu",
-        "nine": "Dykcjōnŏrze pō naszymu"
+        "eight": "Dykcjōnŏrze pō naszymu"
       },
       "help": {
         "imported": {
@@ -68,7 +71,7 @@
       "title": "Ô zajcie"
     },
     "word": {
-      "title": "Wyniki lŏ wyszukowaniŏ",
+      "title": "Słowo",
       "source": "Zdrzōdło"
     },
     "sources": {
@@ -96,6 +99,9 @@
           "percentage": "{percentage}%"
         }
       }
+    },
+    "login": {
+      "title": "Logowanie"
     }
   },
   "unknown": "?",
