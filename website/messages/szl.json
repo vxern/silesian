@@ -102,6 +102,9 @@
     },
     "login": {
       "title": "Logowanie"
+    },
+    "account": {
+      "title": "Kōnto"
     }
   },
   "unknown": "?",

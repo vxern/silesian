@@ -1,16 +1,26 @@
 <script>
+  import { page } from "$app/state";
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
   import "tippy.js/animations/shift-toward.css";
   import "tippy.js/dist/tippy.css";
+  import "../app.css";
+  import { onMount } from "svelte";
 
   let { children } = $props();
-  import "../app.css";
 
   tippy.setDefaultProps({
     animation: "shift-toward",
     hideOnClick: true,
+  });
+
+  let pageTitle = $state();
+  $effect(() => {
+    const root = page.url.pathname.split("/").at(0);
+    if (`routes.${root}.title` in m) {
+      pageTitle = m[`routes.${root}.title`]();
+    }
   });
 </script>
 
@@ -30,7 +40,18 @@
   <meta name="author" content="Dorian Oszczęda" />
   <meta name="url" content="https://silesian.eu" />
 
-  <title>silesian.eu</title>
+  {#if pageTitle}
+    <title>
+      {m["title.with_page"]({
+        project_name: constants.projectName,
+        page_title: pageTitle,
+      })}
+    </title>
+  {:else}
+    <title>
+      {m["title.without_page"]({ project_name: constants.projectName })}
+    </title>
+  {/if}
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />

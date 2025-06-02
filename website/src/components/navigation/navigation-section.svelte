@@ -26,6 +26,11 @@
     onclick={() => goto("/sources")}
     highlighted={page.url.pathname === "/sources"}
   />
+  <NavigationButton
+    title={m["routes.about.title"]()}
+    onclick={() => goto("/about")}
+    highlighted={page.url.pathname === "/about"}
+  />
   {#if !authenticated}
     <NavigationButton
       title={m["routes.login.title"]()}
