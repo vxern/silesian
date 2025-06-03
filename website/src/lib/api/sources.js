@@ -533,9 +533,14 @@ export default Object.freeze({
     name: "Slovník po naszimu",
     link: "http://www.blaf.cz/index.php?body=slovnik",
     authors: ["Jan Klus"],
-    licence: "proprietary",
+    licence: "granted",
     access: "open",
-    redistributable: false,
+    redistributable: true,
+    progress: {
+      imported: 0,
+      // TODO(vxern): Somewhere around this mark.
+      total: 4630,
+    },
   },
   "bogocz/słownictwo": {
     name: "Zachodniocieszyńskie słownictwo gwarowe - próba ujęcia",

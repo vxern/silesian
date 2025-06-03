@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
 
+  // TODO(vxern): Separate sources by category. Dictionaries, magazines, etc. etc.
+
   let sources = $state();
   async function fetchSources() {
     const response = await fetch("/api/sources");
@@ -35,6 +37,12 @@
     if (a === "proprietary") {
       return -1;
     } else if (b === "proprietary") {
+      return 1;
+    }
+
+    if (a === "granted") {
+      return -1;
+    } else if (b === "granted") {
       return 1;
     }
 
@@ -190,9 +198,7 @@
                     {m["routes.sources.table.authors.community"]()}
                   </i>
                 {:else if source.authors.length > 0}
-                  {source.authors
-                    .toSorted((a, b) => compareName(a, b))
-                    .join(" · ")}
+                  {source.authors.join(" · ")}
                 {:else}
                   {m["unknown"]()}
                 {/if}
@@ -220,6 +226,10 @@
                 {:else if source.licence === "proprietary"}
                   <span class="text-red-500">
                     {m["routes.sources.table.licence.proprietary"]()}
+                  </span>
+                {:else if source.licence === "granted"}
+                  <span class="text-lime-500">
+                    {m["routes.sources.table.licence.granted"]()}
                   </span>
                 {:else if source.licence === "public"}
                   <span class="text-green-500">
