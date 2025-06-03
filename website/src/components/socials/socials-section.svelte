@@ -7,16 +7,16 @@
 </script>
 
 <nav class="fixed bottom-8 right-8 flex gap-x-2 text-2xl text-zinc-500">
-  <button class="cursor-pointer" onclick={() => goto("/social/discord")}>
+  <button class="cursor-pointer" onclick={() => goto("/socials/discord")}>
     <DiscordIcon class="hover:text-[#5865F2]" />
   </button>
-  <button class="cursor-pointer" onclick={() => goto("/social/twitter")}>
+  <button class="cursor-pointer" onclick={() => goto("/socials/twitter")}>
     <TwitterIcon class="hover:text-[#1DA1F2]" />
   </button>
-  <button class="cursor-pointer" onclick={() => goto("/social/instagram")}>
+  <button class="cursor-pointer" onclick={() => goto("/socials/instagram")}>
     <InstagramIcon class="hover:text-[#DD2A7B]" />
   </button>
-  <button class="cursor-pointer" onclick={() => goto("/social/github")}>
+  <button class="cursor-pointer" onclick={() => goto("/socials/github")}>
     <GitHubLineIcon class="hover:text-[#FFFFFF]" />
   </button>
 </nav>
