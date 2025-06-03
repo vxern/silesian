@@ -5,6 +5,7 @@
   import SearchBar from "../components/search-bar/search-bar.svelte";
   import { onMount } from "svelte";
   import NavigationSection from "../components/navigation/navigation-section.svelte";
+  import SocialsSection from "../components/socials/socials-section.svelte";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -31,6 +32,7 @@
 </script>
 
 <NavigationSection />
+<SocialsSection />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>
@@ -53,7 +55,8 @@
         {:else}
           {m["loading"]()}
         {/if}
-      </span><br />
+      </span>
+      <br />
       <span class="text-zinc-600 hover:cursor-text">
         {m["routes.home.help.want_to_help"]()}
       </span>
