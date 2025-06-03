@@ -1,18 +1,5 @@
-// Dykcjōnŏrze sōm idyntyfikowane podle familyjnego miana ôd autora.
-// - kulik
-// - syniawa
-// - wencel
-//
-// Eźli je dwōch autorōw, miana sōm spŏjane po pōmocy dodatnij cechy (+).
-// - neblik+orliński
-// - mayer+rospond
-// - czajkowscy+klukowscy
-//
-// Eźli niy ma jednego autora, jak u przikładu Wikcjōnŏrza, stŏwiŏ sie ôdnośnik ku zajcie.
-// - en.wiktionary.org
-//
 export default Object.freeze({
-  "kulik": {
+  "kulik/słownik": {
     name: "SileSłownik",
     link: "https://silling.org/slownik",
     authors: ["Grzegorz Kulik"],
@@ -24,7 +11,7 @@ export default Object.freeze({
       total: 25340,
     },
   },
-  "en.wiktionary.org": {
+  "wiktionary": {
     name: "Wiktionary",
     link: "https://en.wiktionary.org",
     authors: "community",
@@ -36,7 +23,7 @@ export default Object.freeze({
       total: 2227,
     },
   },
-  "neblik+orliński": {
+  "neblik+orliński/dykcjōnorz": {
     name: "Dykcjōnorz",
     link: "https://dykcjonorz.eu",
     authors: ["Stanisław Neblik", "Wojciech Orliński"],
@@ -44,7 +31,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "syniawa": {
+  "syniawa/dykcjůnorz": {
     name: "Dykcjůnorz polsko-ślůnski",
     // TODO(vxern): Link?
     link: null,
@@ -53,7 +40,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "wencel": {
+  "wencel/dykcjůnôrz": {
     name: "Dykcjůnôrz ślų̊sko-polski",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf",
     authors: ["Aleksandra Wencel"],
@@ -77,7 +64,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "lerch-wójcik": {
+  "lerch-wójcik/słowniczek": {
     name: "Słowniczek wyrazów śląskich",
     link: "https://bonclok.pl/slowniczek-wyrazow-slaskich.html",
     authors: ["Anna Lerch-Wójcik"],
@@ -86,7 +73,7 @@ export default Object.freeze({
     redistributable: false,
   },
   // TODO(vxern): What's this guy's real name?
-  "fazi": {
+  "fazi/słownik": {
     name: "Słownik śl𝑜nski",
     link: "https://www.slownikslaski.pl",
     authors: [],
@@ -94,7 +81,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "markowski": {
+  "markowski/słownik": {
     name: "Słownik",
     link: "https://www.antryj.pl/category/slownik/",
     authors: ["Zbigniew Markowski"],
@@ -128,7 +115,7 @@ export default Object.freeze({
       total: 290,
     },
   },
-  "przywara": {
+  "przywara/narzecza": {
     name: "Narzecza śląskie",
     link: "https://sbc.org.pl/dlibra/publication/68791/edition/64871",
     authors: ["Michał Przywara"],
@@ -141,7 +128,7 @@ export default Object.freeze({
       total: 8000,
     },
   },
-  "lazik": {
+  "lazik/wörterbuch": {
     name: "Kleines phraseologisches Wörterbuch der oberschlesischen Sprache im Bezirk Oppeln und Umgebung",
     link: "http://www.dr-lazik.de/",
     authors: ["Wolfgang Lazik"],
@@ -149,7 +136,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "parczewska": {
+  "parczewska/przyczynki": {
     name: "Przyczynki do słownika gwary śląskiej",
     link: "https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej",
     authors: ["Melania Parczewska"],
@@ -157,7 +144,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "nitsch": {
+  "nitsch/dialekty": {
     name: "Dialekty polskie Śląska",
     link: "https://sbc.org.pl/dlibra/publication/600216/edition/564609",
     authors: ["Kazimierz Nitsch"],
@@ -165,7 +152,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "olesch": {
+  "olesch/wortschatz": {
     name: "Der Wortschatz der polnischen Mundart von Sankt Annaberg",
     link: "https://sbc.org.pl/dlibra/publication/958232",
     authors: ["Reinhold Olesch"],
@@ -173,7 +160,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "wencel:rojśliny": {
+  "wencel/rojśliny": {
     name: "Rojśliny po ślų̊sku",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf",
     authors: ["Aleksandra Wencel"],
@@ -195,7 +182,7 @@ export default Object.freeze({
     },
   },
   // TODO(vxern): Who made this? Is this even accessible anymore?
-  "zestawienie.gatunków": {
+  "nieznany/zestawienie": {
     name: "Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej",
     link: "https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf",
     // TODO(vxern): Authors?
@@ -204,7 +191,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "wencel:grziby": {
+  "wencel/grziby": {
     name: "Grziby po ślų̊sku",
     link: "https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf",
     authors: ["Aleksandra Wencel"],
@@ -212,7 +199,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "gładysz": {
+  "gładysz/zdobnictwo": {
     name: "Zdobnictwo metalowe na Śląsku",
     link: "https://pbc.gda.pl/dlibra/publication/1165/edition/8684",
     authors: ["Mieczysław Gładysz"],
@@ -236,7 +223,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "kallus": {
+  "kallus/słownik": {
     name: "Słownik Górnoślōnskij Gŏdki",
     link: "https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki",
     authors: ["Bogdan Kallus"],
@@ -244,7 +231,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "słaboń": {
+  "słaboń/słownik": {
     name: "Słownik gwar śląskich",
     link: "https://sbc.org.pl/dlibra/publication/edition/912987",
     authors: ["Manfred Słaboń"],
@@ -252,7 +239,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "wyderka": {
+  "wyderka/słownik": {
     name: "Słownik gwar śląskich",
     link: "https://instytutslaski.pl/slownik-gwar-slaskich/",
     authors: ["Bogusław Wyderka", "Małgorzata Iżykowska", "Beata Jahołkowska", "Krzysztof Kleszcz", "Lidia Przymuszała", "Danuta Lech-Kirstein", "Anna Jedynak", "Marzena Muszyńska", "Kamila Nowak", "Agata Haas"],
@@ -308,7 +295,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "cinciała": {
+  "cinciała/słownik": {
     name: "Słownik dialektyczny Księstwa Cieszyńskiego",
     link: "https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii",
     authors: ["Andrzej Cinciała"],
@@ -316,7 +303,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "bąk+rospond": {
+  "bąk+rospond/słownik": {
     name: "Słownik gwarowy Śląska",
     link: "https://www.bu.umk.pl/wymiana/index.php?10503,slownik-gwarowy-slaska-stanislaw-bak-stanislaw-rospond.-opole-instytut-slaski-1962.-26-2014-140.",
     authors: ["Stanisław Bąk", "Stanisław Rospond"],
@@ -324,7 +311,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "podgórscy": {
+  "podgórscy/słownik": {
     name: "Słownik gwar śląskich",
     link: "https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769",
     authors: ["Adam Podgórski", "Barbara Podgórska"],
@@ -333,7 +320,7 @@ export default Object.freeze({
     redistributable: false,
   },
   // TODO(vxern): Who wrote this?
-  "nieznany": {
+  "nieznany/słownik": {
     name: "Nieznany śląski słownik gwarowy",
     // TODO(vxern): Link?
     link: null,
@@ -343,7 +330,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "furgalińska": {
+  "furgalińska/godka": {
     name: "Ślónsko Godka",
     link: "https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732",
     authors: ["Joanna Furgalińska"],
@@ -351,7 +338,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  "czajkowscy+klukowscy": {
+  "czajkowscy+klukowscy/słownik": {
     name: "Słownik gwary śląskiej",
     link: "https://m6122.lib.mol.pl/description/13122308/slownik-gwary-slaskiej-13122308",
     authors: ["Andrzej Czajkowski", "Ilona Czajkowska", "Andrzej Klukowski", "Dorota Klukowska"],
@@ -384,7 +371,7 @@ export default Object.freeze({
     redistributable: false,
   },
   // TODO(vxern:): Who wrote this really?
-  "lepiarczyk": {
+  "lepiarczyk/słownik": {
     name: "Internetowy Słownik Języka Śląskiego",
     link: "https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm",
     // TODO(vxern:): Who actually wrote this?
@@ -393,7 +380,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "szołtysek": {
+  "szołtysek/słownik": {
     name: "Słownik",
     link: "https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt",
     authors: ["Marek Szołtysek"],
@@ -401,7 +388,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "hellfeier": {
+  "hellfeier/słownik": {
     name: "Słownik śląsko-polski",
     link: "https://geudka.eu/slownik/",
     authors: ["Robert Hellfeier"],
@@ -409,7 +396,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "wiora": {
+  "wiora/słownik": {
     name: "Słownik śląsko-polski",
     link: "https://jozef.wiora.pl/szl/slownik.pdf",
     authors: ["Józef Wiora"],
@@ -417,7 +404,7 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  "wacławczyk": {
+  "wacławczyk/słownik": {
     name: "Słownik gwary strzeleckiej",
     link: "http://moreantiqua.com/slownik-gwary-strzeleckiej-2/",
     authors: ["Norbert Wacławczyk"],
@@ -433,8 +420,7 @@ export default Object.freeze({
     access: "limited",
     redistributable: false,
   },
-  // TODO(vxern:): Who wrote this?
-  "segeth": {
+  "segeth/słownik": {
     name: "Słownik gwary w Zborowskiem",
     link: "https://www.zborowskie.info/articles/gwara-slaska",
     authors: ["Witold Segeth"],
