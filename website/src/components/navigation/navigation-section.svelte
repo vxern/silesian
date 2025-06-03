@@ -3,7 +3,6 @@
   import { page } from "$app/state";
   import { m } from "$lib/paraglide/messages";
   import NavigationButton from "./navigation-button.svelte";
-  import NavigationRow from "./navigation-row.svelte";
   import Home2LineIcon from "~icons/mingcute/home-2-line";
   import Document2LineIcon from "~icons/mingcute/document-2-line";
   import Book6LineIcon from "~icons/mingcute/book-6-line";
@@ -16,57 +15,49 @@
 </script>
 
 <nav class="fixed top-8 right-8 flex flex-col items-end gap-y-2">
-  <NavigationRow>
-    <NavigationButton
-      title={m["routes.home.title"]()}
-      onclick={() => goto("/")}
-      highlighted={page.url.pathname === "/"}
-    />
-    <Home2LineIcon class="text-zinc-400" />
-  </NavigationRow>
+  <NavigationButton
+    onclick={() => goto("/")}
+    highlighted={page.url.pathname === "/"}
+  >
+    {m["routes.home.title"]()}
+    <Home2LineIcon />
+  </NavigationButton>
   <!-- TODO(vxern): If there are results, show 'Słowo — słowo', otherwise show 'Wyszukanie — słowo' -->
   {#if page.url.pathname.startsWith("/word")}
-    <NavigationRow>
-      <NavigationButton
-        title={`${m["routes.word.title"]()} — ${decodeURIComponent(page.url.pathname.split("/word/").at(1))}`}
-        highlighted={true}
-      />
-      <Document2LineIcon class="text-zinc-400" />
-    </NavigationRow>
+    <NavigationButton highlighted={true}>
+      {`${m["routes.word.title"]()} — ${decodeURIComponent(page.url.pathname.split("/word/").at(1))}`}
+      <Document2LineIcon />
+    </NavigationButton>
   {/if}
-  <NavigationRow>
-    <NavigationButton
-      title={m["routes.sources.title"]()}
-      onclick={() => goto("/sources")}
-      highlighted={page.url.pathname === "/sources"}
-    />
-    <Book6LineIcon class="text-zinc-400" />
-  </NavigationRow>
-  <NavigationRow>
-    <NavigationButton
-      title={m["routes.about.title"]()}
-      onclick={() => goto("/about")}
-      highlighted={page.url.pathname === "/about"}
-    />
-    <InformationLineIcon class="text-zinc-400" />
-  </NavigationRow>
+  <NavigationButton
+    onclick={() => goto("/sources")}
+    highlighted={page.url.pathname === "/sources"}
+  >
+    {m["routes.sources.title"]()}
+    <Book6LineIcon />
+  </NavigationButton>
+  <NavigationButton
+    onclick={() => goto("/about")}
+    highlighted={page.url.pathname === "/about"}
+  >
+    {m["routes.about.title"]()}
+    <InformationLineIcon />
+  </NavigationButton>
   {#if !authenticated}
-    <NavigationRow>
-      <NavigationButton
-        title={m["routes.login.title"]()}
-        onclick={() => goto("/login")}
-        highlighted={page.url.pathname === "/login"}
-      />
-      <AlignArrowRightLineIcon class="text-zinc-400" />
-    </NavigationRow>
+    <NavigationButton
+      onclick={() => goto("/login")}
+      highlighted={page.url.pathname === "/login"}
+    >
+      {m["routes.login.title"]()}
+      <AlignArrowRightLineIcon />
+    </NavigationButton>
   {:else}
-    <NavigationRow>
-      <NavigationButton
-        title={m["routes.account.title"]()}
-        onclick={() => goto("/account")}
-        highlighted={page.url.pathname === "/account"}
-      />
-      <User1LineIcon class="text-zinc-400" />
-    </NavigationRow>
+    <NavigationButton
+      onclick={() => goto("/account")}
+      highlighted={page.url.pathname === "/account"}
+    >
+      {m["routes.account.title"]()}
+      <User1LineIcon />
+    </NavigationButton>
   {/if}
 </nav>

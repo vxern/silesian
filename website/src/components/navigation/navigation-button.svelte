@@ -1,9 +1,9 @@
 <script>
-  const { title, highlighted, onclick } = $props();
+  const { children, highlighted, onclick } = $props();
 </script>
 
 <button
-  class="text-xl font-bold"
+  class="flex gap-x-2 items-center font-bold text-xl"
   class:cursor-pointer={onclick}
   class:text-yellow-400={highlighted}
   class:text-zinc-400={!highlighted}
@@ -11,5 +11,5 @@
   class:hover:text-zinc-400={onclick && !highlighted}
   {onclick}
 >
-  {title}
+  {@render children?.()}
 </button>
