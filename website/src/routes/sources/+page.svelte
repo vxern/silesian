@@ -228,7 +228,7 @@
                     {m["routes.sources.table.licence.proprietary"]()}
                   </span>
                 {:else if source.licence === "granted"}
-                  <span class="text-lime-500">
+                  <span class="text-green-500">
                     {m["routes.sources.table.licence.granted"]()}
                   </span>
                 {:else if source.licence === "public"}
