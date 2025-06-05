@@ -6,21 +6,12 @@
   import "tippy.js/animations/shift-toward.css";
   import "tippy.js/dist/tippy.css";
   import "../app.css";
-  import { onMount } from "svelte";
 
   let { children } = $props();
 
   tippy.setDefaultProps({
     animation: "shift-toward",
     hideOnClick: true,
-  });
-
-  let pageTitle = $state();
-  $effect(() => {
-    const root = page.url.pathname.split("/").at(0);
-    if (`routes.${root}.title` in m) {
-      pageTitle = m[`routes.${root}.title`]();
-    }
   });
 </script>
 
@@ -30,7 +21,7 @@
   <meta name="copyright" content={constants.project.name} />
   <meta name="language" content={constants.project.language} />
   <meta name="robots" content="notranslate, noimageindex" />
-  <meta name="author" content={constants.project.title} />
+  <meta name="author" content={constants.project.author} />
   <meta name="url" content={constants.project.url} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
