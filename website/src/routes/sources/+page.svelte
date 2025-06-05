@@ -3,8 +3,7 @@
   import Page from "../../components/page/index.js";
   import { onMount } from "svelte";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-
-  // TODO(vxern): Separate sources by category. Dictionaries, magazines, etc. etc.
+  import constants from "$lib/constants";
 
   let sources = $state();
   async function fetchSources() {
@@ -144,6 +143,16 @@
     fetchSources();
   });
 </script>
+
+<svelte:head>
+  <meta name="description" content={m["routes.sources.description"]()} />
+  <title>
+    {m["title"]({
+      project_name: constants.project.name,
+      page_title: m["routes.sources.title"](),
+    })}
+  </title>
+</svelte:head>
 
 <NavigationSection />
 

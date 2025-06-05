@@ -31,13 +31,28 @@
   });
 </script>
 
+<svelte:head>
+  <meta
+    name="description"
+    content={m["routes.home.description"]({
+      project_name: constants.project.name,
+    })}
+  />
+  <title>
+    {m["title"]({
+      project_name: constants.project.name,
+      page_title: m["routes.home.title"](),
+    })}
+  </title>
+</svelte:head>
+
 <NavigationSection />
 <SocialsSection />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>
     <h1 class="text-8xl text-yellow-400 font-bold">
-      {constants.projectName}
+      {constants.project.name}
     </h1>
     <h2 class="text-2xl text-blue-500">{splash}</h2>
   </article>

@@ -1,9 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "title": {
-    "without_page": "{project_name}",
-    "with_page": "{project_name} — {page_title}"
-  },
+  "title": "{project_name} — {page_title}",
   "components": {
     "search_bar": {
       "placeholder": "Ftōrego słowa szukŏcie?",
@@ -18,6 +15,7 @@
   "routes": {
     "home": {
       "title": "Sztart",
+      "description": "{project_name} je zajta stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy",
       "splashes": {
         "one": "Dykcjōnŏrze ślōnskij gŏdki",
         "two": "Dykcjōnŏrze ślōnskigo jynzyka",
@@ -68,14 +66,17 @@
       }
     },
     "about": {
-      "title": "Ô zajcie"
+      "title": "Ô zajcie",
+      "description": "Informacyje ô {project_name} a ô naszym cylu."
     },
     "word": {
       "title": "Słowo",
+      "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
       "source": "Zdrzōdło"
     },
     "sources": {
       "title": "Zdrzōdła",
+      "description": "Zdrzōdła, kerych używōmy a kere my zaimportowali abo dalszij chcymy zaimportować.",
       "table": {
         "work": "Werk",
         "authors": {
@@ -101,11 +102,17 @@
         }
       }
     },
-    "login": {
-      "title": "Logowanie"
+    "signin": {
+      "title": "Logowanie",
+      "description": "Samkej mogecie sie zalogować ku Waszymu kōntowi."
+    },
+    "signout": {
+      "title": "Ôdlogowywanie",
+      "description": "Samkej mogecie sie ôdlogować ôd Waszego kōnta."
     },
     "account": {
-      "title": "Kōnto"
+      "title": "Kōnto",
+      "description": "Informacyje ô Waszym kōncie."
     }
   },
   "unknown": "?",
