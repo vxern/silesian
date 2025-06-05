@@ -27,6 +27,7 @@
   "dependencies": {
     "@auth/sveltekit": "^1.9.2",
     "@tailwindcss/vite": "^4.1.7",
+    "clsx": "^2.1.1",
     "tailwindcss": "^4.1.7",
     "tippy.js": "^6.3.7"
   }
