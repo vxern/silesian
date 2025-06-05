@@ -25,33 +25,13 @@
 </script>
 
 <svelte:head>
-  <meta
-    name="keywords"
-    content="ślōnski, gŏdka, dykcjōnŏrz, narzecza, słowa, nauka"
-  />
-  <meta
-    name="description"
-    content="{constants.projectName} je zajta stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy."
-  />
-  <meta name="subject" content="ślōnski słownik" />
-  <meta name="copyright" content="silesian.eu" />
-  <meta name="language" content="szl" />
+  <meta name="keywords" content={constants.project.keywords.join(", ")} />
+  <meta name="subject" content={constants.project.subject} />
+  <meta name="copyright" content={constants.project.name} />
+  <meta name="language" content={constants.project.language} />
   <meta name="robots" content="notranslate, noimageindex" />
-  <meta name="author" content="Dorian Oszczęda" />
-  <meta name="url" content="https://silesian.eu" />
-
-  {#if pageTitle}
-    <title>
-      {m["title.with_page"]({
-        project_name: constants.projectName,
-        page_title: pageTitle,
-      })}
-    </title>
-  {:else}
-    <title>
-      {m["title.without_page"]({ project_name: constants.projectName })}
-    </title>
-  {/if}
+  <meta name="author" content={constants.project.title} />
+  <meta name="url" content={constants.project.url} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
