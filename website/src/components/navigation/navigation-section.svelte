@@ -48,7 +48,7 @@
       onclick={() => goto("/login")}
       highlighted={page.url.pathname === "/login"}
     >
-      {m["routes.login.title"]()}
+      {m["routes.signin.title"]()}
       <AlignArrowRightLineIcon />
     </NavigationButton>
   {:else}

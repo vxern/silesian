@@ -2,6 +2,10 @@ export default Object.freeze({
   project: {
     name: "silesian.eu",
     author: "Dorian Oszczęda",
+    url: "https://silesian.eu",
+    keywords: ["ślōnski", "godka", "jynzyk", "polski", "dykcjōnŏrz", "narzecza", "słowa", "nauka"],
+    subject: "ślōnski słownik",
+    language: "szl",
   },
   specialLetters: [
     "ã",
