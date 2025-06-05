@@ -1,5 +1,8 @@
 export default Object.freeze({
-  projectName: "silesian.eu",
+  project: {
+    name: "silesian.eu",
+    author: "Dorian Oszczęda",
+  },
   specialLetters: [
     "ã",
     "ć",
