@@ -6,7 +6,7 @@
   import GitHubLineIcon from "~icons/mingcute/github-line";
 </script>
 
-<nav class="fixed bottom-8 right-8 flex gap-x-2 text-2xl text-zinc-500">
+<nav class="fixed bottom-8 left-8 flex gap-x-2 text-2xl text-zinc-500">
   <button class="cursor-pointer" onclick={() => goto("/socials/discord")}>
     <DiscordIcon class="hover:text-[#5865F2]" />
   </button>

@@ -9,7 +9,7 @@
   import Book6LineIcon from "~icons/mingcute/book-6-line";
   import InformationLineIcon from "~icons/mingcute/information-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
-  import User1LineIcon from "~icons/mingcute/user-1-line";
+  import User2LineIcon from "~icons/mingcute/user-2-line";
 </script>
 
 <nav class="fixed top-8 right-8 flex flex-col items-end gap-y-2">
@@ -63,7 +63,7 @@
       highlighted={page.url.pathname === "/account"}
     >
       {m["routes.account.title"]()}
-      <User1LineIcon />
+      <User2LineIcon />
     </NavigationButton>
   {/if}
 </nav>
