@@ -6,6 +6,7 @@
   import { onMount } from "svelte";
   import NavigationSection from "../components/navigation/navigation-section.svelte";
   import SocialsSection from "../components/socials/socials-section.svelte";
+  import { goto } from "$app/navigation";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -58,7 +59,7 @@
   </article>
   <SearchBar />
   <article>
-    <h6 class="cursor-default text-sm italic">
+    <h6 class="text-sm italic">
       <span class="text-zinc-600">
         {#if statistics}
           {m["routes.home.help.imported.total"]({
@@ -72,12 +73,15 @@
         {/if}
       </span>
       <br />
-      <span class="text-zinc-600 hover:cursor-text">
+      <span class="text-zinc-600">
         {m["routes.home.help.want_to_help"]()}
       </span>
-      <span class="text-green-600 hover:text-green-500 hover:cursor-pointer">
+      <button
+        class="cursor-pointer text-green-600 hover:text-green-500"
+        onclick={() => goto("/contribute")}
+      >
         {m["routes.home.help.find_out_how"]()}
-      </span>
+      </button>
     </h6>
   </article>
 </section>

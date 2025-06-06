@@ -69,6 +69,10 @@
       "title": "Ô zajcie",
       "description": "Informacyje ô {project_name} a ô naszym cylu."
     },
+    "search": {
+      "title": "Szukanie",
+      "description": "Szukanie słōw a jejich znaczyń."
+    },
     "word": {
       "title": "Słowo",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
