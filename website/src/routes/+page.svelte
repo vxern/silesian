@@ -2,7 +2,7 @@
   import constants from "$lib/constants";
   import { m } from "$lib/paraglide/messages.js";
   import "tippy.js/themes/material.css";
-  import SearchBar from "../components/search-bar/search-bar.svelte";
+  import SearchBar from "../components/search/search-bar.svelte";
   import { onMount } from "svelte";
   import NavigationSection from "../components/navigation/navigation-section.svelte";
   import SocialsSection from "../components/socials/socials-section.svelte";

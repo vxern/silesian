@@ -1,7 +1,7 @@
 <script>
   import { m } from "$lib/paraglide/messages";
   import Page from "../../../components/page/index.js";
-  import SearchBar from "../../../components/search-bar/search-bar.svelte";
+  import SearchBar from "../../../components/search/search-bar.svelte";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants";
 </script>
