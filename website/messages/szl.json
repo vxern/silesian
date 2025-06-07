@@ -3,7 +3,7 @@
   "title": "{project_name} — {page_title}",
   "components": {
     "search_bar": {
-      "placeholder": "Ftōrego słowa szukŏcie?",
+      "placeholder": "Kerego słowa szukŏcie?",
       "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
       "reset_caps": {
         "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
