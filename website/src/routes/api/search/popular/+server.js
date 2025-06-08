@@ -1,0 +1,6 @@
+import { json } from "@sveltejs/kit";
+import popular from "$lib/api/popular"
+
+export function GET({ url: { searchParams } }) {
+  return json(popular.slice(0, searchParams.get("limit") ?? 100));
+}

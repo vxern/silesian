@@ -26,4 +26,7 @@ export default Object.freeze({
     twitter: "https://twitter.com/silesian.eu",
     discord: "https://discord.gg/silesian.eu",
   },
+  limits: {
+    searchHistory: 21,
+  },
 });

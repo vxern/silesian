@@ -3,7 +3,8 @@
   import { m } from "$lib/paraglide/messages";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants";
-  import SearchBar from "../../components/search-bar/search-bar.svelte";
+  import SearchBar from "../../components/search/search-bar.svelte";
+  import SearchHistory from "../../components/search/search-history.svelte";
 </script>
 
 <svelte:head>
@@ -20,6 +21,11 @@
 
 <Page.Root>
   <Page.Header>
+    <Page.Title title={m["routes.search.title"]()} />
     <SearchBar />
   </Page.Header>
+  <Page.Divider />
+  <Page.Contents>
+    <SearchHistory />
+  </Page.Contents>
 </Page.Root>

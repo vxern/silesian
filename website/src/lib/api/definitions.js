@@ -1,3 +1,2 @@
-export default [{
-  
-}];
+// TODO(vxern): This is hard-coded.
+export default [{}];
