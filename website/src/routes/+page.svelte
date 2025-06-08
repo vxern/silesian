@@ -7,6 +7,7 @@
   import NavigationSection from "../components/navigation/navigation-section.svelte";
   import SocialsSection from "../components/socials/socials-section.svelte";
   import { goto } from "$app/navigation";
+  import Loading from "../components/meta/loading.svelte";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -59,29 +60,29 @@
   </article>
   <SearchBar />
   <article>
-    <h6 class="text-sm italic">
-      <span class="text-zinc-600">
-        {#if statistics}
+    {#if statistics}
+      <h6 class="text-sm italic">
+        <span class="text-zinc-600">
           {m["routes.home.help.imported.total"]({
             count: statistics.imported.total,
           })}
           {m["routes.home.help.imported.this_month"]({
             count: statistics.imported.this_month,
           })}
-        {:else}
-          {m["loading"]()}
-        {/if}
-      </span>
-      <br />
-      <span class="text-zinc-600">
-        {m["routes.home.help.want_to_help"]()}
-      </span>
-      <button
-        class="cursor-pointer text-green-600 hover:text-green-500"
-        onclick={() => goto("/contribute")}
-      >
-        {m["routes.home.help.find_out_how"]()}
-      </button>
-    </h6>
+        </span>
+        <br />
+        <span class="text-zinc-600">
+          {m["routes.home.help.want_to_help"]()}
+        </span>
+        <button
+          class="cursor-pointer text-green-600 hover:text-green-500"
+          onclick={() => goto("/contribute")}
+        >
+          {m["routes.home.help.find_out_how"]()}
+        </button>
+      </h6>
+    {:else}
+      <Loading />
+    {/if}
   </article>
 </section>
