@@ -157,7 +157,7 @@
       <tr>
         <th scope="row" class="w-[35%] border-b-1 border-b-zinc-800">
           {#if !source.name}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {:else if source.link}
             <a href={source.link} class="underline underline-offset-3">
               {source.name}
@@ -168,7 +168,7 @@
         </th>
         <td class="w-[35%] border-b-1 border-b-zinc-800">
           {#if !source.authors}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {:else if source.authors === "community"}
             <i>
               {m["routes.sources.table.authors.community"]()}
@@ -176,12 +176,12 @@
           {:else if source.authors.length > 0}
             {source.authors.join(" · ")}
           {:else}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {/if}
         </td>
         <td class="w-[10%] border-b-1 border-b-zinc-800">
           {#if !source.access}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {:else if source.access === "closed"}
             <span class="text-red-500">
               {m["routes.sources.table.access.closed"]()}
@@ -198,7 +198,7 @@
         </td>
         <td class="w-[15%] border-b-1 border-b-zinc-800">
           {#if !source.licence}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {:else if source.licence === "proprietary"}
             <span class="text-red-500">
               {m["routes.sources.table.licence.proprietary"]()}
@@ -219,13 +219,13 @@
         </td>
         <td class="w-[5%] border-b-1 border-b-zinc-800">
           {#if !source.redistributable}
-            {m["none"]()}
+            {m["meta.none"]()}
           {:else if !source.progress}
-            {m["unknown"]()}
+            {m["meta.unknown"]()}
           {:else}
             {m["routes.sources.table.progress.numbers"]({
-              imported: source.progress.imported ?? m["unknown"](),
-              total: source.progress.total ?? m["unknown"](),
+              imported: source.progress.imported ?? m["meta.unknown"](),
+              total: source.progress.total ?? m["meta.unknown"](),
             })}
             <br />
             {#snippet percentage()}
@@ -235,7 +235,7 @@
             {/snippet}
             {#if source.progress.imported === undefined || source.progress.total === undefined}
               {m["routes.sources.table.progress.percentage"]({
-                percentage: m["unknown"](),
+                percentage: m["meta.unknown"](),
               })}
             {:else if completion(source.progress) > 0.95}
               <span class="text-green-500">

@@ -71,7 +71,9 @@
     },
     "search": {
       "title": "Szukanie",
-      "description": "Szukanie słōw a jejich znaczyń."
+      "description": "Szukanie słōw a jejich znaczyń.",
+      "history": "Skorsze wyszukania",
+      "popular": "Drudzy tyż szukali"
     },
     "word": {
       "title": "Słowo",
@@ -119,7 +121,9 @@
       "description": "Informacyje ô Waszym kōncie."
     }
   },
-  "unknown": "?",
-  "none": "—",
-  "loading": "Ladowanie…"
+  "meta": {
+    "unknown": "?",
+    "none": "—",
+    "etc": "…"
+  }
 }
