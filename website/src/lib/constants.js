@@ -23,7 +23,7 @@ export default Object.freeze({
   links: {
     github: "https://github.com/vxern/silesian.eu",
     instagram: "https://instagram.com/silesian.eu",
-    twitter: "https://twitter.com/silesian.eu",
+    x: "https://x.com/silesian.eu",
     discord: "https://discord.gg/silesian.eu",
   },
   limits: {

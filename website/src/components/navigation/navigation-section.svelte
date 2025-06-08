@@ -51,10 +51,10 @@
   </NavigationButton>
   {#if !page.data.session}
     <NavigationButton
-      onclick={() => goto("/signin")}
-      highlighted={page.url.pathname === "/signin"}
+      onclick={() => goto("/login")}
+      highlighted={page.url.pathname === "/login"}
     >
-      {m["routes.signin.title"]()}
+      {m["routes.login.title"]()}
       <AlignArrowRightLineIcon />
     </NavigationButton>
   {:else}

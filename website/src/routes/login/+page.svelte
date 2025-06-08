@@ -1,0 +1,94 @@
+<script>
+  import { m } from "$lib/paraglide/messages";
+  import Page from "../../components/page/index";
+  import NavigationSection from "../../components/navigation/navigation-section.svelte";
+  import { page } from "$app/stores";
+  import { SignIn, SignOut } from "@auth/sveltekit/components";
+  import constants from "$lib/constants";
+</script>
+
+<svelte:head>
+  <meta name="description" content={m["routes.login.description"]()} />
+  <title>
+    {m["title"]({
+      project_name: constants.project.name,
+      page_title: m["routes.login.title"](),
+    })}
+  </title>
+</svelte:head>
+
+<NavigationSection />
+
+<Page.Root>
+  <Page.Header>
+    <Page.Title title={m["routes.login.title"]()} />
+  </Page.Header>
+  <Page.Divider />
+  <Page.Contents>
+    <section class="flex justify-center gap-x-4">
+      <SignIn provider="github" signInPage="login">
+        <section
+          slot="submitButton"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+        >
+          <enhanced:img src="/static/logos/github.svg" class="size-10" />
+        </section>
+      </SignIn>
+      <SignIn provider="discord" signInPage="login">
+        <section
+          slot="submitButton"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+        >
+          <enhanced:img src="/static/logos/discord.svg" class="size-10" />
+        </section>
+      </SignIn>
+      <SignIn provider="google" signInPage="login">
+        <section
+          slot="submitButton"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+        >
+          <enhanced:img src="/static/logos/google.svg" class="size-10" />
+        </section>
+      </SignIn>
+      <SignIn provider="linkedin" signInPage="login">
+        <section
+          slot="submitButton"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+        >
+          <enhanced:img src="/static/logos/linkedin.svg" class="size-10" />
+        </section>
+      </SignIn>
+      <SignIn provider="twitter" signInPage="login">
+        <section
+          slot="submitButton"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+        >
+          <enhanced:img src="/static/logos/x.svg" class="size-10" />
+        </section>
+      </SignIn>
+    </section>
+    <!-- 
+    {#if $page.data.session}
+      {#if $page.data.session.user?.image}
+        <img
+          src={$page.data.session.user.image}
+          class="avatar"
+          width="256"
+          alt="User Avatar"
+        />
+      {/if}
+      <span class="signedInText">
+        <small>Signed in as</small><br />
+        <strong>{$page.data.session.user?.name ?? "User"}</strong>
+      </span>
+      <SignOut>
+        <div slot="submitButton" class="buttonPrimary">Sign out</div>
+      </SignOut>
+    {:else}
+      <span class="notSignedInText">You are not signed in</span>
+      <SignIn>
+        <div slot="submitButton" class="buttonPrimary">Sign in</div>
+      </SignIn>
+    {/if} -->
+  </Page.Contents>
+</Page.Root>

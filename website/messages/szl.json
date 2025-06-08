@@ -108,11 +108,11 @@
         }
       }
     },
-    "signin": {
+    "login": {
       "title": "Logowanie",
       "description": "Samkej mogecie sie zalogować ku Waszymu kōntowi."
     },
-    "signout": {
+    "logout": {
       "title": "Ôdlogowywanie",
       "description": "Samkej mogecie sie ôdlogować ôd Waszego kōnta."
     },

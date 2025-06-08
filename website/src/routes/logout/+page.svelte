@@ -6,11 +6,11 @@
 </script>
 
 <svelte:head>
-  <meta name="description" content={m["routes.signout.description"]()} />
+  <meta name="description" content={m["routes.logout.description"]()} />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.signout.title"](),
+      page_title: m["routes.logout.title"](),
     })}
   </title>
 </svelte:head>
@@ -19,6 +19,6 @@
 
 <Page.Root>
   <Page.Header>
-    <Page.Title title={m["routes.signout.title"]()} />
+    <Page.Title title={m["routes.logout.title"]()} />
   </Page.Header>
 </Page.Root>
