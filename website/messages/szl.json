@@ -69,16 +69,29 @@
       "title": "Ô zajcie",
       "description": "Informacyje ô {project_name} a ô naszym cylu."
     },
+    "account": {
+      "title": "Kōnto",
+      "description": "Informacyje ô Waszym kōncie."
+    },
+    "editor": {
+      "new": {
+        "title": "Nowe słowo",
+        "description": "Używŏcz dodŏwŏ nowe słowo ku dykcjōnŏrzu."
+      }
+    },
+    "login": {
+      "title": "Logowanie",
+      "description": "Samkej mogecie sie zalogować ku Waszymu kōntu."
+    },
+    "logout": {
+      "title": "Ôdlogowywanie",
+      "description": "Samkej mogecie sie ôdlogować ôd Waszego kōnta."
+    },
     "search": {
       "title": "Szukanie",
       "description": "Szukanie słōw a jejich znaczyń.",
       "history": "Skorsze wyszukania",
       "popular": "Drudzy tyż szukali"
-    },
-    "word": {
-      "title": "Słowo",
-      "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
-      "source": "Zdrzōdło"
     },
     "sources": {
       "title": "Zdrzōdła",
@@ -108,17 +121,10 @@
         }
       }
     },
-    "login": {
-      "title": "Logowanie",
-      "description": "Samkej mogecie sie zalogować ku Waszymu kōntowi."
-    },
-    "logout": {
-      "title": "Ôdlogowywanie",
-      "description": "Samkej mogecie sie ôdlogować ôd Waszego kōnta."
-    },
-    "account": {
-      "title": "Kōnto",
-      "description": "Informacyje ô Waszym kōncie."
+    "word": {
+      "title": "Słowo",
+      "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
+      "source": "Zdrzōdło"
     }
   },
   "meta": {
