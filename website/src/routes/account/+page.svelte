@@ -2,7 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
 </script>
 
 <svelte:head>

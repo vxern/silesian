@@ -2,7 +2,7 @@
   import Page from "../../components/page/index.js";
   import { m } from "$lib/paraglide/messages";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
   import SearchBar from "../../components/search/search-bar.svelte";
   import SearchHistory from "../../components/search/search-history.svelte";
 </script>

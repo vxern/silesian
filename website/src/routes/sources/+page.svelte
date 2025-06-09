@@ -5,7 +5,7 @@
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import SourceTable from "../../components/sources/source-table.svelte";
   import Loading from "../../components/meta/loading.svelte";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
 
   let sources = $state();
   async function fetchSources() {

@@ -4,7 +4,7 @@
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import { page } from "$app/stores";
   import { SignIn, SignOut } from "@auth/sveltekit/components";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
 </script>
 
 <svelte:head>

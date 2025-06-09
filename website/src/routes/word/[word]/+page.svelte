@@ -3,7 +3,7 @@
   import Page from "../../../components/page/index.js";
   import SearchBar from "../../../components/search/search-bar.svelte";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
 </script>
 
 <svelte:head>

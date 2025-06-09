@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/state";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
   import "tippy.js/animations/shift-toward.css";

@@ -4,7 +4,7 @@
   import { m } from "$lib/paraglide/messages";
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
   import Loading from "../../components/meta/loading.svelte";
 
   dayjs.extend(relativeTime);

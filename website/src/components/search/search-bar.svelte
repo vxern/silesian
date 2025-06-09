@@ -2,7 +2,7 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
   import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
-  import constants from "$lib/constants";
+  import constants from "$lib/constants/core";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
