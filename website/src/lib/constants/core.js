@@ -25,6 +25,7 @@ export default Object.freeze({
     instagram: "https://instagram.com/silesian.eu",
     x: "https://x.com/silesian.eu",
     discord: "https://discord.gg/silesian.eu",
+    release: `https://github.com/vxern/silesian.eu/releases/tag/v${import.meta.env.PACKAGE_VERSION}`,
   },
   limits: {
     searchHistory: 21,
