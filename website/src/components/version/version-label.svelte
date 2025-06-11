@@ -3,7 +3,7 @@
 </script>
 
 <span
-  class="absolute text-xl px-1 text-white text-shadow-lg font-bold bg-red-400 rounded-lg shadow-sm shadow-red-400"
+  class="absolute text-xl px-1 text-black text-shadow-lg font-bold bg-white rounded-lg shadow-sm shadow-white"
 >
   {m["components.version_label.alpha"]()}
 </span>
