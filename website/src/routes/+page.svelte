@@ -9,6 +9,7 @@
   import { goto } from "$app/navigation";
   import Loading from "../components/meta/loading.svelte";
   import VersionSection from "../components/version/version-section.svelte";
+  import VersionLabel from "../components/version/version-label.svelte";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -55,8 +56,11 @@
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>
-    <h1 class="text-8xl text-yellow-400 font-bold">
-      {constants.project.name}
+    <h1>
+      <span class="text-8xl text-yellow-400 font-bold">
+        {constants.project.name}
+      </span>
+      <VersionLabel />
     </h1>
     <h2 class="text-2xl text-blue-500">{splash}</h2>
   </article>

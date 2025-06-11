@@ -11,6 +11,9 @@
         "both": "Proszymy jeszcze rŏz naciś tastōw Shift a CapsLock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
     },
+    "version_label": {
+      "alpha": "alfa"
+    },
     "version_section": {
       "version": "Wersyjŏ {version}"
     }
