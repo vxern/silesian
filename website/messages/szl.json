@@ -87,7 +87,9 @@
         "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
         "form": {
           "lemma": "Hasło",
-          "contents": "Inhalt"
+          "lemma_placeholder": "Słowo, co je dodŏwŏcie",
+          "contents": "Inhalt",
+          "contents_placeholder": "Znaczynia, pochodzyniy, wymŏwa, a tak dalij"
         }
       }
     },
