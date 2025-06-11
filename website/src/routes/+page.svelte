@@ -1,6 +1,6 @@
 <script>
   import constants from "$lib/constants/core";
-  import { m } from "$lib/paraglide/messages.js";
+  import { m } from "$lib/paraglide/messages";
   import "tippy.js/themes/material.css";
   import SearchBar from "../components/search/search-bar.svelte";
   import { onMount } from "svelte";
@@ -8,6 +8,7 @@
   import SocialsSection from "../components/socials/socials-section.svelte";
   import { goto } from "$app/navigation";
   import Loading from "../components/meta/loading.svelte";
+  import VersionSection from "../components/version/version-section.svelte";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -50,6 +51,7 @@
 
 <NavigationSection />
 <SocialsSection />
+<VersionSection />
 
 <section class="flex-1 flex flex-col gap-y-16 items-center">
   <article>

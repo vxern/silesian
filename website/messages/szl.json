@@ -10,6 +10,9 @@
         "caps_lock": "Proszymy jeszcze rŏz naciś tasty CapsLock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
         "both": "Proszymy jeszcze rŏz naciś tastōw Shift a CapsLock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
+    },
+    "version_section": {
+      "version": "Wersyjŏ {version}"
     }
   },
   "routes": {
