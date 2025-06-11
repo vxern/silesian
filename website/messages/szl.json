@@ -4,7 +4,7 @@
   "components": {
     "search_bar": {
       "placeholder": "Kerego słowa szukŏcie?",
-      "missing_word": "Coby wyszukać, nojprzōd wkludźcie słowo.",
+      "missing_word": "Coby wyszukać, nojprzōd wkludźcie hasło.",
       "reset_caps": {
         "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
         "caps_lock": "Proszymy jeszcze rŏz naciś tasty CapsLock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
@@ -80,9 +80,15 @@
       "description": "Informacyje ô Waszym kōncie."
     },
     "editor": {
+      "title": "Edytōr",
+      "description": "",
       "new": {
-        "title": "Nowe słowo",
-        "description": "Używŏcz dodŏwŏ nowe słowo ku dykcjōnŏrzu."
+        "title": "Nowe hasło",
+        "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
+        "form": {
+          "lemma": "Hasło",
+          "contents": "Inhalt"
+        }
       }
     },
     "login": {
@@ -128,7 +134,7 @@
       }
     },
     "word": {
-      "title": "Słowo",
+      "title": "Hasło",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
       "source": "Zdrzōdło"
     }
