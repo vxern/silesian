@@ -60,9 +60,9 @@
                 "countPlural"
               ],
               "match": {
-                "countPlural=one": "s czego w tym miesiōncu dodali my jedno ś'nich.",
-                "countPlural=few": "s czego w tym miesiōncu dodali my {count} ś'nich.",
-                "countPlural=many": " s czego w tym miesiōncu dodali my {count} ś nich."
+                "countPlural=one": "z czego w tym miesiōncu dodali my jedno ś nich.",
+                "countPlural=few": "z czego w tym miesiōncu dodali my {count} ś nich.",
+                "countPlural=many": "z czego w tym miesiōncu dodali my {count} ś nich."
               }
             }
           ]
