@@ -8,8 +8,10 @@
   import Text2LineIcon from "~icons/mingcute/text-2-line";
   import Book6LineIcon from "~icons/mingcute/book-6-line";
   import InformationLineIcon from "~icons/mingcute/information-line";
+  import QuillPenLineIcon from "~icons/mingcute/quill-pen-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
+  import Page from "../page/index.js";
 </script>
 
 <nav class="fixed top-8 right-8 flex flex-col items-end gap-y-2">
@@ -20,7 +22,17 @@
     {m["routes.home.title"]()}
     <Home2LineIcon />
   </NavigationButton>
-  <!-- TODO(vxern): If there are results, show 'Słowo — słowo', otherwise show 'Wyszukanie — słowo' -->
+  <NavigationButton
+    onclick={() => goto("/about")}
+    highlighted={page.url.pathname === "/about"}
+  >
+    {m["routes.about.title"]()}
+    <InformationLineIcon />
+  </NavigationButton>
+  <section class="w-full">
+    <Page.Divider />
+  </section>
+  <!-- TODO(vxern): If there are results, show 'Hasło — <hasło>', otherwise show 'Wyszukanie — <wyszukanie>' -->
   {#if page.url.pathname.startsWith("/word/")}
     <NavigationButton onclick={() => goto("/search")} highlighted={true}>
       {m["routes.word.title"]()}
@@ -29,7 +41,7 @@
   {:else}
     <NavigationButton
       onclick={() => goto("/search")}
-      highlighted={page.url.pathname.startsWith("/search")}
+      highlighted={page.url.pathname === "/search"}
     >
       {m["routes.search.title"]()}
       <Search2LineIcon />
@@ -42,28 +54,40 @@
     {m["routes.sources.title"]()}
     <Book6LineIcon />
   </NavigationButton>
-  <NavigationButton
-    onclick={() => goto("/about")}
-    highlighted={page.url.pathname === "/about"}
-  >
-    {m["routes.about.title"]()}
-    <InformationLineIcon />
-  </NavigationButton>
-  {#if !page.data.session}
-    <NavigationButton
-      onclick={() => goto("/login")}
-      highlighted={page.url.pathname === "/login"}
-    >
-      {m["routes.login.title"]()}
-      <AlignArrowRightLineIcon />
-    </NavigationButton>
-  {:else}
+  {#if page.data.session}
+    {#if page.url.pathname === "/editor/new"}
+      <NavigationButton onclick={() => goto("/editor/new")} highlighted={true}>
+        {m["routes.editor.new.title"]()}
+        <QuillPenLineIcon />
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/editor")}
+        highlighted={page.url.pathname === "/editor"}
+      >
+        {m["routes.editor.title"]()}
+        <QuillPenLineIcon />
+      </NavigationButton>
+    {/if}
+  {/if}
+  <section class="w-full">
+    <Page.Divider />
+  </section>
+  {#if page.data.session}
     <NavigationButton
       onclick={() => goto("/account")}
       highlighted={page.url.pathname === "/account"}
     >
       {m["routes.account.title"]()}
       <User2LineIcon />
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/login")}
+      highlighted={page.url.pathname === "/login"}
+    >
+      {m["routes.login.title"]()}
+      <AlignArrowRightLineIcon />
     </NavigationButton>
   {/if}
 </nav>

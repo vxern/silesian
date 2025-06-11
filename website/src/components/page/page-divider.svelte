@@ -1,3 +1,1 @@
-<article>
-  <div class="h-[2px] bg-zinc-700"></div>
-</article>
+<article class="h-[1px] bg-zinc-700"></article>
