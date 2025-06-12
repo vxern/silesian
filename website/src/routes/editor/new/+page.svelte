@@ -40,7 +40,7 @@
           </label>
           <input
             type="text"
-            id="word"
+            name="word"
             placeholder={m["routes.editor.new.form.lemma_placeholder"]()}
             class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
             value="jak"
@@ -52,10 +52,10 @@
           </label>
           <input
             type="text"
-            id="word"
+            name="source"
             placeholder={m["routes.editor.new.form.source_placeholder"]()}
             class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
-            value="silling.org"
+            value="kulik/słownik"
           />
         </section>
       </section>
@@ -66,7 +66,7 @@
         <section class="flex flex-col gap-y-4 w-full">
           <textarea
             type="text"
-            id="contents"
+            name="contents"
             placeholder={m["routes.editor.new.form.contents_placeholder"]()}
             rows="16"
             class="bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 rounded-lg text-sm font-mono h-96"
