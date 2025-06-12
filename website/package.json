@@ -31,7 +31,9 @@
     "@tailwindcss/vite": "^4.1.7",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
+    "postgres": "^3.4.7",
     "tailwindcss": "^4.1.7",
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "zod": "^3.25.63"
   }
 }
