@@ -1,7 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
-  import IconArrowRightFill from "~icons/mingcute/arrow-right-fill";
+  import Search2LineIcon from "~icons/mingcute/search-2-fill";
   import constants from "$lib/constants/core";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
@@ -174,13 +174,13 @@
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg outline-1 outline-green-600 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-200"
+      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-200"
       type="submit"
       data-sveltekit-reload
       bind:this={submitElement}
       onclick={search}
     >
-      <IconArrowRightFill />
+      <Search2LineIcon />
     </button>
   </section>
   <section>
