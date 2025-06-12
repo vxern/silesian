@@ -88,8 +88,11 @@
         "form": {
           "lemma": "Hasło",
           "lemma_placeholder": "Słowo, co je dodŏwŏcie",
+          "source": "Zdrzōdło",
+          "source_placeholder": "Skōnd bierecie Wasze słowo?",
           "contents": "Inhalt",
-          "contents_placeholder": "Znaczynia, pochodzyniy, wymŏwa, a tak dalij"
+          "contents_placeholder": "Znaczynia, pochodzyniy, wymŏwa, a tak dalij",
+          "submit": "Stwōrz"
         }
       }
     },

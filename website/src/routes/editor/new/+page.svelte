@@ -2,6 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../../components/page/index.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
+  import AddLineIcon from "~icons/mingcute/add-line";
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Pick the example at random from the database.
@@ -32,32 +33,43 @@
   <Page.Divider />
   <Page.Contents>
     <form method="POST" action="?/create" class="flex flex-col gap-y-6">
-      <section class="flex flex-col gap-y-1 items-start">
-        <label for="word" class="pl-1 text-xl text-blue-500">
-          {m["routes.editor.new.form.lemma"]()}
-        </label>
-        <section class="flex gap-x-4 w-full">
+      <section class="flex gap-x-4">
+        <section class="flex-1 flex flex-col gap-y-1 items-start">
+          <label for="word" class="pl-1 text-xl text-blue-500">
+            {m["routes.editor.new.form.lemma"]()}
+          </label>
           <input
             type="text"
             id="word"
             placeholder={m["routes.editor.new.form.lemma_placeholder"]()}
-            class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-600 p-3 rounded-lg"
+            class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
             value="jak"
           />
-          <section class="flex-1 p-3"></section>
+        </section>
+        <section class="flex-1 flex flex-col gap-y-1 items-start">
+          <label for="word" class="pl-1 text-xl text-blue-500">
+            {m["routes.editor.new.form.source"]()}
+          </label>
+          <input
+            type="text"
+            id="word"
+            placeholder={m["routes.editor.new.form.source_placeholder"]()}
+            class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
+            value="silling.org"
+          />
         </section>
       </section>
       <section class="flex flex-col gap-y-1 items-start">
         <label for="word" class="pl-1 text-xl text-blue-500">
           {m["routes.editor.new.form.contents"]()}
         </label>
-        <section class="flex gap-x-4 w-full">
+        <section class="flex flex-col gap-y-4 w-full">
           <textarea
             type="text"
             id="contents"
-            rows="20"
             placeholder={m["routes.editor.new.form.contents_placeholder"]()}
-            class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-600 p-3 rounded-lg font-mono"
+            rows="16"
+            class="bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 rounded-lg text-sm font-mono h-96"
             >{`## Przimiotnik
 
 1. Używany do pytaniŏ ô sztand abo spusōb.
@@ -74,7 +86,7 @@
   > 2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł. Mirosław Syniawa`}
           </textarea>
           <section
-            class="flex-1 outline-1 outline-zinc-600 p-3 rounded-lg text-start"
+            class="bg-blue-950 outline-1 outline-blue-700 p-3 rounded-lg text-start h-96"
           >
             <i class="text-blue-500">Przimiotnik</i>
             <ol
@@ -152,6 +164,15 @@
             </ol>
           </section>
         </section>
+      </section>
+      <section class="flex gap-x-4 items-start">
+        <button
+          type="submit"
+          class="cursor-pointer flex items-center gap-x-1 outline-1 outline-green-500 bg-green-700 hover:bg-green-600 text-green-200 hover:text-green-100 rounded-lg text-lg font-bold p-2"
+        >
+          <AddLineIcon />
+          {m["routes.editor.new.form.submit"]()}
+        </button>
       </section>
     </form>
   </Page.Contents>

@@ -167,14 +167,14 @@
 <article class="flex flex-col gap-y-4 items-center w-full">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
-      class="bg-zinc-800 outline-1 outline-zinc-600 rounded-lg w-full p-3 text-lg text-zinc-300 placeholder:text-zinc-400"
+      class="bg-zinc-800 outline-1 outline-zinc-600 rounded-lg w-full p-3 text-lg text-zinc-300 placeholder:text-zinc-500"
       type="text"
       placeholder={m["components.search_bar.placeholder"]()}
       onkeydown={onInputKeyPress}
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-200"
+      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-200 hover:text-green-100"
       type="submit"
       data-sveltekit-reload
       bind:this={submitElement}
