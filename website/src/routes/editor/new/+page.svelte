@@ -83,8 +83,8 @@
   > 1939, Stanisław Bąk, Teksty gwarowe z polskiego Śląska
 4. Używany do postawiyniŏ warōnku.
   > Jak niy bydzie mōgła, bydã żōł ś niōm sōm.
-  > 2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł. Mirosław Syniawa`}
-          </textarea>
+  > 2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł. Mirosław Syniawa`}</textarea
+          >
           <section
             class="bg-blue-950 outline-1 outline-blue-700 p-3 rounded-lg text-start h-96"
           >
