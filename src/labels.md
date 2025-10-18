@@ -38,6 +38,6 @@ Note: If there is a `*` at the beginning of the label, there are enough orthogra
 
 ## Help Needed
 
-- `missing` - Unavailable, missing or otherwise underdocumented resource or piece of it, <ins>please help in finding information on it</ins>.
+- `MISSING` - Unavailable, missing or otherwise underdocumented resource or piece of it, <ins>please help in finding information on it</ins>.
 - `unknown` - A given piece of information is unknown, <ins>please help in finding information on it</ins>.
 - `uncounted` - The number of entries has not been counted, <ins>please help in counting it</ins>.
