@@ -3,11 +3,11 @@
 - ## Libraries
 
   - `śla/F` [Silling](https://silling.org/ksionzki/)
-  - `🧩` `śla/F` [Silesia Progress](https://www.silesiaprogress.com/)
+  - `💵` `śla/F` [Silesia Progress](https://www.silesiaprogress.com/)
 
 - ## Stories
 
-  - `🟢` `śla/F` `śla/S` [Czytej bajtlōm kożdy dziyń](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
+  - `*śla/F` `*śla/S` [Czytej bajtlōm kożdy dziyń](https://instytutkorfantego.pl/wp-content/uploads/2019/11/czytej_bajtlom.pdf)
   - `pol` [Jednoaktówki po śląsku — Bysuch s reichu](https://www.mbpsiemianowice.pl/static/upload/store/Jednoaktowki_po_slasku/2012_-_Jednoaktowki_po_slasku_-_Bysuch_s_Reichu.pdf)
   - `pol` [Po naszymu, czyli o polszczyźnie małych ojczyzn](https://ore.edu.pl/wp-content/uploads/2025/02/po-naszymu-czyli-o-polszczyznie-malych-ojczyzn.-wybor-tekstow-do-edukacji-regionalnej.-teksty-slaskie-1.pdf)
  
