@@ -17,8 +17,8 @@
   - ### Videos
 
     - `śla/F` [SILESIAN LANGUAGE, PEOPLE & CULTURE (GLIWICE DIALECT)](https://www.youtube.com/watch?v=hi3kNm9tl-Y)
-    - `🟢` `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
-    - `🟢` `śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
+    - `*śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #1](https://www.youtube.com/watch?v=IUJLLtMrmCg)
+    - `*śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
     - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
 
 - ## Films
@@ -28,7 +28,7 @@
 - ## Blogs
 
   - `śla/F` [Rafał Szyma](https://oschl.wordpress.com/)
-  - `🟢` `śla/F` [Chop w kuchni](https://chopwkuchni.pl/)
+  - `*śla/F` [Chop w kuchni](https://chopwkuchni.pl/)
   - `kos`, `pol`, `śla/F` [Ojgyn łozprawio](https://ojgyn.blogspot.com/)
   - `pol` [Elżbieta Grymel](https://elzbietagrymel.art/)
   - `pol` [Sebastian T.](https://noneseb.wordpress.com/tag/godka/)
