@@ -32,7 +32,7 @@
   <!-- Imported into GoldenDict and checked the number of articles. -->
   - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
   <!-- ❌ Not checked the number of entries. -->
-  - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`missing` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`
+  - `pol` [Przyczynki do słownika gwary śląskiej](https://silling.org/slownik/Aneks:Parczewska_-_Przyczynki_do_s%C5%82ownika_gwary_%C5%9Bl%C4%85skiej) (`MISSING` <ins>Original</ins>), author: `Melania Parczewska`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
@@ -51,9 +51,9 @@
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
-  - `missing` `pol` <ins>Aktualizowany słownik gwarowy</ins> (used to exist at https://www.isibrno.cz/cs/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
+  - `pol` `MISSING` <ins>Aktualizowany słownik gwarowy</ins> (used to exist at https://www.isibrno.cz/cs/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
-  - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
+  - `pol` `MISSING` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
     - <details>
 
       <summary>Releases</summary>
@@ -117,8 +117,8 @@
       - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/), ISBN: `9788371262395`
       - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/), ISBN: `9788371262586`
       - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/), ISBN: `9788371262791`
-      - `missing` Volume 13 (Hyro-Juzyneczki), ISBN: `9788371262876`
-      - `missing` Volume 14 (K-Klacz), ISBN: `9788371263101`
+      - `MISSING` <ins>Volume 13 (Hyro-Juzyneczki)</ins>, ISBN: `9788371262876`
+      - `missing` <ins>Volume 14 (K-Klacz)</ins>, ISBN: `9788371263101`
       - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/), ISBN: `9788371263217`
       - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/), ISBN: `9788371263347`
       - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/), ISBN: `9788371263712`
@@ -151,7 +151,7 @@
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Słownik gwar śląskich](https://ksiegarniainternetowa.co.uk/pl/slownik_gwar_slaskich-9788376491769), authors: `Adam Podgórski`, `Barbara Podgórska`, entries: `uncounted`, ISBN: `9788376491769`
   <!-- ❌ Not checked the number of entries. -->
-  - `🚫` `missing` `pol` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+  - `🚫` `pol` `MISSING` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Ślónsko Godka](https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732), author: `unknown`, entries: `uncounted,` ISBN: `9788301213596`
   <!-- ❌ Not checked the number of entries. -->
@@ -205,9 +205,9 @@
   - ### Borderlands Silesian-Lesser Polish
    
     <!-- ❌ Not checked the number of entries. -->
-    - `🚫` `missing` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
+    - `🚫` `MISSING` `pol` <ins>Słowniczek gwary wsi pszczyńskiej</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
     <!-- ❌ Not checked the number of entries. -->
-    - `🚫` `missing` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
+    - `🚫` `MISSING` `pol` <ins>Słownik gwary śląskiej - okolice Suszca i Pawłowic w ziemi pszczyńskiej</ins>, author: `Marian Cieśla`, entries: `uncounted`, ISBN: `unknown`
 
   - ### Cieszyn
 
