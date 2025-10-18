@@ -35,6 +35,9 @@
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Słownik po naszymu](http://www.piekary.bandit-jack.com/seiten/slownik/slownikabc.html), author: `Jacek Boron`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `missing` `pol` <ins>Aktualizowany słownik gwarowy</ins> (used to exist at https://www.isibrno.cz/cs/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `missing` `pol` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
