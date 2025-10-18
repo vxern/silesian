@@ -134,11 +134,11 @@
   - `śla/F` [Euro Truck Simulator 2](https://eurotrucksimulator2.com/)
   - `śla/S` [Ślōnski Gothic](https://slaskigothic.pl/)
   - `śla/S` [Literōwka](https://literowka.silling.org/)
-  - `🧩` `pol` [Jump Heroes](https://store.steampowered.com/app/2850330/Jump_Heroes/)
+  - `💵` `pol` [Jump Heroes](https://store.steampowered.com/app/2850330/Jump_Heroes/)
 
 - ## Board games
 
-  - `🧩` `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
+  - `💵` `śla/F` [Ślōnskŏ grajfka](https://qdizajn.pl/produkt/gra-planszowa-slonsko-grajfka/)
 
 - ## Podcasts
 
