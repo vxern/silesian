@@ -10,7 +10,7 @@
   <!-- You can find out via the sitemap: https://dykcjonorz.eu/wp-sitemap.xml -->
   - `śla/S` [Dykcjōnorz](https://dykcjonorz.eu), authors: `Stanisław Neblik`, `Wojciech Orliński`, entries: `>4,300`
   <!-- ❌ Not checked the number of entries. -->
-  - 📁 `ste` [Dykcjůnorz polsko-ślůnski](./hosted/files/dykcjůnoř%20polsko-ślůnski,%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
+  - `📁` `ste` [Dykcjůnorz polsko-ślůnski](./hosted/files/dykcjůnoř%20polsko-ślůnski,%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `spa` [Basic Silesian (ślůnski)](https://mylittlewordland.com/course/391323/basic-silesian-%C5%9Bl%C5%AFnski), author: `unknown`, entries: `uncounted`
   <!-- The book lets you know. -->
@@ -82,7 +82,7 @@
   <!-- Checked by hand. -->
   - `🌿` `wen` [Rojśliny po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/rojsliny.pdf), author: `Aleksandra Wencel`, entries: `>2,700`
   <!-- ❌ Not checked the number of entries. -->
-  - `🌿` `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](https://instytutkorfantego.pl/wp-content/uploads/2020/12/ZESTAWIENIE-GATUNK%C3%93W-RO%C5%9ALIN-ROSN%C4%84CYCH-W-OGR%C3%93DKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
+  - `🌿` `📁` `pol` [Zestawienie gatunków roślin w ogrodach przydomowych na terenie śląska i ziemi kieleckiej](./hosted/files/ZESTAWIENIE-GATUNKÓW-ROŚLIN-ROSNĄCYCH-W-OGRÓDKACH-PRZYDOMOWYCH.pdf), author: `unknown`, entries: `uncounted`
   <!-- Checked by hand. -->
   - `🍄` `wen` [Grziby po ślų̊sku](https://www.math.uni.wroc.pl/~wencel/sil/grziby.pdf), author: `Aleksandra Wencel`, entries: `390+`
   <!-- ❌ Not checked the number of entries. -->
