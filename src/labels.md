@@ -35,6 +35,7 @@
 
 - `💵` - Paid resource
 - `🧩` - Physical item
+- `🚫` - No online access
 - `🗄️` - Archived
 
 ## Help Needed
