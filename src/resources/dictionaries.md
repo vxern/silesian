@@ -37,6 +37,17 @@
   - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Słownik po naszymu](http://www.piekary.bandit-jack.com/seiten/slownik/slownikabc.html), author: `Jacek Boron`, entries: `uncounted`
+    - <details>
+
+      <summary>Sections</summary>
+ 
+      - [A-C](http://www.piekary.bandit-jack.com/seiten/slownik/slownikabc.html)
+      - [D-H](http://www.piekary.bandit-jack.com/seiten/slownik/slownikdh.html)
+      - [I-Ł](http://www.piekary.bandit-jack.com/seiten/slownik/slownikil.html)
+      - [M-R](http://www.piekary.bandit-jack.com/seiten/slownik/slownikmr.html)
+      - [S-Z](http://www.piekary.bandit-jack.com/seiten/slownik/slowniksz.html)
+
+      </details>
   <!-- ❌ Not checked the number of entries. -->
   - `missing` `pol` <ins>Aktualizowany słownik gwarowy</ins> (used to exist at https://www.isibrno.cz/cs/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
