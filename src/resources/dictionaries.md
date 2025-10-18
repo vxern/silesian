@@ -91,6 +91,10 @@
   - `⚙️` `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
   <!-- ❌ Not checked the number of entries. -->
   - `🧪` `śla/F`, `ste` [Ukłŏd ôkresowy elymyntōw](https://canov.jergym.cz/vyhledav/varian33/slez/slp.htm), author: `unknown`, entries: `N/A`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🗄️` `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
   <!-- Found in descriptions of the product. -->
   - `🚫` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
   <!-- ❌ Not checked the number of entries. -->
@@ -158,10 +162,6 @@
   - `🚫` `adh` [Czasowniki ślõski](https://opac.r-sl.pl/953601047942/szczeponek-andrzej/czasowniki-slaskie?internalNav=1&bibFilter=95), author: `Andrzej Szczeponek`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `adh` [Rýchtig gryfno godka](https://lubimyczytac.pl/ksiazka/4031580/rychtig-gryfno-godka), author: `Dariusz Dyrda`, entries: `uncounted`, ISBN: `9788392786542`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🗄️` `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
-  <!-- ❌ Not checked the number of entries. -->
-  - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
 
 - ## Dialectal
 
