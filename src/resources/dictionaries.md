@@ -58,11 +58,11 @@
 
       <summary>Releases</summary>
 
-      - [1/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1929) (`missing` <ins>Original</ins>)
-      - [2/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1929) (`missing` <ins>Original</ins>)
-      - [3/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_3/1929) (`missing` <ins>Original</ins>)
-      - [1/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1930) (`missing` <ins>Original</ins>)
-      - [2/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930) (`missing` <ins>Original</ins>)
+      - [1/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1929) (`MISSING` <ins>Original</ins>)
+      - [2/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1929) (`MISSING` <ins>Original</ins>)
+      - [3/1929](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_3/1929) (`MISSING` <ins>Original</ins>)
+      - [1/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_1/1930) (`MISSING` <ins>Original</ins>)
+      - [2/1930](https://silling.org/slownik/Aneks:S%C5%82ownik_-_Zaranie_%C5%9Al%C4%85skie_nr_2/1930) (`MISSING` <ins>Original</ins>)
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
@@ -200,7 +200,7 @@
   - ### Borderlands Silesian-Lach
 
     <!-- ❌ Not checked the number of entries. -->
-    - `🚫` `pol` [Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)](https://silling.org/slownik/Aneks:Bystro%C5%84_-_Przyczynek_do_dialektologii_polskiej_(z_narzecza_Lach%C3%B3w_szl%C4%85skich)) (`missing` <ins>Original</ins>), author: `Jan Bystroń`, entries: `uncounted`
+    - `🚫` `pol` [Przyczynek do dialektologji polskiej (z narzecza Lachów szląskich)](https://silling.org/slownik/Aneks:Bystro%C5%84_-_Przyczynek_do_dialektologii_polskiej_(z_narzecza_Lach%C3%B3w_szl%C4%85skich)) (`MISSING` <ins>Original</ins>), author: `Jan Bystroń`, entries: `uncounted`
 
   - ### Borderlands Silesian-Lesser Polish
    
@@ -226,6 +226,11 @@
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [2675 wyrażeń gwarowych, używanych w potocznej mowie przez rdzenną ludność wsi Zebrzydowice k/ Cieszyna](https://sbc.org.pl/dlibra/publication/820194/edition/754268), author: `Karol Klocek`, entries: `uncounted`, ISBN: `unknown`
 
+  - ### Sułkowice
+
+    <!-- ❌ Not checked the number of entries. -->
+    - `🚫` `pol` [Naszŏ mŏwa we Texajsie](https://flmfoundation.org/product/our-mother-tongue-in-texas-a-dictionary-of-texas-silesian-by-sally-sekula-schaefer/), author: `Sally Sekula Schaefer`, entries: `uncounted`, ISBN: `unknown`
+
   - ### Lower Silesia
 
     <!-- ❌ Not checked the number of entries. -->
@@ -241,17 +246,17 @@
 
         <summary>Volumes</summary>
 
-        - [Volume 1 (A-Ćwirtnia)](https://pjs.ijp.pan.pl/Sstp/t1.pdf), ISBN: `missing`
-        - [Volume 2 (Da-Hynszta)](https://pjs.ijp.pan.pl/Sstp/t2.pdf), ISBN: `missing`
-        - [Volume 3 (I-Kwitować)](https://pjs.ijp.pan.pl/Sstp/t3.pdf), ISBN: `missing`
-        - [Volume 4 (La-Mżyć)](https://pjs.ijp.pan.pl/Sstp/t4.pdf), ISBN: `missing`
-        - [Volume 5 (Na-Ówdzie)](https://pjs.ijp.pan.pl/Sstp/t5.pdf), ISBN: `missing`
-        - [Volume 6 (Pacha-Pożżenie)](https://pjs.ijp.pan.pl/Sstp/t6.pdf), ISBN: `missing`
-        - [Volume 7 (Póć-Rozproszyć)](https://pjs.ijp.pan.pl/Sstp/t7.pdf), ISBN: `missing`
-        - [Volume 8 (Rozpróchnieć-Szyszki)](https://pjs.ijp.pan.pl/Sstp/t8.pdf), ISBN: `missing`
-        - [Volume 9 (Ściadły-Używowanie)](https://pjs.ijp.pan.pl/Sstp/t9.pdf), ISBN: `missing`
-        - [Volume 10 (W-Wżgim)](https://pjs.ijp.pan.pl/Sstp/t10.pdf), ISBN: `missing`
-        - [Volume 11 (Z-Żżenie)](https://pjs.ijp.pan.pl/Sstp/t11.pdf), ISBN: `missing`
+        - [Volume 1 (A-Ćwirtnia)](https://pjs.ijp.pan.pl/Sstp/t1.pdf), ISBN: `unknown`
+        - [Volume 2 (Da-Hynszta)](https://pjs.ijp.pan.pl/Sstp/t2.pdf), ISBN: `unknown`
+        - [Volume 3 (I-Kwitować)](https://pjs.ijp.pan.pl/Sstp/t3.pdf), ISBN: `unknown`
+        - [Volume 4 (La-Mżyć)](https://pjs.ijp.pan.pl/Sstp/t4.pdf), ISBN: `unknown`
+        - [Volume 5 (Na-Ówdzie)](https://pjs.ijp.pan.pl/Sstp/t5.pdf), ISBN: `unknown`
+        - [Volume 6 (Pacha-Pożżenie)](https://pjs.ijp.pan.pl/Sstp/t6.pdf), ISBN: `unknown`
+        - [Volume 7 (Póć-Rozproszyć)](https://pjs.ijp.pan.pl/Sstp/t7.pdf), ISBN: `unknown`
+        - [Volume 8 (Rozpróchnieć-Szyszki)](https://pjs.ijp.pan.pl/Sstp/t8.pdf), ISBN: `unknown`
+        - [Volume 9 (Ściadły-Używowanie)](https://pjs.ijp.pan.pl/Sstp/t9.pdf), ISBN: `unknown`
+        - [Volume 10 (W-Wżgim)](https://pjs.ijp.pan.pl/Sstp/t10.pdf), ISBN: `unknown`
+        - [Volume 11 (Z-Żżenie)](https://pjs.ijp.pan.pl/Sstp/t11.pdf), ISBN: `unknown`
 
         </details>
 
@@ -263,12 +268,12 @@
 
         <summary>Volumes</summary>
 
-        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866), ISBN: `missing`
-        - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867), ISBN: `missing`
-        - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868), ISBN: `missing`
-        - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886), ISBN: `missing`
-        - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887), ISBN: `missing`
-        - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888), ISBN: `missing`
+        - [Volume 1 (A-E)](https://zbc.uz.zgora.pl/dlibra/publication/9018/edition/8866), ISBN: `unknown`
+        - [Volume 2 (F-K)](https://zbc.uz.zgora.pl/dlibra/publication/9019/edition/8867), ISBN: `unknown`
+        - [Volume 3 (L-O)](https://zbc.uz.zgora.pl/dlibra/publication/9020/edition/8868), ISBN: `unknown`
+        - [Volume 4 (P)](https://zbc.uz.zgora.pl/dlibra/publication/9037/edition/8886), ISBN: `unknown`
+        - [Volume 5 (R, S, Ś, T)](https://zbc.uz.zgora.pl/dlibra/publication/9038/edition/8887), ISBN: `unknown`
+        - [Volume 6 (U-Ż)](https://zbc.uz.zgora.pl/dlibra/publication/9039/edition/8888), ISBN: `unknown`
 
         </details>
     <!-- ❌ Not checked the number of entries. -->
