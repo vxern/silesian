@@ -14,12 +14,11 @@
 - `ces` - Approximation using Czech orthography
 - `adh` - Ad-hoc, perhaps a result of mixing orthographies; do <ins>not</ins> use for learning to write
 
+Note: If there is a `*` at the beginning of the label, there are enough orthographical mistakes with the resource to warrant caution when using it.
+
 ## Notes about writing
 
 - `✍️` - Hand-written; might be difficult to read and/or parse
-- `🟢` - Contains minor spelling mistakes
-- `🟡` - Contains major spelling mistakes
-- `🔴` - Contains serious spelling mistakes - DO NOT use for learning the orthography
 
 ## Categories
 
@@ -34,7 +33,6 @@
 ## Availability
 
 - `💵` - Paid resource
-- `🧩` - Physical item
 - `🚫` - No online access
 - `🗄️` - Archived
 
