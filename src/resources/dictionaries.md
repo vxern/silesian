@@ -41,6 +41,21 @@
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
+  - `pol` [Słownik śląski](https://dziennikzachodni.pl/tag/slownik-slaski)
+    - <details>
+
+      <summary>Sections</summary>
+
+      - [A-C](https://dziennikzachodni.pl/jak-zrozumiec-slazaka-slownik-slaski-ac/ar/1061538)
+      - [Ć-G](https://dziennikzachodni.pl/jak-zrozumiec-slazaka-slownik-slaski-cg/ar/1062482)
+      - [H-K](https://dziennikzachodni.pl/jak-zrozumiec-slazaka-slownik-slaski-hk/ar/1063630)
+      - [K-M](https://dziennikzachodni.pl/jak-zrozumiec-slazaka-slownik-slaski-km/ar/1064408)
+      - [M-P](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-mp/ar/1067410)
+      - [P-S](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-ps/ar/1068266)
+      - [S-T](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-st/ar/1069320)
+      - [T-Z](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-tz/ar/1069786)
+
+      </details>
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Słownik po naszymu](http://www.piekary.bandit-jack.com/seiten/slownik/slownikabc.html), author: `Jacek Boron`, entries: `uncounted`
     - <details>
