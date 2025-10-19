@@ -53,7 +53,7 @@
       - [M-P](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-mp/ar/1067410)
       - [P-S](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-ps/ar/1068266)
       - [S-T](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-st/ar/1069320)
-      - [T-Z](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-tz/ar/1069786)
+      - [T-Ź](https://dziennikzachodni.pl/slownik-slaskich-slowek-i-wyrazen-gwarowych-slownik-slaski-tz/ar/1069786)
 
       </details>
   <!-- ❌ Not checked the number of entries. -->
