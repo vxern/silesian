@@ -97,7 +97,7 @@
   - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
   <!-- Found in descriptions of the product. -->
   - `🚫` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
-  <!-- Checked by hand. -->
+  <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Słownik frazeologizmów i typowych połączeń wyrazowych w gwarach śląskich](https://w.bibliotece.pl/1131230/S%C5%82ownik+frazeologizm%C3%B3w+i+typowych+po%C5%82%C4%85cze%C5%84+wyrazowych+w+gwarach+%C5%9Bl%C4%85skich), author: `Lydia Przymuszała`, entries: `unknown`, ISBN: `9788373955660`
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
