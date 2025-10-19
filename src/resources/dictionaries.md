@@ -13,8 +13,6 @@
   - `ste` [Dykcjůnorz polsko-ślůnski](./hosted/files/dykcjůnoř%20polsko-ślůnski,%20wersyjo%203.pdf), author: `Mirosław Syniawa`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `spa` [Basic Silesian (ślůnski)](https://mylittlewordland.com/course/391323/basic-silesian-%C5%9Bl%C5%AFnski), author: `unknown`, entries: `uncounted`
-  <!-- The book lets you know. -->
-  - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
   <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
   - `kos` [Dykcjōnôrz polsko-ślonskiy](https://sbc.org.pl/dlibra/publication/648390), author: `Eugeniusz Kosmała`, entries: `>54,500`
   <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
@@ -199,6 +197,8 @@
 
   - ### Opole
 
+    <!-- The book lets you know. -->
+    - `wen` [Dykcjůnôrz ślų̊sko-polski](https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf), author: `Aleksandra Wencel`, entries: `21,510`
     <!-- ❌ Not checked the number of entries. -->
     - `wio` [Słownik](https://jozef.wiora.pl/szl/slownik.pdf), author: `Józef Wiora`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
