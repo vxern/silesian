@@ -28,6 +28,8 @@
   <!-- Checked by hand. -->
   - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), author: `Adolf Dygacz`, entries: `~275`
   <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Dykcjůnorz](./hosted/files/dykcjunorz_-_szkryfka.eu.pdf) ([Original](http://n.szkryfka.eu/index.php/dykcjonorz)), author: `unknown`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `pol` [Słownik gwary śląskiej](https://quiz.pax.waw.pl/wsp/SlgwSl.html), author: `Grzegorz Korzeniecki`, entries: `uncounted`
   <!-- Imported into GoldenDict and checked the number of articles. -->
   - `pol` [Narzecza śląskie](https://silling.org/slownik-od-przywary-slonsko-polski/) ([Original](https://sbc.org.pl/dlibra/publication/68791/edition/64871/narzecza-slaskie-napisal-ks-michal-przywara-c-slownik-przywara-michal-1867-1906)), author: `Michał Przywara`, entries: `>8,000`
