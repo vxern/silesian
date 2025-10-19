@@ -28,6 +28,8 @@
   <!-- Checked by hand. -->
   - `pol` [Słownik wyrazów gwarowych](https://www.sbc.org.pl/dlibra/publication/861664/edition/788851), author: `Adolf Dygacz`, entries: `~275`
   <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Naukowy Wielki Słownik Śląsko-Polski](http://www.wielki-slownik-slasko-polski.102.pl/), author: `Eugeniusz Kucza`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `pol` [Dykcjůnorz](./hosted/files/dykcjunorz_-_szkryfka.eu.pdf) ([Original](http://n.szkryfka.eu/index.php/dykcjonorz)), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Słownik gwary śląskiej](https://quiz.pax.waw.pl/wsp/SlgwSl.html), author: `Grzegorz Korzeniecki`, entries: `uncounted`
@@ -52,8 +54,6 @@
       - [S-Z](http://www.piekary.bandit-jack.com/seiten/slownik/slowniksz.html)
 
       </details>
-  <!-- ❌ Not checked the number of entries. -->
-  - `pol` `MISSING` <ins>Aktualizowany słownik gwarowy</ins> (used to exist at https://www.isibrno.cz/cs/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` `MISSING` <ins>Zaranie Śląskie</ins>, author: `unknown`, entries: `uncounted`
     - <details>
@@ -96,7 +96,9 @@
   <!-- ❌ Not checked the number of entries. -->
   - `🗄️` `pol` [Silesian Dictionary - Silesian - Polish - English](https://web.archive.org/web/20210610050834/http://www.republikasilesia.com/RS/slownik/index.htm), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
-  - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt)
+  - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt), author: `unknown`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🗄️` `pol` [Aktualizowany słownik gwarowy](https://web.archive.org/web/20241012101754/http://www.isibrno.cz/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
   <!-- Found in descriptions of the product. -->
   - `🚫` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
   <!-- ❌ Not checked the number of entries. -->
