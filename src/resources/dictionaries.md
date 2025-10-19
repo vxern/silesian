@@ -114,6 +114,10 @@
   - `🗄️` `pol` [Słownik Śląskie ABC](https://web.archive.org/web/20080907174824/http://www.slaskie-abc.com.pl/slownik.txt), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `🗄️` `pol` [Aktualizowany słownik gwarowy](https://web.archive.org/web/20241012101754/http://www.isibrno.cz/~malczyk/slownik.htm), author: `Roman Malczyk`, entries: `uncounted`
+  <!-- Mentioned on page. -->
+  - `🗄️` `pol` [Słownik gwary śląskiej](https://web.archive.org/web/20100726090443/https://mhk.katowice.pl/korfanty/dane/gwara.htm), author: `Bartosz Chmura`, entries: `899`
+  <!-- ❌ Not checked the number of entries. -->
+  - `🗄️` `pol` [Germanizmy w gwarach śląskich](https://web.archive.org/web/20160307192035/http://www.ifp.uni.wroc.pl/data/files/pub-9036.pdf), author: `Jerzy Obara`, entries: `uncounted`
   <!-- Found in descriptions of the product. -->
   - `🚫` `śla/F` [Słownik Gōrnoślōnskij Gŏdki](https://lubimyczytac.pl/ksiazka/4439064/slownik-g-rnosl-nskij-g-dki), author: `Bogdan Kallus`, entries: `>16,500`, ISBN: `9788362349029`
   <!-- ❌ Not checked the number of entries. -->
@@ -210,6 +214,8 @@
     - `pol` [Słownik gwary w Zborowskiem](https://www.zborowskie.info/articles/gwara-slaska), author: `unknown`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Kilka wyrażeń ludowych z Małych Kończyc koło Zebrzydowic na Śląsku](https://silling.org/slownik/Aneks:Koczwara_-_Kilka_wyra%C5%BCe%C5%84_ludowych_z_Ma%C5%82ych_Ko%C5%84czyc_ko%C5%82o_Zebrzydowic_na_%C5%9Al%C4%85sku), author: `Jan Koczwarty`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🚫` `pol` [Śląskie słówka i wyrażenia gwarowe - region rybnicko-wodzisławski](https://integro.bs.katowice.pl/site/recorddetail/0033105680424), author: `Piotr Mikołajczyk`, entries: `uncounted`, ISBN: `9788364051937`
 
   - ### Sułkowice
 
@@ -242,6 +248,8 @@
     - `ces` [Slovník po našimu](https://www.ponasimu.cz/slovnik-po-nasimu-cesky/a/), author: `unknown`, entries: `uncounted`
     <!-- Checked by hand, not an exact number by any means. -->
     - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` `MISSING` <ins>Słownictwo zanikające w gwarze krzanowic</ins>, author: `Marcela Szymańska`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
     <!-- ❌ Not checked the number of entries. -->
