@@ -230,7 +230,7 @@
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [2675 wyrażeń gwarowych, używanych w potocznej mowie przez rdzenną ludność wsi Zebrzydowice k/ Cieszyna](https://sbc.org.pl/dlibra/publication/820194/edition/754268), author: `Karol Klocek`, entries: `uncounted`, ISBN: `unknown`
 
-  - ### Sułkowice
+  - ### Texas
 
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [Naszŏ mŏwa we Texajsie](https://flmfoundation.org/product/our-mother-tongue-in-texas-a-dictionary-of-texas-silesian-by-sally-sekula-schaefer/), author: `Sally Sekula Schaefer`, entries: `uncounted`, ISBN: `unknown`
