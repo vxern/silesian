@@ -1,16 +1,16 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import { enhancedImages } from '@sveltejs/enhanced-img';
-import { sveltekit as svelteKit } from '@sveltejs/kit/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
 import icons from 'unplugin-icons/vite'
-import tailwindCss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 import packageJson from './package.json';
 
 export default defineConfig({
   plugins: [
     enhancedImages(),
-    svelteKit(),
-    tailwindCss(),
+    sveltekit(),
+    tailwindcss(),
     paraglideVitePlugin({
       project: './project.inlang',
       outdir: './src/lib/paraglide'

@@ -13,10 +13,12 @@
 
   let { children } = $props();
 
-  tippy.setDefaultProps({
-    animation: "shift-toward",
-    hideOnClick: true,
-  });
+  if (typeof window !== "undefined") {
+    tippy.setDefaultProps({
+      animation: "shift-toward",
+      hideOnClick: true,
+    });
+  }
 </script>
 
 <svelte:head>
