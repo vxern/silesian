@@ -1,0 +1,158 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "title": "{project_name} — {page_title}",
+  "languages": {
+    "szl": "śląski",
+    "pl": "polski",
+    "en-GB": "angielski",
+    "de": "niemiecki"
+  },
+  "components": {
+    "search_bar": {
+      "placeholder": "Którego słowa szukasz?",
+      "missing_word": "Aby wyszukać, najpierw wprowadź hasło.",
+      "reset_caps": {
+        "shift": "Prosimy jeszcze raz wcisnąć klawisz Shift, by przywrócić jego stan po opuszczeniu okna.",
+        "caps_lock": "Prosimy jeszcze raz wcisnąć klawisz Caps Lock, by przywrócić jego stan po opuszczeniu okna.",
+        "both": "Prosimy jeszcze raz wcisnąć klawisze Shift oraz Caps Lock, by przywrócić ich stan po opuszczeniu okna."
+      }
+    },
+    "version_label": {
+      "alpha": "alfa"
+    },
+    "version_section": {
+      "version": "Wersja {version}"
+    }
+  },
+  "routes": {
+    "home": {
+      "title": "Sztart",
+      "description": "{project_name} to strona stworzona do celów odokumentowania języka śląskiego oraz jego narzeczy.",
+      "splashes": {
+        "one": "Słowniki śląskiego języka",
+        "two": "Słowniki śląskiej mowy",
+        "three": "Słowniki śląskiej rzeczy",
+        "four": "",
+        "five": "",
+        "six": "",
+        "seven": "",
+        "eight": ""
+      },
+      "help": {
+        "imported": {
+          "total": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "Razem mamy jeden wpis,",
+                "countPlural=few": "Razem mamy {count} wpisy,",
+                "countPlural=many": "Razem mamy {count} wpisów,"
+              }
+            }
+          ],
+          "this_month": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "z czego w ostatnim miesiącu dodaliśmy jeden z nich.",
+                "countPlural=few": "z czego w ostatnim miesiącu dodaliśmy {count} z nich.",
+                "countPlural=many": "z czego w ostatnim miesiącu dodaliśmy {count} z nich."
+              }
+            }
+          ]
+        },
+        "want_to_help": "Chcesz nam pomóc?",
+        "find_out_how": "Dowiedz się, jak to możesz zrobić."
+      }
+    },
+    "about": {
+      "title": "O stronie",
+      "description": "Informacje o {project_name} i o naszym celu."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Informacje o Twoim koncie."
+    },
+    "editor": {
+      "title": "Edytor",
+      "description": "",
+      "new": {
+        "title": "Nowe hasło",
+        "description": "Użytkownik dodaje nowe hasło do słownika.",
+        "form": {
+          "lemma": "Hasło",
+          "lemma_placeholder": "Jakie słowo dodajesz?",
+          "source": "Źródło",
+          "source_placeholder": "Skąd zaczerpujesz słowo?",
+          "contents": "Zawartość",
+          "contents_placeholder": "Znaczenia, pochodzenie i tak dalej",
+          "submit": "Dodaj"
+        }
+      }
+    },
+    "login": {
+      "title": "Logowanie",
+      "description": "Tutaj możesz się zalogować do swojego konta."
+    },
+    "logout": {
+      "title": "Wylogowanie",
+      "description": "Tutaj możesz się wylogować ze swojego konta."
+    },
+    "search": {
+      "title": "Szukanie",
+      "description": "Szukanie słów i ich znaczeń.",
+      "history": "Historia wyszukiwań",
+      "popular": "Inni też szukali"
+    },
+    "sources": {
+      "title": "Źródła",
+      "description": "Źródła, z których zaczerpujemy informacje i które zaimportowaliśmy lub chcemy w przyszłości zaimportować.",
+      "table": {
+        "work": "Praca",
+        "authors": {
+          "authors": "Autorzy",
+          "community": "Społeczność"
+        },
+        "licence": {
+          "licence": "Licencja",
+          "proprietary": "zastrzeżona",
+          "granted": "udzielono pozwolenia",
+          "public": "publiczna własność"
+        },
+        "access": {
+          "access": "Dostęp",
+          "closed": "zamknięty",
+          "limited": "ograniczony",
+          "open": "dostępny"
+        },
+        "progress": {
+          "progress": "Postęp",
+          "numbers": "{imported}/{total}",
+          "percentage": "{percentage}%"
+        }
+      }
+    },
+    "word": {
+      "title": "Hasło",
+      "description": "Znaczenia, rozkład oraz inne informacje o danym słowie.",
+      "source": "Źródło"
+    }
+  },
+  "meta": {
+    "unknown": "?",
+    "none": "—",
+    "etc": "…"
+  }
+}

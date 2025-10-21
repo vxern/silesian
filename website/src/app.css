@@ -22,3 +22,7 @@
 .tippy-box[data-theme~='warning']>.tippy-arrow::before {
   @apply text-zinc-700
 }
+
+.fi-szl {
+  background-image: url(/flags/szl.svg);
+}

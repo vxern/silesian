@@ -9,6 +9,8 @@
   },
   "baseLocale": "szl",
   "locales": [
-    "szl"
+    "szl",
+    "pl",
+    "en-GB"
   ]
 }

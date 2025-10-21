@@ -4,6 +4,7 @@
   import "tippy.js/themes/material.css";
   import SearchBar from "../components/search/search-bar.svelte";
   import { onMount } from "svelte";
+  import LanguageSection from "../components/language/language-section.svelte";
   import NavigationSection from "../components/navigation/navigation-section.svelte";
   import SocialsSection from "../components/socials/socials-section.svelte";
   import { goto } from "$app/navigation";
@@ -50,6 +51,7 @@
   </title>
 </svelte:head>
 
+<LanguageSection />
 <NavigationSection />
 <SocialsSection />
 <VersionSection />
@@ -67,7 +69,7 @@
   <SearchBar />
   <article>
     {#if statistics}
-      <h6 class="text-sm italic">
+      <h6 class="text-sm italic flex flex-col gap-y-1">
         <span class="text-zinc-600">
           {m["routes.home.help.imported.total"]({
             count: statistics.imported.total,
@@ -76,16 +78,17 @@
             count: statistics.imported.this_month,
           })}
         </span>
-        <br />
-        <span class="text-zinc-600">
-          {m["routes.home.help.want_to_help"]()}
+        <span>
+          <span class="text-zinc-600">
+            {m["routes.home.help.want_to_help"]()}
+          </span>
+          <button
+            class="cursor-pointer text-green-600 hover:text-green-500"
+            onclick={() => goto("/contribute")}
+          >
+            {m["routes.home.help.find_out_how"]()}
+          </button>
         </span>
-        <button
-          class="cursor-pointer text-green-600 hover:text-green-500"
-          onclick={() => goto("/contribute")}
-        >
-          {m["routes.home.help.find_out_how"]()}
-        </button>
       </h6>
     {:else}
       <Loading />

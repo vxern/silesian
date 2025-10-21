@@ -1,0 +1,156 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "title": "{project_name} — {page_title}",
+  "languages": {
+    "szl": "Silesian",
+    "pl": "Polish",
+    "en-GB": "English",
+    "de": "German"
+  },
+  "components": {
+    "search_bar": {
+      "placeholder": "What word are you looking for?",
+      "missing_word": "Please input a search term to search.",
+      "reset_caps": {
+        "shift": "Please press the Shift key again to recover its state after returning to the window.",
+        "caps_lock": "Please press the Caps Lock key again to recover its state after returning to the window.",
+        "both": "Please press the Shift and Caps Lock keys again to recover their state after returning to the window."
+      }
+    },
+    "version_label": {
+      "alpha": "alpha"
+    },
+    "version_section": {
+      "version": "Version {version}"
+    }
+  },
+  "routes": {
+    "home": {
+      "title": "Home",
+      "description": "{project_name} is a website created to document the Silesian language and its dialects.",
+      "splashes": {
+        "one": "Dictionaries of the Silesian language",
+        "two": "Dictionaries of the Silesian tongue",
+        "three": "Dictionaries of the Silesian lect",
+        "four": "Dictionaries of Silesian dialects",
+        "five": "Dictionaries of Silesian terminology",
+        "six": "Dictionaries of Silesian vocabulary",
+        "seven": "Dictionaries of Silesian expressions",
+        "eight": "Dictionaries „pō naszymu”"
+      },
+      "help": {
+        "imported": {
+          "total": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "Altogether we've got one entry,",
+                "countPlural=many": "Altogether we've got {count} entries,"
+              }
+            }
+          ],
+          "this_month": [
+            {
+              "declarations": [
+                "input count",
+                "local countPlural = count: plural"
+              ],
+              "selectors": [
+                "countPlural"
+              ],
+              "match": {
+                "countPlural=one": "of which one was added over the last month.",
+                "countPlural=many": "of which {count} were added over the last month."
+              }
+            }
+          ]
+        },
+        "want_to_help": "Want to help out?",
+        "find_out_how": "Find out how to do it."
+      }
+    },
+    "about": {
+      "title": "About",
+      "description": "Information about {project_name} and about our goal."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Information about your account."
+    },
+    "editor": {
+      "title": "Editor",
+      "description": "",
+      "new": {
+        "title": "New entry",
+        "description": "The user is adding a new entry to the dictionary.",
+        "form": {
+          "lemma": "Term",
+          "lemma_placeholder": "The word you're adding",
+          "source": "Source",
+          "source_placeholder": "Where's your word coming from?",
+          "contents": "Contents",
+          "contents_placeholder": "Meanings, etymologies, pronunciation, and so on",
+          "submit": "Create"
+        }
+      }
+    },
+    "login": {
+      "title": "Login",
+      "description": "Here you can log into your account."
+    },
+    "logout": {
+      "title": "Logout",
+      "description": "Here you can log out of your account."
+    },
+    "search": {
+      "title": "Search",
+      "description": "Searching for words and their meanings.",
+      "history": "Search history",
+      "popular": "Others searched for"
+    },
+    "sources": {
+      "title": "Sources",
+      "description": "Sources we're using, and which we've imported or want to import in the future.",
+      "table": {
+        "work": "Work",
+        "authors": {
+          "authors": "Authors",
+          "community": "Community"
+        },
+        "licence": {
+          "licence": "Licence",
+          "proprietary": "proprietary",
+          "granted": "permission granted",
+          "public": "public domain"
+        },
+        "access": {
+          "access": "Access",
+          "closed": "closed",
+          "limited": "limited",
+          "open": "open"
+        },
+        "progress": {
+          "progress": "Progress",
+          "numbers": "{imported}/{total}",
+          "percentage": "{percentage}%"
+        }
+      }
+    },
+    "word": {
+      "title": "Word",
+      "description": "Meanings, distribution and other information about the given word.",
+      "source": "Source"
+    }
+  },
+  "meta": {
+    "unknown": "?",
+    "none": "—",
+    "etc": "…"
+  }
+}
