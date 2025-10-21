@@ -79,7 +79,17 @@
     },
     "about": {
       "title": "Ô zajcie",
-      "description": "Informacyje ô {project_name} a ô naszym cylu."
+      "description": "Informacyje ô {project_name} a ô naszym cylu.",
+      "sections": {
+        "what": {
+          "title": "Co je {project_name}?",
+          "description": "{project_name} je agregatōr roztōmajtych ślōnskich dykcjōnŏrzōw, tekstōw, artiklōw a inkszych zdrzōdeł ze informacyjami ô ślōnskij gŏdce."
+        },
+        "when": {
+          "title": "Kiedy stworzōno {project_name}?",
+          "description": "{project_name} stworzōno bez 2025; robota nad strōnōm zajmnyła pŏrã miesiyncy, chociŏż przidowaniy nowych haseł dalszij twŏ."
+        }
+      }
     },
     "account": {
       "title": "Kōnto",
