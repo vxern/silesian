@@ -56,6 +56,7 @@
  
 - ## Portals
 
+  - `szl/S` [Belekaj.eu](https://belekaj.eu)
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
   - `🗄️` `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
