@@ -87,13 +87,17 @@
         },
         "when": {
           "title": "Kiedy stworzōno {project_name}?",
-          "description": "{project_name} stworzōno bez 2025; robota nad strōnōm zajmnyła pŏrã miesiyncy, chociŏż przidowaniy nowych haseł dalszij twŏ."
+          "description": "{project_name} stworzōno bez 2025; robota nad strōnōm zajmnyła pŏrã miesiyncy, chociŏż przidŏwaniy nowych haseł dalszij twŏ."
         }
       }
     },
     "account": {
       "title": "Kōnto",
-      "description": "Informacyje ô Waszym kōncie."
+      "description": "Informacyje ô Waszym kōncie.",
+      "attributes": {
+        "username": "Nazwa używŏcza",
+        "email": "Adresa e-mail"
+      }
     },
     "editor": {
       "title": "Edytōr",
