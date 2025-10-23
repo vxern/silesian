@@ -39,6 +39,18 @@
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
+  - `pol` [Kartoteka Ogólnosłowiańskiego atlasu językowego](https://rcin.org.pl/dlibra/publication/46466), author: `A. Basara, J. Basara, B. Falińska, N. Perczyńska, J. Sułkowska, H. Zduńska`, entries: `~300`
+    - <details>
+
+      <summary>Sections</summary>
+ 
+      - [(Racibórz) Krzanowice](https://rcin.org.pl/dlibra/publication/54307/edition/37296)
+      - [(Częstochowa) Konopiska](https://rcin.org.pl/dlibra/publication/51175/edition/31608)
+      - [(Gliwice) Rudziniec](https://rcin.org.pl/dlibra/publication/51173/edition/31606)
+      - [(Prudnik) Śmicz](https://rcin.org.pl/dlibra/publication/51172/edition/31605)
+
+      </details>
   - `pol` [Słownik śląski](https://dziennikzachodni.pl/tag/slownik-slaski)
     - <details>
 
