@@ -145,12 +145,13 @@
     "word": {
       "title": "Word",
       "description": "Meanings, distribution and other information about the given word.",
-      "source": "Source"
+      "source": "Source:"
     }
   },
   "meta": {
     "unknown": "?",
     "none": "—",
-    "etc": "…"
+    "etc": "…",
+    "end": "END OF RESULTS"
   }
 }
