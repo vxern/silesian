@@ -11,18 +11,6 @@ export default Object.freeze({
       total: 25340,
     },
   },
-  "wiktionary": {
-    name: "Wiktionary",
-    link: "https://en.wiktionary.org",
-    authors: "community",
-    licence: "CC BY-SA 4.0",
-    access: "open",
-    redistributable: true,
-    progress: {
-      imported: 0,
-      total: 2227,
-    },
-  },
   "neblik+orliński/dykcjōnorz": {
     name: "Dykcjōnorz",
     link: "https://dykcjonorz.eu",
@@ -76,7 +64,7 @@ export default Object.freeze({
   "fazi/słownik": {
     name: "Słownik śl𝑜nski",
     link: "https://www.slownikslaski.pl",
-    authors: [],
+    authors: ["Fazi"],
     licence: "proprietary",
     access: "open",
     redistributable: false,

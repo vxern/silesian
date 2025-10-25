@@ -1,23 +1,10 @@
 <script>
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
-  import { onMount } from "svelte";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import SourceTable from "../../components/sources/source-table.svelte";
-  import Loading from "../../components/meta/loading.svelte";
+  import sources from "$lib/constants/sources";
   import constants from "$lib/constants/core";
-
-  let sources = $state();
-  async function fetchSources() {
-    const response = await fetch("/api/sources");
-    const entries = await response.json();
-
-    sources = Object.values(entries);
-  }
-
-  onMount(() => {
-    fetchSources();
-  });
 </script>
 
 <svelte:head>
@@ -32,16 +19,12 @@
 
 <NavigationSection />
 
-{#if sources}
-  <Page.Root>
-    <Page.Header>
-      <Page.Title title={m["routes.sources.title"]()} />
-    </Page.Header>
-    <Page.Divider />
-    <Page.Contents>
-      <SourceTable {sources} />
-    </Page.Contents>
-  </Page.Root>
-{:else}
-  <Loading />
-{/if}
+<Page.Root>
+  <Page.Header>
+    <Page.Title title={m["routes.sources.title"]()} />
+  </Page.Header>
+  <Page.Divider />
+  <Page.Contents>
+    <SourceTable sources={Object.values(sources)} />
+  </Page.Contents>
+</Page.Root>
