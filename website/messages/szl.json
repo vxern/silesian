@@ -9,7 +9,7 @@
   },
   "components": {
     "search_bar": {
-      "placeholder": "Kerego słowa szukŏcie?",
+      "placeholder": "Kierygo słowa szukŏcie?",
       "missing_word": "Coby wyszukać, nojprzōd wkludźcie hasło.",
       "reset_caps": {
         "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
@@ -27,7 +27,7 @@
   "routes": {
     "home": {
       "title": "Sztart",
-      "description": "{project_name} je zajta stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy.",
+      "description": "{project_name} je strōna stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy.",
       "splashes": {
         "one": "Dykcjōnŏrze ślōnskij gŏdki",
         "two": "Dykcjōnŏrze ślōnskigo jynzyka",
@@ -66,9 +66,9 @@
                 "countPlural"
               ],
               "match": {
-                "countPlural=one": "z czego w tym miesiōncu dodali my jedno ś nich.",
-                "countPlural=few": "z czego w tym miesiōncu dodali my {count} ś nich.",
-                "countPlural=many": "z czego w tym miesiōncu dodali my {count} ś nich."
+                "countPlural=one": "z czygo w tym miesiōncu dodali my jedno ś nich.",
+                "countPlural=few": "z czygo w tym miesiōncu dodali my {count} ś nich.",
+                "countPlural=many": "z czygo w tym miesiōncu dodali my {count} ś nich."
               }
             }
           ]
@@ -94,6 +94,28 @@
     "account": {
       "title": "Kōnto",
       "description": "Informacyje ô Waszym kōncie.",
+      "history": {
+        "searches": {
+          "title": "Historyjŏ wyszukań",
+          "description": "Samkej możecie sprŏwdzić wasze skorsze wyszukania, a kiedy żeście je wyszukowali."
+        },
+        "additions": {
+          "title": "Historyjŏ przidatkōw",
+          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście przidŏwali a kiedy."
+        },
+        "changes": {
+          "title": "Historyjŏ zmian",
+          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście zmiyniali a kiedy."
+        },
+        "time_spent_using": {
+          "title": "Wykres spyndzōnygo czasu na używaniu strōny",
+          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na używaniu strōny."
+        },
+        "time_spent_editing": {
+          "title": "Wykres spyndzōnygo czasu we edytorze",
+          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
+        }
+      },
       "attributes": {
         "base": {
           "avatar": "Bild",
@@ -141,7 +163,7 @@
     },
     "logout": {
       "title": "Ôdlogowywanie",
-      "description": "Samkej możecie sie ôdlogować ôd Waszego kōnta."
+      "description": "Samkej możecie sie ôdlogować ôd Waszygo kōnta."
     },
     "search": {
       "title": "Szukanie",

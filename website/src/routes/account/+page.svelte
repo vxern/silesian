@@ -13,7 +13,6 @@
   import TimeLineIcon from "~icons/mingcute/time-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
   import ExitLineIcon from "~icons/mingcute/exit-line";
-  import HistoryAnticlockwiseLineIcon from "~icons/mingcute/history-anticlockwise-line";
   import { dayjs } from "../../helpers/dates.js";
   import constants from "$lib/constants/core";
   import { goto } from "$app/navigation";
@@ -149,54 +148,35 @@
       <tbody>
         <tr>
           <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <section class="flex gap-x-1 items-center">
-              <span>
-                {searches}
-              </span>
-              <a href="/account/history/searches">
-                <HistoryAnticlockwiseLineIcon class="text-green-400" />
-              </a>
-            </section>
+            <a href="/account/history/searches" class="font-bold underline">
+              {searches}
+            </a>
           </td>
           <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <section class="flex gap-x-1 items-center">
-              <span>
-                {additions}
-              </span>
-              <a href="/account/history/additions">
-                <HistoryAnticlockwiseLineIcon class="text-green-400" />
-              </a>
-            </section>
+            <a href="/account/history/additions" class="font-bold underline">
+              {additions}
+            </a>
           </td>
           <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <section class="flex gap-x-1 items-center">
-              <span>
-                {changes}
-              </span>
-              <a href="/account/history/changes">
-                <HistoryAnticlockwiseLineIcon class="text-green-400" />
-              </a>
-            </section>
+            <a href="/account/history/changes" class="font-bold underline">
+              {changes}
+            </a>
           </td>
           <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <section class="flex gap-x-1 items-center">
-              <span>
-                {timeSpentUsing.humanize()}
-              </span>
-              <a href="/account/history/time-spent-using">
-                <HistoryAnticlockwiseLineIcon class="text-green-400" />
-              </a>
-            </section>
+            <a
+              href="/account/history/time-spent-using"
+              class="font-bold underline"
+            >
+              {timeSpentUsing.humanize()}
+            </a>
           </td>
           <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <section class="flex gap-x-1 items-center">
-              <span>
-                {timeSpentEditing.humanize()}
-              </span>
-              <a href="/account/history/time-spent-editing">
-                <HistoryAnticlockwiseLineIcon class="text-green-400" />
-              </a>
-            </section>
+            <a
+              href="/account/history/time-spent-editing"
+              class="font-bold underline"
+            >
+              {timeSpentEditing.humanize()}
+            </a>
           </td>
         </tr>
       </tbody>

@@ -4,6 +4,8 @@
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import { SignIn } from "@auth/sveltekit/components";
   import constants from "$lib/constants/core";
+
+  // TODO(vxern): Need to make the cursor pointer work.
 </script>
 
 <svelte:head>

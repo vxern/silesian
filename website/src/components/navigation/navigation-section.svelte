@@ -11,6 +11,7 @@
   import QuillPenLineIcon from "~icons/mingcute/quill-pen-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
+  import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
   import Page from "../page/index.js";
 </script>
 
@@ -74,13 +75,30 @@
     <Page.Divider />
   </section>
   {#if page.data.session}
-    <NavigationButton
-      onclick={() => goto("/account")}
-      highlighted={page.url.pathname === "/account"}
-    >
-      {m["routes.account.title"]()}
-      <User2LineIcon />
-    </NavigationButton>
+    {#if page.url.pathname.startsWith("/account/history")}
+      <NavigationButton onclick={() => goto("/account")} highlighted={true}>
+        {#if page.url.pathname === "/account/history/searches"}
+          {m["routes.account.history.searches.title"]()}
+        {:else if page.url.pathname === "/account/history/additions"}
+          {m["routes.account.history.additions.title"]()}
+        {:else if page.url.pathname === "/account/history/changes"}
+          {m["routes.account.history.changes.title"]()}
+        {:else if page.url.pathname === "/account/history/time-spent-using"}
+          {m["routes.account.history.time_spent_using.title"]()}
+        {:else if page.url.pathname === "/account/history/time-spent-editing"}
+          {m["routes.account.history.time_spent_editing.title"]()}
+        {/if}
+        <HistoryAnticlockwiseLine />
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/account")}
+        highlighted={page.url.pathname === "/account"}
+      >
+        {m["routes.account.title"]()}
+        <User2LineIcon />
+      </NavigationButton>
+    {/if}
   {:else}
     <NavigationButton
       onclick={() => goto("/login")}
