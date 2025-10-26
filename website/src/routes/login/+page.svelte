@@ -29,41 +29,56 @@
       <SignIn provider="github" signInPage="login">
         <section
           slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
         >
           <enhanced:img src="/static/logos/github.svg" class="size-10" />
+          <span class="font-bold">
+            {m["routes.login.providers.github"]()}
+          </span>
         </section>
       </SignIn>
       <SignIn provider="discord" signInPage="login">
         <section
           slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
         >
           <enhanced:img src="/static/logos/discord.svg" class="size-10" />
+          <span class="font-bold">
+            {m["routes.login.providers.discord"]()}
+          </span>
         </section>
       </SignIn>
       <SignIn provider="google" signInPage="login">
         <section
           slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
         >
           <enhanced:img src="/static/logos/google.svg" class="size-10" />
+          <span class="font-bold">
+            {m["routes.login.providers.google"]()}
+          </span>
         </section>
       </SignIn>
       <SignIn provider="linkedin" signInPage="login">
         <section
           slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
         >
           <enhanced:img src="/static/logos/linkedin.svg" class="size-10" />
+          <span class="font-bold">
+            {m["routes.login.providers.linkedin"]()}
+          </span>
         </section>
       </SignIn>
       <SignIn provider="twitter" signInPage="login">
         <section
           slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md"
+          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
         >
           <enhanced:img src="/static/logos/x.svg" class="size-10" />
+          <span class="font-bold">
+            {m["routes.login.providers.x"]()}
+          </span>
         </section>
       </SignIn>
     </section>

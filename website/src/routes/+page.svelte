@@ -59,7 +59,7 @@
 <section class="flex-1 flex flex-col gap-y-8 items-center">
   <article>
     <h1>
-      <span class="text-8xl text-yellow-400 font-bold">
+      <span class="text-8xl text-yellow-400 font-medium">
         {constants.project.name}
       </span>
       <VersionLabel />

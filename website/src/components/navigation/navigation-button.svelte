@@ -6,7 +6,7 @@
 
 <button
   class={clsx(
-    "flex gap-x-2 items-center font-bold text-xl",
+    "flex gap-x-2 items-center text-xl",
     onclick && "cursor-pointer",
     highlighted && "text-yellow-400",
     !highlighted && "text-zinc-400",

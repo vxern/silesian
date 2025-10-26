@@ -43,7 +43,7 @@ marked.use({
       return `${this.parser.parseInline(token.tokens)}\n`;
     },
     strong(token) {
-      return `<u>${this.parser.parseInline(token.tokens)}</u>\n`;
+      return `<u><b>${this.parser.parseInline(token.tokens)}</b></u>\n`;
     },
     text(token) {
       let contents; 
@@ -55,7 +55,7 @@ marked.use({
         contents = DOMPurify.sanitize(token.text)
       }
 
-      return `<span>${contents}</span>`;
+      return contents;
     },
   }
 });

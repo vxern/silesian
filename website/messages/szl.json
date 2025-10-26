@@ -74,7 +74,7 @@
           ]
         },
         "want_to_help": "Chcecie nōm pōmōc?",
-        "find_out_how": "Przewiydzcie sie, jako to mogecie zrobić."
+        "find_out_how": "Przewiydzcie sie, jako to możecie zrobić."
       }
     },
     "about": {
@@ -130,11 +130,18 @@
     },
     "login": {
       "title": "Logowanie",
-      "description": "Samkej mogecie sie zalogować ku Waszymu kōntu."
+      "description": "Samkej możecie sie zalogować ku Waszymu kōntu.",
+      "providers": {
+        "github": "GitHub",
+        "discord": "Discord",
+        "x": "X",
+        "google": "Google",
+        "linkedin": "LinkedIn"
+      }
     },
     "logout": {
       "title": "Ôdlogowywanie",
-      "description": "Samkej mogecie sie ôdlogować ôd Waszego kōnta."
+      "description": "Samkej możecie sie ôdlogować ôd Waszego kōnta."
     },
     "search": {
       "title": "Szukanie",

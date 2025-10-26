@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @plugin "tailwind-scrollbar";
 
 @theme {
   --font-bitter: "Bitter", sans-serif;
+}
+
+@layer base {
+  b {
+    @apply font-bold
+  }
 }
 
 .tippy-box[data-theme~='info'] {
