@@ -95,9 +95,21 @@
       "title": "Kōnto",
       "description": "Informacyje ô Waszym kōncie.",
       "attributes": {
-        "username": "Nazwa używŏcza",
-        "email": "Adresa e-mail"
-      }
+        "base": {
+          "avatar": "Bild",
+          "username": "Nazwa używŏcza",
+          "email": "Adresa e-mail",
+          "created_at": "Dołōnczōno"
+        },
+        "stats": {
+          "additions": "Przidanych",
+          "searches": "Wyszukanych",
+          "changes": "Zmian",
+          "time_spent_editing": "Czasu przi edytowaniu",
+          "time_spent_using": "Czasu przi używaniu"
+        }
+      },
+      "logout": "Ôdloguj sie"
     },
     "editor": {
       "title": "Edytōr",
@@ -161,12 +173,13 @@
     "word": {
       "title": "Hasło",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
-      "source": "Zdrzōdło"
+      "source": "Zdrzōdło:"
     }
   },
   "meta": {
     "unknown": "?",
     "none": "—",
-    "etc": "…"
+    "etc": "…",
+    "end": "KŌNIEC TREFIYŃ"
   }
 }
