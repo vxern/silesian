@@ -2,8 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-  import { page } from "$app/stores";
-  import { SignIn, SignOut } from "@auth/sveltekit/components";
+  import { SignIn } from "@auth/sveltekit/components";
   import constants from "$lib/constants/core";
 </script>
 
@@ -26,63 +25,93 @@
   <Page.Divider />
   <Page.Contents>
     <section class="flex justify-center gap-x-4">
-      <SignIn provider="github" signInPage="login">
-        <section
-          slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
-        >
-          <enhanced:img src="/static/logos/github.svg" class="size-10" />
-          <span class="font-bold">
-            {m["routes.login.providers.github"]()}
-          </span>
-        </section>
-      </SignIn>
-      <SignIn provider="discord" signInPage="login">
-        <section
-          slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
-        >
-          <enhanced:img src="/static/logos/discord.svg" class="size-10" />
-          <span class="font-bold">
-            {m["routes.login.providers.discord"]()}
-          </span>
-        </section>
-      </SignIn>
-      <SignIn provider="google" signInPage="login">
-        <section
-          slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
-        >
-          <enhanced:img src="/static/logos/google.svg" class="size-10" />
-          <span class="font-bold">
-            {m["routes.login.providers.google"]()}
-          </span>
-        </section>
-      </SignIn>
-      <SignIn provider="linkedin" signInPage="login">
-        <section
-          slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
-        >
-          <enhanced:img src="/static/logos/linkedin.svg" class="size-10" />
-          <span class="font-bold">
-            {m["routes.login.providers.linkedin"]()}
-          </span>
-        </section>
-      </SignIn>
-      <SignIn provider="twitter" signInPage="login">
-        <section
-          slot="submitButton"
-          class="cursor-pointer p-4 bg-zinc-800 rounded-md flex flex-col items-center gap-y-3"
-        >
-          <enhanced:img src="/static/logos/x.svg" class="size-10" />
-          <span class="font-bold">
-            {m["routes.login.providers.x"]()}
-          </span>
-        </section>
-      </SignIn>
-    </section>
-    <!-- 
+      <article class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+        <SignIn provider="github" signInPage="login">
+          <section
+            slot="submitButton"
+            class="flex flex-col items-center gap-y-3"
+          >
+            <enhanced:img
+              src="/static/logos/github.svg"
+              class="size-10"
+              alt={m["routes.login.providers.github"]()}
+            />
+            <span class="font-bold">
+              {m["routes.login.providers.github"]()}
+            </span>
+          </section>
+        </SignIn>
+      </article>
+      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+        <SignIn provider="discord" signInPage="login">
+          <article
+            slot="submitButton"
+            class="flex flex-col items-center gap-y-3"
+          >
+            <enhanced:img
+              src="/static/logos/discord.svg"
+              class="size-10"
+              alt={m["routes.login.providers.discord"]()}
+            />
+            <span class="font-bold">
+              {m["routes.login.providers.discord"]()}
+            </span>
+          </article>
+        </SignIn>
+      </section>
+      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+        <SignIn provider="google" signInPage="login">
+          <article
+            slot="submitButton"
+            class="flex flex-col items-center gap-y-3"
+          >
+            <enhanced:img
+              src="/static/logos/google.svg"
+              class="size-10"
+              alt={m["routes.login.providers.google"]()}
+            />
+            <span class="font-bold">
+              {m["routes.login.providers.google"]()}
+            </span>
+          </article>
+        </SignIn>
+      </section>
+
+      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+        <SignIn provider="linkedin" signInPage="login">
+          <article
+            slot="submitButton"
+            class="flex flex-col items-center gap-y-3"
+          >
+            <enhanced:img
+              src="/static/logos/linkedin.svg"
+              class="size-10"
+              alt={m["routes.login.providers.linkedin"]()}
+            />
+            <span class="font-bold">
+              {m["routes.login.providers.linkedin"]()}
+            </span>
+          </article>
+        </SignIn>
+      </section>
+      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+        <SignIn provider="twitter" signInPage="login">
+          <article
+            slot="submitButton"
+            class="flex flex-col items-center gap-y-3"
+          >
+            <enhanced:img
+              src="/static/logos/x.svg"
+              class="size-10"
+              alt={m["routes.login.providers.x"]()}
+            />
+            <span class="font-bold">
+              {m["routes.login.providers.x"]()}
+            </span>
+          </article>
+        </SignIn>
+      </section>
+      <!-- 
     {#if $page.data.session}
       {#if $page.data.session.user?.image}
         <img
@@ -105,5 +134,6 @@
         <div slot="submitButton" class="buttonPrimary">Sign in</div>
       </SignIn>
     {/if} -->
-  </Page.Contents>
+    </section></Page.Contents
+  >
 </Page.Root>
