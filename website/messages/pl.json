@@ -147,12 +147,13 @@
     "word": {
       "title": "Hasło",
       "description": "Znaczenia, rozkład oraz inne informacje o danym słowie.",
-      "source": "Źródło"
+      "source": "Źródło:"
     }
   },
   "meta": {
     "unknown": "?",
     "none": "—",
-    "etc": "…"
+    "etc": "…",
+    "end": "KONIEC WYNIKÓW"
   }
 }
