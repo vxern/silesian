@@ -5,6 +5,7 @@
   import SearchBar from "../components/search/search-bar.svelte";
   import { onMount } from "svelte";
   import LanguageSection from "../components/language/language-section.svelte";
+  import SubdomainNavigationSection from "../components/subdomain-navigation/subdomain-navigation-section.svelte";
   import NavigationSection from "../components/navigation/navigation-section.svelte";
   import SocialsSection from "../components/socials/socials-section.svelte";
   import { goto } from "$app/navigation";
@@ -52,6 +53,7 @@
 </svelte:head>
 
 <LanguageSection />
+<SubdomainNavigationSection />
 <NavigationSection />
 <SocialsSection />
 <VersionSection />

@@ -137,6 +137,10 @@
       },
       "logout": "Ôdloguj sie"
     },
+    "map": {
+      "title": "Karta",
+      "description": "Rozkłŏd ślōnskich dyjalektōw po Gōrnym Ślōnsku."
+    },
     "editor": {
       "title": "Edytōr",
       "description": "",

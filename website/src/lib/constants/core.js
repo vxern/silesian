@@ -20,6 +20,11 @@ export default Object.freeze({
     "ź",
     "ż",
   ],
+  subdomains: {
+    dictionary: "http://dictionary.localhost",
+    map: "http://map.localhost",
+    writing: "http://writing.localhost",
+  },
   links: {
     github: "https://github.com/vxern/silesian.eu",
     instagram: "https://instagram.com/silesian.eu",

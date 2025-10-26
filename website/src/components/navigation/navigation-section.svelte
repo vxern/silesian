@@ -12,6 +12,7 @@
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
   import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
+  import MapLineIcon from "~icons/mingcute/map-line";
   import Page from "../page/index.js";
 </script>
 
