@@ -25,7 +25,9 @@
   <Page.Divider />
   <Page.Contents>
     <section class="flex justify-center gap-x-4">
-      <article class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+      <article
+        class="cursor-pointer p-4 flex-1 outline-1 outline-blue-500 rounded-lg bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100"
+      >
         <SignIn provider="github" signInPage="login">
           <section
             slot="submitButton"
@@ -42,7 +44,9 @@
           </section>
         </SignIn>
       </article>
-      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+      <section
+        class="cursor-pointer p-4 flex-1 outline-1 outline-blue-500 rounded-lg bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100"
+      >
         <SignIn provider="discord" signInPage="login">
           <article
             slot="submitButton"
@@ -59,7 +63,9 @@
           </article>
         </SignIn>
       </section>
-      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+      <section
+        class="cursor-pointer p-4 flex-1 outline-1 outline-blue-500 rounded-lg bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100"
+      >
         <SignIn provider="google" signInPage="login">
           <article
             slot="submitButton"
@@ -76,8 +82,9 @@
           </article>
         </SignIn>
       </section>
-
-      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+      <section
+        class="cursor-pointer p-4 flex-1 outline-1 outline-blue-500 rounded-lg bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100"
+      >
         <SignIn provider="linkedin" signInPage="login">
           <article
             slot="submitButton"
@@ -94,7 +101,9 @@
           </article>
         </SignIn>
       </section>
-      <section class="cursor-pointer p-4 flex-1 bg-zinc-800 rounded-md">
+      <section
+        class="cursor-pointer p-4 flex-1 outline-1 outline-blue-500 rounded-lg bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100"
+      >
         <SignIn provider="twitter" signInPage="login">
           <article
             slot="submitButton"
