@@ -10,6 +10,9 @@ marked.use({
 
       switch (token.depth) {
         case 1: {
+          return `<b>${body}</b>`;
+        }
+        case 2: {
           return `<i class="text-blue-500">${body}</i>`;
         }
         case 6: {

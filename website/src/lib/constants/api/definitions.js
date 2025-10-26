@@ -2,7 +2,9 @@
 export default [{
   lemma: "jako",
   source: "kulik/słownik",
-  contents: `# Zamianek
+  contents: `# jako
+
+## Zamianek
 
 1. Używany do pytaniŏ ô sztand abo spusōb.
     > **Jak** widzicie niydŏwny welōnek w Katalōniji, tyn po zdymisjōnowaniu waszego regiyrōnku?
@@ -21,7 +23,7 @@ export default [{
 
     ###### 2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł. Mirosław Syniawa
 
-# Etymologijŏ
+## Etymologijŏ
 
 Zamianek i spōjnik ze prasłowiańskigo *jako.`,
   createdAt: Date.now(),
