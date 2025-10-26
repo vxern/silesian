@@ -27,7 +27,7 @@
     <Page.Title title={m["routes.about.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <section class="flex gap-x-2">
+  <section class="flex gap-x-4">
     <article class="flex-1 flex flex-col gap-y-1">
       <span class="text-blue-500 font-bold text-xl">
         {m["routes.about.sections.what.title"]({
@@ -45,6 +45,16 @@
         })}
       </span>
       {m["routes.about.sections.when.description"]({
+        project_name: constants.project.name,
+      })}
+    </article>
+    <article class="flex-1 flex flex-col gap-y-1">
+      <span class="text-blue-500 font-bold text-xl">
+        {m["routes.about.sections.why.title"]({
+          project_name: constants.project.name,
+        })}
+      </span>
+      {m["routes.about.sections.why.description"]({
         project_name: constants.project.name,
       })}
     </article>
