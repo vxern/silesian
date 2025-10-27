@@ -115,6 +115,8 @@
   <!-- ❌ Not checked the number of entries. -->
   - `⛏️` `pol` [Zdobnictwo metalowe na Śląsku](https://pbc.gda.pl/dlibra/publication/1165/edition/8684), author: `unknown`, entries: `uncounted`
   <!-- Checked the number of lines from start to end. -->
+  - `⚙️` `pol` [Hutniczo mowa](https://muzeumhutnictwa.pl/hutniczo-mowa-slownik/), authors: `Bartłomiej Majchrowicz`, `Alicja Podstolec`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `⚙️` `pol` [Śląski słownik techniczny](https://euro-met.pl/informator/slaski-slownik), author: `unknown`, entries: `500+`
   <!-- ❌ Not checked the number of entries. -->
   - `🧪` `śla/F`, `ste` [Ukłŏd ôkresowy elymyntōw](https://canov.jergym.cz/vyhledav/varian33/slez/slp.htm), author: `unknown`, entries: `N/A`
