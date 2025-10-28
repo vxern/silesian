@@ -1,8 +1,5 @@
-// TODO(vxern): This is hard-coded.
-export default [{
-  lemma: "jako",
-  source: "kulik/słownik",
-  contents: `# jako
+export default Object.freeze({
+  "kulik/słownik": `# jako
 
 ## Zamianek
 
@@ -26,13 +23,7 @@ export default [{
 ## Etymologijŏ
 
 Zamianek i spōjnik ze prasłowiańskigo *jako.`,
-  createdAt: Date.now(),
-  updatedAt: Date.now(),
-}, {
-  lemma: "jako",
-  source: "neblik+orliński/dykcjōnorz",
-  contents: `# jako
-
+  "neblik+orliński/dykcjōnorz": `# jako
 jako? - jak? (pol.)
 
 > **Jako** to godosz, tak szpetnie.
@@ -42,24 +33,31 @@ jako? - jak? (pol.)
 > **Jako** to pojadymy, autobusym, abo cugym?
 
 > **Jako** sie to mōm ôblyc, bydzie tam ciepło?`,
-  createdAt: Date.now(),
-  updatedAt: Date.now(),
-}, {
-  lemma: "jako",
-  source: "kosmała/DŚP",
-  contents: `# jako
+  "syniawa/dykcjůnorz": {
+    name: "Dykcjůnorz polsko-ślůnski",
+    // TODO(vxern): Link?
+    link: null,
+    authors: ["Mirosław Syniawa"],
+    licence: "proprietary",
+    access: "open",
+    redistributable: false,
+  },
+  "wencel/dykcjůnôrz": {
+    name: "Dykcjůnôrz ślų̊sko-polski",
+    link: "https://www.math.uni.wroc.pl/~wencel/sil/slownik_sp.pdf",
+    authors: ["Aleksandra Wencel"],
+    licence: "proprietary",
+    access: "open",
+    redistributable: false,
+  },
+  "kosmała/DŚP": `# jako
+jak bardzo
 
-jak bardzo`,
-  createdAt: Date.now(),
-  updatedAt: Date.now(),
-}, {
-  lemma: "jako",
-  source: "fazi/słownik",
-  contents: `# jako
+# jako?
+jak?`,
+  "fazi/słownik": `# jako
 
-jak
+  jak
 
-> **Jako** tam stoi napisane?`,
-  createdAt: Date.now(),
-  updatedAt: Date.now(),
-}];
+  ###### **Jako** tam stoi napisane?`,
+});

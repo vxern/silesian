@@ -12,7 +12,7 @@ export default Object.freeze({
     },
   },
   "neblik+orliński/dykcjōnorz": {
-    name: "Dykcjōnorz",
+    name: "dykcjōnorz.eu",
     link: "https://dykcjonorz.eu",
     authors: ["Stanisław Neblik", "Wojciech Orliński"],
     licence: "proprietary",

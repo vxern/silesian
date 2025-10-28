@@ -10,13 +10,24 @@ marked.use({
 
       switch (token.depth) {
         case 1: {
-          return `<b>${body}</b>`;
+          return `<span class="font-bold text-xl text-yellow-400">${body}</span><br />`;
         }
         case 2: {
-          return `<i class="text-blue-500">${body}</i>`;
+          let colour;
+          switch (body) {
+            case "Etymologijŏ":
+            case "Etymologijo":
+              colour = "text-green-500";
+              break;
+            default:
+              colour = "text-blue-500";
+              break;
+          }
+
+          return `<i class="font-bold text-lg ${colour}">${body}</i><br />`;
         }
         case 6: {
-          return `<i class="text-zinc-500 pl-12">— ${body}</i>`;
+          return `<i class="text-zinc-500 pl-12">— ${body}</i><br />`;
         }
       }
     },
@@ -43,10 +54,10 @@ marked.use({
       return `<blockquote class="italic pl-4">\n<span class="text-zinc-500">„ </span><span class="text-zinc-400">${this.parser.parse(token.tokens)}</span><span class="text-zinc-500"> ”</span></blockquote>\n`;
     },
     paragraph(token) {
-      return `${this.parser.parseInline(token.tokens)}\n`;
+      return this.parser.parseInline(token.tokens);
     },
     strong(token) {
-      return `<u><b>${this.parser.parseInline(token.tokens)}</b></u>\n`;
+      return `<span class="font-bold underline">${this.parser.parseInline(token.tokens)}</span>`;
     },
     text(token) {
       let contents; 
@@ -63,8 +74,8 @@ marked.use({
   }
 });
 
-function formatMarkdown(string) {
-  return marked.parse(string);
+function renderMarkdown(string) {
+  return `<span class="leading-8">${marked.parse(string)}</span>`;
 }
 
-export { formatMarkdown }
+export { renderMarkdown }

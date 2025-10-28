@@ -12,6 +12,7 @@
   import Loading from "../components/meta/loading.svelte";
   import VersionSection from "../components/version/version-section.svelte";
   import VersionLabel from "../components/version/version-label.svelte";
+  import Page from "../components/page/index.js";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
   const splashKeys = [
@@ -58,42 +59,44 @@
 <SocialsSection />
 <VersionSection />
 
-<section class="flex-1 flex flex-col gap-y-8 items-center">
-  <article>
-    <h1>
-      <span class="text-8xl text-yellow-400 font-bold">
-        {constants.project.name}
-      </span>
-      <VersionLabel />
-    </h1>
-    <h2 class="text-2xl text-blue-500">{splash}</h2>
-  </article>
-  <SearchBar />
-  <article>
-    {#if statistics}
-      <h6 class="text-sm italic flex flex-col gap-y-1">
-        <span class="text-zinc-600">
-          {m["routes.home.help.imported.total"]({
-            count: statistics.imported.total,
-          })}
-          {m["routes.home.help.imported.this_month"]({
-            count: statistics.imported.this_month,
-          })}
+<Page.Root>
+  <section class="flex-1 flex flex-col gap-y-8 items-center">
+    <article>
+      <h1>
+        <span class="text-8xl text-yellow-400 font-bold">
+          {constants.project.name}
         </span>
-        <span>
+        <VersionLabel />
+      </h1>
+      <h2 class="text-2xl text-blue-500">{splash}</h2>
+    </article>
+    <SearchBar />
+    <article>
+      {#if statistics}
+        <h6 class="text-sm italic flex flex-col gap-y-1">
           <span class="text-zinc-600">
-            {m["routes.home.help.want_to_help"]()}
+            {m["routes.home.help.imported.total"]({
+              count: statistics.imported.total,
+            })}
+            {m["routes.home.help.imported.this_month"]({
+              count: statistics.imported.this_month,
+            })}
           </span>
-          <button
-            class="cursor-pointer text-green-600 hover:text-green-500"
-            onclick={() => goto("/contribute")}
-          >
-            {m["routes.home.help.find_out_how"]()}
-          </button>
-        </span>
-      </h6>
-    {:else}
-      <Loading />
-    {/if}
-  </article>
-</section>
+          <span>
+            <span class="text-zinc-600">
+              {m["routes.home.help.want_to_help"]()}
+            </span>
+            <button
+              class="cursor-pointer text-green-600 hover:text-green-500"
+              onclick={() => goto("/contribute")}
+            >
+              {m["routes.home.help.find_out_how"]()}
+            </button>
+          </span>
+        </h6>
+      {:else}
+        <Loading />
+      {/if}
+    </article>
+  </section>
+</Page.Root>

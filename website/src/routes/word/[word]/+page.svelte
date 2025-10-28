@@ -2,7 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../../components/page/index.js";
   import { onMount } from "svelte";
-  import { formatMarkdown } from "../../../helpers/markdown.js";
+  import { renderMarkdown } from "../../../helpers/markdown.js";
   import SearchBar from "../../../components/search/search-bar.svelte";
   import { getSource } from "../../../helpers/sources.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
@@ -47,7 +47,9 @@
           <article
             class="flex-1 flex flex-col w-full gap-y-2 text-start text-zinc-300"
           >
-            {@html formatMarkdown(definition.contents)}
+            <article>
+              {@html renderMarkdown(definition.contents)}
+            </article>
             <article class="flex gap-x-1 items-center justify-end">
               <span class="text-zinc-600">{m["routes.word.source"]()}</span>
               <a

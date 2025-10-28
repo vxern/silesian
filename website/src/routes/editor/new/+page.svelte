@@ -1,12 +1,56 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { getExampleDefinition, isSource } from "../../../helpers/sources.js";
   import Page from "../../../components/page/index.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import AddLineIcon from "~icons/mingcute/add-line";
   import constants from "$lib/constants/core";
+  import { renderMarkdown } from "../../../helpers/markdown.js";
 
   // TODO(vxern): Pick the example at random from the database.
-  // TOOD(vxern): Extract the defaults into the constants.
+  // TODO(vxern): Extract the defaults into the constants.
+
+  let source = $state();
+  let contentsPrefilledWith = $state();
+  let contents = $state("");
+
+  let renderedContents = $derived(renderMarkdown(contents));
+
+  $effect(prefillContentsWithExample);
+
+  function prefillContentsWithExample() {
+    if (isContentsFocused) {
+      return;
+    }
+
+    if (!isSource(source)) {
+      return;
+    }
+
+    const exampleDefinition = getExampleDefinition(source);
+    if (!exampleDefinition) {
+      return;
+    }
+
+    if (contents?.length > 0 && contentsPrefilledWith !== contents) {
+      return;
+    }
+
+    contentsPrefilledWith = exampleDefinition;
+    contents = exampleDefinition;
+  }
+
+  let isContentsFocused = false;
+
+  function onFocus() {
+    console.log("onFocus");
+    isContentsFocused = true;
+  }
+
+  function onBlur() {
+    console.log("onBlur");
+    isContentsFocused = false;
+  }
 </script>
 
 <svelte:head>
@@ -26,7 +70,7 @@
 
 <NavigationSection />
 
-<Page.Root>
+<Page.Root padding="py-24 px-[10%]">
   <Page.Header>
     <Page.Title title={m["routes.editor.new.title"]()} />
   </Page.Header>
@@ -43,11 +87,10 @@
             name="word"
             placeholder={m["routes.editor.new.form.lemma_placeholder"]()}
             class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
-            value="jak"
           />
         </section>
         <section class="flex-1 flex flex-col gap-y-1 items-start">
-          <label for="word" class="pl-1 text-xl text-blue-500">
+          <label for="source" class="pl-1 text-xl text-blue-500">
             {m["routes.editor.new.form.source"]()}
           </label>
           <input
@@ -55,113 +98,41 @@
             name="source"
             placeholder={m["routes.editor.new.form.source_placeholder"]()}
             class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 w-full rounded-lg"
-            value="kulik/słownik"
+            bind:value={source}
           />
         </section>
       </section>
-      <section class="flex flex-col gap-y-1 items-start">
-        <label for="word" class="pl-1 text-xl text-blue-500">
-          {m["routes.editor.new.form.contents"]()}
-        </label>
-        <section class="flex flex-col gap-y-4 w-full">
+      <section class="flex flex-col gap-y-1">
+        <section class="flex flex-1">
+          <label for="contents" class="pl-1 text-xl text-blue-500">
+            {m["routes.editor.new.form.contents"]()}
+          </label>
+          <article class="flex-1"></article>
+          <label for="placeholder" class="pr-1 text-xl text-blue-500">
+            {m["routes.editor.new.form.preview"]()}
+          </label>
+        </section>
+        <section class="flex flex-1">
           <textarea
             type="text"
             name="contents"
             placeholder={m["routes.editor.new.form.contents_placeholder"]()}
             rows="16"
-            class="bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-3 rounded-lg text-sm font-mono h-96"
-            >{`## Przimiotnik
-
-1. Używany do pytaniŏ ô sztand abo spusōb.
-  > Jak widzicie niydŏwny welōnek w Katalōniji, tyn po zdymisjōnowaniu waszego regiyrōnku?
-  > 2018, Wachtyrz
-2. Używany do ôtwiyraniŏ zdań, co kōmunikujōm, iże jakŏś cecha abo zdarzynie sōm moc intynsywne.
-  > Jak sam capi, niy ma blank czym łoddychać...
-  > ojgyn.blogspot.com
-3. Używany do ôtwarciŏ zdaniŏ zależnego, co mŏ naturã pytaniŏ.
-  > Już mioł pełny garniec i niy wiedzioł, jak zastawić.
-  > 1939, Stanisław Bąk, Teksty gwarowe z polskiego Śląska
-4. Używany do postawiyniŏ warōnku.
-  > Jak niy bydzie mōgła, bydã żōł ś niōm sōm.
-  > 2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł. Mirosław Syniawa`}</textarea
-          >
+            class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 placeholder:text-zinc-500 p-4 rounded-l-lg text-sm font-mono h-160"
+            onfocus={onFocus}
+            onblur={onBlur}
+            bind:value={contents}
+          ></textarea>
           <section
-            class="bg-blue-950 outline-1 outline-blue-700 p-3 rounded-lg text-start h-96"
+            class="flex-1 outline-1 bg-zinc-900 inset-shadow-[0_2px_10px_rgba(0,0,0,0.25)] inset-shadow-black outline-zinc-600 p-4 rounded-r-lg text-start h-160 overflow-y-auto"
           >
-            <i class="text-blue-500">Przimiotnik</i>
-            <ol
-              class="list-decimal list-inside w-full decoration-2 underline-offset-2"
-            >
-              <li>
-                <span class="underline">
-                  Używany do pytaniŏ ô sztand abo spusōb.
-                </span>
-                <ul class="pl-8">
-                  <li>
-                    „
-                    <span class="italic text-zinc-400">
-                      Jak widzicie niydŏwny welōnek w Katalōniji, tyn po
-                      zdymisjōnowaniu waszego regiyrōnku?
-                    </span>
-                    ”
-                    <br />
-                    <span>2018, Wachtyrz</span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span class="underline">
-                  Używany do ôtwiyraniŏ zdań, co kōmunikujōm, iże jakŏś cecha
-                  abo zdarzynie sōm moc intynsywne.
-                </span>
-                <ul class="pl-8">
-                  <li>
-                    „
-                    <span class="italic text-zinc-400">
-                      Jak sam capi, niy ma blank czym łoddychać...
-                    </span>
-                    ”
-                    <br />
-                    <span>ojgyn.blogspot.com</span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span class="underline">
-                  Używany do ôtwarciŏ zdaniŏ zależnego, co mŏ naturã pytaniŏ.
-                </span>
-                <ul class="pl-8">
-                  <li>
-                    „
-                    <span class="italic text-zinc-400">
-                      Już mioł pełny garniec i niy wiedzioł, jak zastawić.
-                    </span>
-                    ”
-                    <br />
-                    <span
-                      >1939, Stanisław Bąk, Teksty gwarowe z polskiego Śląska</span
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span class="underline"> Używany do postawiyniŏ warōnku. </span>
-                <ul class="pl-8">
-                  <li>
-                    „
-                    <span class="italic text-zinc-400">
-                      Jak niy bydzie mōgła, bydã żōł ś niōm sōm.
-                    </span>
-                    ”
-                    <br />
-                    <span>
-                      2016, Robert Burns, Remember Tam O'Shanter's Mare, przekł.
-                      Mirosław Syniawa
-                    </span>
-                  </li>
-                </ul>
-              </li>
-            </ol>
+            {#if contents}
+              {@html renderedContents}
+            {:else}
+              <span class="text-sm text-zinc-600">
+                {m["routes.editor.new.form.preview_placeholder"]()}
+              </span>
+            {/if}
           </section>
         </section>
       </section>

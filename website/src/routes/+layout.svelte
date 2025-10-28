@@ -35,7 +35,7 @@
 </svelte:head>
 
 <section
-  class="min-h-screen max-w-screen flex overflow-x-hidden items-center justify-center text-center py-24 px-[25%]"
+  class="min-h-screen max-w-screen flex overflow-x-hidden items-center justify-center text-center"
 >
   {@render children()}
 </section>
