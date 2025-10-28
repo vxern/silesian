@@ -38,8 +38,6 @@
   <!-- ❌ Not checked the number of entries. -->
   - `pol` [Mały słownik gwary śląskiej](https://www.naszatrzynastka.pl/dokumenty/uczniowie/moj-region-moja-ojczyzna.html), author: `unknown`, entries: `uncounted`
   <!-- ❌ Not checked the number of entries. -->
-  - `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
-  <!-- ❌ Not checked the number of entries. -->
   - `pol` [Kartoteka Ogólnosłowiańskiego atlasu językowego](https://rcin.org.pl/dlibra/publication/46466), author: `A. Basara, J. Basara, B. Falińska, N. Perczyńska, J. Sułkowska, H. Zduńska`, entries: `~300`
     - <details>
 
@@ -190,6 +188,8 @@
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` `MISSING` <ins>Nieznany śląski słownik gwarowy</ins>, author: `unknown`, entries: `uncounted`, ISBN: `unknown`
   <!-- ❌ Not checked the number of entries. -->
+  - `🚫` `pol` [Dialekty polskie Śląska](https://sbc.org.pl/dlibra/publication/600216/edition/564609), author: `Kazimierz Nitsch`, entries: `uncounted`
+  <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Ślónsko Godka](https://www.chorzow-mbp.sowa.pl/index.php?typ=record&001=CHORZ%20M10059732), author: `unknown`, entries: `uncounted,` ISBN: `9788301213596`
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Słownik gwary śląskiej](https://m6122.lib.mol.pl/description/13122308/slownik-gwary-slaskiej-13122308), authors: `Andrzej Czajkowski`, `Ilona Czajkowska`, `Andrzej Klukowski`, `Dorota Klukowska`, entries: `uncounted`, ISBN: `8390284510`
@@ -264,6 +264,8 @@
     - `ces` [Slovník po našemu](http://www.nalucine.cz/nlcn/a-te/h-slovni.htm), author: `unknown`, entries: `>1,500`, location: `Domaslavice`
     <!-- ❌ Not checked the number of entries. -->
     - `pol` `MISSING` <ins>Słownictwo zanikające w gwarze krzanowic</ins>, author: `Marcela Szymańska`, entries: `uncounted`
+    <!-- ❌ Not checked the number of entries. -->
+    - `pol` [Słownictwo polskich gwar Śląska na terenie Czechosłowacji](https://rcin.org.pl/dlibra/doccontent?id=3223), author: `Jan Basara`, entries: `uncounted`, TIN: `T06745435`
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
     <!-- ❌ Not checked the number of entries. -->
