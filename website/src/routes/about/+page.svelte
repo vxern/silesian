@@ -3,6 +3,18 @@
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants/core";
+
+  // TODO(vxern): Add proper authors.
+  // TODO(vxern): Add proper contact.
+
+  // TODO(vxern): Fetch contributors from the users table.
+  const contributors = [
+    {
+      full_name: "Dorian Mateusz Oszczęda",
+      username: "vxern",
+      contribution: "author",
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -30,9 +42,7 @@
   <section class="flex gap-x-4">
     <article class="flex-1 flex flex-col gap-y-1">
       <span class="text-blue-500 font-bold text-xl">
-        {m["routes.about.sections.what.title"]({
-          project_name: constants.project.name,
-        })}
+        {m["routes.about.sections.what.title"]()}
       </span>
       {m["routes.about.sections.what.description"]({
         project_name: constants.project.name,
@@ -40,9 +50,7 @@
     </article>
     <article class="flex-1 flex flex-col gap-y-1">
       <span class="text-blue-500 font-bold text-xl">
-        {m["routes.about.sections.when.title"]({
-          project_name: constants.project.name,
-        })}
+        {m["routes.about.sections.when.title"]()}
       </span>
       {m["routes.about.sections.when.description"]({
         project_name: constants.project.name,
@@ -50,13 +58,42 @@
     </article>
     <article class="flex-1 flex flex-col gap-y-1">
       <span class="text-blue-500 font-bold text-xl">
-        {m["routes.about.sections.why.title"]({
-          project_name: constants.project.name,
-        })}
+        {m["routes.about.sections.why.title"]()}
       </span>
       {m["routes.about.sections.why.description"]({
         project_name: constants.project.name,
       })}
     </article>
   </section>
+  <Page.Divider />
+  <section class="flex gap-x-4">
+    <article class="flex-1 flex flex-col gap-y-1">
+      <span class="text-blue-500 font-bold text-xl">
+        {m["routes.about.sections.authors.title"]()}
+      </span>
+      {#each contributors as contributor}
+        <span>
+          {m["routes.about.sections.authors.contributor"]({
+            full_name: contributor.full_name,
+            username: contributor.username,
+            contribution:
+              m[
+                `routes.about.sections.authors.contributions.${contributor.contribution}`
+              ](),
+          })}
+        </span>
+      {/each}
+    </article>
+  </section>
+  <Page.Divider />
+  <article class="flex-1 flex flex-col gap-y-1">
+    <span class="text-blue-500 font-bold text-xl">
+      {m["routes.about.sections.contact.title"]()}
+    </span>
+    <span>
+      {m["routes.about.sections.contact.email_address"]({
+        email_address: constants.contact.emailAddress,
+      })}
+    </span>
+  </article>
 </Page.Root>

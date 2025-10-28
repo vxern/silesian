@@ -92,6 +92,17 @@
         "why": {
           "title": "Czamu?",
           "description": "{project_name} stworzōno, bo chociŏż mōmy słownikōw aż zazbyt, niy bōło żŏdnygo zdrzōdła, co by je wszyjskiy zebrały we jedno miyjsce."
+        },
+        "authors": {
+          "title": "Autorzi",
+          "contributor": "{full_name} („{username}”) — {contribution}",
+          "contributions": {
+            "author": "Autōr"
+          }
+        },
+        "contact": {
+          "title": "Kōntakt",
+          "email_address": "Adresa e-mail — {email_address}"
         }
       }
     },

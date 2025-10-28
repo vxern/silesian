@@ -22,6 +22,7 @@ export default Object.freeze({
   ],
   subdomains: {
     dictionary: "http://dictionary.localhost",
+    translate: "http://translate.localhost",
     map: "http://map.localhost",
     writing: "http://writing.localhost",
   },
@@ -31,6 +32,9 @@ export default Object.freeze({
     x: "https://x.com/silesian.eu",
     discord: "https://discord.gg/silesian.eu",
     release: `https://github.com/vxern/silesian.eu/releases/tag/v${import.meta.env.PACKAGE_VERSION}`,
+  },
+  contact: {
+    emailAddress: "kontakt@silesian.eu",
   },
   limits: {
     searchHistory: 21,
