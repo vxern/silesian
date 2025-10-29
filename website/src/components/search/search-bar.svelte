@@ -174,7 +174,7 @@
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-200 hover:text-green-100"
+      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-100"
       type="submit"
       data-sveltekit-reload
       bind:this={submitElement}

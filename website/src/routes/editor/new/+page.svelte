@@ -139,7 +139,7 @@
       <section class="flex gap-x-4 items-start">
         <button
           type="submit"
-          class="cursor-pointer flex items-center gap-x-1 outline-1 outline-green-500 bg-green-700 hover:bg-green-600 text-green-200 hover:text-green-100 rounded-lg text-lg font-bold p-2"
+          class="cursor-pointer flex items-center gap-x-1 outline-1 outline-green-500 bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-100 rounded-lg text-lg font-bold p-2"
         >
           <AddLineIcon />
           {m["routes.editor.new.form.submit"]()}

@@ -4,8 +4,9 @@
   "languages": {
     "szl": "ślōnski",
     "pl": "polski",
-    "en-GB": "angelski",
-    "de": "miymiecki"
+    "cs": "czeski",
+    "de": "niymiecki",
+    "en-GB": "angelski"
   },
   "components": {
     "search_bar": {
