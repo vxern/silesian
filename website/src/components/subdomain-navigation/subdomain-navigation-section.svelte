@@ -7,6 +7,7 @@
   import FloatingDustLineIcon from "~icons/mingcute/floating-dust-line";
   import MapLineIcon from "~icons/mingcute/map-line";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
+  import Book5LineIcon from "~icons/mingcute/book-5-line";
   import constants from "$lib/constants/core";
 
   let subdomain;
@@ -16,9 +17,14 @@
     // TODO(vxern): This is only for testing.
     subdomain = "dictionary";
   }
+
+  const { mode } = $props();
 </script>
 
-<nav class="fixed top-8 flex gap-x-2">
+<nav
+  class="{mode === 'subdomain' &&
+    'fixed top-8'} flex gap-x-2 place-content-around"
+>
   <SubdomainNavigationButton
     onclick={() => (window.location.href = constants.subdomains.dictionary)}
     highlighted={subdomain === "dictionary"}
@@ -33,7 +39,7 @@
   </SubdomainNavigationButton>
   <article class="w-[1px] bg-zinc-700"></article>
   <SubdomainNavigationButton
-    onclick={() => (window.location.href = constants.subdomains.translate)}
+    onclick={() => (window.location.href = constants.subdomains.thesaurus)}
     highlighted={subdomain === "thesaurus"}
     supported={false}
   >
@@ -86,5 +92,13 @@
         {m["routes.home.version_label.soon"]()}
       </span>
     </section>
+  </SubdomainNavigationButton>
+  <article class="w-[1px] bg-zinc-700"></article>
+  <SubdomainNavigationButton
+    onclick={() => (window.location.href = constants.subdomains.resources)}
+    highlighted={subdomain === "resources"}
+  >
+    <Book5LineIcon />
+    {m["routes.home.subdomains.resources"]()}
   </SubdomainNavigationButton>
 </nav>

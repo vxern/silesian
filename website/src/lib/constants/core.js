@@ -22,9 +22,11 @@ export default Object.freeze({
   ],
   subdomains: {
     dictionary: "http://dictionary.localhost",
+    thesaurus: "http://thesaurus.localhost",
     translate: "http://translate.localhost",
     map: "http://map.localhost",
     guide: "http://guide.localhost",
+    resources: "http://resources.localhost",
   },
   links: {
     github: "https://github.com/vxern/silesian.eu",

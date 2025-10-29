@@ -18,8 +18,8 @@
 
 <nav class="fixed top-8 right-8 flex flex-col items-end gap-y-2">
   <NavigationButton
-    onclick={() => goto("/")}
-    highlighted={page.url.pathname === "/"}
+    onclick={() => goto("/home")}
+    highlighted={page.url.pathname === "/home"}
   >
     {m["routes.home.title"]()}
     <Home2LineIcon />

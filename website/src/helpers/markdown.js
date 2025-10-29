@@ -53,11 +53,14 @@ marked.use({
     blockquote(token) {
       return `<blockquote class="italic pl-4">\n<span class="text-zinc-500">„ </span><span class="text-zinc-400">${this.parser.parse(token.tokens)}</span><span class="text-zinc-500"> ”</span></blockquote>\n`;
     },
+    em(token) {
+      return `<em class="font-light">${this.parser.parseInline(token.tokens)}</em>`;
+    },
     paragraph(token) {
       return this.parser.parseInline(token.tokens);
     },
     strong(token) {
-      return `<span class="font-bold underline">${this.parser.parseInline(token.tokens)}</span>`;
+      return `<span class="font-extrabold">${this.parser.parseInline(token.tokens)}</span>`;
     },
     text(token) {
       let contents; 
@@ -75,7 +78,7 @@ marked.use({
 });
 
 function renderMarkdown(string) {
-  return `<span class="leading-8">${marked.parse(string)}</span>`;
+  return `<span class="leading-8 tracking-widest">${marked.parse(string)}</span>`;
 }
 
 export { renderMarkdown }

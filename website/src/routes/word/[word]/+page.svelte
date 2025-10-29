@@ -44,20 +44,24 @@
       <section class="flex gap-y-8 flex-col">
         {#each definitions as definition}
           {@const source = getSource(definition.source)}
-          <article
-            class="flex-1 flex flex-col w-full gap-y-2 text-start text-zinc-300"
-          >
+          <article class="flex-1 flex flex-col w-full gap-y-2 text-start">
             <article>
               {@html renderMarkdown(definition.contents)}
             </article>
-            <article class="flex gap-x-1 items-center justify-end">
-              <span class="text-zinc-600">{m["routes.word.source"]()}</span>
-              <a
-                class="rounded-md text-blue-500 font-bold text-end underline"
-                href={source.link}
-              >
-                {source.name}
-              </a>
+            <article class="flex items-end flex-col">
+              <section>
+                <span class="text-zinc-600">{m["routes.word.source"]()}</span>
+                <a
+                  class="rounded-md text-blue-500 text-end underline"
+                  href={source.link}
+                >
+                  {source.name}
+                </a>
+              </section>
+              <section>
+                <span class="text-zinc-600">{m["routes.word.authors"]()}</span>
+                {source.authors.join(", ")}
+              </section>
             </article>
           </article>
           <Page.Divider />
@@ -65,8 +69,8 @@
         <section>
           <span class="text-zinc-700">{m["meta.end"]()}</span>
         </section>
-      </section></Page.Contents
-    >
+      </section>
+    </Page.Contents>
   </Page.Root>
 {:else}
   <Loading />

@@ -16,7 +16,7 @@
     onclick && !highlighted && "hover:text-zinc-300",
     onclick && !highlighted && supported === false && "hover:text-zinc-400"
   )}
-  onclick={supported ? onclick : null}
+  onclick={supported !== false ? onclick : null}
 >
   {@render children?.()}
 </button>

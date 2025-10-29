@@ -41,7 +41,8 @@
         "thesaurus": "Tezaur",
         "translations": "Przekłady",
         "map": "Karta",
-        "guide": "Ratgyjber"
+        "guide": "Ratgyjber",
+        "resources": "Zasoby"
       },
       "version_label": {
         "beta": "BETA",
@@ -232,7 +233,8 @@
     "word": {
       "title": "Hasło",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
-      "source": "Zdrzōdło:"
+      "source": "Zdrzōdło:",
+      "authors": "Autorzi:"
     }
   },
   "meta": {
