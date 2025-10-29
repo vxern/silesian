@@ -17,9 +17,6 @@
         "both": "Proszymy jeszcze rŏz naciś tastōw Shift a Caps Lock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
     },
-    "version_label": {
-      "alpha": "alfa"
-    },
     "version_section": {
       "version": "Wersyjŏ {version}"
     }
@@ -37,6 +34,16 @@
         "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
         "seven": "Dykcjōnŏrze ślōnskich narzeczy",
         "eight": "Dykcjōnŏrze pō naszymu"
+      },
+      "subdomains": {
+        "dictionary": "Dykcjōnŏrz",
+        "translations": "Przekłady",
+        "map": "Karta",
+        "guide": "Ratgyjber"
+      },
+      "version_label": {
+        "beta": "BETA",
+        "soon": "NIYDUGO"
       },
       "help": {
         "imported": {

@@ -11,7 +11,6 @@
   import { goto } from "$app/navigation";
   import Loading from "../components/meta/loading.svelte";
   import VersionSection from "../components/version/version-section.svelte";
-  import VersionLabel from "../components/version/version-label.svelte";
   import Page from "../components/page/index.js";
 
   // TODO(vxern): Je ku tymu lepszy spusōb?
@@ -66,7 +65,6 @@
         <span class="text-8xl text-yellow-400 font-bold">
           {constants.project.name}
         </span>
-        <VersionLabel />
       </h1>
       <h2 class="text-2xl text-blue-500">{splash}</h2>
     </article>

@@ -24,7 +24,7 @@ export default Object.freeze({
     dictionary: "http://dictionary.localhost",
     translate: "http://translate.localhost",
     map: "http://map.localhost",
-    writing: "http://writing.localhost",
+    guide: "http://guide.localhost",
   },
   links: {
     github: "https://github.com/vxern/silesian.eu",
