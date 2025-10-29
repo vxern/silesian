@@ -38,6 +38,7 @@
       },
       "subdomains": {
         "dictionary": "Dykcjōnŏrz",
+        "thesaurus": "Tezaur",
         "translations": "Przekłady",
         "map": "Karta",
         "guide": "Ratgyjber"
@@ -58,7 +59,7 @@
                 "countPlural"
               ],
               "match": {
-                "countPlural=one": "Społym mōmy jedno znaczynie,",
+                "countPlural=one": "Społym mōmy jedno znaczyniy,",
                 "countPlural=few": "Społym mōmy {count} znaczynia,",
                 "countPlural=many": "Społym mōmy {count} znaczyń,"
               }
@@ -74,9 +75,9 @@
                 "countPlural"
               ],
               "match": {
-                "countPlural=one": "z czygo w tym miesiōncu dodali my jedno ś nich.",
-                "countPlural=few": "z czygo w tym miesiōncu dodali my {count} ś nich.",
-                "countPlural=many": "z czygo w tym miesiōncu dodali my {count} ś nich."
+                "countPlural=one": "a we tym miesiōncu dodali my jedno ś nich.",
+                "countPlural=few": "a we tym miesiōncu dodali my {count} ś nich.",
+                "countPlural=many": "a we tym miesiōncu dodali my {count} ś nich."
               }
             }
           ]
@@ -195,8 +196,8 @@
       "description": "Samkej możecie sie ôdlogować ôd Waszygo kōnta."
     },
     "search": {
-      "title": "Szukanie",
-      "description": "Szukanie słōw a jejich znaczyń.",
+      "title": "Szukaniy",
+      "description": "Szukaniy słōw a jejich znaczyń.",
       "history": "Skorsze wyszukania",
       "popular": "Drudzy tyż szukali"
     },
@@ -222,7 +223,7 @@
           "open": "dostympny"
         },
         "progress": {
-          "progress": "Fōrtszrit",
+          "progress": "Postymp",
           "numbers": "{imported}/{total}",
           "percentage": "{percentage}%"
         }

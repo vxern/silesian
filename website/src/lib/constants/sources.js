@@ -11,6 +11,14 @@ export default Object.freeze({
       total: 25340,
     },
   },
+  "kucza/słownik": {
+    name: "Naukowy Wielki Słownik Śląsko-polski",
+    link: "http://www.wielki-slownik-slasko-polski.102.pl/",
+    authors: ["Eugeniusz Kucza"],
+    licence: "proprietary",
+    access: "open",
+    redistributable: false,
+  },
   "neblik+orliński/dykcjōnorz": {
     name: "dykcjōnorz.eu",
     link: "https://dykcjonorz.eu",

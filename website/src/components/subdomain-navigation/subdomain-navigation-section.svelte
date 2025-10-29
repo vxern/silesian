@@ -4,6 +4,7 @@
   import SubdomainNavigationButton from "./subdomain-navigation-button.svelte";
   import Book2LineIcon from "~icons/mingcute/book-2-line";
   import Translate2LineIcon from "~icons/mingcute/translate-2-line";
+  import FloatingDustLineIcon from "~icons/mingcute/floating-dust-line";
   import MapLineIcon from "~icons/mingcute/map-line";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import constants from "$lib/constants/core";
@@ -27,6 +28,20 @@
       {m["routes.home.subdomains.dictionary"]()}
       <span class="absolute -bottom-3 right-0 text-xs font-bold text-green-500">
         {m["routes.home.version_label.beta"]()}
+      </span>
+    </section>
+  </SubdomainNavigationButton>
+  <article class="w-[1px] bg-zinc-700"></article>
+  <SubdomainNavigationButton
+    onclick={() => (window.location.href = constants.subdomains.translate)}
+    highlighted={subdomain === "thesaurus"}
+    supported={false}
+  >
+    <FloatingDustLineIcon />
+    <section class="relative">
+      {m["routes.home.subdomains.thesaurus"]()}
+      <span class="absolute -bottom-3 right-0 text-xs font-bold">
+        {m["routes.home.version_label.soon"]()}
       </span>
     </section>
   </SubdomainNavigationButton>
