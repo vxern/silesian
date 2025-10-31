@@ -3,6 +3,7 @@
   import { m } from "$lib/paraglide/messages";
   import "tippy.js/themes/material.css";
   import SearchBar from "../../components/search/search-bar.svelte";
+  import MainSplash from "../../components/splashes/main-splash.svelte";
   import { onMount } from "svelte";
   import LanguageSection from "../../components/language/language-section.svelte";
   import SubdomainNavigationSection from "../../components/subdomain-navigation/subdomain-navigation-section.svelte";
@@ -12,19 +13,6 @@
   import Loading from "../../components/meta/loading.svelte";
   import VersionSection from "../../components/version/version-section.svelte";
   import Page from "../../components/page/index.js";
-
-  // TODO(vxern): Je ku tymu lepszy spusōb?
-  const splashKeys = [
-    "routes.home.splashes.one",
-    "routes.home.splashes.two",
-    "routes.home.splashes.three",
-    "routes.home.splashes.four",
-    "routes.home.splashes.five",
-    "routes.home.splashes.six",
-    "routes.home.splashes.seven",
-    "routes.home.splashes.eight",
-  ];
-  const splash = m[splashKeys[Math.floor(Math.random() * splashKeys.length)]]();
 
   let statistics = $state();
   async function fetchStatistics() {
@@ -60,14 +48,7 @@
 
 <Page.Root>
   <section class="flex-1 flex flex-col gap-y-8 items-center">
-    <article>
-      <h1>
-        <span class="text-8xl text-yellow-400 font-bold">
-          {constants.project.name}
-        </span>
-      </h1>
-      <h2 class="text-2xl text-blue-500">{splash}</h2>
-    </article>
+    <MainSplash />
     <SearchBar />
     <article>
       {#if statistics}
