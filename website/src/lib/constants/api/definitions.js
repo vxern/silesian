@@ -1,4 +1,5 @@
 // TODO(vxern): This is hard-coded.
+// TODO(vxern): Add orthographies and categories.
 export default [{
   lemma: "jako",
   source: "wencel/dykcjůnôrz",
