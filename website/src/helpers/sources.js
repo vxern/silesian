@@ -1,5 +1,5 @@
 import sources from "$lib/constants/sources";
-import exampleDefinitions from "$lib/constants/example-definitions";
+import exampleData from "$lib/constants/example-data";
 
 function getSource(identifier) {
   return sources[identifier];
@@ -9,8 +9,8 @@ function isSource(identifier) {
   return !!getSource(identifier);
 }
 
-function getExampleDefinition(identifier) {
-  return exampleDefinitions[identifier];
+function getExampleData(identifier) {
+  return exampleData[identifier];
 }
 
-export { getSource, isSource, getExampleDefinition }
+export { getSource, isSource, getExampleData }

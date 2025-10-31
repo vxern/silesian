@@ -8,6 +8,18 @@
     "de": "niymiecki",
     "en-GB": "angelski"
   },
+  "orthographies": {
+    "ślabikorz": "Ślabikŏrz",
+    "steuer": "Steuer",
+    "steuer/saf": "Steuer (Ślōnski alfabet fōnetyczny)",
+    "steuer/wencel": "Steuer (Wencel)",
+    "kosmała": "Kosmała",
+    "wiora": "Wiora",
+    "polish": "Polskiy przibliżyniy",
+    "czech": "Czeskiy przibliżyniy",
+    "german": "Niymieckiy przibliżyniy",
+    "adhoc": "Ad-hoc, perhaps a result of mixing orthographies; do not use for learning to write"
+  },
   "components": {
     "search_bar": {
       "placeholder": "Kierygo słowa szukŏcie?",
@@ -170,12 +182,15 @@
         "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
         "form": {
           "lemma": "Hasło",
-          "lemma_placeholder": "Jakiy słowo przidŏwocie?",
+          "lemma_placeholder": "Jakigo słowa przidŏwōmy?",
           "source": "Zdrzōdło",
-          "source_placeholder": "Skōnd bierecie to słowo?",
-          "contents": "Inhalt",
-          "contents_placeholder": "Jakŏ je definicyjŏ tygo słowa?",
-          "preview": "Podglōnd",
+          "source_placeholder": "Skōnd bierymy to słowo?",
+          "categories": "Kategoryje",
+          "categories_placeholder": "Ku jakim kategoryjōm przidŏwōmy tygo słowa?",
+          "licence": "Licyncyjŏ",
+          "licence_placeholder": "Pod jakōm licyncyjōm przidŏwōmy tygo słowa?",
+          "contents": "Inhalt ze podglōndym",
+          "contents_placeholder": "Jakŏ je definicyjŏ ôd tygo słowa?",
           "preview_placeholder": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
           "submit": "Przidej"
         }
