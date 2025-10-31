@@ -13,16 +13,20 @@
   }
 }
 
+.tippy-box {
+  @apply bg-zinc-800 outline-1 outline-zinc-600
+}
+
 .tippy-box[data-theme~='info'] {
-  @apply bg-zinc-700 text-green-500 text-center
+  @apply bg-zinc-800 text-green-500 text-center outline-1 outline-zinc-600
+}
+
+.tippy-box[data-theme~='warning'] {
+  @apply bg-zinc-800 text-yellow-500 text-center outline-1 outline-zinc-600
 }
 
 .tippy-box[data-theme~='info']>.tippy-arrow::before {
   @apply text-zinc-700
-}
-
-.tippy-box[data-theme~='warning'] {
-  @apply bg-zinc-700 text-yellow-500 text-center
 }
 
 .tippy-box[data-theme~='warning']>.tippy-arrow::before {
