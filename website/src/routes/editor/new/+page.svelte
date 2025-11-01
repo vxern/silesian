@@ -32,6 +32,20 @@
         .filter((e) => e)
     ),
   ];
+  const sourceLanguages = [
+    ...new Set(
+      Object.values(sources)
+        .map((source) => source.sourceLanguage)
+        .filter((e) => e)
+    ),
+  ];
+  const targetLanguages = [
+    ...new Set(
+      Object.values(sources)
+        .map((source) => source.targetLanguage)
+        .filter((e) => e)
+    ),
+  ];
 
   // TODO(vxern): Pick the example at random from the database.
   // TODO(vxern): Extract the defaults into the constants.
@@ -93,23 +107,29 @@
           label={m["routes.editor.new.form.orthography"]()}
           placeholder={m["routes.editor.new.form.orthography_placeholder"]()}
           formatOption={(orthography) =>
-            m[`orthographies.${orthography}`]?.() ?? orthography}
+            m[`orthographies.${orthography}`]() ?? orthography}
           options={() => orthographies}
           component={Form.SimpleSelectOption}
         />
-        <Form.TextElement
+        <Form.SelectElement
           name="source_language"
           label={m["routes.editor.new.form.source_language"]()}
           placeholder={m[
             "routes.editor.new.form.source_language_placeholder"
           ]()}
+          formatOption={(language) => m[`languages.${language}`]()}
+          options={() => sourceLanguages}
+          component={Form.SimpleSelectOption}
         />
-        <Form.TextElement
+        <Form.SelectElement
           name="target_language"
           label={m["routes.editor.new.form.target_language"]()}
           placeholder={m[
             "routes.editor.new.form.target_language_placeholder"
           ]()}
+          formatOption={(language) => m[`languages.${language}`]()}
+          options={() => targetLanguages}
+          component={Form.SimpleSelectOption}
         />
       </section>
       <section class="flex gap-x-4">
