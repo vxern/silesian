@@ -25,6 +25,11 @@
     "granted": "udzielōno pozwolyniŏ",
     "public": "publicznŏ włŏsność"
   },
+  "accesses": {
+    "closed": "zawrzity",
+    "limited": "ôgraniczōny",
+    "open": "dostympny"
+  },
   "components": {
     "search_bar": {
       "placeholder": "Kierygo słowa szukŏcie?",
@@ -242,10 +247,7 @@
           "licence": "Licyncyjŏ"
         },
         "access": {
-          "access": "Dostymp",
-          "closed": "zawrzity",
-          "limited": "ôgraniczōny",
-          "open": "dostympny"
+          "access": "Dostymp"
         },
         "progress": {
           "progress": "Postymp",

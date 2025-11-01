@@ -1,7 +1,7 @@
 import { sequence } from '@sveltejs/kit/hooks';
 import { paraglideMiddleware } from '$lib/paraglide/server';
 import { handle as handleAuthentication } from "./auth";
-import { sql } from "$lib/database";
+import { db } from "$lib/database.server";
 
 const handleParaglide = ({ event, resolve }) => paraglideMiddleware(event.request, ({ request, locale }) => {
 	event.request = request;
@@ -12,7 +12,7 @@ const handleParaglide = ({ event, resolve }) => paraglideMiddleware(event.reques
 });
 
 const handleDatabase = ({ event, resolve }) => {
-  event.locals = { sql };
+  event.locals = { db };
 
   return resolve(event);
 };
