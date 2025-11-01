@@ -2,11 +2,12 @@
   import DownLineIcon from "~icons/mingcute/down-line";
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
+  import Label from "./label.svelte";
 
   const {
     name,
     label,
-    placeholder,
+    description,
     options: getOptions,
     formatOption = (option) => option,
     filterOptions = (options, search) => {
@@ -76,7 +77,7 @@
 </section>
 
 <section class="flex-1 flex flex-col gap-y-1 items-start">
-  <label for={name} class="pl-1 text-xl text-blue-500">{label}</label>
+  <Label {name} {label} {description} />
   <section
     class="flex-1 flex justify-between items-center bg-zinc-800 outline-1 outline-zinc-600 p-2 rounded-lg w-full cursor-pointer"
     {@attach trigger}
@@ -84,8 +85,7 @@
     {#if searchEnabled || !selectedValue}
       <input
         type="text"
-        class="w-full p-1 placeholder-zinc-500 border-none outline-none ring-0 focus:outline-none focus:border-none focus:ring-0 shadow-none box-shadow-none"
-        {placeholder}
+        class="w-full p-1 border-none outline-none ring-0 focus:outline-none focus:border-none focus:ring-0 shadow-none box-shadow-none"
         bind:value={searchValue}
         oninput={search.bind(this)}
       />
