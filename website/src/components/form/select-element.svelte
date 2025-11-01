@@ -94,6 +94,8 @@
         {formatOption(selectedOption)}
       </span>
     {/if}
-    <DownLineIcon />
+    <section>
+      <DownLineIcon class="ml-2" />
+    </section>
   </section>
 </section>
