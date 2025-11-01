@@ -10,6 +10,8 @@
   import "tippy.js/themes/material.css";
   import { renderMarkdown } from "../../../helpers/markdown.js";
 
+  // TODO(vxern): Get some of this stuff dynamically.
+
   const sources = Object.fromEntries(
     Object.entries(sources_)
       .sort(
@@ -46,6 +48,7 @@
         .filter((e) => e)
     ),
   ];
+  const categories = ["Opole"];
 
   // TODO(vxern): Pick the example at random from the database.
   // TODO(vxern): Extract the defaults into the constants.
@@ -133,10 +136,12 @@
         />
       </section>
       <section class="flex gap-x-4">
-        <Form.TextElement
+        <Form.SelectElement
           name="categories"
           label={m["routes.editor.new.form.categories"]()}
           placeholder={m["routes.editor.new.form.categories_placeholder"]()}
+          options={() => categories}
+          component={Form.SimpleSelectOption}
         />
       </section>
       <section class="flex flex-col gap-y-1">
