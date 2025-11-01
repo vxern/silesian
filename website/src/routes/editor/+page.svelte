@@ -3,6 +3,7 @@
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
+  import Button from "../../components/interactions/button.svelte";
   import constants from "$lib/constants/core";
 </script>
 
@@ -29,11 +30,8 @@
   </Page.Header>
   <Page.Divider />
   <section>
-    <button
-      class="cursor-pointer text-green-500"
-      onclick={() => goto("/editor/new")}
-    >
-      {m["routes.editor.new.title"]()}
-    </button>
+    <Button colour="green" onclick={() => goto("/editor/entries/new")}>
+      {m["routes.editor.entries.new.title"]()}
+    </Button>
   </section>
 </Page.Root>

@@ -18,6 +18,7 @@
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
   import Loading from "../../components/meta/loading.svelte";
+  import Button from "../../components/interactions/button.svelte";
   import calendar from "dayjs/plugin/calendar";
   import duration from "dayjs/plugin/duration";
   import relativeTime from "dayjs/plugin/relativeTime";
@@ -182,13 +183,9 @@
       </tbody>
     </table>
     <section>
-      <button
-        class="cursor-pointer flex items-center gap-x-1 outline-1 outline-blue-500 bg-blue-700 hover:bg-blue-600 text-blue-200 hover:text-blue-100 rounded-lg text-md font-bold p-2"
-        onclick={signOut}
-      >
-        <ExitLineIcon />
+      <Button icon={ExitLineIcon} onclick={signOut}>
         {m["routes.account.logout"]()}
-      </button>
+      </Button>
     </section>
   </Page.Root>
 {:else}
