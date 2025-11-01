@@ -16,7 +16,7 @@ export default Object.freeze({
     },
   },
   "kucza/słownik": {
-    name: "Naukowy Wielki Słownik Śląsko-polski",
+    name: "Naukowy Wielki Słownik Śląsko-Polski",
     link: "http://www.wielki-slownik-slasko-polski.102.pl/",
     authors: ["Eugeniusz Kucza"],
     orthography: "polish",

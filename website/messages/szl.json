@@ -9,16 +9,21 @@
     "en-GB": "angelski"
   },
   "orthographies": {
-    "ślabikorz": "Ślabikŏrz",
+    "ślabikŏrz": "Ślabikŏrz",
     "steuer": "Steuer",
-    "steuer/saf": "Steuer (Ślōnski alfabet fōnetyczny)",
-    "steuer/wencel": "Steuer (Wencel)",
+    "phonetic": "Ślōnski alfabet fōnetyczny",
+    "wencel": "Wencel",
     "kosmała": "Kosmała",
     "wiora": "Wiora",
     "polish": "Polskiy przibliżyniy",
     "czech": "Czeskiy przibliżyniy",
     "german": "Niymieckiy przibliżyniy",
     "adhoc": "Ad-hoc, perhaps a result of mixing orthographies; do not use for learning to write"
+  },
+  "licences": {
+    "proprietary": "zastrzeżōnŏ",
+    "granted": "udzielōno pozwolyniŏ",
+    "public": "publicznŏ włŏsność"
   },
   "components": {
     "search_bar": {
@@ -184,11 +189,17 @@
           "lemma": "Hasło",
           "lemma_placeholder": "Jakigo słowa przidŏwōmy?",
           "source": "Zdrzōdło",
-          "source_placeholder": "Skōnd bierymy to słowo?",
-          "categories": "Kategoryje",
-          "categories_placeholder": "Ku jakim kategoryjōm przidŏwōmy tygo słowa?",
+          "source_placeholder": "Skōnd je bierymy?",
           "licence": "Licyncyjŏ",
-          "licence_placeholder": "Pod jakōm licyncyjōm przidŏwōmy tygo słowa?",
+          "licence_placeholder": "Pod jakōm licyncyjōm je dostympne?",
+          "source_language": "Zdrzōdłowŏ gŏdka",
+          "source_language_placeholder": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
+          "target_language": "Przełożōnŏ gŏdka",
+          "target_language_placeholder": "We jakij gŏdce je napisane cylowe słowo?",
+          "orthography": "Szrajbōnek",
+          "orthography_placeholder": "We jakim szrajbōnku ôstało podane słowo?",
+          "categories": "Kategoryje",
+          "categories_placeholder": "Do jakich kategoryjōw nŏleży?",
           "contents": "Inhalt ze podglōndym",
           "contents_placeholder": "Jakŏ je definicyjŏ ôd tygo słowa?",
           "preview_placeholder": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
@@ -227,10 +238,7 @@
           "community": "Społeczność"
         },
         "licence": {
-          "licence": "Licyncyjŏ",
-          "proprietary": "zastrzeżōnŏ",
-          "granted": "udzielōno pozwolyniŏ",
-          "public": "publicznŏ włŏsność"
+          "licence": "Licyncyjŏ"
         },
         "access": {
           "access": "Dostymp",
@@ -240,7 +248,7 @@
         },
         "progress": {
           "progress": "Postymp",
-          "numbers": "{imported}/{total}",
+          "numbers": "{imported} ze {total}",
           "percentage": "{percentage}%"
         }
       }

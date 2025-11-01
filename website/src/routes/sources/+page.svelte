@@ -3,7 +3,6 @@
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import SourceTable from "../../components/sources/source-table.svelte";
-  import sources from "$lib/constants/sources";
   import constants from "$lib/constants/core";
 </script>
 
@@ -19,12 +18,12 @@
 
 <NavigationSection />
 
-<Page.Root>
+<Page.Root padding="py-24 px-[15%]">
   <Page.Header>
     <Page.Title title={m["routes.sources.title"]()} />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    <SourceTable sources={Object.values(sources)} />
+    <SourceTable />
   </Page.Contents>
 </Page.Root>
