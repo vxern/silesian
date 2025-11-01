@@ -203,7 +203,8 @@
           "contents": "Inhalt ze podglōndym",
           "contents_placeholder": "Jakŏ je definicyjŏ ôd tygo słowa?",
           "preview_placeholder": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-          "submit": "Przidej"
+          "add": "Przidej",
+          "save_as_draft": "Zachowej za cechōnek"
         }
       }
     },

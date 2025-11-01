@@ -4,6 +4,7 @@
   import Form from "../../../components/form/index.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import AddLineIcon from "~icons/mingcute/add-line";
+  import Save2LineIcon from "~icons/mingcute/save-2-line";
   import constants from "$lib/constants/core";
   import sources_ from "$lib/constants/sources";
   import { compareName, compareAuthors } from "../../../helpers/sources.js";
@@ -80,7 +81,7 @@
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    <form method="POST" action="?/create" class="flex flex-col gap-y-6">
+    <form method="POST" class="flex flex-col gap-y-6">
       <section class="flex gap-x-4">
         <Form.TextElement
           name="word"
@@ -178,10 +179,19 @@
       <section class="flex gap-x-4 items-start">
         <button
           type="submit"
+          action="?/create"
           class="cursor-pointer flex items-center gap-x-1 outline-1 outline-green-500 bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-100 rounded-lg text-lg font-bold p-2"
         >
           <AddLineIcon />
-          {m["routes.editor.new.form.submit"]()}
+          {m["routes.editor.new.form.add"]()}
+        </button>
+        <button
+          type="submit"
+          action="?/save-as-draft"
+          class="cursor-pointer flex items-center gap-x-1 outline-1 outline-zinc-500 bg-zinc-700 hover:bg-zinc-600 text-zinc-300 hover:text-zinc-100 rounded-lg text-lg font-bold p-2"
+        >
+          <Save2LineIcon />
+          {m["routes.editor.new.form.save_as_draft"]()}
         </button>
       </section>
     </form>
