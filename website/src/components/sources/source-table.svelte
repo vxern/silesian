@@ -1,5 +1,13 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import {
+    compareLicence,
+    compareAccess,
+    compareProgress,
+    compareName,
+    compareAuthors,
+    completion,
+  } from "../../helpers/sources.js";
   import sources_ from "$lib/constants/sources";
 
   const sources = Object.values(sources_)
@@ -12,14 +20,6 @@
         compareAuthors(a.authors, b.authors)
     )
     .reverse();
-
-  function completion(progress) {
-    if (progress.total === 0) {
-      return 1;
-    }
-
-    return progress.imported / progress.total;
-  }
 </script>
 
 <table class="border-separate border-spacing-1 text-left">
@@ -74,15 +74,15 @@
             {m["meta.unknown"]()}
           {:else if source.access === "closed"}
             <span class="text-red-500">
-              {m["routes.sources.table.access.closed"]()}
+              {m["accesses.closed"]()}
             </span>
           {:else if source.access === "limited"}
             <span class="text-yellow-500">
-              {m["routes.sources.table.access.limited"]()}
+              {m["accesses.limited"]()}
             </span>
           {:else if source.access === "open"}
             <span class="text-green-500">
-              {m["routes.sources.table.access.open"]()}
+              {m["accesses.open"]()}
             </span>
           {/if}
         </td>

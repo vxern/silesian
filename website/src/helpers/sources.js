@@ -110,6 +110,13 @@ function compareAuthors(a, b) {
   return a.length > b.length ? 1 : -1;
 }
 
+function completion(progress) {
+  if (progress.total === 0) {
+    return 1;
+  }
+
+  return progress.imported / progress.total;
+}
 
 function getSource(identifier) {
   return sources[identifier];
@@ -123,4 +130,4 @@ function getExampleContents(identifier) {
   return exampleContents[identifier];
 }
 
-export { compareLicence, compareAccess, compareProgress, compareName, compareAuthors, getSource, isSource, getExampleContents }
+export { compareLicence, compareAccess, compareProgress, compareName, compareAuthors, completion, getSource, isSource, getExampleContents }

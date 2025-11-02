@@ -18,7 +18,7 @@
 
 <NavigationSection />
 
-<Page.Root padding="py-24 px-[15%]">
+<Page.Root view="wide">
   <Page.Header>
     <Page.Title title={m["routes.sources.title"]()} />
   </Page.Header>
