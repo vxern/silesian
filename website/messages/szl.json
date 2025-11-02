@@ -187,29 +187,55 @@
     "editor": {
       "title": "Edytōr",
       "description": "",
-      "new": {
-        "title": "Nowe hasło",
-        "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
-        "form": {
-          "lemma": "Hasło",
-          "lemma_placeholder": "Jakigo słowa przidŏwōmy?",
-          "source": "Zdrzōdło",
-          "source_placeholder": "Skōnd je bierymy?",
-          "licence": "Licyncyjŏ",
-          "licence_placeholder": "Pod jakōm licyncyjōm je dostympne?",
-          "source_language": "Zdrzōdłowŏ gŏdka",
-          "source_language_placeholder": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
-          "target_language": "Przełożōnŏ gŏdka",
-          "target_language_placeholder": "We jakij gŏdce je napisane cylowe słowo?",
-          "orthography": "Szrajbōnek",
-          "orthography_placeholder": "We jakim szrajbōnku ôstało podane słowo?",
-          "categories": "Kategoryje",
-          "categories_placeholder": "Do jakich kategoryjōw nŏleży?",
-          "contents": "Inhalt ze podglōndym",
-          "contents_placeholder": "Jakŏ je definicyjŏ ôd tygo słowa?",
-          "preview_placeholder": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-          "add": "Przidej",
-          "save_as_draft": "Zachowej za cechōnek"
+      "sources": {
+        "new": {
+          "title": "Nowe zdrzōdło",
+          "description": "Używŏcz dodŏwŏ nowe zdrzōdło ku dykcjōnŏrzu.",
+          "form": {
+            "name": "Miano",
+            "name_description": "Jako sie mianuje zdrzōdło?",
+            "link": "Łōncze",
+            "link_description": "Jakiy je łōncze ku zdrzōdle?",
+            "isbn": "ISBN",
+            "isbn_description": "Kod ksiōnżki",
+            "authors": "Autorzi",
+            "authors_description": "Gdo tyn werk stworzōł?",
+            "licence_id": "Licyncyjŏ",
+            "licence_id_description": "Pod jakōm licyncyjōm je dostympne zdrzōdło?",
+            "access": "Dostymp",
+            "access_description": "Jaki je dostymp ku zdrzōdle?",
+            "redistributable": "Możno szyrzić?",
+            "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
+            "total_count": "Liczba haseł (we prziblyżyniu)",
+            "total_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
+          }
+        }
+      },
+      "entries": {
+        "new": {
+          "title": "Nowe hasło",
+          "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
+          "form": {
+            "lemma": "Hasło",
+            "lemma_description": "Jakigo słowa przidŏwōmy?",
+            "source": "Zdrzōdło",
+            "source_description": "Skōnd je bierymy?",
+            "licence": "Licyncyjŏ",
+            "licence_description": "Pod jakōm licyncyjōm je dostympne?",
+            "source_language": "Zdrzōdłowŏ gŏdka",
+            "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
+            "target_language": "Przełożōnŏ gŏdka",
+            "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
+            "orthography": "Szrajbōnek",
+            "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
+            "categories": "Kategoryje",
+            "categories_description": "Do jakich kategoryjōw nŏleży?",
+            "contents": "Inhalt ze podglōndym",
+            "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
+            "preview_message": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
+            "add": "Przidej",
+            "save_as_draft": "Zachowej za cechōnek"
+          }
         }
       }
     },

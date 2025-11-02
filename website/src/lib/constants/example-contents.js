@@ -55,7 +55,7 @@ jak bardzo
 
 # jako?
 jak?`,
-  "fazi/słownik": `# jako
+  "szymik/słownik": `# jako
 
   jak
 

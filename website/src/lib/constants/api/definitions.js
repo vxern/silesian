@@ -64,7 +64,7 @@ jak bardzo`,
   updatedAt: Date.now(),
 }, {
   lemma: "jako",
-  source: "fazi/słownik",
+  source: "szymik/słownik",
   contents: `# jako
 
 jak

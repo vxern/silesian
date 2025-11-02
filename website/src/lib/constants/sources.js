@@ -93,7 +93,6 @@ export default Object.freeze({
     access: "open",
     redistributable: false,
   },
-  // TODO(vxern): What's this guy's real name?
   "szymik/słownik": {
     name: "Słownik śl𝑜nski",
     link: "https://www.slownikslaski.pl",

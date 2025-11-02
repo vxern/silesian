@@ -145,7 +145,8 @@
     "word": {
       "title": "Word",
       "description": "Meanings, distribution and other information about the given word.",
-      "source": "Source:"
+      "source": "Source:",
+      "authors": "Authors:"
     }
   },
   "meta": {
