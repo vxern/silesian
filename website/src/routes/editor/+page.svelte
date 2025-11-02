@@ -29,9 +29,12 @@
     <Page.Title title={m["routes.editor.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <section>
+  <section class="flex gap-x-4">
     <Button colour="green" onclick={() => goto("/editor/entries/new")}>
       {m["routes.editor.entries.new.title"]()}
+    </Button>
+    <Button colour="green" onclick={() => goto("/editor/sources/new")}>
+      {m["routes.editor.sources.new.title"]()}
     </Button>
   </section>
 </Page.Root>

@@ -95,10 +95,10 @@
           component={Form.SourceSelectOption}
         />
         <Form.SelectElement
-          name="licence"
-          label={m["routes.editor.entries.new.form.licence"]()}
+          name="licence_id"
+          label={m["routes.editor.entries.new.form.licence_id"]()}
           description={m[
-            "routes.editor.entries.new.form.licence_description"
+            "routes.editor.entries.new.form.licence_id_description"
           ]()}
           formatOption={(licence) => m[`licences.${licence}`]?.() ?? licence}
           options={() => licences}
@@ -159,7 +159,7 @@
           previewMessage={m["routes.editor.entries.new.form.preview_message"]()}
         />
       </section>
-      <section class="flex gap-x-4 items-start">
+      <section class="flex gap-x-4">
         <Button type="submit" icon={AddLineIcon} colour="green">
           {m["routes.editor.entries.new.form.add"]()}
         </Button>

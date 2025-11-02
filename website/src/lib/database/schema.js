@@ -35,11 +35,12 @@ export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
   link: text().notNull(),
+  isbn: bigint({ mode: "number" }),
   authors: text().array().notNull(),
   licence_id: bigint({ mode: "number" }).references(() => licences.id).notNull(),
   access: accessesEnum().notNull(),
   redistributable: boolean().notNull(),
-  imported_count: bigint({ mode: "number" }).notNull(),
+  imported_count: bigint({ mode: "number" }).default(0).notNull(),
   total_count: bigint({ mode: "number" }).notNull(),
 });
 
