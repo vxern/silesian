@@ -1,6 +1,7 @@
 <script>
   const { children, view = "normal" } = $props();
 
+  // svelte-ignore non_reactive_update
   let padding;
   switch (view) {
     case "normal":

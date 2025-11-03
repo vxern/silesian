@@ -9,6 +9,7 @@
     completion,
   } from "../../helpers/sources.js";
   import sources_ from "$lib/constants/sources";
+  import Table from "../layout/table/index.js";
 
   const sources = Object.values(sources_)
     .sort(
@@ -22,30 +23,30 @@
     .reverse();
 </script>
 
-<table class="border-separate border-spacing-1 text-left">
-  <thead class="text-blue-500">
-    <tr>
-      <th scope="col" class="border-b-1 border-b-zinc-700">
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.HeaderCell>
         {m["routes.sources.table.work"]()}
-      </th>
-      <th scope="col" class="border-b-1 border-b-zinc-700">
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["routes.sources.table.authors.authors"]()}
-      </th>
-      <th scope="col" class="border-b-1 border-b-zinc-700">
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["routes.sources.table.access.access"]()}
-      </th>
-      <th scope="col" class="border-b-1 border-b-zinc-700">
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["routes.sources.table.licence.licence"]()}
-      </th>
-      <th scope="col" class="border-b-1 border-b-zinc-700">
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["routes.sources.table.progress.progress"]()}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
+      </Table.HeaderCell>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
     {#each sources as source}
-      <tr>
-        <th scope="row" class="w-[35%] border-b-1 border-b-zinc-800">
+      <Table.Row>
+        <Table.HeaderCell scope="row" class="w-[35%]">
           {#if !source.name}
             {m["meta.unknown"]()}
           {:else if source.link}
@@ -55,8 +56,8 @@
           {:else}
             {source.name}
           {/if}
-        </th>
-        <td class="w-[30%] border-b-1 border-b-zinc-800">
+        </Table.HeaderCell>
+        <Table.Cell class="w-[30%]">
           {#if !source.authors}
             {m["meta.unknown"]()}
           {:else if source.authors === "community"}
@@ -68,8 +69,8 @@
           {:else}
             {m["meta.unknown"]()}
           {/if}
-        </td>
-        <td class="w-[10%] border-b-1 border-b-zinc-800">
+        </Table.Cell>
+        <Table.Cell class="w-[10%]">
           {#if !source.access}
             {m["meta.unknown"]()}
           {:else if source.access === "closed"}
@@ -85,8 +86,8 @@
               {m["accesses.open"]()}
             </span>
           {/if}
-        </td>
-        <td class="w-[15%] border-b-1 border-b-zinc-800">
+        </Table.Cell>
+        <Table.Cell class="w-[15%]">
           {#if !source.licence}
             {m["meta.unknown"]()}
           {:else if source.licence === "proprietary"}
@@ -110,8 +111,8 @@
               {source.licence}
             </span>
           {/if}
-        </td>
-        <td class="w-[10%] border-b-1 border-b-zinc-800">
+        </Table.Cell>
+        <Table.Cell class="w-[10%]">
           {#if !source.redistributable}
             {m["meta.none"]()}
           {:else if !source.progress}
@@ -145,8 +146,8 @@
               </span>
             {/if}
           {/if}
-        </td>
-      </tr>
+        </Table.Cell>
+      </Table.Row>
     {/each}
-  </tbody>
-</table>
+  </Table.Body>
+</Table.Root>
