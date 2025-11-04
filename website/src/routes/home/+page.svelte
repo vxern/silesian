@@ -52,7 +52,7 @@
     <SearchBar />
     <article>
       {#if statistics}
-        <h6 class="text-sm italic flex flex-col gap-y-1">
+        <aside class="text-sm italic flex flex-col gap-y-1">
           <span class="text-zinc-600">
             {m["routes.home.help.imported.total"]({
               count: statistics.imported.total,
@@ -72,7 +72,7 @@
               {m["routes.home.help.find_out_how"]()}
             </button>
           </span>
-        </h6>
+        </aside>
       {:else}
         <Loading />
       {/if}
