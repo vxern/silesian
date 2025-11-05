@@ -1,15 +1,20 @@
 <script>
+  import { isEqual } from "es-toolkit/compat";
   import DownLineIcon from "~icons/mingcute/down-line";
   import MenuFillIcon from "~icons/mingcute/menu-fill";
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
+  import { m } from "$lib/paraglide/messages";
   import Label from "./label.svelte";
 
   const {
     name,
     label,
     description,
+    icon: Icon = MenuFillIcon,
     options: getOptions,
+    multiple = false,
+    custom = false,
     formatOption = (option) => option,
     filterOptions = (options, search) => {
       const searchLowerCase = search.toLowerCase();
@@ -39,10 +44,18 @@
   // TODO(vxern): What to do about the empty section element being left after the dropdown element moves into tippy?
 
   let searchValue = $state();
-  let options = getOptions();
+  let options = getOptions?.();
   let currentOptions = $state(options);
-  function search(event) {
-    currentOptions = filterOptions(options, searchValue);
+  function searchOptions(event) {
+    const newOptions = filterOptions(options, searchValue);
+
+    if (isEqual(currentOptions, newOptions)) {
+      return;
+    }
+
+    dropdownTooltip.hide();
+    currentOptions = newOptions;
+    dropdownTooltip.show();
   }
 
   let selectedValue = $state();
@@ -53,6 +66,7 @@
     dropdownTooltip?.hide();
   }
 
+  let search;
   let searchEnabled = $state(false);
   function enableSearch() {
     searchEnabled = true;
@@ -66,14 +80,20 @@
 <section class="hidden">
   <section bind:this={dropdownElement} class="flex flex-col gap-y-2 py-1.5">
     <input {name} type="hidden" bind:value={selectedValue} />
-    {#each currentOptions as option}
-      <Component
-        {option}
-        {formatOption}
-        selected={selectedValue}
-        select={select.bind(this)}
-      ></Component>
-    {/each}
+    {#if currentOptions && currentOptions.length > 0}
+      {#each currentOptions as option}
+        <Component
+          {option}
+          {formatOption}
+          selected={selectedValue}
+          select={select.bind(this)}
+        ></Component>
+      {/each}
+    {:else}
+      <section class="italic text-zinc-500">
+        {m["meta.no_results"]()}
+      </section>
+    {/if}
   </section>
 </section>
 
@@ -82,15 +102,17 @@
   <section
     class="flex-1 flex gap-x-3 items-center bg-zinc-800 outline-1 outline-zinc-600 p-3 rounded-lg w-full cursor-pointer"
     {@attach trigger}
+    onclick={() => search.focus()}
   >
-    <MenuFillIcon class="text-zinc-600" />
+    <Icon class="text-zinc-600" />
     <section class="flex-1 flex">
       {#if searchEnabled || !selectedValue}
         <input
           type="text"
-          class="w-full invisible-input"
+          class="w-full invisible-input cursor-pointer"
+          bind:this={search}
           bind:value={searchValue}
-          oninput={search.bind(this)}
+          oninput={searchOptions.bind(this)}
         />
       {:else if selectedValue}
         <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
@@ -98,6 +120,6 @@
         </span>
       {/if}
     </section>
-    <DownLineIcon class="ml-2" />
+    <DownLineIcon class="ml-2 text-zinc-600" />
   </section>
 </section>

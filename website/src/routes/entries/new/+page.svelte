@@ -10,7 +10,6 @@
   import { compareName, compareAuthors } from "../../../../helpers/sources.js";
   import Button from "../../../../components/interactions/button.svelte";
   import "tippy.js/themes/material.css";
-  import Form from "../../../../components/form/index.js";
 
   // TODO(vxern): Get some of this stuff dynamically.
 

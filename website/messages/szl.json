@@ -9,16 +9,16 @@
     "en-GB": "angelski"
   },
   "orthographies": {
-    "ślabikŏrz": "Ślabikŏrz",
+    "slabikorz": "Ślabikŏrz",
     "steuer": "Steuer",
     "phonetic": "Ślōnski alfabet fōnetyczny",
     "wencel": "Wencel",
-    "kosmała": "Kosmała",
+    "kosmala": "Kosmała",
     "wiora": "Wiora",
     "polish": "Polskiy przibliżyniy",
     "czech": "Czeskiy przibliżyniy",
     "german": "Niymieckiy przibliżyniy",
-    "adhoc": "Ad-hoc, perhaps a result of mixing orthographies; do not use for learning to write"
+    "other": "Inkszy szrajbōnek"
   },
   "licences": {
     "proprietary": "zastrzeżōnŏ",
@@ -166,7 +166,7 @@
       "attributes": {
         "base": {
           "avatar": "Bild",
-          "username": "Nazwa używŏcza",
+          "username": "Miano używŏcza",
           "email": "Adresa e-mail",
           "created_at": "Dołōnczōno"
         },
@@ -184,58 +184,30 @@
       "title": "Karta",
       "description": "Rozkłŏd ślōnskich dyjalektōw po Gōrnym Ślōnsku."
     },
-    "editor": {
-      "title": "Edytōr",
-      "description": "",
-      "sources": {
-        "new": {
-          "title": "Nowe zdrzōdło",
-          "description": "Używŏcz dodŏwŏ nowe zdrzōdło ku dykcjōnŏrzu.",
-          "form": {
-            "name": "Miano",
-            "name_description": "Jako sie mianuje zdrzōdło?",
-            "link": "Łōncze",
-            "link_description": "Jakiy je łōncze ku zdrzōdle?",
-            "isbn": "ISBN",
-            "isbn_description": "Kod ksiōnżki",
-            "authors": "Autorzi",
-            "authors_description": "Gdo tyn werk stworzōł?",
-            "licence_id": "Licyncyjŏ",
-            "licence_id_description": "Pod jakōm licyncyjōm je dostympne zdrzōdło?",
-            "access": "Dostymp",
-            "access_description": "Jaki je dostymp ku zdrzōdle?",
-            "redistributable": "Możno szyrzić?",
-            "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
-            "total_count": "Liczba haseł (we prziblyżyniu)",
-            "total_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
-          }
-        }
-      },
-      "entries": {
-        "new": {
-          "title": "Nowe hasło",
-          "description": "Używŏcz dodŏwŏ nowe hasło ku dykcjōnŏrzu.",
-          "form": {
-            "lemma": "Hasło",
-            "lemma_description": "Jakigo słowa przidŏwōmy?",
-            "source": "Zdrzōdło",
-            "source_description": "Skōnd je bierymy?",
-            "licence_id": "Licyncyjŏ",
-            "licence_id_description": "Pod jakōm licyncyjōm je dostympne?",
-            "source_language": "Zdrzōdłowŏ gŏdka",
-            "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
-            "target_language": "Przełożōnŏ gŏdka",
-            "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
-            "orthography": "Szrajbōnek",
-            "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
-            "categories": "Kategoryje",
-            "categories_description": "Do jakich kategoryjōw nŏleży?",
-            "contents": "Inhalt ze podglōndym",
-            "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
-            "preview_message": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-            "add": "Przidej",
-            "save_as_draft": "Zachowej za cechōnek"
-          }
+    "entries": {
+      "new": {
+        "title": "Nowe hasło",
+        "description": "Dodŏwanie nowygo hasła ku dykcjōnŏrzu.",
+        "form": {
+          "lemma": "Hasło",
+          "lemma_description": "Jakigo słowa przidŏwōmy?",
+          "source": "Zdrzōdło",
+          "source_description": "Skōnd je bierymy?",
+          "licence_id": "Licyncyjŏ",
+          "licence_id_description": "Pod jakōm licyncyjōm je dostympne?",
+          "source_language": "Zdrzōdłowŏ gŏdka",
+          "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
+          "target_language": "Przełożōnŏ gŏdka",
+          "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
+          "orthography": "Szrajbōnek",
+          "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
+          "categories": "Kategoryje",
+          "categories_description": "Do jakich kategoryjōw nŏleży?",
+          "contents": "Inhalt ze podglōndym",
+          "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
+          "preview_message": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
+          "add": "Przidej",
+          "save_as_draft": "Zachowej za cechōnek"
         }
       }
     },
@@ -263,6 +235,7 @@
     "sources": {
       "title": "Zdrzōdła",
       "description": "Zdrzōdła, kerych używōmy a kere my zaimportowali abo dalszij chcymy zaimportować.",
+      "add": "Przidej nowe zdrzōdło",
       "table": {
         "work": "Werk",
         "authors": {
@@ -280,6 +253,40 @@
           "numbers": "{imported} ze {total}",
           "percentage": "{percentage}%"
         }
+      },
+      "new": {
+        "title": "Nowe zdrzōdło",
+        "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu.",
+        "add": "Przidej"
+      },
+      "[source_id]": {
+        "edit": {
+          "title": "Edytōr",
+          "description": "Edytowanie zdrzōdła, co już istnieje.",
+          "edit": "Edytuj"
+        }
+      },
+      "form": {
+        "name": "Miano",
+        "name_description": "Jako sie mianuje to zdrzōdło?",
+        "link": "Łōncze",
+        "link_description": "Jakiy je łōncze ku tymu zdrzōdle?",
+        "authors": "Autorzi",
+        "authors_description": "Gdo tyn werk stworzōł?",
+        "orthography": "Szrajbōnek",
+        "orthography_description": "We jakim szrajbōnku sōm podane hasła?",
+        "source_language": "Zdrzōdłowŏ gŏdka",
+        "source_language_description": "We jakij gŏdce sōm podane ślōnskiy hasła?",
+        "target_language": "Cylowŏ gŏdka",
+        "target_language_description": "We jakij gŏdce sōm podane przełożōne hasła?",
+        "licence": "Licyncyjŏ",
+        "licence_description": "Pod jakōm licyncyjōm je dostympne zdrzōdło?",
+        "access": "Dostymp",
+        "access_description": "Jaki je dostymp ku tymu zdrzōdle?",
+        "redistributable": "Możno szyrzić?",
+        "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
+        "total_count": "Liczba haseł (we prziblyżyniu)",
+        "total_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
       }
     },
     "word": {
@@ -293,6 +300,9 @@
     "unknown": "?",
     "none": "—",
     "etc": "…",
+    "yes": "Ja",
+    "no": "Niy",
+    "no_results": "bez trefiyń",
     "end": "KŌNIEC TREFIYŃ"
   }
 }
