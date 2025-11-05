@@ -6,7 +6,14 @@
 
   let input;
 
-  const { name, label, description, type = "text", ...props } = $props();
+  const {
+    name,
+    label,
+    description,
+    type = "text",
+    multiple = false,
+    ...props
+  } = $props();
 
   let Icon;
   switch (type) {
@@ -20,6 +27,29 @@
       Icon = Link2FillIcon;
       break;
   }
+
+  function handleKeyPress(event) {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (multiple) {
+      addItem();
+    }
+  }
+
+  let items = $state([]);
+  function addItem() {
+    const trimmedValue = input.value.trim();
+    if (trimmedValue.length === 0) {
+      return;
+    }
+
+    input.value = "";
+    items.push(trimmedValue);
+  }
 </script>
 
 <section class="flex-1 flex flex-col gap-y-1 items-start">
@@ -29,6 +59,13 @@
     onclick={() => input.focus()}
   >
     <Icon class="text-zinc-600" />
-    <input {name} {type} {...props} class="invisible-input" bind:this={input} />
+    <input
+      {name}
+      {type}
+      {...props}
+      class="invisible-input"
+      bind:this={input}
+      onkeydown={handleKeyPress}
+    />
   </section>
 </section>

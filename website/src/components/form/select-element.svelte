@@ -75,6 +75,15 @@
   function disableSearch() {
     searchEnabled = false;
   }
+
+  function handleKeyPress(event) {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    event.preventDefault();
+    addItem();
+  }
 </script>
 
 <section class="hidden">
@@ -113,6 +122,7 @@
           bind:this={search}
           bind:value={searchValue}
           oninput={searchOptions.bind(this)}
+          onkeydown={handleKeyPress}
         />
       {:else if selectedValue}
         <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">

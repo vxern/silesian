@@ -36,24 +36,25 @@
     description={m["routes.sources.form.link_description"]()}
     type="url"
   />
-  <Form.SelectElement
+  <Form.TextElement
     name="authors"
     label={m["routes.sources.form.authors"]()}
     description={m["routes.sources.form.authors_description"]()}
+    multiple={true}
   />
 </section>
 <section class="flex gap-x-4">
-  <Form.TextElement
+  <Form.SelectElement
     name="orthography"
     label={m["routes.sources.form.orthography"]()}
     description={m["routes.sources.form.orthography_description"]()}
   />
-  <Form.TextElement
+  <Form.SelectElement
     name="source_language"
     label={m["routes.sources.form.source_language"]()}
     description={m["routes.sources.form.source_language_description"]()}
   />
-  <Form.TextElement
+  <Form.SelectElement
     name="target_language"
     label={m["routes.sources.form.target_language"]()}
     description={m["routes.sources.form.target_language_description"]()}
