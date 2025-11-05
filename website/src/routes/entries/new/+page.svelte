@@ -10,7 +10,7 @@
   import { compareName, compareAuthors } from "../../../../helpers/sources.js";
   import Button from "../../../../components/interactions/button.svelte";
   import "tippy.js/themes/material.css";
-  import EditorElement from "../../../../components/form/editor-element.svelte";
+  import Form from "../../../../components/form/index.js";
 
   // TODO(vxern): Get some of this stuff dynamically.
 
@@ -150,7 +150,7 @@
         />
       </section>
       <section class="flex gap-x-4">
-        <EditorElement
+        <Form.MarkdownElement
           name="contents"
           label={m["routes.editor.entries.new.form.contents"]()}
           description={m[

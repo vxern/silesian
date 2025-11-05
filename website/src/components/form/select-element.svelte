@@ -1,5 +1,6 @@
 <script>
   import DownLineIcon from "~icons/mingcute/down-line";
+  import MenuFillIcon from "~icons/mingcute/menu-fill";
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
   import Label from "./label.svelte";
@@ -79,23 +80,24 @@
 <section class="flex-1 flex flex-col gap-y-1 items-start">
   <Label {name} {label} {description} />
   <section
-    class="flex-1 flex justify-between items-center bg-zinc-800 outline-1 outline-zinc-600 p-2 rounded-lg w-full cursor-pointer"
+    class="flex-1 flex gap-x-3 items-center bg-zinc-800 outline-1 outline-zinc-600 p-3 rounded-lg w-full cursor-pointer"
     {@attach trigger}
   >
-    {#if searchEnabled || !selectedValue}
-      <input
-        type="text"
-        class="w-full p-1 border-none outline-none ring-0 focus:outline-none focus:border-none focus:ring-0 shadow-none box-shadow-none"
-        bind:value={searchValue}
-        oninput={search.bind(this)}
-      />
-    {:else if selectedValue}
-      <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
-        {formatOption(selectedOption)}
-      </span>
-    {/if}
-    <section>
-      <DownLineIcon class="ml-2" />
+    <MenuFillIcon class="text-zinc-600" />
+    <section class="flex-1 flex">
+      {#if searchEnabled || !selectedValue}
+        <input
+          type="text"
+          class="w-full invisible-input"
+          bind:value={searchValue}
+          oninput={search.bind(this)}
+        />
+      {:else if selectedValue}
+        <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
+          {formatOption(selectedOption)}
+        </span>
+      {/if}
     </section>
+    <DownLineIcon class="ml-2" />
   </section>
 </section>
