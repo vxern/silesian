@@ -10,34 +10,40 @@ const defaultColumns = {
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
 };
 
-export const orthographies = pgTable("orthographies", {
-  ...defaultColumns,
-  name: text().notNull(),
-});
+export const licencesEnum = pgEnum("licences", ["proprietary", "granted", "public"]);
 
-export const orthographiesRelations = relations(orthographies, ({ many }) => ({
-  entries: many(entries),
-}));
+export const orthographiesEnum = pgEnum("orthographies", [
+  "slabikorz",
+  "steuer",
+  "phonetic",
+  "wencel",
+  "kosmala",
+  "wiora",
+  "polish",
+  "czech",
+  "german",
+  "other",
+]);
 
-export const licences = pgTable("licences", {
-  ...defaultColumns,
-  name: text().notNull(),
-});
+export const languagesEnum = pgEnum("languages", [
+  "szl",
+  "pl",
+  "cs",
+  "sk",
+  "en",
+]);
 
-export const licencesRelations = relations(licences, ({ many }) => ({
-  sources: many(sources),
-  entries: many(entries),
-}));
-
-export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open", "unknown"]);
+export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);
 
 export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
   link: text().notNull(),
-  isbn: bigint({ mode: "number" }),
   authors: text().array().notNull(),
-  licence_id: bigint({ mode: "number" }).references(() => licences.id).notNull(),
+  licence: licencesEnum().notNull(),
+  orthography: orthographiesEnum().notNull(),
+  source_language: languagesEnum().notNull(),
+  target_language: languagesEnum().notNull(),
   access: accessesEnum().notNull(),
   redistributable: boolean().notNull(),
   imported_count: bigint({ mode: "number" }).default(0).notNull(),
@@ -54,10 +60,10 @@ export const entries = pgTable("entries", {
   ...defaultColumns,
   lemma: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
-  licence_id: bigint({ mode: "number" }).references(() => licences.id).notNull(),
-  orthography_id: bigint({ mode: "number" }).references(() => orthographies.id).notNull(),
-  source_language: text().notNull(),
-  target_language: text().notNull(),
+  licence_override: licencesEnum(),
+  orthography_override: orthographiesEnum(),
+  source_language_override: languagesEnum(),
+  target_language_override: languagesEnum(),
   status: publishStatusesEnum().default("draft").notNull(),
 });
 
