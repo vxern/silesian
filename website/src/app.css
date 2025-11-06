@@ -11,6 +11,11 @@
   b {
     @apply font-bold
   }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply invisible
+  }
 }
 
 .invisible-input {
