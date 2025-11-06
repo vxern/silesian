@@ -29,19 +29,23 @@
   }
 
   function handleKeyPress(event) {
-    if (event.key !== "Enter") {
+    if (event.key === "Enter") {
+      event.preventDefault();
+    }
+
+    if (!multiple) {
       return;
     }
 
-    event.preventDefault();
-
-    if (multiple) {
-      addItem();
+    if (event.key === "Enter") {
+      pushItem();
+    } else if (event.key === "Backspace") {
+      popItem();
     }
   }
 
   let items = $state([]);
-  function addItem() {
+  function pushItem() {
     const trimmedValue = input.value.trim();
     if (trimmedValue.length === 0) {
       return;
@@ -49,6 +53,14 @@
 
     input.value = "";
     items.push(trimmedValue);
+  }
+
+  function popItem() {
+    if (items.length === 0 || input.value.length !== 0) {
+      return;
+    }
+
+    items.pop();
   }
 </script>
 
@@ -59,13 +71,31 @@
     onclick={() => input.focus()}
   >
     <Icon class="text-zinc-600" />
-    <input
-      {name}
-      {type}
-      {...props}
-      class="invisible-input"
-      bind:this={input}
-      onkeydown={handleKeyPress}
-    />
+    {#if multiple}
+      <section class="flex gap-x-1">
+        {#each items as item}
+          <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
+            {item}
+          </span>
+        {/each}
+        <input
+          {name}
+          {type}
+          {...props}
+          class="invisible-input"
+          bind:this={input}
+          onkeydown={handleKeyPress}
+        />
+      </section>
+    {:else}
+      <input
+        {name}
+        {type}
+        {...props}
+        class="invisible-input"
+        bind:this={input}
+        onkeydown={handleKeyPress}
+      />
+    {/if}
   </section>
 </section>

@@ -4,21 +4,12 @@
   import sources from "$lib/constants/sources";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
-
-  const licences = [
-    ...new Set(
-      Object.values(sources)
-        .map((source) => source.licence)
-        .filter((e) => e)
-    ),
-  ];
-  const accesses = [
-    ...new Set(
-      Object.values(sources)
-        .map((source) => source.access)
-        .filter((e) => e)
-    ),
-  ];
+  import {
+    licencesEnum,
+    accessesEnum,
+    orthographiesEnum,
+    languagesEnum,
+  } from "$lib/database/schema";
 
   // TODO(vxern): Prefill from the object.
   const { source } = $props();
@@ -48,16 +39,26 @@
     name="orthography"
     label={m["routes.sources.form.orthography"]()}
     description={m["routes.sources.form.orthography_description"]()}
+    formatOption={(orthography) =>
+      m[`orthographies.${orthography}`]() ?? orthography}
+    options={() => orthographiesEnum.enumValues}
+    component={Form.SimpleSelectOption}
   />
   <Form.SelectElement
     name="source_language"
     label={m["routes.sources.form.source_language"]()}
     description={m["routes.sources.form.source_language_description"]()}
+    formatOption={(language) => m[`languages.${language}`]()}
+    options={() => languagesEnum.enumValues}
+    component={Form.SimpleSelectOption}
   />
   <Form.SelectElement
     name="target_language"
     label={m["routes.sources.form.target_language"]()}
     description={m["routes.sources.form.target_language_description"]()}
+    formatOption={(language) => m[`languages.${language}`]()}
+    options={() => languagesEnum.enumValues}
+    component={Form.SimpleSelectOption}
   />
 </section>
 <section class="flex gap-x-4">
@@ -66,7 +67,7 @@
     label={m["routes.sources.form.licence"]()}
     description={m["routes.sources.form.licence_description"]()}
     formatOption={(licence) => m[`licences.${licence}`]?.() ?? licence}
-    options={() => licences}
+    options={() => licencesEnum.enumValues}
     component={Form.SimpleSelectOption}
   />
   <Form.SelectElement
@@ -74,7 +75,7 @@
     label={m["routes.sources.form.access"]()}
     description={m["routes.sources.form.access_description"]()}
     formatOption={(access) => m[`accesses.${access}`]()}
-    options={() => accesses}
+    options={() => accessesEnum.enumValues}
     component={Form.SimpleSelectOption}
   />
   <Form.BooleanElement

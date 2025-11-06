@@ -187,6 +187,13 @@
       "description": "Rozkłŏd ślōnskich dyjalektōw po Gōrnym Ślōnsku."
     },
     "entries": {
+      "[entry_id]": {
+        "edit": {
+          "title": "Edytōr",
+          "description": "Edytowanie hasła, co już istnieje.",
+          "edit": "Edytuj"
+        }
+      },
       "new": {
         "title": "Nowe hasło",
         "description": "Dodŏwanie nowygo hasła ku dykcjōnŏrzu.",
@@ -195,8 +202,8 @@
           "lemma_description": "Jakigo słowa przidŏwōmy?",
           "source": "Zdrzōdło",
           "source_description": "Skōnd je bierymy?",
-          "licence_id": "Licyncyjŏ",
-          "licence_id_description": "Pod jakōm licyncyjōm je dostympne?",
+          "licence": "Licyncyjŏ",
+          "licence_description": "Pod jakōm licyncyjōm je dostympne?",
           "source_language": "Zdrzōdłowŏ gŏdka",
           "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
           "target_language": "Przełożōnŏ gŏdka",

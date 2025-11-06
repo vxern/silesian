@@ -71,9 +71,9 @@
           component={Form.SourceSelectOption}
         />
         <Form.SelectElement
-          name="licence_id"
-          label={m["routes.entries.new.form.licence_id"]()}
-          description={m["routes.entries.new.form.licence_id_description"]()}
+          name="licence"
+          label={m["routes.entries.new.form.licence"]()}
+          description={m["routes.entries.new.form.licence_description"]()}
           formatOption={(licence) => m[`licences.${licence}`]?.() ?? licence}
           options={() => licencesEnum.enumValues}
           component={Form.SimpleSelectOption}
