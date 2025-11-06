@@ -3,7 +3,7 @@
   import Text2FillIcon from "~icons/mingcute/text-2-fill";
   import Link2FillIcon from "~icons/mingcute/link-2-fill";
   import HashtagFillIcon from "~icons/mingcute/hashtag-fill";
-  import AsteriskFillIcon from "~icons/mingcute/asterisk-fill";
+  import AddFillIcon from "~icons/mingcute/add-fill";
 
   let input;
 
@@ -74,8 +74,8 @@
     {#if multiple}
       <section class="relative">
         <Icon class="text-zinc-600" />
-        <AsteriskFillIcon
-          class="absolute text-zinc-600 size-3 top-[-5px] right-[-8px]"
+        <AddFillIcon
+          class="absolute text-zinc-600 size-3 top-[-7px] right-[-7px]"
         />
       </section>
       <input name={`${name}[]`} type="hidden" />

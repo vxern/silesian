@@ -1,18 +1,36 @@
 <script>
   import { m } from "$lib/paraglide/messages";
-  import SelectElement from "./select-element.svelte";
-  import SimpleSelectOption from "./select/select-options/simple-select-option.svelte";
   import Check2FillIcon from "~icons/mingcute/check-2-fill";
+  import Label from "./label.svelte";
 
   const { name, label, description } = $props();
+
+  let value = $state("0");
+  function toggleCheckbox() {
+    if (value == "0") {
+      value = "1";
+    } else {
+      value = "0";
+    }
+  }
 </script>
 
-<SelectElement
-  {name}
-  {label}
-  {description}
-  icon={Check2FillIcon}
-  formatOption={(boolean) => m[`meta.${boolean}`]()}
-  options={() => ["yes", "no"]}
-  component={SimpleSelectOption}
-/>
+<section class="flex-1 flex flex-col gap-y-1 items-start">
+  <Label {name} {label} {description} />
+  <section
+    class="flex-1 flex items-center gap-x-3 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 p-3 w-full rounded-lg cursor-pointer"
+    onclick={() => toggleCheckbox()}
+  >
+    <Check2FillIcon class="text-zinc-600" />
+    <input type="hidden" bind:value />
+    {#if value == "1"}
+      <span class="text-green-400">
+        {m["meta.yes"]()}
+      </span>
+    {:else}
+      <span class="text-red-400">
+        {m["meta.no"]()}
+      </span>
+    {/if}
+  </section>
+</section>
