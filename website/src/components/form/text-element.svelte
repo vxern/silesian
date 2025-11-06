@@ -3,6 +3,7 @@
   import Text2FillIcon from "~icons/mingcute/text-2-fill";
   import Link2FillIcon from "~icons/mingcute/link-2-fill";
   import HashtagFillIcon from "~icons/mingcute/hashtag-fill";
+  import AsteriskFillIcon from "~icons/mingcute/asterisk-fill";
 
   let input;
 
@@ -70,24 +71,32 @@
     class="flex-1 flex items-center gap-x-3 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 p-3 w-full rounded-lg cursor-text"
     onclick={() => input.focus()}
   >
-    <Icon class="text-zinc-600" />
     {#if multiple}
-      <section class="flex gap-x-1">
+      <section class="relative">
+        <Icon class="text-zinc-600" />
+        <AsteriskFillIcon
+          class="absolute text-zinc-600 size-3 top-[-5px] right-[-8px]"
+        />
+      </section>
+      <input name={`${name}[]`} type="hidden" />
+      <section class="flex-1 flex gap-x-1 gap-y-1 flex-wrap">
         {#each items as item}
-          <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
+          <span
+            class="grow-1 rounded-lg bg-zinc-700 text-sm py-1 px-1.5 wrap-anywhere"
+          >
             {item}
           </span>
         {/each}
         <input
-          {name}
           {type}
           {...props}
-          class="invisible-input"
+          class="flex-1 invisible-input"
           bind:this={input}
           onkeydown={handleKeyPress}
         />
       </section>
     {:else}
+      <Icon class="text-zinc-600" />
       <input
         {name}
         {type}
