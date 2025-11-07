@@ -32,7 +32,7 @@
         (a, b) =>
           compareLicence(a.licence, b.licence) ||
           compareAccess(a.access, b.access) ||
-          compareProgress(a.progress, b.progress) ||
+          compareProgress(a, b) ||
           compareName(a.name, b.name) ||
           compareAuthors(a.authors, b.authors)
       )
@@ -167,30 +167,22 @@
               <Table.Cell class="w-[10%]">
                 {#if !source.redistributable}
                   {m["meta.none"]()}
-                {:else if !source.progress}
-                  {m["meta.unknown"]()}
                 {:else}
                   {m["routes.sources.table.progress.numbers"]({
-                    imported: source.progress.imported ?? m["meta.unknown"](),
-                    total: source.progress.total ?? m["meta.unknown"](),
+                    imported: source.imported_entry_count,
+                    total: source.total_entry_count,
                   })}
                   <br />
                   {#snippet percentage()}
                     {m["routes.sources.table.progress.percentage"]({
-                      percentage: (completion(source.progress) * 100).toFixed(
-                        1
-                      ),
+                      percentage: (completion(source) * 100).toFixed(1),
                     })}
                   {/snippet}
-                  {#if source.progress.imported === undefined || source.progress.total === undefined}
-                    {m["routes.sources.table.progress.percentage"]({
-                      percentage: m["meta.unknown"](),
-                    })}
-                  {:else if completion(source.progress) > 0.95}
+                  {#if completion(source) > 0.95}
                     <span class="text-green-500">
                       {@render percentage()}
                     </span>
-                  {:else if completion(source.progress) > 0.5}
+                  {:else if completion(source) > 0.5}
                     <span class="text-yellow-500">
                       {@render percentage()}
                     </span>

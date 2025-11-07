@@ -11,6 +11,7 @@
     name,
     label,
     description,
+    value,
     icon: Icon = MenuFillIcon,
     options: getOptions,
     multiple = false,
@@ -58,8 +59,8 @@
     dropdownTooltip.show();
   }
 
-  let selectedValue = $state();
-  let selectedOption = $state();
+  let selectedValue = $state(value);
+  let selectedOption = $state(value);
   function select(option, value) {
     selectedValue = value ?? option;
     selectedOption = option;
@@ -88,7 +89,6 @@
 
 <section class="hidden">
   <section bind:this={dropdownElement} class="flex flex-col gap-y-2 py-1.5">
-    <input {name} type="hidden" bind:value={selectedValue} />
     {#if currentOptions && currentOptions.length > 0}
       {#each currentOptions as option}
         <Component
@@ -114,6 +114,7 @@
     onclick={() => search.focus()}
   >
     <Icon class="text-zinc-600" />
+    <input {name} type="hidden" bind:value={selectedValue} />
     <section class="flex-1 flex">
       {#if searchEnabled || !selectedValue}
         <input
@@ -125,7 +126,7 @@
           onkeydown={handleKeyPress}
         />
       {:else if selectedValue}
-        <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5">
+        <span class="rounded-lg bg-zinc-700 font-medium text-sm py-1 px-1.5">
           {formatOption(selectedOption)}
         </span>
       {/if}

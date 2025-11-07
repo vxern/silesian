@@ -7,7 +7,7 @@
   onclick={() => select()}
   class="rounded-lg p-2 {highlighted
     ? 'bg-blue-600'
-    : 'bg-zinc-700'} text-sm cursor-pointer"
+    : 'bg-zinc-700'} font-medium text-sm cursor-pointer"
 >
   {@render children?.()}
 </button>

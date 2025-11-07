@@ -10,14 +10,14 @@
 <svelte:head>
   <meta
     name="description"
-    content={m["routes.editor.description"]({
+    content={m["routes.entries.description"]({
       project_name: constants.project.name,
     })}
   />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.editor.title"](),
+      page_title: m["routes.entries.title"](),
     })}
   </title>
 </svelte:head>
@@ -26,7 +26,7 @@
 
 <Page.Root>
   <Page.Header>
-    <Page.Title title={m["routes.editor.title"]()} />
+    <Page.Title title={m["routes.entries.title"]()} />
   </Page.Header>
   <Page.Divider />
   <section class="flex gap-x-4"></section>

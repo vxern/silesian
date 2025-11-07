@@ -38,7 +38,7 @@ export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);
 export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
-  link: text().notNull(),
+  url: text().notNull(),
   authors: text().array().notNull(),
   licence: licencesEnum().notNull(),
   orthography: orthographiesEnum().notNull(),
@@ -46,8 +46,8 @@ export const sources = pgTable("sources", {
   target_language: languagesEnum().notNull(),
   access: accessesEnum().notNull(),
   redistributable: boolean().notNull(),
-  imported_count: bigint({ mode: "number" }).default(0).notNull(),
-  total_count: bigint({ mode: "number" }).notNull(),
+  imported_entry_count: bigint({ mode: "number" }).default(0).notNull(),
+  total_entry_count: bigint({ mode: "number" }).notNull(),
 });
 
 export const sourcesRelations = relations(sources, ({ many }) => ({

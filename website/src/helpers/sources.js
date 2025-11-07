@@ -62,12 +62,6 @@ function compareProgress(a, b) {
     return 0;
   }
 
-  if (!a) {
-    return -1;
-  } else if (!b) {
-    return 1;
-  }
-
   const completionA = completion(a);
   const completionB = completion(b);
 
@@ -110,12 +104,12 @@ function compareAuthors(a, b) {
   return a.length > b.length ? 1 : -1;
 }
 
-function completion(progress) {
-  if (progress.total === 0) {
+function completion(source) {
+  if (source.total_entry_count === 0) {
     return 1;
   }
 
-  return progress.imported / progress.total;
+  return source.imported_entry_count / source.total_entry_count;
 }
 
 function getSource(identifier) {

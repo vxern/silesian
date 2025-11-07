@@ -10,19 +10,21 @@ export const actions = {
 
     const result = await db.insert(sources).values({
       name: data.get("name"),
-      link: data.get("link"),
-      isbn: data.get("isbn"),
-      authors: data.get("authors"),
-      licence_id: data.get("licence_id"),
+      url: data.get("url"),
+      authors: JSON.parse(data.get("authors[]")),
+      orthography: data.get("orthography"),
+      source_language: data.get("source_language"),
+      target_language: data.get("target_language"),
+      licence: data.get("licence"),
       access: data.get("access"),
-      redistributable: data.get("redistributable"),
-      total_count: data.get("total_count"),
+      redistributable: data.get("redistributable") === "1",
+      total_entry_count: data.get("total_entry_count"),
     });
 
     console.log(result);
 
     // TODO(vxern): Handle failure.
 
-    redirect(303, `/sources/${result}`);
+    redirect(303, "/sources");
   },
 };

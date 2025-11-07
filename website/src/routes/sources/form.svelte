@@ -1,7 +1,7 @@
 <script>
   import { m } from "$lib/paraglide/messages";
   import AddLineIcon from "~icons/mingcute/add-line";
-  import sources from "$lib/constants/sources";
+  import Save2LineIcon from "~icons/mingcute/save-2-line";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
   import {
@@ -20,18 +20,20 @@
     name="name"
     label={m["routes.sources.form.name"]()}
     description={m["routes.sources.form.name_description"]()}
+    value={source?.name}
   />
   <Form.TextElement
-    name="link"
-    label={m["routes.sources.form.link"]()}
-    description={m["routes.sources.form.link_description"]()}
+    name="url"
+    label={m["routes.sources.form.url"]()}
+    description={m["routes.sources.form.url_description"]()}
     type="url"
+    value={source?.url}
   />
-  <Form.TextElement
+  <Form.MultiTextElement
     name="authors"
     label={m["routes.sources.form.authors"]()}
     description={m["routes.sources.form.authors_description"]()}
-    multiple={true}
+    value={source?.authors}
   />
 </section>
 <section class="flex gap-x-4">
@@ -43,6 +45,7 @@
       m[`orthographies.${orthography}`]() ?? orthography}
     options={() => orthographiesEnum.enumValues}
     component={Form.SimpleSelectOption}
+    value={source?.orthography}
   />
   <Form.SelectElement
     name="source_language"
@@ -51,6 +54,7 @@
     formatOption={(language) => m[`languages.${language}`]()}
     options={() => languagesEnum.enumValues}
     component={Form.SimpleSelectOption}
+    value={source?.source_language}
   />
   <Form.SelectElement
     name="target_language"
@@ -59,6 +63,7 @@
     formatOption={(language) => m[`languages.${language}`]()}
     options={() => languagesEnum.enumValues}
     component={Form.SimpleSelectOption}
+    value={source?.target_language}
   />
 </section>
 <section class="flex gap-x-4">
@@ -69,6 +74,7 @@
     formatOption={(licence) => m[`licences.${licence}`]?.() ?? licence}
     options={() => licencesEnum.enumValues}
     component={Form.SimpleSelectOption}
+    value={source?.licence}
   />
   <Form.SelectElement
     name="access"
@@ -77,25 +83,33 @@
     formatOption={(access) => m[`accesses.${access}`]()}
     options={() => accessesEnum.enumValues}
     component={Form.SimpleSelectOption}
+    value={source?.access}
   />
   <Form.BooleanElement
     name="redistributable"
     label={m["routes.sources.form.redistributable"]()}
     description={m["routes.sources.form.redistributable_description"]()}
+    value={source?.redistributable}
   />
 </section>
 <section class="flex gap-x-4">
   <Form.TextElement
-    name="total_count"
-    label={m["routes.sources.form.total_count"]()}
-    description={m["routes.sources.form.total_count_description"]()}
+    name="total_entry_count"
+    label={m["routes.sources.form.total_entry_count"]()}
+    description={m["routes.sources.form.total_entry_count_description"]()}
     type="number"
+    value={source?.total_entry_count}
   />
   <section class="flex-1"></section>
   <section class="flex-1"></section>
 </section>
 <section class="flex gap-x-4 items-start">
   <Button type="submit" icon={AddLineIcon} colour="green">
-    {m["routes.sources.new.add"]()}
+    {m["routes.sources.form.save"]()}
   </Button>
+  {#if !source}
+    <Button name="draft" type="submit" icon={Save2LineIcon} colour="zinc">
+      {m["routes.sources.form.save_as_draft"]()}
+    </Button>
+  {/if}
 </section>

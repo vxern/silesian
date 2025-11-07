@@ -2,6 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import { onMount } from "svelte";
   import { page } from "$app/state";
+  import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Loading from "../../../../components/meta/loading.svelte";
@@ -44,7 +45,12 @@
   <Page.Divider />
   <Page.Contents>
     {#if source}
-      <form method="PUT" action="?/update" class="flex flex-col gap-y-6">
+      <form
+        method="POST"
+        action="?/update"
+        use:enhance
+        class="flex flex-col gap-y-6"
+      >
         <input type="hidden" name="id" value={source.id} />
         <SourceForm {source} />
       </form>

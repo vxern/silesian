@@ -56,22 +56,6 @@
     {m["routes.sources.title"]()}
     <Book6LineIcon />
   </NavigationButton>
-  {#if page.data.session}
-    {#if page.url.pathname === "/editor/new"}
-      <NavigationButton onclick={() => goto("/editor/new")} highlighted={true}>
-        {m["routes.editor.new.title"]()}
-        <QuillPenLineIcon />
-      </NavigationButton>
-    {:else}
-      <NavigationButton
-        onclick={() => goto("/editor")}
-        highlighted={page.url.pathname === "/editor"}
-      >
-        {m["routes.editor.title"]()}
-        <QuillPenLineIcon />
-      </NavigationButton>
-    {/if}
-  {/if}
   <section class="w-full">
     <Page.Divider />
   </section>

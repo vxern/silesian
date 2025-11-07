@@ -215,7 +215,7 @@
           "contents": "Inhalt ze podglōndym",
           "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
           "preview_message": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-          "add": "Przidej",
+          "save": "Przidej",
           "save_as_draft": "Zachowej za cechōnek"
         }
       }
@@ -265,27 +265,25 @@
       },
       "new": {
         "title": "Nowe zdrzōdło",
-        "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu.",
-        "add": "Przidej"
+        "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
       },
       "[source_id]": {
         "edit": {
           "title": "Edytōr",
-          "description": "Edytowanie zdrzōdła, co już istnieje.",
-          "edit": "Edytuj"
+          "description": "Edytowanie zdrzōdła, co już istnieje."
         }
       },
       "form": {
         "name": "Miano",
         "name_description": "Jako sie mianuje to zdrzōdło?",
-        "link": "Łōncze",
-        "link_description": "Jakiy je łōncze ku tymu zdrzōdle?",
+        "url": "Łōncze",
+        "url_description": "Jakiy je łōncze ku tymu zdrzōdle?",
         "authors": "Autorzi",
         "authors_description": "Gdo tyn werk stworzōł?",
         "orthography": "Szrajbōnek",
         "orthography_description": "We jakim szrajbōnku sōm podane hasła?",
         "source_language": "Zdrzōdłowŏ gŏdka",
-        "source_language_description": "We jakij gŏdce sōm podane ślōnskiy hasła?",
+        "source_language_description": "We jakij gŏdce sōm podane zdrzōdłowe hasła?",
         "target_language": "Cylowŏ gŏdka",
         "target_language_description": "We jakij gŏdce sōm podane przełożōne hasła?",
         "licence": "Licyncyjŏ",
@@ -294,8 +292,10 @@
         "access_description": "Jaki je dostymp ku tymu zdrzōdle?",
         "redistributable": "Możno szyrzić?",
         "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
-        "total_count": "Liczba haseł (we prziblyżyniu)",
-        "total_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
+        "total_entry_count": "Liczba haseł (we prziblyżyniu)",
+        "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?",
+        "save": "Zachowej",
+        "save_as_draft": "Zachowej za cechōnek"
       }
     },
     "word": {

@@ -22,13 +22,17 @@
     onclick={() => toggleCheckbox()}
   >
     <Check2FillIcon class="text-zinc-600" />
-    <input type="hidden" bind:value />
+    <input {name} type="hidden" bind:value />
     {#if value == "1"}
-      <span class="text-green-400">
+      <span
+        class="bg-green-500 text-white font-medium rounded-lg text-sm py-1 px-1.5"
+      >
         {m["meta.yes"]()}
       </span>
     {:else}
-      <span class="text-red-400">
+      <span
+        class="bg-red-500 text-white font-medium rounded-lg text-sm py-1 px-1.5"
+      >
         {m["meta.no"]()}
       </span>
     {/if}
