@@ -4,6 +4,7 @@
   import Link2FillIcon from "~icons/mingcute/link-2-fill";
   import HashtagFillIcon from "~icons/mingcute/hashtag-fill";
   import AddFillIcon from "~icons/mingcute/add-fill";
+  import { SvelteSet } from "svelte/reactivity";
 
   let input;
 
@@ -45,23 +46,35 @@
     }
   }
 
-  let items = $state([]);
+  let search;
+  let items = new SvelteSet();
+  let itemsArray = [];
   function pushItem() {
-    const trimmedValue = input.value.trim();
+    const trimmedValue = search.value.trim();
     if (trimmedValue.length === 0) {
       return;
     }
 
-    input.value = "";
-    items.push(trimmedValue);
-  }
-
-  function popItem() {
-    if (items.length === 0 || input.value.length !== 0) {
+    if (items.has(trimmedValue)) {
       return;
     }
 
-    items.pop();
+    items.add(trimmedValue);
+    itemsArray.push(trimmedValue);
+
+    search.value = "";
+    input.value = JSON.stringify(itemsArray);
+  }
+
+  function popItem() {
+    if (items.length === 0 || search.value.length !== 0) {
+      return;
+    }
+
+    const poppedValue = itemsArray.pop();
+    items.delete(poppedValue);
+
+    input.value = JSON.stringify(itemsArray);
   }
 </script>
 
@@ -69,7 +82,7 @@
   <Label {name} {label} {description} />
   <section
     class="flex-1 flex items-center gap-x-3 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 p-3 w-full rounded-lg cursor-text"
-    onclick={() => input.focus()}
+    onclick={multiple ? () => search.focus() : () => input.focus()}
   >
     {#if multiple}
       <section class="relative">
@@ -78,7 +91,7 @@
           class="absolute text-zinc-600 size-3 top-[-7px] right-[-7px]"
         />
       </section>
-      <input name={`${name}[]`} type="hidden" />
+      <input name={`${name}[]`} type="hidden" bind:this={input} />
       <section class="flex-1 flex gap-x-1 gap-y-1 flex-wrap">
         {#each items as item}
           <span
@@ -91,7 +104,7 @@
           {type}
           {...props}
           class="flex-1 invisible-input"
-          bind:this={input}
+          bind:this={search}
           onkeydown={handleKeyPress}
         />
       </section>
