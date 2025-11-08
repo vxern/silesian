@@ -101,8 +101,8 @@
               <Table.HeaderCell scope="row" class="w-[35%]">
                 {#if !source.name}
                   {m["meta.unknown"]()}
-                {:else if source.link}
-                  <a href={source.link} class="underline underline-offset-3">
+                {:else if source.url}
+                  <a href={source.url} class="underline underline-offset-3">
                     {source.name}
                   </a>
                 {:else}

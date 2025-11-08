@@ -21,8 +21,6 @@ export const actions = {
       total_entry_count: data.get("total_entry_count"),
     });
 
-    console.log(result);
-
     // TODO(vxern): Handle failure.
 
     redirect(303, "/sources");

@@ -269,7 +269,7 @@
       },
       "[source_id]": {
         "edit": {
-          "title": "Edytōr",
+          "title": "Zdrzōdło — „{source_name}”",
           "description": "Edytowanie zdrzōdła, co już istnieje."
         }
       },

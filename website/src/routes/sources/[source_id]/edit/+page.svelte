@@ -31,7 +31,9 @@
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.sources.[source_id].edit.title"](),
+      page_title: m["routes.sources.[source_id].edit.title"]({
+        source_name: source?.name,
+      }),
     })}
   </title>
 </svelte:head>
@@ -40,7 +42,11 @@
 
 <Page.Root view="wide">
   <Page.Header>
-    <Page.Title title={m["routes.sources.[source_id].edit.title"]()} />
+    <Page.Title
+      title={m["routes.sources.[source_id].edit.title"]({
+        source_name: source?.name,
+      })}
+    />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>

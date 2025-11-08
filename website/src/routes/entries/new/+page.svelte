@@ -129,7 +129,7 @@
       </section>
       <section class="flex gap-x-4">
         <Button type="submit" icon={AddLineIcon} colour="green">
-          {m["routes.entries.new.form.add"]()}
+          {m["routes.entries.new.form.save"]()}
         </Button>
         <Button name="draft" type="submit" icon={Save2LineIcon} colour="zinc">
           {m["routes.entries.new.form.save_as_draft"]()}
