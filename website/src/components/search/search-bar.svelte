@@ -7,7 +7,9 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
 
-  const { word } = page.params;
+  // TODO(vxern): Add autocomplete.
+
+  const { lemma } = page.params;
 
   let shiftEnabled = $state(undefined);
   let capsLockEnabled = $state(undefined);
@@ -93,7 +95,7 @@
     missingWordTooltip.destroy();
     needToResetCapsTooltip.destroy();
 
-    goto(encodeURI(`/word/${inputElement.value}`));
+    goto(encodeURI(`/lemma/${inputElement.value}`));
   }
 
   function onBlurWindow() {
@@ -108,7 +110,7 @@
   }
 
   $effect(() => {
-    inputElement.value = word ?? "";
+    inputElement.value = lemma ?? "";
   });
 
   $effect(() => {
@@ -187,7 +189,7 @@
     <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
       {#each specialLetters() as letter}
         <button
-          class="rounded-lg size-8 text-lg font-bold cursor-pointer outline-1 outline-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-zinc-200"
+          class="rounded-lg size-8 text-lg font-bold cursor-pointer outline-1 outline-zinc-600 bg-zinc-800 hover:bg-zinc-700 hover:outline-zinc-500 text-zinc-300 hover:text-zinc-200"
           onclick={() => insertSpecialLetter(letter)}
         >
           {letter}

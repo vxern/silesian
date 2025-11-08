@@ -5,6 +5,7 @@
   import tippy from "tippy.js";
   import "tippy.js/themes/material.css";
   import { m } from "$lib/paraglide/messages";
+  import { onMount } from "svelte";
   import Label from "./label.svelte";
 
   const {
@@ -45,8 +46,8 @@
   // TODO(vxern): What to do about the empty section element being left after the dropdown element moves into tippy?
 
   let searchValue = $state();
-  let options = getOptions?.();
-  let currentOptions = $state(options);
+  let options = $state([]);
+  let currentOptions = $state([]);
   function searchOptions(event) {
     const newOptions = filterOptions(options, searchValue);
 
@@ -59,11 +60,41 @@
     dropdownTooltip.show();
   }
 
-  let selectedValue = $state(value);
-  let selectedOption = $state(value);
+  async function setOptions() {
+    options = (await getOptions?.()) ?? [];
+    currentOptions = options;
+  }
+
+  onMount(() => {
+    setOptions();
+  });
+
+  let selectedValues = $state();
+  let selectedValue = $derived(
+    multiple ? JSON.stringify(selectedValues) : selectedValues?.at(0)
+  );
+  let selectedOptions = $state();
+  if (value) {
+    if (multiple) {
+      selectedValues = value;
+      selectedOptions = value;
+    } else {
+      selectedValues = [value];
+      selectedOptions = [value];
+    }
+  } else {
+    selectedValues = [];
+    selectedOptions = [];
+  }
+
   function select(option, value) {
-    selectedValue = value ?? option;
-    selectedOption = option;
+    if (multiple) {
+      selectedValues.push(value ?? option);
+      selectedOptions.push(option);
+    } else {
+      selectedValues = [value ?? option];
+      selectedOptions = [option];
+    }
     dropdownTooltip?.hide();
   }
 
@@ -116,7 +147,7 @@
     <Icon class="text-zinc-600" />
     <input {name} type="hidden" bind:value={selectedValue} />
     <section class="flex-1 flex">
-      {#if searchEnabled || !selectedValue}
+      {#if searchEnabled || selectedOptions.length === 0}
         <input
           type="text"
           class="w-full invisible-input cursor-pointer"
@@ -125,10 +156,16 @@
           oninput={searchOptions.bind(this)}
           onkeydown={handleKeyPress}
         />
-      {:else if selectedValue}
-        <span class="rounded-lg bg-zinc-700 font-medium text-sm py-1 px-1.5">
-          {formatOption(selectedOption)}
-        </span>
+      {:else if selectedOptions.length > 0}
+        <section class="flex-1 flex gap-x-1 gap-y-1 flex-wrap">
+          {#each selectedOptions as selectedOption}
+            <span
+              class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5 wrap-anywhere"
+            >
+              {formatOption(selectedOption)}
+            </span>
+          {/each}
+        </section>
       {/if}
     </section>
     <DownLineIcon class="ml-2 text-zinc-600" />

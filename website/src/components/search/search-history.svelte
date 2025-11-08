@@ -37,8 +37,8 @@
 
 {#snippet button(item)}
   <button
-    class="cursor-pointer p-4 flex flex-col gap-y-1 bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-700 rounded-lg"
-    onclick={() => goto(`/word/${encodeURIComponent(item.term)}`)}
+    class="cursor-pointer p-4 flex flex-col gap-y-1 bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 rounded-lg"
+    onclick={() => goto(`/lemma/${encodeURIComponent(item.term)}`)}
   >
     <span class="text-start text-zinc-300 hover:text-zinc-200">{item.term}</span
     >
@@ -62,8 +62,8 @@
             {@render button(item)}
           {/each}
           <button
-            class="h-full cursor-pointer p-4 flex flex-col justify-center bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-700 text-zinc-400 rounded-lg"
-            onclick={() => goto(`/word/${encodeURIComponent(item.term)}`)}
+            class="h-full cursor-pointer p-4 flex flex-col justify-center bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 text-zinc-400 rounded-lg"
+            onclick={() => goto(`/lemma/${encodeURIComponent(item.term)}`)}
           >
             {m["meta.etc"]()}
           </button>

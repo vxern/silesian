@@ -35,9 +35,9 @@
     <Page.Divider />
   </section>
   <!-- TODO(vxern): If there are results, show 'Hasło — <hasło>', otherwise show 'Wyszukanie — <wyszukanie>' -->
-  {#if page.url.pathname.startsWith("/word/")}
+  {#if page.url.pathname.startsWith("/lemma/")}
     <NavigationButton onclick={() => goto("/search")} highlighted={true}>
-      {m["routes.word.title"]()}
+      {m["routes.lemma.title"]()}
       <Text2LineIcon />
     </NavigationButton>
   {:else}

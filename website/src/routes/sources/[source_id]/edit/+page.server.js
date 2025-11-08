@@ -22,8 +22,6 @@ export const actions = {
       total_entry_count: data.get("total_entry_count"),
     }).where(eq(sources.id, Number(data.get("id"))));
 
-    console.log(result);
-
     // TODO(vxern): Handle failure.
 
     redirect(303, `/sources`);

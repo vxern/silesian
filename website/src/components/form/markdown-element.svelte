@@ -2,9 +2,9 @@
   import Label from "./label.svelte";
   import { renderMarkdown } from "../../helpers/markdown.js";
 
-  const { name, label, description, previewMessage } = $props();
+  const { name, label, description, value, previewMessage } = $props();
 
-  let contents = $state("");
+  let contents = $state(value ?? "");
   let renderedContents = $derived(renderMarkdown(contents));
 </script>
 

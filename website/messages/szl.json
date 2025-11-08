@@ -189,35 +189,37 @@
     "entries": {
       "[entry_id]": {
         "edit": {
-          "title": "Edytōr",
+          "title": "Hasło — „{entry_lemma}”",
           "description": "Edytowanie hasła, co już istnieje.",
           "edit": "Edytuj"
         }
       },
       "new": {
         "title": "Nowe hasło",
-        "description": "Dodŏwanie nowygo hasła ku dykcjōnŏrzu.",
-        "form": {
-          "lemma": "Hasło",
-          "lemma_description": "Jakigo słowa przidŏwōmy?",
-          "source": "Zdrzōdło",
-          "source_description": "Skōnd je bierymy?",
-          "licence": "Licyncyjŏ",
-          "licence_description": "Pod jakōm licyncyjōm je dostympne?",
-          "source_language": "Zdrzōdłowŏ gŏdka",
-          "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
-          "target_language": "Przełożōnŏ gŏdka",
-          "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
-          "orthography": "Szrajbōnek",
-          "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
-          "categories": "Kategoryje",
-          "categories_description": "Do jakich kategoryjōw nŏleży?",
-          "contents": "Inhalt ze podglōndym",
-          "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
-          "preview_message": "Wkludźcie definicyjŏ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-          "save": "Przidej",
-          "save_as_draft": "Zachowej za cechōnek"
-        }
+        "description": "Dodŏwanie nowygo hasła ku dykcjōnŏrzu."
+      },
+      "form": {
+        "lemma": "Hasło",
+        "lemma_description": "Jakigo słowa przidŏwōmy?",
+        "source_id": "Zdrzōdło",
+        "source_id_description": "Skōnd je bierymy?",
+        "licence": "Licyncyjŏ",
+        "licence_description": "Pod jakōm licyncyjōm je dostympne?",
+        "access": "Dostymp",
+        "access_description": "Jaki je dostymp ku tymu haśle?",
+        "source_language": "Zdrzōdłowŏ gŏdka",
+        "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
+        "target_language": "Przełożōnŏ gŏdka",
+        "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
+        "orthography": "Szrajbōnek",
+        "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
+        "categories": "Kategoryje",
+        "categories_description": "Do jakich kategoryjōw nŏleży?",
+        "contents": "Inhalt ze podglōndym",
+        "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
+        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
+        "save": "Przidej",
+        "save_as_draft": "Zachowej za cechōnek"
       }
     },
     "login": {
@@ -298,7 +300,7 @@
         "save_as_draft": "Zachowej za cechōnek"
       }
     },
-    "word": {
+    "lemma": {
       "title": "Hasło",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
       "source": "Zdrzōdło:",

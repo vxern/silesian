@@ -7,7 +7,8 @@ const defaultColumns = {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   lifecycle: lifecyclesEnum().default("active"),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+  // TODO(vxern): Convert this to database-level `on update CURRENT_TIMESTAMP`.
+  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull().$onUpdate(() => new Date()),
 };
 
 export const licencesEnum = pgEnum("licences", ["proprietary", "granted", "public"]);
@@ -50,24 +51,33 @@ export const sources = pgTable("sources", {
   total_entry_count: bigint({ mode: "number" }).notNull(),
 });
 
-export const sourcesRelations = relations(sources, ({ many }) => ({
-  entries: many(entries),
-}));
-
 export const publishStatusesEnum = pgEnum("entry_statuses", ["draft", "pending", "reviewed", "published"]);
 
 export const entries = pgTable("entries", {
   ...defaultColumns,
   lemma: text().notNull(),
+  // TODO(vxern): Add lexemes.
+  contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
-  licence_override: licencesEnum(),
-  orthography_override: orthographiesEnum(),
-  source_language_override: languagesEnum(),
-  target_language_override: languagesEnum(),
   status: publishStatusesEnum().default("draft").notNull(),
 });
 
-// TODO(vxern): Add relation between entries and users.
+export const sourcesRelations = relations(sources, ({ many }) => ({
+  entries: many(entries),
+}));
+
+export const entriesToCategories = pgTable("entry_categories", {
+  entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
+  category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
+});
+
+export const categories = pgTable("categories", {
+  ...defaultColumns,
+  name: text().notNull(),
+});
+
+// TODO(vxern): Add relation between entries and categories.
+// TODO(vxern): Add relation between categories and entries.
 
 export const users = pgTable("users", {
   ...defaultColumns,
@@ -75,6 +85,7 @@ export const users = pgTable("users", {
   email_address: text().notNull(),
 });
 
+// TODO(vxern): Add relation between entries and users.
 // TODO(vxern): Add relation between users and entries.
 
 export const reviewersToEntries = pgTable("entry_reviewers", {
