@@ -41,9 +41,11 @@
     name="orthography"
     label={m["routes.sources.form.orthography"]()}
     description={m["routes.sources.form.orthography_description"]()}
-    formatOption={(orthography) =>
-      m[`orthographies.${orthography}`]() ?? orthography}
-    options={() => orthographiesEnum.enumValues}
+    options={() =>
+      orthographiesEnum.enumValues.map((orthography) => [
+        m[`orthographies.${orthography}`](),
+        orthography,
+      ])}
     component={Form.SimpleSelectOption}
     value={source?.orthography}
   />
@@ -51,8 +53,11 @@
     name="source_language"
     label={m["routes.sources.form.source_language"]()}
     description={m["routes.sources.form.source_language_description"]()}
-    formatOption={(language) => m[`languages.${language}`]()}
-    options={() => languagesEnum.enumValues}
+    options={() =>
+      languagesEnum.enumValues.map((language) => [
+        m[`languages.${language}`](),
+        language,
+      ])}
     component={Form.SimpleSelectOption}
     value={source?.source_language}
   />
@@ -60,8 +65,11 @@
     name="target_language"
     label={m["routes.sources.form.target_language"]()}
     description={m["routes.sources.form.target_language_description"]()}
-    formatOption={(language) => m[`languages.${language}`]()}
-    options={() => languagesEnum.enumValues}
+    options={() =>
+      languagesEnum.enumValues.map((language) => [
+        m[`languages.${language}`](),
+        language,
+      ])}
     component={Form.SimpleSelectOption}
     value={source?.target_language}
   />
@@ -71,8 +79,11 @@
     name="licence"
     label={m["routes.sources.form.licence"]()}
     description={m["routes.sources.form.licence_description"]()}
-    formatOption={(licence) => m[`licences.${licence}`]?.() ?? licence}
-    options={() => licencesEnum.enumValues}
+    options={() =>
+      licencesEnum.enumValues.map((licence) => [
+        m[`licences.${licence}`](),
+        licence,
+      ])}
     component={Form.SimpleSelectOption}
     value={source?.licence}
   />
@@ -80,8 +91,11 @@
     name="access"
     label={m["routes.sources.form.access"]()}
     description={m["routes.sources.form.access_description"]()}
-    formatOption={(access) => m[`accesses.${access}`]()}
-    options={() => accessesEnum.enumValues}
+    options={() =>
+      accessesEnum.enumValues.map((access) => [
+        m[`accesses.${access}`](),
+        access,
+      ])}
     component={Form.SimpleSelectOption}
     value={source?.access}
   />

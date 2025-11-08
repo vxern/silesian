@@ -4,10 +4,7 @@
   const { option, selected, select } = $props();
 </script>
 
-<SelectOption
-  highlighted={selected === option.id}
-  select={() => select(option, option.id)}
->
+<SelectOption highlighted={selected} select={() => select(option)}>
   <section class="flex w-full">
     <section class="basis-3/5 text-start">
       {option.name}

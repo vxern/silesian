@@ -17,12 +17,11 @@
     options: getOptions,
     multiple = false,
     custom = false,
-    formatOption = (option) => option,
     filterOptions = (options, search) => {
       const searchLowerCase = search.toLowerCase();
 
       return options.filter((option) =>
-        formatOption(option).toLowerCase().includes(searchLowerCase)
+        option[0].toLowerCase().includes(searchLowerCase)
       );
     },
     component: Component,
@@ -47,54 +46,51 @@
 
   let searchValue = $state();
   let options = $state([]);
-  let currentOptions = $state([]);
+  let filteredOptions = $state([]);
   function searchOptions(event) {
-    const newOptions = filterOptions(options, searchValue);
+    const newFilteredOptions = filterOptions(options, searchValue);
 
-    if (isEqual(currentOptions, newOptions)) {
+    if (isEqual(filteredOptions, newFilteredOptions)) {
       return;
     }
 
     dropdownTooltip.hide();
-    currentOptions = newOptions;
+    filteredOptions = newFilteredOptions;
     dropdownTooltip.show();
   }
 
+  let selectedOptions = $state([]);
+  // TODO(vxern): This is wrong.
+  let selectedOptionValues = $derived(
+    selectedOptions.map((option) => option[1])
+  );
+  let selectedValue = $derived(
+    multiple ? JSON.stringify(selectedOptionValues) : selectedOptionValues.at(0)
+  );
+
   async function setOptions() {
     options = (await getOptions?.()) ?? [];
-    currentOptions = options;
+    if (!value) {
+      selectedOptions = [];
+    } else if (multiple) {
+      selectedOptions = options.filter((option) => value.includes(option[1]));
+    } else {
+      selectedOptions = options.filter((option) => option[1] === value);
+    }
+    filteredOptions = options;
   }
 
   onMount(() => {
     setOptions();
   });
 
-  let selectedValues = $state();
-  let selectedValue = $derived(
-    multiple ? JSON.stringify(selectedValues) : selectedValues?.at(0)
-  );
-  let selectedOptions = $state();
-  if (value) {
+  function select(option) {
     if (multiple) {
-      selectedValues = value;
-      selectedOptions = value;
-    } else {
-      selectedValues = [value];
-      selectedOptions = [value];
-    }
-  } else {
-    selectedValues = [];
-    selectedOptions = [];
-  }
-
-  function select(option, value) {
-    if (multiple) {
-      selectedValues.push(value ?? option);
       selectedOptions.push(option);
     } else {
-      selectedValues = [value ?? option];
       selectedOptions = [option];
     }
+
     dropdownTooltip?.hide();
   }
 
@@ -120,12 +116,11 @@
 
 <section class="hidden">
   <section bind:this={dropdownElement} class="flex flex-col gap-y-2 py-1.5">
-    {#if currentOptions && currentOptions.length > 0}
-      {#each currentOptions as option}
+    {#if filteredOptions.length > 0}
+      {#each filteredOptions as option}
         <Component
           {option}
-          {formatOption}
-          selected={selectedValue}
+          selected={selectedOptionValues.includes(option[1])}
           select={select.bind(this)}
         ></Component>
       {/each}
@@ -162,7 +157,7 @@
             <span
               class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5 wrap-anywhere"
             >
-              {formatOption(selectedOption)}
+              {selectedOption[0]}
             </span>
           {/each}
         </section>
