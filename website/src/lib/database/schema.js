@@ -36,6 +36,8 @@ export const languagesEnum = pgEnum("languages", [
 
 export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);
 
+export const publishStatusesEnum = pgEnum("entry_statuses", ["draft", "pending", "reviewed", "published"]);
+
 export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
@@ -49,9 +51,8 @@ export const sources = pgTable("sources", {
   redistributable: boolean().notNull(),
   imported_entry_count: bigint({ mode: "number" }).default(0).notNull(),
   total_entry_count: bigint({ mode: "number" }).notNull(),
+  status: publishStatusesEnum().default("draft").notNull(),
 });
-
-export const publishStatusesEnum = pgEnum("entry_statuses", ["draft", "pending", "reviewed", "published"]);
 
 export const entries = pgTable("entries", {
   ...defaultColumns,

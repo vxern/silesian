@@ -26,7 +26,7 @@
 
 <NavigationSection />
 
-<Page.Root view="wide">
+<Page.Root>
   <Page.Header>
     <Page.Title title={m["routes.entries.new.title"]()} />
   </Page.Header>

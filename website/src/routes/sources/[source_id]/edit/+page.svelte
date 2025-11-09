@@ -40,7 +40,7 @@
 
 <NavigationSection />
 
-<Page.Root view="wide">
+<Page.Root>
   <Page.Header>
     <Page.Title
       title={m["routes.sources.[source_id].edit.title"]({

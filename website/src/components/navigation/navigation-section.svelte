@@ -49,13 +49,26 @@
       <Search2LineIcon />
     </NavigationButton>
   {/if}
-  <NavigationButton
-    onclick={() => goto("/sources")}
-    highlighted={page.url.pathname === "/sources"}
-  >
-    {m["routes.sources.title"]()}
-    <Book6LineIcon />
-  </NavigationButton>
+  {#if page.url.pathname.startsWith("/sources/")}
+    <NavigationButton onclick={() => goto("/sources")} highlighted={true}>
+      {#if page.url.pathname === "/sources/drafts"}
+        {m["routes.sources.drafts.title"]()}
+      {:else if page.url.pathname === "/sources/review"}
+        {m["routes.sources.review.title"]()}
+      {:else if page.url.pathname === "/sources/new"}
+        {m["routes.sources.new.title"]()}
+      {/if}
+      <Book6LineIcon />
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/sources")}
+      highlighted={page.url.pathname === "/sources"}
+    >
+      {m["routes.sources.title"]()}
+      <Book6LineIcon />
+    </NavigationButton>
+  {/if}
   <section class="w-full">
     <Page.Divider />
   </section>

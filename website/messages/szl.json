@@ -42,8 +42,29 @@
         "both": "Proszymy jeszcze rŏz naciś tastōw Shift a Caps Lock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
     },
+    "source_table": {
+      "work": "Werk",
+      "authors": {
+        "authors": "Autorzi",
+        "community": "Społeczność"
+      },
+      "licence": {
+        "licence": "Licyncyjŏ"
+      },
+      "access": {
+        "access": "Dostymp"
+      },
+      "progress": {
+        "progress": "Postymp",
+        "numbers": "{imported} ze {total}",
+        "percentage": "{percentage}%"
+      }
+    },
     "version_section": {
       "version": "Wersyjŏ {version}"
+    },
+    "back_button": {
+      "back": "Nazŏd"
     }
   },
   "routes": {
@@ -246,28 +267,24 @@
     "sources": {
       "title": "Zdrzōdła",
       "description": "Zdrzōdła, kerych używōmy a kere my zaimportowali abo dalszij chcymy zaimportować.",
-      "add": "Przidej nowe zdrzōdło",
-      "table": {
-        "work": "Werk",
-        "authors": {
-          "authors": "Autorzi",
-          "community": "Społeczność"
-        },
-        "licence": {
-          "licence": "Licyncyjŏ"
-        },
-        "access": {
-          "access": "Dostymp"
-        },
-        "progress": {
-          "progress": "Postymp",
-          "numbers": "{imported} ze {total}",
-          "percentage": "{percentage}%"
-        }
+      "actions": {
+        "add": "Przidej nowe zdrzōdło",
+        "drafts": "Cechōnki",
+        "review": "Sprŏwdź zdrzōdła"
       },
       "new": {
         "title": "Nowe zdrzōdło",
         "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
+      },
+      "drafts": {
+        "title": "Zdrzōdła — Cechōnki",
+        "description": "Cechōnki zdrzōdeł, kere używŏcz przidŏwŏ.",
+        "none": "Niy mŏcie żŏdnych cechōnkōw."
+      },
+      "review": {
+        "title": "Zdrzōdła do sprŏwdzyniŏ",
+        "description": "Zdrzōdła, kere sōm już skōńczōne a kere trza sprŏwdzić.",
+        "none": "Niy ma żŏdnych zdrzōdeł do sprŏwdzyniŏ."
       },
       "[source_id]": {
         "edit": {

@@ -5,6 +5,8 @@
   import constants from "$lib/constants/core";
   import { enhance } from "$app/forms";
   import SourceForm from "../form.svelte";
+  import BackButton from "../../../components/interactions/back-button.svelte";
+  import { goto } from "$app/navigation";
   import "tippy.js/themes/material.css";
 </script>
 
@@ -25,12 +27,15 @@
 
 <NavigationSection />
 
-<Page.Root view="wide">
+<Page.Root>
   <Page.Header>
     <Page.Title title={m["routes.sources.new.title"]()} />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => goto("/sources")} />
+    </Page.Actions>
     <form
       method="POST"
       action="?/create"
