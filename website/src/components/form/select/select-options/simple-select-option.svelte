@@ -4,7 +4,7 @@
   const { option, selected, select } = $props();
 </script>
 
-<SelectOption highlighted={selected === option} select={() => select(option)}>
+<SelectOption highlighted={selected} select={() => select(option)}>
   <section class="flex w-full">
     {option[0]}
   </section>
