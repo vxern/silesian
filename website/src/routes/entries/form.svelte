@@ -21,9 +21,9 @@
     label={m["routes.entries.form.source_id"]()}
     description={m["routes.entries.form.source_id_description"]()}
     options={() =>
-      fetch("/api/sources").then((response) =>
-        response.json().map((source) => [source, source])
-      )}
+      fetch("/api/sources")
+        .then((response) => response.json())
+        .then((sources) => sources.map((source) => [source, source.id]))}
     component={Form.SourceSelectOption}
     value={entry?.source_id}
   />
@@ -34,9 +34,11 @@
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
     options={() =>
-      fetch("/api/categories").then((response) =>
-        response.json().map((category) => [category.name, category])
-      )}
+      fetch("/api/categories")
+        .then((response) => response.json())
+        .then((categories) =>
+          categories.map((category) => [category.name, category])
+        )}
     component={Form.SimpleSelectOption}
     multiple={true}
     value={entry?.categories}

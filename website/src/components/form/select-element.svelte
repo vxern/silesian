@@ -94,6 +94,10 @@
     dropdownTooltip?.hide();
   }
 
+  function unselect(option) {
+    // TODO(vxern): IMPORTANT! Gotta implement this.
+  }
+
   let search;
   let searchEnabled = $state(false);
   function enableSearch() {
@@ -154,11 +158,11 @@
       {:else if selectedOptions.length > 0}
         <section class="flex-1 flex gap-x-1 gap-y-1 flex-wrap">
           {#each selectedOptions as selectedOption}
-            <span
-              class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5 wrap-anywhere"
-            >
-              {selectedOption[0]}
-            </span>
+            <Component
+              option={selectedOption}
+              selected={false}
+              select={() => unselect(selectedOption)}
+            ></Component>
           {/each}
         </section>
       {/if}

@@ -7,10 +7,10 @@
 <SelectOption highlighted={selected} select={() => select(option)}>
   <section class="flex w-full">
     <section class="basis-3/5 text-start">
-      {option.name}
+      {option[0].name}
     </section>
     <section class="basis-2/5 text-end">
-      {option.authors.join(", ")}
+      {option[0].authors.join(", ")}
     </section>
   </section>
 </SelectOption>
