@@ -160,7 +160,7 @@
           {#each selectedOptions as selectedOption}
             <Component
               option={selectedOption}
-              selected={false}
+              selected={true}
               select={() => unselect(selectedOption)}
             ></Component>
           {/each}

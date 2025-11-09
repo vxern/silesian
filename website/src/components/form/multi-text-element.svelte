@@ -91,7 +91,7 @@
     />
     <section class="flex-1 flex gap-x-1 gap-y-1 flex-wrap">
       {#each items as item}
-        <span class="rounded-lg bg-zinc-700 text-sm py-1 px-1.5 wrap-anywhere">
+        <span class="rounded-lg bg-blue-600 text-sm py-1 px-1.5 wrap-anywhere">
           {item}
         </span>
       {/each}
