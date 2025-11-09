@@ -60,6 +60,10 @@
         "percentage": "{percentage}%"
       }
     },
+    "entry_table": {
+      "lemma": "Hasło",
+      "source": "Source"
+    },
     "version_section": {
       "version": "Wersyjŏ {version}"
     },
@@ -208,6 +212,23 @@
       "description": "Rozkłŏd ślōnskich dyjalektōw po Gōrnym Ślōnsku."
     },
     "entries": {
+      "title": "Hasła",
+      "description": "",
+      "actions": {
+        "add": "Przidej nowe hasło",
+        "drafts": "Cechōnki",
+        "review": "Sprŏwdź hasła"
+      },
+      "drafts": {
+        "title": "Hasła — Cechōnki",
+        "description": "Cechōnki haseł, kere używŏcz przidŏwŏ.",
+        "none": "Niy mŏcie żŏdnych cechōnkōw."
+      },
+      "review": {
+        "title": "Hasła do sprŏwdzyniŏ",
+        "description": "Hasła, kere sōm już skōńczōne a kere trza sprŏwdzić.",
+        "none": "Niy ma żŏdnych haseł do sprŏwdzyniŏ."
+      },
       "[entry_id]": {
         "edit": {
           "title": "Hasło — „{entry_lemma}”",

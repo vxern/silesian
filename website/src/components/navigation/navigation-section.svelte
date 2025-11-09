@@ -69,6 +69,26 @@
       <Book6LineIcon />
     </NavigationButton>
   {/if}
+  {#if page.url.pathname.startsWith("/entries/")}
+    <NavigationButton onclick={() => goto("/entries")} highlighted={true}>
+      {#if page.url.pathname === "/entries/drafts"}
+        {m["routes.entries.drafts.title"]()}
+      {:else if page.url.pathname === "/entries/review"}
+        {m["routes.entries.review.title"]()}
+      {:else if page.url.pathname === "/entries/new"}
+        {m["routes.entries.new.title"]()}
+      {/if}
+      <Book6LineIcon />
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/entries")}
+      highlighted={page.url.pathname === "/entries"}
+    >
+      {m["routes.entries.title"]()}
+      <Book6LineIcon />
+    </NavigationButton>
+  {/if}
   <section class="w-full">
     <Page.Divider />
   </section>

@@ -1,10 +1,29 @@
 <script>
+  import { onMount } from "svelte";
   import { goto } from "$app/navigation";
   import { m } from "$lib/paraglide/messages";
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
+  import EntryTable from "../../components/entries/entry-table.svelte";
   import Button from "../../components/interactions/button.svelte";
+  import Loading from "../../components/meta/loading.svelte";
+  import AddLineIcon from "~icons/mingcute/add-line";
+  import ChecksLineIcon from "~icons/mingcute/checks-line";
+  import Edit4LineIcon from "~icons/mingcute/edit-4-line";
   import constants from "$lib/constants/core";
+
+  // TODO(vxern): Get this from the user's permission.
+  const hasPermission = true;
+
+  let entries = $state();
+  async function fetchEntries() {
+    const response = await fetch("/api/entries");
+    entries = await response.json();
+  }
+
+  onMount(() => {
+    fetchEntries();
+  });
 </script>
 
 <svelte:head>
@@ -29,5 +48,37 @@
     <Page.Title title={m["routes.entries.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <section class="flex gap-x-4"></section>
+  <Page.Contents>
+    {#if hasPermission}
+      <Page.Actions>
+        <Button
+          colour="green"
+          icon={AddLineIcon}
+          onclick={() => goto("/entries/new")}
+        >
+          {m["routes.entries.actions.add"]()}
+        </Button>
+        <Button
+          colour="gray"
+          icon={Edit4LineIcon}
+          onclick={() => goto("/entries/drafts")}
+        >
+          {m["routes.entries.actions.drafts"]()}
+        </Button>
+        <section class="flex-1"></section>
+        <Button
+          colour="blue"
+          icon={ChecksLineIcon}
+          onclick={() => goto("/entries/review")}
+        >
+          {m["routes.entries.actions.review"]()}
+        </Button>
+      </Page.Actions>
+    {/if}
+    {#if entries}
+      <EntryTable {entries} />
+    {:else}
+      <Loading />
+    {/if}
+  </Page.Contents>
 </Page.Root>

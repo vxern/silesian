@@ -15,6 +15,8 @@
   // TODO(vxern): Use proper permissions.
   const hasPermission = true;
 
+  // TODO(vxern): Update the check for community authors.
+
   const { sources: unsortedSources } = $props();
 
   const sources = unsortedSources
@@ -56,9 +58,7 @@
     {#each sources as source}
       <Table.Row>
         <Table.HeaderCell scope="row" class="w-[35%]">
-          {#if !source.name}
-            {m["meta.unknown"]()}
-          {:else if source.url}
+          {#if source.url}
             <a href={source.url} class="underline underline-offset-3">
               {source.name}
             </a>
@@ -67,9 +67,7 @@
           {/if}
         </Table.HeaderCell>
         <Table.Cell class="w-[30%]">
-          {#if !source.authors}
-            {m["meta.unknown"]()}
-          {:else if source.authors === "community"}
+          {#if source.authors === "community"}
             <i>
               {m["components.source_table.authors.community"]()}
             </i>

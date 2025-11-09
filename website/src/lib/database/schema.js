@@ -11,6 +11,13 @@ const defaultColumns = {
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull().$onUpdate(() => new Date()),
 };
 
+export const changes = pgTable("changes", {
+  id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  object_type: text().notNull(),
+  object_id: bigint({ mode: "number" }).notNull(),
+  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+});
+
 export const licencesEnum = pgEnum("licences", ["proprietary", "granted", "public"]);
 
 export const orthographiesEnum = pgEnum("orthographies", [
@@ -89,6 +96,7 @@ export const users = pgTable("users", {
 // TODO(vxern): Add relation between entries and users.
 // TODO(vxern): Add relation between users and entries.
 
+// TODO(vxern): Maybe reviews instead of reviewers?
 export const reviewersToEntries = pgTable("entry_reviewers", {
   user_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
