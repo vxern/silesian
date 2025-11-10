@@ -214,13 +214,14 @@
     "entries": {
       "title": "Hasła",
       "description": "",
+      "none": "Niy ma jeszcze żŏdnych haseł.",
       "actions": {
         "add": "Przidej nowe hasło",
         "drafts": "Cechōnki",
         "review": "Sprŏwdź hasła"
       },
       "drafts": {
-        "title": "Hasła — Cechōnki",
+        "title": "Cechōnki haseł",
         "description": "Cechōnki haseł, kere używŏcz przidŏwŏ.",
         "none": "Niy mŏcie żŏdnych cechōnkōw."
       },
@@ -288,6 +289,7 @@
     "sources": {
       "title": "Zdrzōdła",
       "description": "Zdrzōdła, kerych używōmy a kere my zaimportowali abo dalszij chcymy zaimportować.",
+      "none": "Niy ma jeszcze żŏdnych zdrzōdeł.",
       "actions": {
         "add": "Przidej nowe zdrzōdło",
         "drafts": "Cechōnki",
@@ -298,7 +300,7 @@
         "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
       },
       "drafts": {
-        "title": "Zdrzōdła — Cechōnki",
+        "title": "Cechōnki zdrzōdeł",
         "description": "Cechōnki zdrzōdeł, kere używŏcz przidŏwŏ.",
         "none": "Niy mŏcie żŏdnych cechōnkōw."
       },

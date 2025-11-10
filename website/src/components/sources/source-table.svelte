@@ -1,4 +1,5 @@
 <script>
+  import { goto } from "$app/navigation";
   import { m } from "$lib/paraglide/messages";
   import {
     compareLicence,

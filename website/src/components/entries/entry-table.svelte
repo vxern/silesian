@@ -1,4 +1,5 @@
 <script>
+  import { goto } from "$app/navigation";
   import { m } from "$lib/paraglide/messages";
   import Button from "../interactions/button.svelte";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";

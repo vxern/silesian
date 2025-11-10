@@ -5,14 +5,12 @@
   import NavigationButton from "./navigation-button.svelte";
   import Home2LineIcon from "~icons/mingcute/home-2-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
-  import Text2LineIcon from "~icons/mingcute/text-2-line";
+  import CursorTextLineIcon from "~icons/mingcute/cursor-text-line";
   import Book6LineIcon from "~icons/mingcute/book-6-line";
   import InformationLineIcon from "~icons/mingcute/information-line";
-  import QuillPenLineIcon from "~icons/mingcute/quill-pen-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
   import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
-  import MapLineIcon from "~icons/mingcute/map-line";
   import Page from "../page/index.js";
 </script>
 
@@ -38,7 +36,7 @@
   {#if page.url.pathname.startsWith("/lemma/")}
     <NavigationButton onclick={() => goto("/search")} highlighted={true}>
       {m["routes.lemma.title"]()}
-      <Text2LineIcon />
+      <Search2LineIcon />
     </NavigationButton>
   {:else}
     <NavigationButton
@@ -78,7 +76,7 @@
       {:else if page.url.pathname === "/entries/new"}
         {m["routes.entries.new.title"]()}
       {/if}
-      <Book6LineIcon />
+      <CursorTextLineIcon />
     </NavigationButton>
   {:else}
     <NavigationButton
@@ -86,7 +84,7 @@
       highlighted={page.url.pathname === "/entries"}
     >
       {m["routes.entries.title"]()}
-      <Book6LineIcon />
+      <CursorTextLineIcon />
     </NavigationButton>
   {/if}
   <section class="w-full">

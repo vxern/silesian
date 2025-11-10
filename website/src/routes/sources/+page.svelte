@@ -8,12 +8,17 @@
   import constants from "$lib/constants/core";
   import Loading from "../../components/meta/loading.svelte";
   import Button from "../../components/interactions/button.svelte";
+  import Badge from "../../components/interactions/badge.svelte";
   import AddLineIcon from "~icons/mingcute/add-line";
   import ChecksLineIcon from "~icons/mingcute/checks-line";
   import Edit4LineIcon from "~icons/mingcute/edit-4-line";
 
   // TODO(vxern): Get this from the user's permission.
   const hasPermission = true;
+
+  // TODO(vxern): Get this dynamically.
+  const draftCount = 16;
+  const reviewCount = 9;
 
   let sources = $state();
   async function fetchSources() {
@@ -59,6 +64,7 @@
           onclick={() => goto("/sources/drafts")}
         >
           {m["routes.sources.actions.drafts"]()}
+          <Badge text={draftCount} colour="zinc" />
         </Button>
         <section class="flex-1"></section>
         <Button
@@ -67,11 +73,16 @@
           onclick={() => goto("/sources/review")}
         >
           {m["routes.sources.actions.review"]()}
+          <Badge text={reviewCount} colour="zinc" />
         </Button>
       </Page.Actions>
     {/if}
     {#if sources}
-      <SourceTable {sources} />
+      {#if sources.length > 0}
+        <SourceTable {sources} />
+      {:else}
+        {m["routes.sources.none"]()}
+      {/if}
     {:else}
       <Loading />
     {/if}
