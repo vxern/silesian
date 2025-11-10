@@ -95,7 +95,7 @@
     missingWordTooltip.destroy();
     needToResetCapsTooltip.destroy();
 
-    goto(encodeURI(`/lemma/${inputElement.value}`));
+    window.location.href = encodeURI(`/lemma/${inputElement.value}`);
   }
 
   function onBlurWindow() {
