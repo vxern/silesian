@@ -1,1 +1,1 @@
-<article class="h-[1px] bg-zinc-700"></article>
+<article class="h-[2px] rounded-full bg-zinc-700"></article>

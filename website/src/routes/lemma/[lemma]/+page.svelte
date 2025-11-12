@@ -38,6 +38,7 @@
 {#if entries}
   <Page.Root>
     <Page.Header>
+      <Page.Title title={m["routes.lemma.title"]()} />
       <SearchBar />
     </Page.Header>
     <Page.Divider />

@@ -1,5 +1,5 @@
 import { marked } from "marked";
-import { clsx } from "clsx";
+import { clsx } from "clsx/lite";
 import DOMPurify from "isomorphic-dompurify";
 
 marked.use({

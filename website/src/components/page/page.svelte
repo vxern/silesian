@@ -3,7 +3,7 @@
 </script>
 
 <section
-  class="top-0 flex flex-col gap-y-6 w-full py-24 sm:px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%]"
+  class="top-0 flex flex-col gap-y-6 w-full py-24 md:px-[5%] lg:px-[10%] xl:px-[15%] 2xl:px-[20%]"
 >
   {@render children?.()}
 </section>

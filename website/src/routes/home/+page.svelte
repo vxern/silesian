@@ -12,6 +12,7 @@
   import { goto } from "$app/navigation";
   import Loading from "../../components/meta/loading.svelte";
   import VersionSection from "../../components/version/version-section.svelte";
+  import DonationSection from "../../components/donation/donation-section.svelte";
   import Page from "../../components/page/index.js";
 
   let statistics = $state();
@@ -41,16 +42,16 @@
 </svelte:head>
 
 <LanguageSection />
-<SubdomainNavigationSection mode="subdomain" />
+<SubdomainNavigationSection />
 <NavigationSection />
 <SocialsSection />
+<DonationSection />
 <VersionSection />
 
 <Page.Root>
-  <section class="flex-1 flex flex-col gap-y-8 items-center">
+  <section class="flex-1 flex flex-col gap-y-6 items-center">
     <MainSplash />
-    <SearchBar />
-    <article>
+    <!-- <article>
       {#if statistics}
         <aside class="text-sm italic flex flex-col gap-y-1">
           <span class="text-zinc-600">
@@ -76,6 +77,7 @@
       {:else}
         <Loading />
       {/if}
-    </article>
+    </article> -->
+    <SearchBar />
   </section>
 </Page.Root>

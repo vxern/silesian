@@ -8,6 +8,7 @@
   import CursorTextLineIcon from "~icons/mingcute/cursor-text-line";
   import Book6LineIcon from "~icons/mingcute/book-6-line";
   import InformationLineIcon from "~icons/mingcute/information-line";
+  import HandHeartLineIcon from "~icons/mingcute/hand-heart-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
   import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
@@ -22,13 +23,40 @@
     {m["routes.home.title"]()}
     <Home2LineIcon />
   </NavigationButton>
-  <NavigationButton
-    onclick={() => goto("/about")}
-    highlighted={page.url.pathname === "/about"}
-  >
-    {m["routes.about.title"]()}
-    <InformationLineIcon />
-  </NavigationButton>
+  {#if page.data.session}
+    {#if page.url.pathname.startsWith("/account/history")}
+      <NavigationButton onclick={() => goto("/account")} highlighted={true}>
+        {#if page.url.pathname === "/account/history/searches"}
+          {m["routes.account.history.searches.title"]()}
+        {:else if page.url.pathname === "/account/history/additions"}
+          {m["routes.account.history.additions.title"]()}
+        {:else if page.url.pathname === "/account/history/changes"}
+          {m["routes.account.history.changes.title"]()}
+        {:else if page.url.pathname === "/account/history/time-spent-using"}
+          {m["routes.account.history.time_spent_using.title"]()}
+        {:else if page.url.pathname === "/account/history/time-spent-editing"}
+          {m["routes.account.history.time_spent_editing.title"]()}
+        {/if}
+        <HistoryAnticlockwiseLine />
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/account")}
+        highlighted={page.url.pathname === "/account"}
+      >
+        {m["routes.account.title"]()}
+        <User2LineIcon />
+      </NavigationButton>
+    {/if}
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/login")}
+      highlighted={page.url.pathname === "/login"}
+    >
+      {m["routes.login.title"]()}
+      <AlignArrowRightLineIcon />
+    </NavigationButton>
+  {/if}
   <section class="w-full">
     <Page.Divider />
   </section>
@@ -90,38 +118,18 @@
   <section class="w-full">
     <Page.Divider />
   </section>
-  {#if page.data.session}
-    {#if page.url.pathname.startsWith("/account/history")}
-      <NavigationButton onclick={() => goto("/account")} highlighted={true}>
-        {#if page.url.pathname === "/account/history/searches"}
-          {m["routes.account.history.searches.title"]()}
-        {:else if page.url.pathname === "/account/history/additions"}
-          {m["routes.account.history.additions.title"]()}
-        {:else if page.url.pathname === "/account/history/changes"}
-          {m["routes.account.history.changes.title"]()}
-        {:else if page.url.pathname === "/account/history/time-spent-using"}
-          {m["routes.account.history.time_spent_using.title"]()}
-        {:else if page.url.pathname === "/account/history/time-spent-editing"}
-          {m["routes.account.history.time_spent_editing.title"]()}
-        {/if}
-        <HistoryAnticlockwiseLine />
-      </NavigationButton>
-    {:else}
-      <NavigationButton
-        onclick={() => goto("/account")}
-        highlighted={page.url.pathname === "/account"}
-      >
-        {m["routes.account.title"]()}
-        <User2LineIcon />
-      </NavigationButton>
-    {/if}
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/login")}
-      highlighted={page.url.pathname === "/login"}
-    >
-      {m["routes.login.title"]()}
-      <AlignArrowRightLineIcon />
-    </NavigationButton>
-  {/if}
+  <NavigationButton
+    onclick={() => goto("/contribute")}
+    highlighted={page.url.pathname === "/contribute"}
+  >
+    {m["routes.contribute.title"]()}
+    <HandHeartLineIcon />
+  </NavigationButton>
+  <NavigationButton
+    onclick={() => goto("/about")}
+    highlighted={page.url.pathname === "/about"}
+  >
+    {m["routes.about.title"]()}
+    <InformationLineIcon />
+  </NavigationButton>
 </nav>

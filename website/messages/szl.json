@@ -1,6 +1,14 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "title": "{project_name} — {page_title}",
+  "donation": {
+    "donate": "Spōmōż nŏs",
+    "goals": {
+      "new_licence": "Licyncyjŏ ku nowymu dykcjōnŏrzu",
+      "hosting_fee": "Gazdowaniy strōny"
+    },
+    "progress": "{progress}%"
+  },
   "languages": {
     "szl": "ślōnski",
     "pl": "polski",
@@ -164,6 +172,10 @@
           "email_address": "Adresa e-mail — {email_address}"
         }
       }
+    },
+    "contribute": {
+      "title": "Spōmoga",
+      "description": ""
     },
     "account": {
       "title": "Kōnto",
