@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm";
-import { pgTable, pgEnum, bigint, text, boolean, timestamp, unique } from "drizzle-orm/pg-core";
+import { pgTable, pgEnum, bigint, integer, text, boolean, timestamp, unique } from "drizzle-orm/pg-core";
 
 export const lifecyclesEnum = pgEnum("lifecycles", ["active", "inactive", "deleted"]);
 
@@ -7,16 +7,17 @@ const defaultColumns = {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   lifecycle: lifecyclesEnum().default("active"),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  // TODO(vxern): Convert this to database-level `on update CURRENT_TIMESTAMP`.
+  // TODO(vxern): Convert this to database-level `on update CURRENT_TIMESTAMP` when supported.
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull().$onUpdate(() => new Date()),
 };
 
 export const changes = pgTable("changes", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  object_type: text().notNull(),
-  object_id: bigint({ mode: "number" }).notNull(),
+  version: integer().default(1).notNull(),
+  changeable_type: text().notNull(),
+  changeable_id: bigint({ mode: "number" }).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-});
+}, (t) => [unique().on(t.version, t.changeable_type, t.changeable_id)]);
 
 export const licencesEnum = pgEnum("licences", ["proprietary", "granted", "public"]);
 
@@ -48,16 +49,17 @@ export const publishStatusesEnum = pgEnum("entry_statuses", ["draft", "pending",
 export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
-  url: text().notNull(),
-  authors: text().array().notNull(),
+  url: text(),
+  authors: text().array(),
+  year: text(),
   licence: licencesEnum().notNull(),
   orthography: orthographiesEnum().notNull(),
   source_language: languagesEnum().notNull(),
   target_language: languagesEnum().notNull(),
   access: accessesEnum().notNull(),
   redistributable: boolean().notNull(),
-  imported_entry_count: bigint({ mode: "number" }).default(0).notNull(),
-  total_entry_count: bigint({ mode: "number" }).notNull(),
+  imported_entry_count: integer().default(0).notNull(),
+  total_entry_count: integer(),
   status: publishStatusesEnum().default("draft").notNull(),
 });
 
@@ -93,11 +95,19 @@ export const users = pgTable("users", {
   email_address: text().notNull(),
 });
 
-// TODO(vxern): Add relation between entries and users.
-// TODO(vxern): Add relation between users and entries.
+export const reviews = pgTable("reviews", {
+  id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  reviewable_type: text().notNull(),
+  reviewable_id: bigint({ mode: "number" }).notNull(),
+  reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  comments: text().array(),
+  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+})
 
-// TODO(vxern): Maybe reviews instead of reviewers?
-export const reviewersToEntries = pgTable("entry_reviewers", {
-  user_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
-  entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
-}, (t) => [unique().on(t.user_id, t.entry_id)]);
+// TODO(vxern): Add relation between reviewers and reviews.
+// TODO(vxern): Add relation between reviews and reviewers.
+
+export const reviewersToReviews = pgTable("reviewers_to_reviews", {
+  reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  review_id: bigint({ mode: "number" }).references(() => reviews.id).notNull(),
+}, (t) => [unique().on(t.reviewer_id, t.review_id)]);
