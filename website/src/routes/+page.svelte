@@ -1,7 +1,7 @@
 <script>
   import constants from "$lib/constants/core";
   import { m } from "$lib/paraglide/messages";
-  import SubdomainNavigationSection from "../components/subdomain-navigation/subdomain-navigation-section.svelte";
+  import SubdomainNavigationSectionUnpositioned from "../components/subdomain-navigation/subdomain-navigation-section-unpositioned.svelte";
   import Page from "../components/page/index.js";
   import MainSplash from "../components/splashes/main-splash.svelte";
 </script>
@@ -24,5 +24,5 @@
 <Page.Root>
   <MainSplash />
   <Page.Divider />
-  <SubdomainNavigationSection />
+  <SubdomainNavigationSectionUnpositioned />
 </Page.Root>
