@@ -1,3 +1,5 @@
+import Root from "./form.svelte";
+import Disabled from "./disabled.svelte";
 import BooleanElement from "./boolean-element.svelte";
 import MarkdownElement from "./markdown-element.svelte";
 import TextElement from "./text-element.svelte";
@@ -8,6 +10,8 @@ import SimpleSelectOption from "./select/select-options/simple-select-option.sve
 import SourceSelectOption from "./select/select-options/source-select-option.svelte";
 
 export default {
+  Root,
+  Disabled,
   BooleanElement,
   MarkdownElement,
   TextElement,
