@@ -1,5 +1,5 @@
 <script>
-  const { children } = $props();
+  const { children, ...props } = $props();
 </script>
 
 <table class="border-separate border-spacing-1 text-left">

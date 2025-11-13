@@ -1,12 +1,9 @@
 <script>
-  const { children, scope, class: class_ } = $props();
+  import { clsx } from "clsx/lite";
+
+  const { children, scope, class: classes } = $props();
 </script>
 
-<th
-  class="border-b-1 {scope === 'row'
-    ? 'border-b-zinc-800'
-    : 'border-b-zinc-700'} {class_}"
-  {scope}
->
+<th class={clsx("border-b-1 p-2", classes)} {scope}>
   {@render children?.()}
 </th>
