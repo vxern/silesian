@@ -6,8 +6,7 @@
   let colourClasses;
   switch (colour) {
     case "yellow":
-      colourClasses =
-        "text-yellow-200 bg-yellow-600 outline-2 outline-yellow-500";
+      colourClasses = "text-white bg-yellow-500 outline-2 outline-yellow-400";
       break;
     case "zinc":
       colourClasses = "text-zinc-100 bg-zinc-500 outline-2 outline-zinc-400";
