@@ -5,7 +5,7 @@
 
   const {
     icon = ArrowLeftLineIcon,
-    colour = "grey",
+    colour = "zinc",
     text = m["components.back_button.back"](),
     ...props
   } = $props();
