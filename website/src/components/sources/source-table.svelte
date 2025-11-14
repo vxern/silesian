@@ -11,14 +11,13 @@
   } from "../../helpers/sources.js";
   import Button from "../interactions/button.svelte";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
+  import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
 
-  // TODO(vxern): Use proper permissions.
-  const hasPermission = true;
-
+  // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
 
-  const { sources: unsortedSources } = $props();
+  const { sources: unsortedSources, mode } = $props();
 
   const sources = unsortedSources
     .sort(
@@ -39,26 +38,32 @@
         {m["components.source_table.work"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.authors.authors"]()}
+        {m["components.source_table.authors"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.access.access"]()}
+        {m["components.source_table.year"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.licence.licence"]()}
+        {m["components.source_table.access"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.source_table.licence"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
         {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
-      {#if hasPermission && sources.length > 0}
+      {#if mode === "edit"}
+        <Table.HeaderCell />
+      {/if}
+      {#if mode === "review"}
         <Table.HeaderCell />
       {/if}
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each sources as source}
-      <Table.Row>
-        <Table.HeaderCell scope="row" class="w-[35%]">
+    {#each sources as source, index}
+      <Table.Row {index}>
+        <Table.Cell>
           {#if source.url}
             <a href={source.url} class="underline underline-offset-3">
               {source.name}
@@ -66,19 +71,30 @@
           {:else}
             {source.name}
           {/if}
-        </Table.HeaderCell>
-        <Table.Cell class="w-[30%]">
+        </Table.Cell>
+        <Table.Cell>
           {#if source.authors === "community"}
             <i>
               {m["components.source_table.authors.community"]()}
             </i>
           {:else if source.authors.length > 0}
-            {source.authors.join(" · ")}
+            <ul>
+              {#each source.authors as author}
+                <li>{author}</li>
+              {/each}
+            </ul>
           {:else}
             {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell class="w-[10%]">
+        <Table.Cell>
+          {#if source.year}
+            {source.year}
+          {:else}
+            {m["meta.unknown"]()}
+          {/if}
+        </Table.Cell>
+        <Table.Cell>
           {#if !source.access}
             {m["meta.unknown"]()}
           {:else if source.access === "closed"}
@@ -95,7 +111,7 @@
             </span>
           {/if}
         </Table.Cell>
-        <Table.Cell class="w-[15%]">
+        <Table.Cell>
           {#if !source.licence}
             {m["meta.unknown"]()}
           {:else if source.licence === "proprietary"}
@@ -120,10 +136,8 @@
             </span>
           {/if}
         </Table.Cell>
-        <Table.Cell class="w-[10%]">
-          {#if !source.redistributable}
-            {m["meta.none"]()}
-          {:else}
+        <Table.Cell>
+          {#if source.redistributable}
             {m["components.source_table.progress.numbers"]({
               imported: source.imported_entry_count,
               total: source.total_entry_count,
@@ -147,9 +161,11 @@
                 {@render percentage()}
               </span>
             {/if}
+          {:else}
+            {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
-        {#if hasPermission}
+        {#if mode === "edit"}
           <Table.Cell>
             <Button
               colour="green"
@@ -158,7 +174,19 @@
             />
           </Table.Cell>
         {/if}
+        {#if mode === "review"}
+          <Table.Cell>
+            <Button
+              colour="blue"
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto(`/sources/${source.id}/review`)}
+            />
+          </Table.Cell>
+        {/if}
       </Table.Row>
     {/each}
   </Table.Body>
 </Table.Root>
+{#if sources.length === 0}
+  {m["routes.sources.none"]()}
+{/if}
