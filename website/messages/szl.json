@@ -50,18 +50,20 @@
         "both": "Proszymy jeszcze rŏz naciś tastōw Shift a Caps Lock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
     },
+    "form": {
+      "create": "Stwōrz a zamiyś",
+      "create_as_draft": "Stwōrz za cechōnek",
+      "save": "Zachowej",
+      "publish": "Zamiyś",
+      "accept": "Przijmij",
+      "reject": "Ôdciep"
+    },
     "source_table": {
       "work": "Werk",
-      "authors": {
-        "authors": "Autorzi",
-        "community": "Społeczność"
-      },
-      "licence": {
-        "licence": "Licyncyjŏ"
-      },
-      "access": {
-        "access": "Dostymp"
-      },
+      "authors": "Autorzi",
+      "year": "Rok",
+      "licence": "Licyncyjŏ",
+      "access": "Dostymp",
       "progress": {
         "progress": "Postymp",
         "numbers": "{imported} ze {total}",
@@ -95,7 +97,7 @@
       },
       "subdomains": {
         "dictionary": "Dykcjōnŏrz",
-        "thesaurus": "Tezaur",
+        "thesaurus": "Tezaurus",
         "translations": "Przekłady",
         "map": "Karta",
         "guide": "Ratgyjber",
@@ -272,9 +274,7 @@
         "categories_description": "Do jakich kategoryjōw nŏleży?",
         "contents": "Inhalt ze podglōndym",
         "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
-        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-        "save": "Przidej",
-        "save_as_draft": "Zachowej za cechōnek"
+        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie."
       }
     },
     "login": {
@@ -323,17 +323,23 @@
       },
       "[source_id]": {
         "edit": {
-          "title": "Zdrzōdło — „{source_name}”",
-          "description": "Edytowanie zdrzōdła, co już istnieje."
+          "title": "Edytowaniy zdrzōdła — „{source_name}”",
+          "description": ""
+        },
+        "review": {
+          "title": "Sprŏwdzaniy zrzōdła — „{source_name}”",
+          "description": ""
         }
       },
       "form": {
         "name": "Miano",
-        "name_description": "Jako sie mianuje to zdrzōdło?",
+        "name_description": "Jako sie to zdrzōdło mianuje?",
         "url": "Łōncze",
         "url_description": "Jakiy je łōncze ku tymu zdrzōdle?",
         "authors": "Autorzi",
-        "authors_description": "Gdo tyn werk stworzōł?",
+        "authors_description": "Gdo to zdrzōdło stworzōł?",
+        "year": "Rok",
+        "year_description": "Kiedy to zdrzōdło stworzōno?",
         "orthography": "Szrajbōnek",
         "orthography_description": "We jakim szrajbōnku sōm podane hasła?",
         "source_language": "Zdrzōdłowŏ gŏdka",
@@ -347,9 +353,7 @@
         "redistributable": "Możno szyrzić?",
         "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
         "total_entry_count": "Liczba haseł (we prziblyżyniu)",
-        "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?",
-        "save": "Zachowej",
-        "save_as_draft": "Zachowej za cechōnek"
+        "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
       }
     },
     "lemma": {
