@@ -3,5 +3,7 @@
 </script>
 
 <td class="border-b-1 border-b-zinc-800 p-2 {class_}">
-  {@render children?.()}
+  <section class="flex gap-x-2">
+    {@render children?.()}
+  </section>
 </td>

@@ -5,6 +5,7 @@
 
 @theme {
   --font-bitter: "Bitter", sans-serif;
+  --color-zinc-910: oklch(19.7% 0.006 285.84);
 }
 
 @layer base {

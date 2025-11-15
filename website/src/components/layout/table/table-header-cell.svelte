@@ -1,9 +1,12 @@
 <script>
   import { clsx } from "clsx/lite";
 
-  const { children, scope, class: classes } = $props();
+  const { children, scope, class: classes, icon: Icon } = $props();
 </script>
 
 <th class={clsx("border-b-1 p-2", classes)} {scope}>
-  {@render children?.()}
+  <section class="flex gap-x-1">
+    <Icon />
+    {@render children?.()}
+  </section>
 </th>

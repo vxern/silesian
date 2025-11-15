@@ -5,7 +5,6 @@
     icon: Icon,
     colour = "blue",
     type = "button",
-    children,
     ...props
   } = $props();
 
@@ -36,12 +35,11 @@
 
 <button
   class={clsx(
-    "relative cursor-pointer flex items-center gap-x-1 outline-1 rounded-lg font-bold p-2",
+    "relative cursor-pointer flex items-center justify-center outline-1 rounded-md text-sm font-bold size-5",
     colourClasses
   )}
   {type}
   {...props}
 >
   <Icon />
-  {@render children?.()}
 </button>

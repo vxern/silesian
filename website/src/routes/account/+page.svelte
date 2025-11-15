@@ -13,15 +13,19 @@
   import TimeLineIcon from "~icons/mingcute/time-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
   import ExitLineIcon from "~icons/mingcute/exit-line";
+  import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import { dayjs } from "../../helpers/dates.js";
   import constants from "$lib/constants/core";
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
   import Loading from "../../components/meta/loading.svelte";
   import Button from "../../components/interactions/button.svelte";
+  import IconButton from "../../components/interactions/icon-button.svelte";
+  import Table from "../../components/layout/table/index.js";
   import calendar from "dayjs/plugin/calendar";
   import duration from "dayjs/plugin/duration";
   import relativeTime from "dayjs/plugin/relativeTime";
+  import Image from "../../components/basic/image.svelte";
 
   dayjs.extend(calendar);
   dayjs.extend(duration);
@@ -61,127 +65,106 @@
       <Page.Title title={m["routes.account.title"]()} />
     </Page.Header>
     <Page.Divider />
-    <table class="border-separate border-spacing-1 text-left">
-      <thead class="text-blue-500">
-        <tr>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <PhotoAlbum2LineIcon />
+    <section class="flex flex-col">
+      <Table.Root>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell icon={PhotoAlbum2LineIcon}>
               {m["routes.account.attributes.base.avatar"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <User1LineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={User1LineIcon}>
               {m["routes.account.attributes.base.username"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <MailLineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={MailLineIcon}>
               {m["routes.account.attributes.base.email"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <Calendar2LineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={Calendar2LineIcon}>
               {m["routes.account.attributes.base.created_at"]()}
-            </section>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="w-[25%] border-b-1 border-b-zinc-800">
-            <img
-              class="w-16 my-4 rounded-md"
-              src={page.data.session.user.image}
-              alt={m["routes.account.attributes.base.avatar"]()}
-            />
-          </td>
-          <td class="w-[25%] border-b-1 border-b-zinc-800">
-            {page.data.session.user.name}
-          </td>
-          <td class="w-[25%] border-b-1 border-b-zinc-800">
-            {page.data.session.user.email}
-          </td>
-          <td class="w-[25%] border-b-1 border-b-zinc-800">
-            {dayjs(createdAt).calendar()}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="border-separate border-spacing-1 text-left">
-      <thead class="text-blue-500">
-        <tr>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <Search2LineIcon />
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.Cell>
+              <Image
+                class="rounded-md"
+                src={page.data.session.user.image}
+                alt={m["routes.account.attributes.base.avatar"]()}
+              />
+            </Table.Cell>
+            <Table.Cell>
+              {page.data.session.user.name}
+            </Table.Cell>
+            <Table.Cell>
+              {page.data.session.user.email}
+            </Table.Cell>
+            <Table.Cell>
+              {dayjs(createdAt).calendar()}
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table.Root>
+      <Table.Root>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell icon={Search2LineIcon}>
               {m["routes.account.attributes.stats.searches"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <AddLineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={AddLineIcon}>
               {m["routes.account.attributes.stats.additions"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <Pencil2LineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={Pencil2LineIcon}>
               {m["routes.account.attributes.stats.changes"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <TimeLineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={TimeLineIcon}>
               {m["routes.account.attributes.stats.time_spent_using"]()}
-            </section>
-          </th>
-          <th scope="col" class="border-b-1 border-b-zinc-700">
-            <section class="flex gap-x-1">
-              <TimeLineIcon />
+            </Table.HeaderCell>
+            <Table.HeaderCell icon={TimeLineIcon}>
               {m["routes.account.attributes.stats.time_spent_editing"]()}
-            </section>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <a href="/account/history/searches" class="font-bold underline">
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.Cell>
               {searches}
-            </a>
-          </td>
-          <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <a href="/account/history/additions" class="font-bold underline">
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/searches")}
+              />
+            </Table.Cell>
+            <Table.Cell>
               {additions}
-            </a>
-          </td>
-          <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <a href="/account/history/changes" class="font-bold underline">
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/additions")}
+              />
+            </Table.Cell>
+            <Table.Cell>
               {changes}
-            </a>
-          </td>
-          <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <a
-              href="/account/history/time-spent-using"
-              class="font-bold underline"
-            >
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/changes")}
+              />
+            </Table.Cell>
+            <Table.Cell>
               {timeSpentUsing.humanize()}
-            </a>
-          </td>
-          <td class="w-[20%] border-b-1 border-b-zinc-800">
-            <a
-              href="/account/history/time-spent-editing"
-              class="font-bold underline"
-            >
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/time-spent-using")}
+              />
+            </Table.Cell>
+            <Table.Cell>
               {timeSpentEditing.humanize()}
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/time-spent-editing")}
+              />
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table.Root>
+    </section>
     <section>
       <Button icon={ExitLineIcon} onclick={signOut}>
         {m["routes.account.logout"]()}
