@@ -42,11 +42,11 @@
       <BackButton onclick={() => goto("/sources")} />
     </Page.Actions>
     {#if sources}
-      {#if sources.length > 0}
-        <SourceTable {sources} mode="review" />
-      {:else}
-        {m["routes.sources.review.none"]()}
-      {/if}
+      <SourceTable
+        {sources}
+        mode="review"
+        noneText={m["routes.sources.review.none"]()}
+      />
     {:else}
       <Loading />
     {/if}
