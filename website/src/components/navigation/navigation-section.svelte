@@ -7,11 +7,10 @@
   import Search2LineIcon from "~icons/mingcute/search-2-line";
   import CursorTextLineIcon from "~icons/mingcute/cursor-text-line";
   import Box2LineIcon from "~icons/mingcute/box-2-line";
-  import InformationLineIcon from "~icons/mingcute/information-line";
+  import QuestionLineIcon from "~icons/mingcute/question-line";
   import HandHeartLineIcon from "~icons/mingcute/hand-heart-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
-  import User2LineIcon from "~icons/mingcute/user-2-line";
-  import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
+  import User4LineIcon from "~icons/mingcute/user-4-line";
   import Palette2LineIcon from "~icons/mingcute/palette-2-line";
   import Page from "../page/index.js";
 </script>
@@ -29,7 +28,7 @@
       <NavigationButton
         onclick={() => goto("/account")}
         highlighted={true}
-        icon={HistoryAnticlockwiseLine}
+        icon={User2LineIcon}
       >
         {#if page.url.pathname === "/account/history/searches"}
           {m["routes.account.history.searches.title"]()}
@@ -47,7 +46,7 @@
       <NavigationButton
         onclick={() => goto("/account")}
         highlighted={page.url.pathname === "/account"}
-        icon={User2LineIcon}
+        icon={User4LineIcon}
       >
         {m["routes.account.title"]()}
       </NavigationButton>
@@ -170,7 +169,7 @@
   <NavigationButton
     onclick={() => goto("/about")}
     highlighted={page.url.pathname === "/about"}
-    icon={InformationLineIcon}
+    icon={QuestionLineIcon}
   >
     {m["routes.about.title"]()}
   </NavigationButton>
