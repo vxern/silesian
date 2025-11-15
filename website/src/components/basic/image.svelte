@@ -1,7 +1,7 @@
 <script>
   import { clsx } from "clsx/lite";
   import Loading from "../meta/loading.svelte";
-  import AlertLineIcon from "~icons/mingcute/alert-line";
+  import Error from "../meta/error.svelte";
 
   const { children, class: classes, ...props } = $props();
 
@@ -17,7 +17,7 @@
 </script>
 
 {#if imageFailedToLoad}
-  <AlertLineIcon class="text-yellow-400" />
+  <Error />
 {:else if imageLoaded}
   <Loading />
 {/if}

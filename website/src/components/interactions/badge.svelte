@@ -1,5 +1,7 @@
 <script>
   import { clsx } from "clsx/lite";
+  import Loading from "../meta/loading.svelte";
+  import Error from "../meta/error.svelte";
 
   const { text, colour = "red" } = $props();
 
@@ -26,5 +28,11 @@
     colourClasses
   )}
 >
-  {text}
+  {#await text}
+    <Loading {colour} />
+  {:then text}
+    {text}
+  {:catch}
+    <Error />
+  {/await}
 </section>
