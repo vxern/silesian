@@ -17,6 +17,8 @@
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
 
+  const hasPermission = true;
+
   const { sources: unsortedSources, mode } = $props();
 
   const sources = unsortedSources
@@ -52,11 +54,13 @@
       <Table.HeaderCell>
         {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
-      {#if mode === "edit"}
-        <Table.HeaderCell />
-      {/if}
-      {#if mode === "review"}
-        <Table.HeaderCell />
+      {#if hasPermission}
+        {#if mode === "edit"}
+          <Table.HeaderCell />
+        {/if}
+        {#if mode === "review"}
+          <Table.HeaderCell />
+        {/if}
       {/if}
     </Table.Row>
   </Table.Header>
@@ -165,23 +169,25 @@
             {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
-        {#if mode === "edit"}
-          <Table.Cell>
-            <Button
-              colour="green"
-              icon={Pencil2LineIcon}
-              onclick={() => goto(`/sources/${source.id}/edit`)}
-            />
-          </Table.Cell>
-        {/if}
-        {#if mode === "review"}
-          <Table.Cell>
-            <Button
-              colour="blue"
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto(`/sources/${source.id}/review`)}
-            />
-          </Table.Cell>
+        {#if hasPermission}
+          {#if mode === "edit"}
+            <Table.Cell>
+              <Button
+                colour="green"
+                icon={Pencil2LineIcon}
+                onclick={() => goto(`/sources/${source.id}/edit`)}
+              />
+            </Table.Cell>
+          {/if}
+          {#if mode === "review"}
+            <Table.Cell>
+              <Button
+                colour="blue"
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto(`/sources/${source.id}/review`)}
+              />
+            </Table.Cell>
+          {/if}
         {/if}
       </Table.Row>
     {/each}

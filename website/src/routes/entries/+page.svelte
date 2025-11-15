@@ -64,12 +64,12 @@
           {m["routes.entries.actions.add"]()}
         </Button>
         <Button
-          colour="gray"
+          colour="yellow"
           icon={Edit4LineIcon}
           onclick={() => goto("/entries/drafts")}
         >
           {m["routes.entries.actions.drafts"]()}
-          <Badge text={draftCount} colour="zinc" />
+          <Badge text={draftCount} colour="yellow" />
         </Button>
         <section class="flex-1"></section>
         <Button
@@ -78,16 +78,12 @@
           onclick={() => goto("/entries/review")}
         >
           {m["routes.entries.actions.review"]()}
-          <Badge text={reviewCount} colour="zinc" />
+          <Badge text={reviewCount} colour="blue" />
         </Button>
       </Page.Actions>
     {/if}
     {#if entries}
-      {#if entries.length > 0}
-        <EntryTable {entries} />
-      {:else}
-        {m["routes.entries.none"]()}
-      {/if}
+      <EntryTable {entries} noneText={m["routes.entries.none"]()} />
     {:else}
       <Loading />
     {/if}

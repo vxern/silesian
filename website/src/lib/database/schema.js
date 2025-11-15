@@ -97,8 +97,7 @@ export const users = pgTable("users", {
 
 export const reviews = pgTable("reviews", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  reviewable_type: text().notNull(),
-  reviewable_id: bigint({ mode: "number" }).notNull(),
+  change_id: bigint({ mode: "number" }).references(() => changes.id).notNull(),
   reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   comments: text().array(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),

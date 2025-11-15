@@ -15,11 +15,11 @@
       type="text"
       {name}
       rows="16"
-      class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 p-4 rounded-l-lg text-sm font-mono h-160"
+      class="flex-1 bg-zinc-800 outline-1 outline-zinc-600 text-zinc-300 p-4 rounded-l-lg text-sm font-mono h-120"
       bind:value={contents}
     ></textarea>
     <section
-      class="flex-1 outline-1 bg-zinc-900 inset-shadow-[0_2px_10px_rgba(0,0,0,0.25)] inset-shadow-black outline-zinc-600 p-4 rounded-r-lg text-start h-160 overflow-y-auto"
+      class="flex-1 outline-1 bg-zinc-900 inset-shadow-[0_2px_10px_rgba(0,0,0,0.25)] inset-shadow-black outline-zinc-600 p-4 rounded-r-lg text-start h-120 overflow-y-auto"
     >
       {#if contents}
         {@html renderedContents}
