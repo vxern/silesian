@@ -6,7 +6,9 @@
 
 <th class={clsx("border-b-1 p-2", classes)} {scope}>
   <section class="flex gap-x-1">
-    <Icon />
+    {#if Icon}
+      <Icon />
+    {/if}
     {@render children?.()}
   </section>
 </th>
