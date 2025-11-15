@@ -43,7 +43,7 @@
     </Page.Actions>
     {#if sources}
       {#if sources.length > 0}
-        <SourceTable {sources} />
+        <SourceTable {sources} mode="edit" />
       {:else}
         {m["routes.sources.drafts.none"]()}
       {/if}

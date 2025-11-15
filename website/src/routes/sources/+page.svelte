@@ -59,12 +59,12 @@
           {m["routes.sources.actions.add"]()}
         </Button>
         <Button
-          colour="gray"
+          colour="yellow"
           icon={Edit4LineIcon}
           onclick={() => goto("/sources/drafts")}
         >
           {m["routes.sources.actions.drafts"]()}
-          <Badge text={draftCount} colour="zinc" />
+          <Badge text={draftCount} colour="yellow" />
         </Button>
         <section class="flex-1"></section>
         <Button
@@ -73,16 +73,12 @@
           onclick={() => goto("/sources/review")}
         >
           {m["routes.sources.actions.review"]()}
-          <Badge text={reviewCount} colour="zinc" />
+          <Badge text={reviewCount} colour="blue" />
         </Button>
       </Page.Actions>
     {/if}
     {#if sources}
-      {#if sources.length > 0}
-        <SourceTable {sources} />
-      {:else}
-        {m["routes.sources.none"]()}
-      {/if}
+      <SourceTable {sources} />
     {:else}
       <Loading />
     {/if}

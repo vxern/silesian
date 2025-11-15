@@ -2,12 +2,15 @@
   import { m } from "$lib/paraglide/messages";
   import { onMount } from "svelte";
   import { page } from "$app/state";
-  import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
+  import Form from "../../../../components/form/index.js";
   import Loading from "../../../../components/meta/loading.svelte";
   import SourceForm from "../../form.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
+  import Button from "../../../../components/interactions/button.svelte";
+  import CheckLineIcon from "~icons/mingcute/check-line";
+  import CloseLineIcon from "~icons/mingcute/close-line";
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
@@ -27,12 +30,12 @@
 <svelte:head>
   <meta
     name="description"
-    content={m["routes.sources.[source_id].edit.description"]()}
+    content={m["routes.sources.[source_id].review.description"]()}
   />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.sources.[source_id].edit.title"]({
+      page_title: m["routes.sources.[source_id].review.title"]({
         source_name: source?.name,
       }),
     })}
@@ -44,7 +47,7 @@
 <Page.Root>
   <Page.Header>
     <Page.Title
-      title={m["routes.sources.[source_id].edit.title"]({
+      title={m["routes.sources.[source_id].review.title"]({
         source_name: source?.name,
       })}
     />
@@ -55,15 +58,27 @@
       <BackButton onclick={() => window.history.back()} />
     </Page.Actions>
     {#if source}
-      <form
-        method="POST"
-        action="?/update"
-        use:enhance
-        class="flex flex-col gap-y-6"
-      >
-        <input type="hidden" name="id" value={source.id} />
-        <SourceForm {source} />
-      </form>
+      <section>
+        <Form.Disabled>
+          <SourceForm {source} />
+        </Form.Disabled>
+        <Page.Actions>
+          <Button
+            icon={CheckLineIcon}
+            onclick={() => window.history.back()}
+            colour="green"
+          >
+            {m["components.form.accept"]()}
+          </Button>
+          <Button
+            icon={CloseLineIcon}
+            onclick={() => window.history.back()}
+            colour="red"
+          >
+            {m["components.form.reject"]()}
+          </Button>
+        </Page.Actions>
+      </section>
     {:else}
       <Loading />
     {/if}

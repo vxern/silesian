@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { sources } from "$lib/database/schema";
+import { sources, changes } from "$lib/database/schema";
 
 // TODO(vxern): Validate.
 
@@ -8,20 +8,45 @@ export const actions = {
   create: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const result = await db.insert(sources).values({
-      name: data.get("name"),
-      url: data.get("url"),
-      authors: JSON.parse(data.get("authors[]")),
-      orthography: data.get("orthography"),
-      source_language: data.get("source_language"),
-      target_language: data.get("target_language"),
-      licence: data.get("licence"),
-      access: data.get("access"),
-      redistributable: data.get("redistributable") === "1",
-      total_entry_count: data.get("total_entry_count"),
+    const source = await db.transaction(async (tx) => {
+      const source = await db.insert(sources).values({
+        status: "draft" in data ? "draft" : "pending",
+        name: data.get("name"),
+        url: data.get("url"),
+        authors: JSON.parse(data.get("authors[]")),
+        year: data.get("year"),
+        orthography: data.get("orthography"),
+        source_language: data.get("source_language"),
+        target_language: data.get("target_language"),
+        licence: data.get("licence"),
+        access: data.get("access"),
+        redistributable: data.get("redistributable") === "1",
+        total_entry_count: data.get("total_entry_count"),
+      }).returning({ id: sources.id }).then((result) => result.at(0));
+
+      await db.insert(changes).values({
+        changeable_type: "sources",
+        changeable_id: source.id,
+      }).onConflictDoUpdate({
+        target: changes.version,
+        set: { version: sql`changes.version + 1` },
+      });
+
+      return source;
     });
 
     // TODO(vxern): Handle failure.
+
+    let redirectTo;
+    if (source.status === "draft") {
+      redirectTo = "/sources/drafts";
+    } else if (source.status === "pending") {
+      redirectTo = "/sources/review";
+    } else if (source.status === "published") {
+      redirectTo = "/sources";
+    } else {
+      return error(500, { message: "Internal Server Error" });
+    }
 
     redirect(303, "/sources");
   },

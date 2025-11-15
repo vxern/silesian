@@ -2,6 +2,7 @@
   import { m } from "$lib/paraglide/messages";
   import AddLineIcon from "~icons/mingcute/add-line";
   import Save2LineIcon from "~icons/mingcute/save-2-line";
+  import Upload2LineIcon from "~icons/mingcute/upload-2-line";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
   import {
@@ -34,6 +35,13 @@
     label={m["routes.sources.form.authors"]()}
     description={m["routes.sources.form.authors_description"]()}
     value={source?.authors}
+  />
+  <Form.TextElement
+    name="year"
+    label={m["routes.sources.form.year"]()}
+    description={m["routes.sources.form.year_description"]()}
+    type="text"
+    value={source?.year}
   />
 </section>
 <section class="flex gap-x-4">
@@ -118,12 +126,19 @@
   <section class="flex-1"></section>
 </section>
 <section class="flex gap-x-4 items-start">
-  <Button type="submit" icon={AddLineIcon} colour="green">
-    {m["routes.sources.form.save"]()}
-  </Button>
   {#if !source}
+    <Button type="submit" icon={Upload2LineIcon} colour="green">
+      {m["components.form.create"]()}
+    </Button>
+    <Button name="draft" type="submit" icon={AddLineIcon} colour="zinc">
+      {m["components.form.create_as_draft"]()}
+    </Button>
+  {:else if source.status === "draft"}
+    <Button type="submit" icon={Upload2LineIcon} colour="green">
+      {m["components.form.publish"]()}
+    </Button>
     <Button name="draft" type="submit" icon={Save2LineIcon} colour="zinc">
-      {m["routes.sources.form.save_as_draft"]()}
+      {m["components.form.save"]()}
     </Button>
   {/if}
 </section>
