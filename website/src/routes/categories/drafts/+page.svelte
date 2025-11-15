@@ -1,0 +1,57 @@
+<script>
+  import { onMount } from "svelte";
+  import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
+  import Page from "../../../components/page/index.js";
+  import NavigationSection from "../../../components/navigation/navigation-section.svelte";
+  import CategoryTable from "../../../components/categories/category-table.svelte";
+  import constants from "$lib/constants/core";
+  import Loading from "../../../components/meta/loading.svelte";
+  import BackButton from "../../../components/interactions/back-button.svelte";
+
+  let categories = $state();
+  async function fetchCategories() {
+    const response = await fetch("/api/categories/drafts");
+    categories = await response.json();
+  }
+
+  onMount(() => {
+    fetchCategories();
+  });
+</script>
+
+<svelte:head>
+  <meta
+    name="description"
+    content={m["routes.categories.drafts.description"]()}
+  />
+  <title>
+    {m["title"]({
+      project_name: constants.project.name,
+      page_title: m["routes.categories.drafts.title"](),
+    })}
+  </title>
+</svelte:head>
+
+<NavigationSection />
+
+<Page.Root>
+  <Page.Header>
+    <Page.Title title={m["routes.categories.drafts.title"]()} />
+  </Page.Header>
+  <Page.Divider />
+  <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => goto("/categories")} />
+    </Page.Actions>
+    {#if categories}
+      <CategoryTable
+        {categories}
+        mode="edit"
+        noneText={m["routes.categories.drafts.none"]()}
+      />
+    {:else}
+      <Loading />
+    {/if}
+  </Page.Contents>
+</Page.Root>

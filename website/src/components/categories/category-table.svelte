@@ -6,20 +6,22 @@
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
 
-  // TODO(vxern): Use proper permissions.
+  // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
+  // TODO(vxern): Update the check for community authors.
+
   const hasPermission = true;
 
-  const { entries, mode, noneText } = $props();
+  const { categories, mode, noneText } = $props();
 </script>
 
 <Table.Root>
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.entry_table.lemma"]()}
+        {m["components.category_table.name"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.entry_table.source"]()}
+        {m["components.category_table.colour"]()}
       </Table.HeaderCell>
       {#if hasPermission}
         {#if mode === "edit"}
@@ -32,32 +34,22 @@
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each entries as entry}
-      <Table.Row>
+    {#each categories as category, index}
+      <Table.Row {index}>
         <Table.Cell>
-          {entry.lemma}
+          {category.name}
         </Table.Cell>
         <Table.Cell>
-          <a href={entry.source.url} class="underline underline-offset-3">
-            {entry.source.name}
-          </a>
+          <!-- TODO(vxern): Maybe get rid of this column and display it differently. -->
+          {category.colour}
         </Table.Cell>
-        {#if mode === "edit"}
-          <Table.Cell>
-            <Button
-              colour="green"
-              icon={Pencil2LineIcon}
-              onclick={() => goto(`/sources/${source.id}/edit`)}
-            />
-          </Table.Cell>
-        {/if}
         {#if hasPermission}
           {#if mode === "edit"}
             <Table.Cell>
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
-                onclick={() => goto(`/entries/${entry.id}/edit`)}
+                onclick={() => goto(`/categories/${category.id}/edit`)}
               />
             </Table.Cell>
           {/if}
@@ -66,7 +58,7 @@
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
-                onclick={() => goto(`/entries/${entry.id}/review`)}
+                onclick={() => goto(`/categories/${category.id}/review`)}
               />
             </Table.Cell>
           {/if}
@@ -75,6 +67,6 @@
     {/each}
   </Table.Body>
 </Table.Root>
-{#if entries.length === 0}
+{#if categories.length === 0}
   {noneText}
 {/if}

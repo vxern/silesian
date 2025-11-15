@@ -44,7 +44,7 @@ export const languagesEnum = pgEnum("languages", [
 
 export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);
 
-export const publishStatusesEnum = pgEnum("entry_statuses", ["draft", "pending", "reviewed", "published"]);
+export const publishStatusesEnum = pgEnum("publish_statuses", ["draft", "pending", "reviewed", "published"]);
 
 export const sources = pgTable("sources", {
   ...defaultColumns,
@@ -81,9 +81,36 @@ export const entriesToCategories = pgTable("entry_categories", {
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
 });
 
+export const coloursEnum = pgEnum("colours", [
+  "red",
+  "orange",
+  "amber",
+  "yellow",
+  "lime",
+  "green",
+  "emerald",
+  "teal",
+  "cyan",
+  "sky",
+  "blue",
+  "indigo",
+  "violet",
+  "purple",
+  "fuchsia",
+  "pink",
+  "rose",
+  "slate",
+  "gray",
+  "zinc",
+  "neutral",
+  "stone",
+]);
+
 export const categories = pgTable("categories", {
   ...defaultColumns,
   name: text().notNull(),
+  colour: coloursEnum().notNull(),
+  status: publishStatusesEnum().default("draft").notNull(),
 });
 
 // TODO(vxern): Add relation between entries and categories.

@@ -19,7 +19,7 @@
 
   const hasPermission = true;
 
-  const { sources: unsortedSources, mode } = $props();
+  const { sources: unsortedSources, mode, noneText } = $props();
 
   const sources = unsortedSources
     .sort(
@@ -194,5 +194,5 @@
   </Table.Body>
 </Table.Root>
 {#if sources.length === 0}
-  {m["routes.sources.none"]()}
+  {noneText}
 {/if}

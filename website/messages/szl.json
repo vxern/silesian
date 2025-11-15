@@ -74,6 +74,10 @@
       "lemma": "Hasło",
       "source": "Source"
     },
+    "category_table": {
+      "name": "Miano",
+      "colour": "Farba"
+    },
     "version_section": {
       "version": "Wersyjŏ {version}"
     },
@@ -135,9 +139,9 @@
                 "countPlural"
               ],
               "match": {
-                "countPlural=one": "a we tym miesiōncu dodali my jedno ś nich.",
-                "countPlural=few": "a we tym miesiōncu dodali my {count} ś nich.",
-                "countPlural=many": "a we tym miesiōncu dodali my {count} ś nich."
+                "countPlural=one": "a we tym miesiōncu przidali my jedno ś nich.",
+                "countPlural=few": "a we tym miesiōncu przidali my {count} ś nich.",
+                "countPlural=many": "a we tym miesiōncu przidali my {count} ś nich."
               }
             }
           ]
@@ -246,14 +250,18 @@
       },
       "[entry_id]": {
         "edit": {
-          "title": "Hasło — „{entry_lemma}”",
+          "title": "Edytowaniy kategoryje — „{entry_lemma}”",
           "description": "Edytowanie hasła, co już istnieje.",
           "edit": "Edytuj"
+        },
+        "review": {
+          "title": "Sprŏwdzaniy hasła — „{entry_lemma}”",
+          "description": ""
         }
       },
       "new": {
         "title": "Nowe hasło",
-        "description": "Dodŏwanie nowygo hasła ku dykcjōnŏrzu."
+        "description": "Przidŏwanie nowygo hasła ku dykcjōnŏrzu."
       },
       "form": {
         "lemma": "Hasło",
@@ -300,7 +308,7 @@
     },
     "sources": {
       "title": "Zdrzōdła",
-      "description": "Zdrzōdła, kerych używōmy a kere my zaimportowali abo dalszij chcymy zaimportować.",
+      "description": "Zdrzōdła, kierych używōmy a kiere my zaimportowali abo dalszij chcymy zaimportować.",
       "none": "Niy ma jeszcze żŏdnych zdrzōdeł.",
       "actions": {
         "add": "Przidej nowe zdrzōdło",
@@ -309,16 +317,16 @@
       },
       "new": {
         "title": "Nowe zdrzōdło",
-        "description": "Dodŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
+        "description": "Przidŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
       },
       "drafts": {
         "title": "Cechōnki zdrzōdeł",
-        "description": "Cechōnki zdrzōdeł, kere używŏcz przidŏwŏ.",
+        "description": "Cechōnki zdrzōdeł, kiere używŏcz przidŏwŏ.",
         "none": "Niy mŏcie żŏdnych cechōnkōw."
       },
       "review": {
         "title": "Zdrzōdła do sprŏwdzyniŏ",
-        "description": "Zdrzōdła, kere sōm już skōńczōne a kere trza sprŏwdzić.",
+        "description": "Zdrzōdła, kiere sōm już skōńczōne a kiere trza sprŏwdzić.",
         "none": "Niy ma żŏdnych zdrzōdeł do sprŏwdzyniŏ."
       },
       "[source_id]": {
@@ -354,6 +362,46 @@
         "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
         "total_entry_count": "Liczba haseł (we prziblyżyniu)",
         "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
+      }
+    },
+    "categories": {
+      "title": "Kategoryje",
+      "description": "Kategoryje do kierych należōm roztōmańte zasoby na strōnie.",
+      "none": "Niy ma jeszcze żŏdnych kategoryjōw.",
+      "actions": {
+        "add": "Przidej nowõ kategoryjõ",
+        "drafts": "Cechōnki",
+        "review": "Sprŏwdź kategoryje"
+      },
+      "new": {
+        "title": "Nowŏ kategoryjŏ",
+        "description": "Przidŏwanie nowyj kategoryje ku dykcjōnŏrzu."
+      },
+      "drafts": {
+        "title": "Cechōnki kategoryjōw",
+        "description": "Cechōnki kategoryjōw, kiere używŏcz przidŏwŏ.",
+        "none": "Niy mŏcie żŏdnych cechōnkōw."
+      },
+      "review": {
+        "title": "Kategoryje do sprŏwdzyniŏ",
+        "description": "Kategoryje, kiere sōm już skōńczōne a koere trza sprŏwdzić.",
+        "none": "Niy ma żŏdnych kategoryjōw do sprŏwdzyniŏ."
+      },
+      "[category_id]": {
+        "edit": {
+          "title": "Edytowaniy kategoryje — „{category_name}”",
+          "description": ""
+        },
+        "review": {
+          "title": "Sprŏwdzaniy kategoryje — „{category_name}”",
+          "description": ""
+        }
+      },
+      "form": {
+        "name": "Miano",
+        "name_description": "Jako sie ta kategoryjŏ mianuje?",
+        "colour": "Farba",
+        "colour_description": "Jakõ farbã ta kategoryjŏ bydzie mieć?"
       }
     },
     "lemma": {

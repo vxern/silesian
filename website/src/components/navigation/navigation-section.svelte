@@ -6,12 +6,13 @@
   import Home2LineIcon from "~icons/mingcute/home-2-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
   import CursorTextLineIcon from "~icons/mingcute/cursor-text-line";
-  import Book6LineIcon from "~icons/mingcute/book-6-line";
+  import Box2LineIcon from "~icons/mingcute/box-2-line";
   import InformationLineIcon from "~icons/mingcute/information-line";
   import HandHeartLineIcon from "~icons/mingcute/hand-heart-line";
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
   import HistoryAnticlockwiseLine from "~icons/mingcute/history-anticlockwise-line";
+  import Palette2LineIcon from "~icons/mingcute/palette-2-line";
   import Page from "../page/index.js";
 </script>
 
@@ -85,7 +86,7 @@
     <NavigationButton
       onclick={() => goto("/sources")}
       highlighted={true}
-      icon={Book6LineIcon}
+      icon={Box2LineIcon}
     >
       {#if page.url.pathname === "/sources/drafts"}
         {m["routes.sources.drafts.title"]()}
@@ -101,9 +102,34 @@
     <NavigationButton
       onclick={() => goto("/sources")}
       highlighted={page.url.pathname === "/sources"}
-      icon={Book6LineIcon}
+      icon={Box2LineIcon}
     >
       {m["routes.sources.title"]()}
+    </NavigationButton>
+  {/if}
+  {#if page.url.pathname.startsWith("/categories/")}
+    <NavigationButton
+      onclick={() => goto("/categories")}
+      highlighted={true}
+      icon={Palette2LineIcon}
+    >
+      {#if page.url.pathname === "/categories/drafts"}
+        {m["routes.categories.drafts.title"]()}
+      {:else if page.url.pathname === "/categories/review"}
+        {m["routes.categories.review.title"]()}
+      {:else if page.url.pathname === "/categories/new"}
+        {m["routes.categories.new.title"]()}
+      {:else if /\/categories\/\d+\/review/.test(page.url.pathname)}
+        {m["routes.categories.review.title"]()}
+      {/if}
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/categories")}
+      highlighted={page.url.pathname === "/categories"}
+      icon={Palette2LineIcon}
+    >
+      {m["routes.categories.title"]()}
     </NavigationButton>
   {/if}
   {#if page.url.pathname.startsWith("/entries/")}
@@ -118,6 +144,8 @@
         {m["routes.entries.review.title"]()}
       {:else if page.url.pathname === "/entries/new"}
         {m["routes.entries.new.title"]()}
+      {:else if /\/entries\/\d+\/review/.test(page.url.pathname)}
+        {m["routes.entries.review.title"]()}
       {/if}
     </NavigationButton>
   {:else}

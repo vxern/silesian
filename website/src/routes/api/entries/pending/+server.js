@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { entries, sources } from "$lib/database/schema";
+import { entries, categories } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
 
 export async function GET() {
@@ -9,9 +9,9 @@ export async function GET() {
   return json(results.map((result) => {
     const entry = {
       ...result.entries,
-      source: result.sources,
+      source: result.categories,
     }
-    delete entry["source_id"];
+    delete entry["category_id"];
 
     return entry;
   }));

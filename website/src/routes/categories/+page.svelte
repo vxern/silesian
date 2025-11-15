@@ -4,7 +4,7 @@
   import { goto } from "$app/navigation";
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-  import SourceTable from "../../components/sources/source-table.svelte";
+  import CategoryTable from "../../components/categories/category-table.svelte";
   import constants from "$lib/constants/core";
   import Loading from "../../components/meta/loading.svelte";
   import Button from "../../components/interactions/button.svelte";
@@ -20,23 +20,23 @@
   const draftCount = 16;
   const reviewCount = 9;
 
-  let sources = $state();
-  async function fetchSources() {
-    const response = await fetch("/api/sources");
-    sources = await response.json();
+  let categories = $state();
+  async function fetchCategories() {
+    const response = await fetch("/api/categories");
+    categories = await response.json();
   }
 
   onMount(() => {
-    fetchSources();
+    fetchCategories();
   });
 </script>
 
 <svelte:head>
-  <meta name="description" content={m["routes.sources.description"]()} />
+  <meta name="description" content={m["routes.categories.description"]()} />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.sources.title"](),
+      page_title: m["routes.categories.title"](),
     })}
   </title>
 </svelte:head>
@@ -45,7 +45,7 @@
 
 <Page.Root>
   <Page.Header>
-    <Page.Title title={m["routes.sources.title"]()} />
+    <Page.Title title={m["routes.categories.title"]()} />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
@@ -54,31 +54,31 @@
         <Button
           colour="green"
           icon={AddLineIcon}
-          onclick={() => goto("/sources/new")}
+          onclick={() => goto("/categories/new")}
         >
-          {m["routes.sources.actions.add"]()}
+          {m["routes.categories.actions.add"]()}
         </Button>
         <Button
           colour="yellow"
           icon={Edit4LineIcon}
-          onclick={() => goto("/sources/drafts")}
+          onclick={() => goto("/categories/drafts")}
         >
-          {m["routes.sources.actions.drafts"]()}
+          {m["routes.categories.actions.drafts"]()}
           <Badge text={draftCount} colour="yellow" />
         </Button>
         <section class="flex-1"></section>
         <Button
           colour="blue"
           icon={ChecksLineIcon}
-          onclick={() => goto("/sources/review")}
+          onclick={() => goto("/categories/review")}
         >
-          {m["routes.sources.actions.review"]()}
+          {m["routes.categories.actions.review"]()}
           <Badge text={reviewCount} colour="blue" />
         </Button>
       </Page.Actions>
     {/if}
-    {#if sources}
-      <SourceTable {sources} noneText={m["routes.sources.none"]()} />
+    {#if categories}
+      <CategoryTable {categories} noneText={m["routes.categories.none"]()} />
     {:else}
       <Loading />
     {/if}
