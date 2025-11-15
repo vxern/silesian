@@ -42,7 +42,11 @@
       <BackButton onclick={() => goto("/entries")} />
     </Page.Actions>
     {#if entries}
-      <EntryTable {entries} noneText={m["routes.entries.review.none"]()} />
+      <EntryTable
+        {entries}
+        mode="review"
+        noneText={m["routes.entries.review.none"]()}
+      />
     {:else}
       <Loading />
     {/if}
