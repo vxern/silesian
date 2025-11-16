@@ -1,23 +1,13 @@
 <script>
-  import { onMount } from "svelte";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
   import Page from "../../../components/page/index.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import EntryTable from "../../../components/entries/entry-table.svelte";
   import constants from "$lib/constants/core";
-  import Loading from "../../../components/meta/loading.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
 
-  let entries = $state();
-  async function fetchEntries() {
-    const response = await fetch("/api/entries/pending");
-    entries = await response.json();
-  }
-
-  onMount(() => {
-    fetchEntries();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -41,14 +31,10 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/entries")} />
     </Page.Actions>
-    {#if entries}
-      <EntryTable
-        {entries}
-        mode="review"
-        noneText={m["routes.entries.review.none"]()}
-      />
-    {:else}
-      <Loading />
-    {/if}
+    <EntryTable
+      entries={data.entries}
+      mode="review"
+      noneText={m["routes.entries.review.none"]()}
+    />
   </Page.Contents>
 </Page.Root>

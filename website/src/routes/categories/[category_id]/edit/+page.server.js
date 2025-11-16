@@ -1,7 +1,16 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { sources } from "$lib/database/schema";
+import { categories } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
+
+// TODO(vxern): Need to exclude deleted objects from filters.
+
+export const load = async () => {
+  return {
+    // TODO(vxern): Make sure to filter by the category.
+    category: await db.select().from(categories).where(eq(categories.id, 1)).then((categories) => categories.at(0)),
+  };
+};
 
 // TODO(vxern): Validate.
 

@@ -11,17 +11,8 @@
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
-  // TODO(vxern): Use load functions.
 
-  let source = $state();
-  async function fetchSource() {
-    const response = await fetch(`/api/sources/${page.params.source_id}`);
-    source = await response.json();
-  }
-
-  onMount(() => {
-    fetchSource();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -33,7 +24,7 @@
     {m["title"]({
       project_name: constants.project.name,
       page_title: m["routes.sources.[source_id].edit.title"]({
-        source_name: source?.name,
+        source_name: data.source.name,
       }),
     })}
   </title>
@@ -45,7 +36,7 @@
   <Page.Header>
     <Page.Title
       title={m["routes.sources.[source_id].edit.title"]({
-        source_name: source?.name,
+        source_name: data.source.name,
       })}
     />
   </Page.Header>
@@ -54,18 +45,14 @@
     <Page.Actions>
       <BackButton onclick={() => window.history.back()} />
     </Page.Actions>
-    {#if source}
-      <form
-        method="POST"
-        action="?/update"
-        use:enhance
-        class="flex flex-col gap-y-6"
-      >
-        <input type="hidden" name="id" value={source.id} />
-        <SourceForm {source} />
-      </form>
-    {:else}
-      <Loading />
-    {/if}
+    <form
+      method="POST"
+      action="?/update"
+      use:enhance
+      class="flex flex-col gap-y-6"
+    >
+      <input type="hidden" name="id" value={data.source.id} />
+      <SourceForm source={data.source} />
+    </form>
   </Page.Contents>
 </Page.Root>

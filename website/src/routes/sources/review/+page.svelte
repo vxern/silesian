@@ -6,18 +6,9 @@
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import SourceTable from "../../../components/sources/source-table.svelte";
   import constants from "$lib/constants/core";
-  import Loading from "../../../components/meta/loading.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
 
-  let sources = $state();
-  async function fetchSources() {
-    const response = await fetch("/api/sources/pending");
-    sources = await response.json();
-  }
-
-  onMount(() => {
-    fetchSources();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -41,14 +32,10 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/sources")} />
     </Page.Actions>
-    {#if sources}
-      <SourceTable
-        {sources}
-        mode="review"
-        noneText={m["routes.sources.review.none"]()}
-      />
-    {:else}
-      <Loading />
-    {/if}
+    <SourceTable
+      sources={data.sources}
+      mode="review"
+      noneText={m["routes.sources.review.none"]()}
+    />
   </Page.Contents>
 </Page.Root>

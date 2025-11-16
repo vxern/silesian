@@ -14,17 +14,8 @@
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
-  // TODO(vxern): Use load functions.
 
-  let entry = $state();
-  async function fetchEntry() {
-    const response = await fetch(`/api/entries/${page.params.entry_id}`);
-    entry = await response.json();
-  }
-
-  onMount(() => {
-    fetchEntry();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -36,7 +27,7 @@
     {m["title"]({
       project_name: constants.project.name,
       page_title: m["routes.entries.[entry_id].review.title"]({
-        entry_lemma: entry?.lemma,
+        entry_lemma: data.entry.lemma,
       }),
     })}
   </title>
@@ -48,7 +39,7 @@
   <Page.Header>
     <Page.Title
       title={m["routes.entries.[entry_id].review.title"]({
-        entry_lemma: entry?.lemma,
+        entry_lemma: data.entry.lemma,
       })}
     />
   </Page.Header>
@@ -57,30 +48,26 @@
     <Page.Actions>
       <BackButton onclick={() => window.history.back()} />
     </Page.Actions>
-    {#if entry}
-      <section>
-        <Form.Disabled>
-          <EntryForm {entry} />
-        </Form.Disabled>
-        <Page.Actions>
-          <Button
-            icon={CheckLineIcon}
-            onclick={() => window.history.back()}
-            colour="green"
-          >
-            {m["components.form.accept"]()}
-          </Button>
-          <Button
-            icon={CloseLineIcon}
-            onclick={() => window.history.back()}
-            colour="red"
-          >
-            {m["components.form.reject"]()}
-          </Button>
-        </Page.Actions>
-      </section>
-    {:else}
-      <Loading />
-    {/if}
+    <section>
+      <Form.Disabled>
+        <EntryForm entry={data.entry} />
+      </Form.Disabled>
+      <Page.Actions>
+        <Button
+          icon={CheckLineIcon}
+          onclick={() => window.history.back()}
+          colour="green"
+        >
+          {m["components.form.accept"]()}
+        </Button>
+        <Button
+          icon={CloseLineIcon}
+          onclick={() => window.history.back()}
+          colour="red"
+        >
+          {m["components.form.reject"]()}
+        </Button>
+      </Page.Actions>
+    </section>
   </Page.Contents>
 </Page.Root>

@@ -6,18 +6,9 @@
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import CategoryTable from "../../../components/categories/category-table.svelte";
   import constants from "$lib/constants/core";
-  import Loading from "../../../components/meta/loading.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
 
-  let categories = $state();
-  async function fetchCategories() {
-    const response = await fetch("/api/categories/drafts");
-    categories = await response.json();
-  }
-
-  onMount(() => {
-    fetchCategories();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -44,14 +35,10 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/categories")} />
     </Page.Actions>
-    {#if categories}
-      <CategoryTable
-        {categories}
-        mode="edit"
-        noneText={m["routes.categories.drafts.none"]()}
-      />
-    {:else}
-      <Loading />
-    {/if}
+    <CategoryTable
+      categories={data.categories}
+      mode="edit"
+      noneText={m["routes.categories.drafts.none"]()}
+    />
   </Page.Contents>
 </Page.Root>

@@ -1,12 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import SourceTable from "../../components/sources/source-table.svelte";
   import constants from "$lib/constants/core";
-  import Loading from "../../components/meta/loading.svelte";
   import Button from "../../components/interactions/button.svelte";
   import Badge from "../../components/interactions/badge.svelte";
   import AddLineIcon from "~icons/mingcute/add-line";
@@ -16,19 +14,7 @@
   // TODO(vxern): Get this from the user's permission.
   const hasPermission = true;
 
-  // TODO(vxern): Get this dynamically.
-  const draftCount = 16;
-  const reviewCount = 9;
-
-  let sources = $state();
-  async function fetchSources() {
-    const response = await fetch("/api/sources");
-    sources = await response.json();
-  }
-
-  onMount(() => {
-    fetchSources();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -64,7 +50,7 @@
           onclick={() => goto("/sources/drafts")}
         >
           {m["routes.sources.actions.drafts"]()}
-          <Badge text={draftCount} colour="yellow" />
+          <Badge text={data.draftCount} colour="yellow" />
         </Button>
         <section class="flex-1"></section>
         <Button
@@ -73,14 +59,10 @@
           onclick={() => goto("/sources/review")}
         >
           {m["routes.sources.actions.review"]()}
-          <Badge text={reviewCount} colour="blue" />
+          <Badge text={data.pendingCount} colour="blue" />
         </Button>
       </Page.Actions>
     {/if}
-    {#if sources}
-      <SourceTable {sources} noneText={m["routes.sources.none"]()} />
-    {:else}
-      <Loading />
-    {/if}
+    <SourceTable sources={data.sources} noneText={m["routes.sources.none"]()} />
   </Page.Contents>
 </Page.Root>

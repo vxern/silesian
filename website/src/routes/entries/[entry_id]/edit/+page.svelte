@@ -10,17 +10,8 @@
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
-  // TODO(vxern): Use load functions.
 
-  let entry = $state();
-  async function fetchEntry() {
-    const response = await fetch(`/api/entries/${page.params.entry_id}`);
-    entry = await response.json();
-  }
-
-  onMount(() => {
-    fetchEntry();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -32,7 +23,7 @@
     {m["title"]({
       project_name: constants.project.name,
       page_title: m["routes.entries.[entry_id].edit.title"]({
-        entry_lemma: entry?.lemma,
+        entry_lemma: data.entry.lemma,
       }),
     })}
   </title>
@@ -44,24 +35,20 @@
   <Page.Header>
     <Page.Title
       title={m["routes.entries.[entry_id].edit.title"]({
-        entry_lemma: entry?.lemma,
+        entry_lemma: data.entry.lemma,
       })}
     />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    {#if entry}
-      <form
-        method="POST"
-        action="?/update"
-        use:enhance
-        class="flex flex-col gap-y-6"
-      >
-        <input type="hidden" name="id" value={entry.id} />
-        <EntryForm {entry} />
-      </form>
-    {:else}
-      <Loading />
-    {/if}
+    <form
+      method="POST"
+      action="?/update"
+      use:enhance
+      class="flex flex-col gap-y-6"
+    >
+      <input type="hidden" name="id" value={data.entry.id} />
+      <EntryForm entry={data.entry} />
+    </form>
   </Page.Contents>
 </Page.Root>

@@ -9,15 +9,7 @@
   import Loading from "../../../components/meta/loading.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
 
-  let sources = $state();
-  async function fetchSources() {
-    const response = await fetch("/api/sources/drafts");
-    sources = await response.json();
-  }
-
-  onMount(() => {
-    fetchSources();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -41,14 +33,10 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/sources")} />
     </Page.Actions>
-    {#if sources}
-      <SourceTable
-        {sources}
-        mode="edit"
-        noneText={m["routes.sources.drafts.none"]()}
-      />
-    {:else}
-      <Loading />
-    {/if}
+    <SourceTable
+      sources={data.sources}
+      mode="edit"
+      noneText={m["routes.sources.drafts.none"]()}
+    />
   </Page.Contents>
 </Page.Root>

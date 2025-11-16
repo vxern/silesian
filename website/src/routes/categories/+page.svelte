@@ -16,19 +16,7 @@
   // TODO(vxern): Get this from the user's permission.
   const hasPermission = true;
 
-  // TODO(vxern): Get this dynamically.
-  const draftCount = 16;
-  const reviewCount = 9;
-
-  let categories = $state();
-  async function fetchCategories() {
-    const response = await fetch("/api/categories");
-    categories = await response.json();
-  }
-
-  onMount(() => {
-    fetchCategories();
-  });
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -64,7 +52,7 @@
           onclick={() => goto("/categories/drafts")}
         >
           {m["routes.categories.actions.drafts"]()}
-          <Badge text={draftCount} colour="yellow" />
+          <Badge text={data.draftCount} colour="yellow" />
         </Button>
         <section class="flex-1"></section>
         <Button
@@ -73,14 +61,13 @@
           onclick={() => goto("/categories/review")}
         >
           {m["routes.categories.actions.review"]()}
-          <Badge text={reviewCount} colour="blue" />
+          <Badge text={data.pendingCount} colour="blue" />
         </Button>
       </Page.Actions>
     {/if}
-    {#if categories}
-      <CategoryTable {categories} noneText={m["routes.categories.none"]()} />
-    {:else}
-      <Loading />
-    {/if}
+    <CategoryTable
+      categories={data.categories}
+      noneText={m["routes.categories.none"]()}
+    />
   </Page.Contents>
 </Page.Root>

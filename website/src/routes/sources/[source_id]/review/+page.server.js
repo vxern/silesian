@@ -3,6 +3,13 @@ import { db } from "$lib/database.server";
 import { sources } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
 
+export const load = async () => {
+  return {
+    // TODO(vxern): Make sure to filter by the source.
+    source: await db.select().from(sources).where(eq(sources.id, 1)).then((sources) => sources.at(0)),
+  };
+};
+
 // TODO(vxern): Validate.
 
 export const actions = {

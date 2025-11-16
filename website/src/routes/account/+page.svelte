@@ -38,13 +38,9 @@
     }
   });
 
-  // TODO(vxern): These are temporary.
-  const createdAt = "2025-01-01";
-  const searches = 31213;
-  const additions = 123;
-  const changes = 31213;
-  const timeSpentUsing = dayjs.duration(2, "minutes");
-  const timeSpentEditing = dayjs.duration(2, "minutes");
+  const { data } = $props();
+
+  $inspect(data);
 </script>
 
 <svelte:head>
@@ -99,7 +95,7 @@
               {page.data.session.user.email}
             </Table.Cell>
             <Table.Cell>
-              {dayjs(createdAt).calendar()}
+              {dayjs(data.user.created_at).calendar()}
             </Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -127,35 +123,35 @@
         <Table.Body>
           <Table.Row>
             <Table.Cell>
-              {searches}
+              {data.user.searches_count}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/searches")}
               />
             </Table.Cell>
             <Table.Cell>
-              {additions}
+              {data.user.additions_count}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/additions")}
               />
             </Table.Cell>
             <Table.Cell>
-              {changes}
+              {data.user.changes_count}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/changes")}
               />
             </Table.Cell>
             <Table.Cell>
-              {timeSpentUsing.humanize()}
+              {dayjs(data.user.time_spent_using).humanize()}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-using")}
               />
             </Table.Cell>
             <Table.Cell>
-              {timeSpentEditing.humanize()}
+              {dayjs(data.user.time_spent_editing).humanize()}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-editing")}

@@ -1,11 +1,14 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { page } from "$app/state";
   import Page from "../../components/page/index";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
-  import { SignIn } from "@auth/sveltekit/components";
+  import { SignIn, SignOut } from "@auth/sveltekit/components";
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Need to make the cursor pointer work.
+
+  $inspect(page.data);
 </script>
 
 <svelte:head>
@@ -136,15 +139,15 @@
         <small>Signed in as</small><br />
         <strong>{$page.data.session.user?.name ?? "User"}</strong>
       </span>
-      <SignOut>
-        <div slot="submitButton" class="buttonPrimary">Sign out</div>
-      </SignOut>
     {:else}
       <span class="notSignedInText">You are not signed in</span>
       <SignIn>
         <div slot="submitButton" class="buttonPrimary">Sign in</div>
       </SignIn>
     {/if} -->
-    </section></Page.Contents
-  >
+      <SignOut signOutPage="logout">
+        <div slot="submitButton" class="buttonPrimary">Sign out</div>
+      </SignOut>
+    </section>
+  </Page.Contents>
 </Page.Root>

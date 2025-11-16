@@ -9,8 +9,6 @@
   import SubdomainNavigationSection from "../../components/subdomain-navigation/subdomain-navigation-section.svelte";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import SocialsSection from "../../components/socials/socials-section.svelte";
-  import { goto } from "$app/navigation";
-  import Loading from "../../components/meta/loading.svelte";
   import VersionSection from "../../components/version/version-section.svelte";
   import DonationSection from "../../components/donation/donation-section.svelte";
   import Page from "../../components/page/index.js";
