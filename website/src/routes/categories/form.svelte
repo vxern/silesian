@@ -29,14 +29,14 @@
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.create"]()}
     </Button>
-    <Button name="draft" type="submit" icon={AddLineIcon} colour="zinc">
+    <Button name="draft" type="submit" icon={AddLineIcon} colour="yellow">
       {m["components.form.create_as_draft"]()}
     </Button>
   {:else if category.status === "draft"}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.publish"]()}
     </Button>
-    <Button name="draft" type="submit" icon={Save2LineIcon} colour="zinc">
+    <Button name="draft" type="submit" icon={Save2LineIcon} colour="yellow">
       {m["components.form.save"]()}
     </Button>
   {/if}
