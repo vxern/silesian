@@ -142,36 +142,37 @@
         </Table.Cell>
         <Table.Cell>
           {#if source.redistributable}
-            {m["components.source_table.progress.numbers"]({
-              imported: source.imported_entry_count,
-              total: source.total_entry_count,
-            })}
-            <br />
-            {#snippet percentage()}
-              {m["components.source_table.progress.percentage"]({
-                percentage: (completion(source) * 100).toFixed(1),
+            <section class="flex flex-col">
+              {m["components.source_table.progress.numbers"]({
+                imported: source.imported_entry_count,
+                total: source.total_entry_count,
               })}
-            {/snippet}
-            {#if completion(source) > 0.95}
-              <span class="text-green-500">
-                {@render percentage()}
-              </span>
-            {:else if completion(source) > 0.5}
-              <span class="text-yellow-500">
-                {@render percentage()}
-              </span>
-            {:else}
-              <span class="text-red-500">
-                {@render percentage()}
-              </span>
-            {/if}
+              {#snippet percentage()}
+                {m["components.source_table.progress.percentage"]({
+                  percentage: (completion(source) * 100).toFixed(1),
+                })}
+              {/snippet}
+              {#if completion(source) > 0.95}
+                <span class="text-green-500">
+                  {@render percentage()}
+                </span>
+              {:else if completion(source) > 0.5}
+                <span class="text-yellow-500">
+                  {@render percentage()}
+                </span>
+              {:else}
+                <span class="text-red-500">
+                  {@render percentage()}
+                </span>
+              {/if}
+            </section>
           {:else}
             {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell>
+            <Table.Cell class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -180,7 +181,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell>
+            <Table.Cell class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}

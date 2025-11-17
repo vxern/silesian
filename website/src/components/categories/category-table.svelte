@@ -45,7 +45,7 @@
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell>
+            <Table.Cell class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -54,7 +54,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell>
+            <Table.Cell class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
