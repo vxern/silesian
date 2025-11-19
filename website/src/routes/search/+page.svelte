@@ -5,6 +5,10 @@
   import constants from "$lib/constants/core";
   import SearchBar from "../../components/search/search-bar.svelte";
   import SearchHistory from "../../components/search/search-history.svelte";
+
+  const { data } = $props();
+
+  const { searchHistory, popularSearches } = data;
 </script>
 
 <svelte:head>
@@ -26,6 +30,6 @@
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    <SearchHistory />
+    <SearchHistory {searchHistory} {popularSearches} />
   </Page.Contents>
 </Page.Root>

@@ -80,11 +80,7 @@ export const entries = pgTable("entries", {
   status: columns.status,
 });
 
-export const sourcesRelations = relations(sources, ({ many }) => ({
-  entries: many(entries),
-}));
-
-export const entriesToCategories = pgTable("entry_categories", {
+export const entriesToCategories = pgTable("entries_to_categories", {
   entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
 });
@@ -141,6 +137,7 @@ export const reviews = pgTable("reviews", {
   reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   comments: text().array(),
   created_at: columns.created_at,
+  // No updated_at because reviews are never updated.
 })
 
 // TODO(vxern): Add relation between reviewers and reviews.
@@ -154,6 +151,14 @@ export const reviewersToReviews = pgTable("reviewers_to_reviews", {
 export const searches = pgTable("searches", {
   id: columns.id,
   searcher_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
-  query: text().notNull(),
+  lemma: text().notNull(),
   created_at: columns.created_at,
 });
+
+export const searchFrequencies = pgTable("search_frequencies", {
+  id: columns.id,
+  lemma: text().notNull(),
+  count: integer().default(0).notNull(),
+  created_at: columns.created_at, // Date of the first search for this word.
+  updated_at: columns.updated_at, // Date of the latest search for this word.
+}, (t) => [unique().on(t.lemma)]);

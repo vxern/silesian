@@ -9,39 +9,17 @@
 
   dayjs.extend(relativeTime);
 
-  let history = $state();
-  async function fetchSources() {
-    const response = await fetch(
-      `/api/search/history?limit=${constants.limits.searchHistory}`
-    );
-    const entries = await response.json();
-
-    history = entries;
-  }
-
-  let popular = $state();
-  async function fetchPopular() {
-    const response = await fetch(
-      `/api/search/popular?limit=${constants.limits.searchHistory}`
-    );
-    const entries = await response.json();
-
-    popular = entries;
-  }
-
-  onMount(() => {
-    fetchSources();
-    fetchPopular();
-  });
+  const { searchHistory, popularSearches } = $props();
 </script>
 
 {#snippet button(item)}
   <button
     class="cursor-pointer p-4 flex flex-col gap-y-1 bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 rounded-lg"
-    onclick={() => goto(`/lemma/${encodeURIComponent(item.term)}`)}
+    onclick={() => goto(`/lemma/${encodeURIComponent(item.lemma)}`)}
   >
-    <span class="text-start text-zinc-300 hover:text-zinc-200">{item.term}</span
-    >
+    <span class="text-start text-zinc-300 hover:text-zinc-200">
+      {item.lemma}
+    </span>
     <span class="text-xs text-end text-zinc-500">
       {dayjs(item.created_at).fromNow()}
     </span>
@@ -53,9 +31,7 @@
     <span class="text-blue-500 text-xl">
       {title}
     </span>
-    {#if !items}
-      <Loading />
-    {:else}
+    {#if items}
       <section class="w-full grid grid-cols-7 gap-2 items-center">
         {#if items.length >= constants.limits.searchHistory}
           {#each items.slice(0, constants.limits.searchHistory - 1) as item}
@@ -63,7 +39,7 @@
           {/each}
           <button
             class="h-full cursor-pointer p-4 flex flex-col justify-center bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 text-zinc-400 rounded-lg"
-            onclick={() => goto(`/lemma/${encodeURIComponent(item.term)}`)}
+            onclick={() => goto(`/lemma/${encodeURIComponent(item.lemma)}`)}
           >
             {m["meta.etc"]()}
           </button>
@@ -73,11 +49,19 @@
           {/each}
         {/if}
       </section>
+    {:else}
+      <Loading />
     {/if}
   </article>
 {/snippet}
 
 <section class="flex flex-col gap-y-8">
-  {@render article({ title: m["routes.search.history"](), items: history })}
-  {@render article({ title: m["routes.search.popular"](), items: popular })}
+  {@render article({
+    title: m["routes.search.history"](),
+    items: searchHistory,
+  })}
+  {@render article({
+    title: m["routes.search.popular"](),
+    items: popularSearches,
+  })}
 </section>
