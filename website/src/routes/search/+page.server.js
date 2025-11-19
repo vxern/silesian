@@ -4,10 +4,12 @@ import { searches, searchFrequencies } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
 
 export const load = async () => {
-  return {
-    // TODO(vxern): IMPORTANT - Filter by the correct user.
-    // TODO(vxern): Limit
-    searchHistory: await db.select().from(searches).where(eq(searches.searcher_id, 1)).orderBy(searches.created_at),
-    popularSearches: await db.select().from(searchFrequencies).orderBy(searchFrequencies.count),
-  };
+  // TODO(vxern): IMPORTANT - Filter by the correct user.
+  // TODO(vxern): Limit
+  const [searchHistory, popularSearches] = await Promise.all([
+    db.select().from(searches).where(eq(searches.searcher_id, 1)).orderBy(searches.created_at),
+    db.select().from(searchFrequencies).orderBy(searchFrequencies.count),
+  ]);
+
+  return { searchHistory, popularSearches };
 };
