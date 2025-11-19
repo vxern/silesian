@@ -230,6 +230,8 @@
     - `pol` [Kilka wyrażeń ludowych z Małych Kończyc koło Zebrzydowic na Śląsku](https://silling.org/slownik/Aneks:Koczwara_-_Kilka_wyra%C5%BCe%C5%84_ludowych_z_Ma%C5%82ych_Ko%C5%84czyc_ko%C5%82o_Zebrzydowic_na_%C5%9Al%C4%85sku), author: `Jan Koczwarty`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [Śląskie słówka i wyrażenia gwarowe - region rybnicko-wodzisławski](https://integro.bs.katowice.pl/site/recorddetail/0033105680424), author: `Piotr Mikołajczyk`, entries: `uncounted`, ISBN: `9788364051937`
+    <!-- ❌ Not checked the number of entries. -->
+    - `🚫` `adh` [Rajza z piekarskôm godkôm](https://opac.r-sl.pl/953100704842/ksiazka/rajza-z-piekarskom-godkom), author: `unknown`, entries: `uncounted`, ISBN: `9788362457410`
 
   - ### Sułkowice
 
