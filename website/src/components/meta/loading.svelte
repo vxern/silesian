@@ -1,7 +1,7 @@
 <script>
   import { Diamonds } from "svelte-loading-spinners";
 
-  const { colour } = $props();
+  const { colour = "yellow" } = $props();
 
   let colourClass;
   switch (colour) {
