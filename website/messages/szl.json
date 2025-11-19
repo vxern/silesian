@@ -78,6 +78,10 @@
       "name": "Miano",
       "colour": "Farba"
     },
+    "search_history": {
+      "no_search_history": "Jeszcze niczygo niy szukaliście.",
+      "no_popular_searches": "Żŏdyn jeszcze niczygo niy szukoł."
+    },
     "version_section": {
       "version": "Wersyjŏ {version}"
     },
