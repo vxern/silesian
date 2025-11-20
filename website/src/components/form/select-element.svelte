@@ -130,7 +130,7 @@
       {/each}
     {:else}
       <section class="italic text-zinc-500">
-        {m["meta.no_results"]()}
+        {m["components.form.select_element.no_results"]()}
       </section>
     {/if}
   </section>

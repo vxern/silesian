@@ -56,7 +56,10 @@
       "save": "Zachowej",
       "publish": "Zamiyś",
       "accept": "Przijmij",
-      "reject": "Ôdciep"
+      "reject": "Ôdciep",
+      "select_element": {
+        "no_results": "bez trefiyń"
+      }
     },
     "source_table": {
       "work": "Werk",
@@ -411,6 +414,9 @@
     "lemma": {
       "title": "Hasło",
       "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
+      "no_results": "Niy ma trefiyń lŏ tygo słowa.",
+      "may_not_be_imported": "(Co niy znaczy, iże niy istnieje! Możno go po prostu niy mōmy.)",
+      "end_of_results": "KŌNIEC TREFIYŃ",
       "source": "Zdrzōdło:",
       "authors": "Autorzi:"
     }
@@ -420,8 +426,6 @@
     "none": "—",
     "etc": "…",
     "yes": "Ja",
-    "no": "Niy",
-    "no_results": "bez trefiyń",
-    "end": "KŌNIEC TREFIYŃ"
+    "no": "Niy"
   }
 }

@@ -61,9 +61,20 @@
           </article>
         </section>
       {/each}
-      <section>
-        <span class="text-zinc-700">{m["meta.end"]()}</span>
-      </section>
+      {#if data.entries.length > 0}
+        <section>
+          <span class="text-zinc-700">
+            {m["routes.lemma.end_of_results"]()}
+          </span>
+        </section>
+      {:else}
+        <section class="flex flex-col">
+          <span class="text-xl">{m["routes.lemma.no_results"]()}</span>
+          <span class="text-xs text-zinc-400">
+            {m["routes.lemma.may_not_be_imported"]()}
+          </span>
+        </section>
+      {/if}
     </section>
   </Page.Contents>
 </Page.Root>
