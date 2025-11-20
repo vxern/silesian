@@ -3,10 +3,12 @@ import { db } from "$lib/database.server";
 import { entries } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
 
-export const load = async () => {
+export const load = async ({ params }) => {
+  // TODO(vxern): Kick the user out if they haven't got permission.
+  // TODO(vxern): Validate the parameter.
+
   return {
-    // TODO(vxern): Make sure to filter by the entry.
-    entry: await db.select().from(entries).where(eq(entries.id, 1)).then((entries) => entries.at(0)),
+    entry: await db.select().from(entries).where(eq(entries.id, params.entry_id)).then((entries) => entries.at(0)),
   };
 };
 

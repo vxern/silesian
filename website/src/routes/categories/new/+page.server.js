@@ -2,10 +2,11 @@ import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { categories, changes } from "$lib/database/schema";
 
-// TODO(vxern): Validate.
-
 export const actions = {
   create: async ({ request, locals }) => {
+    // TODO(vxern): Kick the user out if they haven't got permission.
+    // TODO(vxern): Validate.
+
     const data = await request.formData();
 
     const category = await db.transaction(async (tx) => {

@@ -5,10 +5,12 @@ import { eq } from 'drizzle-orm';
 
 // TODO(vxern): Need to exclude deleted objects from filters.
 
-export const load = async () => {
+export const load = async ({ params }) => {
+  // TODO(vxern): Kick the user out if they haven't got permission.
+  // TODO(vxern): Validate the parameter.
+
   return {
-    // TODO(vxern): Make sure to filter by the category.
-    category: await db.select().from(categories).where(eq(categories.id, 1)).then((categories) => categories.at(0)),
+    category: await db.select().from(categories).where(eq(categories.id, params.category_id)).then((categories) => categories.at(0)),
   };
 };
 

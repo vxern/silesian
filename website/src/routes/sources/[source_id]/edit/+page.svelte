@@ -1,11 +1,8 @@
 <script>
   import { m } from "$lib/paraglide/messages";
-  import { onMount } from "svelte";
-  import { page } from "$app/state";
   import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
-  import Loading from "../../../../components/meta/loading.svelte";
   import SourceForm from "../../form.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
   import constants from "$lib/constants/core";
