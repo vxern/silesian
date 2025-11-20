@@ -169,14 +169,14 @@
 <article class="flex flex-col gap-y-4 items-center w-full">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
-      class="bg-zinc-800 outline-1 outline-zinc-600 rounded-lg w-full p-3 text-lg text-zinc-300 placeholder:text-zinc-500"
+      class="bg-zinc-800 outline-1 outline-zinc-600 rounded-lg w-full p-3 text-zinc-300 placeholder:text-zinc-500"
       type="text"
       placeholder={m["components.search_bar.placeholder"]()}
       onkeydown={onInputKeyPress}
       bind:this={inputElement}
     />
     <button
-      class="rounded-lg outline-1 outline-green-500 p-3 text-lg font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-100"
+      class="rounded-lg outline-1 outline-green-500 p-3 font-bold cursor-pointer bg-green-700 hover:bg-green-600 text-green-300 hover:text-green-100"
       type="submit"
       data-sveltekit-reload
       bind:this={submitElement}
@@ -189,7 +189,7 @@
     <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
       {#each specialLetters() as letter}
         <button
-          class="rounded-lg size-8 text-lg font-bold cursor-pointer outline-1 outline-zinc-600 bg-zinc-800 hover:bg-zinc-700 hover:outline-zinc-500 text-zinc-300 hover:text-zinc-200"
+          class="rounded-lg size-7 font-bold cursor-pointer outline-1 outline-zinc-600 bg-zinc-800 hover:bg-zinc-700 hover:outline-zinc-500 text-zinc-300 hover:text-zinc-200"
           onclick={() => insertSpecialLetter(letter)}
         >
           {letter}
