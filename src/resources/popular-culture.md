@@ -56,6 +56,7 @@
  
 - ## Portals
 
+  - `szl/F` [Jednagodka.pl](https://www.jednagodka.pl/)
   - `szl/S` [Belekaj.eu](https://belekaj.eu)
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
