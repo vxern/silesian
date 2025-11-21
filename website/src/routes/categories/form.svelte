@@ -5,6 +5,7 @@
   import Upload2LineIcon from "~icons/mingcute/upload-2-line";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
+  import { coloursEnum } from "$lib/database/schema";
 
   // TODO(vxern): Prefill from the object.
   const { category } = $props();
@@ -17,10 +18,16 @@
     description={m["routes.categories.form.name_description"]()}
     value={category?.name}
   />
-  <Form.TextElement
+  <Form.SelectElement
     name="colour"
     label={m["routes.categories.form.colour"]()}
     description={m["routes.categories.form.colour_description"]()}
+    options={() =>
+      coloursEnum.enumValues.map((colour) => [
+        m[`colours.${colour}`](),
+        colour,
+      ])}
+    component={Form.ColourSelectOption}
     value={category?.colour}
   />
 </section>

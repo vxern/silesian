@@ -40,6 +40,30 @@
     "limited": "ôgraniczōny",
     "open": "dostympny"
   },
+  "colours": {
+    "red": "Czyrwōnŏ",
+    "orange": "Ôranżowŏ",
+    "amber": "Bernsztajnowŏ",
+    "yellow": "Żōłtŏ",
+    "lime": "Limōnkowŏ",
+    "green": "Zielōnŏ",
+    "emerald": "Cartgrin",
+    "teal": "Morskŏ",
+    "cyan": "Cyjanowŏ",
+    "sky": "Niybieskŏ",
+    "blue": "Modrŏ",
+    "indigo": "Indygo",
+    "violet": "Flidrowŏ",
+    "purple": "Lilowŏ",
+    "fuchsia": "Fuksjowŏ",
+    "pink": "Rōżowŏ",
+    "rose": "Rōłzowŏ",
+    "slate": "Szyjfrowŏ",
+    "gray": "Siwŏ",
+    "zinc": "Cingowŏ",
+    "neutral": "Nojtralnŏ",
+    "stone": "Kamiynnŏ"
+  },
   "components": {
     "search_bar": {
       "placeholder": "Kierygo słowa szukŏcie?",

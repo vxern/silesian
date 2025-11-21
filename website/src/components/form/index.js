@@ -8,6 +8,7 @@ import SelectElement from "./select-element.svelte";
 import SelectOption from "./select/select-option.svelte";
 import SimpleSelectOption from "./select/select-options/simple-select-option.svelte";
 import SourceSelectOption from "./select/select-options/source-select-option.svelte";
+import ColourSelectOption from "./select/select-options/colour-select-option.svelte";
 
 export default {
   Root,
@@ -20,4 +21,5 @@ export default {
   SelectOption,
   SimpleSelectOption,
   SourceSelectOption,
+  ColourSelectOption,
 };
