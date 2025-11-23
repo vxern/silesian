@@ -146,8 +146,10 @@ export const users = pgTable("users", {
   searches_count: integer().default(0).notNull(),
   additions_count: integer().default(0).notNull(),
   changes_count: integer().default(0).notNull(),
-  time_spent_using: interval().default("0").notNull(),
-  time_spent_editing: interval().default("0").notNull(),
+  // In milliseconds.
+  time_spent_using: integer().default(0).notNull(),
+  // In milliseconds.
+  time_spent_editing: integer().default(0).notNull(),
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
