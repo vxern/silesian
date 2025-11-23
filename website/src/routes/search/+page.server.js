@@ -7,13 +7,15 @@ import { eq, asc, desc } from 'drizzle-orm';
 // TODO(vxern): IMPORTANT - Filter by the correct user.
 
 export const load = async () => {
-  return {
-    searchHistory: getSearchHistory(),
-    popularSearches: getPopularSearches(),
-  };
+  const [searchHistory, popularSearches] = await Promise.all([
+    getSearchHistory(),
+    getPopularSearches(),
+  ]);
+
+  return { searchHistory, popularSearches };
 };
 
-function getSearchHistory() {
+async function getSearchHistory() {
   const distinctSearches =
     db
       .selectDistinctOn([searches.lemma])

@@ -31,29 +31,25 @@
     <span class="text-blue-500 text-xl">
       {title}
     </span>
-    {#await items}
-      <Loading />
-    {:then items}
-      {#if items.length > 0}
-        <section class="w-full grid grid-cols-7 gap-2 items-center">
-          {#each items.slice(0, constants.limits.searchHistory - 1) as item}
-            {@render button(item)}
-          {/each}
-          {#if items.length > constants.limits.searchHistory}
-            <button
-              class="h-full cursor-pointer p-4 flex flex-col justify-center bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 text-zinc-400 rounded-lg"
-              onclick={() => goto(`/lemma/${encodeURIComponent(item.lemma)}`)}
-            >
-              {m["meta.etc"]()}
-            </button>
-          {/if}
-        </section>
-      {:else if type === "history"}
-        {m["components.search_history.no_search_history"]()}
-      {:else if type === "popular"}
-        {m["components.search_history.no_popular_searches"]()}
-      {/if}
-    {/await}
+    {#if items.length > 0}
+      <section class="w-full grid grid-cols-7 gap-2 items-center">
+        {#each items.slice(0, constants.limits.searchHistory - 1) as item}
+          {@render button(item)}
+        {/each}
+        {#if items.length > constants.limits.searchHistory}
+          <button
+            class="h-full cursor-pointer p-4 flex flex-col justify-center bg-zinc-800 hover:bg-zinc-700 outline-1 outline-zinc-600 text-zinc-400 rounded-lg"
+            onclick={() => goto(`/lemma/${encodeURIComponent(item.lemma)}`)}
+          >
+            {m["meta.etc"]()}
+          </button>
+        {/if}
+      </section>
+    {:else if type === "history"}
+      {m["components.search_history.no_search_history"]()}
+    {:else if type === "popular"}
+      {m["components.search_history.no_popular_searches"]()}
+    {/if}
   </article>
 {/snippet}
 
