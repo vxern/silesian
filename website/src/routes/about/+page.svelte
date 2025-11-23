@@ -21,18 +21,22 @@
     {
       name: "Demokratyczna Unia Regionalistów Śląskich (DURŚ)",
       icon: "/logos/durś.png",
+      url: "https://dursmlodzi.org.pl/",
     },
     {
       name: "Wachtyrz.eu",
       icon: "/logos/wachtyrz.png",
+      url: "https://wachtyrz.eu/",
     },
     {
       name: "REGIOS",
       icon: "/logos/regios.png",
+      url: "https://regios.org.pl/",
     },
     {
       name: "Województwo Śląskie",
       icon: "/logos/slaskie.png",
+      url: "https://slaskie.pl/",
     },
   ];
 </script>
@@ -114,18 +118,20 @@
     </span>
     <span class="text-lg">
       {m["routes.about.sections.contact.email_address"]({
-        email_address: constants.contact.emailAddress, 
+        email_address: constants.contact.emailAddress,
       })}
     </span>
   </article>
   <Page.Divider />
   <section class="grid grid-cols-3 gap-2 text-sm">
     {#each sponsors as sponsor}
-      <article
-        class="p-4 outline-1 bg-white rounded-lg flex items-center justify-center"
-      >
-        <img src={sponsor.icon} class="h-fit max-h-36" alt={sponsor.name} />
-      </article>
+      <a href={sponsor.url}>
+        <article
+          class="p-4 outline-1 bg-white rounded-lg flex items-center justify-center"
+        >
+          <img src={sponsor.icon} class="h-fit max-h-36" alt={sponsor.name} />
+        </article>
+      </a>
     {/each}
   </section>
 </Page.Root>
