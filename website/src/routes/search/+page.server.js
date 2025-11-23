@@ -1,23 +1,37 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { searches, searchFrequencies } from "$lib/database/schema";
-import { eq } from 'drizzle-orm';
+import { eq, asc, desc } from 'drizzle-orm';
 
 // TODO(vxern): Use prepared statements.
+// TODO(vxern): IMPORTANT - Filter by the correct user.
 
 export const load = async () => {
-  // TODO(vxern): IMPORTANT - Filter by the correct user.
-  const [searchHistory, popularSearches] = await Promise.all([
-    db.query.searches.findMany({
-      where: (searches, { eq }) => eq(searches.searcher_id, 1),
-      orderBy: (searches, { desc }) => [desc(searches.created_at)],
-      limit: 28,
-    }),
-    db.query.searchFrequencies.findMany({
-      orderBy: (searchFrequencies, { desc }) => [desc(searchFrequencies.count)],
-      limit: 28,
-    }),
-  ]);
-
-  return { searchHistory, popularSearches };
+  return {
+    searchHistory: getSearchHistory(),
+    popularSearches: getPopularSearches(),
+  };
 };
+
+function getSearchHistory() {
+  const distinctSearches =
+    db
+      .selectDistinctOn([searches.lemma])
+      .from(searches)
+      .where(eq(searches.searcher_id, 1))
+      .orderBy(searches.lemma, asc(searches.created_at))
+      .limit(28)
+      .as("distinct_searches");
+
+  return db
+    .select()
+    .from(distinctSearches)
+    .orderBy(asc(distinctSearches.created_at));
+}
+
+function getPopularSearches() {
+  return db.query.searchFrequencies.findMany({
+    orderBy: (searchFrequencies, { desc }) => [desc(searchFrequencies.count)],
+    limit: 28,
+  });
+}
