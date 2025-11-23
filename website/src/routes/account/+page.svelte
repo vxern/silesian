@@ -39,8 +39,6 @@
   });
 
   const { data } = $props();
-
-  $inspect(data);
 </script>
 
 <svelte:head>
@@ -83,7 +81,7 @@
           <Table.Row>
             <Table.Cell>
               <Image
-                class="rounded-md"
+                class="rounded-md size-20"
                 src={page.data.session.user.image}
                 alt={m["routes.account.attributes.base.avatar"]()}
               />
@@ -144,14 +142,16 @@
               />
             </Table.Cell>
             <Table.Cell>
-              {dayjs(data.user.time_spent_using).humanize()}
+              <!-- {dayjs(data.user.time_spent_using).humanize()} -->
+              0m
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-using")}
               />
             </Table.Cell>
             <Table.Cell>
-              {dayjs(data.user.time_spent_editing).humanize()}
+              <!-- {dayjs(data.user.time_spent_editing).humanize()} -->
+              0m
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-editing")}

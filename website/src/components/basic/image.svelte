@@ -17,9 +17,9 @@
 </script>
 
 {#if imageFailedToLoad}
-  <Error />
-{:else if imageLoaded}
-  <Loading />
+  <Error class={classes} />
+{:else if !imageLoaded}
+  <Loading class={classes} />
 {/if}
 
 <img

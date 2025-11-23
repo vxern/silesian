@@ -1,7 +1,8 @@
 <script>
+  import { clsx } from "clsx/lite";
   import { Diamonds } from "svelte-loading-spinners";
 
-  const { colour = "yellow" } = $props();
+  const { class: classes, colour = "yellow" } = $props();
 
   let colourClass;
   switch (colour) {
@@ -17,7 +18,7 @@
   }
 </script>
 
-<section class="flex justify-center">
+<section class={clsx("flex items-center justify-center", classes)}>
   <!-- TODO(vxern): Can we get legit Tailwind sizing here? -->
   <Diamonds color={colourClass} size="56" duration="2s" />
 </section>
