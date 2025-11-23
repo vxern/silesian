@@ -77,15 +77,13 @@
 
 <button
   type="button"
-  select={() => select(option)}
-  class={clsx("rounded-lg p-2 font-medium text-sm cursor-pointer", classes)}
+  onclick={() => select(option)}
+  class={clsx(
+    "rounded-lg p-2 font-medium text-sm cursor-pointer text-white",
+    classes
+  )}
 >
   <section class="flex w-full">
-    <section class="basis-4/5 text-start">
-      {option[0]}
-    </section>
-    <section class="basis-1/5 text-end">
-      {option[1]}
-    </section>
+    {option[0]}
   </section>
 </button>
