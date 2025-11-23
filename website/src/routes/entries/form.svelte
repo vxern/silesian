@@ -22,7 +22,7 @@
     label={m["routes.entries.form.source_id"]()}
     description={m["routes.entries.form.source_id_description"]()}
     options={() =>
-      fetch("/api/sources")
+      fetch("/autocomplete/sources")
         .then((response) => response.json())
         .then((sources) => sources.map((source) => [source, source.id]))}
     component={Form.SourceSelectOption}
@@ -35,7 +35,7 @@
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
     options={() =>
-      fetch("/api/categories")
+      fetch("/autocomplete/categories")
         .then((response) => response.json())
         .then((categories) =>
           categories.map((category) => [category.name, category])
