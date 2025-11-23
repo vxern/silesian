@@ -3,6 +3,7 @@
   import { m } from "$lib/paraglide/messages";
   import Button from "../interactions/button.svelte";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
+  import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
 
@@ -49,6 +50,12 @@
                 colour="green"
                 icon={Pencil2LineIcon}
                 onclick={() => goto(`/entries/${entry.id}/edit`)}
+              />
+              <!-- TODO(vxern): Handle this properly. -->
+              <Button
+                colour="red"
+                icon={Delete2LineIcon}
+                onclick={() => goto(`/entries/${entry.id}/delete`)}
               />
             </Table.Cell>
           {/if}
