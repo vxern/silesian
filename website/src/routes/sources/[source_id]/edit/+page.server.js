@@ -8,7 +8,7 @@ export const load = async ({ params }) => {
   // TODO(vxern): Validate the parameter.
 
   return {
-    source: await db.select().from(sources).where(eq(sources.id, params.source_id)).then((sources) => sources.at(0)),
+    source: await db.query.sources.findFirst({ where: (sources, { eq }) => eq(sources.id, params.source_id) }),
   };
 };
 

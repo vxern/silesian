@@ -7,6 +7,6 @@ export const load = async () => {
     // TODO(vxern): Make sure to filter by the user.
     draftCount: db.select({ count: count() }).from(entries).where(eq(entries.status, "draft")).then((results) => results.at(0).count),
     pendingCount: db.select({ count: count() }).from(entries).where(eq(entries.status, "pending")).then((results) => results.at(0).count),
-    entries: await db.select().from(entries).where(eq(entries.status, "published")),
+    entries: await db.query.entries.findMany({ where: (entries, { eq }) => eq(entries.status, "published") }),
   };
 };

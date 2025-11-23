@@ -3,12 +3,20 @@ import { db } from "$lib/database.server";
 import { searches, searchFrequencies } from "$lib/database/schema";
 import { eq } from 'drizzle-orm';
 
+// TODO(vxern): Use prepared statements.
+
 export const load = async () => {
   // TODO(vxern): IMPORTANT - Filter by the correct user.
-  // TODO(vxern): Limit
   const [searchHistory, popularSearches] = await Promise.all([
-    db.select().from(searches).where(eq(searches.searcher_id, 1)).orderBy(searches.created_at),
-    db.select().from(searchFrequencies).orderBy(searchFrequencies.count),
+    db.query.searches.findMany({
+      where: (searches, { eq }) => eq(searches.searcher_id, 1),
+      orderBy: (searches, { desc }) => [desc(searches.created_at)],
+      limit: 28,
+    }),
+    db.query.searchFrequencies.findMany({
+      orderBy: (searchFrequencies, { desc }) => [desc(searchFrequencies.count)],
+      limit: 28,
+    }),
   ]);
 
   return { searchHistory, popularSearches };

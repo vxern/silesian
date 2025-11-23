@@ -8,7 +8,9 @@ export const load = async ({ params }) => {
   // TODO(vxern): Validate the parameter.
 
   return {
-    entry: await db.select().from(entries).where(eq(entries.id, params.entry_id)).then((entries) => entries.at(0)),
+    entry: await db.query.entries.findFirst({
+      where: (entries, { eq }) => eq(entries.id, params.entry_id),
+    }),
   };
 };
 

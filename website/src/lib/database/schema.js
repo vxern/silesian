@@ -29,6 +29,10 @@ export const changes = pgTable("changes", {
   created_at: columns.created_at,
 }, (t) => [unique().on(t.version, t.changeable_type, t.changeable_id)]);
 
+export const changesRelations = relations(changes, ({ many }) => ({
+  reviews: many(reviews),
+}));
+
 export const licencesEnum = pgEnum("licences", ["proprietary", "granted", "public"]);
 
 export const orthographiesEnum = pgEnum("orthographies", [
@@ -71,6 +75,10 @@ export const sources = pgTable("sources", {
   status: columns.status,
 });
 
+export const sourcesRelations = relations(sources, ({ many }) => ({
+  entries: many(entries),
+}));
+
 export const entries = pgTable("entries", {
   ...defaultColumns,
   lemma: text().notNull(),
@@ -80,10 +88,21 @@ export const entries = pgTable("entries", {
   status: columns.status,
 });
 
+export const entriesRelations = relations(entries, ({ one, many }) => ({
+  source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
+  reviews: many(reviews),
+  entriesToCategories: many(entriesToCategories),
+}));
+
 export const entriesToCategories = pgTable("entries_to_categories", {
   entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
 });
+
+export const entriesToCategoriesRelations = relations(entriesToCategories, ({ one }) => ({
+  entry: one(entries, { fields: [entriesToCategories.entry_id], references: [entries.id] }),
+  category: one(categories, { fields: [entriesToCategories.category_id], references: [categories.id] }),
+}));
 
 export const coloursEnum = pgEnum("colours", [
   "red",
@@ -131,6 +150,11 @@ export const users = pgTable("users", {
   time_spent_editing: interval().default("0").notNull(),
 });
 
+export const usersRelations = relations(users, ({ many }) => ({
+  reviews: many(reviews),
+  searches: many(searches),
+}));
+
 export const reviews = pgTable("reviews", {
   id: columns.id,
   change_id: bigint({ mode: "number" }).references(() => changes.id).notNull(),
@@ -140,13 +164,10 @@ export const reviews = pgTable("reviews", {
   // No updated_at because reviews are never updated.
 })
 
-// TODO(vxern): Add relation between reviewers and reviews.
-// TODO(vxern): Add relation between reviews and reviewers.
-
-export const reviewersToReviews = pgTable("reviewers_to_reviews", {
-  reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
-  review_id: bigint({ mode: "number" }).references(() => reviews.id).notNull(),
-}, (t) => [unique().on(t.reviewer_id, t.review_id)]);
+export const reviewsRelations = relations(reviews, ({ one }) => ({
+  change: one(entries, { fields: [reviews.change_id], references: [changes.id] }),
+  reviewer: one(users, { fields: [reviews.reviewer_id], references: [users.id] }),
+}));
 
 export const searches = pgTable("searches", {
   id: columns.id,
@@ -154,6 +175,10 @@ export const searches = pgTable("searches", {
   lemma: text().notNull(),
   created_at: columns.created_at,
 });
+
+export const searchesRelations = relations(searches, ({ one }) => ({
+  searcher: one(users, { fields: [searches.searcher_id], references: [users.id] }),
+}));
 
 export const searchFrequencies = pgTable("search_frequencies", {
   id: columns.id,

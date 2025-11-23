@@ -10,7 +10,7 @@ export const load = async ({ params }) => {
   // TODO(vxern): Validate the parameter.
 
   return {
-    category: await db.select().from(categories).where(eq(categories.id, params.category_id)).then((categories) => categories.at(0)),
+    category: await db.query.categories.findFirst({ where: (categories, { eq }) => eq(categories.id, params.category_id) } ),
   };
 };
 

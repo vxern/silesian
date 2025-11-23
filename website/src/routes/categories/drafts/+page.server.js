@@ -6,6 +6,6 @@ export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
 
   return {
-    categories: await db.select().from(categories).where(eq(categories.status, "draft")),
+    categories: await db.query.categories.findMany({ where: (categories, { eq }) => eq(categories.status, "draft") } ),
   };
 };

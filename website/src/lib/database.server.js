@@ -6,7 +6,7 @@ import {
   DATABASE_PASSWORD,
   DATABASE_DATABASE,
 } from '$env/static/private';
-import schema from "$lib/database/schema";
+import * as schema from "$lib/database/schema";
 
 const client = postgres({
   host: DATABASE_HOST,
@@ -15,4 +15,4 @@ const client = postgres({
   database: DATABASE_DATABASE,
 });
 
-export const db = drizzle(client, { schema });
+export const db = drizzle({ client, schema });
