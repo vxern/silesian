@@ -2,6 +2,6 @@
   const { children } = $props();
 </script>
 
-<article class="flex flex-col gap-y-4">
+<section class="flex flex-col gap-y-4">
   {@render children?.()}
-</article>
+</section>

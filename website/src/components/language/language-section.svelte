@@ -38,7 +38,7 @@
   <span class="text-zinc-400">
     <GlobeLineIcon />
   </span>
-  <article class="flex flex-col items-start gap-y-2">
+  <section class="flex flex-col items-start gap-y-2">
     <button
       class={clsx(
         "flex items-center cursor-pointer",
@@ -78,5 +78,5 @@
         </button>
       {/each}
     </section>
-  </article>
+  </section>
 </nav>

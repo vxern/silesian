@@ -166,7 +166,7 @@
   onblur={onBlurWindow}
 />
 
-<article class="flex flex-col gap-y-4 items-center w-full">
+<section class="flex flex-col gap-y-4 items-center w-full">
   <section class="w-full flex flex-row gap-x-4 items-center">
     <input
       class="bg-zinc-800 outline-1 outline-zinc-600 rounded-lg w-full p-3 text-zinc-300 placeholder:text-zinc-500"
@@ -197,4 +197,4 @@
       {/each}
     </article>
   </section>
-</article>
+</section>
