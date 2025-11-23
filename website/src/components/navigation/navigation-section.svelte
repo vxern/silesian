@@ -28,7 +28,7 @@
       <NavigationButton
         onclick={() => goto("/account")}
         highlighted={true}
-        icon={User2LineIcon}
+        icon={User4LineIcon}
       >
         {#if page.url.pathname === "/account/history/searches"}
           {m["routes.account.history.searches.title"]()}
