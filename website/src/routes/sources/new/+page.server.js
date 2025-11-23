@@ -1,6 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { sources, changes } from "$lib/database/schema";
+import { sql } from 'drizzle-orm';
 
 export const actions = {
   create: async ({ request, locals }) => {

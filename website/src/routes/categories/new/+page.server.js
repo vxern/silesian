@@ -1,6 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { categories, changes } from "$lib/database/schema";
+import { sql } from 'drizzle-orm';
 
 export const actions = {
   create: async ({ request, locals }) => {
@@ -18,13 +19,13 @@ export const actions = {
 
       await db.insert(changes).values({
         changeable_type: "categories",
-        changeable_id: source.id,
+        changeable_id: category.id,
       }).onConflictDoUpdate({
         target: changes.version,
         set: { version: sql`changes.version + 1` },
       });
 
-      return source;
+      return category;
     });
 
     // TODO(vxern): Handle failure.

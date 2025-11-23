@@ -1,7 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { categories } from "$lib/database/schema";
-import { eq } from 'drizzle-orm';
+import { eq, sql } from 'drizzle-orm';
 
 // TODO(vxern): Need to exclude deleted objects from filters.
 

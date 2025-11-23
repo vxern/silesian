@@ -142,16 +142,14 @@
               />
             </Table.Cell>
             <Table.Cell>
-              <!-- {dayjs(data.user.time_spent_using).humanize()} -->
-              0m
+              {dayjs(data.user.time_spent_using).humanize()}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-using")}
               />
             </Table.Cell>
             <Table.Cell>
-              <!-- {dayjs(data.user.time_spent_editing).humanize()} -->
-              0m
+              {dayjs(data.user.time_spent_editing).humanize()}
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/time-spent-editing")}

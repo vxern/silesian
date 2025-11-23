@@ -1,7 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
 import { sources } from "$lib/database/schema";
-import { eq } from 'drizzle-orm';
+import { eq, sql } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
