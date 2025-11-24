@@ -3,7 +3,7 @@
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
-  import SearchTable from "../../../../components/searches/search-table.svelte";
+  import SearchTables from "../../../../components/searches/search-tables.svelte";
 
   const { data } = $props();
 </script>
@@ -28,5 +28,8 @@
     <Page.Title title={m["routes.account.history.searches.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <SearchTable searches={data.searches} />
+  <SearchTables
+    searchCount={data.searchCount}
+    searchHistory={data.searchHistory}
+  />
 </Page.Root>

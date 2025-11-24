@@ -105,9 +105,15 @@
       "name": "Miano",
       "colour": "Farba"
     },
-    "searches_table": {
-      "lemma": "Hasło",
-      "created_at": "Kiedy"
+    "search_tables": {
+      "overview": {
+        "count": "Liczba wyszukań"
+      },
+      "history": {
+        "lemma": "Hasło",
+        "created_at": "Kiedy",
+        "no_search_history": "Jeszcze niczygo niy szukaliście."
+      }
     },
     "search_history": {
       "no_search_history": "Jeszcze niczygo niy szukaliście.",
@@ -253,7 +259,8 @@
         "stats": {
           "additions": "Przidanych",
           "searches": "Wyszukanych",
-          "changes": "Zmian",
+          "changes": "Zmiyniōnych",
+          "reviews": "Sprŏwdzōnych",
           "time_spent_editing": "Czasu przi edytowaniu",
           "time_spent_using": "Czasu przi używaniu"
         }

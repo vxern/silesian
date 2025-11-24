@@ -8,10 +8,11 @@ export const publishStatusesEnum = pgEnum("publish_statuses", ["draft", "pending
 const columns = {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   lifecycle: lifecyclesEnum().default("active"),
+  status: publishStatusesEnum().default("draft").notNull(),
+  author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // TODO(vxern): Convert this to database-level `on update CURRENT_TIMESTAMP` when supported.
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull().$onUpdate(() => new Date()),
-  status: publishStatusesEnum().default("draft").notNull(),
 };
 const publishStatus = { created_at: timestamp({ withTimezone: true }).defaultNow().notNull() };
 const defaultColumns = {
@@ -73,10 +74,12 @@ export const sources = pgTable("sources", {
   imported_entry_count: integer().default(0).notNull(),
   total_entry_count: integer(),
   status: columns.status,
+  author_id: columns.author_id,
 });
 
-export const sourcesRelations = relations(sources, ({ many }) => ({
+export const sourcesRelations = relations(sources, ({ many, one }) => ({
   entries: many(entries),
+  author: one(users, { fields: [sources.author_id], references: [users.id] }),
 }));
 
 export const entries = pgTable("entries", {
@@ -86,10 +89,12 @@ export const entries = pgTable("entries", {
   contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
   status: columns.status,
+  author_id: columns.author_id,
 });
 
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
+  author: one(users, { fields: [entries.author_id], references: [users.id] }),
   reviews: many(reviews),
   entriesToCategories: many(entriesToCategories),
 }));
@@ -134,15 +139,34 @@ export const categories = pgTable("categories", {
   name: text().notNull(),
   colour: coloursEnum().notNull(),
   status: columns.status,
+  author_id: columns.author_id,
 });
+
+export const categoriesRelations = relations(categories, ({ one }) => ({
+  author: one(users, { fields: [categories.author_id], references: [users.id] })
+}));
 
 export const users = pgTable("users", {
   ...defaultColumns,
   username: text().notNull(),
   email_address: text().notNull(),
+  // Searches
   searches_count: integer().default(0).notNull(),
+  // Additions
   additions_count: integer().default(0).notNull(),
+  entry_additions_count: integer().default(0).notNull(),
+  source_additions_count: integer().default(0).notNull(),
+  category_additions_count: integer().default(0).notNull(),
+  // Changes
   changes_count: integer().default(0).notNull(),
+  entry_changes_count: integer().default(0).notNull(),
+  source_changes_count: integer().default(0).notNull(),
+  category_changes_count: integer().default(0).notNull(),
+  // Reviews
+  reviews_count: integer().default(0).notNull(),
+  entry_reviews_count: integer().default(0).notNull(),
+  source_reviews_count: integer().default(0).notNull(),
+  category_reviews_count: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.
@@ -152,6 +176,9 @@ export const users = pgTable("users", {
 export const usersRelations = relations(users, ({ many }) => ({
   reviews: many(reviews),
   searches: many(searches),
+  sources: many(sources),
+  entries: many(entries),
+  categories: many(categories),
   timeEntries: many(timeEntries),
 }));
 
