@@ -1,5 +1,6 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
   import Table from "../layout/table/index.js";
   import { dayjs } from "../../helpers/dates.js";
   import IconButton from "../../components/interactions/icon-button.svelte";
@@ -33,7 +34,7 @@
           {search.lemma}
           <IconButton
             icon={ArrowRightUpLineIcon}
-            onclick={() => (window.location.href = source.url)}
+            onclick={() => goto(`/lemma/${encodeURIComponent(search.lemma)}`)}
           />
         </Table.Cell>
         <Table.Cell>

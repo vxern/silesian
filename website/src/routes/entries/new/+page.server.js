@@ -31,6 +31,6 @@ export const actions = {
     // TODO(vxern): Handle failure.
 
     // TODO(vxern): Any better place?
-    redirect(303, `/lemma/${entry.lemma}#${entry.id}`);
+    redirect(303, `/lemma/${encodeURIComponent(entry.lemma)}#${entry.id}`);
   },
 };
