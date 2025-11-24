@@ -5,8 +5,8 @@ import { eq, count } from 'drizzle-orm';
 export const load = async () => {
   return {
     // TODO(vxern): Make sure to filter by the user.
-    draftCount: db.select({ count: count() }).from(sources).where(eq(sources.status, "draft")).then((results) => results.at(0).count),
-    pendingCount: db.select({ count: count() }).from(sources).where(eq(sources.status, "pending")).then((results) => results.at(0).count),
+    draftCount: db.$count(sources, eq(sources.status, "draft")),
+    pendingCount: db.$count(sources, eq(sources.status, "pending")),
     sources: await db.query.sources.findMany({ where: (sources, { eq }) => eq(sources.status, "published") }),
   };
 };
