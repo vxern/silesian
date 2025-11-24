@@ -150,23 +150,10 @@ export const users = pgTable("users", {
   ...defaultColumns,
   username: text().notNull(),
   email_address: text().notNull(),
-  // Searches
   searches_count: integer().default(0).notNull(),
-  // Additions
   additions_count: integer().default(0).notNull(),
-  entry_additions_count: integer().default(0).notNull(),
-  source_additions_count: integer().default(0).notNull(),
-  category_additions_count: integer().default(0).notNull(),
-  // Changes
   changes_count: integer().default(0).notNull(),
-  entry_changes_count: integer().default(0).notNull(),
-  source_changes_count: integer().default(0).notNull(),
-  category_changes_count: integer().default(0).notNull(),
-  // Reviews
   reviews_count: integer().default(0).notNull(),
-  entry_reviews_count: integer().default(0).notNull(),
-  source_reviews_count: integer().default(0).notNull(),
-  category_reviews_count: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.

@@ -109,7 +109,8 @@
       "chart": {
         "chart": "Wykres wyszukań (na tyn rok)",
         "count": "Liczba",
-        "month": "Miesiōnc"
+        "month": "Miesiōnc",
+        "label": "Liczba wyszukań na miesiōnc"
       },
       "overview": {
         "count": "Liczba wyszukań"
@@ -118,6 +119,22 @@
         "lemma": "Hasło",
         "created_at": "Kiedy",
         "no_search_history": "Jeszcze niczygo niy szukaliście."
+      }
+    },
+    "addition_tables": {
+      "chart": {
+        "chart": "Wykres przidanych haseł (na tyn rok)",
+        "count": "Liczba",
+        "month": "Miesiōnc",
+        "label": "Liczba przidanych haseł na miesiōnc"
+      },
+      "overview": {
+        "count": "Liczba przidanych haseł"
+      },
+      "history": {
+        "lemma": "Hasło",
+        "created_at": "Kiedy",
+        "no_addition_history": "Jeszcze żŏdnych haseł żeście niy przidali."
       }
     },
     "search_history": {

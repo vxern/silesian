@@ -17,7 +17,6 @@
   import duration from "dayjs/plugin/duration";
   import relativeTime from "dayjs/plugin/relativeTime";
   import calendar from "dayjs/plugin/calendar";
-  import Loading from "../meta/loading.svelte";
 
   dayjs.extend(duration);
   dayjs.extend(localeData);
@@ -32,7 +31,7 @@
     PointElement,
   ]);
 
-  const { searchCount, searchCountByMonth, searchHistory } = $props();
+  const { additionCount, additionCountByMonth, additionHistory } = $props();
 
   function chart(element) {
     new Chart(element.getContext("2d"), {
@@ -43,7 +42,7 @@
           x: {
             title: {
               display: true,
-              text: m["components.search_tables.chart.month"](),
+              text: m["components.addition_tables.chart.month"](),
             },
           },
           y: {
@@ -52,7 +51,7 @@
             },
             title: {
               display: true,
-              text: m["components.search_tables.chart.count"](),
+              text: m["components.addition_tables.chart.count"](),
             },
           },
         },
@@ -61,9 +60,9 @@
         labels: dayjs.localeData().months(),
         datasets: [
           {
-            label: m["components.search_tables.chart.label"](),
+            text: m["components.addition_tables.chart.label"](),
             backgroundColor: "oklch(54.6% 0.245 262.881)", // color-blue-600
-            data: Object.values(searchCountByMonth),
+            data: Object.values(additionCountByMonth),
           },
         ],
       },
@@ -75,7 +74,7 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.chart.chart"]()}
+        {m["components.addition_tables.chart.chart"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
@@ -94,14 +93,14 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.overview.count"]()}
+        {m["components.addition_tables.overview.count"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
   <Table.Body>
     <Table.Row>
       <Table.Cell>
-        {searchCount}
+        {additionCount}
       </Table.Cell>
     </Table.Row>
   </Table.Body>
@@ -111,30 +110,30 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.history.lemma"]()}
+        {m["components.addition_tables.history.lemma"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.search_tables.history.created_at"]()}
+        {m["components.addition_tables.history.created_at"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each searchHistory as search, index}
+    {#each additionHistory as entry, index}
       <Table.Row {index}>
         <Table.Cell>
-          {search.lemma}
+          {entry.lemma}
           <IconButton
             icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(search.lemma)}`)}
+            onclick={() => goto(`/lemma/${encodeURIComponent(entry.lemma)}`)}
           />
         </Table.Cell>
         <Table.Cell>
-          {dayjs(search.created_at).calendar()}
+          {dayjs(entry.created_at).calendar()}
         </Table.Cell>
       </Table.Row>
     {/each}
   </Table.Body>
 </Table.Root>
-{#if searchHistory.length === 0}
-  {m["components.search_tables.no_search_history"]()}
+{#if additionHistory.length === 0}
+  {m["components.addition_tables.no_addition_history"]()}
 {/if}

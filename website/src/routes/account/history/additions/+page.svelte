@@ -3,6 +3,9 @@
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
+  import AdditionTables from "../../../../components/additions/addition-tables.svelte";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -25,4 +28,9 @@
     <Page.Title title={m["routes.account.history.additions.title"]()} />
   </Page.Header>
   <Page.Divider />
+  <AdditionTables
+    additionCount={data.additionCount}
+    additionCountByMonth={data.additionCountByMonth}
+    additionHistory={data.additionHistory}
+  />
 </Page.Root>
