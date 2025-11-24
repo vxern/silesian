@@ -3,6 +3,9 @@
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
+  import SearchTable from "../../../../components/searches/search-table.svelte";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -25,4 +28,5 @@
     <Page.Title title={m["routes.account.history.searches.title"]()} />
   </Page.Header>
   <Page.Divider />
+  <SearchTable searches={data.searches} />
 </Page.Root>

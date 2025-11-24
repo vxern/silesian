@@ -136,9 +136,6 @@ export const categories = pgTable("categories", {
   status: columns.status,
 });
 
-// TODO(vxern): Add relation between entries and categories.
-// TODO(vxern): Add relation between categories and entries.
-
 export const users = pgTable("users", {
   ...defaultColumns,
   username: text().notNull(),
@@ -155,7 +152,25 @@ export const users = pgTable("users", {
 export const usersRelations = relations(users, ({ many }) => ({
   reviews: many(reviews),
   searches: many(searches),
+  timeEntries: many(timeEntries),
 }));
+
+export const timeEntryScopesEnum = pgEnum("time_entry_scopes", [
+  "using",
+  "editing",
+]);
+
+export const timeEntries = pgTable("time_entries", {
+  id: columns.id,
+  user_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  scope: timeEntryScopesEnum().notNull(),
+  created_at: columns.created_at,
+  // No updated_at because time entries are never updated.
+});
+
+export const timeEntriesRelations = relations(timeEntries, ({ one }) => ({
+  user: one(users, { fields: [timeEntries.user_id], references: [users.id] }),
+}))
 
 export const reviews = pgTable("reviews", {
   id: columns.id,
@@ -167,7 +182,7 @@ export const reviews = pgTable("reviews", {
 })
 
 export const reviewsRelations = relations(reviews, ({ one }) => ({
-  change: one(entries, { fields: [reviews.change_id], references: [changes.id] }),
+  change: one(changes, { fields: [reviews.change_id], references: [changes.id] }),
   reviewer: one(users, { fields: [reviews.reviewer_id], references: [users.id] }),
 }));
 

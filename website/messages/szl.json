@@ -105,6 +105,10 @@
       "name": "Miano",
       "colour": "Farba"
     },
+    "searches_table": {
+      "lemma": "Hasło",
+      "created_at": "Kiedy"
+    },
     "search_history": {
       "no_search_history": "Jeszcze niczygo niy szukaliście.",
       "no_popular_searches": "Żŏdyn jeszcze niczygo niy szukoł."
