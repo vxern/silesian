@@ -6,7 +6,7 @@
   import "tippy.js/animations/shift-toward.css";
   import "tippy.js/dist/tippy.css";
   import "../app.css";
-  import dayjs from "dayjs";
+  import { dayjs } from "../helpers/dates.js";
 
   // TODO(vxern): This needs to update with settings.
   dayjs.locale("szl");

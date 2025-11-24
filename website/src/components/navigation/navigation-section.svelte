@@ -36,6 +36,8 @@
           {m["routes.account.history.additions.title"]()}
         {:else if page.url.pathname === "/account/history/changes"}
           {m["routes.account.history.changes.title"]()}
+        {:else if page.url.pathname === "/account/history/reviews"}
+          {m["routes.account.history.reviews.title"]()}
         {:else if page.url.pathname === "/account/history/time-spent-using"}
           {m["routes.account.history.time_spent_using.title"]()}
         {:else if page.url.pathname === "/account/history/time-spent-editing"}

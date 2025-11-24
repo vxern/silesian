@@ -1,4 +1,4 @@
-import dayjs from "dayjs";
+import { dayjs } from "../../helpers/dates.js";
 import { db } from "$lib/database.server";
 import { entries } from "$lib/database/schema";
 import { gte, count } from 'drizzle-orm';

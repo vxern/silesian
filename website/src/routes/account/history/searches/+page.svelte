@@ -4,6 +4,7 @@
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
   import SearchTables from "../../../../components/searches/search-tables.svelte";
+  import BackButton from "../../../../components/interactions/back-button.svelte";
 
   const { data } = $props();
 </script>
@@ -28,8 +29,14 @@
     <Page.Title title={m["routes.account.history.searches.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <SearchTables
-    searchCount={data.searchCount}
-    searchHistory={data.searchHistory}
-  />
+  <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => window.history.back()} />
+    </Page.Actions>
+    <SearchTables
+      searchCount={data.searchCount}
+      searchCountByMonth={data.searchCountByMonth}
+      searchHistory={data.searchHistory}
+    />
+  </Page.Contents>
 </Page.Root>

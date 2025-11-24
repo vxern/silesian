@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
   import { m } from "$lib/paraglide/messages";
-  import dayjs from "dayjs";
+  import { dayjs } from "../../helpers/dates.js";
   import relativeTime from "dayjs/plugin/relativeTime";
   import constants from "$lib/constants/core";
   import Loading from "../../components/meta/loading.svelte";

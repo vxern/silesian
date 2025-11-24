@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+import dayjs from "dayjs";
 
 function plural(n) {
   return (n % 10 < 5) && (n % 10 > 1) && ((~~(n / 10) % 10) !== 1) // eslint-disable-line
@@ -8,22 +8,22 @@ function translate(number, withoutSuffix, key) {
   const result = `${number} `
   switch (key) {
     case 'm':
-      return withoutSuffix ? 'minuta' : 'minutę'
+      return withoutSuffix ? 'minuta' : 'minutã'
     case 'mm':
       return result + (plural(number) ? 'minuty' : 'minut')
     case 'h':
-      return withoutSuffix ? 'godzina' : 'godzinę'
+      return withoutSuffix ? 'godzina' : 'godzinã'
     case 'hh':
       return result + (plural(number) ? 'godziny' : 'godzin')
     case 'MM':
-      return result + (plural(number) ? 'miesiące' : 'miesięcy')
+      return result + (plural(number) ? 'miesiōnce' : 'miesiyncy')
     case 'yy':
-      return result + (plural(number) ? 'lata' : 'lat')
+      return result + (plural(number) ? 'roki' : 'rokōw')
   }
 }
 
-const monthFormat = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_')
-const monthStandalone = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_')
+const monthFormat = 'stycznia_lutygo_marca_kwietniŏ_maja_czyrwca_lipniŏ_siyrpniŏ_wrześniŏ_paździyrnika_listopada_grudnia'.split('_')
+const monthStandalone = 'styczyń_luty_marzec_kwieciyń_mŏj_czyrwiec_lipiyń_siyrpiyń_wrzesiyń_paździyrnik_listopŏd_grudziyń'.split('_')
 const MONTHS_IN_FORMAT = /D MMMM/
 
 const months = (dayjsInstance, format) => {
@@ -36,26 +36,26 @@ months.s = monthStandalone
 months.f = monthFormat
 
 const locale = {
-  name: 'pl',
-  weekdays: 'niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota'.split('_'),
-  weekdaysShort: 'ndz_pon_wt_śr_czw_pt_sob'.split('_'),
-  weekdaysMin: 'Nd_Pn_Wt_Śr_Cz_Pt_So'.split('_'),
+  name: 'szl',
+  weekdays: 'niydziela_pyńdziałek_wtorek_strzoda_sztwŏrtek_piōntek_sobota'.split('_'),
+  weekdaysShort: 'ndz_pyń_wt_str_szt_pt_sob'.split('_'),
+  weekdaysMin: 'Nd_Pń_Wt_St_Sz_Pt_So'.split('_'),
   months,
-  monthsShort: 'sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru'.split('_'),
+  monthsShort: 'sty_lut_mar_kwi_mŏj_czy_lip_siy_wrz_paź_lis_gru'.split('_'),
   ordinal: n => `${n}.`,
   weekStart: 1,
   yearStart: 4,
   relativeTime: {
     future: 'za %s',
-    past: '%s temu',
-    s: 'kilka sekund',
+    past: '%s nazŏd',
+    s: 'pŏrã sekund',
     m: translate,
     mm: translate,
     h: translate,
     hh: translate,
-    d: '1 dzień',
+    d: 'jedyn dziyń',
     dd: '%d dni',
-    M: 'miesiąc',
+    M: 'miesiōnc',
     MM: translate,
     y: 'rok',
     yy: translate
@@ -72,4 +72,4 @@ const locale = {
 
 dayjs.locale(locale, null, true)
 
-export default locale
+export default locale;
