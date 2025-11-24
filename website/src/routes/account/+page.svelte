@@ -9,6 +9,7 @@
   import MailLineIcon from "~icons/mingcute/mail-line";
   import Calendar2LineIcon from "~icons/mingcute/calendar-2-line";
   import AddLineIcon from "~icons/mingcute/add-line";
+  import ChecksLineIcon from "~icons/mingcute/checks-line";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import TimeLineIcon from "~icons/mingcute/time-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
@@ -110,6 +111,9 @@
             <Table.HeaderCell icon={Pencil2LineIcon}>
               {m["routes.account.attributes.stats.changes"]()}
             </Table.HeaderCell>
+            <Table.HeaderCell icon={ChecksLineIcon}>
+              {m["routes.account.attributes.stats.reviews"]()}
+            </Table.HeaderCell>
             <Table.HeaderCell icon={TimeLineIcon}>
               {m["routes.account.attributes.stats.time_spent_using"]()}
             </Table.HeaderCell>
@@ -139,6 +143,13 @@
               <IconButton
                 icon={ArrowRightUpLineIcon}
                 onclick={() => goto("/account/history/changes")}
+              />
+            </Table.Cell>
+            <Table.Cell>
+              {data.user.reviews_count}
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => goto("/account/history/reviews")}
               />
             </Table.Cell>
             <Table.Cell>
