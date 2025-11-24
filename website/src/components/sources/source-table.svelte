@@ -12,6 +12,7 @@
   import Button from "../interactions/button.svelte";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
+  import IconButton from "../../components/interactions/icon-button.svelte";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
 
@@ -69,12 +70,12 @@
     {#each sources as source, index}
       <Table.Row {index}>
         <Table.Cell>
+          {source.name}
           {#if source.url}
-            <a href={source.url} class="underline underline-offset-3">
-              {source.name}
-            </a>
-          {:else}
-            {source.name}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => (window.location.href = source.url)}
+            />
           {/if}
         </Table.Cell>
         <Table.Cell>
