@@ -107,8 +107,8 @@
     },
     "search_tables": {
       "chart": {
-        "chart": "Wykres",
-        "search_count": "Liczba wyszukań",
+        "chart": "Wykres wyszukań (na tyn rok)",
+        "count": "Liczba",
         "month": "Miesiōnc"
       },
       "overview": {

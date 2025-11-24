@@ -49,7 +49,7 @@
           y: {
             title: {
               display: true,
-              text: m["components.search_tables.chart.search_count"](),
+              text: m["components.search_tables.chart.count"](),
             },
           },
         },
@@ -72,7 +72,7 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.overview.count"]()}
+        {m["components.search_tables.chart.chart"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
