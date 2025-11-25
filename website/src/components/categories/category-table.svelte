@@ -6,6 +6,7 @@
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
+  import ColourLabel from "../labels/colour-label.svelte";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
@@ -41,8 +42,7 @@
           {category.name}
         </Table.Cell>
         <Table.Cell>
-          <!-- TODO(vxern): Maybe get rid of this column and display it differently. -->
-          {category.colour}
+          <ColourLabel colour={category.colour} />
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

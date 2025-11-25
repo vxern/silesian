@@ -1,11 +1,10 @@
 <script>
-  import SelectOption from "../select-option.svelte";
+  import SelectOption from "./select-option.svelte";
+  import SourceLabel from "../../labels/source-label.svelte";
 
   const { option, selected, select } = $props();
 </script>
 
 <SelectOption highlighted={selected} select={() => select(option)}>
-  <section class="flex w-full">
-    {option[0]}
-  </section>
+  <SourceLabel source={option[0]} />
 </SelectOption>
