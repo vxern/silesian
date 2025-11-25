@@ -32,7 +32,7 @@
     PointElement,
   ]);
 
-  const { searchCount, searchCountByMonth, searchHistory } = $props();
+  const { reviewCount, reviewCountByMonth, reviewHistory } = $props();
 
   function chart(element) {
     new Chart(element.getContext("2d"), {
@@ -43,7 +43,7 @@
           x: {
             title: {
               display: true,
-              text: m["components.search_tables.chart.month"](),
+              text: m["components.review_tables.chart.month"](),
             },
           },
           y: {
@@ -52,7 +52,7 @@
             },
             title: {
               display: true,
-              text: m["components.search_tables.chart.count"](),
+              text: m["components.review_tables.chart.count"](),
             },
           },
         },
@@ -61,9 +61,9 @@
         labels: dayjs.localeData().months(),
         datasets: [
           {
-            label: m["components.search_tables.chart.label"](),
+            label: m["components.review_tables.chart.label"](),
             backgroundColor: "oklch(54.6% 0.245 262.881)", // color-blue-600
-            data: Object.values(searchCountByMonth),
+            data: Object.values(reviewCountByMonth),
           },
         ],
       },
@@ -75,7 +75,7 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.chart.chart"]()}
+        {m["components.review_tables.chart.chart"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
@@ -94,14 +94,14 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.overview.count"]()}
+        {m["components.review_tables.overview.count"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
   <Table.Body>
     <Table.Row>
       <Table.Cell>
-        {searchCount}
+        {reviewCount}
       </Table.Cell>
     </Table.Row>
   </Table.Body>
@@ -111,30 +111,30 @@
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.search_tables.history.lemma"]()}
+        {m["components.review_tables.history.lemma"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.search_tables.history.created_at"]()}
+        {m["components.review_tables.history.created_at"]()}
       </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each searchHistory as search, index}
+    {#each reviewHistory as review, index}
       <Table.Row {index}>
         <Table.Cell>
-          {search.lemma}
+          {review.lemma}
           <IconButton
             icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(search.lemma)}`)}
+            onclick={() => goto(`/lemma/${encodeURIComponent(review.lemma)}`)}
           />
         </Table.Cell>
         <Table.Cell>
-          {dayjs(search.created_at).calendar()}
+          {dayjs(review.created_at).calendar()}
         </Table.Cell>
       </Table.Row>
     {/each}
   </Table.Body>
 </Table.Root>
-{#if searchHistory.length === 0}
-  {m["components.search_tables.history.no_search_history"]()}
+{#if reviewHistory.length === 0}
+  {m["components.review_tables.history.no_review_history"]()}
 {/if}

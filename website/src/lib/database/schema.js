@@ -22,15 +22,18 @@ const defaultColumns = {
   updated_at: columns.updated_at,
 };
 
+// TODO(vxern): Rename to versions?
 export const changes = pgTable("changes", {
   id: columns.id,
   version: integer().default(1).notNull(),
   changeable_type: text().notNull(),
   changeable_id: bigint({ mode: "number" }).notNull(),
+  changer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   created_at: columns.created_at,
 }, (t) => [unique().on(t.version, t.changeable_type, t.changeable_id)]);
 
-export const changesRelations = relations(changes, ({ many }) => ({
+export const changesRelations = relations(changes, ({ many, one }) => ({
+  changer: one(users, { fields: [changes.changer_id], references: [users.id] }),
   reviews: many(reviews),
 }));
 
@@ -102,7 +105,7 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
 export const entriesToCategories = pgTable("entries_to_categories", {
   entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
-});
+}, (t) => [unique().on(t.entry_id, t.category_id)]);
 
 export const entriesToCategoriesRelations = relations(entriesToCategories, ({ one }) => ({
   entry: one(entries, { fields: [entriesToCategories.entry_id], references: [entries.id] }),
@@ -158,9 +161,10 @@ export const users = pgTable("users", {
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_editing: integer().default(0).notNull(),
-});
+}, (t) => [unique().on(t.email_address)]);
 
 export const usersRelations = relations(users, ({ many }) => ({
+  changes: many(changes),
   reviews: many(reviews),
   searches: many(searches),
   sources: many(sources),
@@ -186,14 +190,17 @@ export const timeEntriesRelations = relations(timeEntries, ({ one }) => ({
   user: one(users, { fields: [timeEntries.user_id], references: [users.id] }),
 }))
 
+export const reviewDecisionsEnum = pgEnum("review_decisions", ["accepted", "rejected"]);
+
 export const reviews = pgTable("reviews", {
   id: columns.id,
   change_id: bigint({ mode: "number" }).references(() => changes.id).notNull(),
   reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  decision: reviewDecisionsEnum().notNull(),
   comments: text().array(),
   created_at: columns.created_at,
   // No updated_at because reviews are never updated.
-})
+}, (t) => [unique().on(t.change_id, t.reviewer_id)])
 
 export const reviewsRelations = relations(reviews, ({ one }) => ({
   change: one(changes, { fields: [reviews.change_id], references: [changes.id] }),

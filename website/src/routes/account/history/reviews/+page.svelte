@@ -3,21 +3,22 @@
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
-  import AdditionTables from "../../../../components/additions/addition-tables.svelte";
+  import ReviewTables from "../../../../components/reviews/review-tables.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
 
   const { data } = $props();
+  $inspect(data.reviewHistory);
 </script>
 
 <svelte:head>
   <meta
     name="description"
-    content={m["routes.account.history.additions.description"]()}
+    content={m["routes.account.history.reviews.description"]()}
   />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.account.history.additions.title"](),
+      page_title: m["routes.account.history.reviews.title"](),
     })}
   </title>
 </svelte:head>
@@ -26,17 +27,17 @@
 
 <Page.Root>
   <Page.Header>
-    <Page.Title title={m["routes.account.history.additions.title"]()} />
+    <Page.Title title={m["routes.account.history.reviews.title"]()} />
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
       <BackButton onclick={() => window.history.back()} />
     </Page.Actions>
-    <AdditionTables
-      additionCount={data.additionCount}
-      additionCountByMonth={data.additionCountByMonth}
-      additionHistory={data.additionHistory}
+    <ReviewTables
+      reviewCount={data.reviewCount}
+      reviewCountByMonth={data.reviewCountByMonth}
+      reviewHistory={data.reviewHistory}
     />
   </Page.Contents>
 </Page.Root>

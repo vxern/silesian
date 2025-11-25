@@ -1,7 +1,7 @@
 import { db } from "$lib/database.server";
 import { dayjs } from "../../../../helpers/dates.js";
 import { searches } from "$lib/database/schema";
-import { count, sql, asc, gte } from "drizzle-orm";
+import { count, sql, asc, gte, eq } from "drizzle-orm";
 
 // TODO(vxern): Limit.
 // TODO(vxern): Paginate.
@@ -26,6 +26,7 @@ async function getSearchCountByMonth() {
     .select({ month: sql`EXTRACT(MONTH FROM ${searches.created_at}) - 1`.as("month"), count: count() })
     .from(searches)
     .where(gte(searches.created_at, dayjs().startOf("year")))
+    .where(eq(searches.searcher_id, 1))
     .groupBy(sql`month`);
 
   return results.reduce(

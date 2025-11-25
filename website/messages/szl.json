@@ -137,6 +137,38 @@
         "no_addition_history": "Jeszcze żŏdnych haseł żeście niy przidali."
       }
     },
+    "change_tables": {
+      "chart": {
+        "chart": "Wykres zmiyniōnych haseł (na tyn rok)",
+        "count": "Liczba",
+        "month": "Miesiōnc",
+        "label": "Liczba zmiyniōnych haseł na miesiōnc"
+      },
+      "overview": {
+        "count": "Liczba zmiyniōnych haseł"
+      },
+      "history": {
+        "lemma": "Hasło",
+        "created_at": "Kiedy",
+        "no_change_history": "Jeszcze żŏdnych haseł żeście niy zmiynili."
+      }
+    },
+    "review_tables": {
+      "chart": {
+        "chart": "Wykres sprŏwdzyń haseł (na tyn rok)",
+        "count": "Liczba",
+        "month": "Miesiōnc",
+        "label": "Liczba sprŏwdzyń haseł na miesiōnc"
+      },
+      "overview": {
+        "count": "Liczba sprŏwdzyń haseł na miesiōnc"
+      },
+      "history": {
+        "lemma": "Hasło",
+        "created_at": "Kiedy",
+        "no_review_history": "Jeszcze żŏdnych haseł żeście niy sprŏwdzili."
+      }
+    },
     "search_history": {
       "no_search_history": "Jeszcze niczygo niy szukaliście.",
       "no_popular_searches": "Żŏdyn jeszcze niczygo niy szukoł."
@@ -256,11 +288,15 @@
         },
         "additions": {
           "title": "Historyjŏ przidatkōw",
-          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście przidŏwali a kiedy."
+          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście przidali a kiedy."
         },
         "changes": {
           "title": "Historyjŏ zmian",
           "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście zmiyniali a kiedy."
+        },
+        "reviews": {
+          "title": "Historyjŏ sprŏwdzyń",
+          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście sprŏwdziyli a kiedy."
         },
         "time_spent_using": {
           "title": "Wykres spyndzōnygo czasu na używaniu strōny",

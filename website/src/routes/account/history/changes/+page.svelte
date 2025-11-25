@@ -3,6 +3,10 @@
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
+  import ChangeTables from "../../../../components/changes/change-tables.svelte";
+  import BackButton from "../../../../components/interactions/back-button.svelte";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -25,4 +29,14 @@
     <Page.Title title={m["routes.account.history.changes.title"]()} />
   </Page.Header>
   <Page.Divider />
+  <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => window.history.back()} />
+    </Page.Actions>
+    <ChangeTables
+      changeCount={data.changeCount}
+      changeCountByMonth={data.changeCountByMonth}
+      changeHistory={data.changeHistory}
+    />
+  </Page.Contents>
 </Page.Root>

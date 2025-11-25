@@ -135,5 +135,5 @@
   </Table.Body>
 </Table.Root>
 {#if additionHistory.length === 0}
-  {m["components.addition_tables.no_addition_history"]()}
+  {m["components.addition_tables.history.no_addition_history"]()}
 {/if}

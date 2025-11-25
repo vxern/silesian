@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { dayjs } from "../../../../helpers/dates.js";
-import { entries, sources, categories } from "$lib/database/schema";
+import { entries } from "$lib/database/schema";
 import { count, sql, asc, eq, gte } from "drizzle-orm";
 
 // TODO(vxern): Limit.
