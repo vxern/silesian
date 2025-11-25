@@ -28,6 +28,8 @@ export const versions = pgTable("versions", {
   versionable_type: text().notNull(),
   versionable_id: bigint({ mode: "number" }).notNull(),
   author_id: columns.author_id,
+  // Should be equal to the `created_at` of the `versionable` in the first version.
+  // Should be equal to the `updated_at` of the `versionable` in the last version.
   created_at: columns.created_at,
 }, (t) => [unique().on(t.version, t.versionable_type, t.versionable_id)]);
 
