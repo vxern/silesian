@@ -1,11 +1,10 @@
 <script>
   import { m } from "$lib/paraglide/messages";
-  import { onMount } from "svelte";
-  import { page } from "$app/state";
+  // TODO(vxern): What is enhance for again?
+  import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Form from "../../../../components/form/index.js";
-  import Loading from "../../../../components/meta/loading.svelte";
   import EntryForm from "../../form.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
   import Button from "../../../../components/interactions/button.svelte";
@@ -52,22 +51,22 @@
       <Form.Disabled>
         <EntryForm entry={data.entry} />
       </Form.Disabled>
-      <Page.Actions>
-        <Button
-          icon={CheckLineIcon}
-          onclick={() => window.history.back()}
-          colour="green"
-        >
-          {m["components.form.accept"]()}
-        </Button>
-        <Button
-          icon={CloseLineIcon}
-          onclick={() => window.history.back()}
-          colour="red"
-        >
-          {m["components.form.reject"]()}
-        </Button>
-      </Page.Actions>
+      <form
+        method="POST"
+        action="?/review"
+        use:enhance
+        class="flex flex-col gap-y-6"
+      >
+        <input type="hidden" name="id" value={data.entry.id} />
+        <Page.Actions>
+          <Button type="submit" icon={CheckLineIcon} colour="green">
+            {m["components.form.accept"]()}
+          </Button>
+          <Button type="submit" name="reject" icon={CloseLineIcon} colour="red">
+            {m["components.form.reject"]()}
+          </Button>
+        </Page.Actions>
+      </form>
     </section>
   </Page.Contents>
 </Page.Root>

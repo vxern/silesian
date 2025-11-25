@@ -1,7 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { entries } from "$lib/database/schema";
-import { eq } from 'drizzle-orm';
+import { changes, reviews } from "$lib/database/schema";
+import { eq, and, desc } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
@@ -20,28 +20,35 @@ export const actions = {
   review: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const entry = await db.transaction(async (tx) => {
+    const change = await db.query.changes.findFirst({
+      where: (changes, { eq }) => and(
+        eq(changes.changeable_id, data.get("id")),
+        eq(changes.changeable_type, "entries"),
+      ),
+      orderBy: [desc(changes.version)],
+    });
+    if (!change) {
+      // TODO(vxern): Handle failure.
       return;
+    }
 
-      await db.insert(reviews).values({
-      });
+    // TODO(vxern): Implement comments.
+    // const comments = JSON.parse(data.get("comments[]"));
+    // if (comments.length === 0) {
+    //   return null;
+    // }
 
-      return entry;
+    const review = await db.insert(reviews).values({
+      change_id: change.id,
+      // TODO(vxern): Update to the right user.
+      reviewer_id: 1,
+      decision: "reject" in data ? "rejected" : "accepted",
+    // TODO(vxern): Implement comments.
+      comments: [],
     });
 
     // TODO(vxern): Handle failure.
 
-    let redirectTo;
-    if (entry.status === "draft") {
-      redirectTo = "/entries/drafts";
-    } else if (entry.status === "pending") {
-      redirectTo = "/entries/review";
-    } else if (entry.status === "published") {
-      redirectTo = "/entries";
-    } else {
-      return error(500, { message: "Internal Server Error" });
-    }
-
-    redirect(303, redirectTo);
+    redirect(303, "/entries/review");
   },
 };

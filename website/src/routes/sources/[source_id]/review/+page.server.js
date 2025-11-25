@@ -1,7 +1,9 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { sources } from "$lib/database/schema";
-import { eq } from 'drizzle-orm';
+import { changes, reviews } from "$lib/database/schema";
+import { eq, and, desc } from 'drizzle-orm';
+
+// TODO(vxern): Need to exclude deleted objects from filters.
 
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
@@ -18,28 +20,35 @@ export const actions = {
   review: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const source = await db.transaction(async (tx) => {
+    const change = await db.query.changes.findFirst({
+      where: (changes, { eq }) => and(
+        eq(changes.changeable_id, data.get("id")),
+        eq(changes.changeable_type, "sources"),
+      ),
+      orderBy: [desc(changes.version)],
+    });
+    if (!change) {
+      // TODO(vxern): Handle failure.
       return;
+    }
 
-      await db.insert(reviews).values({
-      });
+    // TODO(vxern): Implement comments.
+    // const comments = JSON.parse(data.get("comments[]"));
+    // if (comments.length === 0) {
+    //   return null;
+    // }
 
-      return source;
+    const review = await db.insert(reviews).values({
+      change_id: change.id,
+      // TODO(vxern): Update to the right user.
+      reviewer_id: 1,
+      decision: "reject" in data ? "rejected" : "accepted",
+    // TODO(vxern): Implement comments.
+      comments: [],
     });
 
     // TODO(vxern): Handle failure.
 
-    let redirectTo;
-    if (source.status === "draft") {
-      redirectTo = "/sources/drafts";
-    } else if (source.status === "pending") {
-      redirectTo = "/sources/review";
-    } else if (source.status === "published") {
-      redirectTo = "/sources";
-    } else {
-      return error(500, { message: "Internal Server Error" });
-    }
-
-    redirect(303, redirectTo);
+    redirect(303, "/sources/review");
   },
 };
