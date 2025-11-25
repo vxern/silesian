@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { dayjs } from "../../../../helpers/dates.js";
-import { reviews, changes, entries } from "$lib/database/schema";
+import { reviews, versions, entries } from "$lib/database/schema";
 import { count, sql, asc, gte, and, eq } from "drizzle-orm";
 
 // TODO(vxern): Limit.
@@ -43,6 +43,6 @@ function getReviewHistory() {
   return db
     .select({ entry: entries })
     .from(reviews)
-    .leftJoin(changes, eq(reviews.change_id, changes.id))
-    .leftJoin(entries, and(eq(changes.changeable_type, "entries"), eq(changes.changeable_id, reviews.id)));
+    .leftJoin(versions, eq(reviews.version_id, versions.id))
+    .leftJoin(entries, and(eq(versions.versionable_type, "entries"), eq(versions.versionable_id, reviews.id)));
 }

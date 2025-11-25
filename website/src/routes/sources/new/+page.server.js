@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { sources, changes } from "$lib/database/schema";
+import { sources, versions } from "$lib/database/schema";
 import { sql } from 'drizzle-orm';
 
 export const actions = {
@@ -26,12 +26,12 @@ export const actions = {
         total_entry_count: data.get("total_entry_count"),
       }).returning({ id: sources.id }).then((result) => result.at(0));
 
-      await db.insert(changes).values({
-        changeable_type: "sources",
-        changeable_id: source.id,
+      await db.insert(versions).values({
+        versionable_type: "sources",
+        versionable_id: source.id,
       }).onConflictDoUpdate({
-        target: changes.version,
-        set: { version: sql`changes.version + 1` },
+        target: versions.version,
+        set: { version: sql`versions.version + 1` },
       });
 
       return source;

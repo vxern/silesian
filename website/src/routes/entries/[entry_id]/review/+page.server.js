@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { changes, reviews } from "$lib/database/schema";
+import { versions, reviews } from "$lib/database/schema";
 import { eq, and, desc } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
@@ -20,14 +20,14 @@ export const actions = {
   review: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const change = await db.query.changes.findFirst({
-      where: (changes, { eq }) => and(
-        eq(changes.changeable_id, data.get("id")),
-        eq(changes.changeable_type, "entries"),
+    const version = await db.query.versions.findFirst({
+      where: (versions, { eq }) => and(
+        eq(versions.versionable_id, data.get("id")),
+        eq(versions.versionable_type, "entries"),
       ),
-      orderBy: [desc(changes.version)],
+      orderBy: [desc(versions.version)],
     });
-    if (!change) {
+    if (!version) {
       // TODO(vxern): Handle failure.
       return;
     }
@@ -39,7 +39,7 @@ export const actions = {
     // }
 
     const review = await db.insert(reviews).values({
-      change_id: change.id,
+      version_id: version.id,
       // TODO(vxern): Update to the right user.
       reviewer_id: 1,
       decision: "reject" in data ? "rejected" : "accepted",

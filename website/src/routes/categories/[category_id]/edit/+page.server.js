@@ -36,12 +36,12 @@ export const actions = {
         total_entry_count: data.get("total_entry_count"),
       }).where(eq(sources.id, Number(data.get("id")))).returning({ status: sources.status }).then((result) => result.at(0));
 
-      await db.insert(changes).values({
-        changeable_type: "sources",
-        changeable_id: source.id,
+      await db.insert(versions).values({
+        versionable_type: "sources",
+        versionable_id: source.id,
       }).onConflictDoUpdate({
-        target: changes.version,
-        set: { version: sql`changes.version + 1` },
+        target: versions.version,
+        set: { version: sql`versions.version + 1` },
       });
 
       return source;

@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { dayjs } from "../../../../helpers/dates.js";
-import { changes } from "$lib/database/schema";
+import { versions } from "$lib/database/schema";
 import { count, sql, asc, eq, gte, and } from "drizzle-orm";
 
 // TODO(vxern): Limit.
@@ -19,15 +19,15 @@ export const load = async (params) => {
 };
 
 function getChangeCount() {
-  return db.$count(changes, and(eq(changes.changer_id, 1), eq(changes.changeable_type, "")));
+  return db.$count(versions, and(eq(versions.author_id, 1), eq(versions.versionable_type, "entries")));
 }
 
 async function getChangeCountByMonth() {
   const results = await db
-    .select({ month: sql`EXTRACT(MONTH FROM ${changes.created_at}) - 1`.as("month"), count: count() })
-    .from(changes)
-    .where(gte(changes.created_at, dayjs().startOf("year")))
-    .where(eq(changes.changer_id, 1))
+    .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
+    .from(versions)
+    .where(gte(versions.created_at, dayjs().startOf("year")))
+    .where(eq(versions.author_id, 1))
     .groupBy(sql`month`);
 
   return results.reduce(
@@ -41,5 +41,5 @@ async function getChangeCountByMonth() {
 }
 
 function getChangeHistory() {
-  return db.query.changes.findMany({ where: (changes, { eq }) => eq(changes.changer_id, 1) });
+  return db.query.versions.findMany({ where: (versions, { eq }) => eq(versions.author_id, 1) });
 }

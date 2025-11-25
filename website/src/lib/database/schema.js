@@ -22,18 +22,17 @@ const defaultColumns = {
   updated_at: columns.updated_at,
 };
 
-// TODO(vxern): Rename to versions?
-export const changes = pgTable("changes", {
+export const versions = pgTable("versions", {
   id: columns.id,
   version: integer().default(1).notNull(),
-  changeable_type: text().notNull(),
-  changeable_id: bigint({ mode: "number" }).notNull(),
-  changer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  versionable_type: text().notNull(),
+  versionable_id: bigint({ mode: "number" }).notNull(),
+  author_id: columns.author_id,
   created_at: columns.created_at,
-}, (t) => [unique().on(t.version, t.changeable_type, t.changeable_id)]);
+}, (t) => [unique().on(t.version, t.versionable_type, t.versionable_id)]);
 
-export const changesRelations = relations(changes, ({ many, one }) => ({
-  changer: one(users, { fields: [changes.changer_id], references: [users.id] }),
+export const versionsRelations = relations(versions, ({ many, one }) => ({
+  author: one(users, { fields: [versions.author_id], references: [users.id] }),
   reviews: many(reviews),
 }));
 
@@ -164,7 +163,7 @@ export const users = pgTable("users", {
 }, (t) => [unique().on(t.email_address)]);
 
 export const usersRelations = relations(users, ({ many }) => ({
-  changes: many(changes),
+  versions: many(versions),
   reviews: many(reviews),
   searches: many(searches),
   sources: many(sources),
@@ -194,16 +193,16 @@ export const reviewDecisionsEnum = pgEnum("review_decisions", ["accepted", "reje
 
 export const reviews = pgTable("reviews", {
   id: columns.id,
-  change_id: bigint({ mode: "number" }).references(() => changes.id).notNull(),
+  version_id: bigint({ mode: "number" }).references(() => versions.id).notNull(),
   reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   decision: reviewDecisionsEnum().notNull(),
   comments: text().array(),
   created_at: columns.created_at,
   // No updated_at because reviews are never updated.
-}, (t) => [unique().on(t.change_id, t.reviewer_id)])
+}, (t) => [unique().on(t.version_id, t.reviewer_id)])
 
 export const reviewsRelations = relations(reviews, ({ one }) => ({
-  change: one(changes, { fields: [reviews.change_id], references: [changes.id] }),
+  version: one(versions, { fields: [reviews.version_id], references: [versions.id] }),
   reviewer: one(users, { fields: [reviews.reviewer_id], references: [users.id] }),
 }));
 
