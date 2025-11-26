@@ -40,7 +40,7 @@
         .then((categories) =>
           categories.map((category) => [category.name, category])
         )}
-    component={Form.SimpleSelectOption}
+    component={Form.CategorySelectOption}
     multiple={true}
     value={entry?.categories}
   />

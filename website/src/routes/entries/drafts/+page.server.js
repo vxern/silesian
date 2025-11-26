@@ -6,7 +6,14 @@ export const load = async () => {
   return {
     entries: await db.query.entries.findMany({
       where: (entries, { eq }) => eq(entries.status, "draft"),
-      with: { source: true },
+      with: {
+        source: true,
+        categories: {
+          with: {
+            category: true,
+          },
+        },
+      },
     }),
   };
 };

@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm";
-import { pgTable, pgEnum, bigint, integer, text, boolean, timestamp, unique, interval } from "drizzle-orm/pg-core";
+import { pgTable, pgEnum, bigint, integer, text, boolean, timestamp, unique, interval, primaryKey } from "drizzle-orm/pg-core";
 
 export const lifecyclesEnum = pgEnum("lifecycles", ["active", "inactive", "deleted"]);
 
@@ -103,13 +103,13 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
   author: one(users, { fields: [entries.author_id], references: [users.id] }),
   reviews: many(reviews),
-  entriesToCategories: many(entriesToCategories),
+  categories: many(entriesToCategories),
 }));
 
 export const entriesToCategories = pgTable("entries_to_categories", {
   entry_id: bigint({ mode: "number" }).references(() => entries.id).notNull(),
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
-}, (t) => [unique().on(t.entry_id, t.category_id)]);
+}, (t) => [primaryKey({ columns: [t.entry_id, t.category_id] })]);
 
 export const entriesToCategoriesRelations = relations(entriesToCategories, ({ one }) => ({
   entry: one(entries, { fields: [entriesToCategories.entry_id], references: [entries.id] }),
@@ -205,19 +205,31 @@ export const settings = pgTable("settings", {
   limited_to_accesses: accessesEnum().array().default([]).notNull(),
 }, (t) => [unique().on(t.user_id)]);
 
-export const settingsRelations = relations(settings, ({ many }) => ({
-  // TODO(vxern): Fill this in.
+export const settingsRelations = relations(settings, ({ one, many }) => ({
+  user: one(users, { fields: [settings.user_id], references: [users.id] }),
+  sources: many(settingsToSources),
+  categories: many(settingsToCategories),
 }));
 
 export const settingsToSources = pgTable("settings_to_sources", {
   settings_id: bigint({ mode: "number" }).references(() => settings.id).notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
-}, (t) => [unique().on(t.settings_id, t.source_id)]);
+}, (t) => [primaryKey({ columns: [t.settings_id, t.source_id] })]);
+
+export const settingsToSourcesRelations = relations(settingsToSources, ({ one }) => ({
+  settings: one(settings, { fields: [settingsToSources.settings_id], references: [settings.id] }),
+  source: one(sources, { fields: [settingsToSources.source_id], references: [sources.id] }),
+}));
 
 export const settingsToCategories = pgTable("settings_to_categories", {
   settings_id: bigint({ mode: "number" }).references(() => settings.id).notNull(),
   category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
-}, (t) => [unique().on(t.settings_id, t.category_id)]);
+}, (t) => [primaryKey({ columns: [t.settings_id, t.category_id] })]);
+
+export const settingsToCategoriesRelations = relations(settingsToCategories, ({ one }) => ({
+  settings: one(settings, { fields: [settingsToCategories.settings_id], references: [settings.id] }),
+  category: one(categories, { fields: [settingsToCategories.category_id], references: [categories.id] }),
+}));
 
 export const timeEntryScopesEnum = pgEnum("time_entry_scopes", [
   "using",

@@ -7,6 +7,7 @@
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
   import SourceLabel from "../labels/source-label.svelte";
+  import CategoryLabel from "../labels/category-label.svelte";
 
   // TODO(vxern): Use proper permissions.
   const hasPermission = true;
@@ -22,6 +23,9 @@
       </Table.HeaderCell>
       <Table.HeaderCell>
         {m["components.entry_table.source"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.entry_table.categories"]()}
       </Table.HeaderCell>
       {#if hasPermission && entries.length > 0}
         {#if mode === "edit"}
@@ -41,6 +45,15 @@
         </Table.Cell>
         <Table.Cell>
           <SourceLabel source={entry.source} link={true} />
+        </Table.Cell>
+        <Table.Cell>
+          {#if entry.categories.length > 0}
+            {#each entry.categories as category}
+              <CategoryLabel category={category.category} link={true} />
+            {/each}
+          {:else}
+            {m["meta.none"]()}
+          {/if}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
