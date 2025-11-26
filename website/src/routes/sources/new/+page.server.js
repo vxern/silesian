@@ -14,6 +14,7 @@ export const actions = {
       const source = await db.insert(sources).values({
         status: "draft" in data ? "draft" : "pending",
         name: data.get("name"),
+        description: date.get("description"),
         url: data.get("url"),
         authors: JSON.parse(data.get("authors[]")),
         year: data.get("year"),

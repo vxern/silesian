@@ -21,42 +21,33 @@ export const actions = {
     const data = await request.formData();
 
     // TODO(vxern): This is the wrong code.
-    const source = await db.transaction(async (tx) => {
-      const source = await db.update(sources).set({
-        status: "draft" in data ? "draft" : "pending",
+    const category = await db.transaction(async (tx) => {
+      const category = await db.update(categories).set({
         name: data.get("name"),
-        link: data.get("link"),
-        authors: JSON.parse(data.get("authors[]")),
-        year: data.get("year"),
-        orthography: data.get("orthography"),
-        source_language: data.get("source_language"),
-        target_language: data.get("target_language"),
-        licence: data.get("licence"),
-        access: data.get("access"),
-        redistributable: data.get("redistributable") === "1",
-        total_entry_count: data.get("total_entry_count"),
-      }).where(eq(sources.id, Number(data.get("id")))).returning({ status: sources.status }).then((result) => result.at(0));
+        description: date.get("description"),
+        colour: data.get("colour"),
+      }).where(eq(categories.id, Number(data.get("id")))).returning({ status: categories.status }).then((result) => result.at(0));
 
       await db.insert(versions).values({
-        versionable_type: "sources",
-        versionable_id: source.id,
+        versionable_type: "categories",
+        versionable_id: category.id,
       }).onConflictDoUpdate({
         target: versions.version,
         set: { version: sql`versions.version + 1` },
       });
 
-      return source;
+      return category;
     });
 
     // TODO(vxern): Handle failure.
 
     let redirectTo;
-    if (source.status === "draft") {
-      redirectTo = "/sources/drafts";
-    } else if (source.status === "pending") {
-      redirectTo = "/sources/review";
-    } else if (source.status === "published") {
-      redirectTo = "/sources";
+    if (category.status === "draft") {
+      redirectTo = "/categories/drafts";
+    } else if (category.status === "pending") {
+      redirectTo = "/categories/review";
+    } else if (category.status === "published") {
+      redirectTo = "/categories";
     } else {
       return error(500, { message: "Internal Server Error" });
     }

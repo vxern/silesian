@@ -14,9 +14,11 @@ export const actions = {
       const category = await db.insert(categories).values({
         status: "draft" in data ? "draft" : "pending",
         name: data.get("name"),
+        description: date.get("description"),
         colour: data.get("colour"),
       }).returning({ id: categories.id }).then((result) => result.at(0));
 
+      // TODO(vxern): There can't be a conflict here.
       await db.insert(versions).values({
         versionable_type: "categories",
         versionable_id: category.id,

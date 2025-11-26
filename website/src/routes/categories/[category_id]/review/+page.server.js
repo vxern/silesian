@@ -32,19 +32,12 @@ export const actions = {
       return;
     }
 
-    // TODO(vxern): Implement comments.
-    // const comments = JSON.parse(data.get("comments[]"));
-    // if (comments.length === 0) {
-    //   return null;
-    // }
-
     const review = await db.insert(reviews).values({
       version_id: version.id,
       // TODO(vxern): Update to the right user.
       reviewer_id: 1,
       decision: "reject" in data ? "rejected" : "accepted",
-    // TODO(vxern): Implement comments.
-      comments: [],
+      comment: data.get("comment"),
     });
 
     // TODO(vxern): Handle failure.

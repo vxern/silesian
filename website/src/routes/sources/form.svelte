@@ -45,6 +45,14 @@
   />
 </section>
 <section class="flex gap-x-4">
+  <Form.TextElement
+    name="description"
+    label={m["routes.sources.form.description"]()}
+    description={m["routes.sources.form.description_description"]()}
+    value={source?.description}
+  />
+</section>
+<section class="flex gap-x-4">
   <Form.SelectElement
     name="orthography"
     label={m["routes.sources.form.orthography"]()}

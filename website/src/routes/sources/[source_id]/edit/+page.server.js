@@ -22,7 +22,8 @@ export const actions = {
       const source = await db.update(sources).set({
         status: "draft" in data ? "draft" : "pending",
         name: data.get("name"),
-        link: data.get("link"),
+        description: date.get("description"),
+        url: data.get("url"),
         authors: JSON.parse(data.get("authors[]")),
         year: data.get("year"),
         orthography: data.get("orthography"),
@@ -34,6 +35,7 @@ export const actions = {
         total_entry_count: data.get("total_entry_count"),
       }).where(eq(sources.id, Number(data.get("id")))).returning({ status: sources.status }).then((result) => result.at(0));
 
+      // TODO(vxern): Ensure versions have the same created_at as the main record's updated_at
       await db.insert(versions).values({
         versionable_type: "sources",
         versionable_id: source.id,

@@ -442,6 +442,8 @@
       "form": {
         "name": "Miano",
         "name_description": "Jako sie to zdrzōdło mianuje?",
+        "description": "Ôpis",
+        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym zdrzōdle?",
         "url": "Łōncze",
         "url_description": "Jakiy je łōncze ku tymu zdrzōdle?",
         "authors": "Autorzi",
@@ -500,6 +502,8 @@
       "form": {
         "name": "Miano",
         "name_description": "Jako sie ta kategoryjŏ mianuje?",
+        "description": "Ôpis",
+        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tyj kategoryji?",
         "colour": "Farba",
         "colour_description": "Jakõ farbã ta kategoryjŏ bydzie mieć?"
       }

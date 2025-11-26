@@ -31,7 +31,15 @@
     value={category?.colour}
   />
 </section>
-<section class="flex gap-x-4 items-start">
+<section class="flex gap-x-4">
+  <Form.TextElement
+    name="description"
+    label={m["routes.categories.form.description"]()}
+    description={m["routes.categories.form.description_description"]()}
+    value={category?.description}
+  />
+</section>
+<section class="flex gap-x-4">
   {#if !category}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.create"]()}

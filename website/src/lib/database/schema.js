@@ -67,6 +67,7 @@ export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);
 export const sources = pgTable("sources", {
   ...defaultColumns,
   name: text().notNull(),
+  description: text(),
   url: text(),
   authors: text().array(),
   year: text(),
@@ -142,6 +143,7 @@ export const coloursEnum = pgEnum("colours", [
 export const categories = pgTable("categories", {
   ...defaultColumns,
   name: text().notNull(),
+  description: text(),
   colour: coloursEnum().notNull(),
   status: columns.status,
   author_id: columns.author_id,
@@ -199,7 +201,7 @@ export const reviews = pgTable("reviews", {
   version_id: bigint({ mode: "number" }).references(() => versions.id).notNull(),
   reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   decision: reviewDecisionsEnum().notNull(),
-  comments: text().array(),
+  comment: text(),
   created_at: columns.created_at,
   // No updated_at because reviews are never updated.
 }, (t) => [unique().on(t.version_id, t.reviewer_id)])
