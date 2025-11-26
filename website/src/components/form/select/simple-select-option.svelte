@@ -1,11 +1,10 @@
 <script>
   import SelectOption from "./select-option.svelte";
+  import TextLabel from "../../labels/text-label.svelte";
 
   const { option, selected, select } = $props();
 </script>
 
-<SelectOption highlighted={selected} select={() => select(option)}>
-  <section class="flex w-full">
-    {option[0]}
-  </section>
+<SelectOption {selected} {select} {option}>
+  <TextLabel text={option[0]} highlighted={selected} />
 </SelectOption>

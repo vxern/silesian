@@ -6,6 +6,7 @@
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
+  import SourceLabel from "../labels/source-label.svelte";
 
   // TODO(vxern): Use proper permissions.
   const hasPermission = true;
@@ -39,9 +40,7 @@
           {entry.lemma}
         </Table.Cell>
         <Table.Cell>
-          <a href={entry.source.url} class="underline underline-offset-3">
-            {entry.source.name}
-          </a>
+          <SourceLabel source={entry.source} link={true} />
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
@@ -51,7 +50,7 @@
                 icon={Pencil2LineIcon}
                 onclick={() => goto(`/entries/${entry.id}/edit`)}
               />
-              <!-- TODO(vxern): Handle this properly. -->
+              <!-- TODO(vxern): Handle deletions properly. -->
               <Button
                 colour="red"
                 icon={Delete2LineIcon}

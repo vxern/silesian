@@ -5,6 +5,6 @@
   const { option, selected, select } = $props();
 </script>
 
-<SelectOption highlighted={selected} select={() => select(option)}>
+<SelectOption {selected} {select} {option}>
   <SourceLabel source={option[0]} />
 </SelectOption>

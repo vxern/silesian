@@ -1,13 +1,9 @@
 <script>
-  const { highlighted, select, children } = $props();
+  import { clsx } from "clsx/lite";
+
+  const { select, selected, option, children } = $props();
 </script>
 
-<button
-  type="button"
-  onclick={() => select()}
-  class="rounded-lg p-2 {highlighted
-    ? 'bg-blue-600'
-    : 'bg-zinc-700'} font-medium text-sm cursor-pointer"
->
+<button type="button" onclick={() => select(option)} class="cursor-pointer">
   {@render children?.()}
 </button>

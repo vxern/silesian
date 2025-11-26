@@ -85,6 +85,10 @@
   });
 
   function select(option) {
+    if (selectedOptions.includes(option)) {
+      return;
+    }
+
     if (multiple) {
       selectedOptions.push(option);
     } else {

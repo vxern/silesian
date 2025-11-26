@@ -1,9 +1,10 @@
 <script>
+  import SelectOption from "./select-option.svelte";
   import ColourLabel from "../../labels/colour-label.svelte";
 
-  const { option, select } = $props();
+  const { option, selected, select } = $props();
 </script>
 
-<button type="button" onclick={() => select(option)} class="cursor-pointer">
+<SelectOption {selected} {select} {option}>
   <ColourLabel colour={option[1]} />
-</button>
+</SelectOption>
