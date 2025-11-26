@@ -4,6 +4,10 @@
   const { select, selected, option, children } = $props();
 </script>
 
-<button type="button" onclick={() => select(option)} class="cursor-pointer">
+<button
+  type="button"
+  onclick={() => select(option)}
+  class="w-full cursor-pointer"
+>
   {@render children?.()}
 </button>

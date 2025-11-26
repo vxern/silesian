@@ -66,7 +66,7 @@
         m[`languages.${language}`](),
         language,
       ])}
-    component={Form.SimpleSelectOption}
+    component={Form.LanguageSelectOption}
     value={source?.source_language}
   />
   <Form.SelectElement
@@ -78,7 +78,7 @@
         m[`languages.${language}`](),
         language,
       ])}
-    component={Form.SimpleSelectOption}
+    component={Form.LanguageSelectOption}
     value={source?.target_language}
   />
 </section>

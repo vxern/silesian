@@ -5,9 +5,10 @@ import MarkdownElement from "./markdown-element.svelte";
 import TextElement from "./text-element.svelte";
 import MultiTextElement from "./multi-text-element.svelte";
 import SelectElement from "./select-element.svelte";
+import ColourSelectOption from "./select/colour-select-option.svelte";
+import LanguageSelectOption from "./select/language-select-option.svelte";
 import SimpleSelectOption from "./select/simple-select-option.svelte";
 import SourceSelectOption from "./select/source-select-option.svelte";
-import ColourSelectOption from "./select/colour-select-option.svelte";
 
 export default {
   Root,
@@ -17,7 +18,8 @@ export default {
   TextElement,
   MultiTextElement,
   SelectElement,
+  ColourSelectOption,
+  LanguageSelectOption,
   SimpleSelectOption,
   SourceSelectOption,
-  ColourSelectOption,
 };

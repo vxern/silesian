@@ -58,7 +58,8 @@ export const languagesEnum = pgEnum("languages", [
   "pl",
   "cs",
   "sk",
-  "en",
+  "de",
+  "en-GB",
 ]);
 
 export const accessesEnum = pgEnum("accesses", ["closed", "limited", "open"]);

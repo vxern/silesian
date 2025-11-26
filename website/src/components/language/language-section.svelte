@@ -1,34 +1,21 @@
 <script>
   import { clsx } from "clsx/lite";
   import { m } from "$lib/paraglide/messages";
-  import { locales } from "$lib/paraglide/runtime";
-  import { getLocale, setLocale } from "$lib/paraglide/runtime";
+  import { locales, getLocale, setLocale } from "$lib/paraglide/runtime";
   import GlobeLineIcon from "~icons/mingcute/globe-line";
   import DownLineIcon from "~icons/mingcute/down-line";
+  import { getFlag } from "../../helpers/language";
   import "flag-icons/css/flag-icons.min.css";
 
   // TODO(vxern): Trza to kaj indzij przeniyś.
   let isOpen = $state(false);
 
-  // TODO(vxern): Moves this elsewhere?
-  const localeToFlag = {
-    szl: "szl",
-    pl: "pl",
-    cs: "cz",
-    de: "de",
-    "en-GB": "gb",
-  };
-
   function toggleOpen() {
     isOpen = !isOpen;
   }
 
-  function handleClick(event) {
+  function handleClick() {
     isOpen = false;
-  }
-
-  function getFlag(locale) {
-    return localeToFlag[locale];
   }
 </script>
 
@@ -42,8 +29,9 @@
     <button
       class={clsx(
         "flex items-center cursor-pointer",
-        isOpen && "text-yellow-400 hover:text-yellow-300",
-        !isOpen && "text-zinc-400 hover:text-zinc-300"
+        isOpen
+          ? "text-yellow-400 hover:text-yellow-300"
+          : "text-zinc-400 hover:text-zinc-300"
       )}
       onclick={() => toggleOpen()}
     >
@@ -63,8 +51,9 @@
         <button
           class={clsx(
             "flex gap-x-2 items-center cursor-pointer",
-            getLocale() == locale && "text-yellow-500 hover:text-yellow-400",
-            getLocale() != locale && "text-zinc-400 hover:text-zinc-300"
+            getLocale() == locale
+              ? "text-yellow-500 hover:text-yellow-400"
+              : "text-zinc-400 hover:text-zinc-300"
           )}
           onclick={() => setLocale(locale)}
           onmouseup={null}

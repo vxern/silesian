@@ -14,6 +14,7 @@ marked.use({
         }
         case 2: {
           let colour;
+          // TODO(vxern): This is temporary.
           switch (body) {
             case "Etymologijŏ":
             case "Etymologijo":
