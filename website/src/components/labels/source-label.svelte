@@ -19,7 +19,10 @@
 
 {#if link}
   <!-- TODO(vxern): Is this the right link? -->
-  <button class="w-full" onclick={() => goto(`/sources/${source.id}/review`)}>
+  <button
+    class="w-full cursor-pointer"
+    onclick={() => goto(`/sources/${source.id}/review`)}
+  >
     {@render label()}
   </button>
 {:else}
