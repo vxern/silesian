@@ -1,9 +1,9 @@
 <script>
+  import Label from "./label.svelte";
+
   const { text } = $props();
 </script>
 
-<section
-  class="flex w-full rounded-lg p-2 font-medium text-sm text-white bg-zinc-700"
->
+<Label class="bg-zinc-700">
   {text}
-</section>
+</Label>

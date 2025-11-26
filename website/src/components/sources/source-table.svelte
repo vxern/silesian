@@ -132,6 +132,7 @@
             <span class="text-green-500">
               {m["licences.public"]()}
             </span>
+            <!-- TODO(vxern): Is the following used? -->
           {:else if source.redistributable}
             <span class="text-green-500">
               {source.licence}

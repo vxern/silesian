@@ -20,6 +20,7 @@ export const actions = {
   update: async ({ request, locals }) => {
     const data = await request.formData();
 
+    // TODO(vxern): This is the wrong code.
     const source = await db.transaction(async (tx) => {
       const source = await db.update(sources).set({
         status: "draft" in data ? "draft" : "pending",

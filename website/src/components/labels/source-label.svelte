@@ -1,20 +1,19 @@
 <script>
+  import Label from "./label.svelte";
   import { goto } from "$app/navigation";
 
   const { source, link = false } = $props();
 </script>
 
 {#snippet label()}
-  <section
-    class="flex rounded-lg p-2 font-medium text-sm text-white bg-zinc-700"
-  >
+  <Label class="bg-zinc-700">
     <section class="basis-3/5 text-start">
       {source.name}
     </section>
     <section class="basis-2/5 text-end">
       {source.authors.join(", ")}
     </section>
-  </section>
+  </Label>
 {/snippet}
 
 {#if link}

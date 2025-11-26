@@ -92,7 +92,7 @@
         m[`licences.${licence}`](),
         licence,
       ])}
-    component={Form.SimpleSelectOption}
+    component={Form.LicenceSelectOption}
     value={source?.licence}
   />
   <Form.SelectElement
@@ -104,7 +104,7 @@
         m[`accesses.${access}`](),
         access,
       ])}
-    component={Form.SimpleSelectOption}
+    component={Form.AccessSelectOption}
     value={source?.access}
   />
   <Form.BooleanElement
