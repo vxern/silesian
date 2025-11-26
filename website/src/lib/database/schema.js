@@ -69,6 +69,7 @@ export const sources = pgTable("sources", {
   name: text().notNull(),
   description: text(),
   url: text(),
+  // TODO(vxern): Should authors be their own table?
   authors: text().array(),
   year: text(),
   licence: licencesEnum().notNull(),
@@ -168,6 +169,8 @@ export const users = pgTable("users", {
 }, (t) => [unique().on(t.email_address)]);
 
 export const usersRelations = relations(users, ({ many }) => ({
+  // A user can in fact only have one set of settings.
+  settings: many(settings),
   versions: many(versions),
   reviews: many(reviews),
   searches: many(searches),
@@ -176,6 +179,45 @@ export const usersRelations = relations(users, ({ many }) => ({
   categories: many(categories),
   timeEntries: many(timeEntries),
 }));
+
+export const themesEnum = pgEnum("themes", ["dark"])
+
+export const settings = pgTable("settings", {
+  id: columns.id,
+  user_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  updated_at: columns.updated_at,
+  // Basic settings
+  language: languagesEnum().default("szl").notNull(),
+  theme: themesEnum().default("dark").notNull(),
+  // Preferences
+  strict_search: boolean().default(false).notNull(),
+  limit_sources: boolean().default(false).notNull(),
+  limit_categories: boolean().default(false).notNull(),
+  limit_source_languages: boolean().default(false).notNull(),
+  limit_target_languages: boolean().default(false).notNull(),
+  limit_orthographies: boolean().default(false).notNull(),
+  limit_licences: boolean().default(false).notNull(),
+  limit_accesses: boolean().default(false).notNull(),
+  limited_to_source_languages: languagesEnum().array().default([]).notNull(),
+  limited_to_target_languages: languagesEnum().array().default([]).notNull(),
+  limited_to_orthographies: orthographiesEnum().array().default([]).notNull(),
+  limited_to_licences: licencesEnum().array().default([]).notNull(),
+  limited_to_accesses: accessesEnum().array().default([]).notNull(),
+}, (t) => [unique().on(t.user_id)]);
+
+export const settingsRelations = relations(settings, ({ many }) => ({
+  // TODO(vxern): Fill this in.
+}));
+
+export const settingsToSources = pgTable("settings_to_sources", {
+  settings_id: bigint({ mode: "number" }).references(() => settings.id).notNull(),
+  source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
+}, (t) => [unique().on(t.settings_id, t.source_id)]);
+
+export const settingsToCategories = pgTable("settings_to_categories", {
+  settings_id: bigint({ mode: "number" }).references(() => settings.id).notNull(),
+  category_id: bigint({ mode: "number" }).references(() => categories.id).notNull(),
+}, (t) => [unique().on(t.settings_id, t.category_id)]);
 
 export const timeEntryScopesEnum = pgEnum("time_entry_scopes", [
   "using",

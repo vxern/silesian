@@ -100,7 +100,7 @@
     },
     "entry_table": {
       "lemma": "Hasło",
-      "source": "Source"
+      "source": "Zdrzōdło"
     },
     "category_table": {
       "name": "Miano",
@@ -278,6 +278,10 @@
     },
     "contribute": {
       "title": "Spōmoc",
+      "description": ""
+    },
+    "settings": {
+      "title": "Nasztalowania",
       "description": ""
     },
     "account": {
