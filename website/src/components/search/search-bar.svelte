@@ -95,7 +95,7 @@
     missingWordTooltip.destroy();
     needToResetCapsTooltip.destroy();
 
-    window.location.href = encodeURI(`/lemma/${inputElement.value}`);
+    goto(encodeURI(`/lemma/${inputElement.value}`));
   }
 
   function onBlurWindow() {
@@ -134,12 +134,14 @@
       return;
     }
 
-    const content =
-      !shiftReset && !capsLockReset
-        ? m["components.search_bar.reset_caps.both"]()
-        : !shiftReset
-          ? m["components.search_bar.reset_caps.shift"]()
-          : m["components.search_bar.reset_caps.caps_lock"]();
+    let content;
+    if (!shiftReset && !capsLockReset) {
+      content = m["components.search_bar.reset_caps.both"]();
+    } else if (!shiftReset) {
+      content = m["components.search_bar.reset_caps.shift"]();
+    } else {
+      content = m["components.search_bar.reset_caps.caps_lock"]();
+    }
     if (needToResetCapsTooltip) {
       needToResetCapsTooltip.setContent(content);
       return;

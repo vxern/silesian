@@ -54,7 +54,7 @@
         m[`orthographies.${orthography}`](),
         orthography,
       ])}
-    component={Form.SimpleSelectOption}
+    component={Form.OrthographySelectOption}
     value={source?.orthography}
   />
   <Form.SelectElement
