@@ -28,7 +28,7 @@
       <Table.HeaderCell>
         {m["components.category_table.colour"]()}
       </Table.HeaderCell>
-      {#if hasPermission}
+      {#if hasPermission && categories.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
         {/if}

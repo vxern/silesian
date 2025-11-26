@@ -23,7 +23,7 @@
       <Table.HeaderCell>
         {m["components.entry_table.source"]()}
       </Table.HeaderCell>
-      {#if hasPermission}
+      {#if hasPermission && entries.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
         {/if}

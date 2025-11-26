@@ -59,7 +59,7 @@
       <Table.HeaderCell>
         {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
-      {#if hasPermission}
+      {#if hasPermission && sources.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
         {/if}
