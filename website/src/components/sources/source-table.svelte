@@ -42,6 +42,9 @@
         {m["components.source_table.work"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
+        {m["components.source_table.description"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["components.source_table.authors"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
@@ -76,6 +79,13 @@
               icon={ArrowRightUpLineIcon}
               onclick={() => (window.location.href = source.url)}
             />
+          {/if}
+        </Table.Cell>
+        <Table.Cell>
+          {#if source.description}
+            {source.description}
+          {:else}
+            {m["meta.none"]()}
           {/if}
         </Table.Cell>
         <Table.Cell>

@@ -23,6 +23,9 @@
         {m["components.category_table.name"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
+        {m["components.category_table.description"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["components.category_table.colour"]()}
       </Table.HeaderCell>
       {#if hasPermission}
@@ -40,6 +43,13 @@
       <Table.Row {index}>
         <Table.Cell>
           {category.name}
+        </Table.Cell>
+        <Table.Cell>
+          {#if category.description}
+            {category.description}
+          {:else}
+            {m["meta.none"]()}
+          {/if}
         </Table.Cell>
         <Table.Cell>
           <ColourLabel colour={category.colour} />
