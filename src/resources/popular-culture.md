@@ -58,6 +58,7 @@
 
   - `szl/F` [Jednagodka.pl](https://www.jednagodka.pl/)
   - `szl/S` [Belekaj.eu](https://belekaj.eu)
+  - `ste` [Czytůmy pů naszymu](https://czytomy.wordpress.com/)
   - `pol` [Wiara.pl](https://kultura.wiara.pl/Rozmaitosci/Slaskie_klimaty)
   - `adh` [Szkryfka.eu](http://n.szkryfka.eu/)
   - `🗄️` `spa` [Ślůnsko Eka](https://web.archive.org/web/20090224202253/http://slunskoeka.pyrsk.com/menu.html)
