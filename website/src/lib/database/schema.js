@@ -7,7 +7,7 @@ export const publishStatusesEnum = pgEnum("publish_statuses", ["draft", "pending
 
 const columns = {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  lifecycle: lifecyclesEnum().default("active"),
+  lifecycle: lifecyclesEnum().default("active").notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
@@ -102,7 +102,6 @@ export const entries = pgTable("entries", {
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
   author: one(users, { fields: [entries.author_id], references: [users.id] }),
-  reviews: many(reviews),
   categories: many(entriesToCategories),
 }));
 
