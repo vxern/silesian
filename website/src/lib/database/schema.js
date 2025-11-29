@@ -97,6 +97,17 @@ export const authors = pgTable("authors", {
 
 export const authorsRelations = relations(authors, ({ many }) => ({
   sources: many(authorsToSources),
+  locations: many(authorsToLocations),
+}));
+
+export const authorsToLocations = pgTable("authors_to_locations", {
+  author_id: bigint({ mode: "number" }).references(() => authors.id).notNull(),
+  location_id: bigint({ mode: "number" }).references(() => locations.id).notNull(),
+}, (t) => [primaryKey({ columns: [t.author_id, t.location_id] })]);
+
+export const authorsToLocationsRelations = relations(authorsToLocations, ({ one }) => ({
+  author: one(authors, { fields: [authorsToLocations.author_id], references: [authors.id] }),
+  location: one(locations, { fields: [authorsToLocations.location_id], references: [locations.id] }),
 }));
 
 export const authorsToSources = pgTable("authors_to_sources", {
@@ -107,6 +118,17 @@ export const authorsToSources = pgTable("authors_to_sources", {
 export const authorsToSourcesRelations = relations(authorsToSources, ({ one }) => ({
   author: one(authors, { fields: [authorsToSources.author_id], references: [authors.id] }),
   source: one(sources, { fields: [authorsToSources.source_id], references: [sources.id] }),
+}));
+
+export const locations = pgTable("locations", {
+  ...defaultColumns,
+  name: text().notNull(),
+  status: columns.status,
+  author_id: columns.author_id,
+});
+
+export const locationsRelations = relations(locations, ({ many }) => ({
+  authors: many(authorsToLocations),
 }));
 
 export const entries = pgTable("entries", {
