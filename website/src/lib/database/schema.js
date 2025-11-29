@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm";
-import { pgTable, pgEnum, bigint, integer, text, boolean, timestamp, unique, interval, primaryKey } from "drizzle-orm/pg-core";
+import { pgTable, pgEnum, bigint, integer, text, boolean, timestamp, unique, interval, primaryKey, uniqueIndex } from "drizzle-orm/pg-core";
 
 export const lifecyclesEnum = pgEnum("lifecycles", ["active", "inactive", "deleted"]);
 
@@ -77,7 +77,7 @@ export const sources = pgTable("sources", {
   source_language: languagesEnum().notNull(),
   target_language: languagesEnum().notNull(),
   access: accessesEnum().notNull(),
-  redistributable: boolean().notNull(),
+  redistributable: boolean().default(false).notNull(),
   imported_entry_count: integer().default(0).notNull(),
   total_entry_count: integer(),
   status: columns.status,
@@ -86,8 +86,25 @@ export const sources = pgTable("sources", {
 
 export const sourcesRelations = relations(sources, ({ many, one }) => ({
   entries: many(entries),
+  authors: many(authorsToSources),
   author: one(users, { fields: [sources.author_id], references: [users.id] }),
 }));
+
+export const authors = pgTable("authors", {
+  ...defaultColumns,
+  name: text().notNull(),
+  status: columns.status,
+  author_id: columns.author_id
+});
+
+export const authorsRelations = relations(authors, ({ many }) => ({
+  sources: many(authorsToSources),
+}));
+
+export const authorsToSources = pgTable("authors_to_sources", {
+  author_id: bigint({ mode: "number" }).references(() => authors.id).notNull(),
+  source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
+}, (t) => [primaryKey({ columns: [t.author_id, t.source_id] })]);
 
 export const entries = pgTable("entries", {
   ...defaultColumns,
@@ -257,7 +274,7 @@ export const reviews = pgTable("reviews", {
   comment: text(),
   created_at: columns.created_at,
   // No updated_at because reviews are never updated.
-}, (t) => [unique().on(t.version_id, t.reviewer_id)])
+}, (t) => [uniqueIndex().on(t.version_id, t.reviewer_id)])
 
 export const reviewsRelations = relations(reviews, ({ one }) => ({
   version: one(versions, { fields: [reviews.version_id], references: [versions.id] }),
