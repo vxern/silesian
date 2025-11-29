@@ -1,5 +1,3 @@
-import exampleContents from "$lib/constants/example-contents";
-
 function compareLicence(a, b) {
   if (a === b) {
     return 0;
@@ -106,6 +104,10 @@ function compareAuthors(a, b) {
 function completion(source) {
   if (source.total_entry_count === 0) {
     return 1;
+  }
+
+  if (!source.total_entry_count) {
+    return 0;
   }
 
   return source.imported_entry_count / source.total_entry_count;
