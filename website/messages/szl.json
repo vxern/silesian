@@ -108,6 +108,10 @@
       "description": "Ôpis",
       "colour": "Farba"
     },
+    "author_table": {
+      "name": "Miano",
+      "locations": "Miyjsca"
+    },
     "search_tables": {
       "chart": {
         "chart": "Wykres wyszukań (na tyn rok)",
@@ -368,7 +372,7 @@
       },
       "new": {
         "title": "Nowe hasło",
-        "description": "Przidŏwanie nowygo hasła ku dykcjōnŏrzu."
+        "description": "Przidŏwaniy nowygo hasła ku dykcjōnŏrzu."
       },
       "form": {
         "lemma": "Hasło",
@@ -415,7 +419,7 @@
     },
     "sources": {
       "title": "Zdrzōdła",
-      "description": "Zdrzōdła, kierych używōmy a kiere my zaimportowali abo dalszij chcymy zaimportować.",
+      "description": "Zdrzōdła, ze kierych bierymy nasze hasła.",
       "none": "Niy ma jeszcze żŏdnych zdrzōdeł.",
       "actions": {
         "add": "Przidej nowe zdrzōdło",
@@ -424,7 +428,7 @@
       },
       "new": {
         "title": "Nowe zdrzōdło",
-        "description": "Przidŏwanie nowygo zdrzōdła ku dykcjōnŏrzu."
+        "description": "Przidŏwaniy nowygo zdrzōdła ku dykcjōnŏrzu."
       },
       "drafts": {
         "title": "Cechōnki zdrzōdeł",
@@ -473,6 +477,46 @@
         "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
       }
     },
+    "authors": {
+      "title": "Autorzi",
+      "description": "Autorzi, kierych używōmy a kiere my zaimportowali abo dalszij chcymy zaimportować.",
+      "none": "Niy ma jeszcze żŏdnych autorōw.",
+      "actions": {
+        "add": "Przidej nowygo autora",
+        "drafts": "Cechōnki",
+        "review": "Sprŏwdź autorōw"
+      },
+      "new": {
+        "title": "Nowy autōr",
+        "description": "Przidŏwaniy nowygo autora ku dykcjōnŏrzu."
+      },
+      "drafts": {
+        "title": "Cechōnki autorōw",
+        "description": "Cechōnki autorōw, kiere używŏcz przidŏwŏ.",
+        "none": "Niy mŏcie żŏdnych cechōnkōw."
+      },
+      "review": {
+        "title": "Autorzi do sprŏwdzyniŏ",
+        "description": "Autorzi, kierych trza sprŏwdzić.",
+        "none": "Niy ma żŏdnych autorōw do sprŏwdzyniŏ."
+      },
+      "[source_id]": {
+        "edit": {
+          "title": "Edytowaniy autora — „{author_name}”",
+          "description": ""
+        },
+        "review": {
+          "title": "Sprŏwdzaniy autora — „{author_name}”",
+          "description": ""
+        }
+      },
+      "form": {
+        "name": "Miano",
+        "name_description": "Jako sie tyn autōr mianuje?",
+        "locations": "Miyjsca",
+        "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?"
+      }
+    },
     "categories": {
       "title": "Kategoryje",
       "description": "Kategoryje do kierych należōm roztōmańte zasoby na strōnie.",
@@ -484,7 +528,7 @@
       },
       "new": {
         "title": "Nowŏ kategoryjŏ",
-        "description": "Przidŏwanie nowyj kategoryje ku dykcjōnŏrzu."
+        "description": "Przidŏwaniy nowyj kategoryje ku dykcjōnŏrzu."
       },
       "drafts": {
         "title": "Cechōnki kategoryjōw",

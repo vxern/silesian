@@ -12,6 +12,7 @@
   import AlignArrowRightLineIcon from "~icons/mingcute/align-arrow-right-line";
   import User4LineIcon from "~icons/mingcute/user-4-line";
   import Palette2LineIcon from "~icons/mingcute/palette-2-line";
+  import User2LineIcon from "~icons/mingcute/user-2-line";
   import Page from "../page/index.js";
 </script>
 
@@ -23,6 +24,24 @@
   >
     {m["routes.home.title"]()}
   </NavigationButton>
+  <!-- TODO(vxern): If there are results, show 'Hasło — <hasło>', otherwise show 'Wyszukanie — <wyszukanie>' -->
+  {#if page.url.pathname.startsWith("/lemma/")}
+    <NavigationButton
+      onclick={() => goto("/search")}
+      highlighted={true}
+      icon={Search2LineIcon}
+    >
+      {m["routes.lemma.title"]()}
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/search")}
+      highlighted={page.url.pathname === "/search"}
+      icon={Search2LineIcon}
+    >
+      {m["routes.search.title"]()}
+    </NavigationButton>
+  {/if}
   {#if page.data.session}
     {#if page.url.pathname.startsWith("/account/history")}
       <NavigationButton
@@ -65,22 +84,29 @@
   <section class="w-full">
     <Page.Divider />
   </section>
-  <!-- TODO(vxern): If there are results, show 'Hasło — <hasło>', otherwise show 'Wyszukanie — <wyszukanie>' -->
-  {#if page.url.pathname.startsWith("/lemma/")}
+  {#if page.url.pathname.startsWith("/authors/")}
     <NavigationButton
-      onclick={() => goto("/search")}
+      onclick={() => goto("/authors")}
       highlighted={true}
-      icon={Search2LineIcon}
+      icon={User2LineIcon}
     >
-      {m["routes.lemma.title"]()}
+      {#if page.url.pathname === "/authors/drafts"}
+        {m["routes.authors.drafts.title"]()}
+      {:else if page.url.pathname === "/authors/review"}
+        {m["routes.authors.review.title"]()}
+      {:else if page.url.pathname === "/authors/new"}
+        {m["routes.authors.new.title"]()}
+      {:else if /\/authors\/\d+\/review/.test(page.url.pathname)}
+        {m["routes.authors.review.title"]()}
+      {/if}
     </NavigationButton>
   {:else}
     <NavigationButton
-      onclick={() => goto("/search")}
-      highlighted={page.url.pathname === "/search"}
-      icon={Search2LineIcon}
+      onclick={() => goto("/authors")}
+      highlighted={page.url.pathname === "/authors"}
+      icon={User2LineIcon}
     >
-      {m["routes.search.title"]()}
+      {m["routes.authors.title"]()}
     </NavigationButton>
   {/if}
   {#if page.url.pathname.startsWith("/sources/")}
