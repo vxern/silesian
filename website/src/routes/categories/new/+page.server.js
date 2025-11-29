@@ -14,7 +14,7 @@ export const actions = {
       const category = await db.insert(categories).values({
         status: "draft" in data ? "draft" : "pending",
         name: data.get("name"),
-        description: date.get("description"),
+        description: data.get("description"),
         colour: data.get("colour"),
       }).returning({ id: categories.id }).then((result) => result.at(0));
 

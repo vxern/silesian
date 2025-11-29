@@ -24,7 +24,7 @@ export const actions = {
     const category = await db.transaction(async (tx) => {
       const category = await db.update(categories).set({
         name: data.get("name"),
-        description: date.get("description"),
+        description: data.get("description"),
         colour: data.get("colour"),
       }).where(eq(categories.id, Number(data.get("id")))).returning({ status: categories.status }).then((result) => result.at(0));
 
