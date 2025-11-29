@@ -69,8 +69,6 @@ export const sources = pgTable("sources", {
   name: text().notNull(),
   description: text(),
   url: text(),
-  // TODO(vxern): Should authors be their own table?
-  authors: text().array(),
   year: text(),
   licence: licencesEnum().notNull(),
   orthography: orthographiesEnum().notNull(),
