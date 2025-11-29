@@ -56,7 +56,10 @@
             </section>
             <section>
               <span class="text-zinc-600">{m["routes.lemma.authors"]()}</span>
-              {entry.source.authors.join(", ")}
+              {entry.source.authors
+                .map((author) => author.author)
+                .map((author) => author.name)
+                .join(", ")}
             </section>
           </article>
         </section>

@@ -7,8 +7,6 @@
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Need to make the cursor pointer work.
-
-  $inspect(page.data);
 </script>
 
 <svelte:head>

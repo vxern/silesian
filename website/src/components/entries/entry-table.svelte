@@ -13,6 +13,8 @@
   const hasPermission = true;
 
   const { entries, mode, noneText } = $props();
+
+  // TODO(vxern): Add more columns.
 </script>
 
 <Table.Root>

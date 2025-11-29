@@ -7,6 +7,15 @@ export const load = async () => {
     // TODO(vxern): Make sure to filter by the user.
     draftCount: db.$count(sources, eq(sources.status, "draft")),
     pendingCount: db.$count(sources, eq(sources.status, "pending")),
-    sources: await db.query.sources.findMany({ where: (sources, { eq }) => eq(sources.status, "published") }),
+    sources: await db.query.sources.findMany({
+      where: (sources, { eq }) => eq(sources.status, "published"),
+      with: {
+        authors: {
+          with: {
+            author: true
+          },
+        },
+      },
+    }),
   };
 };

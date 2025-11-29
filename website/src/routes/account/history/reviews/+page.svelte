@@ -7,7 +7,6 @@
   import BackButton from "../../../../components/interactions/back-button.svelte";
 
   const { data } = $props();
-  $inspect(data.reviewHistory);
 </script>
 
 <svelte:head>

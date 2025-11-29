@@ -4,6 +4,15 @@ export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
 
   return {
-    sources: await db.query.sources.findMany({ where: (sources, { eq }) => eq(sources.status, "draft") }),
+    sources: await db.query.sources.findMany({
+      where: (sources, { eq }) => eq(sources.status, "draft"),
+      with: {
+        authors: {
+          with: {
+            author: true
+          },
+        },
+      },
+    }),
   };
 };

@@ -11,7 +11,10 @@
       {source.name}
     </section>
     <section class="basis-2/5 text-end">
-      {source.authors.join(", ")}
+      {source.authors
+        .map((author) => author.author)
+        .map((author) => author.name)
+        .join(", ")}
     </section>
   </Label>
 {/snippet}

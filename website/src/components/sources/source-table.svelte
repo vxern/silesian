@@ -89,14 +89,10 @@
           {/if}
         </Table.Cell>
         <Table.Cell>
-          {#if source.authors === "community"}
-            <i>
-              {m["components.source_table.authors.community"]()}
-            </i>
-          {:else if source.authors.length > 0}
+          {#if source.authors.length > 0}
             <ul>
-              {#each source.authors as author}
-                <li>{author}</li>
+              {#each source.authors.map((author) => author.author) as author}
+                <li>{author.name}</li>
               {/each}
             </ul>
           {:else}
@@ -154,34 +150,30 @@
           {/if}
         </Table.Cell>
         <Table.Cell>
-          {#if source.redistributable}
-            <section class="flex flex-col">
-              {m["components.source_table.progress.numbers"]({
-                imported: source.imported_entry_count,
-                total: source.total_entry_count,
+          <section class="flex flex-col">
+            {m["components.source_table.progress.numbers"]({
+              imported: source.imported_entry_count,
+              total: source.total_entry_count ?? m["meta.unknown"](),
+            })}
+            {#snippet percentage()}
+              {m["components.source_table.progress.percentage"]({
+                percentage: (completion(source) * 100).toFixed(1),
               })}
-              {#snippet percentage()}
-                {m["components.source_table.progress.percentage"]({
-                  percentage: (completion(source) * 100).toFixed(1),
-                })}
-              {/snippet}
-              {#if completion(source) > 0.95}
-                <span class="text-green-500">
-                  {@render percentage()}
-                </span>
-              {:else if completion(source) > 0.5}
-                <span class="text-yellow-500">
-                  {@render percentage()}
-                </span>
-              {:else}
-                <span class="text-red-500">
-                  {@render percentage()}
-                </span>
-              {/if}
-            </section>
-          {:else}
-            {m["meta.unknown"]()}
-          {/if}
+            {/snippet}
+            {#if completion(source) > 0.95}
+              <span class="text-green-500">
+                {@render percentage()}
+              </span>
+            {:else if completion(source) > 0.5}
+              <span class="text-yellow-500">
+                {@render percentage()}
+              </span>
+            {:else}
+              <span class="text-red-500">
+                {@render percentage()}
+              </span>
+            {/if}
+          </section>
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
