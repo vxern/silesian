@@ -108,6 +108,9 @@
       "description": "Ôpis",
       "colour": "Farba"
     },
+    "location_table": {
+      "name": "Miano"
+    },
     "author_table": {
       "name": "Miano",
       "locations": "Miyjsca"
@@ -479,7 +482,7 @@
     },
     "authors": {
       "title": "Autorzi",
-      "description": "Autorzi, kierych używōmy a kiere my zaimportowali abo dalszij chcymy zaimportować.",
+      "description": "Autorzi zdrzōdeł, kierych używōmy.",
       "none": "Niy ma jeszcze żŏdnych autorōw.",
       "actions": {
         "add": "Przidej nowygo autora",
@@ -515,6 +518,44 @@
         "name_description": "Jako sie tyn autōr mianuje?",
         "locations": "Miyjsca",
         "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?"
+      }
+    },
+    "locations": {
+      "title": "Miyjsca",
+      "description": "Roztōmańte miyjsca na Gōrnym Ślōnsku a we ôkolicy, z kierych sōm autorzi, zdrzōdła, a tako dalszij.",
+      "none": "Niy ma jeszcze żŏdnych miyjsc.",
+      "actions": {
+        "add": "Przidej nowe miyjsce",
+        "drafts": "Cechōnki",
+        "review": "Sprŏwdź miyjsca"
+      },
+      "new": {
+        "title": "Nowe miyjsce",
+        "description": "Przidŏwaniy nowygo miyjsca ku dykcjōnŏrzu."
+      },
+      "drafts": {
+        "title": "Cechōnki miyjsc",
+        "description": "Cechōnki miyjsc, kiere używŏcz przidŏwŏ.",
+        "none": "Niy mŏcie żŏdnych cechōnkōw."
+      },
+      "review": {
+        "title": "Miyjsca do sprŏwdzyniŏ",
+        "description": "Miyjsca, kiere trza sprŏwdzić.",
+        "none": "Niy ma żŏdnych miyjsc do sprŏwdzyniŏ."
+      },
+      "[source_id]": {
+        "edit": {
+          "title": "Edytowaniy miyjsca — „{location_name}”",
+          "description": ""
+        },
+        "review": {
+          "title": "Sprŏwdzaniy miyjsca — „{location_name}”",
+          "description": ""
+        }
+      },
+      "form": {
+        "name": "Miano",
+        "name_description": "Jako sie to miyjsce mianuje?"
       }
     },
     "categories": {

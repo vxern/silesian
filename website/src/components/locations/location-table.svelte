@@ -6,25 +6,21 @@
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
-  import ColourLabel from "../labels/colour-label.svelte";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
 
   const hasPermission = true;
 
-  const { authors, mode, noneText } = $props();
+  const { locations, mode, noneText } = $props();
 </script>
 
 <Table.Root>
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>
-        {m["components.author_table.name"]()}
+        {m["components.location_table.name"]()}
       </Table.HeaderCell>
-      <Table.HeaderCell>
-        {m["components.author_table.locations"]()}
-      </Table.HeaderCell>
-      {#if hasPermission && authors.length > 0}
+      {#if hasPermission && locations.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
         {/if}
@@ -35,21 +31,10 @@
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each authors as author, index}
+    {#each locations as location, index}
       <Table.Row {index}>
         <Table.Cell>
-          {author.name}
-        </Table.Cell>
-        <Table.Cell>
-          {#if author.locations && author.locations.length > 0}
-            <ul>
-              {#each author.locations as location}
-                <li>{location.name}</li>
-              {/each}
-            </ul>
-          {:else}
-            {m["meta.none"]()}
-          {/if}
+          {location.name}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
@@ -57,13 +42,13 @@
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
-                onclick={() => goto(`/authors/${author.id}/edit`)}
+                onclick={() => goto(`/locations/${location.id}/edit`)}
               />
               <!-- TODO(vxern): Handle this properly. -->
               <Button
                 colour="red"
                 icon={Delete2LineIcon}
-                onclick={() => goto(`/authors/${author.id}/delete`)}
+                onclick={() => goto(`/locations/${location.id}/delete`)}
               />
             </Table.Cell>
           {/if}
@@ -72,7 +57,7 @@
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
-                onclick={() => goto(`/authors/${author.id}/review`)}
+                onclick={() => goto(`/locations/${location.id}/review`)}
               />
             </Table.Cell>
           {/if}
@@ -81,6 +66,6 @@
     {/each}
   </Table.Body>
 </Table.Root>
-{#if authors.length === 0}
+{#if locations.length === 0}
   {noneText}
 {/if}

@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { authors } from "$lib/database/schema";
+import { locations } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 // TODO(vxern): Validate.
@@ -9,34 +9,33 @@ export const actions = {
   update: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const author = await db.transaction(async (tx) => {
-      const author = await db.insert(authors).values({
+    const location = await db.transaction(async (tx) => {
+      const location = await db.insert(locations).values({
         status: "draft" in data ? "draft" : "pending",
         name: data.get("name"),
-        locations: JSON.parse(data.get("locations[]")),
-      }).returning({ id: authors.id }).then((result) => result.at(0));
+      }).returning({ id: locations.id }).then((result) => result.at(0));
 
       // TODO(vxern): Ensure versions have the same created_at as the main record's updated_at
       await db.insert(versions).values({
-        versionable_type: "authors",
-        versionable_id: author.id,
+        versionable_type: "locations",
+        versionable_id: location.id,
       }).onConflictDoUpdate({
         target: versions.version,
         set: { version: sql`versions.version + 1` },
       });
 
-      return author;
+      return location;
     });
 
     // TODO(vxern): Handle failure.
 
     let redirectTo;
-    if (author.status === "draft") {
-      redirectTo = "/authors/drafts";
-    } else if (author.status === "pending") {
-      redirectTo = "/authors/review";
-    } else if (author.status === "published") {
-      redirectTo = "/authors";
+    if (location.status === "draft") {
+      redirectTo = "/locations/drafts";
+    } else if (location.status === "pending") {
+      redirectTo = "/locations/review";
+    } else if (location.status === "published") {
+      redirectTo = "/locations";
     } else {
       return error(500, { message: "Internal Server Error" });
     }

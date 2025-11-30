@@ -13,6 +13,7 @@
   import User4LineIcon from "~icons/mingcute/user-4-line";
   import Palette2LineIcon from "~icons/mingcute/palette-2-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
+  import Location3LineIcon from "~icons/mingcute/location-3-line";
   import Page from "../page/index.js";
 </script>
 
@@ -84,6 +85,31 @@
   <section class="w-full">
     <Page.Divider />
   </section>
+  {#if page.url.pathname.startsWith("/locations/")}
+    <NavigationButton
+      onclick={() => goto("/locations")}
+      highlighted={true}
+      icon={Location3LineIcon}
+    >
+      {#if page.url.pathname === "/locations/drafts"}
+        {m["routes.locations.drafts.title"]()}
+      {:else if page.url.pathname === "/locations/review"}
+        {m["routes.locations.review.title"]()}
+      {:else if page.url.pathname === "/locations/new"}
+        {m["routes.locations.new.title"]()}
+      {:else if /\/locations\/\d+\/review/.test(page.url.pathname)}
+        {m["routes.locations.review.title"]()}
+      {/if}
+    </NavigationButton>
+  {:else}
+    <NavigationButton
+      onclick={() => goto("/locations")}
+      highlighted={page.url.pathname === "/locations"}
+      icon={Location3LineIcon}
+    >
+      {m["routes.locations.title"]()}
+    </NavigationButton>
+  {/if}
   {#if page.url.pathname.startsWith("/authors/")}
     <NavigationButton
       onclick={() => goto("/authors")}

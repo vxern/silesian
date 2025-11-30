@@ -187,7 +187,7 @@
               <Button
                 colour="red"
                 icon={Delete2LineIcon}
-                onclick={() => goto(`/sources/${entry.id}/delete`)}
+                onclick={() => goto(`/sources/${source.id}/delete`)}
               />
             </Table.Cell>
           {/if}
