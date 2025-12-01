@@ -32,6 +32,7 @@ export const sources = pgTable("sources", {
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
   check("name_empty_check", sql`${t.name} <> ''`),
+  check("description_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
 ]);
 
 export const sourcesRelations = relations(sources, ({ many, one }) => ({
