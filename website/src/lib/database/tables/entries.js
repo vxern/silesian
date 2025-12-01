@@ -1,5 +1,6 @@
 import { relations } from "drizzle-orm";
 import { pgTable, bigint, text, timestamp } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 import { entriesToCategories } from "./entries-to-categories";
 import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
@@ -24,3 +25,5 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
   author: one(users, { fields: [entries.author_id], references: [users.id] }),
   categories: many(entriesToCategories),
 }));
+
+export const entriesInsertSchema = createInsertSchema(entries);

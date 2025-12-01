@@ -1,8 +1,9 @@
 import { relations } from "drizzle-orm";
 import { pgTable, bigint, text, timestamp } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
-import { entriesToCategories } from "./entries-to-categories";
+import { authorsToLocations } from "./authors-to-locations";
 import { sources } from "./sources";
 import { users } from "./users";
 
@@ -19,3 +20,5 @@ export const locations = pgTable("locations", {
 export const locationsRelations = relations(locations, ({ many }) => ({
   authors: many(authorsToLocations),
 }));
+
+export const locationsInsertSchema = createInsertSchema(locations);

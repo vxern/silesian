@@ -1,5 +1,6 @@
 import { relations } from "drizzle-orm";
 import { pgTable, integer, bigint, text, boolean, timestamp } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { licencesEnum } from "../enums/licences";
@@ -36,3 +37,5 @@ export const sourcesRelations = relations(sources, ({ many, one }) => ({
   authors: many(authorsToSources),
   author: one(users, { fields: [sources.author_id], references: [users.id] }),
 }));
+
+export const sourcesInsertSchema = createInsertSchema(sources);
