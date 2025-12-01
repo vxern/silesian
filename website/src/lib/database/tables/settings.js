@@ -11,7 +11,7 @@ import { settingsToSources } from "./settings-to-sources";
 
 export const settings = pgTable("settings", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  user_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  user_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // Basic settings

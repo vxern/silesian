@@ -4,7 +4,7 @@ import { users } from "./users";
 
 export const searches = pgTable("searches", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  searcher_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  searcher_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   lemma: text().notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // No updated_at because searches are never updated.

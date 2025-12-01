@@ -29,7 +29,7 @@ export const sources = pgTable("sources", {
   imported_entry_count: integer().default(0).notNull(),
   total_entry_count: integer(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
   check("name_empty_check", sql`${t.name} <> ''`),
 ]);

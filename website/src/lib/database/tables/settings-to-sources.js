@@ -4,8 +4,8 @@ import { settings } from "./settings";
 import { sources } from "./sources";
 
 export const settingsToSources = pgTable("settings_to_sources", {
-  settings_id: bigint({ mode: "number" }).references(() => settings.id).notNull(),
-  source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
+  settings_id: bigint({ mode: "number" }).references(() => settings.id, { onDelete: "cascade" }).notNull(),
+  source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [primaryKey({ columns: [t.settings_id, t.source_id] })]);
 
 export const settingsToSourcesRelations = relations(settingsToSources, ({ one }) => ({

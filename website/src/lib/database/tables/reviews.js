@@ -6,8 +6,8 @@ import { users } from "./users";
 
 export const reviews = pgTable("reviews", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  version_id: bigint({ mode: "number" }).references(() => versions.id).notNull(),
-  reviewer_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  version_id: bigint({ mode: "number" }).references(() => versions.id, { onDelete: "cascade" }).notNull(),
+  reviewer_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   decision: reviewDecisionsEnum().notNull(),
   comment: text(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),

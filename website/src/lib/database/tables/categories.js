@@ -15,7 +15,7 @@ export const categories = pgTable("categories", {
   description: text(),
   colour: coloursEnum().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
   check("name_empty_check", sql`${t.name} <> ''`),
 ]);

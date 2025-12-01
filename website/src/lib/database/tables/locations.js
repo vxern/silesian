@@ -14,7 +14,7 @@ export const locations = pgTable("locations", {
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   name: text().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
   check("name_empty_check", sql`${t.name} <> ''`),
 ]);

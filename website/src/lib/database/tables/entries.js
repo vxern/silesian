@@ -15,9 +15,9 @@ export const entries = pgTable("entries", {
   lemma: text().notNull(),
   // TODO(vxern): Add lexemes.
   contents: text().notNull(),
-  source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
+  source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
+  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
   check("lemma_empty_check", sql`${t.lemma} <> ''`),
 ]);
