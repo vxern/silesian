@@ -1,5 +1,5 @@
-import { relations } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp } from "drizzle-orm/pg-core";
+import { relations, sql } from "drizzle-orm";
+import { pgTable, bigint, text, timestamp, check } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { entriesToCategories } from "./entries-to-categories";
 import { lifecyclesEnum } from "../enums/lifecycles";
@@ -18,7 +18,9 @@ export const entries = pgTable("entries", {
   source_id: bigint({ mode: "number" }).references(() => sources.id).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
-});
+}, (t) => [
+  check("lemma_empty_check", sql`${t.lemma} <> ''`),
+]);
 
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),

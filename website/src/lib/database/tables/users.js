@@ -1,5 +1,5 @@
-import { relations } from "drizzle-orm";
-import { pgTable, bigint, integer, text, timestamp, unique } from "drizzle-orm/pg-core";
+import { relations, sql } from "drizzle-orm";
+import { pgTable, bigint, integer, text, timestamp, unique, check } from "drizzle-orm/pg-core";
 import { lifecyclesEnum } from "../enums/lifecycles";
 import { settings } from "./settings";
 import { versions } from "./versions";
@@ -25,7 +25,12 @@ export const users = pgTable("users", {
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_editing: integer().default(0).notNull(),
-}, (t) => [unique().on(t.email_address)]);
+}, (t) => [
+  unique().on(t.username),
+  unique().on(t.email_address),
+  check("username_empty_check", sql`${t.username} <> ''`),
+  check("email_address_empty_check", sql`${t.email_address} <> ''`),
+]);
 
 export const usersRelations = relations(users, ({ many }) => ({
   // A user can in fact only have one set of settings.

@@ -1,5 +1,5 @@
-import { relations } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp } from "drizzle-orm/pg-core";
+import { relations, sql } from "drizzle-orm";
+import { pgTable, bigint, text, timestamp, check } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
@@ -15,11 +15,13 @@ export const authors = pgTable("authors", {
   name: text().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id).notNull(),
-});
+}, (t) => [
+  check("name_empty_check", sql`${t.name} <> ''`),
+]);
 
 export const authorsRelations = relations(authors, ({ many }) => ({
   sources: many(authorsToSources),
   locations: many(authorsToLocations),
 }));
 
-export const authorsInsertSchema = createInsertSchema(authors);
+export const authorsInsertSchema = createInsertSchema(authors, {});

@@ -1,5 +1,5 @@
-import { relations } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp } from "drizzle-orm/pg-core";
+import { relations, sql } from "drizzle-orm";
+import { pgTable, bigint, text, timestamp, check } from "drizzle-orm/pg-core";
 import { users } from "./users";
 
 export const searches = pgTable("searches", {
@@ -8,7 +8,9 @@ export const searches = pgTable("searches", {
   lemma: text().notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // No updated_at because searches are never updated.
-});
+}, (t) => [
+  check("lemma_empty_check", sql`${t.lemma} <> ''`),
+]);
 
 export const searchesRelations = relations(searches, ({ one }) => ({
   searcher: one(users, { fields: [searches.searcher_id], references: [users.id] }),
