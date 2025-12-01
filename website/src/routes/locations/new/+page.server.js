@@ -6,7 +6,7 @@ import { eq, sql } from 'drizzle-orm';
 // TODO(vxern): Validate.
 
 export const actions = {
-  update: async ({ request, locals }) => {
+  create: async ({ request, locals }) => {
     const data = await request.formData();
 
     const location = await db.transaction(async (tx) => {
