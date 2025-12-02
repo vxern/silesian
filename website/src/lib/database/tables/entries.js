@@ -1,17 +1,17 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp, check } from "drizzle-orm/pg-core";
+import { pgTable, bigint, text, timestamp, check, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { entriesToCategories } from "./entries-to-categories";
-import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { sources } from "./sources";
 import { users } from "./users";
 
 export const entries = pgTable("entries", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  lifecycle: lifecyclesEnum().default("active").notNull(),
+  deleted: boolean().default(false).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+  deleted_at: timestamp({ withTimezone: true }),
   lemma: text().notNull(),
   // TODO(vxern): Add lexemes.
   contents: text().notNull(),
@@ -19,7 +19,8 @@ export const entries = pgTable("entries", {
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
-  check("lemma_empty_check", sql`${t.lemma} <> ''`),
+  check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
+  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const entriesRelations = relations(entries, ({ one, many }) => ({

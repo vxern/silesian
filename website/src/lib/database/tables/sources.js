@@ -1,7 +1,6 @@
 import { relations, sql } from "drizzle-orm";
 import { pgTable, integer, bigint, text, boolean, timestamp, check } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
-import { lifecyclesEnum } from "../enums/lifecycles";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { licencesEnum } from "../enums/licences";
 import { orthographiesEnum } from "../enums/orthographies";
@@ -13,9 +12,10 @@ import { users } from "./users";
 
 export const sources = pgTable("sources", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  lifecycle: lifecyclesEnum().default("active").notNull(),
+  deleted: boolean().default(false).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+  deleted_at: timestamp({ withTimezone: true }),
   name: text().notNull(),
   description: text(),
   url: text(),
@@ -31,8 +31,9 @@ export const sources = pgTable("sources", {
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
 }, (t) => [
-  check("name_empty_check", sql`${t.name} <> ''`),
-  check("description_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
+  check("name_not_empty_check", sql`${t.name} <> ''`),
+  check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
+  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const sourcesRelations = relations(sources, ({ many, one }) => ({

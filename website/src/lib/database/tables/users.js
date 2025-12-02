@@ -1,6 +1,5 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, integer, text, timestamp, unique, check } from "drizzle-orm/pg-core";
-import { lifecyclesEnum } from "../enums/lifecycles";
+import { pgTable, bigint, integer, text, timestamp, unique, check, boolean } from "drizzle-orm/pg-core";
 import { settings } from "./settings";
 import { versions } from "./versions";
 import { reviews } from "./reviews";
@@ -12,9 +11,10 @@ import { timeEntries } from "./time-entries";
 
 export const users = pgTable("users", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  lifecycle: lifecyclesEnum().default("active").notNull(),
+  deleted: boolean().default(false).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+  deleted_at: timestamp({ withTimezone: true }),
   username: text().notNull(),
   email_address: text().notNull(),
   searches_count: integer().default(0).notNull(),
@@ -28,8 +28,9 @@ export const users = pgTable("users", {
 }, (t) => [
   unique().on(t.username),
   unique().on(t.email_address),
-  check("username_empty_check", sql`${t.username} <> ''`),
-  check("email_address_empty_check", sql`${t.email_address} <> ''`),
+  check("username_not_empty_check", sql`${t.username} <> ''`),
+  check("email_address_not_empty_check", sql`${t.email_address} <> ''`),
+  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const usersRelations = relations(users, ({ many }) => ({

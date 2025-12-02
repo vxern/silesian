@@ -11,5 +11,5 @@ export const searchFrequencies = pgTable("search_frequencies", {
   updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
 }, (t) => [
   unique().on(t.lemma),
-  check("lemma_empty_check", sql`${t.lemma} <> ''`),
+  check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
 ]);

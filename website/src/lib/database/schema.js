@@ -3,7 +3,6 @@ export { accessesEnum } from "./enums/accesses";
 export { coloursEnum } from "./enums/colours";
 export { languagesEnum } from "./enums/languages";
 export { licencesEnum } from "./enums/licences";
-export { lifecyclesEnum } from "./enums/lifecycles";
 export { orthographiesEnum } from "./enums/orthographies";
 export { publishStatusesEnum } from "./enums/publish-statuses";
 export { reviewDecisionsEnum } from "./enums/review-decisions";

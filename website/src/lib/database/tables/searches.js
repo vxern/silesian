@@ -9,7 +9,7 @@ export const searches = pgTable("searches", {
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // No updated_at because searches are never updated.
 }, (t) => [
-  check("lemma_empty_check", sql`${t.lemma} <> ''`),
+  check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
 ]);
 
 export const searchesRelations = relations(searches, ({ one }) => ({
