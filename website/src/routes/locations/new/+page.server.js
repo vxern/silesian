@@ -7,7 +7,7 @@ export const actions = {
   create: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const insertData = locationsInsertSchema.parse({
+    const locationData = locationsInsertSchema.parse({
       status: data.get("draft") === "" ? "draft" : "pending",
       name: data.get("name"),
       // TODO(vxern): IMPORTANT - Update the author ID.
@@ -16,8 +16,7 @@ export const actions = {
 
     const location = await versionedInsert({
       table: locations,
-      // TODO(vxern): Validate properly.
-      values: insertData,
+      values: locationData,
       returning: { status: locations.status },
     });
 

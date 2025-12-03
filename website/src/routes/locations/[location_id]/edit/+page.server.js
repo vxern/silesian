@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
-import { db } from "$lib/database.server";
-import { locations } from "$lib/database/schema";
+import { db, versionedUpdate } from "$lib/database.server";
+import { locations, locationsUpdateSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
@@ -12,28 +12,22 @@ export const load = async ({ params }) => {
   };
 };
 
-// TODO(vxern): Validate.
-
 export const actions = {
   update: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const location = await db.transaction(async (tx) => {
-      const location = await db.update(locations).set({
-        status: "draft" in data ? "draft" : "pending",
-        name: data.get("name"),
-      }).where(eq(locations.id, Number(data.get("id")))).returning({ status: locations.status }).then((result) => result.at(0));
+    const locationData = locationsUpdateSchema.parse({
+      status: data.get("draft") === "" ? "draft" : "pending",
+      name: data.get("name"),
+    });
 
-      // TODO(vxern): Ensure versions have the same created_at as the main record's updated_at
-      await db.insert(versions).values({
-        versionable_type: "locations",
-        versionable_id: location.id,
-      }).onConflictDoUpdate({
-        target: versions.version,
-        set: { version: sql`versions.version + 1` },
-      });
-
-      return location;
+    const location = await versionedUpdate({
+      table: locations,
+      id: Number(data.get("id")),
+      // TODO(vxern): IMPORTANT - Update the author ID.
+      authorId: 2,
+      values: locationData,
+      returning: { status: locations.status },
     });
 
     // TODO(vxern): Handle failure.
