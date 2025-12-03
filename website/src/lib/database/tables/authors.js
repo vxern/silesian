@@ -1,6 +1,6 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp, check, boolean } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+import { pgTable, bigint, text, integer, timestamp, check, boolean } from "drizzle-orm/pg-core";
+import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { users } from "./users";
 import { authorsToLocations } from "./authors-to-locations";
@@ -15,6 +15,7 @@ export const authors = pgTable("authors", {
   name: text().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
+  version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
@@ -26,5 +27,9 @@ export const authorsRelations = relations(authors, ({ many }) => ({
 }));
 
 export const authorsInsertSchema = createInsertSchema(authors, {
+  name: (z) => z.nonempty(),
+});
+
+export const authorsUpdateSchema = createUpdateSchema(authors, {
   name: (z) => z.nonempty(),
 });

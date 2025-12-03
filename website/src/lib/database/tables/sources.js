@@ -1,6 +1,6 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, integer, bigint, text, boolean, timestamp, check } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+import { pgTable, integer, bigint, integer, text, boolean, timestamp, check } from "drizzle-orm/pg-core";
+import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { licencesEnum } from "../enums/licences";
 import { orthographiesEnum } from "../enums/orthographies";
@@ -30,6 +30,7 @@ export const sources = pgTable("sources", {
   total_entry_count: integer(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
+  version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
@@ -45,4 +46,8 @@ export const sourcesRelations = relations(sources, ({ many, one }) => ({
 export const sourcesInsertSchema = createInsertSchema(sources, {
   name: (z) => z.nonempty(),
   description: (z) => z.nonempty(),
+});
+
+export const sourcesUpdateSchema = createUpdateSchema(sources, {
+  lemma: (z) => z.nonempty(),
 });

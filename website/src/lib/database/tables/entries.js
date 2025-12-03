@@ -1,6 +1,6 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, text, timestamp, check, boolean } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+import { pgTable, bigint, text, integer, timestamp, check, boolean } from "drizzle-orm/pg-core";
+import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { entriesToCategories } from "./entries-to-categories";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { sources } from "./sources";
@@ -18,6 +18,7 @@ export const entries = pgTable("entries", {
   source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
+  version: integer().default(1).notNull(),
 }, (t) => [
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
   check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
@@ -30,5 +31,9 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
 }));
 
 export const entriesInsertSchema = createInsertSchema(entries, {
+  lemma: (z) => z.nonempty(),
+});
+
+export const entriesUpdateSchema = createUpdateSchema(entries, {
   lemma: (z) => z.nonempty(),
 });
