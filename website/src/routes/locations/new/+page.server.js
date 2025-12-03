@@ -8,7 +8,7 @@ export const actions = {
     const data = await request.formData();
 
     const insertData = locationsInsertSchema.parse({
-      status: "draft" in data ? "draft" : "pending",
+      status: data.get("draft") === "" ? "draft" : "pending",
       name: data.get("name"),
       // TODO(vxern): IMPORTANT - Update the author ID.
       author_id: 2,
