@@ -25,4 +25,6 @@ export const categoriesRelations = relations(categories, ({ one }) => ({
   author: one(users, { fields: [categories.author_id], references: [users.id] })
 }));
 
-export const categoriesInsertSchema = createInsertSchema(categories);
+export const categoriesInsertSchema = createInsertSchema(categories, {
+  name: (z) => z.nonempty(),
+});

@@ -42,4 +42,7 @@ export const sourcesRelations = relations(sources, ({ many, one }) => ({
   author: one(users, { fields: [sources.author_id], references: [users.id] }),
 }));
 
-export const sourcesInsertSchema = createInsertSchema(sources);
+export const sourcesInsertSchema = createInsertSchema(sources, {
+  name: (z) => z.nonempty(),
+  description: (z) => z.nonempty(),
+});

@@ -29,4 +29,6 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
   categories: many(entriesToCategories),
 }));
 
-export const entriesInsertSchema = createInsertSchema(entries);
+export const entriesInsertSchema = createInsertSchema(entries, {
+  lemma: (z) => z.nonempty(),
+});

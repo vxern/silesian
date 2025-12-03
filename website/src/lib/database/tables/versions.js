@@ -13,7 +13,7 @@ export const versions = pgTable("versions", {
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   // Should be equal to the `created_at` of the `versionable` in the first version.
   // Should be equal to the `updated_at` of the `versionable` in the last version.
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
+  created_at: timestamp({ withTimezone: true }).notNull(),
   // Versions are immutable so no `updated_at`.
 }, (t) => [unique().on(t.version, t.versionable_type, t.versionable_id)]);
 

@@ -1,3 +1,4 @@
+import * as z from "zod";
 import { relations, sql } from "drizzle-orm";
 import { pgTable, bigint, text, timestamp, check, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
@@ -24,4 +25,6 @@ export const locationsRelations = relations(locations, ({ many }) => ({
   authors: many(authorsToLocations),
 }));
 
-export const locationsInsertSchema = createInsertSchema(locations);
+export const locationsInsertSchema = createInsertSchema(locations, {
+  name: (z) => z.nonempty(),
+});

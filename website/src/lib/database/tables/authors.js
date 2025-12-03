@@ -25,4 +25,6 @@ export const authorsRelations = relations(authors, ({ many }) => ({
   locations: many(authorsToLocations),
 }));
 
-export const authorsInsertSchema = createInsertSchema(authors, {});
+export const authorsInsertSchema = createInsertSchema(authors, {
+  name: (z) => z.nonempty(),
+});
