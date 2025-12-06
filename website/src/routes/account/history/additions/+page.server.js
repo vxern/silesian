@@ -24,10 +24,11 @@ function getAdditionCount() {
 
 async function getAdditionCountByMonth() {
   const results = await db
-    .select({ month: sql`EXTRACT(MONTH FROM ${entries.created_at}) - 1`.as("month"), count: count() })
+    .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(entries)
-    .where(gte(entries.created_at, dayjs().startOf("year")))
-    .where(eq(entries.author_id, 1))
+    .withVersions(entries)
+    .where(eq(versions.author_id, 1))
+    .where(gte(versions.created_at, dayjs().startOf("year")))
     .groupBy(sql`month`);
 
   return results.reduce(

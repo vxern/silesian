@@ -1,4 +1,5 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
+import { PgSelectBase } from 'drizzle-orm/pg-core';
 import postgres from 'postgres';
 import { isEqual } from 'es-toolkit/predicate';
 import {
@@ -9,7 +10,7 @@ import {
 } from '$env/static/private';
 import * as schema from "$lib/database/schema";
 import { versions } from "$lib/database/schema";
-import { getTableName, sql, and, eq } from 'drizzle-orm';
+import { getTableName, sql, and, eq, inArray } from 'drizzle-orm';
 
 const client = postgres({
   host: DATABASE_HOST,
@@ -20,43 +21,58 @@ const client = postgres({
 
 export const db = drizzle({ client, schema, logger: true });
 
+PgSelectBase.prototype.withVersions = function (table) {
+  return this.innerJoin(versions, and(
+    eq(versions.versionable_id, table.id),
+    eq(versions.versionable_type, getTableName(table)),
+    eq(versions.version, table.version),
+  ));
+};
+
 /**
  * Performs 2 queries:
- * - Create the record.
- * - Create a version.
+ * - Create records.
+ * - Create versions.
  */
-export async function versionedInsert({ table, values, returning = {} }) {
+export async function versionedInsert({ table, values, authorId, returning = {} }) {
   return db.transaction(async (tx) => {
-    const record =
+    const now = new Date();
+
+    const records =
       await db
         .insert(table)
         .values(values)
         .returning({
           id: table.id,
-          author_id: table.author_id,
-          created_at: table.created_at,
           ...returning,
         })
-        .then((results) => results.at(0))
         .catch((error) => tx.rollback());
 
-    await db.insert(versions).values({
-      versionable_type: getTableName(table),
-      versionable_id: record.id,
-      author_id: record.author_id,
-      created_at: record.created_at,
-    }).catch((error) => tx.rollback());
+    await db.insert(versions).values(
+      records.map(
+        (record) => ({
+          versionable_type: getTableName(table),
+          versionable_id: record.id,
+          author_id: authorId,
+          created_at: now,
+        }),
+      ),
+    ).catch((error) => tx.rollback());
 
-    return record;
+    if (Array.isArray(values)) {
+      return values;
+    } else {
+      return values.at(0);
+    }
   });
 }
 
 /**
  * Performs 4 queries:
- * - Get the record in its current state.
- * - Create a version.
- * - Update the record.
- * - Update the old version with a snapshot of the current data.
+ * - Get record in its current state.
+ * - Create version.
+ * - Update record.
+ * - Update old version with a snapshot of the current data.
  */
 export async function versionedUpdate({ table, id, authorId, values }) {
   return db.transaction(async (tx) => {
@@ -87,7 +103,7 @@ export async function versionedUpdate({ table, id, authorId, values }) {
     const record =
       await db
         .update(table)
-        .set({ ...values, version: version.version, updated_at: version.created_at })
+        .set({ ...values, version: version.version })
         .where(eq(table.id, id))
         .returning()
         .then((results) => results.at(0))
@@ -116,10 +132,86 @@ export async function versionedUpdate({ table, id, authorId, values }) {
   });
 }
 
-export async function versionedDrop() {
-  // TODO(vxern): Implement.
+/** Performs the same queries as {@link versionedUpdate}. */
+export async function versionedDelete({ table, id, authorId }) {
+  return versionedUpdate({
+    table,
+    id,
+    authorId,
+    values: {
+      // TODO(vxern): Insert this dynamically depending on whether the table's got it.
+      status: "draft",
+      deleted: true,
+    },
+  });
 }
 
-export async function insertJoin() {
-  // TODO(vxern): Implement.
+/**
+ * Performs  queries, depending on the existing and the new IDs:
+ * - Create added joins.
+ * - Delete removed joins.
+ */
+export async function versionedJoin({ table, source, sourceColumnName, targetIds, targetColumnName, authorId }) {
+  const idsToInsert = new Set(ids);
+  for (const existingId of existingIds) {
+    idsToInsert.delete(existingId);
+  }
+
+  const idsToDelete = new Set(existingIds);
+  for (const id of ids) {
+    idsToDelete.delete(id);
+  }
+
+  if (idsToInsert.size === 0 && idsToDelete.size === 0) {
+    return;
+  }
+
+  return db.transaction(async (tx) => {
+    const now = new Date();
+
+    const insertedIds = [];
+    if (idsToInsert.size > 0) {
+      insertedIds.push(
+        ...await db
+          .insert(table)
+          .values(
+            idsToInsert.map(
+              (targetId) => ({
+                [sourceColumnName]: source.id,
+                [targetColumnName]: targetId,
+              }),
+            ),
+          )
+          .returning({ id: table.id })
+          .then((results) => results.map((result) => result.id))
+          .catch((error) => tx.rollback()),
+      );
+    }
+
+    const deletedIds = [];
+    if (idsToDelete.size > 0) {
+      deletedIds.push(
+        ...await db
+          .delete(table)
+          .where(inArray(table[targetColumnName], idsToDelete))
+          .returning({ id: table.id })
+          .then((results) => results.map((result) => result.id))
+          .catch((error) => tx.rollback()),
+      );
+    }
+
+    await db.insert(versions).values(
+      [
+        ...insertedIds,
+        ...deletedIds,
+      ].map(
+        () => ({
+          versionable_type: getTableName(table),
+          versionable_id: id,
+          author_id: authorId,
+          created_at: now,
+        }),
+      ),
+    ).catch((error) => tx.rollback());
+  });
 }

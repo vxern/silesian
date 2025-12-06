@@ -23,10 +23,11 @@ function getReviewCount() {
 
 async function getReviewCountByMonth() {
   const results = await db
-    .select({ month: sql`EXTRACT(MONTH FROM ${reviews.created_at}) - 1`.as("month"), count: count() })
+    .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(reviews)
-    .where(gte(reviews.created_at, dayjs().startOf("year")))
-    .where(eq(reviews.reviewer_id, 1))
+    .withVersions(reviews)
+    .where(gte(versions.created_at, dayjs().startOf("year")))
+    .where(eq(versions.reviewer_id, 1))
     .groupBy(sql`month`);
 
   return results.reduce(
