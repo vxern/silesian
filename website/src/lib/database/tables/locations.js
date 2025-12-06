@@ -15,7 +15,6 @@ export const locations = pgTable("locations", {
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
-  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const locationsRelations = relations(locations, ({ many }) => ({

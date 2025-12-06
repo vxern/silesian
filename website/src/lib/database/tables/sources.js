@@ -30,7 +30,6 @@ export const sources = pgTable("sources", {
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
-  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const sourcesRelations = relations(sources, ({ many, one }) => ({

@@ -27,7 +27,6 @@ export const users = pgTable("users", {
   unique().on(t.email_address),
   check("username_not_empty_check", sql`${t.username} <> ''`),
   check("email_address_not_empty_check", sql`${t.email_address} <> ''`),
-  check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
 
 export const usersRelations = relations(users, ({ many }) => ({
