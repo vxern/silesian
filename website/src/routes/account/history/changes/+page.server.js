@@ -19,7 +19,7 @@ export const load = async (params) => {
 };
 
 function getChangeCount() {
-  return db.$count(versions, and(eq(versions.author_id, 1), eq(versions.versionable_type, "entries")));
+  return db.$count(versions, and(eq(versions.author_id, 2), eq(versions.versionable_type, "entries")));
 }
 
 async function getChangeCountByMonth() {
@@ -27,7 +27,7 @@ async function getChangeCountByMonth() {
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(versions)
     .where(gte(versions.created_at, dayjs().startOf("year")))
-    .where(eq(versions.author_id, 1))
+    .where(eq(versions.author_id, 2))
     .groupBy(sql`month`);
 
   return results.reduce(
@@ -41,5 +41,5 @@ async function getChangeCountByMonth() {
 }
 
 function getChangeHistory() {
-  return db.query.versions.findMany({ where: (versions, { eq }) => eq(versions.author_id, 1) });
+  return db.query.versions.findMany({ where: (versions, { eq }) => eq(versions.author_id, 2) });
 }
