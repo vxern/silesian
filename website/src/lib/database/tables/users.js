@@ -14,6 +14,7 @@ export const users = pgTable("users", {
   deleted: boolean().default(false).notNull(),
   username: text().notNull(),
   email_address: text().notNull(),
+  // TODO(vxern): Move these elsewhere because they're going to be reflected in version snapshots otherwise.
   searches_count: integer().default(0).notNull(),
   additions_count: integer().default(0).notNull(),
   changes_count: integer().default(0).notNull(),
@@ -22,6 +23,7 @@ export const users = pgTable("users", {
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_editing: integer().default(0).notNull(),
+  version: integer().default(1).notNull(),
 }, (t) => [
   unique().on(t.username),
   unique().on(t.email_address),

@@ -88,13 +88,13 @@
               />
             </Table.Cell>
             <Table.Cell>
-              {page.data.session.user.name}
+              {data.user.username}
             </Table.Cell>
             <Table.Cell>
-              {page.data.session.user.email}
+              {data.user.email_address}
             </Table.Cell>
             <Table.Cell>
-              {dayjs(data.user.created_at).calendar()}
+              {dayjs(data.user.versions.created_at).calendar()}
             </Table.Cell>
           </Table.Row>
         </Table.Body>
