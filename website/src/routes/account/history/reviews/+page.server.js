@@ -18,16 +18,21 @@ export const load = async (params) => {
 };
 
 function getReviewCount() {
-  return db.$count(reviews);
+  return db
+    .select({ count: count() })
+    .from(reviews)
+    .innerJoin(versions, eq(reviews.version_id, versions.id))
+    .where(eq(versions.author_id, 2))
+    .then((results) => results.at(0).count);
 }
 
 async function getReviewCountByMonth() {
   const results = await db
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(reviews)
-    .withVersions(reviews)
+    .innerJoin(versions, eq(reviews.version_id, versions.id))
     .where(gte(versions.created_at, dayjs().startOf("year")))
-    .where(eq(versions.reviewer_id, 1))
+    .where(eq(reviews.reviewer_id, 1))
     .groupBy(sql`month`);
 
   return results.reduce(
@@ -44,6 +49,6 @@ function getReviewHistory() {
   return db
     .select({ entry: entries })
     .from(reviews)
-    .leftJoin(versions, eq(reviews.version_id, versions.id))
-    .leftJoin(entries, and(eq(versions.versionable_type, "entries"), eq(versions.versionable_id, reviews.id)));
+    .innerJoin(versions, eq(reviews.version_id, versions.id))
+    .innerJoin(entries, and(eq(versions.versionable_type, "entries"), eq(versions.versionable_id, versions.id)));
 }

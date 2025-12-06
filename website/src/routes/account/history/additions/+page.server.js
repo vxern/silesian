@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { dayjs } from "../../../../helpers/dates.js";
-import { entries } from "$lib/database/schema";
+import { entries, versions } from "$lib/database/schema";
 import { count, sql, asc, eq, gte } from "drizzle-orm";
 
 // TODO(vxern): Limit.
@@ -19,7 +19,12 @@ export const load = async (params) => {
 };
 
 function getAdditionCount() {
-  return db.$count(entries, eq(entries.author_id, 1));
+  return db
+    .select({ count: count() })
+    .from(entries)
+    .withVersions(entries)
+    .where(eq(versions.author_id, 1))
+    .then((results) => results.at(0).count);
 }
 
 async function getAdditionCountByMonth() {
@@ -42,5 +47,9 @@ async function getAdditionCountByMonth() {
 }
 
 function getAdditionHistory() {
-  return db.query.entries.findMany({ where: (entries, { eq }) => eq(entries.author_id, 1) });
+  return db
+    .select()
+    .from(entries)
+    .withVersions(entries)
+    .where(eq(versions.author_id, 1));
 }
