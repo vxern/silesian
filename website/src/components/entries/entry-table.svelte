@@ -65,12 +65,16 @@
                 icon={Pencil2LineIcon}
                 onclick={() => goto(`/entries/${entry.id}/edit`)}
               />
-              <!-- TODO(vxern): Handle deletions properly. -->
-              <Button
-                colour="red"
-                icon={Delete2LineIcon}
-                onclick={() => goto(`/entries/${entry.id}/delete`)}
-              />
+              <!-- TODO(vxern): Ask the user if they're sure. -->
+              <form
+                method="POST"
+                action="?/delete"
+                use:enhance
+                class="flex flex-col gap-y-6"
+              >
+                <input type="hidden" name="id" value={entry.id} />
+                <Button colour="red" type="submit" icon={Delete2LineIcon} />
+              </form>
             </Table.Cell>
           {/if}
           {#if mode === "review"}

@@ -317,8 +317,8 @@
           "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na używaniu strōny."
         },
         "time_spent_editing": {
-          "title": "Wykres spyndzōnygo czasu we edytorze",
-          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
+          "title": "Wykres spyndzōnygo czasu we ydytorze",
+          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na ydytowaniu strōny."
         }
       },
       "attributes": {
@@ -333,7 +333,7 @@
           "searches": "Wyszukanych",
           "changes": "Zmiyniōnych",
           "reviews": "Sprŏwdzōnych",
-          "time_spent_editing": "Czasu przi edytowaniu",
+          "time_spent_editing": "Czasu przi ydytowaniu",
           "time_spent_using": "Czasu przi używaniu"
         }
       },
@@ -503,9 +503,9 @@
         "description": "Autorzi, kierych trza sprŏwdzić.",
         "none": "Niy ma żŏdnych autorōw do sprŏwdzyniŏ."
       },
-      "[source_id]": {
+      "[author_id]": {
         "edit": {
-          "title": "Edytowaniy autora — „{author_name}”",
+          "title": "Ydytowaniy autora — „{author_name}”",
           "description": ""
         },
         "review": {
@@ -533,6 +533,16 @@
         "title": "Nowe miyjsce",
         "description": "Przidŏwaniy nowygo miyjsca ku dykcjōnŏrzu."
       },
+      "[location_id]": {
+        "edit": {
+          "title": "Ydytowaniy miyjsca — „{location_name}”",
+          "description": ""
+        },
+        "review": {
+          "title": "Sprŏwdzaniy miyjsca — „{location_name}”",
+          "description": ""
+        }
+      },
       "drafts": {
         "title": "Cechōnki miyjsc",
         "description": "Cechōnki miyjsc, kiere używŏcz przidŏwŏ.",
@@ -545,7 +555,7 @@
       },
       "[source_id]": {
         "edit": {
-          "title": "Edytowaniy miyjsca — „{location_name}”",
+          "title": "Ydytowaniy miyjsca — „{location_name}”",
           "description": ""
         },
         "review": {
@@ -583,7 +593,7 @@
       },
       "[category_id]": {
         "edit": {
-          "title": "Edytowaniy kategoryje — „{category_name}”",
+          "title": "Ydytowaniy kategoryje — „{category_name}”",
           "description": ""
         },
         "review": {
