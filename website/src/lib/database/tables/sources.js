@@ -13,9 +13,6 @@ import { users } from "./users";
 export const sources = pgTable("sources", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  deleted_at: timestamp({ withTimezone: true }),
   name: text().notNull(),
   description: text(),
   url: text(),
@@ -29,7 +26,6 @@ export const sources = pgTable("sources", {
   imported_entry_count: integer().default(0).notNull(),
   total_entry_count: integer(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
@@ -40,7 +36,6 @@ export const sources = pgTable("sources", {
 export const sourcesRelations = relations(sources, ({ many, one }) => ({
   entries: many(entries),
   authors: many(authorsToSources),
-  author: one(users, { fields: [sources.author_id], references: [users.id] }),
 }));
 
 export const sourcesInsertSchema = createInsertSchema(sources, {

@@ -9,12 +9,8 @@ import { authorsToSources } from "./authors-to-sources";
 export const authors = pgTable("authors", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  deleted_at: timestamp({ withTimezone: true }),
   name: text().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),

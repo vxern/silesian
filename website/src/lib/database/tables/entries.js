@@ -9,15 +9,11 @@ import { users } from "./users";
 export const entries = pgTable("entries", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  deleted_at: timestamp({ withTimezone: true }),
   lemma: text().notNull(),
   // TODO(vxern): Add lexemes.
   contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   version: integer().default(1).notNull(),
 }, (t) => [
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
@@ -26,7 +22,6 @@ export const entries = pgTable("entries", {
 
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
-  author: one(users, { fields: [entries.author_id], references: [users.id] }),
   categories: many(entriesToCategories),
 }));
 

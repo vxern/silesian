@@ -8,23 +8,15 @@ import { users } from "./users";
 export const categories = pgTable("categories", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  deleted_at: timestamp({ withTimezone: true }),
   name: text().notNull(),
   description: text(),
   colour: coloursEnum().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("deleted_timestamp_provided_check", sql`NOT deleted OR ${t.deleted_at} IS NOT NULL`),
 ]);
-
-export const categoriesRelations = relations(categories, ({ one }) => ({
-  author: one(users, { fields: [categories.author_id], references: [users.id] })
-}));
 
 export const categoriesInsertSchema = createInsertSchema(categories, {
   name: (z) => z.nonempty(),

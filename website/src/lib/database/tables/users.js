@@ -12,9 +12,6 @@ import { timeEntries } from "./time-entries";
 export const users = pgTable("users", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  updated_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
-  deleted_at: timestamp({ withTimezone: true }),
   username: text().notNull(),
   email_address: text().notNull(),
   searches_count: integer().default(0).notNull(),
@@ -39,8 +36,5 @@ export const usersRelations = relations(users, ({ many }) => ({
   versions: many(versions),
   reviews: many(reviews),
   searches: many(searches),
-  sources: many(sources),
-  entries: many(entries),
-  categories: many(categories),
   timeEntries: many(timeEntries),
 }));
