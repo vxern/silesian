@@ -5,9 +5,22 @@ import { gte, count } from 'drizzle-orm';
 
 export const load = async () => {
   const [totalImported, importedThisMonth] = await Promise.all([
-    db.$count(entries),
-    db.$count(entries, gte(entries.created_at, dayjs().startOf("month"))),
+    getTotalImported(),
+    getImportedThisMonth(),
   ]);
 
   return { totalImported, importedThisMonth };
 };
+
+function getTotalImported() {
+  return db.$count(entries);
+}
+
+function getImportedThisMonth() {
+  return db
+    .select({ count: count() })
+    .from(entries)
+    .withVersions(entries)
+    .where(gte(versions.created_at, dayjs().startOf("month")))
+    .then((result) => result.at(0).count);
+}
