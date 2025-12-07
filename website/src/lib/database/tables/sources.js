@@ -1,5 +1,5 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, integer, bigint, integer, text, boolean, timestamp, check, index } from "drizzle-orm/pg-core";
+import { pgTable, integer, bigint, text, boolean, timestamp, check, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { licencesEnum } from "../enums/licences";
