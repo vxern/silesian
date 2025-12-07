@@ -26,3 +26,6 @@ export { sources, sourcesRelations, sourcesInsertSchema, sourcesUpdateSchema } f
 export { timeEntries, timeEntriesRelations } from "./tables/time-entries";
 export { users, usersRelations } from "./tables/users";
 export { versions, versionsRelations } from "./tables/versions";
+// Commons
+import { z } from "zod/v4";
+export const idsSchema = z.array(z.number().int().positive()).refine((array) => new Set(array).size === array.length);
