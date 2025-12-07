@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm";
 export const load = async (params) => {
   const data = await db.select()
       .from(users)
-      .withVersions(users)
+      .withVersions()
       .where(eq(users.id, 2))
       .limit(1)
       .then((results) => {

@@ -8,6 +8,8 @@ import { count, sql, asc, eq, gte } from "drizzle-orm";
 // TODO(vxern): Make sure to filter by the right user.
 
 // We don't take anything other than entries into account because sources, categories, etc. are effectively one-off additions.
+
+/** Performs 3 queries in total. */
 export const load = async (params) => {
   const [additionCount, additionCountByMonth, additionHistory] = await Promise.all([
     getAdditionCount(),
@@ -22,7 +24,7 @@ function getAdditionCount() {
   return db
     .select({ count: count() })
     .from(entries)
-    .withVersions(entries)
+    .withVersions()
     .where(eq(versions.author_id, 2))
     .then((results) => results.at(0).count);
 }
@@ -31,7 +33,7 @@ async function getAdditionCountByMonth() {
   const results = await db
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(entries)
-    .withVersions(entries)
+    .withVersions()
     .where(eq(versions.author_id, 2))
     .where(gte(versions.created_at, dayjs().startOf("year")))
     .groupBy(sql`month`);
@@ -50,6 +52,6 @@ function getAdditionHistory() {
   return db
     .select()
     .from(entries)
-    .withVersions(entries)
+    .withVersions()
     .where(eq(versions.author_id, 2));
 }

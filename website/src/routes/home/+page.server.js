@@ -20,7 +20,7 @@ function getImportedThisMonth() {
   return db
     .select({ count: count() })
     .from(entries)
-    .withVersions(entries)
+    .withVersions()
     .where(gte(versions.created_at, dayjs().startOf("month")))
-    .then((result) => result.at(0).count);
+    .then((results) => results.at(0).count);
 }
