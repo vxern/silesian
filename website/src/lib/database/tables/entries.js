@@ -1,5 +1,5 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, text, integer, timestamp, check, boolean } from "drizzle-orm/pg-core";
+import { pgTable, bigint, text, integer, timestamp, check, boolean, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { entriesToCategories } from "./entries-to-categories";
 import { publishStatusesEnum } from "../enums/publish-statuses";
@@ -17,6 +17,8 @@ export const entries = pgTable("entries", {
   version: integer().default(1).notNull(),
 }, (t) => [
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
+  index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
+  index().on(t.status),
 ]);
 
 export const entriesRelations = relations(entries, ({ one, many }) => ({

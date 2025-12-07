@@ -1,5 +1,5 @@
 import { relations, sql } from "drizzle-orm";
-import { pgTable, bigint, integer, text, timestamp, unique, check, boolean } from "drizzle-orm/pg-core";
+import { pgTable, bigint, integer, text, timestamp, unique, check, boolean, index } from "drizzle-orm/pg-core";
 import { settings } from "./settings";
 import { versions } from "./versions";
 import { reviews } from "./reviews";
@@ -29,6 +29,7 @@ export const users = pgTable("users", {
   unique().on(t.email_address),
   check("username_not_empty_check", sql`${t.username} <> ''`),
   check("email_address_not_empty_check", sql`${t.email_address} <> ''`),
+  index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
 ]);
 
 export const usersRelations = relations(users, ({ many }) => ({

@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm";
-import { pgTable, bigint, integer, text, unique, timestamp, json } from "drizzle-orm/pg-core";
+import { pgTable, bigint, integer, text, unique, timestamp, json, index } from "drizzle-orm/pg-core";
 import { users } from "./users";
 import { reviews } from "./reviews";
 import { authors } from "./authors";
@@ -14,7 +14,10 @@ export const versions = pgTable("versions", {
   author_id: bigint({ mode: "number" }).references(() => users.id, { onDelete: "cascade" }).notNull(),
   created_at: timestamp({ withTimezone: true }).defaultNow().notNull(),
   // Versions are immutable so no `updated_at`.
-}, (t) => [unique().on(t.version, t.versionable_type, t.versionable_id)]);
+}, (t) => [
+  unique().on(t.version, t.versionable_type, t.versionable_id),
+  index().on(t.author_id),
+]);
 
 export const versionsRelations = relations(versions, ({ many, one }) => ({
   author: one(users, { fields: [versions.author_id], references: [users.id] }),
