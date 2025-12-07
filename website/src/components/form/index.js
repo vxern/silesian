@@ -6,6 +6,7 @@ import TextElement from "./text-element.svelte";
 import MultiTextElement from "./multi-text-element.svelte";
 import SelectElement from "./select-element.svelte";
 import AccessSelectOption from "./select/access-select-option.svelte";
+import AuthorSelectOption from "./select/author-select-option.svelte";
 import CategorySelectOption from "./select/category-select-option.svelte";
 import ColourSelectOption from "./select/colour-select-option.svelte";
 import LanguageSelectOption from "./select/language-select-option.svelte";
@@ -23,6 +24,7 @@ export default {
   MultiTextElement,
   SelectElement,
   AccessSelectOption,
+  AuthorSelectOption,
   CategorySelectOption,
   ColourSelectOption,
   LanguageSelectOption,
