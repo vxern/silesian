@@ -68,11 +68,14 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
 }
 
 /**
- * Performs 4 queries:
+ * Performs 2 or 4 queries:
  * - Get record in its current state.
- * - Create version.
- * - Update record.
- * - Update old version with a snapshot of the current data.
+ * - If only the status changed:
+ *   - Update record.
+ * - Otherwise:
+ *   - Create version.
+ *   - Update record.
+ *   - Update old version with a snapshot of the current data.
  */
 export async function versionedUpdate({ table, id, authorId, values }) {
   return db.transaction(async (tx) => {
@@ -84,6 +87,25 @@ export async function versionedUpdate({ table, id, authorId, values }) {
         .limit(1)
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
+
+    const snapshot = {};
+    for (const key in values) {
+      if (!isEqual(values[key], oldRecord[key])) {
+        snapshot[key] = values[key];
+      }
+    }
+    
+    delete snapshot["status"];
+
+    if (Object.keys(snapshot).length === 0) {
+      return db
+        .update(table)
+        .set(values)
+        .where(eq(table.id, id))
+        .returning()
+        .then((results) => results.at(0))
+        .catch((error) => tx.rollback());
+    }
 
     const version = await db.insert(versions).values({
       version: oldRecord.version + 1,
@@ -108,13 +130,6 @@ export async function versionedUpdate({ table, id, authorId, values }) {
         .returning()
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
-
-    const snapshot = {};
-    for (const key in oldRecord) {
-      if (!isEqual(oldRecord[key], record[key])) {
-        snapshot[key] = oldRecord[key];
-      }
-    }
 
     await db
       .update(versions)
