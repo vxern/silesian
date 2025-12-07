@@ -68,14 +68,11 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
 }
 
 /**
- * Performs 2 or 4 queries:
+ * Performs 2 queries if only the status changes, otherwise 4 queries:
  * - Get record in its current state.
- * - If only the status changed:
- *   - Update record.
- * - Otherwise:
- *   - Create version.
- *   - Update record.
- *   - Update old version with a snapshot of the current data.
+ * - Create version.
+ * - Update record.
+ * - Update old version with a snapshot of the current data.
  */
 export async function versionedUpdate({ table, id, authorId, values }) {
   return db.transaction(async (tx) => {
@@ -162,7 +159,7 @@ export async function versionedDelete({ table, id, authorId }) {
 }
 
 /**
- * Performs  queries, depending on the existing and the new IDs:
+ * Performs 0, 2 or 3 queries, depending on the existing and the new IDs:
  * - Create added joins.
  * - Delete removed joins.
  */
