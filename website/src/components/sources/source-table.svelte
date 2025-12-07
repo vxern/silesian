@@ -57,6 +57,9 @@
         {m["components.source_table.licence"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
+        {m["components.source_table.version"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
       {#if hasPermission && sources.length > 0}
@@ -148,6 +151,9 @@
               {source.licence}
             </span>
           {/if}
+        </Table.Cell>
+        <Table.Cell>
+          {source.version}
         </Table.Cell>
         <Table.Cell>
           <section class="flex flex-col">

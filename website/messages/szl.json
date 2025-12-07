@@ -92,6 +92,7 @@
       "year": "Rok",
       "licence": "Licyncyjŏ",
       "access": "Dostymp",
+      "version": "Wersyjŏ",
       "progress": {
         "progress": "Postymp",
         "numbers": "{imported} ze {total}",
@@ -101,19 +102,23 @@
     "entry_table": {
       "lemma": "Hasło",
       "source": "Zdrzōdło",
-      "categories": "Kategoryje"
+      "categories": "Kategoryje",
+      "version": "Wersyjŏ"
     },
     "category_table": {
       "name": "Miano",
       "description": "Ôpis",
-      "colour": "Farba"
+      "colour": "Farba",
+      "version": "Wersyjŏ"
     },
     "location_table": {
-      "name": "Miano"
+      "name": "Miano",
+      "version": "Wersyjŏ"
     },
     "author_table": {
       "name": "Miano",
-      "locations": "Miyjsca"
+      "locations": "Miyjsca",
+      "version": "Wersyjŏ"
     },
     "search_tables": {
       "chart": {

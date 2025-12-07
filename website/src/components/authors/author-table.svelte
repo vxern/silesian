@@ -24,6 +24,9 @@
       <Table.HeaderCell>
         {m["components.author_table.locations"]()}
       </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.author_table.version"]()}
+      </Table.HeaderCell>
       {#if hasPermission && authors.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -50,6 +53,9 @@
           {:else}
             {m["meta.none"]()}
           {/if}
+        </Table.Cell>
+        <Table.Cell>
+          {author.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

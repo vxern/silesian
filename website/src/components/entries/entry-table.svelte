@@ -29,6 +29,9 @@
       <Table.HeaderCell>
         {m["components.entry_table.categories"]()}
       </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.entry_table.version"]()}
+      </Table.HeaderCell>
       {#if hasPermission && entries.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -56,6 +59,9 @@
           {:else}
             {m["meta.none"]()}
           {/if}
+        </Table.Cell>
+        <Table.Cell>
+          {entry.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

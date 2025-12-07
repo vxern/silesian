@@ -20,6 +20,9 @@
       <Table.HeaderCell>
         {m["components.location_table.name"]()}
       </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.location_table.version"]()}
+      </Table.HeaderCell>
       {#if hasPermission && locations.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -35,6 +38,9 @@
       <Table.Row {index}>
         <Table.Cell>
           {location.name}
+        </Table.Cell>
+        <Table.Cell>
+          {location.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

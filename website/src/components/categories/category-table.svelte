@@ -28,6 +28,9 @@
       <Table.HeaderCell>
         {m["components.category_table.colour"]()}
       </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.category_table.version"]()}
+      </Table.HeaderCell>
       {#if hasPermission && categories.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -53,6 +56,9 @@
         </Table.Cell>
         <Table.Cell>
           <ColourLabel colour={category.colour} />
+        </Table.Cell>
+        <Table.Cell>
+          {category.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
