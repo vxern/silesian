@@ -21,9 +21,9 @@ const client = postgres({
 
 export const db = drizzle({ client, schema, logger: true });
 
-PgSelectBase.prototype.withVersions = function () {
+PgSelectBase.prototype.withVersion = function () {
   return this.innerJoin(versions, and(
-    eq(versions.versionable_id, versions.id),
+    eq(versions.versionable_id, this._.config.table.id),
     eq(versions.versionable_type, getTableName(this._.config.table)),
     eq(versions.version, versions.version),
   ));
@@ -60,9 +60,9 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
     ).catch((error) => tx.rollback());
 
     if (Array.isArray(values)) {
-      return values;
+      return records;
     } else {
-      return values.at(0);
+      return records.at(0);
     }
   });
 }
