@@ -94,7 +94,7 @@
               {data.user.email_address}
             </Table.Cell>
             <Table.Cell>
-              {dayjs(data.user.versions.created_at).calendar()}
+              {dayjs(data.user.version.created_at).calendar()}
             </Table.Cell>
           </Table.Row>
         </Table.Body>
