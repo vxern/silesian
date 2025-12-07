@@ -16,7 +16,7 @@ export { categories, categoriesRelations, categoriesInsertSchema, categoriesUpda
 export { entriesToCategories, entriesToCategoriesRelations } from "./tables/entries-to-categories";
 export { entries, entriesRelations, entriesInsertSchema, entriesUpdateSchema } from "./tables/entries";
 export { locations, locationsRelations, locationsInsertSchema, locationsUpdateSchema } from "./tables/locations";
-export { reviews, reviewsRelations } from "./tables/reviews";
+export { reviews, reviewsRelations, reviewsInsertSchema } from "./tables/reviews";
 export { searchFrequencies } from "./tables/search-frequencies";
 export { searches, searchesRelations } from "./tables/searches";
 export { settingsToCategories, settingsToCategoriesRelations } from "./tables/settings-to-categories";

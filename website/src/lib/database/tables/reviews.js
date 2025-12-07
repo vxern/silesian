@@ -1,5 +1,6 @@
 import { relations } from "drizzle-orm";
 import { pgTable, bigint, text, uniqueIndex, timestamp } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 import { reviewDecisionsEnum } from "../enums/review-decisions";
 import { versions } from "./versions";
 import { users } from "./users";
@@ -18,3 +19,7 @@ export const reviewsRelations = relations(reviews, ({ one }) => ({
   version: one(versions, { fields: [reviews.version_id], references: [versions.id] }),
   reviewer: one(users, { fields: [reviews.reviewer_id], references: [users.id] }),
 }));
+
+export const reviewsInsertSchema = createInsertSchema(reviews, {
+  name: (z) => z.nonempty(),
+});
