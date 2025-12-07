@@ -1,12 +1,18 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { eq } from 'drizzle-orm';
+import { sql } from "drizzle-orm";
 import { json } from "@sveltejs/kit";
 
-// TODO(vxern): Use prepared statements.
-// TODO(vxern): Limit.
+// TODO(vxern): Validate.
 // TODO(vxern): Authorise.
 
-export async function GET() {
-  return json(await db.query.sources.findMany());
+export async function GET({ params }) {
+  return json(await getSources(params));
+}
+
+function getSources({ query, limit }) {
+  return db.query.sources.findMany({
+    where: (sources, { like }) => like(sources.name, sql`'%${query}%'`),
+    limit: limit ?? 100,
+  });
 }

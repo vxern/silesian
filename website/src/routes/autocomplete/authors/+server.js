@@ -7,12 +7,12 @@ import { json } from "@sveltejs/kit";
 // TODO(vxern): Authorise.
 
 export async function GET({ params }) {
-  return json(await getCategories(params));
+  return json(await getAuthors(params));
 }
 
-function getCategories({ query, limit }) {
-  return db.query.categories.findMany({
-    where: (categories, { like }) => like(categories.name, sql`'%${query}%'`),
+function getAuthors({ query, limit }) {
+  return db.query.authors.findMany({
+    where: (authors, { like }) => like(authors.name, sql`'%${query}%'`),
     limit: limit ?? 100,
   });
 }
