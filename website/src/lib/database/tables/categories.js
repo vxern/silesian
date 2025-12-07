@@ -4,6 +4,7 @@ import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { coloursEnum } from "../enums/colours";
 import { users } from "./users";
+import { entriesToCategories } from "./entries-to-categories";
 
 export const categories = pgTable("categories", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -18,6 +19,10 @@ export const categories = pgTable("categories", {
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
   index().on(t.status),
 ]);
+
+export const categoriesRelations = relations(categories, ({ many }) => ({
+  entries: many(entriesToCategories),
+}));
 
 export const categoriesInsertSchema = createInsertSchema(categories, {
   name: (z) => z.nonempty(),
