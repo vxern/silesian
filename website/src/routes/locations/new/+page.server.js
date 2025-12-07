@@ -4,19 +4,20 @@ import { locations, locationsInsertSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 export const actions = {
+  /** Performs 2 queries in total. */
   create: async ({ request, locals }) => {
     const data = await request.formData();
 
     const locationData = locationsInsertSchema.parse({
       status: data.get("draft") === "" ? "draft" : "pending",
       name: data.get("name"),
-      // TODO(vxern): IMPORTANT - Update the author ID.
-      author_id: 2,
     });
 
     const location = await versionedInsert({
       table: locations,
       values: locationData,
+      // TODO(vxern): IMPORTANT - Update the author ID.
+      authorId: 2,
       returning: { status: locations.status },
     });
 

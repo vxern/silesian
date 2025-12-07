@@ -1,16 +1,30 @@
 import { redirect } from "@sveltejs/kit";
 import { db, versionedUpdate } from "$lib/database.server";
 import { locations, locationsUpdateSchema } from "$lib/database/schema";
-import { eq, sql } from 'drizzle-orm';
+import { eq, and, sql } from 'drizzle-orm';
 
+/** Performs 1 query in total. */
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return {
-    location: await db.query.locations.findFirst({ where: (locations, { eq }) => eq(locations.id, params.location_id) }),
-  };
+  return { location: await getLocation({ id: params.location_id }) };
 };
+
+/** Performs 1 query. */
+function getLocation({ id }) {
+  return db.select()
+    .from(locations)
+    .where(
+      and(
+        eq(locations.id, id),
+        eq(locations.deleted, false),
+        eq(locations.status, "draft"),
+      ),
+    )
+    .limit(1)
+    .then((results) => results.at(0));
+}
 
 export const actions = {
   update: async ({ request, locals }) => {
@@ -18,7 +32,7 @@ export const actions = {
 
     const locationData = locationsUpdateSchema.parse({
       status: data.get("draft") === "" ? "draft" : "pending",
-      name: data.get("name"),
+      name: data.get("name"), 
     });
 
     const location = await versionedUpdate({

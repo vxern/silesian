@@ -4,7 +4,7 @@
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Form from "../../../../components/form/index.js";
-  import AuthorForm from "../../form.svelte";
+  import LocationForm from "../../form.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
   import Button from "../../../../components/interactions/button.svelte";
   import CheckLineIcon from "~icons/mingcute/check-line";
@@ -19,13 +19,13 @@
 <svelte:head>
   <meta
     name="description"
-    content={m["routes.authors.[author_id].review.description"]()}
+    content={m["routes.locations.[location_id].review.description"]()}
   />
   <title>
     {m["title"]({
       project_name: constants.project.name,
-      page_title: m["routes.authors.[author_id].review.title"]({
-        author_name: data.author.name,
+      page_title: m["routes.locations.[location_id].review.title"]({
+        location_name: data.location.name,
       }),
     })}
   </title>
@@ -36,8 +36,8 @@
 <Page.Root>
   <Page.Header>
     <Page.Title
-      title={m["routes.authors.[author_id].review.title"]({
-        author_name: data.author.name,
+      title={m["routes.locations.[location_id].review.title"]({
+        location_name: data.location.name,
       })}
     />
   </Page.Header>
@@ -48,7 +48,7 @@
     </Page.Actions>
     <section>
       <Form.Disabled>
-        <AuthorForm author={data.author} />
+        <LocationForm location={data.location} />
       </Form.Disabled>
       <form
         method="POST"
@@ -56,7 +56,7 @@
         use:enhance
         class="flex flex-col gap-y-6"
       >
-        <input type="hidden" name="id" value={data.author.id} />
+        <input type="hidden" name="id" value={data.location.id} />
         <Page.Actions>
           <Button type="submit" icon={CheckLineIcon} colour="green">
             {m["components.form.accept"]()}

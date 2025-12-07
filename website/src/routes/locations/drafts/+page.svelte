@@ -1,12 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
   import Page from "../../../components/page/index.js";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import LocationTable from "../../../components/locations/location-table.svelte";
   import constants from "$lib/constants/core";
-  import Loading from "../../../components/meta/loading.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
 
   const { data } = $props();

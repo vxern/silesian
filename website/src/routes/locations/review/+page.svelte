@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
   import Page from "../../../components/page/index.js";
