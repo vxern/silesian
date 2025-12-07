@@ -11,10 +11,10 @@
 
   const { lemma } = page.params;
 
-  let shiftEnabled = $state(undefined);
-  let capsLockEnabled = $state(undefined);
-  let shiftReset = $state(undefined);
-  let capsLockReset = $state(undefined);
+  let shiftEnabled = $state();
+  let capsLockEnabled = $state();
+  let shiftReset = $state();
+  let capsLockReset = $state();
   let inputElement;
   let submitElement;
   let lettersElement;
