@@ -2,7 +2,6 @@ import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
 import { and, eq } from 'drizzle-orm';
 
-/** Performs 1 query in total. */
 export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
 

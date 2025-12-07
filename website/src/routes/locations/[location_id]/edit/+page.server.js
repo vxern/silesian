@@ -3,7 +3,6 @@ import { db, versionedUpdate } from "$lib/database.server";
 import { locations, locationsUpdateSchema } from "$lib/database/schema";
 import { eq, and, sql } from 'drizzle-orm';
 
-/** Performs 1 query in total. */
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.

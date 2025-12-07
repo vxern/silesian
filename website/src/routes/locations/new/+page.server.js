@@ -4,7 +4,6 @@ import { locations, locationsInsertSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 export const actions = {
-  /** Performs 2 queries in total. */
   create: async ({ request, locals }) => {
     const data = await request.formData();
 

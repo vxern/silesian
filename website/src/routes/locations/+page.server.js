@@ -2,7 +2,6 @@ import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
 import { and, eq, count } from 'drizzle-orm';
 
-/** Performs 3 queries in total. */
 export const load = async () => {
   return {
     draftCount: getDraftCount(),
