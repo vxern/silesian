@@ -33,6 +33,9 @@ export const actions = {
     const data = await request.formData();
 
     const reviewData = reviewsInsertSchema.parse({
+      // TODO(vxern): Update to the right user.
+      reviewer_id: 2,
+      decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
     });
     
@@ -46,10 +49,7 @@ export const actions = {
           .where(eq(locations.id, Number(data.get("id"))))
           .limit(1)
         }`,
-      // TODO(vxern): Update to the right user.
-      reviewer_id: 2,
-      decision: "reject" in data ? "rejected" : "accepted",
-      comment: reviewData.comment,
+      ...reviewData,
     });
 
     // TODO(vxern): Handle failure.

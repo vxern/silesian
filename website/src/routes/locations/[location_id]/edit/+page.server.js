@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { db, versionedUpdate } from "$lib/database.server";
+import { db, versionedUpdate, versionedJoin } from "$lib/database.server";
 import { locations, locationsUpdateSchema } from "$lib/database/schema";
 import { eq, and, sql } from 'drizzle-orm';
 
@@ -30,7 +30,7 @@ export const actions = {
     const data = await request.formData();
 
     const locationData = locationsUpdateSchema.parse({
-      status: data.get("draft") === "" ? "draft" : "pending",
+      status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"), 
     });
 

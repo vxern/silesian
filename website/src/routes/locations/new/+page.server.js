@@ -8,15 +8,15 @@ export const actions = {
     const data = await request.formData();
 
     const locationData = locationsInsertSchema.parse({
-      status: data.get("draft") === "" ? "draft" : "pending",
+      status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"),
     });
 
     const location = await versionedInsert({
       table: locations,
-      values: locationData,
       // TODO(vxern): IMPORTANT - Update the author ID.
       authorId: 2,
+      values: locationData,
       returning: { status: locations.status },
     });
 
