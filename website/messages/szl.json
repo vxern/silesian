@@ -322,8 +322,8 @@
           "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na używaniu strōny."
         },
         "time_spent_editing": {
-          "title": "Wykres spyndzōnygo czasu we ydytorze",
-          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na ydytowaniu strōny."
+          "title": "Wykres spyndzōnygo czasu we edytorze",
+          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
         }
       },
       "attributes": {
@@ -338,7 +338,7 @@
           "searches": "Wyszukanych",
           "changes": "Zmiyniōnych",
           "reviews": "Sprŏwdzōnych",
-          "time_spent_editing": "Czasu przi ydytowaniu",
+          "time_spent_editing": "Czasu przi Edytowaniu",
           "time_spent_using": "Czasu przi używaniu"
         }
       },
@@ -510,7 +510,7 @@
       },
       "[author_id]": {
         "edit": {
-          "title": "Ydytowaniy autora — „{author_name}”",
+          "title": "Edytowaniy autora — „{author_name}”",
           "description": ""
         },
         "review": {
@@ -540,7 +540,7 @@
       },
       "[location_id]": {
         "edit": {
-          "title": "Ydytowaniy miyjsca — „{location_name}”",
+          "title": "Edytowaniy miyjsca — „{location_name}”",
           "description": ""
         },
         "review": {
@@ -560,7 +560,7 @@
       },
       "[source_id]": {
         "edit": {
-          "title": "Ydytowaniy miyjsca — „{location_name}”",
+          "title": "Edytowaniy miyjsca — „{location_name}”",
           "description": ""
         },
         "review": {
@@ -598,7 +598,7 @@
       },
       "[category_id]": {
         "edit": {
-          "title": "Ydytowaniy kategoryje — „{category_name}”",
+          "title": "Edytowaniy kategoryje — „{category_name}”",
           "description": ""
         },
         "review": {
