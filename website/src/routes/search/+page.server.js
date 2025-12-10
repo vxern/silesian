@@ -6,7 +6,6 @@ import { eq, asc, desc } from 'drizzle-orm';
 // TODO(vxern): Use prepared statements.
 // TODO(vxern): IMPORTANT - Filter by the correct user.
 
-/** Performs 2 queries in total. */
 export const load = async () => {
   const [searchHistory, popularSearches] = await Promise.all([
     getSearchHistory(),

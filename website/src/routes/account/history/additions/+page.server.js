@@ -9,7 +9,6 @@ import { count, sql, asc, eq, gte } from "drizzle-orm";
 
 // We don't take anything other than entries into account because sources, categories, etc. are effectively one-off additions.
 
-/** Performs 3 queries in total. */
 export const load = async (params) => {
   const [additionCount, additionCountByMonth, additionHistory] = await Promise.all([
     getAdditionCount(),
