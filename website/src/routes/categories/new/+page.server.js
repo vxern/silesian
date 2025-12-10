@@ -1,33 +1,25 @@
 import { redirect } from "@sveltejs/kit";
-import { db } from "$lib/database.server";
-import { categories, versions } from "$lib/database/schema";
-import { sql } from 'drizzle-orm';
+import { db, versionedInsert } from "$lib/database.server";
+import { categories, categoriesInsertSchema } from "$lib/database/schema";
+import { eq, sql } from 'drizzle-orm';
 
 export const actions = {
-  create: async ({ request, locals }) => {
-    // TODO(vxern): Kick the user out if they haven't got permission.
-    // TODO(vxern): Validate.
-
+  create: async ({ request }) => {
     const data = await request.formData();
 
-    const category = await db.transaction(async (tx) => {
-      const category = await db.insert(categories).values({
-        status: "draft" in data ? "draft" : "pending",
-        name: data.get("name"),
-        description: data.get("description"),
-        colour: data.get("colour"),
-      }).returning({ id: categories.id }).then((result) => result.at(0));
+    const categoryData = categoriesInsertSchema.parse({
+      status: data.has("draft") ? "draft" : "pending",
+      name: data.get("name"),
+      description: data.get("description"),
+      colour: data.get("colour"),
+    });
 
-      // TODO(vxern): There can't be a conflict here.
-      await db.insert(versions).values({
-        versionable_type: "categories",
-        versionable_id: category.id,
-      }).onConflictDoUpdate({
-        target: versions.version,
-        set: { version: sql`versions.version + 1` },
-      });
-
-      return category;
+    const category = await versionedInsert({
+      table: categories,
+      // TODO(vxern): IMPORTANT - Update the author ID.
+      authorId: 2,
+      values: categoryData,
+      returning: { status: categories.status },
     });
 
     // TODO(vxern): Handle failure.
@@ -37,12 +29,11 @@ export const actions = {
       redirectTo = "/categories/drafts";
     } else if (category.status === "pending") {
       redirectTo = "/categories/review";
-    } else if (category.status === "published") {
-      redirectTo = "/categories";
     } else {
       return error(500, { message: "Internal Server Error" });
     }
 
-    redirect(303, "/categories");
+    // TODO(vxern): Show toast.
+    redirect(303, redirectTo);
   },
 };

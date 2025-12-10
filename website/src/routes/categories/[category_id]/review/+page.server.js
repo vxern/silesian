@@ -1,43 +1,55 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { versions, reviews } from "$lib/database/schema";
-import { eq, and, desc } from 'drizzle-orm';
-
-// TODO(vxern): Need to exclude deleted objects from filters.
+import { categories, versions, reviews } from "$lib/database/schema";
+import { eq, and, desc, sql } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return {
-    category: await db.query.categories.findFirst({ where: (categories, { eq }) => eq(categories.id, params.category_id) } ),
-  };
+  return { category: await getCategory({ id: params.category_id }) };
 };
+
+/** Performs 1 query. */
+function getCategory({ id }) {
+  return db.select()
+    .from(categories)
+    .where(
+      and(
+        eq(categories.id, id),
+        eq(categories.deleted, false),
+        eq(categories.status, "pending"),
+      ),
+    )
+    .limit(1)
+    .then((results) => results.at(0));
+}
 
 // TODO(vxern): Validate.
 
 export const actions = {
+  /** Performs 1 query. */
   review: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const version = await db.query.versions.findFirst({
-      where: (versions, { eq }) => and(
-        eq(versions.versionable_id, data.get("id")),
-        eq(versions.versionable_type, "categories"),
-      ),
-      orderBy: [desc(versions.version)],
-    });
-    if (!version) {
-      // TODO(vxern): Handle failure.
-      return;
-    }
-
-    const review = await db.insert(reviews).values({
-      version_id: version.id,
+    const reviewData = reviewsInsertSchema.parse({
       // TODO(vxern): Update to the right user.
-      reviewer_id: 1,
-      decision: "reject" in data ? "rejected" : "accepted",
+      reviewer_id: 2,
+      decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
+    });
+    
+    const review = await db.insert(reviews).values({
+      version_id:
+        sql`${
+          db
+          .select({ version_id: versions.id })
+          .from(categories)
+          .withVersions()
+          .where(eq(categories.id, Number(data.get("id"))))
+          .limit(1)
+        }`,
+      ...reviewData,
     });
 
     // TODO(vxern): Handle failure.

@@ -1,11 +1,26 @@
 import { db } from "$lib/database.server";
-import { categories } from "$lib/database/schema";
-import { eq, count } from 'drizzle-orm';
+import { categories, versions } from "$lib/database/schema";
+import { and, ne, eq } from 'drizzle-orm';
 
 export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
 
-  return {
-    categories: await db.query.categories.findMany({ where: (categories, { eq }) => eq(categories.status, "pending") } ),
-  };
+  return { categories: await getPendingCategories() };
 };
+
+/** Performs 1 query. */
+function getPendingLocations() {
+  return db
+    .select({ categories })
+    .from(categories)
+    .withVersions()
+    .where(
+      and(
+        // TODO(vxern): Set the right author.
+        ne(versions.author_id, 2),
+        eq(categories.deleted, false),
+        eq(categories.status, "pending"),
+      ),
+    )
+    .then((results) => results.map((result) => result.categories));
+}
