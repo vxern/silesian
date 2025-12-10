@@ -50,8 +50,6 @@ export const actions = {
       redirectTo = "/locations/drafts";
     } else if (location.status === "pending") {
       redirectTo = "/locations/review";
-    } else if (location.status === "published") {
-      redirectTo = "/locations";
     } else {
       return error(500, { message: "Internal Server Error" });
     }

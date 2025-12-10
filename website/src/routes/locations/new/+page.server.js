@@ -4,7 +4,7 @@ import { locations, locationsInsertSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 export const actions = {
-  create: async ({ request, locals }) => {
+  create: async ({ request }) => {
     const data = await request.formData();
 
     const locationData = locationsInsertSchema.parse({
@@ -27,8 +27,6 @@ export const actions = {
       redirectTo = "/locations/drafts";
     } else if (location.status === "pending") {
       redirectTo = "/locations/review";
-    } else if (location.status === "published") {
-      redirectTo = "/locations";
     } else {
       return error(500, { message: "Internal Server Error" });
     }
