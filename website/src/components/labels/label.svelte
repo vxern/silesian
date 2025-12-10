@@ -1,7 +1,7 @@
 <script>
   import { clsx } from "clsx/lite";
 
-  const { class: classes, children } = $props();
+  const { icon: Icon, class: classes, children } = $props();
 </script>
 
 <section
@@ -10,5 +10,8 @@
     classes
   )}
 >
+  {#if Icon}
+    <Icon />
+  {/if}
   {@render children?.()}
 </section>

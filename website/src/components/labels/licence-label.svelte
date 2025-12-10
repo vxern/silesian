@@ -1,6 +1,7 @@
 <script>
   import Label from "./label.svelte";
   import { m } from "$lib/paraglide/messages";
+  import BalanceLineIcon from "~icons/mingcute/balance-line";
 
   const { licence } = $props();
 
@@ -18,6 +19,6 @@
   }
 </script>
 
-<Label class={colourClass}>
+<Label class={colourClass} icon={BalanceLineIcon}>
   {m[`licences.${licence}`]()}
 </Label>

@@ -1,12 +1,13 @@
 <script>
   import Label from "./label.svelte";
   import { goto } from "$app/navigation";
+  import Box2LineIcon from "~icons/mingcute/box-2-line";
 
   const { source, link = false } = $props();
 </script>
 
 {#snippet label()}
-  <Label class="bg-zinc-700">
+  <Label class="bg-zinc-700" icon={Box2LineIcon}>
     <section class="basis-3/5 text-start">
       {source.name}
     </section>

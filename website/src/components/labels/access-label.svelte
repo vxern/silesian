@@ -1,6 +1,7 @@
 <script>
   import Label from "./label.svelte";
   import { m } from "$lib/paraglide/messages";
+  import UnlockLineIcon from "~icons/mingcute/unlock-line";
 
   const { access } = $props();
 
@@ -18,6 +19,6 @@
   }
 </script>
 
-<Label class={colourClass}>
+<Label class={colourClass} icon={UnlockLineIcon}>
   {m[`accesses.${access}`]()}
 </Label>
