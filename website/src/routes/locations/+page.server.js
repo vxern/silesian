@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
-import { and, eq, count } from 'drizzle-orm';
+import { and, ne, eq, count } from 'drizzle-orm';
 
 export const load = async () => {
   return {
@@ -36,7 +36,7 @@ function getPendingCount() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 2),
+        ne(versions.author_id, 2),
         eq(locations.deleted, false),
         eq(locations.status, "pending"),
       ),
@@ -52,8 +52,6 @@ function getPublishedLocations() {
     .withVersions()
     .where(
       and(
-        // TODO(vxern): Set the right author.
-        eq(versions.author_id, 2),
         eq(locations.deleted, false),
         eq(locations.status, "published"),
       ),

@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
-import { and, eq } from 'drizzle-orm';
+import { and, ne } from 'drizzle-orm';
 
 export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
@@ -17,7 +17,7 @@ function getPendingLocations() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 2),
+        ne(versions.author_id, 2),
         eq(locations.deleted, false),
         eq(locations.status, "pending"),
       ),
