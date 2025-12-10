@@ -74,7 +74,7 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
  * - Update record.
  * - Update old version with a snapshot of the current data.
  */
-export async function versionedUpdate({ table, id, authorId, values }) {
+export async function versionedUpdate({ table, id, authorId, values, returning = {} }) {
   return db.transaction(async (tx) => {
     const oldRecord =
       await db
@@ -99,7 +99,7 @@ export async function versionedUpdate({ table, id, authorId, values }) {
         .update(table)
         .set(values)
         .where(eq(table.id, id))
-        .returning()
+        .returning({ id: table.id, ...returning})
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
     }
@@ -124,7 +124,7 @@ export async function versionedUpdate({ table, id, authorId, values }) {
         .update(table)
         .set({ ...values, version: version.version })
         .where(eq(table.id, id))
-        .returning()
+        .returning({ id: table.id, ...returning})
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
 
@@ -151,7 +151,6 @@ export async function versionedDelete({ table, id, authorId }) {
     id,
     authorId,
     values: {
-      // TODO(vxern): Insert this dynamically depending on whether the table's got it.
       status: "draft",
       deleted: true,
     },
@@ -159,18 +158,20 @@ export async function versionedDelete({ table, id, authorId }) {
 }
 
 /**
- * Performs 0, 2 or 3 queries, depending on the existing and the new IDs:
+ * Performs up to 2 queries, depending on the existing and the new IDs:
  * - Create added joins.
  * - Delete removed joins.
  */
-export async function versionedJoin({ table, source, sourceColumnName, targetIds, targetColumnName, authorId }) {
-  const idsToInsert = new Set(ids);
+export async function versionedJoin({ table, source, sourceColumnName, targetIds, targetColumnName, existingIds, authorId }) {
+  const now = new Date();
+
+  const idsToInsert = new Set(targetIds);
   for (const existingId of existingIds) {
     idsToInsert.delete(existingId);
   }
 
   const idsToDelete = new Set(existingIds);
-  for (const id of ids) {
+  for (const id of targetIds) {
     idsToDelete.delete(id);
   }
 
@@ -179,51 +180,25 @@ export async function versionedJoin({ table, source, sourceColumnName, targetIds
   }
 
   return db.transaction(async (tx) => {
-    const now = new Date();
-
-    const insertedIds = [];
     if (idsToInsert.size > 0) {
-      insertedIds.push(
-        ...await db
-          .insert(table)
-          .values(
-            idsToInsert.map(
-              (targetId) => ({
-                [sourceColumnName]: source.id,
-                [targetColumnName]: targetId,
-              }),
-            ),
-          )
-          .returning({ id: table.id })
-          .then((results) => results.map((result) => result.id))
-          .catch((error) => tx.rollback()),
-      );
+      await db
+        .insert(table)
+        .values(
+          Array.from(idsToInsert).map(
+            (targetId) => ({
+              [sourceColumnName]: source.id,
+              [targetColumnName]: targetId,
+            }),
+          ),
+        )
+        .catch((error) => tx.rollback());
     }
 
-    const deletedIds = [];
     if (idsToDelete.size > 0) {
-      deletedIds.push(
-        ...await db
-          .delete(table)
-          .where(inArray(table[targetColumnName], idsToDelete))
-          .returning({ id: table.id })
-          .then((results) => results.map((result) => result.id))
-          .catch((error) => tx.rollback()),
-      );
+      await db
+        .delete(table)
+        .where(inArray(table[targetColumnName], Array.from(idsToDelete)))
+        .catch((error) => tx.rollback());
     }
-
-    await db.insert(versions).values(
-      [
-        ...insertedIds,
-        ...deletedIds,
-      ].map(
-        () => ({
-          versionable_type: getTableName(table),
-          versionable_id: id,
-          author_id: authorId,
-          created_at: now,
-        }),
-      ),
-    ).catch((error) => tx.rollback());
   });
 }
