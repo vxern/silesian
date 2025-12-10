@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { db } from "$lib/database.server";
+import { db, insertReview } from "$lib/database.server";
 import { authors, versions, reviews } from "$lib/database/schema";
 import { eq, and, desc } from 'drizzle-orm';
 
@@ -50,17 +50,10 @@ export const actions = {
       comment: data.get("comment"),
     });
     
-    const review = await db.insert(reviews).values({
-      version_id:
-        sql`${
-          db
-          .select({ version_id: versions.id })
-          .from(authors)
-          .withVersions()
-          .where(eq(authors.id, Number(data.get("id"))))
-          .limit(1)
-        }`,
-      ...reviewData,
+    await insertReview({
+      table: authors,
+      id: Number(data.get("id")),
+      values: reviewData,
     });
 
     // TODO(vxern): Handle failure.

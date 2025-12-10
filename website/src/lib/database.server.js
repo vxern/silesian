@@ -9,7 +9,7 @@ import {
   DATABASE_DATABASE,
 } from '$env/static/private';
 import * as schema from "$lib/database/schema";
-import { versions } from "$lib/database/schema";
+import { versions, reviews } from "$lib/database/schema";
 import { getTableName, sql, and, eq, inArray } from 'drizzle-orm';
 
 const client = postgres({
@@ -200,5 +200,21 @@ export async function versionedJoin({ table, source, sourceColumnName, targetIds
         .where(inArray(table[targetColumnName], Array.from(idsToDelete)))
         .catch((error) => tx.rollback());
     }
+  });
+}
+
+/** Performs 1 query. */
+export async function insertReview({ table, id, values }) {
+  const review = await db.insert(reviews).values({
+    version_id:
+      sql`${
+        db
+        .select({ version_id: versions.id })
+        .from(table)
+        .withVersions()
+        .where(eq(table.id, id))
+        .limit(1)
+      }`,
+    ...values,
   });
 }
