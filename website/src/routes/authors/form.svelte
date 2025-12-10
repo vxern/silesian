@@ -5,12 +5,6 @@
   import Upload2LineIcon from "~icons/mingcute/upload-2-line";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
-  import {
-    licencesEnum,
-    accessesEnum,
-    orthographiesEnum,
-    languagesEnum,
-  } from "$lib/database/schema";
 
   // TODO(vxern): Prefill from the object.
   const { author } = $props();
@@ -23,11 +17,19 @@
     description={m["routes.authors.form.name_description"]()}
     value={author?.name}
   />
-  <Form.MultiTextElement
-    name="locations[]"
+  <Form.SelectElement
+    name="location_ids[]"
     label={m["routes.authors.form.locations"]()}
     description={m["routes.authors.form.locations_description"]()}
-    value={author?.locations}
+    options={() =>
+      fetch("/autocomplete/locations?include_unpublished")
+        .then((response) => response.json())
+        .then((locations) =>
+          locations.map((location) => [location, location.id])
+        )}
+    multiple={true}
+    component={Form.LocationSelectOption}
+    value={author?.locations?.map((location) => location.id)}
   />
 </section>
 <section class="flex gap-x-4 items-start">

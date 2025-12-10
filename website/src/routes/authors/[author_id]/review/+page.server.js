@@ -1,18 +1,41 @@
 import { redirect } from "@sveltejs/kit";
 import { db } from "$lib/database.server";
-import { versions, reviews } from "$lib/database/schema";
+import { authors, versions, reviews } from "$lib/database/schema";
 import { eq, and, desc } from 'drizzle-orm';
-
-// TODO(vxern): Need to exclude deleted objects from filters.
 
 export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return {
-    author: await db.query.authors.findFirst({ where: (authors, { eq }) => eq(authors.id, params.author_id) }),
-  };
+  return { author: await getAuthor({ id: params.author_id }) };
 };
+
+/** Performs 1 query. */
+function getAuthor({ id }) {
+  return db
+    .select({ authors, locations })
+    .from(authors)
+    .where(
+      and(
+        eq(authors.id, id),
+        eq(authors.deleted, false),
+        eq(authors.status, "draft"),
+      ),
+    )
+    .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
+    .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
+    .then(
+      (results) => Object.values(Object.groupBy(results, ({ id }) => id)).map(
+        (results) => {
+          const author = results[0].authors;
+
+          author.locations = results.map((result) => result.locations).filter((location) => location);
+
+          return author;
+        }
+      ).at(0),
+    );
+}
 
 // TODO(vxern): Validate.
 
@@ -20,24 +43,24 @@ export const actions = {
   review: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const version = await db.query.versions.findFirst({
-      where: (versions, { eq }) => and(
-        eq(versions.versionable_id, data.get("id")),
-        eq(versions.versionable_type, "authors"),
-      ),
-      orderBy: [desc(versions.version)],
-    });
-    if (!version) {
-      // TODO(vxern): Handle failure.
-      return;
-    }
-
-    const review = await db.insert(reviews).values({
-      version_id: version.id,
+    const reviewData = reviewsInsertSchema.parse({
       // TODO(vxern): Update to the right user.
-      reviewer_id: 1,
-      decision: "reject" in data ? "rejected" : "accepted",
+      reviewer_id: 2,
+      decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
+    });
+    
+    const review = await db.insert(reviews).values({
+      version_id:
+        sql`${
+          db
+          .select({ version_id: versions.id })
+          .from(authors)
+          .withVersions()
+          .where(eq(authors.id, Number(data.get("id"))))
+          .limit(1)
+        }`,
+      ...reviewData,
     });
 
     // TODO(vxern): Handle failure.

@@ -6,13 +6,14 @@
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
-  import ColourLabel from "../labels/colour-label.svelte";
+  import LocationLabel from "../labels/location-label.svelte";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
 
   const hasPermission = true;
 
   const { authors, mode, noneText } = $props();
+  $inspect(authors);
 </script>
 
 <Table.Root>
@@ -45,11 +46,9 @@
         </Table.Cell>
         <Table.Cell>
           {#if author.locations && author.locations.length > 0}
-            <ul>
-              {#each author.locations as location}
-                <li>{location.name}</li>
-              {/each}
-            </ul>
+            {#each author.locations as location}
+              <LocationLabel {location} />
+            {/each}
           {:else}
             {m["meta.none"]()}
           {/if}

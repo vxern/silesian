@@ -11,6 +11,7 @@ import CategorySelectOption from "./select/category-select-option.svelte";
 import ColourSelectOption from "./select/colour-select-option.svelte";
 import LanguageSelectOption from "./select/language-select-option.svelte";
 import LicenceSelectOption from "./select/licence-select-option.svelte";
+import LocationSelectOption from "./select/location-select-option.svelte";
 import OrthographySelectOption from "./select/orthography-select-option.svelte";
 import SimpleSelectOption from "./select/simple-select-option.svelte";
 import SourceSelectOption from "./select/source-select-option.svelte";
@@ -29,6 +30,7 @@ export default {
   ColourSelectOption,
   LanguageSelectOption,
   LicenceSelectOption,
+  LocationSelectOption,
   OrthographySelectOption,
   SimpleSelectOption,
   SourceSelectOption,
