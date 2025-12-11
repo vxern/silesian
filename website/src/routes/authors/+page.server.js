@@ -1,5 +1,5 @@
 import { db } from "$lib/database.server";
-import { authors, versions } from "$lib/database/schema";
+import { authors, authorsToLocations, locations, versions } from "$lib/database/schema";
 import { and, eq, ne, count } from 'drizzle-orm';
 
 export const load = async () => {
@@ -47,7 +47,7 @@ function getPendingCount() {
 /** Performs 1 query. */
 function getPublishedAuthors() {
   return db
-    .select()
+    .select({ authors, locations })
     .from(authors)
     .withVersions()
     .where(
@@ -56,15 +56,17 @@ function getPublishedAuthors() {
         eq(authors.status, "published"),
       ),
     )
+    .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
+    .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
     .then(
-      (results) => results.map(
-        (result) => {
-          const author = result.authors;
+      (results) => Object.values(Object.groupBy(results, ({ authors }) => authors.id)).map(
+        (results) => {
+          const author = results[0].authors;
 
-          author.version = result.versions;
+          author.locations = results.map((result) => result.locations).filter((location) => location);
 
           return author;
-        },
+        }
       ),
     );
 }

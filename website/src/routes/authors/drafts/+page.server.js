@@ -25,7 +25,7 @@ function getDraftAuthors() {
     .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
     .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
     .then(
-      (results) => Object.values(Object.groupBy(results, ({ id }) => id)).map(
+      (results) => Object.values(Object.groupBy(results, ({ authors }) => authors.id)).map(
         (results) => {
           const author = results[0].authors;
 

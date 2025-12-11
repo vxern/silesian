@@ -22,7 +22,7 @@ export const actions = {
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 2,
         values: authorData,
-        returning: { status: authors.status, location_id: locations.id },
+        returning: { status: authors.status },
       });
 
       await versionedJoin({
