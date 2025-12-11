@@ -15,6 +15,7 @@
   import IconButton from "../../components/interactions/icon-button.svelte";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
+  import AuthorLabel from "../labels/author-label.svelte";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
@@ -93,11 +94,9 @@
         </Table.Cell>
         <Table.Cell>
           {#if source.authors.length > 0}
-            <ul>
-              {#each source.authors.map((author) => author.author) as author}
-                <li>{author.name}</li>
-              {/each}
-            </ul>
+            {#each source.authors as author}
+              <AuthorLabel {author} />
+            {/each}
           {:else}
             {m["meta.unknown"]()}
           {/if}
