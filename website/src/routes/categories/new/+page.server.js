@@ -10,7 +10,7 @@ export const actions = {
     const categoryData = categoriesInsertSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"),
-      description: data.get("description"),
+      description: data.get("description") || null,
       colour: data.get("colour"),
     });
 
