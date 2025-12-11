@@ -16,6 +16,8 @@
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
   import AuthorLabel from "../labels/author-label.svelte";
+  import AccessLabel from "../labels/access-label.svelte";
+  import LicenceLabel from "../labels/licence-label.svelte";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
@@ -109,47 +111,10 @@
           {/if}
         </Table.Cell>
         <Table.Cell>
-          {#if !source.access}
-            {m["meta.unknown"]()}
-          {:else if source.access === "closed"}
-            <span class="text-red-500">
-              {m["accesses.closed"]()}
-            </span>
-          {:else if source.access === "limited"}
-            <span class="text-yellow-500">
-              {m["accesses.limited"]()}
-            </span>
-          {:else if source.access === "open"}
-            <span class="text-green-500">
-              {m["accesses.open"]()}
-            </span>
-          {/if}
+          <AccessLabel access={source.access} />
         </Table.Cell>
         <Table.Cell>
-          {#if !source.licence}
-            {m["meta.unknown"]()}
-          {:else if source.licence === "proprietary"}
-            <span class="text-red-500">
-              {m["licences.proprietary"]()}
-            </span>
-          {:else if source.licence === "granted"}
-            <span class="text-green-500">
-              {m["licences.granted"]()}
-            </span>
-          {:else if source.licence === "public"}
-            <span class="text-green-500">
-              {m["licences.public"]()}
-            </span>
-            <!-- TODO(vxern): Is the following used? -->
-          {:else if source.redistributable}
-            <span class="text-green-500">
-              {source.licence}
-            </span>
-          {:else}
-            <span class="text-yellow-500">
-              {source.licence}
-            </span>
-          {/if}
+          <LicenceLabel licence={source.licence} />
         </Table.Cell>
         <Table.Cell>
           {source.version}
