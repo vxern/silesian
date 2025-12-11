@@ -14,7 +14,7 @@ export const actions = {
         lemma: data.get("lemma"),
         contents: data.get("contents"),
         source_id: data.get("source_id"),
-        status: "draft" in data ? "draft" : "pending",
+        status: data.has("draft") ? "draft" : "pending",
       }).returning({ id: entries.id, lemma: entries.lemma }).then((result) => result.at(0));
 
       const categories = JSON.parse(data.get("categories[]"));

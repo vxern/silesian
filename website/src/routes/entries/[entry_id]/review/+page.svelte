@@ -1,5 +1,6 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
   // TODO(vxern): What is enhance for again?
   import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
@@ -45,7 +46,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => window.history.back()} />
+      <BackButton onclick={() => goto("/entries/review")} />
     </Page.Actions>
     <section>
       <Form.Disabled>

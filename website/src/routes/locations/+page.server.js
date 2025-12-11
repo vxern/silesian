@@ -55,16 +55,5 @@ function getPublishedLocations() {
         eq(locations.deleted, false),
         eq(locations.status, "published"),
       ),
-    )
-    .then(
-      (results) => results.map(
-        (result) => {
-          const location = result.locations;
-
-          location.version = result.versions;
-
-          return location;
-        },
-      ),
     );
 }

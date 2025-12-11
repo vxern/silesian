@@ -55,16 +55,5 @@ function getPublishedCategories() {
         eq(categories.deleted, false),
         eq(categories.status, "published"),
       ),
-    )
-    .then(
-      (results) => results.map(
-        (result) => {
-          const category = result.categories;
-
-          category.version = result.versions;
-
-          return category;
-        },
-      ),
     );
 }

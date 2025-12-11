@@ -1,5 +1,6 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
   import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
@@ -44,7 +45,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => window.history.back()} />
+      <BackButton onclick={() => goto("/categories/review")} />
     </Page.Actions>
     <section>
       <Form.Disabled>

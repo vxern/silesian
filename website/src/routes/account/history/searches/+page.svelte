@@ -1,5 +1,6 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
@@ -31,7 +32,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => window.history.back()} />
+      <BackButton onclick={() => goto("/account")} />
     </Page.Actions>
     <SearchTables
       searchCount={data.searchCount}
