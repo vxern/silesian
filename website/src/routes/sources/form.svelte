@@ -30,11 +30,17 @@
     type="url"
     value={source?.url}
   />
-  <Form.MultiTextElement
-    name="authors"
+  <Form.SelectElement
+    name="author_ids[]"
     label={m["routes.sources.form.authors"]()}
     description={m["routes.sources.form.authors_description"]()}
-    value={source?.authors}
+    options={() =>
+      fetch("/autocomplete/authors?include_unpublished")
+        .then((response) => response.json())
+        .then((authors) => authors.map((author) => [author, author.id]))}
+    multiple={true}
+    component={Form.AuthorSelectOption}
+    value={source?.authors?.map((author) => author.id)}
   />
   <Form.TextElement
     name="year"
