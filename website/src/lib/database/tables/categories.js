@@ -16,6 +16,7 @@ export const categories = pgTable("categories", {
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
+  check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
   index().on(t.status),
 ]);
