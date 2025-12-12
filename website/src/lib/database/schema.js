@@ -1,6 +1,7 @@
 // Enums
 export { accessesEnum } from "./enums/accesses";
 export { coloursEnum } from "./enums/colours";
+export { countriesEnum } from "./enums/countries";
 export { languagesEnum } from "./enums/languages";
 export { licencesEnum } from "./enums/licences";
 export { orthographiesEnum } from "./enums/orthographies";

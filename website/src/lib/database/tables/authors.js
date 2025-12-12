@@ -10,10 +10,12 @@ export const authors = pgTable("authors", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
   name: text().notNull(),
+  description: text(),
   status: publishStatusesEnum().default("draft").notNull(),
   version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
+  check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
   index().on(t.status),
 ]);
