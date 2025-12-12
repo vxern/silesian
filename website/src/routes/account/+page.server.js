@@ -1,5 +1,5 @@
 import { db } from "$lib/database.server";
-import { users } from "$lib/database/schema";
+import { users, versions } from "$lib/database/schema";
 import { eq } from "drizzle-orm";
 
 export const load = async (params) => {
@@ -9,16 +9,20 @@ export const load = async (params) => {
 
 function getUser({ id }) {
   return db
-    .select()
+    .select({ users, versions })
     .from(users)
     .withVersions()
     .where(eq(users.id, id))
     .limit(1)
-    .then((results) => {
-      const result = results.at(0);
+    .then(
+      (results) => results.map(
+        (result) => {
+          const user = result.users;
 
-      result.users.version = result.versions;
+          user.version = result.versions;
 
-      return result.users;
-    });
+          return user;
+        },
+      ).at(0),
+    );
 }

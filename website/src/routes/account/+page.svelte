@@ -33,7 +33,7 @@
   dayjs.extend(relativeTime);
 
   onMount(() => {
-    // TODO(vxern): Do this on the server side.
+    // TODO(vxern): IMPORTANT - Do this on the server side.
     if (!page.data.session) {
       goto("/login");
     }
@@ -54,128 +54,124 @@
 
 <NavigationSection />
 
-{#if page.data.session}
-  <Page.Root>
-    <Page.Header>
-      <Page.Title title={m["routes.account.title"]()} />
-    </Page.Header>
-    <Page.Divider />
-    <section class="flex flex-col">
-      <Table.Root>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell icon={PhotoAlbum2LineIcon}>
-              {m["routes.account.attributes.base.avatar"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={User1LineIcon}>
-              {m["routes.account.attributes.base.username"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={MailLineIcon}>
-              {m["routes.account.attributes.base.email"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={Calendar2LineIcon}>
-              {m["routes.account.attributes.base.created_at"]()}
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          <Table.Row>
-            <Table.Cell>
-              <Image
-                class="rounded-md size-20"
-                src={page.data.session.user.image}
-                alt={m["routes.account.attributes.base.avatar"]()}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {data.user.username}
-            </Table.Cell>
-            <Table.Cell>
-              {data.user.email_address}
-            </Table.Cell>
-            <Table.Cell>
-              {dayjs(data.user.version.created_at).calendar()}
-            </Table.Cell>
-          </Table.Row>
-        </Table.Body>
-      </Table.Root>
-      <Table.Root>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell icon={Search2LineIcon}>
-              {m["routes.account.attributes.stats.searches"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={AddLineIcon}>
-              {m["routes.account.attributes.stats.additions"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={Pencil2LineIcon}>
-              {m["routes.account.attributes.stats.changes"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={ChecksLineIcon}>
-              {m["routes.account.attributes.stats.reviews"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={TimeLineIcon}>
-              {m["routes.account.attributes.stats.time_spent_using"]()}
-            </Table.HeaderCell>
-            <Table.HeaderCell icon={TimeLineIcon}>
-              {m["routes.account.attributes.stats.time_spent_editing"]()}
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          <Table.Row>
-            <Table.Cell>
-              {data.user.searches_count}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/searches")}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {data.user.additions_count}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/additions")}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {data.user.changes_count}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/changes")}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {data.user.reviews_count}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/reviews")}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {dayjs.duration(data.user.time_spent_using).humanize()}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/time-spent-using")}
-              />
-            </Table.Cell>
-            <Table.Cell>
-              {dayjs.duration(data.user.time_spent_editing).humanize()}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => goto("/account/history/time-spent-editing")}
-              />
-            </Table.Cell>
-          </Table.Row>
-        </Table.Body>
-      </Table.Root>
-    </section>
-    <section>
-      <Button icon={ExitLineIcon} onclick={signOut}>
-        {m["routes.account.logout"]()}
-      </Button>
-    </section>
-  </Page.Root>
-{:else}
-  <Loading />
-{/if}
+<Page.Root>
+  <Page.Header>
+    <Page.Title title={m["routes.account.title"]()} />
+  </Page.Header>
+  <Page.Divider />
+  <section class="flex flex-col">
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell icon={PhotoAlbum2LineIcon}>
+            {m["routes.account.attributes.base.avatar"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={User1LineIcon}>
+            {m["routes.account.attributes.base.username"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={MailLineIcon}>
+            {m["routes.account.attributes.base.email"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={Calendar2LineIcon}>
+            {m["routes.account.attributes.base.created_at"]()}
+          </Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>
+            <Image
+              class="rounded-md size-20"
+              src={page.data.session.user.image}
+              alt={m["routes.account.attributes.base.avatar"]()}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.username}
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.email_address}
+          </Table.Cell>
+          <Table.Cell>
+            {dayjs(data.user.version.created_at).calendar()}
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table.Root>
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell icon={Search2LineIcon}>
+            {m["routes.account.attributes.stats.searches"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={AddLineIcon}>
+            {m["routes.account.attributes.stats.additions"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={Pencil2LineIcon}>
+            {m["routes.account.attributes.stats.changes"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={ChecksLineIcon}>
+            {m["routes.account.attributes.stats.reviews"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={TimeLineIcon}>
+            {m["routes.account.attributes.stats.time_spent_using"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={TimeLineIcon}>
+            {m["routes.account.attributes.stats.time_spent_editing"]()}
+          </Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>
+            {data.user.searches_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/searches")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.additions_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/additions")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.changes_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/changes")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.reviews_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/reviews")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {dayjs.duration(data.user.time_spent_using).humanize()}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/time-spent-using")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {dayjs.duration(data.user.time_spent_editing).humanize()}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/time-spent-editing")}
+            />
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table.Root>
+  </section>
+  <section>
+    <Button icon={ExitLineIcon} onclick={signOut}>
+      {m["routes.account.logout"]()}
+    </Button>
+  </section>
+</Page.Root>
