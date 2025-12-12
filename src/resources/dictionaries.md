@@ -15,6 +15,32 @@
   - `spa` [Basic Silesian (ślůnski)](https://mylittlewordland.com/course/391323/basic-silesian-%C5%9Bl%C5%AFnski), author: `unknown`, entries: `uncounted`
   <!-- Checked by hand; scanned the dictionary, picked out the Silesian words, removed duplicates. -->
   - `kos` [Dykcjōnôrz polsko-ślonskiy](https://sbc.org.pl/dlibra/publication/648390), author: `Eugeniusz Kosmała`, entries: `>54,500`
+  <!-- Found in descriptions of the product. -->
+  - `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/), author: `various`, entries: `>1,000,000`
+    - <details>
+
+      <summary>Volumes</summary>
+
+      - [Volume 1 (A-Beczka)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom01), ISBN: `9788371264474`
+      - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom02), ISBN: `8371261500`
+      - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom03), ISBN: `8371261640`
+      - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom04), ISBN: `8371261896`
+      - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom05), ISBN: `8371261918`
+      - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom06), ISBN: `8371262043`
+      - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom07), ISBN: `8371262051`
+      - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom08), ISBN: `8371262140`
+      - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom09), ISBN: `9788371262296`
+      - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom10), ISBN: `9788371262395`
+      - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom11), ISBN: `9788371262586`
+      - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom12), ISBN: `9788371262791`
+      - [Volume 13 (Hyro-Juzyneczki)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom13), ISBN: `9788371262876`
+      - [Volume 14 (K-Klacz)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom14), ISBN: `9788371263101`
+      - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom15), ISBN: `9788371263217`
+      - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania/#tom16), ISBN: `9788371263347`
+      - `MISSING` <ins>Volume 17 (La-Łzyczka)</ins>, ISBN: `9788371263712`
+      - `MISSING` <ins>Macać (się)-Masywny)</ins>, ISBN: `9788371264405`
+
+      </details>https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania
   <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
   - `pol` [Słowniczek wyrazów śląskich](https://bonclok.pl/slowniczek-wyrazow-slaskich.html), author: `Ania Lerch-Wójcik`, entries: `>1,750`
   <!-- Checked by hand. -->
@@ -134,32 +160,6 @@
   - `🚫` `pol` [Słownik frazeologizmów i typowych połączeń wyrazowych w gwarach śląskich](https://w.bibliotece.pl/1131230/S%C5%82ownik+frazeologizm%C3%B3w+i+typowych+po%C5%82%C4%85cze%C5%84+wyrazowych+w+gwarach+%C5%9Bl%C4%85skich), author: `Lydia Przymuszała`, entries: `unknown`, ISBN: `9788373955660`
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` [Słownik gwar śląskich](https://sbc.org.pl/dlibra/publication/edition/912987), author: `Manfred Słaboń`, entries: `unknown`, entries: `uncounted`, ISBN: `unknown`
-  <!-- Found in descriptions of the product. -->
-  - `🚫` `pol` [Słownik gwar śląskich](https://instytutslaski.pl/slownik-gwar-slaskich/), author: `various`, entries: `>1,000,000`
-    - <details>
-
-      <summary>Volumes</summary>
-
-      - [Volume 1 (A-Beczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-1-a-beczka/), ISBN: `9788371264474`
-      - [Volume 2 (Beczkować-Braw)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ii-beczkowac-braw/), ISBN: `8371261500`
-      - [Volume 3 (Brawcowy-Bżdżon)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iii-brawcowy-bzdzon/), ISBN: `8371261640`
-      - [Volume 4 (Cabak-Chwanciaty)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-iv-cabak-chwanciaty/), ISBN: `8371261896`
-      - [Volume 5 (Chwańcić (się)-Cyrkać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-v-chwancic-sie-cyrkac/), ISBN: `8371261918`
-      - [Volume 6 (Cyrkarz-Dawny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vi-cyrkarz-dawny/), ISBN: `8371262043`
-      - [Volume 7 (Dąb-Dozierać)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-vii-dab-dozierac/), ISBN: `8371262051`
-      - [Volume 8 (Doznać (się)-Ędyk)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-viii/), ISBN: `8371262140`
-      - [Volume 9 (Faber-Gadzior)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-ix/), ISBN: `9788371262296`
-      - [Volume 10 (Gadziora-Gościna)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-x/), ISBN: `9788371262395`
-      - [Volume 11 (Gościniec-Gźmija)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-xi/), ISBN: `9788371262586`
-      - [Volume 12 (Ha-Hyrnie)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xii-i-ha-hyrnie/), ISBN: `9788371262791`
-      - `MISSING` <ins>Volume 13 (Hyro-Juzyneczki)</ins>, ISBN: `9788371262876`
-      - `missing` <ins>Volume 14 (K-Klacz)</ins>, ISBN: `9788371263101`
-      - [Volume 15 (Klacza-Krawatka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xv-klacza-krawatka/), ISBN: `9788371263217`
-      - [Volume 16 (Krawcowa-Kyzia)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-t-xvi-krawcowa-kyzia/), ISBN: `9788371263347`
-      - [Volume 17 (La-Łzyczka)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-17-la-lzyczka/), ISBN: `9788371263712`
-      - [Volume 18 (Macać (się)-Masywny)](https://instytutslaski.pl/ksiegarnia/slownik-gwar-slaskich-tom-18-macac-sie-masywny/), ISBN: `9788371264405`
-
-      </details>
   <!-- ❌ Not checked the number of entries. -->
   - `🚫` `pol` <ins>Zbornik polsko-ślůnski</ins>, author: `Andrzej Roczniok`, entries: `uncounted`
     - <details>
