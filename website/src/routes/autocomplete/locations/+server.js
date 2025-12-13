@@ -44,7 +44,7 @@ function getLocations(params) {
       and(
         // TODO(vxern): Exclude if the query is empty.
         like(locations.name, sql`'%${params.query}%'`),
-        eq(locations.deleted, false)
+        eq(locations.deleted, false),
         eq(locations.status, "published"),
       ),
     )
