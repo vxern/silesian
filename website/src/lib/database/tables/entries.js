@@ -17,6 +17,7 @@ export const entries = pgTable("entries", {
   version: integer().default(1).notNull(),
 }, (t) => [
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
+  check("contents_not_empty_check", sql`${t.contents} <> ''`),
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
   index().on(t.status),
 ]);
@@ -28,8 +29,10 @@ export const entriesRelations = relations(entries, ({ one, many }) => ({
 
 export const entriesInsertSchema = createInsertSchema(entries, {
   lemma: (z) => z.nonempty(),
+  description: (z) => z.nonempty(),
 });
 
 export const entriesUpdateSchema = createUpdateSchema(entries, {
   lemma: (z) => z.nonempty(),
+  description: (z) => z.nonempty(),
 });
