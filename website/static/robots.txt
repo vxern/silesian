@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /account
+
+Sitemap: https://silesian.eu/sitemap.xml
