@@ -375,7 +375,7 @@
       },
       "[entry_id]": {
         "edit": {
-          "title": "Edytowaniy kategoryje — „{entry_lemma}”",
+          "title": "Edytowaniy hasła — „{entry_lemma}”",
           "description": "Edytowanie hasła, co już istnieje.",
           "edit": "Edytuj"
         },
