@@ -39,7 +39,7 @@
 </section>
 <section class="flex gap-x-4">
   <Form.SelectElement
-    name="categories[]"
+    name="category_ids[]"
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
     required={true}
