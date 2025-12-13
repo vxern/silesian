@@ -17,6 +17,7 @@
     options: getOptions,
     multiple = false,
     custom = false,
+    required = false,
     filterOptions = (options, search) => {
       const searchLowerCase = search.toLowerCase();
 
@@ -141,7 +142,7 @@
 </section>
 
 <section class="flex-1 flex flex-col gap-y-1 items-start">
-  <Label {name} {label} {description} />
+  <Label {name} {label} {description} {required} />
   <section
     class="flex-1 flex gap-x-3 items-center bg-zinc-800 outline-1 outline-zinc-600 p-3 rounded-lg w-full cursor-pointer"
     {@attach trigger}

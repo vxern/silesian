@@ -9,7 +9,7 @@ export const load = async () => {
 };
 
 /** Performs 1 query. */
-function getPendingLocations() {
+function getPendingCategories() {
   return db
     .select({ categories })
     .from(categories)

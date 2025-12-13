@@ -16,12 +16,14 @@
     name="name"
     label={m["routes.categories.form.name"]()}
     description={m["routes.categories.form.name_description"]()}
+    required={true}
     value={category?.name}
   />
   <Form.SelectElement
     name="colour"
     label={m["routes.categories.form.colour"]()}
     description={m["routes.categories.form.colour_description"]()}
+    required={true}
     options={() =>
       coloursEnum.enumValues.map((colour) => [
         m[`colours.${colour}`](),

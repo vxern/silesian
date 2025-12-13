@@ -22,6 +22,7 @@
     label={m["routes.sources.form.name"]()}
     description={m["routes.sources.form.name_description"]()}
     value={source?.name}
+    required={true}
   />
   <Form.TextElement
     name="url"
@@ -63,6 +64,7 @@
     name="orthography"
     label={m["routes.sources.form.orthography"]()}
     description={m["routes.sources.form.orthography_description"]()}
+    required={true}
     options={() =>
       orthographiesEnum.enumValues.map((orthography) => [
         m[`orthographies.${orthography}`](),
@@ -75,6 +77,7 @@
     name="source_language"
     label={m["routes.sources.form.source_language"]()}
     description={m["routes.sources.form.source_language_description"]()}
+    required={true}
     options={() =>
       languagesEnum.enumValues.map((language) => [
         m[`languages.${language}`](),
@@ -87,6 +90,7 @@
     name="target_language"
     label={m["routes.sources.form.target_language"]()}
     description={m["routes.sources.form.target_language_description"]()}
+    required={true}
     options={() =>
       languagesEnum.enumValues.map((language) => [
         m[`languages.${language}`](),
@@ -101,6 +105,7 @@
     name="licence"
     label={m["routes.sources.form.licence"]()}
     description={m["routes.sources.form.licence_description"]()}
+    required={true}
     options={() =>
       licencesEnum.enumValues.map((licence) => [
         m[`licences.${licence}`](),
@@ -113,6 +118,7 @@
     name="access"
     label={m["routes.sources.form.access"]()}
     description={m["routes.sources.form.access_description"]()}
+    required={true}
     options={() =>
       accessesEnum.enumValues.map((access) => [
         m[`accesses.${access}`](),
@@ -126,6 +132,7 @@
     label={m["routes.sources.form.redistributable"]()}
     description={m["routes.sources.form.redistributable_description"]()}
     value={source?.redistributable}
+    required={true}
   />
 </section>
 <section class="flex gap-x-4">
@@ -135,6 +142,7 @@
     description={m["routes.sources.form.total_entry_count_description"]()}
     type="number"
     value={source?.total_entry_count}
+    required={true}
   />
   <section class="flex-1"></section>
   <section class="flex-1"></section>

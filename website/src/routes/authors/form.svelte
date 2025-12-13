@@ -16,6 +16,7 @@
     label={m["routes.authors.form.name"]()}
     description={m["routes.authors.form.name_description"]()}
     value={author?.name}
+    required={true}
   />
   <Form.SelectElement
     name="location_ids[]"

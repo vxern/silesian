@@ -641,6 +641,7 @@
     "unknown": "?",
     "none": "—",
     "etc": "…",
+    "required_field": "*",
     "yes": "Ja",
     "no": "Niy"
   }

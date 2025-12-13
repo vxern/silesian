@@ -17,11 +17,13 @@
     label={m["routes.locations.form.name"]()}
     description={m["routes.locations.form.name_description"]()}
     value={location?.name}
+    required={true}
   />
   <Form.SelectElement
     name="country"
     label={m["routes.locations.form.country"]()}
     description={m["routes.locations.form.country_description"]()}
+    required={true}
     options={() =>
       countriesEnum.enumValues.map((country) => [
         m[`countries.${country}`](),

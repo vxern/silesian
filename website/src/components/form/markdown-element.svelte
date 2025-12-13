@@ -2,14 +2,21 @@
   import Label from "./label.svelte";
   import { renderMarkdown } from "../../helpers/markdown.js";
 
-  const { name, label, description, value, previewMessage } = $props();
+  const {
+    name,
+    label,
+    description,
+    value,
+    previewMessage,
+    required = false,
+  } = $props();
 
   let contents = $state(value ?? "");
   let renderedContents = $derived(renderMarkdown(contents));
 </script>
 
 <section class="flex-1 flex flex-col gap-y-1">
-  <Label {name} {label} {description} />
+  <Label {name} {label} {description} {required} />
   <section class="flex flex-1">
     <textarea
       type="text"

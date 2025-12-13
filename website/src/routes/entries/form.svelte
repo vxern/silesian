@@ -16,11 +16,13 @@
     label={m["routes.entries.form.lemma"]()}
     description={m["routes.entries.form.lemma_description"]()}
     value={entry?.lemma}
+    required={true}
   />
   <Form.SelectElement
     name="source_id"
     label={m["routes.entries.form.source_id"]()}
     description={m["routes.entries.form.source_id_description"]()}
+    required={true}
     options={() =>
       fetch("/autocomplete/sources")
         .then((response) => response.json())
@@ -34,6 +36,7 @@
     name="categories[]"
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
+    required={true}
     options={() =>
       fetch("/autocomplete/categories")
         .then((response) => response.json())
@@ -51,6 +54,7 @@
     label={m["routes.entries.form.contents"]()}
     description={m["routes.entries.form.contents_description"]()}
     previewMessage={m["routes.entries.form.preview_message"]()}
+    required={true}
     value={entry?.contents ?? ""}
   />
 </section>
