@@ -142,7 +142,6 @@
     description={m["routes.sources.form.total_entry_count_description"]()}
     type="number"
     value={source?.total_entry_count}
-    required={true}
   />
   <section class="flex-1"></section>
   <section class="flex-1"></section>
