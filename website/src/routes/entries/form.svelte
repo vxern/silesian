@@ -24,9 +24,9 @@
     description={m["routes.entries.form.source_id_description"]()}
     required={true}
     options={() =>
-      fetch("/autocomplete/sources")
+      fetch("/autocomplete/sources?include_unpublished")
         .then((response) => response.json())
-        .then((sources) => sources.map((source) => [source, source.id]))}
+        .then((sources) => sources.map((source) => [source.name, source]))}
     component={Form.SourceSelectOption}
     value={entry?.source_id}
   />
@@ -38,7 +38,7 @@
     description={m["routes.entries.form.categories_description"]()}
     required={true}
     options={() =>
-      fetch("/autocomplete/categories")
+      fetch("/autocomplete/categories?include_unpublished")
         .then((response) => response.json())
         .then((categories) =>
           categories.map((category) => [category.name, category])

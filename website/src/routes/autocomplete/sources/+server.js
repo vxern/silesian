@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { sources, versions } from "$lib/database/schema";
+import { sources, authorsToSources, authors, versions } from "$lib/database/schema";
 import { db } from "$lib/database.server";
 import { sql, and, or, like, eq, ne } from "drizzle-orm";
 import { json } from "@sveltejs/kit";
@@ -8,18 +8,22 @@ import { json } from "@sveltejs/kit";
 // TODO(vxern): Authorise.
 
 export async function GET({ url }) {
-  return json(await getSources(url.searchParams));
+  const sources = await getSources(url.searchParams);
+
+  return json(sources);
 }
 
 function getSources(params) {
   let statusClause;
   if (params.has("include_unpublished")) {
     return db
-      .select({ sources })
+      .select({ sources, authors })
       .from(sources)
       .withVersions()
       .where(
         and(
+          // TODO(vxern): Exclude if the query is empty.
+          like(sources.name, sql`'%${params.query}%'`),
           eq(sources.deleted, false),
           or(
             eq(sources.status, "published"),
@@ -32,19 +36,45 @@ function getSources(params) {
         ),
       )
       .limit(params.limit ?? 100)
-      .then((results) => results.map((result) => result.sources));
+      .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
+      .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
+      .then(
+        (results) => Object.values(Object.groupBy(results, ({ sources }) => sources.id)).map(
+          (results) => {
+            const source = results[0].sources;
+
+            source.authors = results.map((result) => result.authors).filter((author) => author);
+
+            return source;
+          }
+        ),
+      );
   }
 
   return db
-    .select({ sources })
+    .select({ sources, authors })
     .from(sources)
     .where(
       and(
+        // TODO(vxern): Exclude if the query is empty.
         like(sources.name, sql`'%${params.query}%'`),
+        eq(sources.deleted, false),
         eq(sources.status, "published"),
       ),
     )
     .limit(params.limit ?? 100)
-    .then((results) => results.sources);
+    .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
+    .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
+    .then(
+      (results) => Object.values(Object.groupBy(results, ({ sources }) => sources.id)).map(
+        (results) => {
+          const source = results[0].sources;
+
+          source.authors = results.map((result) => result.authors).filter((author) => author);
+
+          return source;
+        }
+      ),
+    )
 }
 

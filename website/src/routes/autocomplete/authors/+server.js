@@ -20,7 +20,9 @@ function getAuthors(params) {
       .withVersions()
       .where(
         and(
-          eq(authors.deleted, false),
+        // TODO(vxern): Exclude if the query is empty.
+        like(authors.name, sql`'%${params.query}%'`),
+        eq(authors.deleted, false),
           or(
             eq(authors.status, "published"),
             and(
@@ -40,7 +42,9 @@ function getAuthors(params) {
     .from(authors)
     .where(
       and(
+        // TODO(vxern): Exclude if the query is empty.
         like(authors.name, sql`'%${params.query}%'`),
+        eq(authors.deleted, false),
         eq(authors.status, "published"),
       ),
     )

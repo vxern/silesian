@@ -38,7 +38,7 @@
     options={() =>
       fetch("/autocomplete/authors?include_unpublished")
         .then((response) => response.json())
-        .then((authors) => authors.map((author) => [author, author.id]))}
+        .then((authors) => authors.map((author) => [author.name, author]))}
     multiple={true}
     component={Form.AuthorSelectOption}
     value={source?.authors?.map((author) => author.id)}

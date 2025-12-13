@@ -20,6 +20,8 @@ function getLocations(params) {
       .withVersions()
       .where(
         and(
+          // TODO(vxern): Exclude if the query is empty.
+          like(locations.name, sql`'%${params.query}%'`),
           eq(locations.deleted, false),
           or(
             eq(locations.status, "published"),
@@ -40,7 +42,9 @@ function getLocations(params) {
     .from(locations)
     .where(
       and(
+        // TODO(vxern): Exclude if the query is empty.
         like(locations.name, sql`'%${params.query}%'`),
+        eq(locations.deleted, false)
         eq(locations.status, "published"),
       ),
     )

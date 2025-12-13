@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <LocationLabel location={option[0]} />
+  <LocationLabel location={option[1]} />
 </SelectOption>

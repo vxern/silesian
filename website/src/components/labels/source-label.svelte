@@ -8,15 +8,19 @@
 
 {#snippet label()}
   <Label class="bg-zinc-700" icon={Box2LineIcon}>
-    <section class="basis-3/5 text-start">
+    {#if source.authors.length > 0}
+      <section class="basis-3/5 text-start">
+        {source.name}
+      </section>
+      <section class="basis-2/5 text-end">
+        {source.authors
+          .map((author) => author.author)
+          .map((author) => author.name)
+          .join(", ")}
+      </section>
+    {:else}
       {source.name}
-    </section>
-    <section class="basis-2/5 text-end">
-      {source.authors
-        .map((author) => author.author)
-        .map((author) => author.name)
-        .join(", ")}
-    </section>
+    {/if}
   </Label>
 {/snippet}
 

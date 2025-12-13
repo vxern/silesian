@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <SourceLabel source={option[0]} />
+  <SourceLabel source={option[1]} />
 </SelectOption>

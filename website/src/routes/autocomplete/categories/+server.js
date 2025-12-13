@@ -20,6 +20,8 @@ function getCategories(params) {
       .withVersions()
       .where(
         and(
+          // TODO(vxern): Exclude if the query is empty.
+          like(categories.name, sql`'%${params.query}%'`),
           eq(categories.deleted, false),
           or(
             eq(categories.status, "published"),
@@ -40,7 +42,9 @@ function getCategories(params) {
     .from(categories)
     .where(
       and(
+        // TODO(vxern): Exclude if the query is empty.
         like(categories.name, sql`'%${params.query}%'`),
+        eq(categories.deleted, false),
         eq(categories.status, "published"),
       ),
     )

@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <TextLabel text={option[0]} highlighted={selected} />
+  <TextLabel text={option[1]} highlighted={selected} />
 </SelectOption>
