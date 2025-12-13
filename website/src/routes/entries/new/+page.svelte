@@ -36,7 +36,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => goto("/sources")} />
+      <BackButton onclick={() => goto("/entries")} />
     </Page.Actions>
     <Form.Root method="POST" action="?/create" class="flex flex-col gap-y-6">
       <EntryForm />

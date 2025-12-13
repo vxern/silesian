@@ -19,7 +19,7 @@ function getAuthor({ id }) {
       and(
         eq(authors.id, id),
         eq(authors.deleted, false),
-        eq(authors.status, "draft"),
+        eq(authors.status, "pending"),
       ),
     )
     .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))

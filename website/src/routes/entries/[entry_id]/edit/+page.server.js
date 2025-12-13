@@ -7,31 +7,84 @@ export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return {
-    entry: await db.query.entries.findFirst({
-      where: (entries, { eq }) => eq(entries.id, params.entry_id)
-    }),
-  };
+  return { entry: await getEntry({ id: params.entry_id }) };
 };
+
+/** Performs 1 query. */
+function getEntry({ id }) {
+  return db
+    .select({ entries, sources, categories })
+    .from(entries)
+    .withVersions()
+    .where(
+      and(
+        // TODO(vxern): Set the right author.
+        eq(versions.author_id, 2),
+        eq(entries.deleted, false),
+        eq(entries.status, "draft"),
+      ),
+    )
+    .innerJoin(sources, eq(sources.id, entries.source_id))
+    .leftJoin(entriesToCategories, eq(entriesToCategories.entry_id, entries.id))
+    .leftJoin(categories, eq(categories.id, entriesToCategories.category_id))
+    .then(
+      (results) => Object.values(Object.groupBy(results, ({ entries }) => entries.id)).map(
+        (results) => {
+          const entry = results[0].entries;
+
+          entry.source = results[0].sources;
+          entry.categories = results.map((result) => result.categories).filter((category) => category);
+
+          return entry;
+        }
+      ).at(0),
+    );
+}
 
 export const actions = {
   update: async ({ request, locals }) => {
     const data = await request.formData();
 
-    const result = await db.transaction(async (tx) => {
-      await db.update(entries).set({
-        name: data.get("name"),
-        source_id: data.get("source_id"),
-      }).where(eq(entries.id, Number(data.get("id"))));
+    // TODO(vxern): IMPORTANT - Validate the source.
 
-      // TODO(vxern): Make this work.
-      const entriesToCategories = await db.query.entriesToCategories.findFirst({
-        where: (entriesToCategories, { eq }) => eq(entriesToCategories.entry_id, Number(data.get("id"))),
+    const entryData = entriesInsertSchema.parse({
+      status: data.has("draft") ? "draft" : "pending",
+      lemma: data.get("lemma"),
+      contents: data.get("contents"),
+      source_id: data.get("source_id"),
+    });
+
+    const categoryIds = idsSchema.parse(JSON.parse(data.get("category_ids[]")));
+
+    const entry = await db.transaction(async (tx) => {
+      const entry = await versionedInsert({
+        table: entries,
+        // TODO(vxern): IMPORTANT - Update the author ID.
+        authorId: 2,
+        values: entryData,
+        returning: { lemma: entries.lemma },
       });
-    })
+
+      await versionedJoin({
+        table: entriesToCategories,
+        source: entry,
+        sourceColumnName: "entry_id",
+        targetIds: categoryIds,
+        targetColumnName: "category_id",
+        existingIds: await db
+          .select({ id: entriesToCategories.category_id })
+          .from(entriesToCategories)
+          .where(eq(entriesToCategories.entry_id, author.id))
+          .then((results) => results.map((result) => result.id)),
+        // TODO(vxern): IMPORTANT - Update the author ID.
+        authorId: 2,
+      });
+
+      return entry;
+    });
 
     // TODO(vxern): Handle failure.
 
-    redirect(303, `/sources`);
+    redirect(303, `/entries/drafts`);
   },
 };
