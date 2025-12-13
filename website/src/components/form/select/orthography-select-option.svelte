@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <OrthographyLabel orthography={option[1]} />
+  <OrthographyLabel orthography={option.object} />
 </SelectOption>

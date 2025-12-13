@@ -26,7 +26,11 @@
       fetch("/autocomplete/locations?include_unpublished")
         .then((response) => response.json())
         .then((locations) =>
-          locations.map((location) => [location.name, location])
+          locations.map((location) => ({
+            search: location.name,
+            value: location.id,
+            object: location,
+          }))
         )}
     multiple={true}
     component={Form.LocationSelectOption}

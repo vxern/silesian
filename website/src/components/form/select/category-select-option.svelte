@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <CategoryLabel category={option[1]} />
+  <CategoryLabel category={option.object} />
 </SelectOption>

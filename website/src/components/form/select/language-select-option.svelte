@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <LanguageLabel locale={option[1]} />
+  <LanguageLabel locale={option.object} />
 </SelectOption>

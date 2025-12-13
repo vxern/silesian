@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <ColourLabel colour={option[1]} />
+  <ColourLabel colour={option.object} />
 </SelectOption>

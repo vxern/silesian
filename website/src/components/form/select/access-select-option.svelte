@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <AccessLabel access={option[1]} />
+  <AccessLabel access={option.object} />
 </SelectOption>

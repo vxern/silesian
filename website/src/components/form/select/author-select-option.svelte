@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <AuthorLabel author={option[1]} />
+  <AuthorLabel author={option.object} />
 </SelectOption>

@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <CountryLabel country={option[1]} />
+  <CountryLabel country={option.object} />
 </SelectOption>

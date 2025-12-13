@@ -9,6 +9,8 @@ export const actions = {
   create: async ({ request, locals }) => {
     const data = await request.formData();
 
+    console.log(data);
+
     // TODO(vxern): IMPORTANT - Validate the source.
 
     const entryData = entriesInsertSchema.parse({

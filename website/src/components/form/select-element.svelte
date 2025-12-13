@@ -13,18 +13,11 @@
     label,
     description,
     value,
-    icon: Icon = MenuFillIcon,
     options: getOptions,
-    multiple = false,
-    custom = false,
+    icon: Icon = MenuFillIcon,
     required = false,
-    filterOptions = (options, search) => {
-      const searchLowerCase = search.toLowerCase();
-
-      return options.filter((option) =>
-        option[0].toLowerCase().includes(searchLowerCase)
-      );
-    },
+    /** If enabled, the select option will allow you to select multiple values. */
+    multiple = false,
     component: Component,
   } = $props();
 
@@ -49,7 +42,10 @@
   let options = $state([]);
   let filteredOptions = $state([]);
   function searchOptions(event) {
-    const newFilteredOptions = filterOptions(options, searchValue);
+    const searchLowerCase = searchValue.toLowerCase();
+    const newFilteredOptions = options.filter((option) =>
+      option.search.toLowerCase().includes(searchLowerCase)
+    );
 
     if (isEqual(filteredOptions, newFilteredOptions)) {
       return;
@@ -63,7 +59,7 @@
   let selectedOptions = $state([]);
   // TODO(vxern): This is wrong.
   let selectedOptionValues = $derived(
-    selectedOptions.map((option) => option[1])
+    selectedOptions.map((option) => option.value)
   );
   let selectedValue = $derived(
     multiple ? JSON.stringify(selectedOptionValues) : selectedOptionValues.at(0)
@@ -74,9 +70,11 @@
     if (!value) {
       selectedOptions = [];
     } else if (multiple) {
-      selectedOptions = options.filter((option) => value.includes(option[1]));
+      selectedOptions = options.filter((option) =>
+        value.includes(option.value)
+      );
     } else {
-      selectedOptions = options.filter((option) => option[1] === value);
+      selectedOptions = options.filter((option) => option.value === value);
     }
     filteredOptions = options;
   }
@@ -129,7 +127,7 @@
       {#each filteredOptions as option}
         <Component
           {option}
-          selected={selectedOptionValues.includes(option[1])}
+          selected={selectedOptionValues.includes(option.value)}
           select={select.bind(this)}
         ></Component>
       {/each}

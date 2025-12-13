@@ -6,5 +6,5 @@
 </script>
 
 <SelectOption {selected} {select} {option}>
-  <LicenceLabel licence={option[1]} />
+  <LicenceLabel licence={option.object} />
 </SelectOption>

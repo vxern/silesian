@@ -26,7 +26,13 @@
     options={() =>
       fetch("/autocomplete/sources?include_unpublished")
         .then((response) => response.json())
-        .then((sources) => sources.map((source) => [source.name, source]))}
+        .then((sources) =>
+          sources.map((source) => ({
+            search: source.name,
+            value: source.id,
+            object: source,
+          }))
+        )}
     component={Form.SourceSelectOption}
     value={entry?.source_id}
   />
@@ -41,7 +47,11 @@
       fetch("/autocomplete/categories?include_unpublished")
         .then((response) => response.json())
         .then((categories) =>
-          categories.map((category) => [category.name, category])
+          categories.map((category) => ({
+            search: category.name,
+            value: category.id,
+            object: category,
+          }))
         )}
     component={Form.CategorySelectOption}
     multiple={true}
