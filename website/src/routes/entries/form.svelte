@@ -69,7 +69,7 @@
   />
 </section>
 <section class="flex gap-x-4">
-  {#if !entry}
+  {#if !entry?.status}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.create"]()}
     </Button>
