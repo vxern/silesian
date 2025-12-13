@@ -6,6 +6,7 @@
   import constants from "$lib/constants/core";
   import BackButton from "../../../components/interactions/back-button.svelte";
   import EntryForm from "../form.svelte";
+  import Form from "../../../components/form/index.js";
 
   // TODO(vxern): Pick the example at random from the database.
   // TODO(vxern): Extract the defaults into the constants.
@@ -37,8 +38,8 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/sources")} />
     </Page.Actions>
-    <form method="POST" action="?/create" class="flex flex-col gap-y-6">
+    <Form.Root method="POST" action="?/create" class="flex flex-col gap-y-6">
       <EntryForm />
-    </form>
+    </Form.Root>
   </Page.Contents>
 </Page.Root>

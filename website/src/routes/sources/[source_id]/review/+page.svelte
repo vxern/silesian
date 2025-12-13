@@ -51,12 +51,7 @@
       <Form.Disabled>
         <SourceForm source={data.source} />
       </Form.Disabled>
-      <form
-        method="POST"
-        action="?/review"
-        use:enhance
-        class="flex flex-col gap-y-6"
-      >
+      <Form.Root method="POST" action="?/review" class="flex flex-col gap-y-6">
         <input type="hidden" name="id" value={data.source.id} />
         <Page.Actions>
           <Button type="submit" icon={CheckLineIcon} colour="green">
@@ -66,7 +61,7 @@
             {m["components.form.reject"]()}
           </Button>
         </Page.Actions>
-      </form>
+      </Form.Root>
     </section>
   </Page.Contents>
 </Page.Root>

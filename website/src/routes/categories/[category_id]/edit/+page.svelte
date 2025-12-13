@@ -1,12 +1,12 @@
 <script>
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
-  import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import CategoryForm from "../../form.svelte";
   import BackButton from "../../../../components/interactions/back-button.svelte";
   import constants from "$lib/constants/core";
+  import Form from "../../../../components/form/index.js";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
 
@@ -43,14 +43,9 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/categories/drafts")} />
     </Page.Actions>
-    <form
-      method="POST"
-      action="?/update"
-      use:enhance
-      class="flex flex-col gap-y-6"
-    >
+    <Form.Root method="POST" action="?/update" class="flex flex-col gap-y-6">
       <input type="hidden" name="id" value={data.category.id} />
       <CategoryForm category={data.category} />
-    </form>
+    </Form.Root>
   </Page.Contents>
 </Page.Root>

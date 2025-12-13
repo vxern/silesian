@@ -1,13 +1,10 @@
 <script>
   import { m } from "$lib/paraglide/messages";
-  import { onMount } from "svelte";
-  import { page } from "$app/state";
-  import { enhance } from "$app/forms";
   import Page from "../../../../components/page/index.js";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
-  import Loading from "../../../../components/meta/loading.svelte";
   import EntryForm from "../../form.svelte";
   import constants from "$lib/constants/core";
+  import Form from "../../../components/form/index.js";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
 
@@ -41,14 +38,9 @@
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    <form
-      method="POST"
-      action="?/update"
-      use:enhance
-      class="flex flex-col gap-y-6"
-    >
+    <Form.Root method="POST" action="?/update" class="flex flex-col gap-y-6">
       <input type="hidden" name="id" value={data.entry.id} />
       <EntryForm entry={data.entry} />
-    </form>
+    </Form.Root>
   </Page.Contents>
 </Page.Root>

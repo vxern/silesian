@@ -54,7 +54,6 @@
               <form
                 method="POST"
                 action="?/delete"
-                use:enhance
                 class="flex flex-col gap-y-6"
               >
                 <input type="hidden" name="id" value={location.id} />
