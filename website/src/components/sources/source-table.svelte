@@ -60,10 +60,10 @@
         {m["components.source_table.licence"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.version"]()}
+        {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.progress.progress"]()}
+        {m["components.source_table.version"]()}
       </Table.HeaderCell>
       {#if hasPermission && sources.length > 0}
         {#if mode === "edit"}
@@ -117,9 +117,6 @@
           <LicenceLabel licence={source.licence} />
         </Table.Cell>
         <Table.Cell>
-          {source.version}
-        </Table.Cell>
-        <Table.Cell>
           <section class="flex flex-col">
             {m["components.source_table.progress.numbers"]({
               imported: source.imported_entry_count,
@@ -144,6 +141,9 @@
               </span>
             {/if}
           </section>
+        </Table.Cell>
+        <Table.Cell>
+          {source.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
