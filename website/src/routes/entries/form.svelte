@@ -42,7 +42,6 @@
     name="category_ids[]"
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
-    required={true}
     options={() =>
       fetch("/autocomplete/categories?include_unpublished")
         .then((response) => response.json())
