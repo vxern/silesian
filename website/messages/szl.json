@@ -407,7 +407,8 @@
         "categories_description": "Do jakich kategoryjōw nŏleży?",
         "contents": "Inhalt ze podglōndym",
         "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
-        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie."
+        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
+        "make_more": "Tworzã wiyncyj haseł."
       }
     },
     "login": {
@@ -488,7 +489,8 @@
         "redistributable": "Możno szyrzić?",
         "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
         "total_entry_count": "Liczba haseł (we prziblyżyniu)",
-        "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?"
+        "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?",
+        "make_more": "Tworzã wiyncyj zdrzōdeł."
       }
     },
     "authors": {
@@ -530,7 +532,8 @@
         "locations": "Miyjsca",
         "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?",
         "description": "Ôpis",
-        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym autorze?"
+        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym autorze?",
+        "make_more": "Tworzã wiyncyj autorōw."
       }
     },
     "locations": {
@@ -582,7 +585,8 @@
         "description": "Ôpis",
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym miyjscu?",
         "country": "Państwo",
-        "country_description": "We jakim państwie leży to miyjsce?"
+        "country_description": "We jakim państwie leży to miyjsce?",
+        "make_more": "Tworzã wiyncyj miyjsc."
       }
     },
     "categories": {
@@ -624,7 +628,8 @@
         "description": "Ôpis",
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tyj kategoryji?",
         "colour": "Farba",
-        "colour_description": "Jakõ farbã ta kategoryjŏ bydzie mieć?"
+        "colour_description": "Jakõ farbã ta kategoryjŏ bydzie mieć?",
+        "make_more": "Tworzã wiyncyj kategoryjōw."
       }
     },
     "lemma": {

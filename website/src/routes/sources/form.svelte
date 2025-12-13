@@ -157,7 +157,7 @@
   <section class="flex-1"></section>
   <section class="flex-1"></section>
 </section>
-<section class="flex gap-x-4 items-start">
+<section class="flex gap-x-4">
   {#if !source}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.create"]()}
@@ -165,6 +165,10 @@
     <Button name="draft" type="submit" icon={AddLineIcon} colour="yellow">
       {m["components.form.create_as_draft"]()}
     </Button>
+    <section class="flex items-center gap-x-2">
+      <input name="make_more" type="checkbox" checked class="size-4" />
+      <label for="make_more">{m["routes.sources.form.make_more"]()}</label>
+    </section>
   {:else if source.status === "draft"}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.publish"]()}

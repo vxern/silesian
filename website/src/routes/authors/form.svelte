@@ -45,7 +45,7 @@
     value={author?.description}
   />
 </section>
-<section class="flex gap-x-4 items-start">
+<section class="flex gap-x-4">
   {#if !author}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.create"]()}
@@ -53,6 +53,10 @@
     <Button name="draft" type="submit" icon={AddLineIcon} colour="yellow">
       {m["components.form.create_as_draft"]()}
     </Button>
+    <section class="flex items-center gap-x-2">
+      <input name="make_more" type="checkbox" checked class="size-4" />
+      <label for="make_more">{m["routes.authors.form.make_more"]()}</label>
+    </section>
   {:else if author.status === "draft"}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.publish"]()}

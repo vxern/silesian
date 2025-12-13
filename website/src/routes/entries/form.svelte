@@ -76,6 +76,10 @@
     <Button name="draft" type="submit" icon={AddLineIcon} colour="yellow">
       {m["components.form.create_as_draft"]()}
     </Button>
+    <section class="flex items-center gap-x-2">
+      <input name="make_more" type="checkbox" checked class="size-4" />
+      <label for="make_more">{m["routes.entries.form.make_more"]()}</label>
+    </section>
   {:else if entry.status === "draft"}
     <Button type="submit" icon={Upload2LineIcon} colour="green">
       {m["components.form.publish"]()}

@@ -49,12 +49,12 @@
           {entry.lemma}
         </Table.Cell>
         <Table.Cell>
-          <SourceLabel source={entry.source} link={true} />
+          <SourceLabel source={entry.source} />
         </Table.Cell>
         <Table.Cell>
           {#if entry.categories.length > 0}
             {#each entry.categories as category}
-              <CategoryLabel category={category.category} link={true} />
+              <CategoryLabel {category} />
             {/each}
           {:else}
             {m["meta.none"]()}
