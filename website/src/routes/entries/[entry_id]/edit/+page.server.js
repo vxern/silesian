@@ -51,7 +51,7 @@ export const actions = {
       status: data.has("draft") ? "draft" : "pending",
       lemma: data.get("lemma"),
       contents: data.get("contents"),
-      source_id: data.get("source_id"),
+      source_id: data.get("source_id") ? Number(data.get("source_id")) : null,
     });
 
     const categoryIds = idsSchema.parse(JSON.parse(data.get("category_ids[]")));
