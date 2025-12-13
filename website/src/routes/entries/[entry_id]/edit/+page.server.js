@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
-import { db } from "$lib/database.server";
-import { entries, entriesToCategories, categories, sources, entriesToCategories, versions } from "$lib/database/schema";
+import { db, versionedUpdate, versionedJoin } from "$lib/database.server";
+import { entries, entriesToCategories, categories, sources, entriesToCategories, versions, entriesUpdateSchema, idsSchema } from "$lib/database/schema";
 import { eq, and } from 'drizzle-orm';
 
 export const load = async ({ params }) => {
@@ -20,6 +20,7 @@ function getEntry({ id }) {
       and(
         // TODO(vxern): Set the right author.
         eq(versions.author_id, 1),
+        eq(entries.id, id),
         eq(entries.deleted, false),
         eq(entries.status, "draft"),
       ),
@@ -47,7 +48,7 @@ export const actions = {
 
     // TODO(vxern): IMPORTANT - Validate the source.
 
-    const entryData = entriesInsertSchema.parse({
+    const entryData = entriesUpdateSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       lemma: data.get("lemma"),
       contents: data.get("contents"),
@@ -57,8 +58,9 @@ export const actions = {
     const categoryIds = idsSchema.parse(JSON.parse(data.get("category_ids[]")));
 
     const entry = await db.transaction(async (tx) => {
-      const entry = await versionedInsert({
+      const entry = await versionedUpdate({
         table: entries,
+        id: Number(data.get("id")),
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,
         values: entryData,
@@ -74,7 +76,7 @@ export const actions = {
         existingIds: await db
           .select({ id: entriesToCategories.category_id })
           .from(entriesToCategories)
-          .where(eq(entriesToCategories.entry_id, author.id))
+          .where(eq(entriesToCategories.entry_id, entry.id))
           .then((results) => results.map((result) => result.id)),
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,
