@@ -54,13 +54,17 @@
                 {entry.source.name}
               </a>
             </section>
-            <section>
-              <span class="text-zinc-600">{m["routes.lemma.authors"]()}</span>
-              {entry.source.authors
-                .map((author) => author.author)
-                .map((author) => author.name)
-                .join(", ")}
-            </section>
+            {#if entry.source.authors.length > 0}
+              <section>
+                <span class="text-zinc-600">
+                  {m["routes.lemma.authors"]()}
+                </span>
+                {entry.source.authors
+                  .map((author) => author.author)
+                  .map((author) => author.name)
+                  .join(", ")}
+              </section>
+            {/if}
           </article>
         </section>
       {/each}
