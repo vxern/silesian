@@ -64,6 +64,12 @@
     "neutral": "Nojtralnŏ",
     "stone": "Kamiynnŏ"
   },
+  "countries": {
+    "poland": "Polskŏ",
+    "czechia": "Czechy",
+    "germany": "Niymce",
+    "slovakia": "Słowacyjŏ"
+  },
   "components": {
     "search_bar": {
       "placeholder": "Kierygo słowa szukŏcie?",
@@ -522,7 +528,9 @@
         "name": "Miano",
         "name_description": "Jako sie tyn autōr mianuje?",
         "locations": "Miyjsca",
-        "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?"
+        "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?",
+        "description": "Ôpis",
+        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym autorze?"
       }
     },
     "locations": {
@@ -570,7 +578,11 @@
       },
       "form": {
         "name": "Miano",
-        "name_description": "Jako sie to miyjsce mianuje?"
+        "name_description": "Jako sie to miyjsce mianuje?",
+        "description": "Ôpis",
+        "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym miyjscu?",
+        "country": "Państwo",
+        "country_description": "We jakim państwie leży to miyjsce?"
       }
     },
     "categories": {

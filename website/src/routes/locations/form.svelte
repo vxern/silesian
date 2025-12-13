@@ -5,6 +5,7 @@
   import Upload2LineIcon from "~icons/mingcute/upload-2-line";
   import Form from "../../components/form/index.js";
   import Button from "../../components/interactions/button.svelte";
+  import { countriesEnum } from "$lib/database/schema";
 
   // TODO(vxern): Prefill from the object.
   const { location } = $props();
@@ -16,6 +17,26 @@
     label={m["routes.locations.form.name"]()}
     description={m["routes.locations.form.name_description"]()}
     value={location?.name}
+  />
+  <Form.SelectElement
+    name="country"
+    label={m["routes.locations.form.country"]()}
+    description={m["routes.locations.form.country_description"]()}
+    options={() =>
+      countriesEnum.enumValues.map((country) => [
+        m[`countries.${country}`](),
+        country,
+      ])}
+    component={Form.CountrySelectOption}
+    value={location?.country}
+  />
+</section>
+<section class="flex gap-x-4">
+  <Form.TextElement
+    name="description"
+    label={m["routes.locations.form.description"]()}
+    description={m["routes.locations.form.description_description"]()}
+    value={location?.description}
   />
 </section>
 <section class="flex gap-x-4 items-start">

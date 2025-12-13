@@ -1,4 +1,3 @@
-
 const localeToFlag = {
   szl: "szl",
   pl: "pl",

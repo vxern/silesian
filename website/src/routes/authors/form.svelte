@@ -32,6 +32,14 @@
     value={author?.locations?.map((location) => location.id)}
   />
 </section>
+<section class="flex gap-x-4">
+  <Form.TextElement
+    name="description"
+    label={m["routes.authors.form.description"]()}
+    description={m["routes.authors.form.description_description"]()}
+    value={author?.description}
+  />
+</section>
 <section class="flex gap-x-4 items-start">
   {#if !author}
     <Button type="submit" icon={Upload2LineIcon} colour="green">

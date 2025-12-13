@@ -10,6 +10,8 @@ export const actions = {
     const locationData = locationsInsertSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"),
+      description: data.get("description") || null,
+      country: data.get("country"),
     });
 
     const location = await versionedInsert({

@@ -46,6 +46,7 @@ export const actions = {
     const authorData = authorsInsertSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"),
+      description: data.get("description") || null,
     });
 
     const locationIds = idsSchema.parse(JSON.parse(data.get("location_ids[]")));

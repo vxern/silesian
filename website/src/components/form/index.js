@@ -9,6 +9,7 @@ import AccessSelectOption from "./select/access-select-option.svelte";
 import AuthorSelectOption from "./select/author-select-option.svelte";
 import CategorySelectOption from "./select/category-select-option.svelte";
 import ColourSelectOption from "./select/colour-select-option.svelte";
+import CountrySelectOption from "./select/country-select-option.svelte";
 import LanguageSelectOption from "./select/language-select-option.svelte";
 import LicenceSelectOption from "./select/licence-select-option.svelte";
 import LocationSelectOption from "./select/location-select-option.svelte";
@@ -28,6 +29,7 @@ export default {
   AuthorSelectOption,
   CategorySelectOption,
   ColourSelectOption,
+  CountrySelectOption,
   LanguageSelectOption,
   LicenceSelectOption,
   LocationSelectOption,
