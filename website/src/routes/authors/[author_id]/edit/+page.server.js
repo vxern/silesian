@@ -56,7 +56,7 @@ export const actions = {
         table: authors,
         id: Number(data.get("id")),
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
         values: authorData,
         returning: { status: authors.status },
       });
@@ -73,7 +73,7 @@ export const actions = {
         targetIds: locationIds,
         targetColumnName: "location_id",
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
       });
 
       return author;

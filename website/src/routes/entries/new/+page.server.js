@@ -24,7 +24,7 @@ export const actions = {
       const entry = await versionedInsert({
         table: entries,
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
         values: entryData,
         returning: { lemma: entries.lemma },
       });
@@ -37,7 +37,7 @@ export const actions = {
         targetColumnName: "category_id",
         existingIds: [],
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
       });
 
       return entry;

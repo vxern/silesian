@@ -17,7 +17,7 @@ export const actions = {
     const location = await versionedInsert({
       table: locations,
       // TODO(vxern): IMPORTANT - Update the author ID.
-      authorId: 2,
+      authorId: 1,
       values: locationData,
       returning: { status: locations.status },
     });

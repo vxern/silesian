@@ -63,7 +63,7 @@ export const actions = {
         table: sources,
         id: Number(data.get("id")),
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
         values: sourceData,
         returning: { status: sources.status },
       });
@@ -80,7 +80,7 @@ export const actions = {
           .where(eq(authorsToSources.source_id, source.id))
           .then((results) => results.map((result) => result.id)),
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
       });
 
       return source;

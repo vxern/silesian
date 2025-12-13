@@ -40,7 +40,7 @@ export const actions = {
       table: categories,
       id: Number(data.get("id")),
       // TODO(vxern): IMPORTANT - Update the author ID.
-      authorId: 2,
+      authorId: 1,
       values: categoryData,
       returning: { status: categories.status },
     });

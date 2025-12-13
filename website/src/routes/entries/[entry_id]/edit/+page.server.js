@@ -60,7 +60,7 @@ export const actions = {
       const entry = await versionedInsert({
         table: entries,
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
         values: entryData,
         returning: { lemma: entries.lemma },
       });
@@ -77,7 +77,7 @@ export const actions = {
           .where(eq(entriesToCategories.entry_id, author.id))
           .then((results) => results.map((result) => result.id)),
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
       });
 
       return entry;

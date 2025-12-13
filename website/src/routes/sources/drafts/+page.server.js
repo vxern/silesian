@@ -48,7 +48,7 @@ export const actions = {
       table: sources,
       id: data.get("id"),
       // TODO(vxern): IMPORTANT - Update the author ID.
-      authorId: 2,
+      authorId: 1,
     });
 
     // TODO(vxern): Show toast.

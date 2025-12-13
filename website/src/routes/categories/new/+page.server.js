@@ -17,7 +17,7 @@ export const actions = {
     const category = await versionedInsert({
       table: categories,
       // TODO(vxern): IMPORTANT - Update the author ID.
-      authorId: 2,
+      authorId: 1,
       values: categoryData,
       returning: { status: categories.status },
     });

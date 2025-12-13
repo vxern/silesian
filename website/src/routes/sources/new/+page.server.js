@@ -30,7 +30,7 @@ export const actions = {
       const source = await versionedInsert({
         table: sources,
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
         values: sourceData,
         returning: { status: sources.status },
       });
@@ -43,7 +43,7 @@ export const actions = {
         targetColumnName: "author_id",
         existingIds: [],
         // TODO(vxern): IMPORTANT - Update the author ID.
-        authorId: 2,
+        authorId: 1,
       });
 
       return source;
