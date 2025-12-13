@@ -24,7 +24,7 @@ function getAdditionCount() {
     .select({ count: count() })
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 2))
+    .where(eq(versions.author_id, 1))
     .then((results) => results.at(0).count);
 }
 
@@ -33,7 +33,7 @@ async function getAdditionCountByMonth() {
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 2))
+    .where(eq(versions.author_id, 1))
     .where(gte(versions.created_at, dayjs().startOf("year")))
     .groupBy(sql`month`);
 
@@ -52,5 +52,5 @@ function getAdditionHistory() {
     .select()
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 2));
+    .where(eq(versions.author_id, 1));
 }

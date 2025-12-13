@@ -26,7 +26,7 @@ function getCategories(params) {
             and(
               ne(categories.status, "published"),
               // TODO(vxern): Set the right author.
-              eq(versions.author_id, 2),
+              eq(versions.author_id, 1),
             ),
           ),
         ),

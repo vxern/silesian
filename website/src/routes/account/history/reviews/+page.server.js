@@ -22,7 +22,7 @@ function getReviewCount() {
     .select({ count: count() })
     .from(reviews)
     .innerJoin(versions, eq(reviews.version_id, versions.id))
-    .where(eq(versions.author_id, 2))
+    .where(eq(versions.author_id, 1))
     .then((results) => results.at(0).count);
 }
 

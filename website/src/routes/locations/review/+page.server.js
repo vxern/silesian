@@ -17,7 +17,7 @@ function getPendingLocations() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        ne(versions.author_id, 2),
+        ne(versions.author_id, 1),
         eq(locations.deleted, false),
         eq(locations.status, "pending"),
       ),

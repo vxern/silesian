@@ -26,7 +26,7 @@ function getSources(params) {
             and(
               ne(sources.status, "published"),
               // TODO(vxern): Set the right author.
-              eq(versions.author_id, 2),
+              eq(versions.author_id, 1),
             ),
           ),
         ),

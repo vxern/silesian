@@ -20,7 +20,7 @@ async function getSearchHistory() {
     db
       .selectDistinctOn([searches.lemma])
       .from(searches)
-      .where(eq(searches.searcher_id, 2))
+      .where(eq(searches.searcher_id, 1))
       .orderBy(searches.lemma, asc(searches.created_at))
       .limit(28)
       .as("distinct_searches");

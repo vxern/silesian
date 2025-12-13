@@ -17,7 +17,7 @@ function getDraftEntries() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 2),
+        eq(versions.author_id, 1),
         eq(entries.deleted, false),
         eq(entries.status, "draft"),
       ),

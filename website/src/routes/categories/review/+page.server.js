@@ -17,7 +17,7 @@ function getPendingCategories() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        ne(versions.author_id, 2),
+        ne(versions.author_id, 1),
         eq(categories.deleted, false),
         eq(categories.status, "pending"),
       ),

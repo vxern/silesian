@@ -19,7 +19,7 @@ function getDraftCount() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 2),
+        eq(versions.author_id, 1),
         eq(authors.deleted, false),
         eq(authors.status, "draft"),
       ),
@@ -36,7 +36,7 @@ function getPendingCount() {
     .where(
       and(
         // TODO(vxern): Set the right author.
-        ne(versions.author_id, 2),
+        ne(versions.author_id, 1),
         eq(authors.deleted, false),
         eq(authors.status, "pending"),
       ),
