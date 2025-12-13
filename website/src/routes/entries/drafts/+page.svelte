@@ -34,7 +34,7 @@
     </Page.Actions>
     <EntryTable
       entries={data.entries}
-      mode="review"
+      mode="edit"
       noneText={m["routes.entries.drafts.none"]()}
     />
   </Page.Contents>

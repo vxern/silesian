@@ -4,7 +4,7 @@
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import EntryForm from "../../form.svelte";
   import constants from "$lib/constants/core";
-  import Form from "../../../components/form/index.js";
+  import Form from "../../../../components/form/index.js";
 
   // TODO(vxern): Kick the user out if they don't have permission to see the page.
 
@@ -38,6 +38,9 @@
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => goto("/entries/drafts")} />
+    </Page.Actions>
     <Form.Root method="POST" action="?/update" class="flex flex-col gap-y-6">
       <input type="hidden" name="id" value={data.entry.id} />
       <EntryForm entry={data.entry} />

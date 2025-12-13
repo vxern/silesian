@@ -19,7 +19,9 @@
           .join(", ")}
       </section>
     {:else}
-      {source.name}
+      <section class="text-start">
+        {source.name}
+      </section>
     {/if}
   </Label>
 {/snippet}

@@ -9,8 +9,6 @@ export const actions = {
   create: async ({ request, locals }) => {
     const data = await request.formData();
 
-    console.log(data);
-
     // TODO(vxern): IMPORTANT - Validate the source.
 
     const entryData = entriesInsertSchema.parse({
@@ -28,7 +26,7 @@ export const actions = {
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,
         values: entryData,
-        returning: { lemma: entries.lemma },
+        returning: { lemma: entries.lemma, source_id: entries.source_id },
       });
 
       await versionedJoin({
@@ -47,7 +45,10 @@ export const actions = {
 
     // TODO(vxern): Handle failure.
 
-    // TODO(vxern): Any better place?
+    if (data.has("make_more")) {
+      return { source_id: entry.source_id };
+    }
+    
     redirect(303, `/lemma/${encodeURIComponent(entry.lemma)}#${entry.id}`);
   },
 };

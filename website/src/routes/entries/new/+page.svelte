@@ -10,6 +10,14 @@
 
   // TODO(vxern): Pick the example at random from the database.
   // TODO(vxern): Extract the defaults into the constants.
+
+  let entry = $state();
+  async function onSubmit({ result, update }) {
+    if (result.type === "success") {
+      entry = { source_id: result.data.source_id };
+      await update({ invalidateAll: true });
+    }
+  }
 </script>
 
 <svelte:head>
@@ -38,8 +46,13 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/entries")} />
     </Page.Actions>
-    <Form.Root method="POST" action="?/create" class="flex flex-col gap-y-6">
-      <EntryForm />
+    <Form.Root
+      method="POST"
+      action="?/create"
+      enhance={() => onSubmit}
+      class="flex flex-col gap-y-6"
+    >
+      <EntryForm {entry} />
     </Form.Root>
   </Page.Contents>
 </Page.Root>

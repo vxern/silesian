@@ -3,7 +3,7 @@
   // TODO(vxern): What is enhance for again?
   import { enhance } from "$app/forms";
 
-  const { children, ...props } = $props();
+  const { children, enhance: enhancement, ...props } = $props();
 
   // TODO(vxern): Need to be smart about when the user should be prevented from leaving.
 
@@ -20,6 +20,6 @@
 
 <svelte:window onbeforeunload={handleBeforeUnload} />
 
-<form {...props} use:enhance class="flex flex-col gap-y-6">
+<form {...props} use:enhance={enhancement} class="flex flex-col gap-y-6">
   {@render children?.()}
 </form>
