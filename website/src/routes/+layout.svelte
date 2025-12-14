@@ -7,6 +7,7 @@
   import "tippy.js/dist/tippy.css";
   import "../app.css";
   import { dayjs } from "../helpers/dates.js";
+  import { SvelteToast } from "@zerodevx/svelte-toast";
 
   // TODO(vxern): This needs to update with settings.
   dayjs.locale("szl");
@@ -33,6 +34,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 </svelte:head>
+
+<!-- TODO(vxern): IMPORTANT - Theme this. -->
+<SvelteToast />
 
 <section
   class="min-h-screen max-w-screen flex overflow-x-hidden items-center justify-center text-center"
