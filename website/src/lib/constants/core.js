@@ -8,17 +8,46 @@ export default Object.freeze({
     language: "szl",
   },
   specialLetters: [
-    "ã",
-    "ć",
-    "ł",
-    "ŏ",
-    "ō",
-    "ô",
-    "õ",
-    "ń",
-    "ś",
-    "ź",
-    "ż",
+    // Nasals
+    {
+      colours: "text-yellow-400",
+      letters: [
+        "ã",
+        "ĩ",
+        "õ",
+        "õ̱",
+        "ũ",
+        "ỹ",
+      ],
+    },
+    // Vł (oł, eł)
+    {
+      colours: "text-blue-400",
+      letters: [
+        "ŏ",
+        "ĕ",
+      ],
+    },
+    // łV (ło, łō)
+    {
+      colours: "text-green-400",
+      letters: [
+        "ô",
+        "ô̱",
+      ],
+    },
+    // Polish
+    {
+      colours: "text-red-400",
+      letters: [
+        "ć",
+        "ś",
+        "ź",
+        "ń",
+        "ł",
+        "ż",
+      ],
+    },
   ],
   subdomains: {
     dictionary: "http://dictionary.localhost",

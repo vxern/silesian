@@ -5,6 +5,7 @@
   import constants from "$lib/constants/core";
   import { m } from "$lib/paraglide/messages";
   import tippy from "tippy.js";
+  import { clsx } from "clsx/lite";
   import "tippy.js/themes/material.css";
 
   // TODO(vxern): Add autocomplete.
@@ -15,6 +16,7 @@
   let capsLockEnabled = $state();
   let shiftReset = $state();
   let capsLockReset = $state();
+  let capitaliseSpecialLetters = $derived(shiftEnabled || capsLockEnabled);
   let inputElement;
   let submitElement;
   let lettersElement;
@@ -45,14 +47,6 @@
         capsLockReset = true;
         break;
     }
-  }
-
-  function specialLetters() {
-    if (shiftEnabled || capsLockEnabled) {
-      return constants.specialLetters.map((letter) => letter.toUpperCase());
-    }
-
-    return constants.specialLetters;
   }
 
   function insertSpecialLetter(letter) {
@@ -187,16 +181,22 @@
       <Search2LineIcon />
     </button>
   </section>
-  <section>
-    <article class="flex gap-x-4 w-full" bind:this={lettersElement}>
-      {#each specialLetters() as letter}
+  <section class="flex gap-x-4 items-center" bind:this={lettersElement}>
+    {#each constants.specialLetters as group}
+      {#each group.letters as letter_}
+        {@const letter = capitaliseSpecialLetters
+          ? letter_.toUpperCase()
+          : letter_}
         <button
-          class="rounded-lg size-7 font-bold cursor-pointer outline-1 outline-zinc-600 bg-zinc-800 hover:bg-zinc-700 hover:outline-zinc-500 text-zinc-300 hover:text-zinc-200"
+          class={clsx(
+            "rounded-lg size-7 font-bold cursor-pointer outline-1 outline-zinc-600 bg-zinc-800 hover:bg-zinc-700 hover:outline-zinc-500",
+            group.colours
+          )}
           onclick={() => insertSpecialLetter(letter)}
         >
           {letter}
         </button>
       {/each}
-    </article>
+    {/each}
   </section>
 </section>
