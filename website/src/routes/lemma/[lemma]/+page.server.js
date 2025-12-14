@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { entries, entriesToCategories, categories, authorsToSources, authors, sources, entriesInsertSchema, idsSchema } from "$lib/database/schema";
-import { sql, and, eq, like } from "drizzle-orm";
+import { sql, and, eq, like, asc } from "drizzle-orm";
 
 export const load = async ({ params }) => {
   // TODO(vxern): Filter the status as well.
@@ -11,8 +11,16 @@ export const load = async ({ params }) => {
 };
 
 function getEntries({ lemma }) {
+  const similarity = sql`levenshtein(${entries.lemma}, ${lemma})`
+
   return db
-    .select({ entries, sources, authors, categories })
+    .select({
+      entries,
+      sources,
+      authors,
+      categories,
+      similarity,
+    })
     .from(entries)
     .withVersions()
     .where(
@@ -28,7 +36,10 @@ function getEntries({ lemma }) {
     .leftJoin(entriesToCategories, eq(entriesToCategories.entry_id, entries.id))
     .leftJoin(categories, eq(categories.id, entriesToCategories.category_id))
     .then(
-      (results) => Object.values(Object.groupBy(results, ({ entries }) => entries.id)).map(
+      (results) =>
+        Object.values(Object.groupBy(results, ({ entries }) => entries.id))
+          .toSorted((a, b) => a[0].similarity - b[0].similarity)
+          .map(
         (results) => {
           const entry = results[0].entries;
 
