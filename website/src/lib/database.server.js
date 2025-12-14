@@ -1,4 +1,5 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
+import { EnhancedQueryLogger } from 'drizzle-query-logger';
 import { PgSelectBase } from 'drizzle-orm/pg-core';
 import postgres from 'postgres';
 import { isEqual } from 'es-toolkit/predicate';
@@ -19,7 +20,11 @@ const client = postgres({
   database: DATABASE_DATABASE,
 });
 
-export const db = drizzle({ client, schema, logger: true });
+export const db = drizzle({
+  client,
+  schema, 
+  logger: new EnhancedQueryLogger(),
+});
 
 PgSelectBase.prototype.withVersions = function () {
   return this.innerJoin(versions, and(
