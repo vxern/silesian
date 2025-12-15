@@ -15,31 +15,32 @@ export default Object.freeze({
         "ã",
         "ĩ",
         "õ",
-        "õ̱",
         "ũ",
         "ỹ",
       ],
     },
-    // Vł (oł, eł)
+    // Vł (ał, oł, eł, ył)
     {
       colours: "text-blue-400",
       letters: [
+        "ă",
         "ŏ",
         "ĕ",
+        "y̆",
       ],
     },
     // łV (ło, łō)
     {
       colours: "text-green-400",
       letters: [
-        "ô",
-        "ô̱",
+        "ô"
       ],
     },
-    // Polish
+    // Normal sounds
     {
       colours: "text-red-400",
       letters: [
+        "ō",
         "ć",
         "ś",
         "ź",
