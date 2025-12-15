@@ -2,9 +2,9 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "title": "{project_name} — {page_title}",
   "donation": {
-    "donate": "Spōmōż nŏs",
+    "donate": "Spōmōż nos",
     "goals": {
-      "new_licence": "Licyncyjŏ ku nowymu dykcjōnŏrzu",
+      "new_licence": "Licyncyjo ku nowymu dykcjōnorzu",
       "hosting_fee": "Gazdowaniy strōny"
     },
     "progress": "{progress}%"
@@ -19,7 +19,7 @@
     "en-GB": "angelski"
   },
   "orthographies": {
-    "slabikorz": "Ślabikŏrz",
+    "slabikorz": "Ślabikorz",
     "steuer": "Steuer",
     "phonetic": "Ślōnski alfabet fōnetyczny",
     "wencel": "Wencel",
@@ -31,9 +31,9 @@
     "other": "Inkszy szrajbōnek"
   },
   "licences": {
-    "proprietary": "zastrzeżōnŏ",
-    "granted": "udzielōno pozwolyniŏ",
-    "public": "publicznŏ włŏsność"
+    "proprietary": "zastrzeżōno",
+    "granted": "udzielōno pozwolynio",
+    "public": "publiczno włosność"
   },
   "accesses": {
     "closed": "zawrzity",
@@ -41,43 +41,43 @@
     "open": "dostympny"
   },
   "colours": {
-    "red": "Czyrwōnŏ",
-    "orange": "Ôranżowŏ",
-    "amber": "Bernsztajnowŏ",
-    "yellow": "Żōłtŏ",
-    "lime": "Limōnkowŏ",
-    "green": "Zielōnŏ",
+    "red": "Czyrwōno",
+    "orange": "Ôranżowo",
+    "amber": "Bernsztajnowo",
+    "yellow": "Żōłto",
+    "lime": "Limōnkowo",
+    "green": "Zielōno",
     "emerald": "Cartgrin",
-    "teal": "Morskŏ",
-    "cyan": "Cyjanowŏ",
-    "sky": "Niybieskŏ",
-    "blue": "Modrŏ",
+    "teal": "Morsko",
+    "cyan": "Cyjanowo",
+    "sky": "Niybiesko",
+    "blue": "Modro",
     "indigo": "Indygo",
-    "violet": "Flidrowŏ",
-    "purple": "Lilowŏ",
-    "fuchsia": "Fuksjowŏ",
-    "pink": "Rōżowŏ",
-    "rose": "Rōłzowŏ",
-    "slate": "Szyjfrowŏ",
-    "gray": "Siwŏ",
-    "zinc": "Cingowŏ",
-    "neutral": "Nojtralnŏ",
-    "stone": "Kamiynnŏ"
+    "violet": "Flidrowo",
+    "purple": "Lilowo",
+    "fuchsia": "Fuksjowo",
+    "pink": "Rōżowo",
+    "rose": "Rōłzowo",
+    "slate": "Szyjfrowo",
+    "gray": "Siwo",
+    "zinc": "Cingowo",
+    "neutral": "Nojtralno",
+    "stone": "Kamiynno"
   },
   "countries": {
-    "poland": "Polskŏ",
+    "poland": "Polsko",
     "czechia": "Czechy",
     "germany": "Niymce",
-    "slovakia": "Słowacyjŏ"
+    "slovakia": "Słowacyjo"
   },
   "components": {
     "search_bar": {
-      "placeholder": "Kierygo słowa szukŏcie?",
+      "placeholder": "Kierygo słowa szukocie?",
       "missing_word": "Coby wyszukać, nojprzōd wkludźcie hasło.",
       "reset_caps": {
-        "shift": "Proszymy jeszcze rŏz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
-        "caps_lock": "Proszymy jeszcze rŏz naciś tasty Caps Lock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
-        "both": "Proszymy jeszcze rŏz naciś tastōw Shift a Caps Lock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
+        "shift": "Proszymy jeszcze roz naciś tasty Shift, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
+        "caps_lock": "Proszymy jeszcze roz naciś tasty Caps Lock, coby prziwrōcić jeji sztand po ôpuszczyniu ôkna.",
+        "both": "Proszymy jeszcze roz naciś tastōw Shift a Caps Lock, coby prziwrōcić jejich sztand po ôpuszczyniu ôkna."
       }
     },
     "form": {
@@ -96,9 +96,9 @@
       "description": "Ôpis",
       "authors": "Autorzi",
       "year": "Rok",
-      "licence": "Licyncyjŏ",
+      "licence": "Licyncyjo",
       "access": "Dostymp",
-      "version": "Wersyjŏ",
+      "version": "Wersyjo",
       "progress": {
         "progress": "Postymp",
         "numbers": "{imported} ze {total}",
@@ -109,22 +109,22 @@
       "lemma": "Hasło",
       "source": "Zdrzōdło",
       "categories": "Kategoryje",
-      "version": "Wersyjŏ"
+      "version": "Wersyjo"
     },
     "category_table": {
       "name": "Miano",
       "description": "Ôpis",
       "colour": "Farba",
-      "version": "Wersyjŏ"
+      "version": "Wersyjo"
     },
     "location_table": {
       "name": "Miano",
-      "version": "Wersyjŏ"
+      "version": "Wersyjo"
     },
     "author_table": {
       "name": "Miano",
       "locations": "Miyjsca",
-      "version": "Wersyjŏ"
+      "version": "Wersyjo"
     },
     "search_tables": {
       "chart": {
@@ -155,7 +155,7 @@
       "history": {
         "lemma": "Hasło",
         "created_at": "Kiedy",
-        "no_addition_history": "Jeszcze żŏdnych haseł żeście niy przidali."
+        "no_addition_history": "Jeszcze żodnych haseł żeście niy przidali."
       }
     },
     "change_tables": {
@@ -171,52 +171,52 @@
       "history": {
         "lemma": "Hasło",
         "created_at": "Kiedy",
-        "no_change_history": "Jeszcze żŏdnych haseł żeście niy zmiynili."
+        "no_change_history": "Jeszcze żodnych haseł żeście niy zmiynili."
       }
     },
     "review_tables": {
       "chart": {
-        "chart": "Wykres sprŏwdzyń haseł (na tyn rok)",
+        "chart": "Wykres sprowdzyń haseł (na tyn rok)",
         "count": "Liczba",
         "month": "Miesiōnc",
-        "label": "Liczba sprŏwdzyń haseł na miesiōnc"
+        "label": "Liczba sprowdzyń haseł na miesiōnc"
       },
       "overview": {
-        "count": "Liczba sprŏwdzyń haseł na miesiōnc"
+        "count": "Liczba sprowdzyń haseł na miesiōnc"
       },
       "history": {
         "lemma": "Hasło",
         "created_at": "Kiedy",
-        "no_review_history": "Jeszcze żŏdnych haseł żeście niy sprŏwdzili."
+        "no_review_history": "Jeszcze żodnych haseł żeście niy sprowdzili."
       }
     },
     "search_history": {
       "no_search_history": "Jeszcze niczygo niy szukaliście.",
-      "no_popular_searches": "Żŏdyn jeszcze niczygo niy szukoł."
+      "no_popular_searches": "Żodyn jeszcze niczygo niy szukoł."
     },
     "version_section": {
-      "version": "Wersyjŏ {version}"
+      "version": "Wersyjo {version}"
     },
     "back_button": {
-      "back": "Nazŏd"
+      "back": "Nazod"
     }
   },
   "routes": {
     "home": {
       "title": "Sztart",
-      "description": "{project_name} je strōna stworzōnŏ ku ôpisowaniu ślōnskij gŏdki a jejich narzeczy.",
+      "description": "{project_name} je strōna stworzōno ku ôpisowaniu ślōnskij godki a jejich narzeczy.",
       "splashes": {
-        "one": "Dykcjōnŏrze ślōnskij gŏdki",
-        "two": "Dykcjōnŏrze ślōnskigo jynzyka",
-        "three": "Dykcjōnŏrze ślōnskij szprachy",
-        "four": "Dykcjōnŏrze ślōnskij mŏwy",
-        "five": "Dykcjōnŏrze ślōnskij rzeczy",
-        "six": "Dykcjōnŏrze ślōnskich dyjalektōw",
-        "seven": "Dykcjōnŏrze ślōnskich narzeczy",
-        "eight": "Dykcjōnŏrze pō naszymu"
+        "one": "Dykcjōnorze ślōnskij godki",
+        "two": "Dykcjōnorze ślōnskigo jynzyka",
+        "three": "Dykcjōnorze ślōnskij szprachy",
+        "four": "Dykcjōnorze ślōnskij mowy",
+        "five": "Dykcjōnorze ślōnskij rzeczy",
+        "six": "Dykcjōnorze ślōnskich dyjalektōw",
+        "seven": "Dykcjōnorze ślōnskich narzeczy",
+        "eight": "Dykcjōnorze pō naszymu"
       },
       "subdomains": {
-        "dictionary": "Dykcjōnŏrz",
+        "dictionary": "Dykcjōnorz",
         "thesaurus": "Tezaurus",
         "translations": "Przekłady",
         "map": "Karta",
@@ -272,15 +272,15 @@
       "sections": {
         "what": {
           "title": "Co?",
-          "description": "{project_name} je agregatōr roztōmajtych ślōnskich dykcjōnŏrzōw, tekstōw, artiklōw a inkszych zdrzōdeł ze informacyjami ô ślōnskij gŏdce."
+          "description": "{project_name} je agregatōr roztōmajtych ślōnskich dykcjōnorzōw, tekstōw, artiklōw a inkszych zdrzōdeł ze informacyjami ô ślōnskij godce."
         },
         "when": {
           "title": "Kiedy?",
-          "description": "{project_name} stworzōno bez 2025; robota nad strōnōm zajmnyła pŏrã miesiyncy, a przidŏwaniy nowych haseł dalszij twŏ."
+          "description": "{project_name} stworzōno bez 2025; robota nad strōnōm zajmnyła pora miesiyncy, a przidowaniy nowych haseł dalszij two."
         },
         "why": {
           "title": "Czamu?",
-          "description": "{project_name} stworzōno, bo chociŏż mōmy słownikōw aż zazbyt, niy bōło żŏdnygo zdrzōdła, co by je wszyjskiy zebrały we jedno miyjsce."
+          "description": "{project_name} stworzōno, bo chocioż mōmy słownikōw aż zazbyt, niy bōło żodnygo zdrzōdła, co by je wszyjskiy zebrały we jedno miyjsce."
         },
         "authors": {
           "title": "Autorzi",
@@ -308,34 +308,34 @@
       "description": "Informacyje ô Waszym kōncie.",
       "history": {
         "searches": {
-          "title": "Historyjŏ wyszukań",
-          "description": "Samkej możecie sprŏwdzić wasze skorsze wyszukania, a kiedy żeście je wyszukowali."
+          "title": "Historyjo wyszukań",
+          "description": "Samkej możecie sprowdzić wasze skorsze wyszukania, a kiedy żeście je wyszukowali."
         },
         "additions": {
-          "title": "Historyjŏ przidatkōw",
-          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście przidali a kiedy."
+          "title": "Historyjo przidatkōw",
+          "description": "Samkej możecie sprowdzić, jakiy hasła żeście przidali a kiedy."
         },
         "changes": {
-          "title": "Historyjŏ zmian",
-          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście zmiyniali a kiedy."
+          "title": "Historyjo zmian",
+          "description": "Samkej możecie sprowdzić, jakiy hasła żeście zmiyniali a kiedy."
         },
         "reviews": {
-          "title": "Historyjŏ sprŏwdzyń",
-          "description": "Samkej możecie sprŏwdzić, jakiy hasła żeście sprŏwdziyli a kiedy."
+          "title": "Historyjo sprowdzyń",
+          "description": "Samkej możecie sprowdzić, jakiy hasła żeście sprowdziyli a kiedy."
         },
         "time_spent_using": {
           "title": "Wykres spyndzōnygo czasu na używaniu strōny",
-          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na używaniu strōny."
+          "description": "Samkej możecie sprowdzić, wiela czasu żeście spyndzili na używaniu strōny."
         },
         "time_spent_editing": {
           "title": "Wykres spyndzōnygo czasu we edytorze",
-          "description": "Samkej możecie sprŏwdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
+          "description": "Samkej możecie sprowdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
         }
       },
       "attributes": {
         "base": {
           "avatar": "Bild",
-          "username": "Miano używŏcza",
+          "username": "Miano używocza",
           "email": "Adresa e-mail",
           "created_at": "Dołōnczōno"
         },
@@ -343,7 +343,7 @@
           "additions": "Przidanych",
           "searches": "Wyszukanych",
           "changes": "Zmiyniōnych",
-          "reviews": "Sprŏwdzōnych",
+          "reviews": "Sprowdzōnych",
           "time_spent_editing": "Czasu przi edytowaniu",
           "time_spent_using": "Czasu przi używaniu"
         }
@@ -352,26 +352,26 @@
     },
     "map": {
       "title": "Karta",
-      "description": "Rozkłŏd ślōnskich dyjalektōw po Gōrnym Ślōnsku."
+      "description": "Rozkłod ślōnskich dyjalektōw po Gōrnym Ślōnsku."
     },
     "entries": {
       "title": "Hasła",
       "description": "",
-      "none": "Niy ma jeszcze żŏdnych haseł.",
+      "none": "Niy ma jeszcze żodnych haseł.",
       "actions": {
         "add": "Przidej nowe hasło",
         "drafts": "Cechōnki",
-        "review": "Sprŏwdź hasła"
+        "review": "Sprowdź hasła"
       },
       "drafts": {
         "title": "Cechōnki haseł",
-        "description": "Cechōnki haseł, kere używŏcz przidŏwŏ.",
-        "none": "Niy mŏcie żŏdnych cechōnkōw."
+        "description": "Cechōnki haseł, kere używocz przidowo.",
+        "none": "Niy mocie żodnych cechōnkōw."
       },
       "review": {
-        "title": "Hasła do sprŏwdzyniŏ",
-        "description": "Hasła, kere sōm już skōńczōne a kere trza sprŏwdzić.",
-        "none": "Niy ma żŏdnych haseł do sprŏwdzyniŏ."
+        "title": "Hasła do sprowdzynio",
+        "description": "Hasła, kere sōm już skōńczōne a kere trza sprowdzić.",
+        "none": "Niy ma żodnych haseł do sprowdzynio."
       },
       "[entry_id]": {
         "edit": {
@@ -380,35 +380,41 @@
           "edit": "Edytuj"
         },
         "review": {
-          "title": "Sprŏwdzaniy hasła — „{entry_lemma}”",
+          "title": "Sprowdzaniy hasła — „{entry_lemma}”",
           "description": ""
         }
       },
       "new": {
         "title": "Nowe hasło",
-        "description": "Przidŏwaniy nowygo hasła ku dykcjōnŏrzu."
+        "description": "Przidowaniy nowygo hasła ku dykcjōnorzu.",
+        "created": "Stworzōno a podano hasło ku sprowdzyniu",
+        "created_as_draft": "Zachowano hasło we cechōnkach"
       },
       "form": {
-        "lemma": "Hasło",
-        "lemma_description": "Jakigo słowa przidŏwōmy?",
+        "lemma": "Hasło (we oryginale)",
+        "lemma_description": "Jakiy słowo przidowōmy?",
+        "normalised_lemma": "Hasło (podle ślabikorza)",
+        "normalised_lemma_description": "Jako to słowo podle ślabikorza wyglōndo?",
         "source_id": "Zdrzōdło",
         "source_id_description": "Skōnd je bierymy?",
-        "licence": "Licyncyjŏ",
+        "authors": "Autorzi",
+        "authors_description": "Gdo to hasło wpisoł?",
+        "licence": "Licyncyjo",
         "licence_description": "Pod jakōm licyncyjōm je dostympne?",
         "access": "Dostymp",
         "access_description": "Jaki je dostymp ku tymu haśle?",
-        "source_language": "Zdrzōdłowŏ gŏdka",
-        "source_language_description": "We jakij gŏdce je napisane zdrzōdłowe słowo?",
-        "target_language": "Przełożōnŏ gŏdka",
-        "target_language_description": "We jakij gŏdce je napisane cylowe słowo?",
+        "source_language": "Zdrzōdłowo godka",
+        "source_language_description": "We jakij godce je napisane zdrzōdłowe słowo?",
+        "target_language": "Przełożōno godka",
+        "target_language_description": "We jakij godce je napisane cylowe słowo?",
         "orthography": "Szrajbōnek",
         "orthography_description": "We jakim szrajbōnku ôstało podane słowo?",
         "categories": "Kategoryje",
-        "categories_description": "Do jakich kategoryjōw nŏleży?",
+        "categories_description": "Do jakich kategoryjōw noleży?",
         "contents": "Inhalt ze podglōndym",
-        "contents_description": "Jakŏ je definicyjŏ ôd tygo słowa?",
-        "preview_message": "Wkludźcie definicyjõ, coby ôbŏczyć, jako bydzie wyglōndała na strōnie.",
-        "make_more": "Tworzã wiyncyj haseł."
+        "contents_description": "Jako je definicyjo ôd tygo słowa?",
+        "preview_message": "Wkludźcie definicyjo, coby ôboczyć, jako bydzie wyglōndała na strōnie.",
+        "make_more": "Tworza wiyncyj haseł."
       }
     },
     "login": {
@@ -435,25 +441,27 @@
     "sources": {
       "title": "Zdrzōdła",
       "description": "Zdrzōdła, ze kierych bierymy nasze hasła.",
-      "none": "Niy ma jeszcze żŏdnych zdrzōdeł.",
+      "none": "Niy ma jeszcze żodnych zdrzōdeł.",
       "actions": {
         "add": "Przidej nowe zdrzōdło",
         "drafts": "Cechōnki",
-        "review": "Sprŏwdź zdrzōdła"
+        "review": "Sprowdź zdrzōdła"
       },
       "new": {
         "title": "Nowe zdrzōdło",
-        "description": "Przidŏwaniy nowygo zdrzōdła ku dykcjōnŏrzu."
+        "description": "Przidowaniy nowygo zdrzōdła ku dykcjōnorzu.",
+        "created": "Stworzōno a podano zdrzōdło ku sprowdzyniu",
+        "created_as_draft": "Zachowano zdrzōdło we cechōnkach"
       },
       "drafts": {
         "title": "Cechōnki zdrzōdeł",
-        "description": "Cechōnki zdrzōdeł, kiere używŏcz przidŏwŏ.",
-        "none": "Niy mŏcie żŏdnych cechōnkōw."
+        "description": "Cechōnki zdrzōdeł, kiere używocz przidowo.",
+        "none": "Niy mocie żodnych cechōnkōw."
       },
       "review": {
-        "title": "Zdrzōdła do sprŏwdzyniŏ",
-        "description": "Zdrzōdła, kiere sōm już skōńczōne a kiere trza sprŏwdzić.",
-        "none": "Niy ma żŏdnych zdrzōdeł do sprŏwdzyniŏ."
+        "title": "Zdrzōdła do sprowdzynio",
+        "description": "Zdrzōdła, kiere sōm już skōńczōne a kiere trza sprowdzić.",
+        "none": "Niy ma żodnych zdrzōdeł do sprowdzynio."
       },
       "[source_id]": {
         "edit": {
@@ -461,7 +469,7 @@
           "description": ""
         },
         "review": {
-          "title": "Sprŏwdzaniy zdrzōdła — „{source_name}”",
+          "title": "Sprowdzaniy zdrzōdła — „{source_name}”",
           "description": ""
         }
       },
@@ -478,11 +486,11 @@
         "year_description": "Kiedy to zdrzōdło stworzōno?",
         "orthography": "Szrajbōnek",
         "orthography_description": "We jakim szrajbōnku sōm podane hasła?",
-        "source_language": "Zdrzōdłowŏ gŏdka",
-        "source_language_description": "We jakij gŏdce sōm podane zdrzōdłowe hasła?",
-        "target_language": "Cylowŏ gŏdka",
-        "target_language_description": "We jakij gŏdce sōm podane przełożōne hasła?",
-        "licence": "Licyncyjŏ",
+        "source_language": "Zdrzōdłowo godka",
+        "source_language_description": "We jakij godce sōm podane zdrzōdłowe hasła?",
+        "target_language": "Cylowo godka",
+        "target_language_description": "We jakij godce sōm podane przełożōne hasła?",
+        "licence": "Licyncyjo",
         "licence_description": "Pod jakōm licyncyjōm je dostympne zdrzōdło?",
         "access": "Dostymp",
         "access_description": "Jaki je dostymp ku tymu zdrzōdle?",
@@ -490,31 +498,33 @@
         "redistributable_description": "Mōmy prawo szyrzić hasła z tygo zdrzōdła?",
         "total_entry_count": "Liczba haseł (we prziblyżyniu)",
         "total_entry_count_description": "Wiela haseł mogymy zaimportować z tygo zdrzōdła?",
-        "make_more": "Tworzã wiyncyj zdrzōdeł."
+        "make_more": "Tworza wiyncyj zdrzōdeł."
       }
     },
     "authors": {
       "title": "Autorzi",
       "description": "Autorzi zdrzōdeł, kierych używōmy.",
-      "none": "Niy ma jeszcze żŏdnych autorōw.",
+      "none": "Niy ma jeszcze żodnych autorōw.",
       "actions": {
         "add": "Przidej nowygo autora",
         "drafts": "Cechōnki",
-        "review": "Sprŏwdź autorōw"
+        "review": "Sprowdź autorōw"
       },
       "new": {
         "title": "Nowy autōr",
-        "description": "Przidŏwaniy nowygo autora ku dykcjōnŏrzu."
+        "description": "Przidowaniy nowygo autora ku dykcjōnorzu.",
+        "created": "Stworzōno a podano autōr ku sprowdzyniu",
+        "created_as_draft": "Zachowano autōr we cechōnkach"
       },
       "drafts": {
         "title": "Cechōnki autorōw",
-        "description": "Cechōnki autorōw, kiere używŏcz przidŏwŏ.",
-        "none": "Niy mŏcie żŏdnych cechōnkōw."
+        "description": "Cechōnki autorōw, kiere używocz przidowo.",
+        "none": "Niy mocie żodnych cechōnkōw."
       },
       "review": {
-        "title": "Autorzi do sprŏwdzyniŏ",
-        "description": "Autorzi, kierych trza sprŏwdzić.",
-        "none": "Niy ma żŏdnych autorōw do sprŏwdzyniŏ."
+        "title": "Autorzi do sprowdzynio",
+        "description": "Autorzi, kierych trza sprowdzić.",
+        "none": "Niy ma żodnych autorōw do sprowdzynio."
       },
       "[author_id]": {
         "edit": {
@@ -522,7 +532,7 @@
           "description": ""
         },
         "review": {
-          "title": "Sprŏwdzaniy autora — „{author_name}”",
+          "title": "Sprowdzaniy autora — „{author_name}”",
           "description": ""
         }
       },
@@ -530,24 +540,26 @@
         "name": "Miano",
         "name_description": "Jako sie tyn autōr mianuje?",
         "locations": "Miyjsca",
-        "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życiŏ?",
+        "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życio?",
         "description": "Ôpis",
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym autorze?",
-        "make_more": "Tworzã wiyncyj autorōw."
+        "make_more": "Tworza wiyncyj autorōw."
       }
     },
     "locations": {
       "title": "Miyjsca",
       "description": "Roztōmańte miyjsca na Gōrnym Ślōnsku a we ôkolicy, z kierych sōm autorzi, zdrzōdła, a tako dalszij.",
-      "none": "Niy ma jeszcze żŏdnych miyjsc.",
+      "none": "Niy ma jeszcze żodnych miyjsc.",
       "actions": {
         "add": "Przidej nowe miyjsce",
         "drafts": "Cechōnki",
-        "review": "Sprŏwdź miyjsca"
+        "review": "Sprowdź miyjsca"
       },
       "new": {
         "title": "Nowe miyjsce",
-        "description": "Przidŏwaniy nowygo miyjsca ku dykcjōnŏrzu."
+        "description": "Przidowaniy nowygo miyjsca ku dykcjōnorzu.",
+        "created": "Stworzōno a podano miyjsce ku sprowdzyniu",
+        "created_as_draft": "Zachowano miyjsce we cechōnkach"
       },
       "[location_id]": {
         "edit": {
@@ -555,19 +567,19 @@
           "description": ""
         },
         "review": {
-          "title": "Sprŏwdzaniy miyjsca — „{location_name}”",
+          "title": "Sprowdzaniy miyjsca — „{location_name}”",
           "description": ""
         }
       },
       "drafts": {
         "title": "Cechōnki miyjsc",
-        "description": "Cechōnki miyjsc, kiere używŏcz przidŏwŏ.",
-        "none": "Niy mŏcie żŏdnych cechōnkōw."
+        "description": "Cechōnki miyjsc, kiere używocz przidowo.",
+        "none": "Niy mocie żodnych cechōnkōw."
       },
       "review": {
-        "title": "Miyjsca do sprŏwdzyniŏ",
-        "description": "Miyjsca, kiere trza sprŏwdzić.",
-        "none": "Niy ma żŏdnych miyjsc do sprŏwdzyniŏ."
+        "title": "Miyjsca do sprowdzynio",
+        "description": "Miyjsca, kiere trza sprowdzić.",
+        "none": "Niy ma żodnych miyjsc do sprowdzynio."
       },
       "[source_id]": {
         "edit": {
@@ -575,7 +587,7 @@
           "description": ""
         },
         "review": {
-          "title": "Sprŏwdzaniy miyjsca — „{location_name}”",
+          "title": "Sprowdzaniy miyjsca — „{location_name}”",
           "description": ""
         }
       },
@@ -586,31 +598,33 @@
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tym miyjscu?",
         "country": "Państwo",
         "country_description": "We jakim państwie leży to miyjsce?",
-        "make_more": "Tworzã wiyncyj miyjsc."
+        "make_more": "Tworza wiyncyj miyjsc."
       }
     },
     "categories": {
       "title": "Kategoryje",
       "description": "Kategoryje do kierych należōm roztōmańte zasoby na strōnie.",
-      "none": "Niy ma jeszcze żŏdnych kategoryjōw.",
+      "none": "Niy ma jeszcze żodnych kategoryjōw.",
       "actions": {
-        "add": "Przidej nowõ kategoryjõ",
+        "add": "Przidej nowo kategoryjo",
         "drafts": "Cechōnki",
-        "review": "Sprŏwdź kategoryje"
+        "review": "Sprowdź kategoryje"
       },
       "new": {
-        "title": "Nowŏ kategoryjŏ",
-        "description": "Przidŏwaniy nowyj kategoryje ku dykcjōnŏrzu."
+        "title": "Nowo kategoryjo",
+        "description": "Przidowaniy nowyj kategoryje ku dykcjōnorzu.",
+        "created": "Stworzōno a podano kategoryjo ku sprowdzyniu",
+        "created_as_draft": "Zachowano kategoryjo we cechōnkach"
       },
       "drafts": {
         "title": "Cechōnki kategoryjōw",
-        "description": "Cechōnki kategoryjōw, kiere używŏcz przidŏwŏ.",
-        "none": "Niy mŏcie żŏdnych cechōnkōw."
+        "description": "Cechōnki kategoryjōw, kiere używocz przidowo.",
+        "none": "Niy mocie żodnych cechōnkōw."
       },
       "review": {
-        "title": "Kategoryje do sprŏwdzyniŏ",
-        "description": "Kategoryje, kiere sōm już skōńczōne a koere trza sprŏwdzić.",
-        "none": "Niy ma żŏdnych kategoryjōw do sprŏwdzyniŏ."
+        "title": "Kategoryje do sprowdzynio",
+        "description": "Kategoryje, kiere sōm już skōńczōne a koere trza sprowdzić.",
+        "none": "Niy ma żodnych kategoryjōw do sprowdzynio."
       },
       "[category_id]": {
         "edit": {
@@ -618,28 +632,29 @@
           "description": ""
         },
         "review": {
-          "title": "Sprŏwdzaniy kategoryje — „{category_name}”",
+          "title": "Sprowdzaniy kategoryje — „{category_name}”",
           "description": ""
         }
       },
       "form": {
         "name": "Miano",
-        "name_description": "Jako sie ta kategoryjŏ mianuje?",
+        "name_description": "Jako sie ta kategoryjo mianuje?",
         "description": "Ôpis",
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tyj kategoryji?",
         "colour": "Farba",
-        "colour_description": "Jakõ farbã ta kategoryjŏ bydzie mieć?",
-        "make_more": "Tworzã wiyncyj kategoryjōw."
+        "colour_description": "Jako farba ta kategoryjo bydzie mieć?",
+        "make_more": "Tworza wiyncyj kategoryjōw."
       }
     },
     "lemma": {
       "title": "Hasło",
-      "description": "Znaczynia, rozkłŏd a inksze informacyje ô podanym słowie.",
-      "no_results": "Niy ma trefiyń lŏ tygo słowa.",
+      "description": "Znaczynia, rozkłod a inksze informacyje ô podanym słowie.",
+      "no_results": "Niy ma trefiyń lo tygo słowa.",
       "may_not_be_imported": "(Co niy znaczy, iże niy istnieje! Możno go po prostu niy mōmy.)",
       "end_of_results": "KŌNIEC TREFIYŃ",
       "source": "Zdrzōdło:",
-      "authors": "Autorzi:"
+      "authors": "Autorzi:",
+      "location": "Miyjsce:"
     }
   },
   "meta": {
