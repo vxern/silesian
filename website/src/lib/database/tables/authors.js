@@ -3,6 +3,7 @@ import { pgTable, bigint, text, integer, timestamp, check, boolean, index } from
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { users } from "./users";
+import { authorsToEntries } from "./authors-to-entries";
 import { authorsToLocations } from "./authors-to-locations";
 import { authorsToSources } from "./authors-to-sources";
 
@@ -21,6 +22,7 @@ export const authors = pgTable("authors", {
 ]);
 
 export const authorsRelations = relations(authors, ({ many }) => ({
+  entries: many(authorsToEntries),
   sources: many(authorsToSources),
   locations: many(authorsToLocations),
 }));

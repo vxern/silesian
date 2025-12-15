@@ -1,6 +1,7 @@
 import { relations, sql } from "drizzle-orm";
 import { pgTable, bigint, text, integer, timestamp, check, boolean, index, unique } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
+import { authorsToEntries } from "./authors-to-entries";
 import { entriesToCategories } from "./entries-to-categories";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { sources } from "./sources";
@@ -10,6 +11,7 @@ export const entries = pgTable("entries", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
   lemma: text().notNull(),
+  normalised_lemma: text(),
   // TODO(vxern): Add lexemes.
   contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
@@ -23,8 +25,10 @@ export const entries = pgTable("entries", {
   index().on(t.status),
 ]);
 
+  // If the author are not filled out, we'll default to the source's authors
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
+  authors: many(authorsToEntries),
   categories: many(entriesToCategories),
 }));
 
