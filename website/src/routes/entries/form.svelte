@@ -18,6 +18,13 @@
     value={entry?.lemma}
     required={true}
   />
+  <Form.TextElement
+    name="normalised_lemma"
+    label={m["routes.entries.form.normalised_lemma"]()}
+    description={m["routes.entries.form.normalised_lemma_description"]()}
+    value={entry?.normalised_lemma}
+    required={true}
+  />
   <Form.SelectElement
     name="source_id"
     label={m["routes.entries.form.source_id"]()}
@@ -35,6 +42,24 @@
         )}
     component={Form.SourceSelectOption}
     value={entry?.source_id}
+  />
+  <Form.SelectElement
+    name="author_ids[]"
+    label={m["routes.entries.form.authors"]()}
+    description={m["routes.entries.form.authors_description"]()}
+    options={() =>
+      fetch("/autocomplete/authors?include_unpublished")
+        .then((response) => response.json())
+        .then((authors) =>
+          authors.map((author) => ({
+            search: author.name,
+            value: author.id,
+            object: author,
+          }))
+        )}
+    component={Form.AuthorSelectOption}
+    multiple={true}
+    value={entry?.authors}
   />
 </section>
 <section class="flex gap-x-4">

@@ -10,6 +10,7 @@ export { reviewDecisionsEnum } from "./enums/review-decisions";
 export { themesEnum } from "./enums/themes";
 export { timeEntryScopesEnum } from "./enums/time-entry-scopes";
 // Tables
+export { authorsToEntries, authorsToEntriesRelations } from "./tables/authors-to-entries";
 export { authorsToLocations, authorsToLocationsRelations } from "./tables/authors-to-locations";
 export { authorsToSources, authorsToSourcesRelations } from "./tables/authors-to-sources";
 export { authors, authorsRelations, authorsInsertSchema, authorsUpdateSchema } from "./tables/authors";

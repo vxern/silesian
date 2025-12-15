@@ -14,11 +14,13 @@ export const actions = {
     const entryData = entriesInsertSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       lemma: data.get("lemma"),
+      normalised_lemma: data.get("normalised_lemma"),
       contents: data.get("contents"),
       source_id: data.get("source_id") ? Number(data.get("source_id")) : null,
     });
 
     const categoryIds = idsSchema.parse(JSON.parse(data.get("category_ids[]")));
+    const authorIds = idsSchema.parse(JSON.parse(data.get("author_ids[]")));
 
     const entry = await db.transaction(async (tx) => {
       const entry = await versionedInsert({
@@ -35,6 +37,17 @@ export const actions = {
         sourceColumnName: "entry_id",
         targetIds: categoryIds,
         targetColumnName: "category_id",
+        existingIds: [],
+        // TODO(vxern): IMPORTANT - Update the author ID.
+        authorId: 1,
+      });
+
+      await versionedJoin({
+        table: authorsToEntries,
+        source: entry,
+        sourceColumnName: "entry_id",
+        targetIds: authorIds,
+        targetColumnName: "author_id",
         existingIds: [],
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,

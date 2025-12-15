@@ -4,7 +4,7 @@
   const { name, label, description, required = false } = $props();
 </script>
 
-<label for={name} class="flex flex-col items-start">
+<label for={name} class="flex flex-col text-start items-start">
   {#if required}
     <span>
       <span class="text-xl text-zinc-300 font-bold">
