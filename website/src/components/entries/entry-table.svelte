@@ -59,7 +59,9 @@
                 {entry.normalised_lemma}
               </span>
             {:else}
-              {entry.normalised_lemma}
+              <span class="text-zinc-500">
+                {entry.normalised_lemma}
+              </span>
             {/if}
           {:else}
             {m["meta.none"]()}
