@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db, versionedUpdate, versionedJoin } from "$lib/database.server";
-import { entries, entriesToCategories, categories, sources, entriesToCategories, versions, entriesUpdateSchema, idsSchema } from "$lib/database/schema";
+import { entries, entriesToCategories, categories, sources, entriesToCategories, authorsToEntries, versions, entriesUpdateSchema, idsSchema } from "$lib/database/schema";
 import { eq, and } from 'drizzle-orm';
 
 export const load = async ({ params }) => {

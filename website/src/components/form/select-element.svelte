@@ -57,7 +57,6 @@
   }
 
   let selectedOptions = $state([]);
-  // TODO(vxern): This is wrong.
   let selectedOptionValues = $derived(
     selectedOptions.map((option) => option.value)
   );
@@ -65,6 +64,7 @@
     multiple ? JSON.stringify(selectedOptionValues) : selectedOptionValues.at(0)
   );
 
+  // TODO(vxern): Needs to re-run when a search term is inputted.
   async function setOptions() {
     options = (await getOptions?.()) ?? [];
     if (!value) {

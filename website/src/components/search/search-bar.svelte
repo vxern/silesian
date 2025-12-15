@@ -104,7 +104,7 @@
   }
 
   $effect(() => {
-    inputElement.value = lemma ?? "";
+    inputElement.value = lemma ? decodeURIComponent(lemma) : "";
   });
 
   $effect(() => {

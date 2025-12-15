@@ -51,7 +51,7 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
           id: table.id,
           ...returning,
         })
-        .catch((error) => tx.rollback());
+        .catch((error) => {console.error(error); tx.rollback()});
 
     await db.insert(versions).values(
       records.map(

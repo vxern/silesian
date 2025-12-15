@@ -35,7 +35,7 @@ function getSources(params) {
           ),
         ),
       )
-      .limit(params.limit ?? 100)
+      .limit(params.limit ?? 200)
       .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
       .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
       .then(

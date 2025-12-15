@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import { db, versionedInsert, versionedJoin } from "$lib/database.server";
-import { entries, entriesToCategories, categories, entriesInsertSchema, idsSchema } from "$lib/database/schema";
+import { entries, entriesToCategories, categories, authorsToEntries, entriesInsertSchema, idsSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
 // TODO(vxern): Validate.
