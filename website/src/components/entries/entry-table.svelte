@@ -5,6 +5,7 @@
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
+  import ArrowLeftLineIcon from "~icons/mingcute/arrow-left-line";
   import Table from "../layout/table/index.js";
   import SourceLabel from "../labels/source-label.svelte";
   import CategoryLabel from "../labels/category-label.svelte";
@@ -22,6 +23,9 @@
     <Table.Row>
       <Table.HeaderCell>
         {m["components.entry_table.lemma"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
+        {m["components.entry_table.normalised_lemma"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
         {m["components.entry_table.source"]()}
@@ -47,6 +51,19 @@
       <Table.Row>
         <Table.Cell>
           {entry.lemma}
+        </Table.Cell>
+        <Table.Cell>
+          {#if entry.normalised_lemma}
+            {#if entry.lemma !== entry.normalised_lemma}
+              <span class="text-green-400">
+                {entry.normalised_lemma}
+              </span>
+            {:else}
+              {entry.normalised_lemma}
+            {/if}
+          {:else}
+            {m["meta.none"]()}
+          {/if}
         </Table.Cell>
         <Table.Cell>
           <SourceLabel source={entry.source} />

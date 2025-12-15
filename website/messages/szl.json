@@ -106,7 +106,8 @@
       }
     },
     "entry_table": {
-      "lemma": "Hasło",
+      "lemma": "Hasło (we oryginale)",
+      "normalised_lemma": "Hasło (podle ślabikorza)",
       "source": "Zdrzōdło",
       "categories": "Kategoryje",
       "version": "Wersyjo"
