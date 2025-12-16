@@ -41,7 +41,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => goto("/entries/drafts")} />
+      <BackButton onclick={() => goto(`/entries/drafts#${data.entry.id}`)} />
     </Page.Actions>
     <Form.Root method="POST" action="?/update" class="flex flex-col gap-y-6">
       <input type="hidden" name="id" value={data.entry.id} />

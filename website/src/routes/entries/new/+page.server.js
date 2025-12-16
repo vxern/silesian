@@ -58,10 +58,10 @@ export const actions = {
 
     // TODO(vxern): Handle failure.
 
-    if (data.has("make_more")) {
+    if (data.get("make_more")) {
       return { source_id: entry.source_id };
     }
     
-    redirect(303, `/lemma/${encodeURIComponent(entry.lemma)}#${entry.id}`);
+    redirect(303, `/entries/drafts#${entry.id}`);
   },
 };

@@ -104,6 +104,6 @@ export const actions = {
 
     // TODO(vxern): Handle failure.
 
-    redirect(303, `/entries/drafts`);
+    redirect(303, `/entries/drafts#${entry.id}`);
   },
 };

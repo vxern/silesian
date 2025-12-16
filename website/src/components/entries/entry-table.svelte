@@ -5,10 +5,10 @@
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
-  import ArrowLeftLineIcon from "~icons/mingcute/arrow-left-line";
   import Table from "../layout/table/index.js";
   import SourceLabel from "../labels/source-label.svelte";
   import CategoryLabel from "../labels/category-label.svelte";
+  import { page } from "$app/stores";
 
   // TODO(vxern): Use proper permissions.
   const hasPermission = true;
@@ -48,11 +48,12 @@
   </Table.Header>
   <Table.Body>
     {#each entries as entry}
-      <Table.Row>
-        <Table.Cell>
+      <Table.Row id={entry.id}>
+        {@const highlighted = $page.url.hash === `#${entry.id}`}
+        <Table.Cell {highlighted}>
           {entry.lemma}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if entry.normalised_lemma}
             {#if entry.lemma !== entry.normalised_lemma}
               <span class="text-green-400">
@@ -67,10 +68,10 @@
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           <SourceLabel source={entry.source} />
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if entry.categories.length > 0}
             {#each entry.categories as category}
               <CategoryLabel {category} />
@@ -79,12 +80,12 @@
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {entry.version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -102,7 +103,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
