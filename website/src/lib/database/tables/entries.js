@@ -25,10 +25,11 @@ export const entries = pgTable("entries", {
   index().on(t.status),
 ]);
 
-  // If the author are not filled out, we'll default to the source's authors
 export const entriesRelations = relations(entries, ({ one, many }) => ({
   source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
+  // If the authors are not filled out, we'll default to the source's authors.
   authors: many(authorsToEntries),
+  // TODO(vxern): Add locations.
   categories: many(entriesToCategories),
 }));
 
