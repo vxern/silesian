@@ -1,9 +1,8 @@
 <script>
-  import { clsx } from "clsx/lite";
   import { m } from "$lib/paraglide/messages";
   import Page from "../../../components/page/index.js";
-  import { renderMarkdown } from "../../../helpers/markdown.js";
   import SearchBar from "../../../components/search/search-bar.svelte";
+  import Entry from "../../../components/entries/entry.svelte";
   import NavigationSection from "../../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants/core";
   import { page } from "$app/stores";
@@ -32,41 +31,7 @@
   <Page.Contents>
     <section class="flex flex-col gap-y-8">
       {#each data.entries as entry}
-        <section
-          id={entry.id}
-          class={clsx(
-            "flex-1 flex flex-col w-full gap-y-2 text-start p-4 rounded-lg bg-zinc-900 outline-1",
-            $page.url.hash === `#${entry.id}`
-              ? "outline-yellow-500"
-              : "outline-zinc-600"
-          )}
-        >
-          <article>
-            {@html renderMarkdown(entry.contents)}
-          </article>
-          <article class="flex items-end flex-col">
-            <section>
-              <span class="text-zinc-600">{m["routes.lemma.source"]()}</span>
-              <a
-                class="rounded-md text-blue-500 text-end underline"
-                href={entry.source.link}
-              >
-                {entry.source.name}
-              </a>
-            </section>
-            {#if entry.source.authors.length > 0}
-              <section>
-                <span class="text-zinc-600">
-                  {m["routes.lemma.authors"]()}
-                </span>
-                {entry.source.authors
-                  .map((author) => author.author)
-                  .map((author) => author.name)
-                  .join(", ")}
-              </section>
-            {/if}
-          </article>
-        </section>
+        <Entry {entry} highlighted={$page.url.hash === `#${entry.id}`} />
       {/each}
       {#if data.entries.length > 0}
         <section>

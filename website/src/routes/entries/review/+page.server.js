@@ -1,6 +1,6 @@
 import { db } from "$lib/database.server";
 import { entries, entriesToCategories, categories, sources, authorsToSources, authors, versions } from "$lib/database/schema";
-import { and, eq } from 'drizzle-orm';
+import { and, ne, eq } from 'drizzle-orm';
 
 export const load = async () => {
   // TODO(vxern): Make sure to filter by the user.
