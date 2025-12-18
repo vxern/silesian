@@ -1,4 +1,4 @@
-import { db } from "$lib/database.server";
+import { findMany } from "$lib/database.server";
 import { entries, entriesToCategories, categories, authorsToSources, authorsToLocations, locations, authors, sources, entriesInsertSchema, idsSchema } from "$lib/database/schema";
 import { sql, and, eq, like, asc, desc, inArray } from "drizzle-orm";
 
@@ -12,7 +12,7 @@ export const load = async ({ params }) => {
 function getEntries({ lemma }) {
   const similarity = sql`levenshtein(${entries.lemma}, ${lemma})`.as('similarity');
 
-  return db.query.entries.findMany({
+  return findMany(entries, {
     where: (entries, { like, eq, and }) => and(
       // TODO(vxern): IMPORTANT - This needs to be a lot smarter.
       like(entries.lemma, `%${lemma}%`),

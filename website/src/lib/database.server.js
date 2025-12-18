@@ -223,3 +223,44 @@ export async function insertReview({ table, id, values }) {
     ...values,
   });
 }
+
+/** Performs 1 query. */
+export async function findMany(table, properties) {
+  let results = await db.query[getTableName(table)].findMany(properties);
+  if (!properties.with) {
+    return results;
+  }
+
+  return transformResults(results, { relations: properties.with });
+}
+
+function transformResults(results, { relations: relations_ }) {
+  for (let [relationName, relations] of Object.entries(relations_)) {
+    if (relations === true) {
+      continue;
+    }
+
+    if ("with" in relations) {
+      relations = relations.with;
+    }
+    
+    if (relationName.endsWith("s")) {
+      for (const result of results) {
+        const singularRelationName = relationName.endsWith("ies") ? `${relationName.slice(0, -3)}y` : relationName.slice(0, -1);
+        result[relationName] = result[relationName].map((join) => {
+          transformResults(join[singularRelationName], { relations });
+          return join[singularRelationName];
+        });
+      }
+    } else {
+      for (const result of results) {
+        delete result[`${relationName}_id`];
+        if (result[relationName]) {
+          transformResults([result[relationName]], { relations });
+        }
+      }
+    }
+  }
+
+  return results;
+}
