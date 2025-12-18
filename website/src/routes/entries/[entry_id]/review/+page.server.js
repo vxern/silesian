@@ -10,7 +10,6 @@ export const load = async ({ params }) => {
   return { entry: await getEntry({ id: params.entry_id }) };
 };
 
-/** Performs 1 query. */
 function getEntry({ id }) {
   return db
     .select({ entries, sources, categories })
@@ -44,7 +43,6 @@ function getEntry({ id }) {
 // TODO(vxern): Validate.
 
 export const actions = {
-  /** Performs 1 query. */
   review: async ({ request, locals }) => {
     const data = await request.formData();
 

@@ -10,7 +10,6 @@ export const load = async ({ params }) => {
   return { author: await getAuthor({ id: params.author_id }) };
 };
 
-/** Performs 1 query. */
 function getAuthor({ id }) {
   return db
     .select({ authors, locations })

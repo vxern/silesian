@@ -9,7 +9,6 @@ export const load = async () => {
   return { categories: await getDraftCategories() };
 };
 
-/** Performs 1 query. */
 function getDraftCategories() {
   return db
     .select({ categories })

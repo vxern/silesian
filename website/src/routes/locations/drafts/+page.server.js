@@ -9,7 +9,6 @@ export const load = async () => {
   return { locations: await getDraftLocations() };
 };
 
-/** Performs 1 query. */
 function getDraftLocations() {
   return db
     .select({ locations })

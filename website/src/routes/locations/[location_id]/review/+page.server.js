@@ -10,7 +10,6 @@ export const load = async ({ params }) => {
   return { location: await getLocation({ id: params.location_id }) };
 };
 
-/** Performs 1 query. */
 function getLocation({ id }) {
   return db.select()
     .from(locations)
@@ -28,7 +27,6 @@ function getLocation({ id }) {
 // TODO(vxern): Validate.
 
 export const actions = {
-  /** Performs 1 query. */
   review: async ({ request, locals }) => {
     const data = await request.formData();
 

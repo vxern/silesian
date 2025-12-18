@@ -8,7 +8,6 @@ export const load = async () => {
   return { categories: await getPendingCategories() };
 };
 
-/** Performs 1 query. */
 function getPendingCategories() {
   return db
     .select({ categories })

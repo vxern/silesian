@@ -8,7 +8,6 @@ export const load = async () => {
   return { entries: await getPendingEntries() };
 };
 
-/** Performs 1 query. */
 function getPendingEntries() {
   return db
     .select({ entries, sources, categories })

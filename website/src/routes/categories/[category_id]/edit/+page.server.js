@@ -10,7 +10,6 @@ export const load = async ({ params }) => {
   return { category: await getCategory({ id: params.category_id }) };
 };
 
-/** Performs 1 query. */
 function getCategory({ id }) {
   return db.select()
     .from(categories)

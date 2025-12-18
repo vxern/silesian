@@ -5,7 +5,6 @@ import { sql, and, eq, like, asc, desc, inArray } from "drizzle-orm";
 export const load = async ({ params }) => {
   // TODO(vxern): Filter the status as well.
   return {
-    // TODO(vxern): IMPORTANT - This needs to be a lot smarter.
     entries: await getEntries({ lemma: params.lemma }),
   };
 };
@@ -15,6 +14,7 @@ function getEntries({ lemma }) {
 
   return db.query.entries.findMany({
     where: (entries, { like, eq, and }) => and(
+      // TODO(vxern): IMPORTANT - This needs to be a lot smarter.
       like(entries.lemma, `%${lemma}%`),
       // TODO(vxern): Re-enable.
       // inArray(entries.status, ["pending", "published"]),

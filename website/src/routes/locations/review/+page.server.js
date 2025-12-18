@@ -8,7 +8,6 @@ export const load = async () => {
   return { locations: await getPendingLocations() };
 };
 
-/** Performs 1 query. */
 function getPendingLocations() {
   return db
     .select({ locations })

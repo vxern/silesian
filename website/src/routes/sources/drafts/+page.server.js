@@ -9,7 +9,6 @@ export const load = async () => {
   return { sources: await getDraftSources() };
 };
 
-/** Performs 1 query. */
 function getDraftSources() {
   return db
     .select({ sources, authors })

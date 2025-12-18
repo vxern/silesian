@@ -8,7 +8,6 @@ export const load = async () => {
   return { authors: await getDraftAuthors() };
 };
 
-/** Performs 1 query. */
 function getDraftAuthors() {
   return db
     .select({ authors, locations })

@@ -10,7 +10,6 @@ export const load = async ({ params }) => {
   return { source: await getSource({ id: params.source_id }) };
 };
 
-/** Performs 1 query. */
 function getSource({ id }) {
   return db
     .select({ sources, authors })

@@ -8,7 +8,6 @@ export const load = async () => {
   return { authors: await getPendingAuthors() };
 };
 
-/** Performs 1 query. */
 function getPendingAuthors() {
   return db
     .select({ authors, locations })

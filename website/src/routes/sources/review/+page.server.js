@@ -8,7 +8,6 @@ export const load = async () => {
   return { sources: await getPendingSources() };
 };
 
-/** Performs 1 query. */
 function getPendingSources() {
   return db
     .select({ sources, authors })

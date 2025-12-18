@@ -10,7 +10,6 @@ export const load = async () => {
   };
 };
 
-/** Performs 1 query. */
 function getDraftCount() {
   return db
     .select({ count: count() })
@@ -27,7 +26,6 @@ function getDraftCount() {
     .then((results) => results.at(0).count);
 }
 
-/** Performs 1 query. */
 function getPendingCount() {
   return db
     .select({ count: count() })
@@ -44,7 +42,6 @@ function getPendingCount() {
     .then((results) => results.at(0).count);
 }
 
-/** Performs 1 query. */
 function getPublishedAuthors() {
   return db
     .select({ authors, locations })
