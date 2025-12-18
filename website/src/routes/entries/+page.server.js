@@ -44,46 +44,34 @@ function getPendingCount() {
 }
 
 function getPublishedEntries() {
-  const sourceAuthors = alias(authors, "source_authors");
-  const entryAuthors = alias(authors, "entry_authors");
-
-  return db
-    .select({
-      entries,
-      sources,
-      source_authors: sourceAuthors,
-      entry_authors: entryAuthors,
-      categories,
-    })
-    .from(entries)
-    .withVersions()
-    .where(
-      and(
-        eq(entries.deleted, false),
-        eq(entries.status, "published"),
-      ),
-    )
-    .innerJoin(sources, eq(sources.id, entries.source_id))
-    .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
-    .leftJoin(sourceAuthors, eq(sourceAuthors.id, authorsToSources.author_id))
-    .leftJoin(authorsToEntries, eq(authorsToEntries.entry_id, entries.id))
-    .leftJoin(entryAuthors, eq(entryAuthors.id, authorsToEntries.author_id))
-    .leftJoin(entriesToCategories, eq(entriesToCategories.entry_id, entries.id))
-    .leftJoin(categories, eq(categories.id, entriesToCategories.category_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ entries }) => entries.id)).map(
-        (results) => {
-          const entry = results[0].entries;
-
-          entry.categories = results.map((result) => result.categories).filter((category) => category);
-
-          entry.source = results[0].sources;
-          entry.source.authors = results.map((result) => result.source_authors).filter((authors) => authors);
-
-          entry.authors = results.map((result) => result.entry_authors).filter((authors) => authors);
-
-          return entry;
-        }
-      ),
-    ).catch((error) => console.error(error));
+  return findMany(entries, {
+    where: (entries, { like, eq, and }) => and(
+      eq(entries.status, "published"),
+      eq(entries.deleted, false),
+    ),
+    with: {
+      source: {
+        with: {
+          authors: {
+            with: {
+              author: {
+                with: {
+                  locations: {
+                    with: {
+                      location: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      categories: {
+        with: {
+          category: true,
+        },
+      },
+    },
+  });
 }
