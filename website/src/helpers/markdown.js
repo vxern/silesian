@@ -1,6 +1,8 @@
 import { marked } from "marked";
 import { clsx } from "clsx/lite";
 import DOMPurify from "isomorphic-dompurify";
+import { render } from 'svelte/server';
+import Table from "../components/layout/table/index.js";
 
 marked.use({
   renderer: {
@@ -49,31 +51,66 @@ marked.use({
         startAttr = "";
       }
 
-      return `<${type} ${startAttr} class="w-full decoration-2 underline-offset-2 pl-8 ${clsx([token.ordered ? "list-decimal" : "list-disc"])}">\n${body}\n</${type}>\n`;
+      return `
+<${type} ${startAttr} class="w-full decoration-2 underline-offset-2 pl-8 ${clsx([token.ordered ? "list-decimal" : "list-disc"])}">\n
+  ${body}\n
+</${type}>\n`;
     },
     blockquote(token) {
-      return `<blockquote class="italic pl-4">\n<span class="text-zinc-500">„ </span><span class="text-zinc-400">${this.parser.parse(token.tokens)}</span><span class="text-zinc-500"> ”</span></blockquote>\n`;
+      return `
+<blockquote class="italic pl-4">
+  <span class="text-zinc-500">„ </span>\n
+  <span class="text-zinc-400">${this.parser.parse(token.tokens)}</span>
+  <span class="text-zinc-500"> ”</span>
+</blockquote>\n`;
+    },
+    table(token) {
+      return `
+<table class="border-separate border-spacing-1 text-left w-full">
+  <thead class="text-blue-500">
+    <tr>
+      ${token.header.map((column) => this.tablecell(column)).join("\n")}
+    </tr>
+  </thead>
+  <tbody>
+    ${token.rows.map((column) => this.tablerow(column)).join("\n")}
+  </tbody>
+</table>
+\n
+`;
+    },
+    tablerow(token) {
+      return `
+<tr class=${true ? "bg-zinc-900" : "bg-zinc-910"}>
+  ${token.map((column) => this.tablecell(column)).join("\n")}
+</tr>
+`;
+    },
+    tablecell(token) {
+      // TODO(vxern): Add scope.
+      if (token.header) {
+        return `<th class="border-b p-2">${token.text}</th>`;
+      } else {
+        return `<td class="border-b p-2 border-b-zinc-800">${token.text}</td>`;
+      }
     },
     em(token) {
       return `<em class="font-light">${this.parser.parseInline(token.tokens)}</em>`;
     },
     paragraph(token) {
-      return this.parser.parseInline(token.tokens);
+      return `<p>${this.parser.parseInline(token.tokens)}</p>\n`;
     },
     strong(token) {
       return `<span class="font-extrabold">${this.parser.parseInline(token.tokens)}</span>`;
     },
     text(token) {
-      let contents; 
       if ("tokens" in token && token.tokens) {
-        contents = this.parser.parseInline(token.tokens);
+        return this.parser.parseInline(token.tokens);
       } else if ("escaped" in token && token.escaped) {
-        contents = token.text;
+        return token.text;
       } else {
-        contents = DOMPurify.sanitize(token.text)
+        return DOMPurify.sanitize(token.text);
       }
-
-      return contents;
     },
   }
 });
