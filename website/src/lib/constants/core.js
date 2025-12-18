@@ -29,11 +29,12 @@ export default Object.freeze({
         "y̆",
       ],
     },
-    // łV (ło, łō)
+    // łV (ło, łu)
     {
       colours: "text-green-400",
       letters: [
-        "ô"
+        "ô",
+        "û"
       ],
     },
     // Normal sounds
