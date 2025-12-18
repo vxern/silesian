@@ -205,7 +205,7 @@
   "routes": {
     "home": {
       "title": "Sztart",
-      "description": "{project_name} je strōna stworzōno ku ôpisowaniu ślōnskij godki a jejich narzeczy.",
+      "description": "{project_name} je platforma stworzōno ku ôpisowaniu ślōnskij godki a jejich narzeczy.",
       "splashes": {
         "one": "Dykcjōnorze ślōnskij godki",
         "two": "Dykcjōnorze ślōnskigo jynzyka",
