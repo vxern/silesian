@@ -53,12 +53,13 @@
       <section class="flex flex-col">
         <section>
           <span class="text-zinc-600">{m["routes.lemma.source"]()}</span>
-          <a
-            class="rounded-md text-blue-500 text-end underline"
-            href={entry.source.link}
-          >
+          <a class="text-blue-500 underline" href={entry.source.link}>
             {entry.source.name}
           </a>
+        </section>
+        <section>
+          <span class="text-zinc-600">{m["routes.lemma.orthography"]()}</span>
+          {m[`orthographies.${entry.source.orthography}`]()}
         </section>
         {#if entry.source.authors.length > 0}
           <section>
