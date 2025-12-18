@@ -35,6 +35,10 @@
   @apply bg-zinc-800 text-yellow-500 text-center outline-1 outline-zinc-600
 }
 
+.tippy-box[data-theme~='error'] {
+  @apply bg-zinc-800 text-red-400 text-center outline-1 outline-zinc-600
+}
+
 .tippy-box[data-theme~='info']>.tippy-arrow::before {
   @apply text-zinc-700
 }

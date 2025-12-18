@@ -24,8 +24,8 @@ export default Object.freeze({
       colours: "text-blue-400",
       letters: [
         "ă",
-        "ŏ",
         "ĕ",
+        "ŏ",
         "y̆",
       ],
     },
@@ -37,17 +37,26 @@ export default Object.freeze({
         "û"
       ],
     },
+    // Sibilants
+    {
+      colours: "text-orange-400",
+      letters: [
+        "ć",
+        "ś",
+        "ź",
+        "c̋",
+        "s̋",
+        "z̋",
+        "ż",
+      ],
+    },
     // Normal sounds
     {
       colours: "text-red-400",
       letters: [
         "ō",
-        "ć",
-        "ś",
-        "ź",
         "ń",
         "ł",
-        "ż",
       ],
     },
   ],

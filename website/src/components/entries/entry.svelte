@@ -3,24 +3,49 @@
   import { renderMarkdown } from "../../helpers/markdown.js";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
+  import tippy from "tippy.js";
   import Button from "../interactions/button.svelte";
+  import "tippy.js/themes/material.css";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
+  import AlertLineIcon from "~icons/mingcute/alert-line";
   import CategoryLabel from "../labels/category-label.svelte";
 
   // TODO(vxern): Get rid of this hardcoding.
   const hasPermission = true;
 
   const { entry, highlighted = false } = $props();
+
+  let unverifiedWordIconElement;
+  let unverifiedWordTooltip;
+
+  if (entry.status !== "published") {
+    $effect(() => {
+      unverifiedWordTooltip = tippy(unverifiedWordIconElement, {
+        content: m["routes.lemma.unverified"](),
+        trigger: "mouseenter focus",
+        placement: "top-start",
+        theme: "error",
+      });
+    });
+  }
 </script>
 
 {#snippet article()}
   <article
     id={entry.id}
     class={clsx(
-      "flex-1 flex flex-col w-full gap-y-2 text-start p-4 rounded-lg bg-zinc-900 outline-1",
+      "relative flex-1 flex flex-col w-full gap-y-2 text-start p-4 rounded-lg bg-zinc-900 outline-1",
       highlighted ? "outline-yellow-500" : "outline-zinc-600"
     )}
   >
+    {#if entry.status !== "published"}
+      <section
+        class="absolute top-4 right-4"
+        bind:this={unverifiedWordIconElement}
+      >
+        <AlertLineIcon class="text-red-400 text-xl" />
+      </section>
+    {/if}
     <section>
       {@html renderMarkdown(entry.contents)}
     </section>
