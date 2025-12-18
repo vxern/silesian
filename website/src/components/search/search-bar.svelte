@@ -9,6 +9,7 @@
   import "tippy.js/themes/material.css";
 
   // TODO(vxern): Add autocomplete.
+  // TODO(vxern): Auto-focus.
 
   const { lemma } = page.params;
 
