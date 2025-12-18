@@ -1,6 +1,7 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, text, timestamp, check } from "drizzle-orm/pg-core";
 import { users } from "./users";
+import * as schema from "../schema";
 
 export const searches = pgTable("searches", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -11,6 +12,11 @@ export const searches = pgTable("searches", {
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
 ]);
 
-export const searchesRelations = relations(searches, ({ one }) => ({
-  searcher: one(users, { fields: [searches.searcher_id], references: [users.id] }),
+export const searchesRelations = defineRelationsPart(schema, (r) => ({
+  searches: {
+    searcher: r.one.users({
+      from: r.reviews.searcher_id,
+      to: r.users.id,
+    }),
+  },
 }));

@@ -1,4 +1,4 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, text, integer, timestamp, check, boolean, index, unique } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { authorsToEntries } from "./authors-to-entries";
@@ -6,6 +6,8 @@ import { entriesToCategories } from "./entries-to-categories";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { sources } from "./sources";
 import { users } from "./users";
+import { versions } from "./versions";
+import * as schema from "../schema";
 
 export const entries = pgTable("entries", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -25,12 +27,30 @@ export const entries = pgTable("entries", {
   index().on(t.status),
 ]);
 
-export const entriesRelations = relations(entries, ({ one, many }) => ({
-  source: one(sources, { fields: [entries.source_id], references: [sources.id] }),
-  // If the authors are not filled out, we'll default to the source's authors.
-  authors: many(authorsToEntries),
-  // TODO(vxern): Add locations.
-  categories: many(entriesToCategories),
+export const entriesRelations = defineRelationsPart(schema, (r) => ({
+  entries: {
+    version: r.one.versions({
+      where: {
+        versionable_id: entries.id,
+        versionable_type: "entries",
+        version: entries.version,
+      }
+    }),
+    // If the authors are not filled out, we'll default to the source's authors.
+    authors: r.many.authors({
+      from: r.entries.id.through(r.authorsToEntries.entry_id),
+      to: r.authors.id.through(r.authorsToEntries.author_id),
+    }),
+    categories: r.many.categories({
+      from: r.entries.id.through(r.entriesToCategories.entry_id),
+      to: r.categories.id.through(r.entriesToCategories.category_id),
+    }),
+    source: r.one.sources({
+      from: r.entries.source_id,
+      to: r.sources.id,
+    }),
+    // TODO(vxern): Add locations.
+  },
 }));
 
 export const entriesInsertSchema = createInsertSchema(entries, {

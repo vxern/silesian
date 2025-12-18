@@ -1,4 +1,4 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, integer, bigint, text, boolean, timestamp, check, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
@@ -9,6 +9,7 @@ import { accessesEnum } from "../enums/accesses";
 import { entries } from "./entries";
 import { authorsToSources } from "./authors-to-sources";
 import { users } from "./users";
+import * as schema from "../schema";
 
 export const sources = pgTable("sources", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -34,9 +35,21 @@ export const sources = pgTable("sources", {
   index().on(t.status),
 ]);
 
-export const sourcesRelations = relations(sources, ({ many, one }) => ({
-  entries: many(entries),
-  authors: many(authorsToSources),
+export const sourcesRelations = defineRelationsPart(schema, (r) => ({
+  sources: {
+    authors: r.many.authors({
+      from: r.sources.id.through(r.authorsToSources.source_id),
+      to: r.authors.id.through(r.authorsToSources.author_id),
+    }),
+    settings: r.many.settings({
+      from: r.sources.id.through(r.settingsToSources.source_id),
+      to: r.settings.id.through(r.settingsToSources.settings_id),
+    }),
+    entries: r.many.entries({
+      from: r.sources.id,
+      to: r.entries.source_id,
+    }),
+  },
 }));
 
 export const sourcesInsertSchema = createInsertSchema(sources, {

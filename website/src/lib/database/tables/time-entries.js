@@ -1,4 +1,4 @@
-import { relations } from "drizzle-orm";
+import { defineRelations } from "drizzle-orm";
 import { pgTable, bigint, timestamp } from "drizzle-orm/pg-core";
 import { timeEntryScopesEnum } from "../enums/time-entry-scopes";
 import { users } from "./users";
@@ -11,6 +11,6 @@ export const timeEntries = pgTable("time_entries", {
   // No updated_at because time entries are never updated.
 });
 
-export const timeEntriesRelations = relations(timeEntries, ({ one }) => ({
+export const timeEntriesRelations = defineRelations(timeEntries, ({ one }) => ({
   user: one(users, { fields: [timeEntries.user_id], references: [users.id] }),
 }))

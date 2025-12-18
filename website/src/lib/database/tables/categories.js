@@ -1,10 +1,11 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, text, integer, timestamp, check, boolean, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
 import { coloursEnum } from "../enums/colours";
 import { users } from "./users";
 import { entriesToCategories } from "./entries-to-categories";
+import * as schema from "../schema";
 
 export const categories = pgTable("categories", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -21,8 +22,24 @@ export const categories = pgTable("categories", {
   index().on(t.status),
 ]);
 
-export const categoriesRelations = relations(categories, ({ many }) => ({
-  entries: many(entriesToCategories),
+export const categoriesRelations = defineRelationsPart(schema, (r) => ({
+  categories: {
+    version: r.one.versions({
+      where: {
+        versionable_id: categories.id,
+        versionable_type: "categories",
+        version: categories.version,
+      }
+    }),
+    entries: r.many.entries({
+      from: r.categories.id.through(r.entriesToCategories.category_id),
+      to: r.entries.id.through(r.entriesToCategories.entry_id),
+    }),
+    settings: r.many.settings({
+      from: r.categories.id.through(r.settingsToCategories.source_id),
+      to: r.settings.id.through(r.settingsToCategories.settings_id),
+    }),
+  },
 }));
 
 export const categoriesInsertSchema = createInsertSchema(categories, {

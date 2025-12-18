@@ -1,4 +1,4 @@
-import { relations } from "drizzle-orm";
+import { defineRelations } from "drizzle-orm";
 import { pgTable, bigint, integer, text, unique, timestamp, json, index } from "drizzle-orm/pg-core";
 import { users } from "./users";
 import { reviews } from "./reviews";
@@ -19,7 +19,15 @@ export const versions = pgTable("versions", {
   index().on(t.author_id),
 ]);
 
-export const versionsRelations = relations(versions, ({ many, one }) => ({
-  author: one(users, { fields: [versions.author_id], references: [users.id] }),
-  reviews: many(reviews),
+export const versionsRelations = defineRelations(versions, (r) => ({
+  versions: {
+    author: r.one.users({
+      from: r.versions.author_id,
+      to: r.users.id,
+    }),
+    reviews: r.many.reviews({
+      from: r.versions.id,
+      to: r.reviews.version_id,
+    }),
+  },
 }));

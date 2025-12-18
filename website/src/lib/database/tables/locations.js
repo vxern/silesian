@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, text, integer, timestamp, check, boolean, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { countriesEnum } from "../enums/countries";
@@ -7,6 +7,7 @@ import { publishStatusesEnum } from "../enums/publish-statuses";
 import { authorsToLocations } from "./authors-to-locations";
 import { sources } from "./sources";
 import { users } from "./users";
+import * as schema from "../schema";
 
 export const locations = pgTable("locations", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -23,8 +24,20 @@ export const locations = pgTable("locations", {
   index().on(t.status),
 ]);
 
-export const locationsRelations = relations(locations, ({ many }) => ({
-  authors: many(authorsToLocations),
+export const locationsRelations = defineRelationsPart(schema, (r) => ({
+  locations: {
+    version: r.one.versions({
+      where: {
+        versionable_id: locations.id,
+        versionable_type: "locations",
+        version: locations.version,
+      }
+    }),
+    authors: r.many.authors({
+      from: r.locations.id.through(r.authorsToLocations.location_id),
+      to: r.authors.id.through(r.authorsToLocations.author_id),
+    }),
+  },
 }));
 
 export const locationsInsertSchema = createInsertSchema(locations, {

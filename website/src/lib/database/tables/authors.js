@@ -1,4 +1,4 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, text, integer, timestamp, check, boolean, index } from "drizzle-orm/pg-core";
 import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { publishStatusesEnum } from "../enums/publish-statuses";
@@ -6,6 +6,7 @@ import { users } from "./users";
 import { authorsToEntries } from "./authors-to-entries";
 import { authorsToLocations } from "./authors-to-locations";
 import { authorsToSources } from "./authors-to-sources";
+import * as schema from "../schema";
 
 export const authors = pgTable("authors", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -21,10 +22,28 @@ export const authors = pgTable("authors", {
   index().on(t.status),
 ]);
 
-export const authorsRelations = relations(authors, ({ many }) => ({
-  entries: many(authorsToEntries),
-  sources: many(authorsToSources),
-  locations: many(authorsToLocations),
+export const authorsRelations = defineRelationsPart(schema, (r) => ({
+  authors: {
+    version: r.one.versions({
+      where: {
+        versionable_id: authors.id,
+        versionable_type: "authors",
+        version: authors.version,
+      }
+    }),
+    entries: r.many.entries({
+      from: r.authors.id.through(r.authorsToEntries.author_id),
+      to: r.entries.id.through(r.authorsToEntries.entry_id),
+    }),
+    locations: r.many.locations({
+      from: r.authors.id.through(r.authorsToLocations.author_id),
+      to: r.locations.id.through(r.authorsToLocations.location_id),
+    }),
+    sources: r.many.sources({
+      from: r.authors.id.through(r.authorsToSources.author_id),
+      to: r.sources.id.through(r.authorsToSources.source_id),
+    }),
+  },
 }));
 
 export const authorsInsertSchema = createInsertSchema(authors, {

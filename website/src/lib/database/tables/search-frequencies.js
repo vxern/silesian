@@ -1,4 +1,4 @@
-import { relations, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import { pgTable, bigint, integer, text, timestamp, unique, check } from "drizzle-orm/pg-core";
 
 export const searchFrequencies = pgTable("search_frequencies", {

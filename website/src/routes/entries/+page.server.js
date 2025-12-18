@@ -1,4 +1,4 @@
-import { db } from "$lib/database.server";
+import { db, findMany } from "$lib/database.server";
 import { entries, entriesToCategories, categories, sources, authorsToSources, authors, authorsToEntries, versions } from "$lib/database/schema";
 import { and, eq, ne, count } from 'drizzle-orm';
 import { alias } from "drizzle-orm/pg-core";

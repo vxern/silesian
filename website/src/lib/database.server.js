@@ -22,7 +22,7 @@ const client = postgres({
 
 export const db = drizzle({
   client,
-  schema, 
+  relations: schema,
   logger: new EnhancedQueryLogger(),
 });
 
@@ -226,6 +226,8 @@ export async function insertReview({ table, id, values }) {
 
 /** Performs 1 query. */
 export async function findMany(table, properties) {
+  console.log(db.query.entries.findMany);
+
   let results = await db.query[getTableName(table)].findMany(properties);
   if (!properties.with) {
     return results;

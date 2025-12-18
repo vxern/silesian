@@ -1,4 +1,4 @@
-import { relations } from "drizzle-orm";
+import { defineRelationsPart } from "drizzle-orm";
 import { pgTable, bigint, boolean, unique, timestamp } from "drizzle-orm/pg-core";
 import { languagesEnum } from "../enums/languages";
 import { themesEnum } from "../enums/themes";
@@ -8,6 +8,7 @@ import { accessesEnum } from "../enums/accesses";
 import { users } from "./users";
 import { settingsToCategories } from "./settings-to-categories";
 import { settingsToSources } from "./settings-to-sources";
+import * as schema from "../schema";
 
 export const settings = pgTable("settings", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -31,8 +32,19 @@ export const settings = pgTable("settings", {
   limited_to_accesses: accessesEnum().array().default([]).notNull(),
 }, (t) => [unique().on(t.user_id)]);
 
-export const settingsRelations = relations(settings, ({ one, many }) => ({
-  user: one(users, { fields: [settings.user_id], references: [users.id] }),
-  sources: many(settingsToSources),
-  categories: many(settingsToCategories),
+export const settingsRelations = defineRelationsPart(schema, (r) => ({
+  settings: {
+    user: r.one.users({
+      from: r.settings.user_id,
+      to: r.users.id,
+    }),
+    sources: r.many.sources({
+      from: r.settings.id.through(r.settingsToSources.settings_id),
+      to: r.sources.id.through(r.settingsToSources.source_id),
+    }),
+    categories: r.many.categories({
+      from: r.settings.id.through(r.settingsToSources.settings_id),
+      to: r.categories.id.through(r.settingsToSources.category_id),
+    }),
+  },
 }));

@@ -1,4 +1,4 @@
-import { relations, sql } from "drizzle-orm";
+import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, integer, text, timestamp, unique, check, boolean, index } from "drizzle-orm/pg-core";
 import { settings } from "./settings";
 import { versions } from "./versions";
@@ -8,6 +8,7 @@ import { sources } from "./sources";
 import { entries } from "./entries";
 import { categories } from "./categories";
 import { timeEntries } from "./time-entries";
+import * as schema from "../schema";
 
 export const users = pgTable("users", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -32,11 +33,28 @@ export const users = pgTable("users", {
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
 ]);
 
-export const usersRelations = relations(users, ({ many }) => ({
-  // A user can in fact only have one set of settings.
-  settings: many(settings),
-  versions: many(versions),
-  reviews: many(reviews),
-  searches: many(searches),
-  timeEntries: many(timeEntries),
+export const usersRelations = defineRelationsPart(schema, (r) => ({
+  users: {
+    // TODO(vxern): A user can in fact only have one set of settings.
+    settings: r.many.settings({
+      from: r.users.id,
+      to: r.settings.user_id,
+    }),
+    versions: r.many.versions({
+      from: r.users.id,
+      to: r.versions.author_id,
+    }),
+    reviews: r.many.reviews({
+      from: r.users.id,
+      to: r.reviews.reviewer_id,
+    }),
+    searches: r.many.searches({
+      from: r.users.id,
+      to: r.searches.searcher_id,
+    }),
+    timeEntries: r.many.timeEntries({
+      from: r.users.id,
+      to: r.timeEntries.user_id,
+    }),
+  },
 }));
