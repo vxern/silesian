@@ -5,8 +5,9 @@
   - ### Channels
 
     - `śla/F` [Chwila z Gŏdkōm](https://www.youtube.com/c/ChwilaZG%C5%8Fdk%C5%8Dm)
+    - `śla/F` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
     - `śla/F` [Ślōnskŏ Rajza](https://www.youtube.com/c/%C5%9AL%C5%8CNSK%C5%8ERAJZA)
-    - `śla/S` [Niklaus Pierōn](https://www.youtube.com/@NiklausPieron)
+    - `śla/S` [Alan Jasik](https://www.youtube.com/@alanjasik3184)
     - `ste` [Bartłůmjej Wanot](https://www.youtube.com/@bartumjejwanot3910)
     - `pol` [Ojgyn z Pnioków](https://www.youtube.com/@Ojgyn)
     - `pol` [Gryfnie](https://www.youtube.com/@gryfnie)
