@@ -9,35 +9,25 @@ export const load = async () => {
 };
 
 function getPendingEntries() {
-  return findMany(entries, {
-    where: (entries, { like, eq, and }) => and(
-      eq(entries.status, "pending"),
-      eq(entries.deleted, false),
-      // TODO(vxern): Filter out the author. (need to go through versions)
-    ),
+  return db.query.entries.findMany({
+    where: {
+      status: "pending",
+      deleted: false,
+      version: {
+        author_id: 1,
+      },
+    },
     with: {
       source: {
         with: {
           authors: {
             with: {
-              author: {
-                with: {
-                  locations: {
-                    with: {
-                      location: true,
-                    },
-                  },
-                },
-              },
+              locations: true
             },
           },
         },
       },
-      categories: {
-        with: {
-          category: true,
-        },
-      },
+      categories: true,
     },
   });
 }

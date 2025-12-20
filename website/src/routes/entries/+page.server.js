@@ -1,4 +1,4 @@
-import { db, findMany } from "$lib/database.server";
+import { db } from "$lib/database.server";
 import { entries, entriesToCategories, categories, sources, authorsToSources, authors, authorsToEntries, versions } from "$lib/database/schema";
 import { and, eq, ne, count } from 'drizzle-orm';
 import { alias } from "drizzle-orm/pg-core";
@@ -44,7 +44,7 @@ function getPendingCount() {
 }
 
 function getPublishedEntries() {
-  return findMany(entries, {
+  return db.query.entries.findMany({
     where: (entries, { like, eq, and }) => and(
       eq(entries.status, "published"),
       eq(entries.deleted, false),
@@ -54,24 +54,12 @@ function getPublishedEntries() {
         with: {
           authors: {
             with: {
-              author: {
-                with: {
-                  locations: {
-                    with: {
-                      location: true,
-                    },
-                  },
-                },
-              },
-            },
-          },
+              locations: true,
+            }
+          }
         },
       },
-      categories: {
-        with: {
-          category: true,
-        },
-      },
+      categories: true,
     },
   });
 }
