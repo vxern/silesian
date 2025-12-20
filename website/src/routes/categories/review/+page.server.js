@@ -9,17 +9,14 @@ export const load = async () => {
 };
 
 function getPendingCategories() {
-  return db
-    .select({ categories })
-    .from(categories)
-    .withVersions()
-    .where(
-      and(
+  return db.query.categories.findMany({
+    where: {
+      status: "pending",
+      deleted: false,
+      version: {
         // TODO(vxern): Set the right author.
-        ne(versions.author_id, 1),
-        eq(categories.deleted, false),
-        eq(categories.status, "pending"),
-      ),
-    )
-    .then((results) => results.map((result) => result.categories));
+        author_id: { ne: 1 },
+      },
+    },
+  });
 }

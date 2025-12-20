@@ -11,17 +11,17 @@ export const load = async ({ params }) => {
 };
 
 function getCategory({ id }) {
-  return db.select()
-    .from(categories)
-    .where(
-      and(
-        eq(categories.id, id),
-        eq(categories.deleted, false),
-        eq(categories.status, "pending"),
-      ),
-    )
-    .limit(1)
-    .then((results) => results.at(0));
+  return db.query.categories.findMany({
+    where: {
+      id,
+      status: "pending",
+      deleted: false,
+      version: {
+        // TODO(vxern): Set the right author.
+        author_id: 1,
+      },
+    },
+  });
 }
 
 // TODO(vxern): Validate.

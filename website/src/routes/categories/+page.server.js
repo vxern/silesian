@@ -43,14 +43,10 @@ function getPendingCount() {
 }
 
 function getPublishedCategories() {
-  return db
-    .select()
-    .from(categories)
-    .withVersions()
-    .where(
-      and(
-        eq(categories.deleted, false),
-        eq(categories.status, "published"),
-      ),
-    );
+  return db.query.categories.findMany({
+    where: {
+      status: "published",
+      deleted: false,
+    },
+  });
 }

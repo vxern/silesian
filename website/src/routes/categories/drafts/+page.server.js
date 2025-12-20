@@ -10,19 +10,16 @@ export const load = async () => {
 };
 
 function getDraftCategories() {
-  return db
-    .select({ categories })
-    .from(categories)
-    .withVersions()
-    .where(
-      and(
+  return db.query.categories.findMany({
+    where: {
+      status: "draft",
+      deleted: false,
+      version: {
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
-        eq(categories.deleted, false),
-        eq(categories.status, "draft"),
-      ),
-    )
-    .then((results) => results.map((result) => result.categories));
+        author_id: 1,
+      },
+    },
+  });
 }
 
 export const actions = {
