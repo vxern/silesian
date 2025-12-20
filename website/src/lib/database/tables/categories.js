@@ -14,7 +14,7 @@ export const categories = pgTable("categories", {
   description: text(),
   colour: coloursEnum().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
@@ -22,14 +22,15 @@ export const categories = pgTable("categories", {
   index().on(t.status),
 ]);
 
-export const categoriesRelations = defineRelationsPart(schema, (r) => ({
+export const categoriesRelations = () => defineRelationsPart(schema, (r) => ({
   categories: {
     version: r.one.versions({
+      from: r.categories.id,
+      to: r.versions.versionable_id,
       where: {
-        versionable_id: categories.id,
         versionable_type: "categories",
-        version: categories.version,
-      }
+        version: r.categories.current_version,
+      },
     }),
     entries: r.many.entries({
       from: r.categories.id.through(r.entriesToCategories.category_id),

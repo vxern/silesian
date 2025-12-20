@@ -8,7 +8,7 @@ import { languagesEnum } from "../enums/languages";
 import { accessesEnum } from "../enums/accesses";
 import { entries } from "./entries";
 import { authorsToSources } from "./authors-to-sources";
-import { users } from "./users";
+import { authors } from "./authors";
 import * as schema from "../schema";
 
 export const sources = pgTable("sources", {
@@ -27,7 +27,7 @@ export const sources = pgTable("sources", {
   imported_entry_count: integer().default(0).notNull(),
   total_entry_count: integer(),
   status: publishStatusesEnum().default("draft").notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
@@ -35,8 +35,16 @@ export const sources = pgTable("sources", {
   index().on(t.status),
 ]);
 
-export const sourcesRelations = defineRelationsPart(schema, (r) => ({
+export const sourcesRelations = () => defineRelationsPart(schema, (r) => ({
   sources: {
+    version: r.one.versions({
+      from: r.sources.id,
+      to: r.versions.versionable_id,
+      where: {
+        versionable_type: "sources",
+        version: r.sources.current_version,
+      },
+    }),
     authors: r.many.authors({
       from: r.sources.id.through(r.authorsToSources.source_id),
       to: r.authors.id.through(r.authorsToSources.author_id),

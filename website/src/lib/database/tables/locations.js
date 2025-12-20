@@ -16,7 +16,7 @@ export const locations = pgTable("locations", {
   description: text(),
   country: countriesEnum().notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
@@ -24,13 +24,14 @@ export const locations = pgTable("locations", {
   index().on(t.status),
 ]);
 
-export const locationsRelations = defineRelationsPart(schema, (r) => ({
+export const locationsRelations = () => defineRelationsPart(schema, (r) => ({
   locations: {
     version: r.one.versions({
+      from: r.locations.id,
+      to: r.versions.versionable_id,
       where: {
-        versionable_id: locations.id,
         versionable_type: "locations",
-        version: locations.version,
+        version: r.locations.current_version,
       }
     }),
     authors: r.many.authors({

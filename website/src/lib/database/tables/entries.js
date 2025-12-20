@@ -18,7 +18,7 @@ export const entries = pgTable("entries", {
   contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
   check("contents_not_empty_check", sql`${t.contents} <> ''`),
@@ -27,13 +27,14 @@ export const entries = pgTable("entries", {
   index().on(t.status),
 ]);
 
-export const entriesRelations = defineRelationsPart(schema, (r) => ({
+export const entriesRelations = () => defineRelationsPart(schema, (r) => ({
   entries: {
     version: r.one.versions({
+      from: r.entries.id,
+      to: r.versions.versionable_id,
       where: {
-        versionable_id: entries.id,
         versionable_type: "entries",
-        version: entries.version,
+        version: r.entries.current_version,
       }
     }),
     // If the authors are not filled out, we'll default to the source's authors.

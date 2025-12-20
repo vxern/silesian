@@ -12,7 +12,7 @@ export const searches = pgTable("searches", {
   check("lemma_not_empty_check", sql`${t.lemma} <> ''`),
 ]);
 
-export const searchesRelations = defineRelationsPart(schema, (r) => ({
+export const searchesRelations = () => defineRelationsPart(schema, (r) => ({
   searches: {
     searcher: r.one.users({
       from: r.reviews.searcher_id,

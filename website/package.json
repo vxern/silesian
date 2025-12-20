@@ -24,7 +24,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"@types/node": "^22.19.3",
 		"@zerodevx/svelte-toast": "^0.9.6",
-		"drizzle-kit": "^0.31.8",
+		"drizzle-kit": "^1.0.0-beta.3",
 		"drizzle-orm": "^1.0.0-beta.2",
 		"svelte": "^5.46.0",
 		"svelte-adapter-bun": "^0.5.2",

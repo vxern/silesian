@@ -1,8 +1,9 @@
-import { defineRelations } from "drizzle-orm";
+import { defineRelationsPart } from "drizzle-orm";
 import { pgTable, bigint, integer, text, unique, timestamp, json, index } from "drizzle-orm/pg-core";
 import { users } from "./users";
 import { reviews } from "./reviews";
 import { authors } from "./authors";
+import * as schema from "../schema";
 
 export const versions = pgTable("versions", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
@@ -19,7 +20,7 @@ export const versions = pgTable("versions", {
   index().on(t.author_id),
 ]);
 
-export const versionsRelations = defineRelations(versions, (r) => ({
+export const versionsRelations = () => defineRelationsPart(schema, (r) => ({
   versions: {
     author: r.one.users({
       from: r.versions.author_id,

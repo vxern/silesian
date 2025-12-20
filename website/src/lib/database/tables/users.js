@@ -24,7 +24,7 @@ export const users = pgTable("users", {
   time_spent_using: integer().default(0).notNull(),
   // In milliseconds.
   time_spent_editing: integer().default(0).notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   unique().on(t.username),
   unique().on(t.email_address),
@@ -33,8 +33,15 @@ export const users = pgTable("users", {
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
 ]);
 
-export const usersRelations = defineRelationsPart(schema, (r) => ({
+export const usersRelations = () => defineRelationsPart(schema, (r) => ({
   users: {
+    version: r.one.versions({
+      where: {
+        versionable_id: r.users.id,
+        versionable_type: "users",
+        version: r.users.current_version,
+      }
+    }),
     // TODO(vxern): A user can in fact only have one set of settings.
     settings: r.many.settings({
       from: r.users.id,

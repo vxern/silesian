@@ -16,7 +16,7 @@ export const reviews = pgTable("reviews", {
   // No updated_at because reviews are never updated.
 }, (t) => [uniqueIndex().on(t.version_id, t.reviewer_id)])
 
-export const reviewsRelations = defineRelationsPart(schema, (r) => ({
+export const reviewsRelations = () => defineRelationsPart(schema, (r) => ({
   reviews: {
     version: r.one.versions({
       from: r.reviews.version_id,

@@ -32,7 +32,7 @@ export const settings = pgTable("settings", {
   limited_to_accesses: accessesEnum().array().default([]).notNull(),
 }, (t) => [unique().on(t.user_id)]);
 
-export const settingsRelations = defineRelationsPart(schema, (r) => ({
+export const settingsRelations = () => defineRelationsPart(schema, (r) => ({
   settings: {
     user: r.one.users({
       from: r.settings.user_id,

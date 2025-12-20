@@ -14,7 +14,7 @@ export const authors = pgTable("authors", {
   name: text().notNull(),
   description: text(),
   status: publishStatusesEnum().default("draft").notNull(),
-  version: integer().default(1).notNull(),
+  current_version: integer().default(1).notNull(),
 }, (t) => [
   check("name_not_empty_check", sql`${t.name} <> ''`),
   check("description_not_empty_check", sql`${t.description} IS NULL OR ${t.description} <> ''`),
@@ -22,14 +22,15 @@ export const authors = pgTable("authors", {
   index().on(t.status),
 ]);
 
-export const authorsRelations = defineRelationsPart(schema, (r) => ({
+export const authorsRelations = () => defineRelationsPart(schema, (r) => ({
   authors: {
     version: r.one.versions({
+      from: r.authors.id,
+      to: r.versions.versionable_id,
       where: {
-        versionable_id: authors.id,
         versionable_type: "authors",
-        version: authors.version,
-      }
+        version: r.authors.current_version,
+      },
     }),
     entries: r.many.entries({
       from: r.authors.id.through(r.authorsToEntries.author_id),
