@@ -58,7 +58,7 @@
           <ColourLabel colour={category.colour} />
         </Table.Cell>
         <Table.Cell>
-          {category.version}
+          {category.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

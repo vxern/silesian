@@ -172,7 +172,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
     }
 
     const version = await db.insert(versions).values({
-      version: oldRecord.version + 1,
+      current_version: oldRecord.version + 1,
       versionable_type: getTableName(table),
       versionable_id: id,
       author_id: authorId,

@@ -143,7 +143,7 @@
           </section>
         </Table.Cell>
         <Table.Cell>
-          {source.version}
+          {source.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

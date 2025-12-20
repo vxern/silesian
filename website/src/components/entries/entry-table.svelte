@@ -81,7 +81,7 @@
           {/if}
         </Table.Cell>
         <Table.Cell {highlighted}>
-          {entry.version}
+          {entry.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

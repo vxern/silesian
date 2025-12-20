@@ -54,7 +54,7 @@
           {/if}
         </Table.Cell>
         <Table.Cell>
-          {author.version}
+          {author.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}

@@ -40,7 +40,7 @@
           {location.name}
         </Table.Cell>
         <Table.Cell>
-          {location.version}
+          {location.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
