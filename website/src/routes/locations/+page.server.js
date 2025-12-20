@@ -43,14 +43,13 @@ function getPendingCount() {
 }
 
 function getPublishedLocations() {
-  return db
-    .select()
-    .from(locations)
-    .withVersions()
-    .where(
-      and(
-        eq(locations.deleted, false),
-        eq(locations.status, "published"),
-      ),
-    );
+  return db.query.locations.findMany({
+    where: {
+      status: "published",
+      deleted: false,
+    },
+    with: {
+      authors: true,
+    },
+  });
 }

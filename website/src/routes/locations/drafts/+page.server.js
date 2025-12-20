@@ -10,19 +10,16 @@ export const load = async () => {
 };
 
 function getDraftLocations() {
-  return db
-    .select({ locations })
-    .from(locations)
-    .withVersions()
-    .where(
-      and(
+  return db.query.locations.findMany({
+    where: {
+      status: "draft",
+      deleted: false,
+      version: {
         // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
-        eq(locations.deleted, false),
-        eq(locations.status, "draft"),
-      ),
-    )
-    .then((results) => results.map((result) => result.locations));
+        author_id: 1,
+      },
+    },
+  });
 }
 
 export const actions = {

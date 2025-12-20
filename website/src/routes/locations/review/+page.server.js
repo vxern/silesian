@@ -9,17 +9,14 @@ export const load = async () => {
 };
 
 function getPendingLocations() {
-  return db
-    .select({ locations })
-    .from(locations)
-    .withVersions()
-    .where(
-      and(
+  return db.query.locations.findMany({
+    where: {
+      status: "pending",
+      deleted: false,
+      version: {
         // TODO(vxern): Set the right author.
-        ne(versions.author_id, 1),
-        eq(locations.deleted, false),
-        eq(locations.status, "pending"),
-      ),
-    )
-    .then((results) => results.map((result) => result.locations));
+        author_id: { ne: 1 },
+      },
+    },
+  });
 }

@@ -11,17 +11,17 @@ export const load = async ({ params }) => {
 };
 
 function getLocation({ id }) {
-  return db.select()
-    .from(locations)
-    .where(
-      and(
-        eq(locations.id, id),
-        eq(locations.deleted, false),
-        eq(locations.status, "pending"),
-      ),
-    )
-    .limit(1)
-    .then((results) => results.at(0));
+  return db.query.locations.findFirst({
+    where: {
+      id,
+      status: "pending",
+      deleted: false,
+      version: {
+        // TODO(vxern): Set the right author.
+        author_id: { ne: 1 },
+      },
+    },
+  });
 }
 
 // TODO(vxern): Validate.
