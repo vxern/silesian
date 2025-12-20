@@ -13,7 +13,6 @@
   const hasPermission = true;
 
   const { authors, mode, noneText } = $props();
-  $inspect(authors);
 </script>
 
 <Table.Root>
