@@ -36,8 +36,9 @@ export const users = pgTable("users", {
 export const usersRelations = () => defineRelationsPart(schema, (r) => ({
   users: {
     version: r.one.versions({
+      from: r.users.id,
+      to: r.versions.versionable_id,
       where: {
-        versionable_id: r.users.id,
         versionable_type: "users",
         version: r.users.current_version,
       }

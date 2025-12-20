@@ -43,8 +43,8 @@ export const settingsRelations = () => defineRelationsPart(schema, (r) => ({
       to: r.sources.id.through(r.settingsToSources.source_id),
     }),
     categories: r.many.categories({
-      from: r.settings.id.through(r.settingsToSources.settings_id),
-      to: r.categories.id.through(r.settingsToSources.category_id),
+      from: r.settings.id.through(r.settingsToCategories.settings_id),
+      to: r.categories.id.through(r.settingsToCategories.category_id),
     }),
   },
 }));

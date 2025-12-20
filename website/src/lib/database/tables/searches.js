@@ -15,7 +15,7 @@ export const searches = pgTable("searches", {
 export const searchesRelations = () => defineRelationsPart(schema, (r) => ({
   searches: {
     searcher: r.one.users({
-      from: r.reviews.searcher_id,
+      from: r.searches.searcher_id,
       to: r.users.id,
     }),
   },
