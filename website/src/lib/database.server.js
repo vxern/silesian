@@ -92,7 +92,7 @@ PgSelectBase.prototype.withVersions = function () {
   return this.innerJoin(versions, and(
     eq(versions.versionable_id, this._.config.table.id),
     eq(versions.versionable_type, getTableName(this._.config.table)),
-    eq(versions.version, this._.config.table.version),
+    eq(versions.version, this._.config.table.current_version),
   ));
 };
 
