@@ -12,6 +12,7 @@ function getDraftEntries() {
       status: "draft",
       deleted: false,
       version: {
+        // TODO(vxern): Update this later.
         author_id: 1,
       },
     },
