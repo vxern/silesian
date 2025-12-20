@@ -25,11 +25,10 @@ export const categories = pgTable("categories", {
 export const categoriesRelations = () => defineRelationsPart(schema, (r) => ({
   categories: {
     version: r.one.versions({
-      from: r.categories.id,
-      to: r.versions.versionable_id,
+      from: [r.categories.id, r.categories.current_version],
+      to: [r.versions.versionable_id, r.versions.version],
       where: {
         versionable_type: "categories",
-        version: r.categories.current_version,
       },
     }),
     entries: r.many.entries({

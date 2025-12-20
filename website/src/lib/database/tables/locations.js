@@ -27,12 +27,11 @@ export const locations = pgTable("locations", {
 export const locationsRelations = () => defineRelationsPart(schema, (r) => ({
   locations: {
     version: r.one.versions({
-      from: r.locations.id,
-      to: r.versions.versionable_id,
+      from: [r.locations.id, r.locations.current_version],
+      to: [r.versions.versionable_id, r.versions.version],
       where: {
         versionable_type: "locations",
-        version: r.locations.current_version,
-      }
+      },
     }),
     authors: r.many.authors({
       from: r.locations.id.through(r.authorsToLocations.location_id),

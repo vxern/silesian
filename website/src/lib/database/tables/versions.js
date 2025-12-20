@@ -22,6 +22,7 @@ export const versions = pgTable("versions", {
 
 export const versionsRelations = () => defineRelationsPart(schema, (r) => ({
   versions: {
+    // TODO(vxern): Add relations for versionables.
     author: r.one.users({
       from: r.versions.author_id,
       to: r.users.id,

@@ -38,11 +38,10 @@ export const sources = pgTable("sources", {
 export const sourcesRelations = () => defineRelationsPart(schema, (r) => ({
   sources: {
     version: r.one.versions({
-      from: r.sources.id,
-      to: r.versions.versionable_id,
+      from: [r.sources.id, r.sources.current_version],
+      to: [r.versions.versionable_id, r.versions.version],
       where: {
         versionable_type: "sources",
-        version: r.sources.current_version,
       },
     }),
     authors: r.many.authors({
