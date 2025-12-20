@@ -11,34 +11,29 @@ export const load = async ({ params }) => {
 };
 
 function getEntry({ id }) {
-  return db
-    .select({ entries, sources, categories })
-    .from(entries)
-    .withVersions()
-    .where(
-      and(
-        // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
-        eq(entries.id, id),
-        eq(entries.deleted, false),
-        eq(entries.status, "draft"),
-      ),
-    )
-    .innerJoin(sources, eq(sources.id, entries.source_id))
-    .leftJoin(entriesToCategories, eq(entriesToCategories.entry_id, entries.id))
-    .leftJoin(categories, eq(categories.id, entriesToCategories.category_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ entries }) => entries.id)).map(
-        (results) => {
-          const entry = results[0].entries;
-
-          entry.source = results[0].sources;
-          entry.categories = results.map((result) => result.categories).filter((category) => category);
-
-          return entry;
-        }
-      ).at(0),
-    );
+  return db.query.entries.findFirst({
+    where: {
+      id,
+      status: "draft",
+      deleted: false,
+      version: {
+        // TODO(vxern): Update this later.
+        author_id: 1,
+      },
+    },
+    with: {
+      source: {
+        with: {
+          authors: {
+            with: {
+              locations: true
+            },
+          },
+        },
+      },
+      categories: true,
+    },
+  });
 }
 
 export const actions = {

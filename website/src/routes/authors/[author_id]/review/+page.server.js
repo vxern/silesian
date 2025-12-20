@@ -11,29 +11,20 @@ export const load = async ({ params }) => {
 };
 
 function getAuthor({ id }) {
-  return db
-    .select({ authors, locations })
-    .from(authors)
-    .where(
-      and(
-        eq(authors.id, id),
-        eq(authors.deleted, false),
-        eq(authors.status, "pending"),
-      ),
-    )
-    .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
-    .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ authors }) => authors.id)).map(
-        (results) => {
-          const author = results[0].authors;
-
-          author.locations = results.map((result) => result.locations).filter((location) => location);
-
-          return author;
-        }
-      ).at(0),
-    );
+  return db.query.authors.findFirst({
+    where: {
+      id,
+      status: "pending",
+      deleted: false,
+      version: {
+        // TODO(vxern): Update this later.
+        author_id: { ne: 1 },
+      },
+    },
+    with: {
+      locations: true,
+    },
+  });
 }
 
 // TODO(vxern): Validate.
