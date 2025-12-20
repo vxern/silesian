@@ -9,29 +9,17 @@ export const load = async () => {
 };
 
 function getPendingAuthors() {
-  return db
-    .select({ authors, locations })
-    .from(authors)
-    .withVersions()
-    .where(
-      and(
-        // TODO(vxern): Set the right author.
-        ne(versions.author_id, 1),
-        eq(authors.deleted, false),
-        eq(authors.status, "pending"),
-      ),
-    )
-    .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
-    .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ authors }) => authors.id)).map(
-        (results) => {
-          const author = results[0].authors;
-
-          author.locations = results.map((result) => result.locations).filter((location) => location);
-
-          return author;
-        }
-      ),
-    );
+  return db.query.authors.findMany({
+    where: {
+      status: "pending",
+      deleted: false,
+      version: {
+        // TODO(vxern): Update this later.
+        author_id: { ne: 1 },
+      },
+    },
+    with: {
+      locations: true,
+    },
+  });
 }

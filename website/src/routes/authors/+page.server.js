@@ -43,27 +43,13 @@ function getPendingCount() {
 }
 
 function getPublishedAuthors() {
-  return db
-    .select({ authors, locations })
-    .from(authors)
-    .withVersions()
-    .where(
-      and(
-        eq(authors.deleted, false),
-        eq(authors.status, "published"),
-      ),
-    )
-    .leftJoin(authorsToLocations, eq(authorsToLocations.author_id, authors.id))
-    .leftJoin(locations, eq(locations.id, authorsToLocations.location_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ authors }) => authors.id)).map(
-        (results) => {
-          const author = results[0].authors;
-
-          author.locations = results.map((result) => result.locations).filter((location) => location);
-
-          return author;
-        }
-      ),
-    );
+  return db.query.authors.findMany({
+    where: {
+      status: "published",
+      deleted: false,
+    },
+    with: {
+      locations: true,
+    },
+  });
 }
