@@ -13,13 +13,20 @@
     label,
     description,
     value,
-    options: getOptions,
+    options: options_,
+    autocomplete,
     icon: Icon = MenuFillIcon,
     required = false,
     /** If enabled, the select option will allow you to select multiple values. */
     multiple = false,
     component: Component,
   } = $props();
+
+  if ((options_ && autocomplete) || (!options_ && !autocomplete)) {
+    throw new Error(
+      "One of either `options` or `autocomplete` must be provided."
+    );
+  }
 
   let dropdownElement;
   let dropdownTooltip;
@@ -41,11 +48,16 @@
   let searchValue = $state();
   let options = $state([]);
   let filteredOptions = $state([]);
-  function searchOptions(event) {
-    const searchLowerCase = searchValue.toLowerCase();
-    const newFilteredOptions = options.filter((option) =>
-      option.search.toLowerCase().includes(searchLowerCase)
-    );
+  async function filterOptions(event) {
+    let newFilteredOptions;
+    if (autocomplete) {
+      newFilteredOptions = await autocomplete(searchValue);
+    } else {
+      const searchLowerCase = searchValue.toLowerCase();
+      newFilteredOptions = options.filter((option) =>
+        option.search.toLowerCase().includes(searchLowerCase)
+      );
+    }
 
     if (isEqual(filteredOptions, newFilteredOptions)) {
       return;
@@ -64,9 +76,14 @@
     multiple ? JSON.stringify(selectedOptionValues) : selectedOptionValues.at(0)
   );
 
-  // TODO(vxern): Needs to re-run when a search term is inputted.
   async function setOptions() {
-    options = (await getOptions?.()) ?? [];
+    if (autocomplete) {
+      options = await autocomplete("");
+    } else {
+      options = options_;
+    }
+
+    // TODO(vxern): IMPORTANT!!!! The selected options __CANNOT__ come from the `options` array.
     if (!value) {
       selectedOptions = [];
     } else if (multiple) {
@@ -155,7 +172,7 @@
           class="w-full invisible-input cursor-pointer"
           bind:this={search}
           bind:value={searchValue}
-          oninput={searchOptions.bind(this)}
+          oninput={filterOptions.bind(this)}
           onkeydown={handleKeyPress}
         />
       {:else if selectedOptions.length > 0}

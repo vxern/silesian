@@ -24,12 +24,11 @@
     label={m["routes.locations.form.country"]()}
     description={m["routes.locations.form.country_description"]()}
     required={true}
-    options={() =>
-      countriesEnum.enumValues.map((country) => ({
-        search: m[`countries.${country}`](),
-        value: country,
-        object: country,
-      }))}
+    options={countriesEnum.enumValues.map((country) => ({
+      search: m[`countries.${country}`](),
+      value: country,
+      object: country,
+    }))}
     component={Form.CountrySelectOption}
     value={location?.country}
   />

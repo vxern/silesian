@@ -24,12 +24,11 @@
     label={m["routes.categories.form.colour"]()}
     description={m["routes.categories.form.colour_description"]()}
     required={true}
-    options={() =>
-      coloursEnum.enumValues.map((colour) => ({
-        search: m[`colours.${colour}`](),
-        value: colour,
-        object: colour,
-      }))}
+    options={coloursEnum.enumValues.map((colour) => ({
+      search: m[`colours.${colour}`](),
+      value: colour,
+      object: colour,
+    }))}
     component={Form.ColourSelectOption}
     value={category?.colour}
   />

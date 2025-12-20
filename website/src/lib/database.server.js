@@ -285,3 +285,38 @@ export async function insertReview({ table, id, values }) {
     ...values,
   });
 }
+
+/** Performs 1 query. */
+export async function autocomplete({ table, params, ...props }) {
+  // TODO(vxern): Validate.
+
+  const where = {
+    deleted: false,
+  };
+
+  if (params.get("query").length > 0) {
+    where.name = { ilike: `%${params.get("query")}%` };
+  }
+
+  if (params.has("include_unpublished")) {
+    where.OR = [
+      { status: "published" },
+      { 
+        AND: [
+          { status: { ne: "published" } },
+          // TODO(vxern): Set the right author.
+          { version: { author_id: 1 } },
+        ],
+      },
+    ];
+  } else {
+    where.status = "published";
+  }
+
+  return db.query[getTableName(table)].findMany({
+    where,
+    // TODO(vxern): Move to consonants.
+    limit: params.limit ?? 100,
+    ...props,
+  });
+}

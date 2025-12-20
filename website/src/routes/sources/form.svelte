@@ -35,8 +35,10 @@
     name="author_ids[]"
     label={m["routes.sources.form.authors"]()}
     description={m["routes.sources.form.authors_description"]()}
-    options={() =>
-      fetch("/autocomplete/authors?include_unpublished")
+    autocomplete={(search) =>
+      fetch(
+        `/authors/autocomplete?include_unpublished&query=${encodeURIComponent(search)}`
+      )
         .then((response) => response.json())
         .then((authors) =>
           authors.map((author) => ({
@@ -71,12 +73,11 @@
     label={m["routes.sources.form.orthography"]()}
     description={m["routes.sources.form.orthography_description"]()}
     required={true}
-    options={() =>
-      orthographiesEnum.enumValues.map((orthography) => ({
-        search: m[`orthographies.${orthography}`](),
-        value: orthography,
-        object: orthography,
-      }))}
+    options={orthographiesEnum.enumValues.map((orthography) => ({
+      search: m[`orthographies.${orthography}`](),
+      value: orthography,
+      object: orthography,
+    }))}
     component={Form.OrthographySelectOption}
     value={source?.orthography}
   />
@@ -85,12 +86,11 @@
     label={m["routes.sources.form.source_language"]()}
     description={m["routes.sources.form.source_language_description"]()}
     required={true}
-    options={() =>
-      languagesEnum.enumValues.map((language) => ({
-        search: m[`languages.${language}`](),
-        value: language,
-        object: language,
-      }))}
+    options={languagesEnum.enumValues.map((language) => ({
+      search: m[`languages.${language}`](),
+      value: language,
+      object: language,
+    }))}
     component={Form.LanguageSelectOption}
     value={source?.source_language}
   />
@@ -99,12 +99,11 @@
     label={m["routes.sources.form.target_language"]()}
     description={m["routes.sources.form.target_language_description"]()}
     required={true}
-    options={() =>
-      languagesEnum.enumValues.map((language) => ({
-        search: m[`languages.${language}`](),
-        value: language,
-        object: language,
-      }))}
+    options={languagesEnum.enumValues.map((language) => ({
+      search: m[`languages.${language}`](),
+      value: language,
+      object: language,
+    }))}
     component={Form.LanguageSelectOption}
     value={source?.target_language}
   />
@@ -115,12 +114,11 @@
     label={m["routes.sources.form.licence"]()}
     description={m["routes.sources.form.licence_description"]()}
     required={true}
-    options={() =>
-      licencesEnum.enumValues.map((licence) => ({
-        search: m[`licences.${licence}`](),
-        value: licence,
-        object: licence,
-      }))}
+    options={licencesEnum.enumValues.map((licence) => ({
+      search: m[`licences.${licence}`](),
+      value: licence,
+      object: licence,
+    }))}
     component={Form.LicenceSelectOption}
     value={source?.licence}
   />
@@ -129,12 +127,11 @@
     label={m["routes.sources.form.access"]()}
     description={m["routes.sources.form.access_description"]()}
     required={true}
-    options={() =>
-      accessesEnum.enumValues.map((access) => ({
-        search: m[`accesses.${access}`](),
-        value: access,
-        object: access,
-      }))}
+    options={accessesEnum.enumValues.map((access) => ({
+      search: m[`accesses.${access}`](),
+      value: access,
+      object: access,
+    }))}
     component={Form.AccessSelectOption}
     value={source?.access}
   />

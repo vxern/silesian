@@ -22,8 +22,10 @@
     name="location_ids[]"
     label={m["routes.authors.form.locations"]()}
     description={m["routes.authors.form.locations_description"]()}
-    options={() =>
-      fetch("/autocomplete/locations?include_unpublished")
+    autocomplete={(query) =>
+      fetch(
+        `/locations/autocomplete?include_unpublished&query=${encodeURIComponent(query)}`
+      )
         .then((response) => response.json())
         .then((locations) =>
           locations.map((location) => ({

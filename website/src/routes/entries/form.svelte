@@ -30,8 +30,10 @@
     label={m["routes.entries.form.source_id"]()}
     description={m["routes.entries.form.source_id_description"]()}
     required={true}
-    options={() =>
-      fetch("/autocomplete/sources?include_unpublished")
+    autocomplete={(query) =>
+      fetch(
+        `/sources/autocomplete?include_unpublished&query=${encodeURIComponent(query)}`
+      )
         .then((response) => response.json())
         .then((sources) =>
           sources.map((source) => ({
@@ -47,8 +49,10 @@
     name="author_ids[]"
     label={m["routes.entries.form.authors"]()}
     description={m["routes.entries.form.authors_description"]()}
-    options={() =>
-      fetch("/autocomplete/authors?include_unpublished")
+    autocomplete={(query) =>
+      fetch(
+        `/authors/autocomplete?include_unpublished&query=${encodeURIComponent(query)}`
+      )
         .then((response) => response.json())
         .then((authors) =>
           authors.map((author) => ({
@@ -67,8 +71,10 @@
     name="category_ids[]"
     label={m["routes.entries.form.categories"]()}
     description={m["routes.entries.form.categories_description"]()}
-    options={() =>
-      fetch("/autocomplete/categories?include_unpublished")
+    autocomplete={(query) =>
+      fetch(
+        `/categories/autocomplete?include_unpublished&query=${encodeURIComponent(query)}`
+      )
         .then((response) => response.json())
         .then((categories) =>
           categories.map((category) => ({
