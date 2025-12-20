@@ -15,7 +15,7 @@ function getPendingEntries() {
       deleted: false,
       version: {
         // TODO(vxern): Update this later.
-        author_id: 1,
+        author_id: { ne: 1 },
       },
     },
     with: {

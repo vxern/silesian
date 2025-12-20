@@ -45,10 +45,10 @@ function getPendingCount() {
 
 function getPublishedEntries() {
   return db.query.entries.findMany({
-    where: (entries, { like, eq, and }) => and(
-      eq(entries.status, "published"),
-      eq(entries.deleted, false),
-    ),
+    where: {
+      status: "published",
+      deleted: false,
+    },
     with: {
       source: {
         with: {
