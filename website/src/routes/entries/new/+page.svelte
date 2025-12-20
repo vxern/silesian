@@ -7,6 +7,7 @@
   import BackButton from "../../../components/interactions/back-button.svelte";
   import EntryForm from "../form.svelte";
   import Form from "../../../components/form/index.js";
+  import { toast } from "@zerodevx/svelte-toast";
 
   // TODO(vxern): Pick the example at random from the database.
   // TODO(vxern): Extract the defaults into the constants.
@@ -14,9 +15,12 @@
   let entry = $state();
   async function onSubmit({ result, update }) {
     if (result.type === "success") {
+      toast.push(m["routes.categories.new.created"]());
       entry = { source_id: result.data.source_id };
       await update({ invalidateAll: true });
     }
+
+    // TODO(vxern): Show a toast for the error.
   }
 </script>
 
