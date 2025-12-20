@@ -172,7 +172,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
     }
 
     const version = await db.insert(versions).values({
-      current_version: oldRecord.version + 1,
+      version: oldRecord.current_version + 1,
       versionable_type: getTableName(table),
       versionable_id: id,
       author_id: authorId,
@@ -189,7 +189,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
     const record =
       await db
         .update(table)
-        .set({ ...values, version: version.version })
+        .set({ ...values, current_version: version.version })
         .where(eq(table.id, id))
         .returning({ id: table.id, ...returning})
         .then((results) => results.at(0))
@@ -202,7 +202,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
         and(
           eq(versions.versionable_type, getTableName(table)),
           eq(versions.versionable_id, record.id),
-          eq(versions.version, oldRecord.version),
+          eq(versions.version, oldRecord.current_version),
         ),
       )
       .catch((error) => tx.rollback());
