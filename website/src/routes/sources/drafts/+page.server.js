@@ -10,31 +10,19 @@ export const load = async () => {
 };
 
 function getDraftSources() {
-  return db
-    .select({ sources, authors })
-    .from(sources)
-    .withVersions()
-    .where(
-      and(
-        // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
-        eq(sources.deleted, false),
-        eq(sources.status, "draft"),
-      ),
-    )
-    .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
-    .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ sources }) => sources.id)).map(
-        (results) => {
-          const source = results[0].sources;
-
-          source.authors = results.map((result) => result.authors).filter((author) => author);
-
-          return source;
-        }
-      ),
-    );
+  return db.query.sources.findMany({
+    where: {
+      status: "draft",
+      deleted: false,
+      version: {
+        // TODO(vxern): Update this later.
+        author_id: 1,
+      },
+    },
+    with: {
+      authors: true,
+    },
+  });
 }
 
 export const actions = {

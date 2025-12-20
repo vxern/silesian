@@ -11,29 +11,20 @@ export const load = async ({ params }) => {
 };
 
 function getSource({ id }) {
-  return db
-    .select({ sources, authors })
-    .from(sources)
-    .where(
-      and(
-        eq(sources.id, id),
-        eq(sources.deleted, false),
-        eq(sources.status, "pending"),
-      ),
-    )
-    .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
-    .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ sources }) => sources.id)).map(
-        (results) => {
-          const source = results[0].sources;
-
-          source.authors = results.map((result) => result.authors).filter((author) => author);
-
-          return source;
-        }
-      ).at(0),
-    );
+  return db.query.sources.findFirst({
+    where: {
+      id,
+      status: "pending",
+      deleted: false,
+      version: {
+        // TODO(vxern): Update this later.
+        author_id: { ne: 1 },
+      },
+    },
+    with: {
+      authors: true,
+    },
+  });
 }
 
 // TODO(vxern): Validate.

@@ -43,27 +43,13 @@ function getPendingCount() {
 }
 
 function getPublishedSources() {
-  return db
-    .select({ sources, authors })
-    .from(sources)
-    .withVersions()
-    .where(
-      and(
-        eq(sources.deleted, false),
-        eq(sources.status, "published"),
-      ),
-    )
-    .leftJoin(authorsToSources, eq(authorsToSources.source_id, sources.id))
-    .leftJoin(authors, eq(authors.id, authorsToSources.author_id))
-    .then(
-      (results) => Object.values(Object.groupBy(results, ({ sources }) => sources.id)).map(
-        (results) => {
-          const source = results[0].sources;
-
-          source.authors = results.map((result) => result.authors).filter((author) => author);
-
-          return source;
-        }
-      ),
-    );
+  return db.query.sources.findMany({
+    where: {
+      status: "published",
+      deleted: false,
+    },
+    with: {
+      authors: true,
+    },
+  });
 }
