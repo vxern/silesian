@@ -63,9 +63,11 @@
       <Table.HeaderCell>
         {m["components.source_table.progress.progress"]()}
       </Table.HeaderCell>
-      <Table.HeaderCell>
-        {m["components.source_table.version"]()}
-      </Table.HeaderCell>
+      {#if mode !== "edit"}
+        <Table.HeaderCell>
+          {m["components.source_table.version"]()}
+        </Table.HeaderCell>
+      {/if}
       {#if hasPermission && sources.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -144,13 +146,15 @@
             {/if}
           </section>
         </Table.Cell>
-        <Table.Cell {highlighted}>
-          {source.current_version}
-          <IconButton
-            icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/sources/${source.id}/history`)}
-          />
-        </Table.Cell>
+        {#if mode !== "edit"}
+          <Table.Cell {highlighted}>
+            {source.current_version}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto(`/sources/${source.id}/history`)}
+            />
+          </Table.Cell>
+        {/if}
         {#if hasPermission}
           {#if mode === "edit"}
             <Table.Cell {highlighted} class="justify-center">

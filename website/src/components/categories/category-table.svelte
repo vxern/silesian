@@ -29,9 +29,11 @@
       <Table.HeaderCell>
         {m["components.category_table.colour"]()}
       </Table.HeaderCell>
-      <Table.HeaderCell>
-        {m["components.category_table.version"]()}
-      </Table.HeaderCell>
+      {#if mode !== "edit"}
+        <Table.HeaderCell>
+          {m["components.category_table.version"]()}
+        </Table.HeaderCell>
+      {/if}
       {#if hasPermission && categories.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -59,9 +61,11 @@
         <Table.Cell {highlighted}>
           <ColourLabel colour={category.colour} />
         </Table.Cell>
-        <Table.Cell {highlighted}>
-          {category.current_version}
-        </Table.Cell>
+        {#if mode !== "edit"}
+          <Table.Cell {highlighted}>
+            {category.current_version}
+          </Table.Cell>
+        {/if}
         {#if hasPermission}
           {#if mode === "edit"}
             <Table.Cell {highlighted} class="justify-center">

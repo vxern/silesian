@@ -33,9 +33,11 @@
       <Table.HeaderCell>
         {m["components.entry_table.categories"]()}
       </Table.HeaderCell>
-      <Table.HeaderCell>
-        {m["components.entry_table.version"]()}
-      </Table.HeaderCell>
+      {#if mode !== "edit"}
+        <Table.HeaderCell>
+          {m["components.entry_table.version"]()}
+        </Table.HeaderCell>
+      {/if}
       {#if hasPermission && entries.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -80,9 +82,11 @@
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell {highlighted}>
-          {entry.current_version}
-        </Table.Cell>
+        {#if mode !== "edit"}
+          <Table.Cell {highlighted}>
+            {entry.current_version}
+          </Table.Cell>
+        {/if}
         {#if hasPermission}
           {#if mode === "edit"}
             <Table.Cell {highlighted} class="justify-center">

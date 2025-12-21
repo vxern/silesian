@@ -21,9 +21,11 @@
       <Table.HeaderCell>
         {m["components.location_table.name"]()}
       </Table.HeaderCell>
-      <Table.HeaderCell>
-        {m["components.location_table.version"]()}
-      </Table.HeaderCell>
+      {#if mode !== "edit"}
+        <Table.HeaderCell>
+          {m["components.location_table.version"]()}
+        </Table.HeaderCell>
+      {/if}
       {#if hasPermission && locations.length > 0}
         {#if mode === "edit"}
           <Table.HeaderCell />
@@ -41,9 +43,11 @@
         <Table.Cell {highlighted}>
           {location.name}
         </Table.Cell>
-        <Table.Cell {highlighted}>
-          {location.current_version}
-        </Table.Cell>
+        {#if mode !== "edit"}
+          <Table.Cell {highlighted}>
+            {location.current_version}
+          </Table.Cell>
+        {/if}
         {#if hasPermission}
           {#if mode === "edit"}
             <Table.Cell {highlighted} class="justify-center">
