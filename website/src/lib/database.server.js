@@ -154,7 +154,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
     const snapshot = {};
     for (const key in values) {
       if (!isEqual(values[key], oldRecord[key])) {
-        snapshot[key] = values[key];
+        snapshot[key] = oldRecord[key];
       }
     }
     
