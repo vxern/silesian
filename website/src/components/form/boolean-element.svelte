@@ -1,7 +1,7 @@
 <script>
-  import { m } from "$lib/paraglide/messages";
   import Check2FillIcon from "~icons/mingcute/check-2-fill";
   import Label from "./label.svelte";
+  import BooleanLabel from "../../components/labels/boolean-label.svelte";
 
   const { name, label, description, required = false } = $props();
 
@@ -23,18 +23,6 @@
   >
     <Check2FillIcon class="text-zinc-600" />
     <input {name} type="hidden" bind:value />
-    {#if value == "1"}
-      <span
-        class="bg-green-500 text-white font-medium rounded-lg text-sm py-1 px-1.5"
-      >
-        {m["meta.yes"]()}
-      </span>
-    {:else}
-      <span
-        class="bg-red-500 text-white font-medium rounded-lg text-sm py-1 px-1.5"
-      >
-        {m["meta.no"]()}
-      </span>
-    {/if}
+    <BooleanLabel {value} />
   </section>
 </section>

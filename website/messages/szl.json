@@ -191,6 +191,17 @@
         "no_review_history": "Jeszcze żodnych haseł żeście niy sprowdzili."
       }
     },
+    "version_table": {
+      "version": "Wersyjo",
+      "snapshot": "Zmiany",
+      "author_id": "Autōr",
+      "created_at": "Kiedy",
+      "divider": "—",
+      "current": "teroźno",
+      "field": "Pole",
+      "before": "Przed",
+      "after": "Po"
+    },
     "search_history": {
       "no_search_history": "Jeszcze niczygo niy szukaliście.",
       "no_popular_searches": "Żodyn jeszcze niczygo niy szukoł."
@@ -469,6 +480,10 @@
           "title": "Edytowaniy zdrzōdła — „{source_name}”",
           "description": ""
         },
+        "history": {
+          "title": "Historyjo zdrzōdła — „{source_name}”",
+          "description": ""
+        },
         "review": {
           "title": "Sprowdzaniy zdrzōdła — „{source_name}”",
           "description": ""
@@ -581,16 +596,6 @@
         "title": "Miyjsca do sprowdzynio",
         "description": "Miyjsca, kiere trza sprowdzić.",
         "none": "Niy ma żodnych miyjsc do sprowdzynio."
-      },
-      "[source_id]": {
-        "edit": {
-          "title": "Edytowaniy miyjsca — „{location_name}”",
-          "description": ""
-        },
-        "review": {
-          "title": "Sprowdzaniy miyjsca — „{location_name}”",
-          "description": ""
-        }
       },
       "form": {
         "name": "Miano",

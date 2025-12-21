@@ -144,6 +144,10 @@
         </Table.Cell>
         <Table.Cell>
           {source.current_version}
+          <IconButton
+            icon={ArrowRightUpLineIcon}
+            onclick={() => goto(`/sources/${source.id}/history`)}
+          />
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
