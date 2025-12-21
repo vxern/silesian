@@ -135,11 +135,10 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
 }
 
 /**
- * Performs 2 queries if only the status changes, otherwise 4 queries:
+ * Performs 2 queries if only the status changes, otherwise 3 queries:
  * - Get record in its current state.
- * - Create version.
+ * - Create version with a snapshot of the updated data.
  * - Update record.
- * - Update old version with a snapshot of the current data.
  */
 export async function versionedUpdate({ table, id, authorId, values, returning = {} }) {
   return db.transaction(async (tx) => {
@@ -175,14 +174,12 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
       version: oldRecord.current_version + 1,
       versionable_type: getTableName(table),
       versionable_id: id,
+      snapshot: JSON.stringify(snapshot),
       author_id: authorId,
     }).onConflictDoUpdate({
       target: [versions.version, versions.versionable_type, versions.versionable_id],
       set: { version: sql`${versions.version} + 1` },
-    }).returning({
-        version: versions.version,
-        created_at: versions.created_at,
-      })
+    }).returning({ version: versions.version })
       .then((results) => results.at(0))
       .catch((error) => tx.rollback());
 
@@ -194,18 +191,6 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
         .returning({ id: table.id, ...returning})
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
-
-    await db
-      .update(versions)
-      .set({ snapshot: JSON.stringify(snapshot) })
-      .where(
-        and(
-          eq(versions.versionable_type, getTableName(table)),
-          eq(versions.versionable_id, record.id),
-          eq(versions.version, oldRecord.current_version),
-        ),
-      )
-      .catch((error) => tx.rollback());
 
     return record;
   });
