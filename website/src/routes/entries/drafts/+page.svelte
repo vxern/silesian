@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { m } from "$lib/paraglide/messages";
   import { goto } from "$app/navigation";
   import Page from "../../../components/page/index.js";
@@ -7,23 +6,8 @@
   import EntryTable from "../../../components/entries/entry-table.svelte";
   import constants from "$lib/constants/core";
   import BackButton from "../../../components/interactions/back-button.svelte";
-  import { page } from "$app/stores";
 
   const { data } = $props();
-
-  onMount(() => {
-    const id = $page.url.hash.slice(1);
-    if (!$page.url.hash) {
-      return;
-    }
-
-    const entry = document.getElementById(id);
-    if (!entry) {
-      return;
-    }
-
-    entry.scrollIntoView();
-  });
 </script>
 
 <svelte:head>
