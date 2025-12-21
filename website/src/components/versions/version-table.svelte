@@ -14,6 +14,7 @@
   import LocationLabel from "../../components/labels/location-label.svelte";
   import OrthographyLabel from "../../components/labels/orthography-label.svelte";
   import SourceLabel from "../../components/labels/source-label.svelte";
+  import BooleanLabel from "../labels/boolean-label.svelte";
 
   dayjs.extend(relativeTime);
   dayjs.extend(calendar);
@@ -39,9 +40,7 @@
 </script>
 
 {#snippet formatValue({ type, value })}
-  {#if !type}
-    {value}
-  {:else if type === "access"}
+  {#if type === "access"}
     <AccessLabel access={value} />
   {:else if type === "author"}
     <AuthorLabel author={value} />
@@ -61,6 +60,8 @@
     <OrthographyLabel orthography={value} />
   {:else if type === "source"}
     <SourceLabel source={value} />
+  {:else if typeof value === "boolean"}
+    <BooleanLabel {value} />
   {:else}
     {value}
   {/if}
@@ -106,14 +107,14 @@
           {translateProperty(property)}
         </Table.Cell>
         <Table.Cell>
-          {#if oldValue}
+          {#if oldValue != null}
             {@render formatValue({ type: types[property], value: oldValue })}
           {:else}
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
         <Table.Cell>
-          {#if newValue}
+          {#if newValue != null}
             {@render formatValue({ type: types[property], value: newValue })}
           {:else}
             {m["meta.none"]()}
