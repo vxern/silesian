@@ -6,7 +6,7 @@
 
 <section
   class={clsx(
-    "flex w-full rounded-lg p-2 font-medium text-sm text-white gap-x-2 items-center",
+    "flex w-full rounded-lg p-2 font-medium text-sm text-nowrap text-white gap-x-2 items-center",
     classes
   )}
 >
