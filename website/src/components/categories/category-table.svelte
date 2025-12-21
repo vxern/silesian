@@ -7,6 +7,7 @@
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
   import ColourLabel from "../labels/colour-label.svelte";
+  import { page } from "$app/stores";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
@@ -43,26 +44,27 @@
   </Table.Header>
   <Table.Body>
     {#each categories as category, index}
-      <Table.Row {index}>
-        <Table.Cell>
+      <Table.Row id={category.id} {index}>
+        {@const highlighted = $page.url.hash === `#${category.id}`}
+        <Table.Cell {highlighted}>
           {category.name}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if category.description}
             {category.description}
           {:else}
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           <ColourLabel colour={category.colour} />
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {category.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -80,7 +82,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}

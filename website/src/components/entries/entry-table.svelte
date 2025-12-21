@@ -9,7 +9,6 @@
   import SourceLabel from "../labels/source-label.svelte";
   import CategoryLabel from "../labels/category-label.svelte";
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
 
   // TODO(vxern): Use proper permissions.
   const hasPermission = true;
@@ -17,20 +16,6 @@
   const { entries, mode, noneText } = $props();
 
   // TODO(vxern): Add more columns.
-
-  onMount(() => {
-    const id = $page.url.hash.slice(1);
-    if (!$page.url.hash) {
-      return;
-    }
-
-    const entry = document.getElementById(id);
-    if (!entry) {
-      return;
-    }
-
-    entry.scrollIntoView();
-  });
 </script>
 
 <Table.Root>

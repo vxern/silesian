@@ -18,6 +18,7 @@
   import AuthorLabel from "../labels/author-label.svelte";
   import AccessLabel from "../labels/access-label.svelte";
   import LicenceLabel from "../labels/licence-label.svelte";
+  import { page } from "$app/stores";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
   // TODO(vxern): Update the check for community authors.
@@ -77,8 +78,9 @@
   </Table.Header>
   <Table.Body>
     {#each sources as source, index}
-      <Table.Row {index}>
-        <Table.Cell>
+      {@const highlighted = $page.url.hash === `#${source.id}`}
+      <Table.Row id={source.id} {index}>
+        <Table.Cell {highlighted}>
           {source.name}
           {#if source.url}
             <IconButton
@@ -87,14 +89,14 @@
             />
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if source.description}
             {source.description}
           {:else}
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if source.authors.length > 0}
             {#each source.authors as author}
               <AuthorLabel {author} />
@@ -103,20 +105,20 @@
             {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if source.year}
             {source.year}
           {:else}
             {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           <AccessLabel access={source.access} />
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           <LicenceLabel licence={source.licence} />
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           <section class="flex flex-col">
             {m["components.source_table.progress.numbers"]({
               imported: source.imported_entry_count,
@@ -142,7 +144,7 @@
             {/if}
           </section>
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {source.current_version}
           <IconButton
             icon={ArrowRightUpLineIcon}
@@ -151,7 +153,7 @@
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -169,7 +171,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}

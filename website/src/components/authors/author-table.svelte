@@ -7,6 +7,7 @@
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
   import LocationLabel from "../labels/location-label.svelte";
+  import { page } from "$app/stores";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
 
@@ -39,11 +40,12 @@
   </Table.Header>
   <Table.Body>
     {#each authors as author, index}
-      <Table.Row {index}>
-        <Table.Cell>
+      <Table.Row id={author.id} {index}>
+        {@const highlighted = $page.url.hash === `#${author.id}`}
+        <Table.Cell {highlighted}>
           {author.name}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {#if author.locations && author.locations.length > 0}
             {#each author.locations as location}
               <LocationLabel {location} />
@@ -52,12 +54,12 @@
             {m["meta.none"]()}
           {/if}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {author.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -75,7 +77,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}

@@ -6,6 +6,7 @@
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
+  import { page } from "$app/stores";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
 
@@ -35,16 +36,17 @@
   </Table.Header>
   <Table.Body>
     {#each locations as location, index}
-      <Table.Row {index}>
-        <Table.Cell>
+      {@const highlighted = $page.url.hash === `#${location.id}`}
+      <Table.Row id={location.id} {index}>
+        <Table.Cell {highlighted}>
           {location.name}
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell {highlighted}>
           {location.current_version}
         </Table.Cell>
         {#if hasPermission}
           {#if mode === "edit"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
@@ -62,7 +64,7 @@
             </Table.Cell>
           {/if}
           {#if mode === "review"}
-            <Table.Cell class="justify-center">
+            <Table.Cell {highlighted} class="justify-center">
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
