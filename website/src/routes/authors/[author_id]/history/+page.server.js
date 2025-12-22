@@ -15,8 +15,7 @@ function getAuthor({ id }) {
   return db.query.authors.findFirst({
     where: {
       id,
-      // TODO(vxern): Re-enable.
-      // status: { ne: "draft" },
+      status: { ne: "draft" },
       deleted: false,
     },
   });
