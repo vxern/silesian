@@ -44,9 +44,9 @@ export const actions = {
 
     let redirectTo;
     if (author.status === "draft") {
-      redirectTo = "/authors/drafts";
+      redirectTo = `/authors/drafts#${author.id}`;
     } else if (author.status === "pending") {
-      redirectTo = "/authors/review";
+      redirectTo = `/authors/review#${author.id}`;
     } else {
       return error(500, { message: "Internal Server Error" });
     }

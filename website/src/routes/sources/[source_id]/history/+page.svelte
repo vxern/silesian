@@ -51,6 +51,7 @@
       {/if}
     </Page.Actions>
     <VersionTable
+      object={data.source}
       versions={data.versions}
       types={{
         licence: "licence",

@@ -26,9 +26,9 @@ export const actions = {
 
     let redirectTo;
     if (category.status === "draft") {
-      redirectTo = "/categories/drafts";
+      redirectTo = `/categories/drafts#${category.id}`;
     } else if (category.status === "pending") {
-      redirectTo = "/categories/review";
+      redirectTo = `/categories/review#${category.id}`;
     } else {
       return error(500, { message: "Internal Server Error" });
     }

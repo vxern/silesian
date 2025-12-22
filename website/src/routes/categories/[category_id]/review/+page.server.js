@@ -45,6 +45,6 @@ export const actions = {
 
     // TODO(vxern): Handle failure.
 
-    redirect(303, "/categories/review");
+    redirect(303, `/categories/review#${category.id}`);
   },
 };

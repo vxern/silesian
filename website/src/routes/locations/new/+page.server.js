@@ -26,9 +26,9 @@ export const actions = {
 
     let redirectTo;
     if (location.status === "draft") {
-      redirectTo = "/locations/drafts";
+      redirectTo = `/locations/drafts#${location.id}`;
     } else if (location.status === "pending") {
-      redirectTo = "/locations/review";
+      redirectTo = `/locations/review#${location.id}`;
     } else {
       return error(500, { message: "Internal Server Error" });
     }

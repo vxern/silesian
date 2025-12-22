@@ -45,6 +45,6 @@ export const actions = {
 
     // TODO(vxern): Handle failure.
 
-    redirect(303, "/locations/review");
+    redirect(303, `/locations/review#${location.id}`);
   },
 };

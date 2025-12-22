@@ -80,9 +80,9 @@ export const actions = {
 
     let redirectTo;
     if (source.status === "draft") {
-      redirectTo = "/sources/drafts";
+      redirectTo = `/sources/drafts#${source.id}`;
     } else if (source.status === "pending") {
-      redirectTo = "/sources/review";
+      redirectTo = `/sources/review#${source.id}`;
     } else {
       return error(500, { message: "Internal Server Error" });
     }

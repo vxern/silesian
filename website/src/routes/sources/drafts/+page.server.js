@@ -39,6 +39,6 @@ export const actions = {
     });
 
     // TODO(vxern): Show toast.
-    redirect(303, "/sources/drafts");
+    redirect(303, `/sources/drafts#${source.id}`);
   },
 };
