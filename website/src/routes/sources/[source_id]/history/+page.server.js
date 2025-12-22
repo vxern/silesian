@@ -15,8 +15,7 @@ function getSource({ id }) {
   return db.query.sources.findFirst({
     where: {
       id,
-      // TODO(vxern): Add this back.
-      // status: { ne: "draft" },
+      status: { ne: "draft" },
       deleted: false,
     },
   });

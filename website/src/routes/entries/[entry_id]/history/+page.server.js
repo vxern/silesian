@@ -15,8 +15,7 @@ function getEntry({ id }) {
   return db.query.entries.findFirst({
     where: {
       id,
-      // TODO(vxern): Re-enable this.
-      // status: { ne: "draft" },
+      status: { ne: "draft" },
       deleted: false,
     },
   });

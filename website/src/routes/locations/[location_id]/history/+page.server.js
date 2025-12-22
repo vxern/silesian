@@ -15,8 +15,7 @@ function getLocation({ id }) {
   return db.query.locations.findFirst({
     where: {
       id,
-      // TODO(vxern): Re-enable this.
-      // status: { ne: "draft" },
+      status: { ne: "draft" },
       deleted: false,
     },
   });
