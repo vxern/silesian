@@ -36,11 +36,10 @@ export const users = pgTable("users", {
 export const usersRelations = () => defineRelationsPart(schema, (r) => ({
   users: {
     version: r.one.versions({
-      from: r.users.id,
-      to: r.versions.versionable_id,
+      from: [r.users.id, r.users.current_version],
+      to: [r.versions.versionable_id, r.versions.version],
       where: {
         versionable_type: "users",
-        version: r.users.current_version,
       }
     }),
     // TODO(vxern): A user can in fact only have one set of settings.

@@ -142,14 +142,9 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
  */
 export async function versionedUpdate({ table, id, authorId, values, returning = {} }) {
   return db.transaction(async (tx) => {
-    const oldRecord =
-      await db
-        .select()
-        .from(table)
-        .where(eq(table.id, id))
-        .limit(1)
-        .then((results) => results.at(0))
-        .catch((error) => tx.rollback());
+    const oldRecord = await db.query[getTableName(table)].findFirst({
+      where: { id },
+    });
 
     const snapshot = {};
     for (const key in values) {
