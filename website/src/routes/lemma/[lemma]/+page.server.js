@@ -3,7 +3,6 @@ import { entries, entriesToCategories, categories, authorsToSources, authorsToLo
 import { sql, and, eq, like, asc, desc, inArray } from "drizzle-orm";
 
 export const load = async ({ params }) => {
-  // TODO(vxern): Filter the status as well.
   return {
     entries: await getEntries({ lemma: params.lemma }),
   };

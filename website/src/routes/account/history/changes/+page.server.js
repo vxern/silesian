@@ -5,7 +5,6 @@ import { count, sql, asc, eq, gte, and } from "drizzle-orm";
 
 // TODO(vxern): Limit.
 // TODO(vxern): Paginate.
-// TODO(vxern): Make sure to filter by the right user.
 
 // We don't take anything other than entries into account because sources, categories, etc. are effectively one-off changes.
 export const load = async (params) => {
@@ -19,7 +18,14 @@ export const load = async (params) => {
 };
 
 function getChangeCount() {
-  return db.$count(versions, and(eq(versions.author_id, 1), eq(versions.versionable_type, "entries")));
+  return db.$count(
+    versions,
+    // TODO(vxern): Filter by the right user.
+    and(
+      eq(versions.author_id, 1),
+      eq(versions.versionable_type, "entries"),
+    ),
+  );
 }
 
 async function getChangeCountByMonth() {
@@ -27,6 +33,7 @@ async function getChangeCountByMonth() {
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(versions)
     .where(gte(versions.created_at, dayjs().startOf("year")))
+    // TODO(vxern): Filter by the right user.
     .where(eq(versions.author_id, 1))
     .groupBy(sql`month`);
 
@@ -41,5 +48,10 @@ async function getChangeCountByMonth() {
 }
 
 function getChangeHistory() {
-  return db.query.versions.findMany({ where: (versions, { eq }) => eq(versions.author_id, 1) });
+  return db.query.versions.findMany({
+    where: {
+      // TODO(vxern): Filter by the right user.
+      author_id: 1,
+    },
+  });
 }

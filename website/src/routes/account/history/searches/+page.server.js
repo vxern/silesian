@@ -40,5 +40,9 @@ async function getSearchCountByMonth() {
 }
 
 function getSearchHistory() {
-  return db.query.searches.findMany({ where: (searches, { eq }) => eq(searches.searcher_id, 1) });
+  return db.query.searches.findMany({
+    where: {
+      searcher_id: 1,
+    },
+  });
 }
