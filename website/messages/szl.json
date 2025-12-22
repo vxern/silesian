@@ -391,6 +391,10 @@
           "description": "Edytowanie hasła, co już istnieje.",
           "edit": "Edytuj"
         },
+        "history": {
+          "title": "Historyjo hasła — „{entry_lemma}”",
+          "description": ""
+        },
         "review": {
           "title": "Sprowdzaniy hasła — „{entry_lemma}”",
           "description": ""
@@ -547,6 +551,10 @@
           "title": "Edytowaniy autora — „{author_name}”",
           "description": ""
         },
+        "history": {
+          "title": "Historyjo autora — „{author_name}”",
+          "description": ""
+        },
         "review": {
           "title": "Sprowdzaniy autora — „{author_name}”",
           "description": ""
@@ -580,6 +588,10 @@
       "[location_id]": {
         "edit": {
           "title": "Edytowaniy miyjsca — „{location_name}”",
+          "description": ""
+        },
+        "history": {
+          "title": "Historyjo miyjsca — „{location_name}”",
           "description": ""
         },
         "review": {
@@ -635,6 +647,10 @@
       "[category_id]": {
         "edit": {
           "title": "Edytowaniy kategoryje — „{category_name}”",
+          "description": ""
+        },
+        "history": {
+          "title": "Historyjo kategoryje — „{category_name}”",
           "description": ""
         },
         "review": {
