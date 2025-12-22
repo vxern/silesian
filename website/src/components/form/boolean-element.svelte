@@ -3,9 +3,15 @@
   import Label from "./label.svelte";
   import BooleanLabel from "../../components/labels/boolean-label.svelte";
 
-  const { name, label, description, required = false } = $props();
+  const {
+    name,
+    label,
+    description,
+    value: value_,
+    required = false,
+  } = $props();
 
-  let value = $state("0");
+  let value = $state(value_ ? "1" : "0");
   function toggleCheckbox() {
     if (value == "0") {
       value = "1";
@@ -23,6 +29,6 @@
   >
     <Check2FillIcon class="text-zinc-600" />
     <input {name} type="hidden" bind:value />
-    <BooleanLabel {value} />
+    <BooleanLabel value={value === "1"} />
   </section>
 </section>

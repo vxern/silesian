@@ -3,11 +3,9 @@
   import Label from "./label.svelte";
 
   const { value } = $props();
-
-  let colourClass;
 </script>
 
-{#if value === "1"}
+{#if value}
   <Label class="bg-green-500">
     {m["meta.yes"]()}
   </Label>
