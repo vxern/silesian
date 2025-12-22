@@ -33,7 +33,9 @@ async function getSearchHistory() {
 
 function getPopularSearches() {
   return db.query.searchFrequencies.findMany({
-    orderBy: (searchFrequencies, { desc }) => [desc(searchFrequencies.count)],
+    orderBy: {
+      count: "desc",
+    },
     limit: 28,
   });
 }

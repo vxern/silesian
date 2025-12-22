@@ -3,7 +3,7 @@ import { entries, entriesToCategories, categories, sources, authorsToSources, au
 import { and, eq, sql } from 'drizzle-orm';
 
 export const load = async () => ({
-  entries: await getDraftEntries()
+  entries: await getDraftEntries(),
 });
 
 function getDraftEntries() {
