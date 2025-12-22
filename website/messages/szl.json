@@ -664,7 +664,7 @@
         "description": "Ôpis",
         "description_description": "Jakiy informacyje jeszcze byście chcieli przidać ô tyj kategoryji?",
         "colour": "Farba",
-        "colour_description": "Jako farba ta kategoryjo bydzie mieć?",
+        "colour_description": "Jako farba bydzie ta kategoryjo mieć?",
         "make_more": "Tworza wiyncyj kategoryjōw."
       }
     },
