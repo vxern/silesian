@@ -19,7 +19,7 @@
   dayjs.extend(relativeTime);
   dayjs.extend(calendar);
 
-  const { versions, types, translateProperty } = $props();
+  const { object, versions, types, translateProperty } = $props();
 
   function getChanges(versions) {
     const changeHistory = {};
@@ -31,6 +31,10 @@
 
         changeHistory[property].push(value);
       }
+    }
+
+    for (const [property, values] of Object.entries(changeHistory)) {
+      changeHistory[property].push(object[property]);
     }
 
     return changeHistory;
