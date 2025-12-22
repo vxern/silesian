@@ -44,6 +44,8 @@ export const sourcesRelations = () => defineRelationsPart(schema, (r) => ({
         versionable_type: "sources",
       },
     }),
+    // TODO(vxern): Need to store join tables in snapshots as well.
+    // TODO(vxern): And then once we've got these join tables stored, need to display them in the version history.
     authors: r.many.authors({
       from: r.sources.id.through(r.authorsToSources.source_id),
       to: r.authors.id.through(r.authorsToSources.author_id),
