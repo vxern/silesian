@@ -19,7 +19,7 @@ export { entriesToCategories } from "./tables/entries-to-categories";
 export { entries, entriesRelations, entriesInsertSchema, entriesUpdateSchema } from "./tables/entries";
 export { locations, locationsRelations, locationsInsertSchema, locationsUpdateSchema } from "./tables/locations";
 export { reviews, reviewsRelations, reviewsInsertSchema } from "./tables/reviews";
-export { searchFrequencies } from "./tables/search-frequencies";
+export { searchFrequencies, searchFrequenciesRelations } from "./tables/search-frequencies";
 export { searches, searchesRelations } from "./tables/searches";
 export { settingsToCategories } from "./tables/settings-to-categories";
 export { settingsToSources } from "./tables/settings-to-sources";
