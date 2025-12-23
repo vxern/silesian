@@ -1,13 +1,31 @@
 <script>
   import { clsx } from "clsx/lite";
+  import tippy from "tippy.js";
+  import "tippy.js/themes/material.css";
 
   const {
     icon: Icon,
     colour = "blue",
     type = "button",
     children,
+    tooltipMessage,
+    tooltipTheme,
     ...props
   } = $props();
+
+  let tooltipElement;
+
+  if (tooltipMessage) {
+    let tooltip;
+    $effect(() => {
+      tooltip = tippy(tooltipElement, {
+        content: tooltipMessage,
+        trigger: "mouseenter focus",
+        placement: "top-start",
+        theme: tooltipTheme ?? "info",
+      });
+    });
+  }
 
   let colourClasses;
   switch (colour) {
@@ -41,6 +59,7 @@
   )}
   {type}
   {...props}
+  bind:this={tooltipElement}
 >
   <Icon />
   {@render children?.()}

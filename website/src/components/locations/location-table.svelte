@@ -54,6 +54,8 @@
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
+                tooltipMessage={m["components.interactions.button.edit"]()}
+                tooltipTheme="edit"
                 onclick={() => goto(`/locations/${location.id}/edit`)}
               />
               <!-- TODO(vxern): Ask the user if they're sure. -->
@@ -63,7 +65,13 @@
                 class="flex flex-col gap-y-6"
               >
                 <input type="hidden" name="id" value={location.id} />
-                <Button colour="red" type="submit" icon={Delete2LineIcon} />
+                <Button
+                  colour="red"
+                  type="submit"
+                  tooltipMessage={m["components.interactions.button.delete"]()}
+                  tooltipTheme="delete"
+                  icon={Delete2LineIcon}
+                />
               </form>
             </Table.Cell>
           {/if}
@@ -72,6 +80,8 @@
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
+                tooltipMessage={m["components.interactions.button.review"]()}
+                tooltipTheme="review"
                 onclick={() => goto(`/locations/${location.id}/review`)}
               />
             </Table.Cell>

@@ -161,6 +161,8 @@
               <Button
                 colour="green"
                 icon={Pencil2LineIcon}
+                tooltipMessage={m["components.interactions.button.edit"]()}
+                tooltipTheme="edit"
                 onclick={() => goto(`/sources/${source.id}/edit`)}
               />
               <!-- TODO(vxern): Ask the user if they're sure. -->
@@ -170,7 +172,13 @@
                 class="flex flex-col gap-y-6"
               >
                 <input type="hidden" name="id" value={source.id} />
-                <Button colour="red" type="submit" icon={Delete2LineIcon} />
+                <Button
+                  colour="red"
+                  type="submit"
+                  tooltipMessage={m["components.interactions.button.delete"]()}
+                  tooltipTheme="delete"
+                  icon={Delete2LineIcon}
+                />
               </form>
             </Table.Cell>
           {/if}
@@ -179,6 +187,8 @@
               <Button
                 colour="blue"
                 icon={ArrowRightUpLineIcon}
+                tooltipMessage={m["components.interactions.button.review"]()}
+                tooltipTheme="blue"
                 onclick={() => goto(`/sources/${source.id}/review`)}
               />
             </Table.Cell>

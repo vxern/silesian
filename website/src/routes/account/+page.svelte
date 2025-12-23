@@ -170,7 +170,12 @@
     </Table.Root>
   </section>
   <section>
-    <Button icon={ExitLineIcon} onclick={signOut}>
+    <Button
+      icon={ExitLineIcon}
+      tooltipMessage={m["routes.account.logout"]()}
+      tooltipTheme="blue"
+      onclick={signOut}
+    >
       {m["routes.account.logout"]()}
     </Button>
   </section>
