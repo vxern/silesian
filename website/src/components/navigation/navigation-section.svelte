@@ -64,6 +64,22 @@
           {m["routes.account.history.time_spent_editing.title"]()}
         {/if}
       </NavigationButton>
+    {:else if page.url.pathname === "/account/bookmarks"}
+      <NavigationButton
+        onclick={() => goto("/account/bookmarks")}
+        highlighted={page.url.pathname === "/account/bookmarks"}
+        icon={User4LineIcon}
+      >
+        {m["routes.account.bookmarks.title"]()}
+      </NavigationButton>
+    {:else if page.url.pathname === "/account/statistics"}
+      <NavigationButton
+        onclick={() => goto("/account/statistics")}
+        highlighted={page.url.pathname === "/account/statistics"}
+        icon={User4LineIcon}
+      >
+        {m["routes.account.statistics.title"]()}
+      </NavigationButton>
     {:else}
       <NavigationButton
         onclick={() => goto("/account")}
