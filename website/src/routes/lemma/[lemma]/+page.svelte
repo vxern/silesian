@@ -30,10 +30,10 @@
   <Page.Divider />
   <Page.Contents>
     <section class="flex flex-col gap-y-8">
-      {#each data.entries as entry}
-        <Entry {entry} highlighted={$page.url.hash === `#${entry.id}`} />
-      {/each}
       {#if data.entries.length > 0}
+        {#each data.entries as entry}
+          <Entry {entry} highlighted={$page.url.hash === `#${entry.id}`} />
+        {/each}
         <section>
           <span class="text-zinc-700">
             {m["routes.lemma.end_of_results"]()}

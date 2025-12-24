@@ -14,6 +14,7 @@ export { authorsToEntries } from "./tables/authors-to-entries";
 export { authorsToLocations } from "./tables/authors-to-locations";
 export { authorsToSources } from "./tables/authors-to-sources";
 export { authors, authorsRelations, authorsInsertSchema, authorsUpdateSchema } from "./tables/authors";
+export { bookmarks, bookmarksRelations, bookmarksInsertSchema } from "./tables/bookmarks";
 export { categories, categoriesRelations, categoriesInsertSchema, categoriesUpdateSchema } from "./tables/categories";
 export { entriesToCategories } from "./tables/entries-to-categories";
 export { entries, entriesRelations, entriesInsertSchema, entriesUpdateSchema } from "./tables/entries";

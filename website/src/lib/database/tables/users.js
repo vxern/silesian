@@ -42,6 +42,10 @@ export const usersRelations = () => defineRelationsPart(schema, (r) => ({
         versionable_type: "users",
       }
     }),
+    bookmarks: r.many.bookmarks({
+      from: r.users.id,
+      to: r.bookmarks.user_id,
+    }),
     // TODO(vxern): A user can in fact only have one set of settings.
     settings: r.many.settings({
       from: r.users.id,

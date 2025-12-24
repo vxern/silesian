@@ -14,6 +14,7 @@ import {
   authorsToLocations,
   authorsToSources,
   authors,
+  bookmarks,
   categories,
   entriesToCategories,
   entries,
@@ -29,6 +30,7 @@ import {
   users,
   versions,
   authorsRelations,
+  bookmarksRelations,
   categoriesRelations,
   entriesRelations,
   locationsRelations,
@@ -58,6 +60,7 @@ export const db = drizzle({
     authorsToLocations,
     authorsToSources,
     authors,
+    bookmarks,
     categories,
     entriesToCategories,
     entries,
@@ -75,6 +78,7 @@ export const db = drizzle({
   },
   relations: {
     ...authorsRelations(),
+    ...bookmarksRelations(),
     ...categoriesRelations(),
     ...entriesRelations(),
     ...locationsRelations(),
@@ -162,7 +166,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
         .update(table)
         .set(values)
         .where(eq(table.id, id))
-        .returning({ id: table.id, ...returning})
+        .returning({ id: table.id, ...returning })
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
     }
@@ -185,7 +189,7 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
         .update(table)
         .set({ ...values, current_version: version.version })
         .where(eq(table.id, id))
-        .returning({ id: table.id, ...returning})
+        .returning({ id: table.id, ...returning })
         .then((results) => results.at(0))
         .catch((error) => tx.rollback());
 

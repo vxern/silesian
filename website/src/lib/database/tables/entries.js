@@ -36,6 +36,13 @@ export const entriesRelations = () => defineRelationsPart(schema, (r) => ({
         versionable_type: "entries",
       },
     }),
+    bookmarks: r.many.bookmarks({
+      from: r.entries.id,
+      to: r.bookmarks.bookmarkable_id,
+      where: {
+        bookmarkable_type: "entries",
+      },
+    }),
     // If the authors are not filled out, we'll default to the source's authors.
     authors: r.many.authors({
       from: r.entries.id.through(r.authorsToEntries.entry_id),

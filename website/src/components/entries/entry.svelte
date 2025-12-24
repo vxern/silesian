@@ -8,6 +8,8 @@
   import "tippy.js/themes/material.css";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import AlertLineIcon from "~icons/mingcute/alert-line";
+  import BookmarkLineIcon from "~icons/mingcute/bookmark-line";
+  import BookmarkFillIcon from "~icons/mingcute/bookmark-fill";
   import CategoryLabel from "../labels/category-label.svelte";
 
   // TODO(vxern): Get rid of this hardcoding.
@@ -69,6 +71,7 @@
             {entry.source.authors.map((author) => author.name).join(", ")}
           </section>
         {/if}
+        <!-- TODO(vxern): Re-enable. -->
         <!-- {#if entry.source.locations.length > 0}
                 <section>
                   <span class="text-zinc-600">
@@ -89,19 +92,32 @@
   </article>
 {/snippet}
 
-{#if hasPermission}
-  <section class="relative flex">
-    {@render article()}
-    <section class="relative">
-      <section class="absolute left-4">
+<section class="relative flex">
+  {@render article()}
+  <section class="relative">
+    <section class="absolute left-2 flex flex-col gap-y-2">
+      {#if hasPermission}
         <Button
           colour="green"
           icon={Pencil2LineIcon}
+          tooltipMessage={m["components.interactions.button.edit"]()}
+          tooltipTheme="edit"
           onclick={() => goto(`/entries/${entry.id}/edit`)}
         />
-      </section>
+      {:else}
+        {@render article()}
+      {/if}
+      <!-- TODO(vxern): Wrap in a form. -->
+      <form method="POST" action="?/bookmark" class="flex flex-col gap-y-6">
+        <input type="hidden" name="id" value={entry.id} />
+        <Button
+          colour="zinc"
+          type="submit"
+          icon={entry.bookmarks.at(0) ? BookmarkFillIcon : BookmarkLineIcon}
+          tooltipMessage={m["components.interactions.button.bookmark"]()}
+          tooltipTheme="zinc"
+        />
+      </form>
     </section>
   </section>
-{:else}
-  {@render article()}
-{/if}
+</section>

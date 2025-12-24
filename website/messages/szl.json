@@ -91,6 +91,14 @@
         "no_results": "bez trefiyń"
       }
     },
+    "interactions": {
+      "button": {
+        "edit": "Edytuj",
+        "delete": "Usuń",
+        "review": "Sprowdź",
+        "bookmark": "Zachowej we zogibkach"
+      }
+    },
     "source_table": {
       "work": "Werk",
       "description": "Ôpis",
@@ -388,8 +396,7 @@
       "[entry_id]": {
         "edit": {
           "title": "Edytowaniy hasła — „{entry_lemma}”",
-          "description": "Edytowanie hasła, co już istnieje.",
-          "edit": "Edytuj"
+          "description": "Edytowanie hasła, co już istnieje."
         },
         "history": {
           "title": "Historyjo hasła — „{entry_lemma}”",
