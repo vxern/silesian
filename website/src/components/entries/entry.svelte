@@ -110,13 +110,25 @@
       <!-- TODO(vxern): Wrap in a form. -->
       <form method="POST" action="?/bookmark" class="flex flex-col gap-y-6">
         <input type="hidden" name="id" value={entry.id} />
-        <Button
-          colour="zinc"
-          type="submit"
-          icon={entry.bookmarks.at(0) ? BookmarkFillIcon : BookmarkLineIcon}
-          tooltipMessage={m["components.interactions.button.bookmark"]()}
-          tooltipTheme="zinc"
-        />
+        {#if entry.bookmarks.length === 1}
+          <Button
+            colour="orange"
+            type="submit"
+            icon={BookmarkFillIcon}
+            tooltipMessage={m[
+              "components.interactions.button.remove_bookmark"
+            ]()}
+            tooltipTheme="bookmark"
+          />
+        {:else}
+          <Button
+            colour="orange"
+            type="submit"
+            icon={BookmarkLineIcon}
+            tooltipMessage={m["components.interactions.button.bookmark"]()}
+            tooltipTheme="bookmark"
+          />
+        {/if}
       </form>
     </section>
   </section>
