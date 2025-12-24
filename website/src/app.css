@@ -55,8 +55,8 @@
   @apply text-blue-500
 }
 
-.tippy-box[data-theme~='zinc'] {
-  @apply text-zinc-400
+.tippy-box[data-theme~='bookmark'] {
+  @apply text-orange-500
 }
 
 .fi-szl {

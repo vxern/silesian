@@ -45,6 +45,14 @@
       colourClasses =
         "outline-red-500 bg-red-700 hover:bg-red-600 text-red-200 hover:text-red-100";
       break;
+    case "orange":
+      colourClasses =
+        "outline-orange-400 bg-orange-600 hover:bg-orange-650 text-orange-100 hover:text-white";
+      break;
+    case "pink":
+      colourClasses =
+        "outline-pink-500 bg-pink-700 hover:bg-pink-600 text-pink-200 hover:text-pink-100";
+      break;
     case "zinc":
       colourClasses =
         "outline-zinc-500 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 hover:text-zinc-100";

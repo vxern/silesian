@@ -1,0 +1,123 @@
+<script>
+  import { m } from "$lib/paraglide/messages";
+  import Page from "../../../components/page/index.js";
+  import NavigationSection from "../../../components/navigation/navigation-section.svelte";
+  import AddLineIcon from "~icons/mingcute/add-line";
+  import ChecksLineIcon from "~icons/mingcute/checks-line";
+  import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
+  import TimeLineIcon from "~icons/mingcute/time-line";
+  import Search2LineIcon from "~icons/mingcute/search-2-line";
+  import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
+  import { dayjs } from "../../../helpers/dates.js";
+  import constants from "$lib/constants/core";
+  import { goto } from "$app/navigation";
+  import IconButton from "../../../components/interactions/icon-button.svelte";
+  import BackButton from "../../../components/interactions/back-button.svelte";
+  import Table from "../../../components/layout/table/index.js";
+  import calendar from "dayjs/plugin/calendar";
+  import duration from "dayjs/plugin/duration";
+  import relativeTime from "dayjs/plugin/relativeTime";
+
+  dayjs.extend(calendar);
+  dayjs.extend(duration);
+  dayjs.extend(relativeTime);
+
+  const { data } = $props();
+</script>
+
+<svelte:head>
+  <meta
+    name="description"
+    content={m["routes.account.statistics.description"]()}
+  />
+  <title>
+    {m["title"]({
+      project_name: constants.project.name,
+      page_title: m["routes.account.statistics.title"](),
+    })}
+  </title>
+</svelte:head>
+
+<NavigationSection />
+
+<Page.Root>
+  <Page.Header>
+    <Page.Title title={m["routes.account.statistics.title"]()} />
+  </Page.Header>
+  <Page.Divider />
+  <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => goto("/account")} />
+    </Page.Actions>
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell icon={Search2LineIcon}>
+            {m["routes.account.attributes.stats.searches"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={AddLineIcon}>
+            {m["routes.account.attributes.stats.additions"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={Pencil2LineIcon}>
+            {m["routes.account.attributes.stats.changes"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={ChecksLineIcon}>
+            {m["routes.account.attributes.stats.reviews"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={TimeLineIcon}>
+            {m["routes.account.attributes.stats.time_spent_using"]()}
+          </Table.HeaderCell>
+          <Table.HeaderCell icon={TimeLineIcon}>
+            {m["routes.account.attributes.stats.time_spent_editing"]()}
+          </Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>
+            {data.user.searches_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/searches")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.additions_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/additions")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.changes_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/changes")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {data.user.reviews_count}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/reviews")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {dayjs.duration(data.user.time_spent_using).humanize()}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/time-spent-using")}
+            />
+          </Table.Cell>
+          <Table.Cell>
+            {dayjs.duration(data.user.time_spent_editing).humanize()}
+            <IconButton
+              icon={ArrowRightUpLineIcon}
+              onclick={() => goto("/account/history/time-spent-editing")}
+            />
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table.Root>
+  </Page.Contents>
+</Page.Root>

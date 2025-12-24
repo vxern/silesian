@@ -96,7 +96,8 @@
         "edit": "Edytuj",
         "delete": "Usuń",
         "review": "Sprowdź",
-        "bookmark": "Zachowej we zogibkach"
+        "bookmark": "Zachowej we zogibkach",
+        "remove_bookmark": "Usuń ze zogibkōw"
       }
     },
     "source_table": {
@@ -351,6 +352,14 @@
           "title": "Wykres spyndzōnygo czasu we edytorze",
           "description": "Samkej możecie sprowdzić, wiela czasu żeście spyndzili na edytowaniu strōny."
         }
+      },
+      "bookmarks": {
+        "title": "Zogibki",
+        "description": ""
+      },
+      "statistics": {
+        "title": "Sztatystyki",
+        "description": ""
       },
       "attributes": {
         "base": {

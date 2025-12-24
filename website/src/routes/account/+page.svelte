@@ -12,9 +12,11 @@
   import ChecksLineIcon from "~icons/mingcute/checks-line";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import TimeLineIcon from "~icons/mingcute/time-line";
+  import BookmarkLineIcon from "~icons/mingcute/bookmark-line";
   import Search2LineIcon from "~icons/mingcute/search-2-line";
   import ExitLineIcon from "~icons/mingcute/exit-line";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
+  import Presentation1LineIcon from "~icons/mingcute/presentation-1-line";
   import { dayjs } from "../../helpers/dates.js";
   import constants from "$lib/constants/core";
   import { goto } from "$app/navigation";
@@ -59,7 +61,32 @@
     <Page.Title title={m["routes.account.title"]()} />
   </Page.Header>
   <Page.Divider />
-  <section class="flex flex-col">
+  <Page.Contents>
+    <Page.Actions>
+      <Button
+        colour="orange"
+        icon={BookmarkLineIcon}
+        onclick={() => goto("/account/bookmarks")}
+      >
+        {m["routes.account.bookmarks.title"]()}
+      </Button>
+      <Button
+        colour="pink"
+        icon={Presentation1LineIcon}
+        onclick={() => goto("/account/statistics")}
+      >
+        {m["routes.account.statistics.title"]()}
+      </Button>
+      <section class="flex-1"></section>
+      <Button
+        icon={ExitLineIcon}
+        tooltipMessage={m["routes.account.logout"]()}
+        tooltipTheme="blue"
+        onclick={signOut}
+      >
+        {m["routes.account.logout"]()}
+      </Button>
+    </Page.Actions>
     <Table.Root>
       <Table.Header>
         <Table.Row>
@@ -98,85 +125,5 @@
         </Table.Row>
       </Table.Body>
     </Table.Root>
-    <Table.Root>
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell icon={Search2LineIcon}>
-            {m["routes.account.attributes.stats.searches"]()}
-          </Table.HeaderCell>
-          <Table.HeaderCell icon={AddLineIcon}>
-            {m["routes.account.attributes.stats.additions"]()}
-          </Table.HeaderCell>
-          <Table.HeaderCell icon={Pencil2LineIcon}>
-            {m["routes.account.attributes.stats.changes"]()}
-          </Table.HeaderCell>
-          <Table.HeaderCell icon={ChecksLineIcon}>
-            {m["routes.account.attributes.stats.reviews"]()}
-          </Table.HeaderCell>
-          <Table.HeaderCell icon={TimeLineIcon}>
-            {m["routes.account.attributes.stats.time_spent_using"]()}
-          </Table.HeaderCell>
-          <Table.HeaderCell icon={TimeLineIcon}>
-            {m["routes.account.attributes.stats.time_spent_editing"]()}
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell>
-            {data.user.searches_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/searches")}
-            />
-          </Table.Cell>
-          <Table.Cell>
-            {data.user.additions_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/additions")}
-            />
-          </Table.Cell>
-          <Table.Cell>
-            {data.user.changes_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/changes")}
-            />
-          </Table.Cell>
-          <Table.Cell>
-            {data.user.reviews_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/reviews")}
-            />
-          </Table.Cell>
-          <Table.Cell>
-            {dayjs.duration(data.user.time_spent_using).humanize()}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/time-spent-using")}
-            />
-          </Table.Cell>
-          <Table.Cell>
-            {dayjs.duration(data.user.time_spent_editing).humanize()}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/time-spent-editing")}
-            />
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
-    </Table.Root>
-  </section>
-  <section>
-    <Button
-      icon={ExitLineIcon}
-      tooltipMessage={m["routes.account.logout"]()}
-      tooltipTheme="blue"
-      onclick={signOut}
-    >
-      {m["routes.account.logout"]()}
-    </Button>
-  </section>
+  </Page.Contents>
 </Page.Root>
