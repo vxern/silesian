@@ -273,7 +273,7 @@ export async function insertReview({ table, id, values }) {
 }
 
 /** Performs 1 query. */
-export async function autocomplete({ table, params, ...props }) {
+export async function autocomplete({ table, params, term = "name", ...props }) {
   // TODO(vxern): Validate.
 
   const where = {
@@ -281,7 +281,7 @@ export async function autocomplete({ table, params, ...props }) {
   };
 
   if (params.get("query").length > 0) {
-    where.name = { ilike: `%${params.get("query")}%` };
+    where[term] = { ilike: `%${params.get("query")}%` };
   }
 
   if (params.has("include_unpublished")) {
