@@ -43,6 +43,9 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/account")} />
     </Page.Actions>
-    <EntryTable entries={data.entries} noneText={m["routes.entries.none"]()} />
+    <EntryTable
+      entries={data.entries}
+      noneText={m["routes.account.bookmarks.none"]()}
+    />
   </Page.Contents>
 </Page.Root>
