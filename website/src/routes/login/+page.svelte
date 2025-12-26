@@ -123,29 +123,6 @@
           </article>
         </SignIn>
       </section>
-      <!-- 
-    {#if $page.data.session}
-      {#if $page.data.session.user?.image}
-        <img
-          src={$page.data.session.user.image}
-          class="avatar"
-          width="256"
-          alt="User Avatar"
-        />
-      {/if}
-      <span class="signedInText">
-        <small>Signed in as</small><br />
-        <strong>{$page.data.session.user?.name ?? "User"}</strong>
-      </span>
-    {:else}
-      <span class="notSignedInText">You are not signed in</span>
-      <SignIn>
-        <div slot="submitButton" class="buttonPrimary">Sign in</div>
-      </SignIn>
-    {/if} -->
-      <SignOut signOutPage="logout">
-        <div slot="submitButton" class="buttonPrimary">Sign out</div>
-      </SignOut>
     </section>
   </Page.Contents>
 </Page.Root>
