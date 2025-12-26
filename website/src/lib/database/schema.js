@@ -10,6 +10,14 @@ export { reviewDecisionsEnum } from "./enums/review-decisions";
 export { themesEnum } from "./enums/themes";
 export { timeEntryScopesEnum } from "./enums/time-entry-scopes";
 // Tables
+// Tables: Auth
+export { auth } from "./tables/auth/schema";
+export { authAccounts } from "./tables/auth/accounts";
+export { authAuthenticators } from "./tables/auth/authenticators";
+export { authSessions } from "./tables/auth/sessions";
+export { authUsers } from "./tables/auth/users";
+export { authVerificationTokens } from "./tables/auth/verification-tokens";
+// Tables: Public
 export { authorsToEntries } from "./tables/authors-to-entries";
 export { authorsToLocations } from "./tables/authors-to-locations";
 export { authorsToSources } from "./tables/authors-to-sources";

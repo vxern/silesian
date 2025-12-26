@@ -24,8 +24,8 @@
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"@types/node": "^22.19.3",
 		"@zerodevx/svelte-toast": "^0.9.6",
-		"drizzle-kit": "^1.0.0-beta.5-e0482ac",
-		"drizzle-orm": "^1.0.0-beta.5-e0482ac",
+		"drizzle-kit": "^1.0.0-beta.6-ea4d663",
+		"drizzle-orm": "^1.0.0-beta.6-ea4d663",
 		"svelte": "^5.46.1",
 		"svelte-adapter-bun": "^0.5.2",
 		"svelte-check": "^4.3.5",
@@ -36,6 +36,7 @@
 		"vite": "^6.4.1"
 	},
 	"dependencies": {
+		"@auth/drizzle-adapter": "^1.11.1",
 		"@auth/sveltekit": "^1.11.1",
 		"@tailwindcss/vite": "^4.1.18",
 		"chart.js": "^4.5.1",

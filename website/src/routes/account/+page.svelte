@@ -34,13 +34,6 @@
   dayjs.extend(duration);
   dayjs.extend(relativeTime);
 
-  onMount(() => {
-    // TODO(vxern): IMPORTANT - Do this on the server side.
-    if (!page.data.session) {
-      goto("/login");
-    }
-  });
-
   const { data } = $props();
 </script>
 
@@ -109,7 +102,7 @@
           <Table.Cell>
             <Image
               class="rounded-md size-20"
-              src={page.data.session.user.image}
+              src={data.user.image}
               alt={m["routes.account.attributes.base.avatar"]()}
             />
           </Table.Cell>
