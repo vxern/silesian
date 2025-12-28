@@ -40,7 +40,7 @@
       - `MISSING` <ins>Volume 17 (La-Łzyczka)</ins>, ISBN: `9788371263712`
       - `MISSING` <ins>Macać (się)-Masywny)</ins>, ISBN: `9788371264405`
 
-      </details>https://instytutslaski.pl/slownik-gwar-slaskich-bezplatne-e-wydania
+      </details>
   <!-- Checked by hand; found number of pages, found number of entries per page, summed it all up. -->
   - `pol` [Słowniczek wyrazów śląskich](https://bonclok.pl/slowniczek-wyrazow-slaskich.html), author: `Ania Lerch-Wójcik`, entries: `>1,750`
   <!-- Checked by hand. -->
