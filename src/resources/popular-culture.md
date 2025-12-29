@@ -23,6 +23,15 @@
     - `*śla/S` [Silesian Language | Can Czech, Kashubian and Polish understand it? | #2](https://www.youtube.com/watch?v=-3OZLAnSB_c)
     - `ste` [The sound of the Silesian Language](https://www.youtube.com/watch?v=5TvH8ijBOl4)
 
+- ## Twitter
+
+  - `śla/F` [Silesian info](https://x.com/Fana43124688)
+  - `śla/F` [Petr Homola](https://x.com/PetrHomolaDub)
+  - `śla/F` [Alan Jasik](https://x.com/alan_jasik)
+  - `śla/F` [Regios Ślōnsk Ôpolski](https://x.com/regios_opolski)
+  - `śla/S` [Wojciech Orliński](https://x.com/wojtekorlinski)
+  - `śla/S` [Bartłomiej Wanot](https://x.com/Wartlomiej)
+
 - ## Films
 
   - `pol` [Mianujōm mie Hanka](https://vod.tvp.pl/teatr-telewizji,202/mianujom-mie-hanka,1867758)
