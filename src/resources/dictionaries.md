@@ -283,7 +283,7 @@
     <!-- ❌ Not checked the number of entries. -->
     - `✍️` `pol` [Zbiór wyrazów szląsko-polskich](https://jbc.bj.uj.edu.pl/dlibra/publication/338687/edition/323579), author: `Baltazar Działas`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
-    - `pol` [Bemerkungen über die Mundart der polnischen Niederschlesier](https://www.digitale-sammlungen.de/de/view/bsb10588933?page=,1), author: `Robert Fiedler`, entries: `uncounted`
+    - `deu` [Bemerkungen über die Mundart der polnischen Niederschlesier](https://www.digitale-sammlungen.de/de/view/bsb10588933?page=,1), author: `Robert Fiedler`, entries: `uncounted`
 
 - ## Other
 
