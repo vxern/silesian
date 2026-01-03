@@ -45,7 +45,6 @@
     name="type"
     label={m["routes.sources.form.type"]()}
     description={m["routes.sources.form.type_description"]()}
-    required={true}
     options={sourceTypesEnum.enumValues.map((type) => ({
       search: m[`source_types.${type}`](),
       value: type,
