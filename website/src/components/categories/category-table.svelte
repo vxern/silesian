@@ -49,14 +49,15 @@
       <Table.Row id={category.id} {index}>
         {@const highlighted = $page.url.hash === `#${category.id}`}
         <Table.Cell {highlighted}>
-          {category.name}
-        </Table.Cell>
-        <Table.Cell {highlighted}>
-          {#if category.description}
-            {category.description}
-          {:else}
-            {m["meta.none"]()}
-          {/if}
+          <section>
+            {category.name}
+            <br />
+            <span class="text-zinc-500 text-xs">
+              {#if category.description}
+                {category.description}
+              {/if}
+            </span>
+          </section>
         </Table.Cell>
         <Table.Cell {highlighted}>
           <ColourLabel colour={category.colour} />

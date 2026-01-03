@@ -41,7 +41,15 @@
       {@const highlighted = $page.url.hash === `#${location.id}`}
       <Table.Row id={location.id} {index}>
         <Table.Cell {highlighted}>
-          {location.name}
+          <section>
+            {location.name}
+            <br />
+            <span class="text-zinc-500 text-xs">
+              {#if location.description}
+                {location.description}
+              {/if}
+            </span>
+          </section>
         </Table.Cell>
         {#if mode !== "edit"}
           <Table.Cell {highlighted}>

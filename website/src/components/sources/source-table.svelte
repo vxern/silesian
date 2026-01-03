@@ -18,6 +18,7 @@
   import AuthorLabel from "../labels/author-label.svelte";
   import AccessLabel from "../labels/access-label.svelte";
   import LicenceLabel from "../labels/licence-label.svelte";
+  import SourceTypeLabel from "../labels/source-type-label.svelte";
   import { page } from "$app/stores";
 
   // TODO(vxern): Ensure the user doesn't see the edit/review button unless they've got the permission to.
@@ -46,7 +47,7 @@
         {m["components.source_table.work"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.source_table.description"]()}
+        {m["components.source_table.type"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
         {m["components.source_table.authors"]()}
@@ -83,19 +84,27 @@
       {@const highlighted = $page.url.hash === `#${source.id}`}
       <Table.Row id={source.id} {index}>
         <Table.Cell {highlighted}>
-          {source.name}
-          {#if source.url}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => (window.location.href = source.url)}
-            />
-          {/if}
+          <section>
+            {source.name}
+            {#if source.url}
+              <IconButton
+                icon={ArrowRightUpLineIcon}
+                onclick={() => (window.location.href = source.url)}
+              />
+            {/if}
+            <br />
+            <span class="text-zinc-500 text-xs">
+              {#if source.description}
+                {source.description}
+              {/if}
+            </span>
+          </section>
         </Table.Cell>
         <Table.Cell {highlighted}>
-          {#if source.description}
-            {source.description}
+          {#if source.type}
+            <SourceTypeLabel type={source.type} />
           {:else}
-            {m["meta.none"]()}
+            {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
         <Table.Cell {highlighted}>
