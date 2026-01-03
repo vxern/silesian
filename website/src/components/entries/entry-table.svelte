@@ -53,7 +53,12 @@
       <Table.Row id={entry.id} {index}>
         {@const highlighted = $page.url.hash === `#${entry.id}`}
         <Table.Cell {highlighted}>
-          {entry.lemma}
+          <a
+            class="font-bold underline"
+            href="/lemma/{encodeURIComponent(entry.lemma)}"
+          >
+            {entry.lemma}
+          </a>
         </Table.Cell>
         <Table.Cell {highlighted}>
           {#if entry.normalised_lemma}
