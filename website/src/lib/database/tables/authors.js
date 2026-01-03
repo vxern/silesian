@@ -12,6 +12,7 @@ export const authors = pgTable("authors", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
   name: text().notNull(),
+  years: text(),
   description: text(),
   status: publishStatusesEnum().default("draft").notNull(),
   current_version: integer().default(1).notNull(),

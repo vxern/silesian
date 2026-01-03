@@ -18,6 +18,12 @@
     value={author?.name}
     required={true}
   />
+  <Form.TextElement
+    name="years"
+    label={m["routes.authors.form.years"]()}
+    description={m["routes.authors.form.years_description"]()}
+    value={author?.years}
+  />
   <Form.SelectElement
     name="location_ids[]"
     label={m["routes.authors.form.locations"]()}

@@ -12,6 +12,7 @@ export const actions = {
     const authorData = authorsInsertSchema.parse({
       status: data.has("draft") ? "draft" : "pending",
       name: data.get("name"),
+      years: data.get("years") || null,
       description: data.get("description") || null,
     });
 

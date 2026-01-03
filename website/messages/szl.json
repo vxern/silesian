@@ -108,7 +108,7 @@
     },
     "source_table": {
       "work": "Werk",
-      "description": "Ôpis",
+      "type": "Zorta",
       "authors": "Autorzi",
       "year": "Rok",
       "licence": "Licyncyjo",
@@ -129,7 +129,6 @@
     },
     "category_table": {
       "name": "Miano",
-      "description": "Ôpis",
       "colour": "Farba",
       "version": "Wersyjo"
     },
@@ -139,6 +138,7 @@
     },
     "author_table": {
       "name": "Miano",
+      "years": "Lata",
       "locations": "Miyjsca",
       "version": "Wersyjo"
     },
@@ -588,6 +588,8 @@
       "form": {
         "name": "Miano",
         "name_description": "Jako sie tyn autōr mianuje?",
+        "years": "Lata",
+        "years_description": "Kiedy tyn autōr żōł?",
         "locations": "Miyjsca",
         "locations_description": "Skōnd je autōr abo kaj spyndziōł wiynkszość swojigo życio?",
         "description": "Ôpis",

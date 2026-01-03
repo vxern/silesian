@@ -23,6 +23,9 @@
         {m["components.author_table.name"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
+        {m["components.author_table.years"]()}
+      </Table.HeaderCell>
+      <Table.HeaderCell>
         {m["components.author_table.locations"]()}
       </Table.HeaderCell>
       {#if mode !== "edit"}
@@ -45,7 +48,22 @@
       <Table.Row id={author.id} {index}>
         {@const highlighted = $page.url.hash === `#${author.id}`}
         <Table.Cell {highlighted}>
-          {author.name}
+          <section>
+            {author.name}
+            <br />
+            <span class="text-zinc-500 text-xs">
+              {#if author.description}
+                {author.description}
+              {/if}
+            </span>
+          </section>
+        </Table.Cell>
+        <Table.Cell {highlighted}>
+          {#if author.years}
+            {author.years}
+          {:else}
+            {m["meta.unknown"]()}
+          {/if}
         </Table.Cell>
         <Table.Cell {highlighted}>
           {#if author.locations && author.locations.length > 0}
@@ -53,7 +71,7 @@
               <LocationLabel {location} />
             {/each}
           {:else}
-            {m["meta.none"]()}
+            {m["meta.unknown"]()}
           {/if}
         </Table.Cell>
         {#if mode !== "edit"}
