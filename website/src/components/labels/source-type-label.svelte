@@ -6,6 +6,6 @@
   const { type } = $props();
 </script>
 
-<Label icon={DotGridLineIcon}>
+<Label class="bg-zinc-700" icon={DotGridLineIcon}>
   {m[`source_types.${type}`]()}
 </Label>
