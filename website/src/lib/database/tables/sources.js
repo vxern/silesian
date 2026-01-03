@@ -6,6 +6,7 @@ import { licencesEnum } from "../enums/licences";
 import { orthographiesEnum } from "../enums/orthographies";
 import { languagesEnum } from "../enums/languages";
 import { accessesEnum } from "../enums/accesses";
+import { sourceTypesEnum } from "../enums/source-types";
 import { entries } from "./entries";
 import { authorsToSources } from "./authors-to-sources";
 import { authors } from "./authors";
@@ -22,6 +23,8 @@ export const sources = pgTable("sources", {
   orthography: orthographiesEnum().notNull(),
   source_language: languagesEnum().notNull(),
   target_language: languagesEnum().notNull(),
+  type: sourceTypesEnum(),
+  pages: text(),
   access: accessesEnum().notNull(),
   redistributable: boolean().default(false).notNull(),
   imported_entry_count: integer().default(0).notNull(),
@@ -49,6 +52,10 @@ export const sourcesRelations = () => defineRelationsPart(schema, (r) => ({
     authors: r.many.authors({
       from: r.sources.id.through(r.authorsToSources.source_id),
       to: r.authors.id.through(r.authorsToSources.author_id),
+    }),
+    locations: r.many.locations({
+      from: r.sources.id.through(r.sourcesToLocations.source_id),
+      to: r.locations.id.through(r.sourcesToLocations.location_id),
     }),
     settings: r.many.settings({
       from: r.sources.id.through(r.settingsToSources.source_id),

@@ -37,6 +37,10 @@ export const locationsRelations = () => defineRelationsPart(schema, (r) => ({
       from: r.locations.id.through(r.authorsToLocations.location_id),
       to: r.authors.id.through(r.authorsToLocations.author_id),
     }),
+    sources: r.many.sources({
+      from: r.locations.id.through(r.sourcesToLocations.location_id),
+      to: r.sources.id.through(r.sourcesToLocations.source_id),
+    }),
   },
 }));
 

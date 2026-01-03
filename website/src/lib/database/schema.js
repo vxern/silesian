@@ -7,9 +7,9 @@ export { licencesEnum } from "./enums/licences";
 export { orthographiesEnum } from "./enums/orthographies";
 export { publishStatusesEnum } from "./enums/publish-statuses";
 export { reviewDecisionsEnum } from "./enums/review-decisions";
+export { sourceTypesEnum } from "./enums/source-types";
 export { themesEnum } from "./enums/themes";
 export { timeEntryScopesEnum } from "./enums/time-entry-scopes";
-// Tables
 // Tables: Auth
 export { auth } from "./tables/auth/schema";
 export { authAccounts } from "./tables/auth/accounts";
@@ -33,6 +33,7 @@ export { searches, searchesRelations } from "./tables/searches";
 export { settingsToCategories } from "./tables/settings-to-categories";
 export { settingsToSources } from "./tables/settings-to-sources";
 export { settings, settingsRelations } from "./tables/settings";
+export { sourcesToLocations } from "./tables/sources-to-locations";
 export { sources, sourcesRelations, sourcesInsertSchema, sourcesUpdateSchema } from "./tables/sources";
 export { timeEntries, timeEntriesRelations } from "./tables/time-entries";
 export { users, usersRelations } from "./tables/users";
