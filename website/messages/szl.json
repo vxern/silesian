@@ -72,6 +72,7 @@
   },
   "source_types": {
     "book": "Kniga",
+    "manuscript": "Rynkopis",
     "magazine": "Magazin",
     "article": "Artykuł",
     "brochure": "Broszura"

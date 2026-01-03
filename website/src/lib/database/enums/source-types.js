@@ -4,6 +4,7 @@ export const sourceTypesEnum = pgEnum(
   "source_types",
   [
     "book",
+    "manuscript",
     "magazine",
     "article",
     "brochure",
