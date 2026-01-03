@@ -70,6 +70,12 @@
     "germany": "Niymce",
     "slovakia": "Słowacyjo"
   },
+  "source_types": {
+    "book": "Kniga",
+    "magazine": "Magazin",
+    "article": "Artykuł",
+    "brochure": "Broszura"
+  },
   "components": {
     "search_bar": {
       "placeholder": "Kierygo słowa szukocie?",
@@ -519,6 +525,8 @@
         "url_description": "Jakiy je łōncze ku tymu zdrzōdle?",
         "authors": "Autorzi",
         "authors_description": "Gdo to zdrzōdło stworzōł?",
+        "type": "Zorta",
+        "type_description": "Jako je zorta tygo zdrzōdła?",
         "year": "Rok",
         "year_description": "Kiedy to zdrzōdło stworzōno?",
         "orthography": "Szrajbōnek",

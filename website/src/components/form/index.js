@@ -16,6 +16,7 @@ import LocationSelectOption from "./select/location-select-option.svelte";
 import OrthographySelectOption from "./select/orthography-select-option.svelte";
 import SimpleSelectOption from "./select/simple-select-option.svelte";
 import SourceSelectOption from "./select/source-select-option.svelte";
+import SourceTypeSelectOption from "./select/source-type-select-option.svelte";
 
 export default {
   Root,
@@ -36,4 +37,5 @@ export default {
   OrthographySelectOption,
   SimpleSelectOption,
   SourceSelectOption,
+  SourceTypeSelectOption,
 };

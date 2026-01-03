@@ -24,7 +24,6 @@ export const sources = pgTable("sources", {
   source_language: languagesEnum().notNull(),
   target_language: languagesEnum().notNull(),
   type: sourceTypesEnum(),
-  pages: text(),
   access: accessesEnum().notNull(),
   redistributable: boolean().default(false).notNull(),
   imported_entry_count: integer().default(0).notNull(),

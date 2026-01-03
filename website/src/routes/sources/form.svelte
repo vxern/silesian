@@ -9,6 +9,7 @@
     licencesEnum,
     accessesEnum,
     orthographiesEnum,
+    sourceTypesEnum,
     languagesEnum,
   } from "$lib/database/schema";
 
@@ -31,6 +32,28 @@
     type="url"
     value={source?.url}
   />
+  <Form.TextElement
+    name="year"
+    label={m["routes.sources.form.year"]()}
+    description={m["routes.sources.form.year_description"]()}
+    type="text"
+    value={source?.year}
+  />
+</section>
+<section class="flex gap-x-4">
+  <Form.SelectElement
+    name="type"
+    label={m["routes.sources.form.type"]()}
+    description={m["routes.sources.form.type_description"]()}
+    required={true}
+    options={sourceTypesEnum.enumValues.map((type) => ({
+      search: m[`source_types.${type}`](),
+      value: type,
+      object: type,
+    }))}
+    component={Form.SourceTypeSelectOption}
+    value={source?.type}
+  />
   <Form.SelectElement
     name="author_ids[]"
     label={m["routes.sources.form.authors"]()}
@@ -50,13 +73,6 @@
     multiple={true}
     component={Form.AuthorSelectOption}
     value={source?.authors?.map((author) => author.id)}
-  />
-  <Form.TextElement
-    name="year"
-    label={m["routes.sources.form.year"]()}
-    description={m["routes.sources.form.year_description"]()}
-    type="text"
-    value={source?.year}
   />
 </section>
 <section class="flex gap-x-4">
