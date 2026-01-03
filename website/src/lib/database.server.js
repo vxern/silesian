@@ -153,7 +153,7 @@ export async function versionedInsert({ table, values, authorId, returning = {} 
 }
 
 /**
- * Performs 2 queries if only the status changes, otherwise 3 queries:
+ * Performs 2 queries if the record is a draft or if nothing about it changed, otherwise 3 queries:
  * - Get record in its current state.
  * - Create version with a snapshot of the updated data.
  * - Update record.
@@ -173,7 +173,9 @@ export async function versionedUpdate({ table, id, authorId, values, returning =
     
     delete snapshot["status"];
 
-    if (Object.keys(snapshot).length === 0) {
+    const isStillDraft = (oldRecord.status === "draft" && values.status === "draft");
+    const hasNoNotableChanges = Object.keys(snapshot).length === 0;
+    if (isStillDraft || hasNoNotableChanges) {
       return db
         .update(table)
         .set(values)
