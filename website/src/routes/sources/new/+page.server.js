@@ -18,7 +18,7 @@ export const actions = {
       orthography: data.get("orthography"),
       source_language: data.get("source_language"),
       target_language: data.get("target_language"),
-      type: data.get("type"),
+      type: data.get("type") || null,
       licence: data.get("licence"),
       access: data.get("access"),
       redistributable: data.get("redistributable") === "1",
