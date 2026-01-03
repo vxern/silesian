@@ -122,11 +122,12 @@
     {#each searchHistory as search, index}
       <Table.Row {index}>
         <Table.Cell>
-          {search.lemma}
-          <IconButton
-            icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(search.lemma)}`)}
-          />
+          <a
+            class="font-bold underline"
+            href="/lemma/{encodeURIComponent(search.lemma)}"
+          >
+            {search.lemma}
+          </a>
         </Table.Cell>
         <Table.Cell>
           {dayjs(search.created_at).calendar()}

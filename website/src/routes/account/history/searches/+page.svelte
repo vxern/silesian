@@ -32,7 +32,7 @@
   <Page.Divider />
   <Page.Contents>
     <Page.Actions>
-      <BackButton onclick={() => goto("/account")} />
+      <BackButton onclick={() => goto("/account/statistics")} />
     </Page.Actions>
     <SearchTables
       searchCount={data.searchCount}

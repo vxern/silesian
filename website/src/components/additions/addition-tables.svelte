@@ -121,11 +121,12 @@
     {#each additionHistory as entry, index}
       <Table.Row {index}>
         <Table.Cell>
-          {entry.lemma}
-          <IconButton
-            icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(entry.lemma)}`)}
-          />
+          <a
+            class="font-bold underline"
+            href="/lemma/{encodeURIComponent(entry.lemma)}"
+          >
+            {entry.lemma}
+          </a>
         </Table.Cell>
         <Table.Cell>
           {dayjs(entry.created_at).calendar()}

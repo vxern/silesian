@@ -85,12 +85,12 @@
       <Table.Row id={source.id} {index}>
         <Table.Cell {highlighted}>
           <section>
-            {source.name}
             {#if source.url}
-              <IconButton
-                icon={ArrowRightUpLineIcon}
-                onclick={() => (window.location.href = source.url)}
-              />
+              <a class="font-bold underline" href={source.url}>
+                {source.name}
+              </a>
+            {:else}
+              {source.name}
             {/if}
             <br />
             <span class="text-zinc-500 text-xs">
@@ -157,11 +157,9 @@
         </Table.Cell>
         {#if mode !== "edit"}
           <Table.Cell {highlighted}>
-            {source.current_version}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto(`/sources/${source.id}/history`)}
-            />
+            <a class="font-bold underline" href="/sources/${source.id}/history">
+              {source.current_version}
+            </a>
           </Table.Cell>
         {/if}
         {#if hasPermission}

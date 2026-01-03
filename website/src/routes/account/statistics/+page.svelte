@@ -75,46 +75,40 @@
       <Table.Body>
         <Table.Row>
           <Table.Cell>
-            {data.user.searches_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/searches")}
-            />
+            <a class="font-bold underline" href="/account/history/searches">
+              {data.user.searches_count}
+            </a>
           </Table.Cell>
           <Table.Cell>
-            {data.user.additions_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/additions")}
-            />
+            <a class="font-bold underline" href="/account/history/additions">
+              {data.user.additions_count}
+            </a>
           </Table.Cell>
           <Table.Cell>
-            {data.user.changes_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/changes")}
-            />
+            <a class="font-bold underline" href="/account/history/changes">
+              {data.user.changes_count}
+            </a>
           </Table.Cell>
           <Table.Cell>
-            {data.user.reviews_count}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/reviews")}
-            />
+            <a class="font-bold underline" href="/account/history/reviews">
+              {data.user.reviews_count}
+            </a>
           </Table.Cell>
           <Table.Cell>
-            {dayjs.duration(data.user.time_spent_using).humanize()}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/time-spent-using")}
-            />
+            <a
+              class="font-bold underline"
+              href="/account/history/time-spent-using"
+            >
+              {dayjs.duration(data.user.time_spent_using).humanize()}
+            </a>
           </Table.Cell>
           <Table.Cell>
-            {dayjs.duration(data.user.time_spent_editing).humanize()}
-            <IconButton
-              icon={ArrowRightUpLineIcon}
-              onclick={() => goto("/account/history/time-spent-editing")}
-            />
+            <a
+              class="font-bold underline"
+              href="/account/history/time-spent-editing"
+            >
+              {dayjs.duration(data.user.time_spent_editing).humanize()}
+            </a>
           </Table.Cell>
         </Table.Row>
       </Table.Body>

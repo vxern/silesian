@@ -1,8 +1,10 @@
 <script>
   import { m } from "$lib/paraglide/messages";
+  import { goto } from "$app/navigation";
   import constants from "$lib/constants/core";
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
+  import BackButton from "../../../../components/interactions/back-button.svelte";
 </script>
 
 <svelte:head>
@@ -27,4 +29,9 @@
     />
   </Page.Header>
   <Page.Divider />
+  <Page.Contents>
+    <Page.Actions>
+      <BackButton onclick={() => goto("/account/statistics")} />
+    </Page.Actions>
+  </Page.Contents>
 </Page.Root>

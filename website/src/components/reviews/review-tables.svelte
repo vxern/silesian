@@ -122,11 +122,12 @@
     {#each reviewHistory as review, index}
       <Table.Row {index}>
         <Table.Cell>
-          {review.lemma}
-          <IconButton
-            icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(review.lemma)}`)}
-          />
+          <a
+            class="font-bold underline"
+            href="/lemma/{encodeURIComponent(review.lemma)}"
+          >
+            {review.lemma}
+          </a>
         </Table.Cell>
         <Table.Cell>
           {dayjs(review.created_at).calendar()}
