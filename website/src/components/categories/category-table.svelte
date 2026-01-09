@@ -24,9 +24,6 @@
         {m["components.category_table.name"]()}
       </Table.HeaderCell>
       <Table.HeaderCell>
-        {m["components.category_table.description"]()}
-      </Table.HeaderCell>
-      <Table.HeaderCell>
         {m["components.category_table.colour"]()}
       </Table.HeaderCell>
       {#if mode !== "edit"}
