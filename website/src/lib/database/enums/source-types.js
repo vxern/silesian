@@ -8,5 +8,6 @@ export const sourceTypesEnum = pgEnum(
     "magazine",
     "article",
     "brochure",
+    "website",
   ],
 );
