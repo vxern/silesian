@@ -44,6 +44,14 @@ export const authorsRelations = () => defineRelationsPart(schema, (r) => ({
       from: r.authors.id.through(r.authorsToSources.author_id),
       to: r.sources.id.through(r.authorsToSources.source_id),
     }),
+    image: r.one.attachments({
+      from: r.authors.id,
+      to: r.attachments.attachable_id,
+      where: {
+        attachable_type: "authors",
+        name: "image",
+      },
+    }),
   },
 }));
 

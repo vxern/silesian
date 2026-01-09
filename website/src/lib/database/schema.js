@@ -18,10 +18,12 @@ export { authSessions } from "./tables/auth/sessions";
 export { authUsers } from "./tables/auth/users";
 export { authVerificationTokens } from "./tables/auth/verification-tokens";
 // Tables: Public
+export { attachments, attachmentsRelations } from "./tables/attachments";
 export { authorsToEntries } from "./tables/authors-to-entries";
 export { authorsToLocations } from "./tables/authors-to-locations";
 export { authorsToSources } from "./tables/authors-to-sources";
 export { authors, authorsRelations, authorsInsertSchema, authorsUpdateSchema } from "./tables/authors";
+export { blobs, blobsRelations } from "./tables/blobs";
 export { bookmarks, bookmarksRelations, bookmarksInsertSchema } from "./tables/bookmarks";
 export { categories, categoriesRelations, categoriesInsertSchema, categoriesUpdateSchema } from "./tables/categories";
 export { entriesToCategories } from "./tables/entries-to-categories";

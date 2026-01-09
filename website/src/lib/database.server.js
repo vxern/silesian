@@ -3,17 +3,21 @@ import { EnhancedQueryLogger } from 'drizzle-query-logger';
 import { PgSelectBase } from 'drizzle-orm/pg-core';
 import postgres from 'postgres';
 import { isEqual } from 'es-toolkit/predicate';
+import xxhash from "xxhash-wasm";
 import {
   DATABASE_HOST, 
   DATABASE_USER,
   DATABASE_PASSWORD,
   DATABASE_DATABASE,
 } from '$env/static/private';
+import { join } from "node:path";
 import {
+  attachments,
   authorsToEntries,
   authorsToLocations,
   authorsToSources,
   authors,
+  blobs,
   bookmarks,
   categories,
   entriesToCategories,
@@ -25,6 +29,7 @@ import {
   settingsToCategories,
   settingsToSources,
   settings,
+  sourcesToLocations,
   sources,
   timeEntries,
   users,
@@ -35,7 +40,9 @@ import {
   authSessions,
   authUsers,
   authVerificationTokens,
+  attachmentsRelations,
   authorsRelations,
+  blobsRelations,
   bookmarksRelations,
   categoriesRelations,
   entriesRelations,
@@ -62,6 +69,7 @@ const client = postgres({
 export const db = drizzle({
   client,
   schema: {
+    attachments,
     auth,
     authAccounts,
     authAuthenticators,
@@ -72,6 +80,7 @@ export const db = drizzle({
     authorsToLocations,
     authorsToSources,
     authors,
+    blobs,
     bookmarks,
     categories,
     entriesToCategories,
@@ -83,13 +92,16 @@ export const db = drizzle({
     settingsToCategories,
     settingsToSources,
     settings,
+    sourcesToLocations,
     sources,
     timeEntries,
     users,
     versions,
   },
   relations: {
+    ...attachmentsRelations(),
     ...authorsRelations(),
+    ...blobsRelations(),
     ...bookmarksRelations(),
     ...categoriesRelations(),
     ...entriesRelations(),
@@ -272,7 +284,7 @@ export async function versionedJoin({ table, source, sourceColumnName, targetIds
 
 /** Performs 1 query. */
 export async function insertReview({ table, id, values }) {
-  const review = await db.insert(reviews).values({
+  return db.insert(reviews).values({
     version_id:
       sql`${
         db
@@ -283,6 +295,43 @@ export async function insertReview({ table, id, values }) {
         .limit(1)
       }`,
     ...values,
+  }).returning();
+}
+
+const { create64 } = await xxhash();
+
+/** Performs 2 queries. */
+export async function insertAttachment({ table, id, name, file }) {
+  let checksumBuilder = await create64();
+  let byteSize = 0;
+  for await (const chunk of file.stream()) {
+    // TODO(vxern): Do I need to overwrite?
+    checksumBuilder = checksumBuilder.update(chunk);
+    byteSize += chunk.length;
+  }
+  const checksum = checksumBuilder.digest();
+
+  // TODO(vxern): Use a proper location.
+  // await Bun.write(join("/Users/vxern/Documents", file.name), file);
+
+  return db.transaction(async (tx) => {
+    const blob = await db.insert(blobs).values({
+      key: file.name,
+      type: file.type,
+      checksum: checksum.toString(),
+      byte_size: byteSize,
+    }).returning({ id: blobs.id })
+      .then((results) => results.at(0))
+      .catch((error) => tx.rollback());
+
+    return db.insert(attachments).values({
+      name,
+      attachable_type: getTableName(table),
+      attachable_id: id,
+      blob_id: blob.id,
+    }).returning()
+      .then((results) => results.at(0))
+      .catch((error) =>  tx.rollback());
   });
 }
 
