@@ -4,10 +4,10 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"postbuild": "bunx svelte-sitemap --domain https://silesian.eu",
-		"preview": "vite preview",
+		"dev": "bunx --bun vite dev",
+		"build": "bunx --bun vite build",
+		"postbuild": "bunx --bun svelte-sitemap --domain https://silesian.eu",
+		"preview": "bunx --bun vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check",
 		"check:watch": "svelte-kit sync && svelte-check --watch",
@@ -50,6 +50,7 @@
 		"marked": "^16.4.2",
 		"postgres": "^3.4.7",
 		"tailwindcss": "^4.1.18",
-		"tippy.js": "^6.3.7"
+		"tippy.js": "^6.3.7",
+		"xxhash-wasm": "^1.1.0"
 	}
 }
