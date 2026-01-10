@@ -302,19 +302,11 @@ const { create64 } = await xxhash();
 
 /** Performs 2 queries or none if there is no file. */
 export async function insertAttachment({ table, id, name, file }) {
-  if (!file) {
+  if (!file?.name) {
     return null;
   }
   
-  let checksumBuilder = await create64();
-  let byteSize = 0;
-  for await (const chunk of file.stream()) {
-    // TODO(vxern): Do I actually need to overwrite here?
-    checksumBuilder = checksumBuilder.update(chunk);
-    byteSize += chunk.length;
-  }
-
-  const checksum = checksumBuilder.digest();
+  const checksum = await getFileChecksum(file);
 
   // TODO(vxern): Use a proper location.
   // await Bun.write(join("/Users/vxern/Documents", file.name), file);
@@ -324,7 +316,7 @@ export async function insertAttachment({ table, id, name, file }) {
       key: file.name,
       type: file.type,
       checksum: checksum.toString(),
-      byte_size: byteSize,
+      byte_size: file.size,
     }).returning({ id: blobs.id })
       .then((results) => results.at(0))
       .catch((error) => tx.rollback());
@@ -340,8 +332,14 @@ export async function insertAttachment({ table, id, name, file }) {
   });
 }
 
-/** Performs 3 queries. */
+/** Performs 3 queries, or none if the file checksums are the same. */
 async function updateAttachment({ table, id, name, file, attachment }) {
+  const checksum = await getFileChecksum(file);
+
+  if (attachment.blob.checksum === checksum) {
+    return;
+  }
+
   return db.transaction(async (tx) => {
     await deleteAttachment(attachment)
     await insertAttachment({ table, id, name, file });
@@ -355,6 +353,7 @@ async function deleteAttachment(attachment) {
 }
 
 /** Performs up to 4 queries depending on the situation. */
+// TODO(vxern): Saving a form with an attachment removes it.
 export async function upsertOrDeleteAttachment({ table, id, name, file }) {
   const attachment = await db.query.attachments.findFirst({
     where: {
@@ -368,22 +367,28 @@ export async function upsertOrDeleteAttachment({ table, id, name, file }) {
   });
 
   if (!attachment) {
-    if (file) {
+    if (file.name) {
       return insertAttachment({ table, id, name, file });
     }
 
     return;
   }
   
-  if (file === null) {
+  if (!file?.name) {
     return deleteAttachment(attachment);
   }
 
-  if (!file) {
-    return;
-  }
-  
   return updateAttachment({ table, id, name, file, attachment });
+}
+
+async function getFileChecksum(file) {
+  let checksumBuilder = await create64();
+  for await (const chunk of file.stream()) {
+    // TODO(vxern): Do I actually need to overwrite here?
+    checksumBuilder = checksumBuilder.update(chunk);
+  }
+
+  return checksumBuilder.digest();
 }
 
 /** Performs 1 query. */
