@@ -11,7 +11,6 @@
   import { dayjs } from "../../../helpers/dates.js";
   import constants from "$lib/constants/core";
   import { goto } from "$app/navigation";
-  import IconButton from "../../../components/interactions/icon-button.svelte";
   import BackButton from "../../../components/interactions/back-button.svelte";
   import Table from "../../../components/layout/table/index.js";
   import calendar from "dayjs/plugin/calendar";

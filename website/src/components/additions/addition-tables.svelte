@@ -12,7 +12,6 @@
   import Table from "../layout/table/index.js";
   import { dayjs } from "../../helpers/dates.js";
   import localeData from "dayjs/plugin/localeData";
-  import IconButton from "../interactions/icon-button.svelte";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import duration from "dayjs/plugin/duration";
   import relativeTime from "dayjs/plugin/relativeTime";

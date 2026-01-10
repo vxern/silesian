@@ -67,7 +67,7 @@
       {#each Array.from(files) as file}
         <section class="relative">
           <!-- TODO(vxern): Display differently depending on the media type. -->
-          <img src={URL.createObjectURL(file)} class="max-h-48" />
+          <img src={URL.createObjectURL(file)} class="max-h-96" />
           <Button
             colour="red"
             icon={Delete2LineIcon}

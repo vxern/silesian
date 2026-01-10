@@ -76,8 +76,6 @@ export const actions = {
         authorId: 1,
       });
 
-      console.log(data.get("image"));
-
       await upsertOrDeleteAttachment({
         table: authors,
         id: author.id,

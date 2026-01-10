@@ -12,7 +12,6 @@
   import Table from "../layout/table/index.js";
   import { dayjs } from "../../helpers/dates.js";
   import localeData from "dayjs/plugin/localeData";
-  import IconButton from "../interactions/icon-button.svelte";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import duration from "dayjs/plugin/duration";
   import relativeTime from "dayjs/plugin/relativeTime";
@@ -121,11 +120,12 @@
     {#each changeHistory as entry, index}
       <Table.Row {index}>
         <Table.Cell>
-          {entry.lemma}
-          <IconButton
-            icon={ArrowRightUpLineIcon}
-            onclick={() => goto(`/lemma/${encodeURIComponent(entry.lemma)}`)}
-          />
+          <a
+            class="font-bold underline"
+            href="/lemma/{encodeURIComponent(entry.lemma)}"
+          >
+            {entry.lemma}
+          </a>
         </Table.Cell>
         <Table.Cell>
           {dayjs(entry.created_at).calendar()}

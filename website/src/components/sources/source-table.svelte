@@ -12,7 +12,6 @@
   import Button from "../interactions/button.svelte";
   import Pencil2LineIcon from "~icons/mingcute/pencil-2-line";
   import Delete2LineIcon from "~icons/mingcute/delete-2-line";
-  import IconButton from "../../components/interactions/icon-button.svelte";
   import ArrowRightUpLineIcon from "~icons/mingcute/arrow-right-up-line";
   import Table from "../layout/table/index.js";
   import AuthorLabel from "../labels/author-label.svelte";
