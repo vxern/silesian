@@ -22,7 +22,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 	}),
 	providers: [Discord(), GitHub(), Google(), LinkedIn(), Twitter()],
 	callbacks: {
-		session({ session }) {
+		session({ session, user }) {
 			session.user.id = user?.id;
 
 			return session;

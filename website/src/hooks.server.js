@@ -10,4 +10,10 @@ const handleParaglide = ({ event, resolve }) => paraglideMiddleware(event.reques
 	});
 });
 
-export const handle = sequence(handleParaglide, handleAuthentication);
+const handleSession = async ({ event, resolve }) => {
+	event.locals.session = await event.locals.getSession();
+
+	return resolve(event);
+};
+
+export const handle = sequence(handleParaglide, handleAuthentication, handleSession);
