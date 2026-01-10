@@ -11,7 +11,7 @@ const handleParaglide = ({ event, resolve }) => paraglideMiddleware(event.reques
 });
 
 const handleSession = async ({ event, resolve }) => {
-	event.locals.session = await event.locals.getSession();
+	event.locals.session = await event.locals.auth();
 
 	return resolve(event);
 };
