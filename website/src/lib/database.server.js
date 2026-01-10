@@ -300,20 +300,25 @@ export async function insertReview({ table, id, values }) {
 
 const { create64 } = await xxhash();
 
-/** Performs 2 queries. */
+/** Performs 2 queries or none if there is no file. */
 export async function insertAttachment({ table, id, name, file }) {
+  if (!file) {
+    return null;
+  }
+  
   let checksumBuilder = await create64();
   let byteSize = 0;
   for await (const chunk of file.stream()) {
-    // TODO(vxern): Do I need to overwrite?
+    // TODO(vxern): Do I actually need to overwrite here?
     checksumBuilder = checksumBuilder.update(chunk);
     byteSize += chunk.length;
   }
+
   const checksum = checksumBuilder.digest();
 
   // TODO(vxern): Use a proper location.
   // await Bun.write(join("/Users/vxern/Documents", file.name), file);
-
+  
   return db.transaction(async (tx) => {
     const blob = await db.insert(blobs).values({
       key: file.name,
@@ -333,6 +338,52 @@ export async function insertAttachment({ table, id, name, file }) {
       .then((results) => results.at(0))
       .catch((error) =>  tx.rollback());
   });
+}
+
+/** Performs 3 queries. */
+async function updateAttachment({ table, id, name, file, attachment }) {
+  return db.transaction(async (tx) => {
+    await deleteAttachment(attachment)
+    await insertAttachment({ table, id, name, file });
+  });
+}
+
+/** Performs 1 query. */
+async function deleteAttachment(attachment) {
+  // Deletion cascades down to attachment.
+  await db.delete(blobs).where(eq(blobs.id, attachment.blob_id));
+}
+
+/** Performs up to 4 queries depending on the situation. */
+export async function upsertOrDeleteAttachment({ table, id, name, file }) {
+  const attachment = await db.query.attachments.findFirst({
+    where: {
+      name,
+      attachable_type: getTableName(table),
+      attachable_id: id,
+    },
+    with: {
+      blob: true,
+    },
+  });
+
+  if (!attachment) {
+    if (file) {
+      return insertAttachment({ table, id, name, file });
+    }
+
+    return;
+  }
+  
+  if (file === null) {
+    return deleteAttachment(attachment);
+  }
+
+  if (!file) {
+    return;
+  }
+  
+  return updateAttachment({ table, id, name, file, attachment });
 }
 
 /** Performs 1 query. */

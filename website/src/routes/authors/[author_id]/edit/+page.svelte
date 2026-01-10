@@ -43,9 +43,14 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/authors/drafts")} />
     </Page.Actions>
-    <Form.Root method="POST" action="?/update" class="flex flex-col gap-y-6">
+    <Form.Root
+      method="POST"
+      action="?/update"
+      enctype="multipart/form-data"
+      class="flex flex-col gap-y-6"
+    >
       <input type="hidden" name="id" value={data.author.id} />
-      <AuthorForm author={data.author} />
+      <AuthorForm author={data.author} image={data.image} />
     </Form.Root>
   </Page.Contents>
 </Page.Root>

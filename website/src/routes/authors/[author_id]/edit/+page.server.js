@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { db, versionedUpdate, versionedJoin } from "$lib/database.server";
+import { db, versionedUpdate, versionedJoin, upsertOrDeleteAttachment } from "$lib/database.server";
 import { authors, authorsToLocations, locations, authorsInsertSchema, idsSchema } from "$lib/database/schema";
 import { eq, and, sql } from 'drizzle-orm';
 
@@ -7,7 +7,11 @@ export const load = async ({ params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return { author: await getAuthor({ id: params.author_id }) };
+  const author = await getAuthor({ id: params.author_id });
+  // TODO(vxern): Update the URI.
+  const image = author.image?.blob ? Bun.file(`/Users/vxern/Documents/${author.image.blob.key}`).arrayBuffer() : null;
+
+  return { author, image };
 };
 
 function getAuthor({ id }) {
@@ -23,6 +27,11 @@ function getAuthor({ id }) {
     },
     with: {
       locations: true,
+      image: {
+        with: {
+          blob: true,
+        },
+      },
     },
   });
 }
@@ -65,6 +74,15 @@ export const actions = {
         targetColumnName: "location_id",
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,
+      });
+
+      console.log(data.get("image"));
+
+      await upsertOrDeleteAttachment({
+        table: authors,
+        id: author.id,
+        name: "image",
+        file: data.get("image"),
       });
 
       return author;

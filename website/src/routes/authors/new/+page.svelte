@@ -36,7 +36,12 @@
     <Page.Actions>
       <BackButton onclick={() => goto("/authors")} />
     </Page.Actions>
-    <Form.Root method="POST" action="?/create" class="flex flex-col gap-y-6">
+    <Form.Root
+      method="POST"
+      action="?/create"
+      enctype="multipart/form-data"
+      class="flex flex-col gap-y-6"
+    >
       <AuthorForm />
     </Form.Root>
   </Page.Contents>

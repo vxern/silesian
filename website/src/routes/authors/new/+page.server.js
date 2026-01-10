@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { db, versionedInsert, versionedJoin } from "$lib/database.server";
+import { db, versionedInsert, versionedJoin, insertAttachment } from "$lib/database.server";
 import { authors, authorsToLocations, locations, authorsInsertSchema, idsSchema } from "$lib/database/schema";
 import { eq, sql } from 'drizzle-orm';
 
@@ -37,6 +37,13 @@ export const actions = {
         // TODO(vxern): IMPORTANT - Update the author ID.
         authorId: 1,
       });
+
+      await insertAttachment({
+        table: authors,
+        id: author.id,
+        name: "image",
+        file: data.get("image"),
+      })
 
       return author;
     });

@@ -5,6 +5,7 @@ import MarkdownElement from "./markdown-element.svelte";
 import TextElement from "./text-element.svelte";
 import MultiTextElement from "./multi-text-element.svelte";
 import SelectElement from "./select-element.svelte";
+import FileElement from "./file-element.svelte";
 import AccessSelectOption from "./select/access-select-option.svelte";
 import AuthorSelectOption from "./select/author-select-option.svelte";
 import CategorySelectOption from "./select/category-select-option.svelte";
@@ -26,6 +27,7 @@ export default {
   TextElement,
   MultiTextElement,
   SelectElement,
+  FileElement,
   AccessSelectOption,
   AuthorSelectOption,
   CategorySelectOption,

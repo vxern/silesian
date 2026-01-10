@@ -9,8 +9,6 @@ export const load = async (event) => {
     redirect(303, "/login");
   }
   
-  console.log(session);
-
   return ({
     // TODO(vxern): Filter by the right user.
     user: await getUser({ id: 1 })

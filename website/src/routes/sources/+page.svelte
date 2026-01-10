@@ -47,6 +47,7 @@
         <Button
           colour="yellow"
           icon={Edit4LineIcon}
+          class="relative"
           onclick={() => goto("/sources/drafts")}
         >
           {m["routes.sources.actions.drafts"]()}
@@ -56,6 +57,7 @@
         <Button
           colour="blue"
           icon={ChecksLineIcon}
+          class="relative"
           onclick={() => goto("/sources/review")}
         >
           {m["routes.sources.actions.review"]()}

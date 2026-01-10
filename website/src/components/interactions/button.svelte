@@ -8,6 +8,8 @@
     colour = "blue",
     type = "button",
     children,
+    class: classes,
+    size = "normal",
     tooltipMessage,
     tooltipTheme,
     ...props
@@ -43,7 +45,7 @@
       break;
     case "red":
       colourClasses =
-        "outline-red-500 bg-red-700 hover:bg-red-600 text-red-200 hover:text-red-100";
+        "outline-red-400 bg-red-600 hover:bg-red-500 text-red-100 hover:text-white";
       break;
     case "orange":
       colourClasses =
@@ -58,12 +60,24 @@
         "outline-zinc-500 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 hover:text-zinc-100";
       break;
   }
+
+  let sizeClasses;
+  switch (size) {
+    case "normal":
+      sizeClasses = "rounded-lg p-2 text";
+      break;
+    case "small":
+      sizeClasses = "rounded-md p-1 text-sm";
+      break;
+  }
 </script>
 
 <button
   class={clsx(
-    "relative cursor-pointer flex items-center gap-x-1 outline-1 rounded-lg font-bold p-2",
-    colourClasses
+    "cursor-pointer flex items-center gap-x-1 outline-1 font-bold",
+    colourClasses,
+    sizeClasses,
+    classes
   )}
   {type}
   {...props}

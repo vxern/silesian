@@ -7,7 +7,7 @@
   import Button from "../../components/interactions/button.svelte";
 
   // TODO(vxern): Prefill from the object.
-  const { author } = $props();
+  const { author, image } = $props();
 </script>
 
 <section class="flex gap-x-4">
@@ -51,6 +51,14 @@
     label={m["routes.authors.form.description"]()}
     description={m["routes.authors.form.description_description"]()}
     value={author?.description}
+  />
+</section>
+<section class="flex gap-x-4">
+  <Form.FileElement
+    name="image"
+    label={m["routes.authors.form.image"]()}
+    description={m["routes.authors.form.image_description"]()}
+    value={image}
   />
 </section>
 <section class="flex gap-x-4">
