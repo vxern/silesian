@@ -19,7 +19,7 @@
   let shiftReset = $state();
   let capsLockReset = $state();
   let capitaliseSpecialLetters = $derived(shiftEnabled || capsLockEnabled);
-  let searchQuery = $state(lemma);
+  let searchQuery = $state(lemma ?? "");
   let inputElement;
   let submitElement;
   let lettersElement;
@@ -138,7 +138,7 @@
     ).then((result) => result.json());
 
     if (entries.length > 0) {
-      if (inputElement.focused) {
+      if (inputElement === document.activeElement) {
         autocompleteTooltip.hide();
         autocompleteTooltip.show();
       }
