@@ -121,9 +121,12 @@
     {#each reviewHistory as review, index}
       <Table.Row {index}>
         <Table.Cell>
+          <!-- TODO(vxern): The versionable code here doesn't currently work. -->
           <a
             class="font-bold underline"
-            href="/lemma/{encodeURIComponent(review.lemma)}"
+            href="/lemma/{encodeURIComponent(
+              review.version.versionable.lemma
+            )}#{review.version.versionable.id}"
           >
             {review.lemma}
           </a>

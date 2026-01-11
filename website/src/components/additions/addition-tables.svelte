@@ -122,7 +122,7 @@
         <Table.Cell>
           <a
             class="font-bold underline"
-            href="/lemma/{encodeURIComponent(entry.lemma)}"
+            href="/lemma/{encodeURIComponent(entry.lemma)}#{entry.id}"
           >
             {entry.lemma}
           </a>
