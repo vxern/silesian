@@ -95,7 +95,7 @@
 <section class="relative flex">
   {@render article()}
   <section class="relative">
-    <section class="absolute left-2 flex flex-col gap-y-2">
+    <section class="absolute left-3 flex flex-col gap-y-3">
       {#if hasPermission}
         <Button
           colour="green"
