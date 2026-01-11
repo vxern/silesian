@@ -2,20 +2,17 @@ import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
 import { and, ne, eq } from 'drizzle-orm';
 
-export const load = async () => {
-  // TODO(vxern): Make sure to filter by the user.
-
-  return { locations: await getPendingLocations() };
+export const load = async ({ locals }) => {
+  return { locations: await getPendingLocations(locals.session) };
 };
 
-function getPendingLocations() {
+function getPendingLocations(session) {
   return db.query.locations.findMany({
     where: {
       status: "pending",
       deleted: false,
       version: {
-        // TODO(vxern): Set the right author.
-        author_id: { ne: 1 },
+        author_id: { ne: session.user.id },
       },
     },
   });

@@ -3,20 +3,17 @@ import { db, versionedDelete } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
 import { and, eq } from 'drizzle-orm';
 
-export const load = async () => {
-  // TODO(vxern): Make sure to filter by the user.
-
-  return { locations: await getDraftLocations() };
+export const load = async ({ locals }) => {
+  return { locations: await getDraftLocations(locals.session) };
 };
 
-function getDraftLocations() {
+function getDraftLocations(session) {
   return db.query.locations.findMany({
     where: {
       status: "draft",
       deleted: false,
       version: {
-        // TODO(vxern): Set the right author.
-        author_id: 1,
+        author_id: session.user.id,
       },
     },
   });

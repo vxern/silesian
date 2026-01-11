@@ -4,23 +4,22 @@ import { searches, searchFrequencies } from "$lib/database/schema";
 import { eq, asc, desc } from 'drizzle-orm';
 
 // TODO(vxern): Use prepared statements.
-// TODO(vxern): IMPORTANT - Filter by the correct user.
 
-export const load = async () => {
+export const load = async ({ locals }) => {
   const [searchHistory, popularSearches] = await Promise.all([
-    getSearchHistory(),
+    getSearchHistory(locals.session),
     getPopularSearches(),
   ]);
 
   return { searchHistory, popularSearches };
 };
 
-async function getSearchHistory() {
+async function getSearchHistory(session) {
   const distinctSearches =
     db
       .selectDistinctOn([searches.lemma])
       .from(searches)
-      .where(eq(searches.searcher_id, 1))
+      .where(eq(searches.searcher_id, session.user.id))
       .orderBy(searches.lemma, asc(searches.created_at))
       .limit(28)
       .as("distinct_searches");

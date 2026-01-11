@@ -2,16 +2,15 @@ import { db } from "$lib/database.server";
 import { users, versions } from "$lib/database/schema";
 import { eq } from "drizzle-orm";
 
-export const load = async (params) => ({
-  entries: await getBookmarkedEntries(),
+export const load = async ({ locals }) => ({
+  entries: await getBookmarkedEntries(locals.session),
 });
 
-function getBookmarkedEntries() {
+function getBookmarkedEntries(session) {
   return db.query.entries.findMany({
     where: {
       bookmarks: {
-        // TODO(vxern): Filter by the right user.
-        user_id: 1,
+        user_id: session.user.id,
       },
       deleted: false,
     },
