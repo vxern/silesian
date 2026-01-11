@@ -3,23 +3,22 @@ import { entries, entriesToCategories, categories, sources, authorsToSources, au
 import { and, eq, ne, count } from 'drizzle-orm';
 import { alias } from "drizzle-orm/pg-core";
 
-export const load = async () => {
+export const load = async ({ locals }) => {
   return {
-    draftCount: getDraftCount(),
-    pendingCount: getPendingCount(),
+    draftCount: getDraftCount(locals.session),
+    pendingCount: getPendingCount(locals.session),
     entries: await getPublishedEntries(),
   };
 };
 
-function getDraftCount() {
+function getDraftCount(session) {
   return db
     .select({ count: count() })
     .from(entries)
     .withVersions()
     .where(
       and(
-        // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
+        eq(versions.author_id, session.user.id),
         eq(entries.deleted, false),
         eq(entries.status, "draft"),
       ),
@@ -27,15 +26,14 @@ function getDraftCount() {
     .then((results) => results.at(0).count);
 }
 
-function getPendingCount() {
+function getPendingCount(session) {
   return db
     .select({ count: count() })
     .from(entries)
     .withVersions()
     .where(
       and(
-        // TODO(vxern): Set the right author.
-        ne(versions.author_id, 1),
+        ne(versions.author_id, session.user.id),
         eq(entries.deleted, false),
         eq(entries.status, "pending"),
       ),

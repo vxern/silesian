@@ -2,23 +2,22 @@ import { db } from "$lib/database.server";
 import { locations, versions } from "$lib/database/schema";
 import { and, ne, eq, count } from 'drizzle-orm';
 
-export const load = async () => {
+export const load = async ({ locals }) => {
   return {
-    draftCount: getDraftCount(),
-    pendingCount: getPendingCount(),
+    draftCount: getDraftCount(locals.session),
+    pendingCount: getPendingCount(locals.session),
     locations: await getPublishedLocations(),
   };
 };
 
-function getDraftCount() {
+function getDraftCount(session) {
   return db
     .select({ count: count() })
     .from(locations)
     .withVersions()
     .where(
       and(
-        // TODO(vxern): Set the right author.
-        eq(versions.author_id, 1),
+        eq(versions.author_id, session.user.id),
         eq(locations.deleted, false),
         eq(locations.status, "draft"),
       ),
@@ -26,15 +25,14 @@ function getDraftCount() {
     .then((results) => results.at(0).count);
 }
 
-function getPendingCount() {
+function getPendingCount(session) {
   return db
     .select({ count: count() })
     .from(locations)
     .withVersions()
     .where(
-      and(
-        // TODO(vxern): Set the right author.
-        ne(versions.author_id, 1),
+      and(right author.
+        ne(versions.author_id, session.user.id),
         eq(locations.deleted, false),
         eq(locations.status, "pending"),
       ),
