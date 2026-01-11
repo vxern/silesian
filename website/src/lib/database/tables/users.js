@@ -1,5 +1,6 @@
 import { defineRelationsPart, sql } from "drizzle-orm";
 import { pgTable, bigint, integer, text, timestamp, unique, check, boolean, index } from "drizzle-orm/pg-core";
+import { authUsers } from "./auth/users";
 import { settings } from "./settings";
 import { versions } from "./versions";
 import { reviews } from "./reviews";
@@ -13,8 +14,7 @@ import * as schema from "../schema";
 export const users = pgTable("users", {
   id: bigint({ mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   deleted: boolean().default(false).notNull(),
-  username: text().notNull(),
-  email_address: text().notNull(),
+  auth_user_id: text().references(() => authUsers.id, { onDelete: "cascade" }).notNull(),
   // TODO(vxern): Move these elsewhere because they're going to be reflected in version snapshots otherwise.
   searches_count: integer().default(0).notNull(),
   additions_count: integer().default(0).notNull(),
@@ -26,10 +26,7 @@ export const users = pgTable("users", {
   time_spent_editing: integer().default(0).notNull(),
   current_version: integer().default(1).notNull(),
 }, (t) => [
-  unique().on(t.username),
-  unique().on(t.email_address),
-  check("username_not_empty_check", sql`${t.username} <> ''`),
-  check("email_address_not_empty_check", sql`${t.email_address} <> ''`),
+  unique().on(t.auth_user_id),
   index().on(t.deleted).where(sql`${t.deleted} IS FALSE`),
 ]);
 
@@ -41,6 +38,10 @@ export const usersRelations = () => defineRelationsPart(schema, (r) => ({
       where: {
         versionable_type: "users",
       }
+    }),
+    authUser: r.one.authUsers({
+      from: r.users.auth_user_id,
+      to: r.authUsers.id,
     }),
     bookmarks: r.many.bookmarks({
       from: r.users.id,

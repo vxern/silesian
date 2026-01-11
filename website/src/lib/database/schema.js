@@ -15,7 +15,7 @@ export { auth } from "./tables/auth/schema";
 export { authAccounts } from "./tables/auth/accounts";
 export { authAuthenticators } from "./tables/auth/authenticators";
 export { authSessions } from "./tables/auth/sessions";
-export { authUsers } from "./tables/auth/users";
+export { authUsers, authUsersRelations } from "./tables/auth/users";
 export { authVerificationTokens } from "./tables/auth/verification-tokens";
 // Tables: Public
 export { attachments, attachmentsRelations } from "./tables/attachments";

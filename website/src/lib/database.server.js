@@ -40,6 +40,7 @@ import {
   authSessions,
   authUsers,
   authVerificationTokens,
+  authUsersRelations,
   attachmentsRelations,
   authorsRelations,
   blobsRelations,
@@ -99,6 +100,7 @@ export const db = drizzle({
     versions,
   },
   relations: {
+    ...authUsersRelations(),
     ...attachmentsRelations(),
     ...authorsRelations(),
     ...blobsRelations(),
@@ -115,7 +117,7 @@ export const db = drizzle({
     ...usersRelations(),
     ...versionsRelations(),
   },
-  logger: new EnhancedQueryLogger(),
+  // logger: new EnhancedQueryLogger(),
 });
 
 PgSelectBase.prototype.withVersions = function () {
