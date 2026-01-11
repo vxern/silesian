@@ -18,5 +18,5 @@ export const load = async (event) => {
 
   const permissions = new Set(user.roles.flatMap((role) => role.permissions));
   
-  return { session, permissions };
+  return { session: { user, permissions } };
 };

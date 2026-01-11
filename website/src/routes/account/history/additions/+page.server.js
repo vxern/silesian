@@ -5,35 +5,34 @@ import { count, sql, asc, eq, gte } from "drizzle-orm";
 
 // TODO(vxern): Limit.
 // TODO(vxern): Paginate.
-// TODO(vxern): Make sure to filter by the right user.
 
 // We don't take anything other than entries into account because sources, categories, etc. are effectively one-off additions.
 
-export const load = async (params) => {
+export const load = async ({ locals }) => {
   const [additionCount, additionCountByMonth, additionHistory] = await Promise.all([
-    getAdditionCount(),
-    getAdditionCountByMonth(),
-    getAdditionHistory(),
+    getAdditionCount(locals.session),
+    getAdditionCountByMonth(locals.sessions),
+    getAdditionHistory(locals.sessions),
   ]);
 
   return { additionCount, additionCountByMonth, additionHistory };
 };
 
-function getAdditionCount() {
+function getAdditionCount(session) {
   return db
     .select({ count: count() })
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 1))
+    .where(eq(versions.author_id, session.user.id))
     .then((results) => results.at(0).count);
 }
 
-async function getAdditionCountByMonth() {
+async function getAdditionCountByMonth(session) {
   const results = await db
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 1))
+    .where(eq(versions.author_id, session.user.id))
     .where(gte(versions.created_at, dayjs().startOf("year")))
     .groupBy(sql`month`);
 
@@ -47,10 +46,10 @@ async function getAdditionCountByMonth() {
   );
 }
 
-function getAdditionHistory() {
+function getAdditionHistory(session) {
   return db
     .select()
     .from(entries)
     .withVersions()
-    .where(eq(versions.author_id, 1));
+    .where(eq(versions.author_id, session.user.id));
 }

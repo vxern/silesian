@@ -3,22 +3,21 @@ import { db, insertReview } from "$lib/database.server";
 import { authors, versions, reviews } from "$lib/database/schema";
 import { eq, and, desc } from 'drizzle-orm';
 
-export const load = async ({ params }) => {
+export const load = async ({ locals, params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return { author: await getAuthor({ id: params.author_id }) };
+  return { author: await getAuthor(locals.session, { id: params.author_id }) };
 };
 
-function getAuthor({ id }) {
+function getAuthor(session, { id }) {
   return db.query.authors.findFirst({
     where: {
       id,
       status: "pending",
       deleted: false,
       version: {
-        // TODO(vxern): Update this later.
-        author_id: { ne: 1 },
+        author_id: { ne: session.user.id },
       },
     },
     with: {
@@ -34,8 +33,7 @@ export const actions = {
     const data = await request.formData();
 
     const reviewData = reviewsInsertSchema.parse({
-      // TODO(vxern): Update to the right user.
-      reviewer_id: 2,
+      reviewer_id: locals.session.user.id,
       decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
     });

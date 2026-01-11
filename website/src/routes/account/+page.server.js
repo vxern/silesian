@@ -3,15 +3,13 @@ import { redirect } from "@sveltejs/kit"
 import { users, versions } from "$lib/database/schema";
 import { eq } from "drizzle-orm";
 
-export const load = async (event) => {
-  const session = await event.locals.auth();
-  if (!session?.user?.email) {
+export const load = async ({ locals }) => {
+  if (!locals.session) {
     redirect(303, "/login");
   }
   
   return ({
-    // TODO(vxern): Filter by the right user.
-    user: await getUser({ id: 1 })
+    user: await getUser({ id: locals.session.user.id })
   });;
 }
 

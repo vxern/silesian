@@ -2,9 +2,8 @@ import { db } from "$lib/database.server";
 import { users, versions } from "$lib/database/schema";
 import { eq } from "drizzle-orm";
 
-export const load = async (params) => ({
-  // TODO(vxern): Filter by the right user.
-  user: await getUser({ id: 1 })
+export const load = async ({ locals }) => ({
+  user: await getUser({ id: locals.session.user.id })
 });
 
 function getUser({ id }) {

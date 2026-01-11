@@ -1,8 +1,8 @@
 import { redirect } from "@sveltejs/kit";
 import { signIn } from "../../auth";
 
-export const load = async (event) => {
-    if (event.locals.session) {
+export const load = async ({ locals }) => {
+    if (locals.session) {
         redirect(303, "/account");
     }
 };

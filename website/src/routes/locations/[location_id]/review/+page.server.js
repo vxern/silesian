@@ -3,22 +3,21 @@ import { db, insertReview } from "$lib/database.server";
 import { locations, versions, reviews } from "$lib/database/schema";
 import { eq, and, desc, sql } from 'drizzle-orm';
 
-export const load = async ({ params }) => {
+export const load = async ({ locals, params }) => {
   // TODO(vxern): Kick the user out if they haven't got permission.
   // TODO(vxern): Validate the parameter.
 
-  return { location: await getLocation({ id: params.location_id }) };
+  return { location: await getLocation(locals.session, { id: params.location_id }) };
 };
 
-function getLocation({ id }) {
+function getLocation(session, { id }) {
   return db.query.locations.findFirst({
     where: {
       id,
       status: "pending",
       deleted: false,
       version: {
-        // TODO(vxern): Set the right author.
-        author_id: { ne: 1 },
+        author_id: { ne: session.user.id },
       },
     },
   });
@@ -31,8 +30,7 @@ export const actions = {
     const data = await request.formData();
 
     const reviewData = reviewsInsertSchema.parse({
-      // TODO(vxern): Update to the right user.
-      reviewer_id: 2,
+      reviewer_id: locals.session.user.id,
       decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
     });

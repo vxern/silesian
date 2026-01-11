@@ -7,34 +7,32 @@ import { count, sql, asc, eq, gte, and } from "drizzle-orm";
 // TODO(vxern): Paginate.
 
 // We don't take anything other than entries into account because sources, categories, etc. are effectively one-off changes.
-export const load = async (params) => {
+export const load = async ({ locals }) => {
   const [changeCount, changeCountByMonth, changeHistory] = await Promise.all([
-    getChangeCount(),
-    getChangeCountByMonth(),
-    getChangeHistory(),
+    getChangeCount(locals.session),
+    getChangeCountByMonth(locals.session),
+    getChangeHistory(locals.session),
   ]);
 
   return { changeCount, changeCountByMonth, changeHistory };
 };
 
-function getChangeCount() {
+function getChangeCount(session) {
   return db.$count(
     versions,
-    // TODO(vxern): Filter by the right user.
     and(
-      eq(versions.author_id, 1),
+      eq(versions.author_id, session.user.id),
       eq(versions.versionable_type, "entries"),
     ),
   );
 }
 
-async function getChangeCountByMonth() {
+async function getChangeCountByMonth(session) {
   const results = await db
     .select({ month: sql`EXTRACT(MONTH FROM ${versions.created_at}) - 1`.as("month"), count: count() })
     .from(versions)
     .where(gte(versions.created_at, dayjs().startOf("year")))
-    // TODO(vxern): Filter by the right user.
-    .where(eq(versions.author_id, 1))
+    .where(eq(versions.author_id, session.user.id))
     .groupBy(sql`month`);
 
   return results.reduce(
@@ -47,11 +45,10 @@ async function getChangeCountByMonth() {
   );
 }
 
-function getChangeHistory() {
+function getChangeHistory(session) {
   return db.query.versions.findMany({
     where: {
-      // TODO(vxern): Filter by the right user.
-      author_id: 1,
+      author_id: session.user.id,
     },
   });
 }

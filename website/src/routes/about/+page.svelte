@@ -58,7 +58,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection permissions={data.permissions} />
+<NavigationSection permissions={data.session.permissions} />
 
 <Page.Root>
   <Page.Header>

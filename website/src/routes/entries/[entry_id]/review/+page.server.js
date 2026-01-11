@@ -43,8 +43,7 @@ export const actions = {
     const data = await request.formData();
 
     const reviewData = reviewsInsertSchema.parse({
-      // TODO(vxern): Update to the right user.
-      reviewer_id: 2,
+      reviewer_id: locals.session.user.id,
       decision: data.has("reject") ? "rejected" : "accepted",
       comment: data.get("comment"),
     });
