@@ -14,6 +14,7 @@
   import Palette2LineIcon from "~icons/mingcute/palette-2-line";
   import User2LineIcon from "~icons/mingcute/user-2-line";
   import Location3LineIcon from "~icons/mingcute/location-3-line";
+  import IdCardLineIcon from "~icons/mingcute/idcard-line";
   import Page from "../page/index.js";
 </script>
 
@@ -226,6 +227,20 @@
       {m["routes.entries.title"]()}
     </NavigationButton>
   {/if}
+  <NavigationButton
+    onclick={() => goto("/users")}
+    highlighted={page.url.pathname === "/users"}
+    icon={User2LineIcon}
+  >
+    {m["routes.users.title"]()}
+  </NavigationButton>
+  <NavigationButton
+    onclick={() => goto("/roles")}
+    highlighted={page.url.pathname === "/roles"}
+    icon={IdCardLineIcon}
+  >
+    {m["routes.roles.title"]()}
+  </NavigationButton>
   <section class="w-full">
     <Page.Divider />
   </section>

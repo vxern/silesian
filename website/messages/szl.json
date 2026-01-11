@@ -458,8 +458,14 @@
         "make_more": "Tworza wiyncyj haseł."
       }
     },
+    "users": {
+      "title": "Używocze"
+    },
+    "roles": {
+      "title": "Role"
+    },
     "login": {
-      "title": "Logowanie",
+      "title": "Logowaniy",
       "description": "Samkej możecie sie zalogować ku Waszymu kōntu.",
       "providers": {
         "github": "GitHub",
@@ -468,10 +474,6 @@
         "google": "Google",
         "linkedin": "LinkedIn"
       }
-    },
-    "logout": {
-      "title": "Ôdlogowywanie",
-      "description": "Samkej możecie sie ôdlogować ôd Waszygo kōnta."
     },
     "search": {
       "title": "Szukaniy",
