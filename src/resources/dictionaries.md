@@ -268,6 +268,7 @@
     - `pol` `MISSING` <ins>Słownictwo zanikające w gwarze krzanowic</ins>, author: `Marcela Szymańska`, entries: `uncounted`
     <!-- ❌ Not checked the number of entries. -->
     - `pol` [Słownictwo polskich gwar Śląska na terenie Czechosłowacji](https://rcin.org.pl/dlibra/doccontent?id=3223), author: `Jan Basara`, entries: `uncounted`, TIN: `T06745435`
+    - `pol` [Wiślański rzóndzeni](https://docs.google.com/spreadsheets/d/11Z6CjDwF_Hl3GsAWxa7vwb37hB_WuN7Snu0cx3J6520/edit), author: `unknown`, entries: `~6000`
     <!-- ❌ Not checked the number of entries. -->
     - `🚫` `pol` [Słownik dialektyczny Księstwa Cieszyńskiego](https://integro.bs.katowice.pl/32102035247/cinciala-andrzej/slownik-dyalektyczny-ksiestwa-cieszynskiego-z-dodatkiem-przyslowiow-i-frazeologii), author: `Andrzej Cinciała`, entries: `uncounted`, ISBN: `8390219735`
     <!-- ❌ Not checked the number of entries. -->
