@@ -89,8 +89,9 @@
       return;
     }
 
-    missingWordTooltip.destroy();
-    needToResetCapsTooltip.destroy();
+    autocompleteTooltip.hide();
+    missingWordTooltip.hide();
+    needToResetCapsTooltip.hide();
 
     goto(encodeURI(`/lemma/${encodeURIComponent(inputElement.value)}`));
   }
