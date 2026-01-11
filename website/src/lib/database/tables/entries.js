@@ -14,7 +14,6 @@ export const entries = pgTable("entries", {
   deleted: boolean().default(false).notNull(),
   lemma: text().notNull(),
   normalised_lemma: text(),
-  // TODO(vxern): Add lexemes.
   contents: text().notNull(),
   source_id: bigint({ mode: "number" }).references(() => sources.id, { onDelete: "cascade" }).notNull(),
   status: publishStatusesEnum().default("draft").notNull(),
