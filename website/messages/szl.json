@@ -36,9 +36,9 @@
     "public": "publiczno włosnōś"
   },
   "accesses": {
-    "closed": "zawrzity",
-    "limited": "ôgraniczōny",
-    "open": "dostympny"
+    "closed": "zawrzite",
+    "limited": "ôgraniczōne",
+    "open": "dostympne"
   },
   "colours": {
     "red": "Czyrwōno",
@@ -233,7 +233,7 @@
   "routes": {
     "home": {
       "title": "Sztart",
-      "description": "{project_name} je platforma stworzōno ku ôpisowaniu ślōnskij godki a jejich narzeczy.",
+      "description": "{project_name} je platforma stworzōno ku ôpisowaniu ślōnskij godki a jejich narzeczōw.",
       "splashes": {
         "one": "Dykcjōnorze ślōnskij godki",
         "two": "Dykcjōnorze ślōnskigo jynzyka",
@@ -241,7 +241,7 @@
         "four": "Dykcjōnorze ślōnskij mowy",
         "five": "Dykcjōnorze ślōnskij rzeczy",
         "six": "Dykcjōnorze ślōnskich dyjalektōw",
-        "seven": "Dykcjōnorze ślōnskich narzeczy",
+        "seven": "Dykcjōnorze ślōnskich narzeczōw",
         "eight": "Dykcjōnorze pō naszymu"
       },
       "subdomains": {

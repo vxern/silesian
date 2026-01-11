@@ -18,33 +18,10 @@ export const authUsers = auth.table("users", {
 ]);
 
 export const authUsersRelations = () => defineRelationsPart(schema, (r) => ({
-  authors: {
-    version: r.one.versions({
-      from: [r.authors.id, r.authors.current_version],
-      to: [r.versions.versionable_id, r.versions.version],
-      where: {
-        versionable_type: "authors",
-      },
-    }),
-    entries: r.many.entries({
-      from: r.authors.id.through(r.authorsToEntries.author_id),
-      to: r.entries.id.through(r.authorsToEntries.entry_id),
-    }),
-    locations: r.many.locations({
-      from: r.authors.id.through(r.authorsToLocations.author_id),
-      to: r.locations.id.through(r.authorsToLocations.location_id),
-    }),
-    sources: r.many.sources({
-      from: r.authors.id.through(r.authorsToSources.author_id),
-      to: r.sources.id.through(r.authorsToSources.source_id),
-    }),
-    image: r.one.attachments({
-      from: r.authors.id,
-      to: r.attachments.attachable_id,
-      where: {
-        attachable_type: "authors",
-        name: "image",
-      },
+  authUsers: {
+    user: r.one.users({
+      from: r.authUsers.id,
+      to: r.users.auth_user_id,
     }),
   },
 }));

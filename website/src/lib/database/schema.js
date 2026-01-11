@@ -30,6 +30,7 @@ export { entriesToCategories } from "./tables/entries-to-categories";
 export { entries, entriesRelations, entriesInsertSchema, entriesUpdateSchema } from "./tables/entries";
 export { locations, locationsRelations, locationsInsertSchema, locationsUpdateSchema } from "./tables/locations";
 export { reviews, reviewsRelations, reviewsInsertSchema } from "./tables/reviews";
+export { roles, rolesRelations } from "./tables/roles";
 export { searchFrequencies, searchFrequenciesRelations } from "./tables/search-frequencies";
 export { searches, searchesRelations } from "./tables/searches";
 export { settingsToCategories } from "./tables/settings-to-categories";
@@ -38,6 +39,7 @@ export { settings, settingsRelations } from "./tables/settings";
 export { sourcesToLocations } from "./tables/sources-to-locations";
 export { sources, sourcesRelations, sourcesInsertSchema, sourcesUpdateSchema } from "./tables/sources";
 export { timeEntries, timeEntriesRelations } from "./tables/time-entries";
+export { usersToRoles } from "./tables/users-to-roles";
 export { users, usersRelations } from "./tables/users";
 export { versions, versionsRelations } from "./tables/versions";
 // Commons
