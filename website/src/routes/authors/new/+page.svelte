@@ -8,6 +8,8 @@
   import { goto } from "$app/navigation";
   import "tippy.js/themes/material.css";
   import Form from "../../../components/form/index.js";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -25,7 +27,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

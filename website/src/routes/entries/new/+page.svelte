@@ -22,6 +22,8 @@
 
     // TODO(vxern): Show a toast for the error.
   }
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -39,7 +41,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

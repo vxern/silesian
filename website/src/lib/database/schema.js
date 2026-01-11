@@ -5,6 +5,7 @@ export { countriesEnum } from "./enums/countries";
 export { languagesEnum } from "./enums/languages";
 export { licencesEnum } from "./enums/licences";
 export { orthographiesEnum } from "./enums/orthographies";
+export { permissionsEnum } from "./enums/permissions";
 export { publishStatusesEnum } from "./enums/publish-statuses";
 export { reviewDecisionsEnum } from "./enums/review-decisions";
 export { sourceTypesEnum } from "./enums/source-types";

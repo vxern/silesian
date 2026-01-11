@@ -16,6 +16,8 @@
   import Location3LineIcon from "~icons/mingcute/location-3-line";
   import IdCardLineIcon from "~icons/mingcute/idcard-line";
   import Page from "../page/index.js";
+
+  const { permissions } = $props();
 </script>
 
 <nav class="fixed top-8 right-8 flex flex-col items-end gap-y-2">
@@ -99,148 +101,164 @@
       {m["routes.login.title"]()}
     </NavigationButton>
   {/if}
-  <section class="w-full">
-    <Page.Divider />
-  </section>
-  {#if page.url.pathname.startsWith("/locations/")}
-    <NavigationButton
-      onclick={() => goto("/locations")}
-      highlighted={true}
-      icon={Location3LineIcon}
-    >
-      {#if page.url.pathname === "/locations/drafts"}
-        {m["routes.locations.drafts.title"]()}
-      {:else if page.url.pathname === "/locations/review"}
-        {m["routes.locations.review.title"]()}
-      {:else if page.url.pathname === "/locations/new"}
-        {m["routes.locations.new.title"]()}
-      {:else if /\/locations\/\d+\/review/.test(page.url.pathname)}
-        {m["routes.locations.review.title"]()}
-      {/if}
-    </NavigationButton>
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/locations")}
-      highlighted={page.url.pathname === "/locations"}
-      icon={Location3LineIcon}
-    >
-      {m["routes.locations.title"]()}
-    </NavigationButton>
+  {#if permissions.has("locations:view") || permissions.has("authors:view") || permissions.has("sources:view") || permissions.has("categories:view") || permissions.has("entries:view") || permissions.has("users:view") || permissions.has("roles:view")}
+    <section class="w-full">
+      <Page.Divider />
+    </section>
   {/if}
-  {#if page.url.pathname.startsWith("/authors/")}
+  {#if permissions.has("locations:view")}
+    {#if page.url.pathname.startsWith("/locations/")}
+      <NavigationButton
+        onclick={() => goto("/locations")}
+        highlighted={true}
+        icon={Location3LineIcon}
+      >
+        {#if page.url.pathname === "/locations/drafts"}
+          {m["routes.locations.drafts.title"]()}
+        {:else if page.url.pathname === "/locations/review"}
+          {m["routes.locations.review.title"]()}
+        {:else if page.url.pathname === "/locations/new"}
+          {m["routes.locations.new.title"]()}
+        {:else if /\/locations\/\d+\/review/.test(page.url.pathname)}
+          {m["routes.locations.review.title"]()}
+        {/if}
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/locations")}
+        highlighted={page.url.pathname === "/locations"}
+        icon={Location3LineIcon}
+      >
+        {m["routes.locations.title"]()}
+      </NavigationButton>
+    {/if}
+  {/if}
+  {#if permissions.has("authors:view")}
+    {#if page.url.pathname.startsWith("/authors/")}
+      <NavigationButton
+        onclick={() => goto("/authors")}
+        highlighted={true}
+        icon={User2LineIcon}
+      >
+        {#if page.url.pathname === "/authors/drafts"}
+          {m["routes.authors.drafts.title"]()}
+        {:else if page.url.pathname === "/authors/review"}
+          {m["routes.authors.review.title"]()}
+        {:else if page.url.pathname === "/authors/new"}
+          {m["routes.authors.new.title"]()}
+        {:else if /\/authors\/\d+\/review/.test(page.url.pathname)}
+          {m["routes.authors.review.title"]()}
+        {/if}
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/authors")}
+        highlighted={page.url.pathname === "/authors"}
+        icon={User2LineIcon}
+      >
+        {m["routes.authors.title"]()}
+      </NavigationButton>
+    {/if}
+  {/if}
+  {#if permissions.has("sources:view")}
+    {#if page.url.pathname.startsWith("/sources/")}
+      <NavigationButton
+        onclick={() => goto("/sources")}
+        highlighted={true}
+        icon={Box2LineIcon}
+      >
+        {#if page.url.pathname === "/sources/drafts"}
+          {m["routes.sources.drafts.title"]()}
+        {:else if page.url.pathname === "/sources/review"}
+          {m["routes.sources.review.title"]()}
+        {:else if page.url.pathname === "/sources/new"}
+          {m["routes.sources.new.title"]()}
+        {:else if /\/sources\/\d+\/review/.test(page.url.pathname)}
+          {m["routes.sources.review.title"]()}
+        {/if}
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/sources")}
+        highlighted={page.url.pathname === "/sources"}
+        icon={Box2LineIcon}
+      >
+        {m["routes.sources.title"]()}
+      </NavigationButton>
+    {/if}
+  {/if}
+  {#if permissions.has("categories:view")}
+    {#if page.url.pathname.startsWith("/categories/")}
+      <NavigationButton
+        onclick={() => goto("/categories")}
+        highlighted={true}
+        icon={Palette2LineIcon}
+      >
+        {#if page.url.pathname === "/categories/drafts"}
+          {m["routes.categories.drafts.title"]()}
+        {:else if page.url.pathname === "/categories/review"}
+          {m["routes.categories.review.title"]()}
+        {:else if page.url.pathname === "/categories/new"}
+          {m["routes.categories.new.title"]()}
+        {:else if /\/categories\/\d+\/review/.test(page.url.pathname)}
+          {m["routes.categories.review.title"]()}
+        {/if}
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/categories")}
+        highlighted={page.url.pathname === "/categories"}
+        icon={Palette2LineIcon}
+      >
+        {m["routes.categories.title"]()}
+      </NavigationButton>
+    {/if}
+  {/if}
+  {#if permissions.has("entries:view")}
+    {#if page.url.pathname.startsWith("/entries/")}
+      <NavigationButton
+        onclick={() => goto("/entries")}
+        highlighted={true}
+        icon={CursorTextLineIcon}
+      >
+        {#if page.url.pathname === "/entries/drafts"}
+          {m["routes.entries.drafts.title"]()}
+        {:else if page.url.pathname === "/entries/review"}
+          {m["routes.entries.review.title"]()}
+        {:else if page.url.pathname === "/entries/new"}
+          {m["routes.entries.new.title"]()}
+        {:else if /\/entries\/\d+\/review/.test(page.url.pathname)}
+          {m["routes.entries.review.title"]()}
+        {/if}
+      </NavigationButton>
+    {:else}
+      <NavigationButton
+        onclick={() => goto("/entries")}
+        highlighted={page.url.pathname === "/entries"}
+        icon={CursorTextLineIcon}
+      >
+        {m["routes.entries.title"]()}
+      </NavigationButton>
+    {/if}
+  {/if}
+  {#if permissions.has("users:view")}
     <NavigationButton
-      onclick={() => goto("/authors")}
-      highlighted={true}
+      onclick={() => goto("/users")}
+      highlighted={page.url.pathname === "/users"}
       icon={User2LineIcon}
     >
-      {#if page.url.pathname === "/authors/drafts"}
-        {m["routes.authors.drafts.title"]()}
-      {:else if page.url.pathname === "/authors/review"}
-        {m["routes.authors.review.title"]()}
-      {:else if page.url.pathname === "/authors/new"}
-        {m["routes.authors.new.title"]()}
-      {:else if /\/authors\/\d+\/review/.test(page.url.pathname)}
-        {m["routes.authors.review.title"]()}
-      {/if}
-    </NavigationButton>
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/authors")}
-      highlighted={page.url.pathname === "/authors"}
-      icon={User2LineIcon}
-    >
-      {m["routes.authors.title"]()}
+      {m["routes.users.title"]()}
     </NavigationButton>
   {/if}
-  {#if page.url.pathname.startsWith("/sources/")}
+  {#if permissions.has("roles:view")}
     <NavigationButton
-      onclick={() => goto("/sources")}
-      highlighted={true}
-      icon={Box2LineIcon}
+      onclick={() => goto("/roles")}
+      highlighted={page.url.pathname === "/roles"}
+      icon={IdCardLineIcon}
     >
-      {#if page.url.pathname === "/sources/drafts"}
-        {m["routes.sources.drafts.title"]()}
-      {:else if page.url.pathname === "/sources/review"}
-        {m["routes.sources.review.title"]()}
-      {:else if page.url.pathname === "/sources/new"}
-        {m["routes.sources.new.title"]()}
-      {:else if /\/sources\/\d+\/review/.test(page.url.pathname)}
-        {m["routes.sources.review.title"]()}
-      {/if}
-    </NavigationButton>
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/sources")}
-      highlighted={page.url.pathname === "/sources"}
-      icon={Box2LineIcon}
-    >
-      {m["routes.sources.title"]()}
+      {m["routes.roles.title"]()}
     </NavigationButton>
   {/if}
-  {#if page.url.pathname.startsWith("/categories/")}
-    <NavigationButton
-      onclick={() => goto("/categories")}
-      highlighted={true}
-      icon={Palette2LineIcon}
-    >
-      {#if page.url.pathname === "/categories/drafts"}
-        {m["routes.categories.drafts.title"]()}
-      {:else if page.url.pathname === "/categories/review"}
-        {m["routes.categories.review.title"]()}
-      {:else if page.url.pathname === "/categories/new"}
-        {m["routes.categories.new.title"]()}
-      {:else if /\/categories\/\d+\/review/.test(page.url.pathname)}
-        {m["routes.categories.review.title"]()}
-      {/if}
-    </NavigationButton>
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/categories")}
-      highlighted={page.url.pathname === "/categories"}
-      icon={Palette2LineIcon}
-    >
-      {m["routes.categories.title"]()}
-    </NavigationButton>
-  {/if}
-  {#if page.url.pathname.startsWith("/entries/")}
-    <NavigationButton
-      onclick={() => goto("/entries")}
-      highlighted={true}
-      icon={CursorTextLineIcon}
-    >
-      {#if page.url.pathname === "/entries/drafts"}
-        {m["routes.entries.drafts.title"]()}
-      {:else if page.url.pathname === "/entries/review"}
-        {m["routes.entries.review.title"]()}
-      {:else if page.url.pathname === "/entries/new"}
-        {m["routes.entries.new.title"]()}
-      {:else if /\/entries\/\d+\/review/.test(page.url.pathname)}
-        {m["routes.entries.review.title"]()}
-      {/if}
-    </NavigationButton>
-  {:else}
-    <NavigationButton
-      onclick={() => goto("/entries")}
-      highlighted={page.url.pathname === "/entries"}
-      icon={CursorTextLineIcon}
-    >
-      {m["routes.entries.title"]()}
-    </NavigationButton>
-  {/if}
-  <NavigationButton
-    onclick={() => goto("/users")}
-    highlighted={page.url.pathname === "/users"}
-    icon={User2LineIcon}
-  >
-    {m["routes.users.title"]()}
-  </NavigationButton>
-  <NavigationButton
-    onclick={() => goto("/roles")}
-    highlighted={page.url.pathname === "/roles"}
-    icon={IdCardLineIcon}
-  >
-    {m["routes.roles.title"]()}
-  </NavigationButton>
   <section class="w-full">
     <Page.Divider />
   </section>

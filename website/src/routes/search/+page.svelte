@@ -7,8 +7,6 @@
   import SearchHistory from "../../components/search/search-history.svelte";
 
   const { data } = $props();
-
-  const { searchHistory, popularSearches } = data;
 </script>
 
 <svelte:head>
@@ -21,7 +19,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>
@@ -30,6 +28,9 @@
   </Page.Header>
   <Page.Divider />
   <Page.Contents>
-    <SearchHistory {searchHistory} {popularSearches} />
+    <SearchHistory
+      searchHistory={data.searchHistory}
+      popularSearches={data.popularSearches}
+    />
   </Page.Contents>
 </Page.Root>

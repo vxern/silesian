@@ -32,7 +32,7 @@
 
 <LanguageSection />
 <SubdomainNavigationSection />
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 <SocialsSection />
 <DonationSection />
 <VersionSection />

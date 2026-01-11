@@ -4,6 +4,8 @@
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants/core";
 
+  const { data } = $props();
+
   // TODO(vxern): Add proper authors.
   // TODO(vxern): Add proper contact.
 
@@ -56,7 +58,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

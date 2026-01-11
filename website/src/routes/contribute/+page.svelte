@@ -3,6 +3,8 @@
   import Page from "../../components/page/index.js";
   import NavigationSection from "../../components/navigation/navigation-section.svelte";
   import constants from "$lib/constants/core";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -20,7 +22,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

@@ -7,6 +7,8 @@
   import constants from "$lib/constants/core";
 
   // TODO(vxern): Need to make the cursor pointer work.
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -19,7 +21,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

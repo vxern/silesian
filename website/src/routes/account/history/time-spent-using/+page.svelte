@@ -5,6 +5,8 @@
   import NavigationSection from "../../../../components/navigation/navigation-section.svelte";
   import Page from "../../../../components/page/index.js";
   import BackButton from "../../../../components/interactions/back-button.svelte";
+
+  const { data } = $props();
 </script>
 
 <svelte:head>
@@ -20,7 +22,7 @@
   </title>
 </svelte:head>
 
-<NavigationSection />
+<NavigationSection permissions={data.permissions} />
 
 <Page.Root>
   <Page.Header>

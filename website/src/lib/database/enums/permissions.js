@@ -37,5 +37,4 @@ export const permissionsEnum = pgEnum("permissions", [
   "roles:create",
   "roles:update",
   "roles:delete",
-  "bookmarks:use",
 ]);

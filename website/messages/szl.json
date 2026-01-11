@@ -9,32 +9,6 @@
     },
     "progress": "{progress}%"
   },
-  "languages": {
-    "szl": "ślōnski",
-    "pl": "polski",
-    "cs": "czeski",
-    "sk": "słowacki",
-    "de": "niymiecki",
-    "en": "angelski",
-    "en-GB": "angelski"
-  },
-  "orthographies": {
-    "slabikorz": "Ślabikorz",
-    "steuer": "Steuer",
-    "phonetic": "Ślōnski alfabet fōnetyczny",
-    "wencel": "Wencel",
-    "kosmala": "Kosmała",
-    "wiora": "Wiora",
-    "polish": "Polskiy przibliżyniy",
-    "czech": "Czeskiy przibliżyniy",
-    "german": "Niymieckiy przibliżyniy",
-    "other": "Inkszy szrajbōnek"
-  },
-  "licences": {
-    "proprietary": "zastrzeżōno",
-    "granted": "udzielōno pozwolynio",
-    "public": "publiczno włosnōś"
-  },
   "accesses": {
     "closed": "zawrzite",
     "limited": "ôgraniczōne",
@@ -69,6 +43,70 @@
     "czechia": "Czechy",
     "germany": "Niymce",
     "slovakia": "Słowacyjo"
+  },
+  "languages": {
+    "szl": "ślōnski",
+    "pl": "polski",
+    "cs": "czeski",
+    "sk": "słowacki",
+    "de": "niymiecki",
+    "en": "angelski",
+    "en-GB": "angelski"
+  },
+  "licences": {
+    "proprietary": "zastrzeżōno",
+    "granted": "udzielōno pozwolynio",
+    "public": "publiczno włosnōś"
+  },
+  "orthographies": {
+    "slabikorz": "Ślabikorz",
+    "steuer": "Steuer",
+    "phonetic": "Ślōnski alfabet fōnetyczny",
+    "wencel": "Wencel",
+    "kosmala": "Kosmała",
+    "wiora": "Wiora",
+    "polish": "Polskiy przibliżyniy",
+    "czech": "Czeskiy przibliżyniy",
+    "german": "Niymieckiy przibliżyniy",
+    "other": "Inkszy szrajbōnek"
+  },
+  "permissions": {
+    "locations:view": "Ôglōndać miyjsca",
+    "locations:create": "Tworzić miyjsca",
+    "locations:update": "Edytować miyjsca",
+    "locations:delete": "Usuwać miyjsca",
+    "locations:review": "Sprowdzać miyjsca",
+    "locations:publish": "Publikować miyjsca",
+    "authors:view": "Ôglōndać autorōw",
+    "authors:create": "Tworzić autorōw",
+    "authors:update": "Edytować autorōw",
+    "authors:delete": "Usuwać autorōw",
+    "authors:review": "Sprowdzać autorōw",
+    "authors:publish": "Publikować autorōw",
+    "sources:view": "Ôglōndać zdrzōdła",
+    "sources:create": "Tworzić zdrzōdła",
+    "sources:update": "Edytować zdrzōdła",
+    "sources:delete": "Usuwać zdrzōdła",
+    "sources:review": "Sprowdzać zdrzōdła",
+    "sources:publish": "Publikować zdrzōdła",
+    "categories:view": "Ôglōndać kategoryje",
+    "categories:create": "Tworzić kategoryje",
+    "categories:update": "Edytować kategoryje",
+    "categories:delete": "Usuwać kategoryje",
+    "categories:review": "Sprowdzać kategoryje",
+    "categories:publish": "Publikować kategoryje",
+    "entries:view": "Ôglōndać hasła",
+    "entries:create": "Tworzić hasła",
+    "entries:update": "Edytować hasła",
+    "entries:delete": "Usuwać hasła",
+    "entries:review": "Sprowdzać hasła",
+    "entries:publish": "Publikować hasła",
+    "users:view": "Ôglōndać używoczōw",
+    "users:update": "Edytować używoczōw",
+    "roles:view": "Ôglōndać role",
+    "roles:create": "Tworzić role",
+    "roles:update": "Edytować role",
+    "roles:delete": "Usuwać role"
   },
   "source_types": {
     "book": "Ksiōnżka",

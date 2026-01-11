@@ -47,12 +47,10 @@ export const usersRelations = () => defineRelationsPart(schema, (r) => ({
       from: r.users.id,
       to: r.bookmarks.user_id,
     }),
-    users: {
-      roles: r.many.roles({
-        from: r.users.id.through(r.usersToRoles.user_id),
-        to: r.roles.id.through(r.usersToRoles.role_id),
-      }),
-    },
+    roles: r.many.roles({
+      from: r.users.id.through(r.usersToRoles.user_id),
+      to: r.roles.id.through(r.usersToRoles.role_id),
+    }),
     // TODO(vxern): A user can in fact only have one set of settings.
     settings: r.many.settings({
       from: r.users.id,
